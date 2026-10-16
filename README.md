@@ -32,7 +32,7 @@ python -B scripts/verify_workspace.py
 - `references/` 与 `third_party/`：[官方资料与论文](references/README.md)、未修改的上游代码。
 - `history/`：必要的基线旧证据和整理记录，不保留已明确删除方向的源码或权重。
 
-本地 Git 主分支 `main`，GitHub 私有仓库 [Andy-yubao/iccad2026-problem-c](https://github.com/Andy-yubao/iccad2026-problem-c)，远程名 `origin`。提交代码、文档、冻结索引和必要小型证据；数据集、环境、缓存及 checkpoint 不进入 Git。
+本地 Git 主分支 `main`，GitHub 公开仓库 [Andy-yubao/iccad2026-problem-c](https://github.com/Andy-yubao/iccad2026-problem-c)，远程名 `origin`。提交代码、文档、冻结索引和必要小型证据；数据集、环境、缓存及 checkpoint 不进入 Git。
 
 [题目全文](references/official/problem_statement.md) · [官方 Q&A](references/official/official_qa.md) · [提交指南](references/official/submission_guidelines.md) · [官方比赛 README](third_party/FloorSet/iccad2026contest/README.md)。
 
