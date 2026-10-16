@@ -21,6 +21,8 @@
 
 网页快照只保存 HTML，不是完整离线网站，部分图片/样式仍引用网络。论文来源为 [arXiv PDF](https://arxiv.org/pdf/2405.05480)；这不是题目中所有相关文献均已下载的声明。46 条原始书目见 [problem_references.md](official/problem_references.md)。
 
+当前下载的论文仅保留 FloorSet 官方原始论文，来源和哈希纳入下述资源清单；原题书目是官方原文的一部分，不表示保留了其中论文的本地副本。
+
 上述 13 个下载文件的来源 URL、大小和 SHA-256 均在 [resources_manifest.json](resources_manifest.json)。当前官方题目 PDF 与上游代码内 v10 副本内容一致。旧核验记录中的根目录 PDF 路径属于历史位置；当前全文入口使用 references/official/。
 
 ## 官方代码快照

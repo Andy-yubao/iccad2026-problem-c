@@ -17,7 +17,7 @@ problemC/
 │   ├── workspace_structure.md
 │   ├── datasets.md
 │   ├── research_guide.zh-CN.md
-│   └── literature_review.zh-CN.md
+│   └── git.md
 ├── experiments/
 │   ├── README.md              # 实验索引
 │   └── baseline/              # 当前唯一保留的硬约束基线
@@ -101,7 +101,7 @@ experiments/baseline/
 
 ## 4. 文档的唯一归属
 
-`docs/` 只保留换一种算法后仍需阅读的核心内容：执行协议、结构规范、数据使用、通用赛题解读和通用文献综述。新内容优先并入已有文档；实验设计、当前瓶颈、分数、下一轮建议归实验。官方全文、论文 PDF 和来源清单归 references；安装证据随 datasets。
+`docs/` 只保留换一种算法后仍需阅读的核心内容：执行协议、结构规范、数据使用、通用赛题解读和 Git 使用约定。新内容优先并入已有文档；实验设计、当前瓶颈、分数、下一轮建议归实验。官方全文、官方论文和来源清单归 references；安装证据随 datasets。
 
 | 位置 | 维护内容 |
 |---|---|
@@ -140,4 +140,4 @@ checkpoint 搬迁后只做必要读取兼容检查，不自动续训。用户后
 
 ## 7. Git 与 GitHub
 
-主分支 main，远程 origin。先完成相关短检查并检查提交文件，再提交有意义改动；用 git status 查看状态，用 git push 同步用户授权的工作。数据、环境、缓存、checkpoint 与本地凭据不入库。只有明确请求恢复的已退役路线才重新引入，不从旧文档推断要续做的实验。
+主分支 main，远程 origin。日常提交、同步、入库范围与历史恢复见 [Git 使用约定](git.md)。只有明确请求恢复的已退役路线才重新引入，不从旧文档推断要续做的实验。

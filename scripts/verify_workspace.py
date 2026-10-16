@@ -18,11 +18,10 @@ def main():
     args = parser.parse_args()
     errors, count = [], 0
     for relative, field in [('references/resources_manifest.json', 'resources'),
-                            ('third_party/upstream_manifest.json', 'files'),
-                            ('references/papers/manifest.json', 'items')]:
+                            ('third_party/upstream_manifest.json', 'files')]:
         manifest = json.loads((ROOT / relative).read_text(encoding='utf-8'))
         for record in manifest[field]:
-            path = ROOT / record['path'] if 'path' in record else ROOT / 'references/papers' / record['file']
+            path = ROOT / record['path']
             if record.get('status', 'available') not in {'available', 'downloaded'}:
                 errors.append(f'Resource unavailable: {path.relative_to(ROOT)}')
                 continue

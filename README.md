@@ -28,7 +28,7 @@ python -B scripts/verify_workspace.py
 
 - `experiments/baseline/`：当前基线的实现、说明、运行证据和诊断。
 - `datasets/`、`scoring/`：仅复用数据处理与官方输出评分；其他实验算法独立维护。
-- `docs/`：核心协议、结构规范、数据说明、[赛题导读](docs/research_guide.zh-CN.md)与[通用文献索引](docs/literature_review.zh-CN.md)。
+- `docs/`：核心协议、结构规范、数据说明、[赛题导读](docs/research_guide.zh-CN.md)与 [Git 使用约定](docs/git.md)。
 - `references/` 与 `third_party/`：[官方资料与论文](references/README.md)、未修改的上游代码。
 - `history/`：必要的基线旧证据和整理记录，不保留已明确删除方向的源码或权重。
 
