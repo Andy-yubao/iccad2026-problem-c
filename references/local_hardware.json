@@ -1,0 +1,28 @@
+{
+  "checked_at_utc": "2026-10-15T12:55:09.679366+00:00",
+  "gpu": "NVIDIA GeForce RTX 5080 Laptop GPU",
+  "vram_bytes_reported_by_torch": 17066033152,
+  "compute_capability": [
+    12,
+    0
+  ],
+  "driver_version": "617.14",
+  "cuda_umd_version_reported_by_nvidia_smi": "13.4",
+  "standalone_nvcc_found_on_path": false,
+  "toolkit_found_in_default_install_directory": false,
+  "tested_conda_environment": "livetalking",
+  "tested_torch_version": "2.7.1+cu128",
+  "torch_cuda_runtime": "12.8",
+  "cudnn_version": 90701,
+  "compiled_sm_120_available": true,
+  "gpu_matmul_test": {
+    "shape": [
+      64,
+      64
+    ],
+    "value": 64.0,
+    "expected": 64.0,
+    "passed": true
+  },
+  "note": "Driver-side CUDA version, standalone Toolkit, and framework CUDA runtime are separate observations."
+}

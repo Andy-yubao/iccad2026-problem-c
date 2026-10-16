@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-16",
+  "scope": "User-requested retirement cleanup; only input-only baseline retained",
+  "removed": [
+    {
+      "path": "experiments/graph_layout",
+      "files": 28,
+      "bytes": 56405435
+    },
+    {
+      "path": "history/20261016_workspace_migration/before_sources.zip",
+      "files": 1,
+      "bytes": 193284
+    },
+    {
+      "path": "history/20261016_workspace_migration/after_sources.zip",
+      "files": 1,
+      "bytes": 233888
+    }
+  ],
+  "baseline_moves": [
+    {
+      "old": "experiments/heuristic_layout",
+      "new": "experiments/baseline"
+    },
+    {
+      "old": "experiments/baseline_audit/audit.py",
+      "new": "experiments/baseline/audit.py"
+    },
+    {
+      "old": "experiments/baseline_audit/README.md",
+      "new": "experiments/baseline/diagnostics.md"
+    },
+    {
+      "old": "experiments/baseline_audit/version_check.md",
+      "new": "experiments/baseline/version_check.md"
+    },
+    {
+      "old": "experiments/baseline_audit/runs/five_case_final",
+      "new": "experiments/baseline/runs/five_case_final"
+    },
+    {
+      "old": "experiments/baseline_audit/runs/template_version_check",
+      "new": "experiments/baseline/runs/template_version_check"
+    },
+    {
+      "old": "experiments/official_baseline/run.py",
+      "new": "experiments/baseline/run_official.py"
+    },
+    {
+      "old": "experiments/official_baseline/runs/full100_clean_cu128_seed0",
+      "new": "experiments/baseline/runs/full100_clean_cu128_seed0"
+    }
+  ],
+  "baseline_snapshot_sanitized": {
+    "path": "experiments/baseline/runs/stage1_dev_run1/source_snapshot.zip",
+    "sha256_before": "e1bdccac0882fc1ecdb43e11f2b764a29dde85b38a2d7f9b78d2ed43e8b44fed",
+    "sha256_after": "a77b001b62c408e5d15f6dc481e04e5982b1c8e22825c895ff6549e86d2b328d",
+    "members": [
+      "scripts/run_research_smoke.py",
+      "research/__init__.py",
+      "research/evaluation.py",
+      "research/optimizer.py",
+      "research/packing.py",
+      "scripts/audit_baseline_five.py",
+      "third_party/FloorSet/iccad2026contest/iccad2026_evaluate.py",
+      "scripts/plot_research_smoke.py",
+      "snapshot_manifest.json"
+    ]
+  },
+  "verification": {
+    "status": "passed",
+    "retained_result_log_environment_files_byte_identical": 15,
+    "baseline_algorithm_ast_unchanged": true,
+    "split_file_byte_identical": true,
+    "unique_dev_cases": 5,
+    "existing_variant_scores_unchanged": 20,
+    "renamed_subprocess_entry_one_case_hard_legal": true,
+    "remaining_archive_files_checked": 2,
+    "retired_source_archive_members": 0,
+    "checkpoint_files_remaining": 0,
+    "training_updates": 0,
+    "local_test_payloads_loaded": 0,
+    "wall_seconds": 8.719000000011874
+  },
+  "static_check": {
+    "checked_at_utc": "2026-10-16T07:16:17.846696+00:00",
+    "archive_files_verified": 164,
+    "python_files_syntax_checked": 20,
+    "authored_markdown_files_checked": 18,
+    "local_markdown_links_checked": 123,
+    "qa_pairs": 29,
+    "bibliography_entries": 46,
+    "split_file_sha256": "a1f23edae03194c1155d260415482d892e4cb5ad66170abc93af04aafc8cefbd",
+    "tensor_payloads_loaded": 0,
+    "training_or_inference_executed": false,
+    "dataset_archive_rehashed": false,
+    "errors": [],
+    "status": "passed"
+  }
+}

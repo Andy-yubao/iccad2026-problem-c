@@ -1,0 +1,95 @@
+dev:worker_0/layouts_0.th:0 strategy=row n=75 feasible=True neutral_cost=9.999999 solve=0.002s
+dev:worker_0/layouts_0.th:0 strategy=pack n=75 feasible=True neutral_cost=2.272513 solve=1.199s
+dev:worker_0/layouts_0.th:0 strategy=search n=75 feasible=True neutral_cost=2.133324 solve=15.000s
+dev:worker_0/layouts_0.th:0 strategy=no_soft n=75 feasible=True neutral_cost=8.717991 solve=14.998s
+dev:worker_19/layouts_0.th:0 strategy=row n=94 feasible=True neutral_cost=9.999999 solve=0.003s
+dev:worker_19/layouts_0.th:0 strategy=pack n=94 feasible=True neutral_cost=2.663759 solve=1.843s
+dev:worker_19/layouts_0.th:0 strategy=search n=94 feasible=True neutral_cost=1.965688 solve=14.997s
+dev:worker_19/layouts_0.th:0 strategy=no_soft n=94 feasible=True neutral_cost=9.026112 solve=14.989s
+dev:worker_39/layouts_0.th:0 strategy=row n=64 feasible=True neutral_cost=9.999999 solve=0.002s
+dev:worker_39/layouts_0.th:0 strategy=pack n=64 feasible=True neutral_cost=1.856349 solve=0.476s
+dev:worker_39/layouts_0.th:0 strategy=search n=64 feasible=True neutral_cost=1.667352 solve=15.002s
+dev:worker_39/layouts_0.th:0 strategy=no_soft n=64 feasible=True neutral_cost=7.245723 solve=15.006s
+dev:worker_69/layouts_0.th:0 strategy=row n=104 feasible=True neutral_cost=9.999999 solve=0.003s
+dev:worker_69/layouts_0.th:0 strategy=pack n=104 feasible=True neutral_cost=3.097776 solve=1.661s
+dev:worker_69/layouts_0.th:0 strategy=search n=104 feasible=True neutral_cost=1.894212 solve=14.990s
+dev:worker_69/layouts_0.th:0 strategy=no_soft n=104 feasible=True neutral_cost=7.553174 solve=14.994s
+dev:worker_99/layouts_0.th:0 strategy=row n=85 feasible=True neutral_cost=9.999999 solve=0.002s
+dev:worker_99/layouts_0.th:0 strategy=pack n=85 feasible=True neutral_cost=1.995989 solve=0.948s
+dev:worker_99/layouts_0.th:0 strategy=search n=85 feasible=True neutral_cost=1.805693 solve=14.977s
+dev:worker_99/layouts_0.th:0 strategy=no_soft n=85 feasible=True neutral_cost=7.126676 solve=15.000s
+{
+  "row": {
+    "case_count": 5,
+    "feasible_count": 5,
+    "feasible_rate": 1.0,
+    "execution_error_count": 0,
+    "neutral_runtime_mean_cost_all_cases": 9.999999,
+    "neutral_runtime_weighted_cost_all_cases": 9.999999,
+    "mean_hpwl_gap_returned_geometry": 9.834855718528994,
+    "mean_area_gap_returned_geometry": 7.002398712846938,
+    "mean_boundary_violations_returned_geometry": 21.2,
+    "mean_grouping_violations_returned_geometry": 17.0,
+    "mean_mib_violations_returned_geometry": 0.4,
+    "returned_geometry_metric_count": 5,
+    "total_solve_seconds": 0.012899199995445088,
+    "total_worker_wall_seconds": 18.12396019999869,
+    "max_peak_worker_memory_bytes": 408412160,
+    "quality_scope": "all returned geometries, including infeasible ones; errors have undefined gaps and cost 10"
+  },
+  "pack": {
+    "case_count": 5,
+    "feasible_count": 5,
+    "feasible_rate": 1.0,
+    "execution_error_count": 0,
+    "neutral_runtime_mean_cost_all_cases": 2.3772773592746734,
+    "neutral_runtime_weighted_cost_all_cases": 2.7959121908533535,
+    "mean_hpwl_gap_returned_geometry": 0.8535019691983976,
+    "mean_area_gap_returned_geometry": 0.16573213024588024,
+    "mean_boundary_violations_returned_geometry": 8.0,
+    "mean_grouping_violations_returned_geometry": 3.0,
+    "mean_mib_violations_returned_geometry": 0.0,
+    "returned_geometry_metric_count": 5,
+    "total_solve_seconds": 6.127400700017461,
+    "total_worker_wall_seconds": 25.124747499998193,
+    "max_peak_worker_memory_bytes": 416595968,
+    "quality_scope": "all returned geometries, including infeasible ones; errors have undefined gaps and cost 10"
+  },
+  "search": {
+    "case_count": 5,
+    "feasible_count": 5,
+    "feasible_rate": 1.0,
+    "execution_error_count": 0,
+    "neutral_runtime_mean_cost_all_cases": 1.8932537455688745,
+    "neutral_runtime_weighted_cost_all_cases": 1.9090193724345106,
+    "mean_hpwl_gap_returned_geometry": 0.7003309537970716,
+    "mean_area_gap_returned_geometry": 0.1657321302458802,
+    "mean_boundary_violations_returned_geometry": 4.4,
+    "mean_grouping_violations_returned_geometry": 2.4,
+    "mean_mib_violations_returned_geometry": 0.0,
+    "returned_geometry_metric_count": 5,
+    "total_solve_seconds": 74.96597229999315,
+    "total_worker_wall_seconds": 92.92812730000878,
+    "max_peak_worker_memory_bytes": 423018496,
+    "quality_scope": "all returned geometries, including infeasible ones; errors have undefined gaps and cost 10"
+  },
+  "no_soft": {
+    "case_count": 5,
+    "feasible_count": 5,
+    "feasible_rate": 1.0,
+    "execution_error_count": 0,
+    "neutral_runtime_mean_cost_all_cases": 7.933935026728824,
+    "neutral_runtime_weighted_cost_all_cases": 7.918962083676663,
+    "mean_hpwl_gap_returned_geometry": 0.8607132107622585,
+    "mean_area_gap_returned_geometry": 0.13927749896326674,
+    "mean_boundary_violations_returned_geometry": 23.8,
+    "mean_grouping_violations_returned_geometry": 14.6,
+    "mean_mib_violations_returned_geometry": 2.6,
+    "returned_geometry_metric_count": 5,
+    "total_solve_seconds": 74.98733409999113,
+    "total_worker_wall_seconds": 92.45520289998967,
+    "max_peak_worker_memory_bytes": 422825984,
+    "quality_scope": "all returned geometries, including infeasible ones; errors have undefined gaps and cost 10"
+  }
+}
+Saved: E:\project\ICCAD\2026\problemC\experiments\research\stage1_dev_run1\results.json

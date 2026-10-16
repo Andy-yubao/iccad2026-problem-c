@@ -1,0 +1,67 @@
+{
+  "checked_at_utc": "2026-10-15T14:37:08.209403+00:00",
+  "repository": "IntelLabs/FloorSet",
+  "default_branch": "main",
+  "local_and_remote_head": "aadddcc2238695eb21e6542b8a6cd9e9fe6b80fa",
+  "public_tags": [],
+  "public_releases": [],
+  "other_branches": [
+    {
+      "name": "udaymallappa-patch-1",
+      "tip": "53083644c047ceeee3597cf10cae8a409a753469",
+      "author_date_utc": "2024-07-17T08:05:49Z",
+      "contest_template_present": false
+    },
+    {
+      "name": "udaymallappa-patch-2",
+      "tip": "f8aee69466a20bf38b88e6f82e0875dfd675c198",
+      "author_date_utc": "2024-07-22T00:27:35Z",
+      "contest_template_present": false
+    },
+    {
+      "name": "udaymallappa-patch-3",
+      "tip": "de05cd30b9258cc63c543112d39b2d4a7000190c",
+      "author_date_utc": "2024-08-09T21:16:50Z",
+      "contest_template_present": false
+    },
+    {
+      "name": "udaymallappa-patch-4",
+      "tip": "aa7b3a84752c72ca225438f7f4f5c1f60b84eb92",
+      "author_date_utc": "2024-12-09T05:09:44Z",
+      "contest_template_present": false
+    }
+  ],
+  "relevant_commits": [
+    {
+      "sha": "c1d2cd77b8a0e38c0671221cca4ce00be46bb9d5",
+      "author_date_utc": "2026-04-15T22:58:29Z",
+      "observed_template_changes": "Added target_positions argument and initial width/height extraction; no preplaced coordinate enforcement or rotation protection."
+    },
+    {
+      "sha": "a01137f8cb0406fcb1eef4a76e09445d95aab863",
+      "author_date_utc": "2026-04-20T03:49:41Z",
+      "changed_contest_files": [
+        "FloorplanningContest_ICCAD_2026_v9.pdf",
+        "README.md",
+        "iccad2026_evaluate.py"
+      ],
+      "template_changed": false,
+      "purpose": "Reclassify fixed-shape and preplaced as hard constraints"
+    },
+    {
+      "sha": "fc28d6d4a7e173c572329e1c9326160ad0ce90ac",
+      "author_date_utc": "2026-05-23T02:43:31Z",
+      "observed_template_changes": "Docstring only: soft-block area qualifier and fixed/preplaced dimension immutability text; no algorithm logic changed.",
+      "latest_template_commit": true,
+      "latest_evaluator_commit": true
+    }
+  ],
+  "sources": [
+    "https://api.github.com/repos/IntelLabs/FloorSet/branches?per_page=100",
+    "https://api.github.com/repos/IntelLabs/FloorSet/tags?per_page=100",
+    "https://api.github.com/repos/IntelLabs/FloorSet/releases?per_page=100",
+    "https://api.github.com/repos/IntelLabs/FloorSet/commits?path=iccad2026contest/optimizer_template.py&per_page=30",
+    "https://api.github.com/repos/IntelLabs/FloorSet/commits?path=iccad2026contest/iccad2026_evaluate.py&per_page=30"
+  ],
+  "solver_runs_performed_in_this_version_check": 0
+}

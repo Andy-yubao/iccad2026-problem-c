@@ -1,0 +1,63 @@
+{
+  "created_at_utc": "2026-10-15T15:23:06.205933+00:00",
+  "command_argv": [
+    "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+    "scripts/run_research_smoke.py",
+    "--strategies",
+    "row",
+    "pack",
+    "search",
+    "no_soft",
+    "--seconds",
+    "15",
+    "--seed",
+    "0",
+    "--output",
+    "experiments/research/stage1_dev_run1"
+  ],
+  "command_display": "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe scripts/run_research_smoke.py --strategies row pack search no_soft --seconds 15 --seed 0 --output experiments/research/stage1_dev_run1",
+  "workspace": "E:\\project\\ICCAD\\2026\\problemC",
+  "solver_module": "research.optimizer",
+  "strategies": [
+    "row",
+    "pack",
+    "search",
+    "no_soft"
+  ],
+  "panel": "dev",
+  "seed": 0,
+  "seconds_per_case_strategy": 15.0,
+  "planned_solver_seconds": 300.0,
+  "preregistered_research_wall_budget_seconds": 600,
+  "conservative_wall_estimate_seconds": 1040.0,
+  "hard_wall_limit_seconds": 1140.0,
+  "worker_startup_grace_seconds": 30.0,
+  "worker_transport": "same-interpreter subprocess with workspace temporary safe-input/output JSON; standard streams DEVNULL; no named pipes",
+  "python_executable": "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+  "python_version": "3.10.22 | packaged by conda-forge | (main, Oct  6 2026, 22:57:13) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "torch": "2.7.1+cu128",
+    "numpy": "1.26.4",
+    "shapely": "2.1.2",
+    "matplotlib": "3.10.8",
+    "scipy": null
+  },
+  "torch_cpu_threads": 1,
+  "torch_load": "map_location=cpu, weights_only=False for the trusted archived official tensor files",
+  "source_sha256": {
+    "scripts\\run_research_smoke.py": "61b7fa8203f0f5b11d87036521bda52366cb8c32d339633b939b7ce8f1022607",
+    "research\\__init__.py": "22b2c09bd7a6c0154617001b8ca2a67f1db3f4abe19bb4899c930f1b9241c328",
+    "research\\evaluation.py": "b037b860e8d125068df1506b32b60a045e571e84377751669bf9bedaddc5409a",
+    "research\\optimizer.py": "3b30de9df6473935d3a64cc23c8fc26ab4630d1f3b5806f2b5212859e58f3d8c",
+    "research\\packing.py": "ac53b103e2c4bff045af5e9860e3a94bfc3ffbd2d331cb54ddda4cb0b9a5fc08",
+    "scripts\\audit_baseline_five.py": "b5c5df0213af5ff6895b77fff1522150bffb4165ebd9bc9bd7f4531c91e161a8",
+    "third_party\\FloorSet\\iccad2026contest\\iccad2026_evaluate.py": "64db37865b42baf11add62bdbf035690dca086cd4be7b5b4e58db756f20d8498"
+  },
+  "split_file_sha256": "a1f23edae03194c1155d260415482d892e4cb5ad66170abc93af04aafc8cefbd",
+  "upstream_commit": "aadddcc2238695eb21e6542b8a6cd9e9fe6b80fa",
+  "runtime_scoring": "RuntimeFactor=1.0; neutral local quality cost, not an official contest score",
+  "memory_measurement": "per-worker process peak working set via Windows GetProcessMemoryInfo; Unix resource.ru_maxrss fallback; includes imports; null on unsupported or timed-out workers",
+  "data_boundary": "five frozen dev samples or five explicit public compatibility cases only; local_test sealed",
+  "solver_input_boundary": "ordinary inputs and masked fixed/preplaced specifications; no free-block labels or reference metrics"
+}
