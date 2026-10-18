@@ -1,0 +1,108 @@
+{
+  "case_count": 5,
+  "workers": [
+    0,
+    24,
+    49,
+    74,
+    99
+  ],
+  "current_train5_mse": {
+    "mse": 0.08733066916465759,
+    "center_mse": 0.0030546759953722358,
+    "log_ratio_mse": 0.2747894197702408
+  },
+  "reference_weighted_Q": 1.1789751876804155,
+  "current_weighted_Q": 2.674212048848314,
+  "known_optimum_interval": [
+    1,
+    1.1789751876804155
+  ],
+  "certified_current_additive_regret_lower_bound": 1.4952368611678986,
+  "reference_repacked_Q": 2.352096307427379,
+  "probes": {
+    "small": {
+      "parameters": 80131,
+      "best_cuda_mse": 7.165876295402995e-05,
+      "cpu_mse_for_layout_evaluation": 7.165842207541573e-05,
+      "final_Q": 2.6857873073862675,
+      "mse_reduction_vs_current": 0.999179458685467,
+      "best_step": 1400,
+      "completed_steps": 1500,
+      "seconds": 65.93700000000536
+    },
+    "large": {
+      "parameters": 612355,
+      "best_cuda_mse": 6.846917858638335e-06,
+      "cpu_mse_for_layout_evaluation": 6.846849078101513e-06,
+      "final_Q": 2.999209184644401,
+      "mse_reduction_vs_current": 0.9999215985730604,
+      "best_step": 1000,
+      "completed_steps": 1000,
+      "seconds": 54.73399999999674
+    }
+  },
+  "cases": [
+    {
+      "case_id": "train:worker_0/layouts_5040.th:0",
+      "n": 21,
+      "reference_Q": 1.6099296400199838,
+      "current_Q": 2.825950153237141,
+      "reference_repacked_Q": 2.4314572400627843,
+      "target_decode_max_coordinate_or_dimension_error": 3.814697265625e-06,
+      "target_decode_overlap_count": 2,
+      "target_decode_max_min_axis_overlap": 1.9073486328125e-06,
+      "symmetry_lower_bound": 0.0,
+      "certified_additive_regret_lower_bound": 1.216020513217157
+    },
+    {
+      "case_id": "train:worker_24/layouts_4144.th:0",
+      "n": 33,
+      "reference_Q": 1.3668379411737963,
+      "current_Q": 2.018883441307102,
+      "reference_repacked_Q": 2.212056787780284,
+      "target_decode_max_coordinate_or_dimension_error": 3.814697265625e-06,
+      "target_decode_overlap_count": 8,
+      "target_decode_max_min_axis_overlap": 5.7220458984375e-06,
+      "symmetry_lower_bound": 0.0,
+      "certified_additive_regret_lower_bound": 0.6520455001333059
+    },
+    {
+      "case_id": "train:worker_49/layouts_336.th:0",
+      "n": 107,
+      "reference_Q": 1.2343275421737188,
+      "current_Q": 2.731788684427555,
+      "reference_repacked_Q": 2.450920893397911,
+      "target_decode_max_coordinate_or_dimension_error": 1.52587890625e-05,
+      "target_decode_overlap_count": 25,
+      "target_decode_max_min_axis_overlap": 1.52587890625e-05,
+      "symmetry_lower_bound": 0.0,
+      "certified_additive_regret_lower_bound": 1.4974611422538362
+    },
+    {
+      "case_id": "train:worker_74/layouts_2800.th:0",
+      "n": 97,
+      "reference_Q": 1.0370328957906403,
+      "current_Q": 2.5246969460243047,
+      "reference_repacked_Q": 2.0270329934001374,
+      "target_decode_max_coordinate_or_dimension_error": 1.52587890625e-05,
+      "target_decode_overlap_count": 14,
+      "target_decode_max_min_axis_overlap": 1.52587890625e-05,
+      "symmetry_lower_bound": 0.0,
+      "certified_additive_regret_lower_bound": 1.4876640502336644
+    },
+    {
+      "case_id": "train:worker_99/layouts_4256.th:2",
+      "n": 66,
+      "reference_Q": 1.3498588183710474,
+      "current_Q": 2.9380700593163622,
+      "reference_repacked_Q": 3.652454839247181,
+      "target_decode_max_coordinate_or_dimension_error": 7.62939453125e-06,
+      "target_decode_overlap_count": 14,
+      "target_decode_max_min_axis_overlap": 7.62939453125e-06,
+      "symmetry_lower_bound": 0.0,
+      "certified_additive_regret_lower_bound": 1.5882112409453149
+    }
+  ],
+  "test_payload_reads": 0
+}

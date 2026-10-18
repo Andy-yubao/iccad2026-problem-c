@@ -21,7 +21,7 @@
 
 网页快照只保存 HTML，不是完整离线网站，部分图片/样式仍引用网络。论文来源为 [arXiv PDF](https://arxiv.org/pdf/2405.05480)；这不是题目中所有相关文献均已下载的声明。46 条原始书目见 [problem_references.md](official/problem_references.md)。
 
-当前下载的论文仅保留 FloorSet 官方原始论文，来源和哈希纳入下述资源清单；原题书目是官方原文的一部分，不表示保留了其中论文的本地副本。
+2026-10-15 初始归档仅包含 FloorSet 原始论文，来源和哈希纳入下述资源清单。2026-10-16 新增 10 篇 ML 与约束优化相关论文，原有 FloorSet 文件保持不变；见 [论文精选索引](papers/README.md)、[中文文献综述](papers/literature_review.zh-CN.md)与[新增阅读集清单](papers/manifest.json)。原题书目是官方原文的一部分，不表示其中全部文献均已下载。
 
 上述 13 个下载文件的来源 URL、大小和 SHA-256 均在 [resources_manifest.json](resources_manifest.json)。当前官方题目 PDF 与上游代码内 v10 副本内容一致。旧核验记录中的根目录 PDF 路径属于历史位置；当前全文入口使用 references/official/。
 

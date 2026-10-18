@@ -1,0 +1,110 @@
+{
+  "command": [
+    "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+    "E:\\project\\ICCAD\\2026\\problemC\\experiments\\intent_aware_repair\\train.py",
+    "--run-dir",
+    "experiments/intent_aware_repair/runs/20261017_local_supervision_ablation_seed0",
+    "--variants",
+    "baseline_local",
+    "--budget-seconds",
+    "3491",
+    "--prior-suite-seconds",
+    "3708.9530000000086",
+    "--variant-seconds",
+    "1500",
+    "--batch-size",
+    "32",
+    "--threads",
+    "2",
+    "--max-epochs",
+    "80"
+  ],
+  "created_utc": "2026-10-17T01:12:03.968703+00:00",
+  "variants": [
+    [
+      "baseline_local",
+      "baseline",
+      "local"
+    ]
+  ],
+  "seed": 0,
+  "batch_size": 32,
+  "threads": 2,
+  "suite_budget_seconds": 3491.0,
+  "variant_budget_seconds": 1500.0,
+  "max_epochs": 80,
+  "prior_suite_seconds": 3708.9530000000086,
+  "combined_budget_seconds": 7199.953000000009,
+  "workset_sha256": "6b19332acce3102792310df8ff124a764fb2f34a08e3f0ae24c44f8f3f9f9277",
+  "workset_counts": {
+    "train": 20000,
+    "dev": 2500,
+    "local_test": 2500,
+    "train_monitor": 500,
+    "dev_monitor": 500,
+    "dev_quality": 100
+  },
+  "data_paths": {
+    "training_root": "E:\\project\\ICCAD\\2026\\problemC\\datasets\\floorset_lite",
+    "public_validation_root": "E:\\project\\ICCAD\\2026\\problemC\\datasets\\LiteTensorDataTest"
+  },
+  "source_sha256": {
+    "experiments/intent_aware_repair/train.py": "5e98b3692f5d10ff22a98a1291f72eebde4ac191fb53778578872c8b64b36605",
+    "experiments/intent_aware_repair/model.py": "3d906a435ce01edaf5f41c6054c8df025c8ae40c00644978f2acbe8abc9c7469",
+    "experiments/intent_aware_repair/losses.py": "8965584660ae728d7cd327ed07ff8d83a2248c4f34dcaba2d9a23313c97f1d37",
+    "experiments/intent_aware_repair/batches.py": "8d3dd2afa0cba274d59b4bf3c594aca51fcbafc6974f3b09c67b7a1e37013a21",
+    "experiments/intent_aware_repair/data.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+    "experiments/intent_aware_repair/inference.py": "8e5598d7ad8b03747bc1708d55845ab2053f1921aca3224b4f337bdb201015c4",
+    "datasets/__init__.py": "03c36f364366be6c8a5091d6bd3dbec0788d7871747acdeac5fa89d4974cec21",
+    "datasets/cases.py": "1fd51addaaae38164c22f1946712665beebac700054db4bb07ed4f9d44e0b168",
+    "datasets/paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+    "datasets/worksets.py": "2ff073391b7d3456b6a0da93bf9cc54794000e02f5bef78e487c7015cb2cd76a",
+    "protocol/split_v1.json": "a1f23edae03194c1155d260415482d892e4cb5ad66170abc93af04aafc8cefbd",
+    "protocol/workset_v2.json": "b520f75d67d12a00aa4f52953e1b9f3cf4ad1c55f1af67206b4c3bc75e9a5bb3",
+    "protocol/paths.json": "7a28cd42de0f10809500c43c48836576361e67a72e723f7b32a404186df9b419"
+  },
+  "device": "NVIDIA GeForce RTX 5080 Laptop GPU",
+  "torch": "2.7.1+cu128",
+  "python": "3.10.22 | packaged by conda-forge | (main, Oct  6 2026, 22:57:13) [MSC v.1944 64 bit (AMD64)]",
+  "git_head": "8d9ab142f5f2799d03f1f0ef4837cdf7948a95ef",
+  "git_status": " M .gitignore\n M AGENTS.md\n M README.md\n M docs/datasets.md\n M docs/protocol.md\n M docs/workspace_structure.md\n M experiments/README.md\n M references/README.md\n?? datasets/worksets.py\n?? docs/aim.md\n?? experiments/conflict_local_repair/\n?? experiments/graph_proposal/\n?? experiments/intent_aware_repair/\n?? experiments/masked_construction/\n?? experiments/short_term_plan.md\n?? experiments/topology_geometry/\n?? history/20261017_direction_review/\n?? protocol/workset_v2.json\n?? references/papers/ChiPFormer_ICML2023.pdf\n?? references/papers/ChipDiffusion_ICML2025.pdf\n?? references/papers/DC3_2104.12225.pdf\n?? references/papers/DiffPlace_2510.15897v2.pdf\n?? references/papers/FlowPlace_2604.23658v2.pdf\n?? references/papers/LearnToFloorplan_ICCD2020.pdf\n?? references/papers/MaskPlace_NeurIPS2022.pdf\n?? references/papers/PARSAC_2405.05495v3.pdf\n?? references/papers/README.md\n?? references/papers/RulePlanner_2601.22476v2.pdf\n?? references/papers/Trinity_2610.04957v1.pdf\n?? references/papers/literature_review.zh-CN.md\n?? references/papers/manifest.json\n?? scripts/fetch_literature.py\n",
+  "scheduler": {
+    "name": "ReduceLROnPlateau",
+    "factor": 0.5,
+    "patience": 3,
+    "cooldown": 1,
+    "threshold_relative": 0.002,
+    "min_lr": 1e-05
+  },
+  "early_stop": {
+    "patience_checks": 12,
+    "min_epochs": 5,
+    "min_lr_reductions": 2,
+    "relative_min_delta": 0.002
+  },
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "clip_norm": 1.0
+  },
+  "monitor": "same geometry composite for all variants; each layout equal weight;500fixed dev",
+  "geometry_weights": {
+    "center_local": 1.0,
+    "shape": 0.25,
+    "relative_local": 0.25,
+    "overlap": 0.5,
+    "contact": 0.5,
+    "boundary": 0.25,
+    "mib": 0.1,
+    "bbox": 0.1
+  },
+  "training_geometry_warmup": "overlap/contact/boundary/MIB/bbox ramp linearly over first2epochs",
+  "validation_every_steps": 250,
+  "validation_at_epoch_end": true,
+  "test_payload_reads": 0,
+  "model_output": "centerXY and log(w/h) only; no relation head",
+  "authorization": "User explicitly authorized long training in current chat, cumulative ceiling updated to2hours.",
+  "budget_scope": "preflight + preparation + all variant training + monitor/checkpoint time; separate terminal evaluation after training",
+  "fairness": "same member order and wall upper bound; early stopping can differ; steps/epochs and seen members reported; not convergence proof"
+}

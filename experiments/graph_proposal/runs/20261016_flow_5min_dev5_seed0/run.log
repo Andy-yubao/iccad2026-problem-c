@@ -1,0 +1,49 @@
+dev:worker_0/layouts_0.th:0 strategy=flow1 n=75 feasible=True neutral_cost=4.638845 solve=0.320s
+dev:worker_0/layouts_0.th:0 strategy=flow4 n=75 feasible=True neutral_cost=3.725538 solve=1.179s
+dev:worker_19/layouts_0.th:0 strategy=flow1 n=94 feasible=True neutral_cost=2.826875 solve=0.481s
+dev:worker_19/layouts_0.th:0 strategy=flow4 n=94 feasible=True neutral_cost=2.826875 solve=1.849s
+dev:worker_39/layouts_0.th:0 strategy=flow1 n=64 feasible=True neutral_cost=2.470056 solve=0.241s
+dev:worker_39/layouts_0.th:0 strategy=flow4 n=64 feasible=True neutral_cost=2.443381 solve=0.868s
+dev:worker_69/layouts_0.th:0 strategy=flow1 n=104 feasible=True neutral_cost=4.004473 solve=0.625s
+dev:worker_69/layouts_0.th:0 strategy=flow4 n=104 feasible=True neutral_cost=3.726915 solve=2.407s
+dev:worker_99/layouts_0.th:0 strategy=flow1 n=85 feasible=True neutral_cost=3.404844 solve=0.409s
+dev:worker_99/layouts_0.th:0 strategy=flow4 n=85 feasible=True neutral_cost=3.404844 solve=1.563s
+{
+  "flow1": {
+    "case_count": 5,
+    "feasible_count": 5,
+    "feasible_rate": 1.0,
+    "execution_error_count": 0,
+    "neutral_runtime_mean_cost_all_cases": 3.4690184873165726,
+    "neutral_runtime_weighted_cost_all_cases": 3.6457763725490704,
+    "mean_hpwl_gap_returned_geometry": 0.6709540556981264,
+    "mean_area_gap_returned_geometry": 0.4499691748651185,
+    "mean_boundary_violations_returned_geometry": 11.8,
+    "mean_grouping_violations_returned_geometry": 7.6,
+    "mean_mib_violations_returned_geometry": 0.0,
+    "returned_geometry_metric_count": 5,
+    "total_solve_seconds": 2.0765514000086114,
+    "total_worker_wall_seconds": 18.4274666000274,
+    "max_peak_worker_memory_bytes": 428908544,
+    "quality_scope": "all returned geometries, including infeasible ones; errors have undefined gaps and cost 10"
+  },
+  "flow4": {
+    "case_count": 5,
+    "feasible_count": 5,
+    "feasible_rate": 1.0,
+    "execution_error_count": 0,
+    "neutral_runtime_mean_cost_all_cases": 3.225510303551961,
+    "neutral_runtime_weighted_cost_all_cases": 3.4417886185780526,
+    "mean_hpwl_gap_returned_geometry": 0.6909046575083525,
+    "mean_area_gap_returned_geometry": 0.46616489077657663,
+    "mean_boundary_violations_returned_geometry": 11.6,
+    "mean_grouping_violations_returned_geometry": 6.0,
+    "mean_mib_violations_returned_geometry": 0.0,
+    "returned_geometry_metric_count": 5,
+    "total_solve_seconds": 7.8660228999797255,
+    "total_worker_wall_seconds": 24.16063120000763,
+    "max_peak_worker_memory_bytes": 429453312,
+    "quality_scope": "all returned geometries, including infeasible ones; errors have undefined gaps and cost 10"
+  }
+}
+Saved: E:\project\ICCAD\2026\problemC\experiments\graph_proposal\runs\20261016_flow_5min_dev5_seed0\results.json

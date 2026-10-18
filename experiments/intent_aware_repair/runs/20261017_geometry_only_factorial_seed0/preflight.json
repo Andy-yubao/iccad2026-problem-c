@@ -1,0 +1,67 @@
+{
+  "status": "passed",
+  "real_train_cases": 5,
+  "steps_per_variant": 20,
+  "checks": [
+    {
+      "variant": "baseline_mse",
+      "batched_vs_single_max_abs": 1.4901161193847656e-07,
+      "output_channels": 3,
+      "finite_gradients": true,
+      "locked_specs_preserved": true,
+      "masked_label_invariance": true
+    },
+    {
+      "variant": "baseline_geometry",
+      "batched_vs_single_max_abs": 1.4901161193847656e-07,
+      "output_channels": 3,
+      "finite_gradients": true,
+      "locked_specs_preserved": true,
+      "masked_label_invariance": true
+    },
+    {
+      "variant": "attention_mse",
+      "batched_vs_single_max_abs": 5.960464477539062e-07,
+      "output_channels": 3,
+      "finite_gradients": true,
+      "locked_specs_preserved": true,
+      "masked_label_invariance": true
+    },
+    {
+      "variant": "attention_geometry",
+      "batched_vs_single_max_abs": 5.960464477539062e-07,
+      "output_channels": 3,
+      "finite_gradients": true,
+      "locked_specs_preserved": true,
+      "masked_label_invariance": true
+    }
+  ],
+  "benchmark": {
+    "baseline_mse": {
+      "batch5_step_seconds": 0.06330000000016298,
+      "parameters": 80131,
+      "last_loss": 0.09705619513988495,
+      "peak_cuda_allocated_bytes": 89629696
+    },
+    "baseline_geometry": {
+      "batch5_step_seconds": 0.04375,
+      "parameters": 80131,
+      "last_loss": 3.0306379795074463,
+      "peak_cuda_allocated_bytes": 89629696
+    },
+    "attention_mse": {
+      "batch5_step_seconds": 0.05939999999973224,
+      "parameters": 497299,
+      "last_loss": 0.07048602402210236,
+      "peak_cuda_allocated_bytes": 268496384
+    },
+    "attention_geometry": {
+      "batch5_step_seconds": 0.06484999999956927,
+      "parameters": 497299,
+      "last_loss": 2.2625904083251953,
+      "peak_cuda_allocated_bytes": 301230080
+    }
+  },
+  "seconds": 24.905999999988126,
+  "test_payload_reads": 0
+}

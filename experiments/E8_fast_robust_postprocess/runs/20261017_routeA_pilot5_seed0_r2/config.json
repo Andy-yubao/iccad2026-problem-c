@@ -1,0 +1,85 @@
+{
+  "panel": "pilot5",
+  "members": [
+    [
+      "worker_0/layouts_1344.th",
+      82
+    ],
+    [
+      "worker_24/layouts_9632.th",
+      47
+    ],
+    [
+      "worker_49/layouts_3696.th",
+      85
+    ],
+    [
+      "worker_74/layouts_7168.th",
+      65
+    ],
+    [
+      "worker_99/layouts_5152.th",
+      26
+    ]
+  ],
+  "variants": [
+    "control120",
+    "control_short",
+    "sparse_short",
+    "dense_short"
+  ],
+  "seed": 0,
+  "threads": 2,
+  "device": "cuda",
+  "short_seconds": 1.5,
+  "control_seconds": 120.0,
+  "control_shape_steps": 24,
+  "control_reweighted": true,
+  "MIP": false,
+  "workset_sha256": "6b19332acce3102792310df8ff124a764fb2f34a08e3f0ae24c44f8f3f9f9277",
+  "checkpoint": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\repair_friendly_draft\\runs\\20261017_factorial_seed0\\attention_geometry\\checkpoints\\best.pt",
+  "checkpoint_sha256": "47df667ed0b3994b60e554012255bcef1f7ec5cc76874b9e7493a30216f26c28",
+  "source_sha256": {
+    "experiments/E8_fast_robust_postprocess/__init__.py": "eaed9cc27162a96ff6d002f5e8759c9bbc1daf8b99657af38d6bdea66aae2138",
+    "experiments/E8_fast_robust_postprocess/fast_solver.py": "b643317b32254ee57c6a509b93ef787d00d7fb8237b03535230af3e0128e644c",
+    "experiments/E8_fast_robust_postprocess/frozen/__init__.py": "f5915e34d43c8c026ee35ab4bc5a68947065ce7455a9e371a64d0876c635767d",
+    "experiments/E8_fast_robust_postprocess/frozen/batches.py": "8d3dd2afa0cba274d59b4bf3c594aca51fcbafc6974f3b09c67b7a1e37013a21",
+    "experiments/E8_fast_robust_postprocess/frozen/canonical_geometry.py": "04924bc4150f82862ed4da6cb67fc08779bbf98fcf24e24abd41b1c64d4e2521",
+    "experiments/E8_fast_robust_postprocess/frozen/data.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+    "experiments/E8_fast_robust_postprocess/frozen/feasible.py": "9cfe70894d80fbe54ccaa1c3de60ef4ab111ac9b4472286d1ae6a0c5a1fdc756",
+    "experiments/E8_fast_robust_postprocess/frozen/global_refine.py": "088021ede3290fcd6cf60726a054f7958309e4267d4353a699b80697078ab716",
+    "experiments/E8_fast_robust_postprocess/frozen/inference.py": "0f649ba37a7b7be9ab1f4236730a851d9ea51a5bebb953baca4fbae161e611a3",
+    "experiments/E8_fast_robust_postprocess/frozen/model.py": "7b0075d753930c69dd7823fd643a1dfc55ded5f78263576fbe888da5c994dc94",
+    "experiments/E8_fast_robust_postprocess/frozen/occupancy.py": "ca5c7fa041d427d88594afac3fbaa5eaf71641367cf42128ba2a1b47a043bdc0",
+    "experiments/E8_fast_robust_postprocess/frozen/packing.py": "3c0500b7fee120807e6bd3fa8e9f115e476782af1a3e7620859c6651a089ef30",
+    "experiments/E8_fast_robust_postprocess/frozen/postprocess.py": "da0e1572a822a589968a19e67e2d36dd5133c7d17b7ea9443bd743ee4653a272",
+    "experiments/E8_fast_robust_postprocess/frozen/shape_lp.py": "2988df542aa80602f091963e1506da8085152ea0eca4846f6dc6c0a25ef13c94",
+    "experiments/E8_fast_robust_postprocess/frozen/solver.py": "cb5b0b6af3b8511d8a21b14178be188e31c61b58cba065c8c23847c2f9200325",
+    "experiments/E8_fast_robust_postprocess/frozen/topology_mip.py": "e392857196dbde4b3c1f3668862c9779e9c686f17ca89a820078421573b46df5",
+    "experiments/E8_fast_robust_postprocess/observe.py": "5e3c51fefd4e8e8d1cdf3a40d52d6e91d4930d730d6217ce2ca6be2563b3e06d",
+    "experiments/E8_fast_robust_postprocess/reduction.py": "4587a5c9c486c59719e76ef64396398edb92e6011d8c0c0cd4f538cad52c4b50",
+    "experiments/E8_fast_robust_postprocess/run.py": "fe460fd03945ba2ccf52d6ae18057c3b0e0fe39128e583615d8a3c1e483415d4",
+    "experiments/E8_fast_robust_postprocess/sparse_shape.py": "b330b0342ced966d1c3df90f1f3a1d2b407b0275e133a71c8dcedc852f542348",
+    "experiments/E8_fast_robust_postprocess/worker.py": "467920582810b00380114e253e7ac40035f94a671c9ef311351fa872c5e0c2cd"
+  },
+  "paths": {
+    "training_root": "E:\\project\\ICCAD\\2026\\problemC\\datasets\\floorset_lite",
+    "public_validation_root": "E:\\project\\ICCAD\\2026\\problemC\\datasets\\LiteTensorDataTest"
+  },
+  "variant_order": "case-index rotated; all variants receive the same cached E7 draft",
+  "supervisor_timeout": "solver budget + 10 seconds for interpreter imports/I/O; actual wall time recorded",
+  "selection": "pilot workers 0,24,49,74,99 chosen before outcomes; full panel canonical dev_quality100",
+  "test_disclosure": "Previously saved E7 partial test feedback motivated design. This run reads dev only.",
+  "created_utc": "2026-10-17T15:45:37.847902+00:00",
+  "command": [
+    "experiments/E8_fast_robust_postprocess/run.py",
+    "--panel",
+    "pilot5",
+    "--output",
+    "experiments/E8_fast_robust_postprocess/runs/20261017_routeA_pilot5_seed0_r2",
+    "--budget-seconds",
+    "900"
+  ],
+  "git_head": "8d9ab142f5f2799d03f1f0ef4837cdf7948a95ef",
+  "git_status": " M .gitignore\n M AGENTS.md\n M README.md\n M docs/datasets.md\n M docs/protocol.md\n M docs/workspace_structure.md\n M environment.yml\n M experiments/README.md\n M references/README.md\n?? datasets/worksets.py\n?? docs/aim.md\n?? experiments/E8_fast_robust_postprocess/\n?? experiments/conflict_local_repair/\n?? experiments/graph_proposal/\n?? experiments/intent_aware_repair/\n?? experiments/masked_construction/\n?? experiments/repair_friendly_draft/\n?? experiments/short_term_plan.md\n?? experiments/topology_geometry/\n?? history/20261017_alternating_optimization/\n?? history/20261017_direction_review/\n?? protocol/workset_v2.json\n?? references/papers/ChiPFormer_ICML2023.pdf\n?? references/papers/ChipDiffusion_ICML2025.pdf\n?? references/papers/DC3_2104.12225.pdf\n?? references/papers/DiffPlace_2510.15897v2.pdf\n?? references/papers/FlowPlace_2604.23658v2.pdf\n?? references/papers/LearnToFloorplan_ICCD2020.pdf\n?? references/papers/MaskPlace_NeurIPS2022.pdf\n?? references/papers/PARSAC_2405.05495v3.pdf\n?? references/papers/README.md\n?? references/papers/RulePlanner_2601.22476v2.pdf\n?? references/papers/Trinity_2610.04957v1.pdf\n?? references/papers/literature_review.zh-CN.md\n?? references/papers/manifest.json\n?? scripts/fetch_literature.py\n?? visualization/\n"
+}

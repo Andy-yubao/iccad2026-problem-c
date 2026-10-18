@@ -1,0 +1,92 @@
+{
+  "status": "completed",
+  "completed_cases": 10,
+  "expected_cases": 10,
+  "wall_seconds_this_invocation": 116.48798149998765,
+  "test_payload_reads": 0,
+  "scope": "10dev diagnostic only; not test50 or formal contest score",
+  "variants": {
+    "attention_geometry": {
+      "cases": 10,
+      "Q_mean": 1.1867714447249,
+      "Q_weighted": 1.1280660396612923,
+      "Q_median": 1.154248442888351,
+      "Q_p95": 1.351555218551786,
+      "Q_max": 1.3686085994554158,
+      "Q_below1_2": 7,
+      "Q_below1_15": 5,
+      "feasible": 10,
+      "execution_errors": 0,
+      "hpwl_gap_mean": 0.004569290480941592,
+      "area_gap_mean": -0.0034557040264274795,
+      "boundary_violations_mean": 0.0,
+      "grouping_violations_mean": 0.3,
+      "mib_violations_mean": 3.4,
+      "feature_seconds": {
+        "mean": 0.011398590001044795,
+        "median": 0.011418100009905174,
+        "p95": 0.019471774995326995
+      },
+      "forward_seconds": {
+        "mean": 0.029770590001135133,
+        "median": 0.021415700000943616,
+        "p95": 0.062133459995675364
+      },
+      "postprocess_seconds": {
+        "mean": 9.578896890001488,
+        "median": 10.453799099996104,
+        "p95": 20.838007695011022
+      },
+      "end_to_end_seconds": {
+        "mean": 9.620066070003668,
+        "median": 10.485214249973069,
+        "p95": 20.918788735008263
+      },
+      "shape_iterations": {
+        "mean": 10.6,
+        "median": 10.5,
+        "p95": 13.549999999999999
+      },
+      "trace_subproblems": {
+        "mean": 18.6,
+        "median": 18.5,
+        "p95": 21.549999999999997
+      },
+      "guard_fallback": {
+        "mean": 0.0,
+        "median": 0.0,
+        "p95": 0.0
+      },
+      "raw_diagnostics": {
+        "bbox_area": 23788.977268939656,
+        "union_area": 20605.942752350802,
+        "empty_fraction": 0.1352313993221684,
+        "overlap_excess_area_fraction": 0.10010073245159487,
+        "multi_covered_area_fraction": 0.09134939010647981,
+        "triple_covered_area_fraction": 0.004333868992430636,
+        "max_multiplicity": 3.2,
+        "overlap_pair_count": 89.9,
+        "overlap_block_fraction": 0.9439989119584812,
+        "max_conflict_degree": 5.4,
+        "largest_conflict_component": 62.6,
+        "conflict_components_size_ge3": 2.1
+      },
+      "final_diagnostics": {
+        "bbox_area": 23388.256374403318,
+        "union_area": 22676.478818326723,
+        "empty_fraction": 0.028827589387523743,
+        "overlap_excess_area_fraction": 9.803457791615759e-14,
+        "multi_covered_area_fraction": 9.466696503782439e-14,
+        "triple_covered_area_fraction": 0.0,
+        "max_multiplicity": 2.0,
+        "overlap_pair_count": 0.0,
+        "overlap_block_fraction": 0.0,
+        "max_conflict_degree": 0.0,
+        "largest_conflict_component": 1.0,
+        "conflict_components_size_ge3": 0.0
+      },
+      "center_displacement_local_mean": 0.5365671024121894
+    }
+  },
+  "paired_vs_frozen_e6": {}
+}

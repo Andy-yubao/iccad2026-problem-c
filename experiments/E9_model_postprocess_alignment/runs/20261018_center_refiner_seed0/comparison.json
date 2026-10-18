@@ -1,0 +1,63 @@
+{
+  "variants": {
+    "retained_E7": {
+      "n": 100,
+      "Q_mean": 1.2115559836196388,
+      "Q_weighted": 1.147240094039843,
+      "Q_p95": 1.3828083404003013,
+      "Q_max": 1.472866021403696,
+      "feasible": 100,
+      "mean_difference_vs_retained": 0.0,
+      "wins": 0,
+      "ties": 100,
+      "losses": 0,
+      "end_to_end_seconds_mean": 1.2100433589983732,
+      "target_met_on_dev100": false
+    },
+    "center_refiner": {
+      "n": 100,
+      "Q_mean": 1.210117877463913,
+      "Q_weighted": 1.1451980903599677,
+      "Q_p95": 1.382448871013094,
+      "Q_max": 1.472882927855464,
+      "feasible": 100,
+      "mean_difference_vs_retained": -0.0014381061557258868,
+      "wins": 32,
+      "ties": 33,
+      "losses": 35,
+      "end_to_end_seconds_mean": 1.2192052370012971,
+      "target_met_on_dev100": false,
+      "selection": {
+        "checkpoint": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E9_model_postprocess_alignment\\runs\\20261018_center_refiner_seed0\\center_refiner\\checkpoints\\best.pt",
+        "model_digest": "993dba1470f71164e5bcbbcc904a53119dd6551031faf3129d30f46fa6d878a3",
+        "Q_mean": 1.210117877463913,
+        "evaluation": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E9_model_postprocess_alignment\\runs\\20261018_center_refiner_seed0\\center_refiner\\quality\\proxy_best"
+      }
+    }
+  },
+  "candidates": [
+    {
+      "variant": "center_refiner",
+      "node": "epoch005",
+      "Q_mean": 1.2131814122465934,
+      "same_as_retained": false,
+      "feasible": 100,
+      "Q_max": 1.492488709875872,
+      "mean_difference_vs_E8": 0.001625428626954466,
+      "evaluation": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E9_model_postprocess_alignment\\runs\\20261018_center_refiner_seed0\\center_refiner\\quality\\epoch005"
+    },
+    {
+      "variant": "center_refiner",
+      "node": "proxy_best",
+      "Q_mean": 1.210117877463913,
+      "same_as_retained": false,
+      "feasible": 100,
+      "Q_max": 1.472882927855464,
+      "mean_difference_vs_E8": -0.0014381061557258868,
+      "evaluation": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E9_model_postprocess_alignment\\runs\\20261018_center_refiner_seed0\\center_refiner\\quality\\proxy_best"
+    }
+  ],
+  "paired_objective_contrast": null,
+  "target": 1.2,
+  "test_payload_reads": 0
+}

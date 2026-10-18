@@ -1,0 +1,47 @@
+{
+  "command": [
+    "E:\\project\\ICCAD\\2026\\problemC\\experiments\\topology_geometry\\run.py",
+    "--seconds",
+    "15",
+    "--total-seconds",
+    "90",
+    "--limit",
+    "5",
+    "--seed",
+    "0",
+    "--output",
+    "experiments/topology_geometry/runs/20261016_geometry_dev5_seed0"
+  ],
+  "date_utc": "2026-10-16T11:44:41.582268+00:00",
+  "seed": 0,
+  "panel": "frozen_dev_smoke_panel",
+  "limit": 5,
+  "seconds_per_case": 15.0,
+  "total_solve_seconds_budget": 90.0,
+  "threads": 1,
+  "device": "cpu",
+  "torch": "2.7.1+cu128",
+  "numpy": "1.26.4",
+  "python": "3.10.22",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "data_paths": {
+    "training_root": "E:\\project\\ICCAD\\2026\\problemC\\datasets\\floorset_lite",
+    "public_validation_root": "E:\\project\\ICCAD\\2026\\problemC\\datasets\\LiteTensorDataTest"
+  },
+  "source": {
+    "snapshot": "source.zip",
+    "hashes": {
+      "__init__.py": "7e4bcf8837a6827c47b65d2865e1beeb4c768b5ee55d143f658b29a9a690854d",
+      "geometry.py": "977d187ba5849268cd1274e8d82fd9db924c1f2a2d4a0b1195faf9df403f4f82",
+      "input_geometry.py": "a0c65aeaa2747cb5844bc7c7aad2c9c9a290415a86a7fd745adb7ba21e181418",
+      "model.py": "e3310f98d4a4b7b58622e10b97b5183348dc8caf2cfa33f73b889455b6f9fb0b",
+      "run.py": "010dd03698f2615d82979af499f43bde195299ce551e0ffc5cb56f5d64dcaf8c",
+      "train.py": "d5bab1b3384cb5f4296d1640ae851f9706786efa78ccf5c0ab1785c206b0cf19"
+    }
+  },
+  "split_sha256": "a1f23edae03194c1155d260415482d892e4cb5ad66170abc93af04aafc8cefbd",
+  "source_origin": "input_geometry.py prepare_problem copied from baseline/packing.py, independently maintained",
+  "checkpoint": null,
+  "learned_status": "not run: no trained checkpoint",
+  "git_head": "8d9ab142f5f2799d03f1f0ef4837cdf7948a95ef"
+}

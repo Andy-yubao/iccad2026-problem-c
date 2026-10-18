@@ -1,0 +1,131 @@
+{
+  "panel": "dev10",
+  "workers": [
+    0,
+    11,
+    22,
+    33,
+    44,
+    55,
+    66,
+    77,
+    88,
+    99
+  ],
+  "members": [
+    [
+      "worker_0/layouts_1344.th",
+      82
+    ],
+    [
+      "worker_11/layouts_9184.th",
+      88
+    ],
+    [
+      "worker_22/layouts_1344.th",
+      26
+    ],
+    [
+      "worker_33/layouts_5712.th",
+      110
+    ],
+    [
+      "worker_44/layouts_5600.th",
+      108
+    ],
+    [
+      "worker_55/layouts_5936.th",
+      47
+    ],
+    [
+      "worker_66/layouts_2016.th",
+      26
+    ],
+    [
+      "worker_77/layouts_0.th",
+      110
+    ],
+    [
+      "worker_88/layouts_5600.th",
+      1
+    ],
+    [
+      "worker_99/layouts_5152.th",
+      26
+    ]
+  ],
+  "selection": "fixed workers0,11,22,33,44,55,66,77,88,99 before scores",
+  "workset_sha256": "6b19332acce3102792310df8ff124a764fb2f34a08e3f0ae24c44f8f3f9f9277",
+  "checkpoint": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\repair_friendly_draft\\runs\\20261017_factorial_seed0\\attention_geometry\\checkpoints\\best.pt",
+  "checkpoint_sha256": "47df667ed0b3994b60e554012255bcef1f7ec5cc76874b9e7493a30216f26c28",
+  "variant": "attention_geometry",
+  "best_step": 48125,
+  "seed": 0,
+  "threads": 2,
+  "postprocess": {
+    "seconds": 120.0,
+    "shape_steps": 24,
+    "reweighted": true,
+    "mip_seconds": 0.0
+  },
+  "invocation_budget_seconds": 900.0,
+  "scope": "10dev diagnostic only; not test50 or formal contest score",
+  "test_payload_reads": 0,
+  "command": [
+    "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+    "experiments/repair_friendly_draft/runs/20261017_attention_geometry_dev10_seed0/probe.py"
+  ],
+  "created_utc": "2026-10-17T08:57:47.143247+00:00",
+  "git_head": "8d9ab142f5f2799d03f1f0ef4837cdf7948a95ef",
+  "git_status": " M .gitignore\n M AGENTS.md\n M README.md\n M docs/datasets.md\n M docs/protocol.md\n M docs/workspace_structure.md\n M environment.yml\n M experiments/README.md\n M references/README.md\n?? datasets/worksets.py\n?? docs/aim.md\n?? experiments/conflict_local_repair/\n?? experiments/graph_proposal/\n?? experiments/intent_aware_repair/\n?? experiments/masked_construction/\n?? experiments/repair_friendly_draft/\n?? experiments/short_term_plan.md\n?? experiments/topology_geometry/\n?? history/20261017_alternating_optimization/\n?? history/20261017_direction_review/\n?? protocol/workset_v2.json\n?? references/papers/ChiPFormer_ICML2023.pdf\n?? references/papers/ChipDiffusion_ICML2025.pdf\n?? references/papers/DC3_2104.12225.pdf\n?? references/papers/DiffPlace_2510.15897v2.pdf\n?? references/papers/FlowPlace_2604.23658v2.pdf\n?? references/papers/LearnToFloorplan_ICCD2020.pdf\n?? references/papers/MaskPlace_NeurIPS2022.pdf\n?? references/papers/PARSAC_2405.05495v3.pdf\n?? references/papers/README.md\n?? references/papers/RulePlanner_2601.22476v2.pdf\n?? references/papers/Trinity_2610.04957v1.pdf\n?? references/papers/literature_review.zh-CN.md\n?? references/papers/manifest.json\n?? scripts/fetch_literature.py\n",
+  "data_paths": {
+    "training_root": "E:\\project\\ICCAD\\2026\\problemC\\datasets\\floorset_lite",
+    "public_validation_root": "E:\\project\\ICCAD\\2026\\problemC\\datasets\\LiteTensorDataTest"
+  },
+  "source_sha256": {
+    "experiments/repair_friendly_draft/batches.py": "8d3dd2afa0cba274d59b4bf3c594aca51fcbafc6974f3b09c67b7a1e37013a21",
+    "experiments/repair_friendly_draft/canonical_geometry.py": "04924bc4150f82862ed4da6cb67fc08779bbf98fcf24e24abd41b1c64d4e2521",
+    "experiments/repair_friendly_draft/data.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+    "experiments/repair_friendly_draft/evaluate.py": "085101d8a67db121a8674091f4f5c540508463a8587b1956fd0367c95ac54aa1",
+    "experiments/repair_friendly_draft/feasible.py": "9cfe70894d80fbe54ccaa1c3de60ef4ab111ac9b4472286d1ae6a0c5a1fdc756",
+    "experiments/repair_friendly_draft/global_refine.py": "088021ede3290fcd6cf60726a054f7958309e4267d4353a699b80697078ab716",
+    "experiments/repair_friendly_draft/inference.py": "0f649ba37a7b7be9ab1f4236730a851d9ea51a5bebb953baca4fbae161e611a3",
+    "experiments/repair_friendly_draft/losses.py": "f6503136dc719f6742c66b31da7ebe1076726fac38edb64fa9ae6106ab9d6557",
+    "experiments/repair_friendly_draft/model.py": "7b0075d753930c69dd7823fd643a1dfc55ded5f78263576fbe888da5c994dc94",
+    "experiments/repair_friendly_draft/occupancy.py": "ca5c7fa041d427d88594afac3fbaa5eaf71641367cf42128ba2a1b47a043bdc0",
+    "experiments/repair_friendly_draft/packing.py": "3c0500b7fee120807e6bd3fa8e9f115e476782af1a3e7620859c6651a089ef30",
+    "experiments/repair_friendly_draft/panels.py": "0702879eac50d12e7bf49dbb4901fc841bfb6716d0b9d3b83b2463a1f2afd4b5",
+    "experiments/repair_friendly_draft/postprocess.py": "da0e1572a822a589968a19e67e2d36dd5133c7d17b7ea9443bd743ee4653a272",
+    "experiments/repair_friendly_draft/preflight.py": "a0de46efd5e41bcbc3d7b43dac738a4a5ca619889c29b78da353b4506ea837da",
+    "experiments/repair_friendly_draft/records.py": "0372e9393f7b588f492c980a0c450d606ba543af2f9668532e1e49f3b50ec863",
+    "experiments/repair_friendly_draft/render.py": "e4ca458153d95c4d0edff3fc2c30b78456fe6b1855c2b4f5fd9e7b987993951b",
+    "experiments/repair_friendly_draft/shape_lp.py": "2988df542aa80602f091963e1506da8085152ea0eca4846f6dc6c0a25ef13c94",
+    "experiments/repair_friendly_draft/solver.py": "cb5b0b6af3b8511d8a21b14178be188e31c61b58cba065c8c23847c2f9200325",
+    "experiments/repair_friendly_draft/topology_mip.py": "e392857196dbde4b3c1f3668862c9779e9c686f17ca89a820078421573b46df5",
+    "experiments/repair_friendly_draft/train.py": "eed44bb25235b4980f155924759900f8f35921e12fb70be1eb2cc50b53a2dcf2",
+    "datasets/__init__.py": "03c36f364366be6c8a5091d6bd3dbec0788d7871747acdeac5fa89d4974cec21",
+    "datasets/cases.py": "1fd51addaaae38164c22f1946712665beebac700054db4bb07ed4f9d44e0b168",
+    "datasets/paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+    "datasets/worksets.py": "2ff073391b7d3456b6a0da93bf9cc54794000e02f5bef78e487c7015cb2cd76a",
+    "scoring/__init__.py": "933bf2be947e20bae164511f26afaa84c2f331d0dbdebc417d235db8358a9247",
+    "scoring/checks.py": "738f6b57e20dce58516f3f10d83689f8df273a84a02b2dce99c6ccc1f904763a",
+    "scoring/evaluation.py": "356e0d1c788c6f25154b33fb1c2455388317d2cc0dd96ca50d7357c58612c611",
+    "scoring/official.py": "478fbc228a56ec4b336b5d8687a44b22b749f30aae09372f57c08e7124270e03",
+    "protocol/paths.json": "7a28cd42de0f10809500c43c48836576361e67a72e723f7b32a404186df9b419",
+    "protocol/split_v1.json": "a1f23edae03194c1155d260415482d892e4cb5ad66170abc93af04aafc8cefbd",
+    "protocol/workset_v2.json": "b520f75d67d12a00aa4f52953e1b9f3cf4ad1c55f1af67206b4c3bc75e9a5bb3",
+    "experiments/repair_friendly_draft/inherited_sources.json": "36e61d17602a876db7a4144af58e87d8c1a12ea9ba92f750cdc774266e9f04db",
+    "experiments/repair_friendly_draft/panels.json": "911441b6294ae797c4d11b07fd0976420531ee60a722f7ba9d7a6e03d8ddccb5",
+    "environment.yml": "89a5fc1d39896dbb8d2c778cb6bd70bee176beee76075a702d0f839c2de2579d",
+    "third_party/FloorSet/iccad2026contest/iccad2026_evaluate.py": "64db37865b42baf11add62bdbf035690dca086cd4be7b5b4e58db756f20d8498",
+    "experiments/repair_friendly_draft/runs/20261017_attention_geometry_dev10_seed0/probe.py": "a54dbf21142d395496af5b5d4396c94adf72e59f3bf1bc2aa156cddf8eaccbc5"
+  },
+  "torch": "2.7.1+cu128",
+  "cuda": "12.8",
+  "python": "3.10.22",
+  "numpy": "1.26.4",
+  "scipy": "1.15.3",
+  "highs": "1.15.1",
+  "shapely": "2.1.2",
+  "device": "NVIDIA GeForce RTX 5080 Laptop GPU"
+}

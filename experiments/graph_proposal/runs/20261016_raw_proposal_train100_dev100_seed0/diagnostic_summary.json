@@ -1,0 +1,45 @@
+{
+  "complete": true,
+  "cases_sha256": "a690229d1bdbb351a8e3d57ce8c6cd6045b6a350922bf913dbb020fca12f8481",
+  "panels": {
+    "train": {
+      "count": 100,
+      "workers": 100,
+      "supervised": {
+        "mse": 0.07412296522408723,
+        "center_mse": 0.003381517576635815,
+        "log_ratio_mse": 0.2316648340970278
+      },
+      "translation_lb_min": 0.33812630593867427,
+      "translation_lb_max": 1.7308962122051683,
+      "translation_lb_exceeds_5pct": 100,
+      "translation_lb_exceeds_10pct": 100,
+      "translation_lb_median": 0.5262417228977916,
+      "network_and_decode_seconds_mean": 0.004249999999301508,
+      "same_official_overlap_count_verified": true,
+      "group_contact_recall_valid_layouts": 100
+    },
+    "dev": {
+      "count": 100,
+      "workers": 100,
+      "supervised": {
+        "mse": 0.07278316404670476,
+        "center_mse": 0.0034332440834259612,
+        "log_ratio_mse": 0.22732424587011338
+      },
+      "translation_lb_min": 0.3104322949365146,
+      "translation_lb_max": 1.3601237539797209,
+      "translation_lb_exceeds_5pct": 100,
+      "translation_lb_exceeds_10pct": 100,
+      "translation_lb_median": 0.5106547802633596,
+      "network_and_decode_seconds_mean": 0.0037699999994947574,
+      "same_official_overlap_count_verified": true,
+      "group_contact_recall_valid_layouts": 100
+    }
+  },
+  "checkpoint_sha256": "dca8ddc179308a30623edc8b8f6536a1c254b1452d3b63216f0a3846f7d5fe76",
+  "checkpoint_unchanged": true,
+  "test_payload_reads": 0,
+  "postprocessing_calls": 0,
+  "training_updates": 0
+}

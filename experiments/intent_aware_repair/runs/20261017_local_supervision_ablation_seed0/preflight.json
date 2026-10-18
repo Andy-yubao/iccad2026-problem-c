@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "real_train_cases": 5,
+  "steps_per_variant": 20,
+  "checks": [
+    {
+      "variant": "baseline_local",
+      "batched_vs_single_max_abs": 1.4901161193847656e-07,
+      "output_channels": 3,
+      "finite_gradients": true,
+      "locked_specs_preserved": true,
+      "masked_label_invariance": true,
+      "strict_inference_matches_training_features": true,
+      "network_rejects_supervision": true
+    }
+  ],
+  "benchmark": {
+    "baseline_local": {
+      "batch5_step_seconds": 0.08125,
+      "parameters": 80131,
+      "last_loss": 1.6350860595703125,
+      "peak_cuda_allocated_bytes": 89629696
+    }
+  },
+  "seconds": 22.264999999984866,
+  "test_payload_reads": 0
+}

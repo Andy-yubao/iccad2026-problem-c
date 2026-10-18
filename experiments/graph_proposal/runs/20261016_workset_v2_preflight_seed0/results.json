@@ -1,0 +1,69 @@
+{
+  "counts": {
+    "train": 20000,
+    "dev": 2500,
+    "local_test": 2500,
+    "train_monitor": 500,
+    "dev_monitor": 500,
+    "dev_quality": 100
+  },
+  "cases": [
+    {
+      "split": "train",
+      "member": [
+        "worker_0/layouts_5040.th",
+        0
+      ],
+      "blocks": 21,
+      "mse": 0.43568605184555054
+    },
+    {
+      "split": "train",
+      "member": [
+        "worker_0/layouts_5040.th",
+        1
+      ],
+      "blocks": 21,
+      "mse": 0.40721482038497925
+    },
+    {
+      "split": "dev",
+      "member": [
+        "worker_0/layouts_1344.th",
+        3
+      ],
+      "blocks": 97,
+      "mse": 0.28703609108924866
+    },
+    {
+      "split": "dev",
+      "member": [
+        "worker_0/layouts_1344.th",
+        5
+      ],
+      "blocks": 97,
+      "mse": 0.2833046317100525
+    },
+    {
+      "split": "dev",
+      "member": [
+        "worker_0/layouts_1344.th",
+        12
+      ],
+      "blocks": 97,
+      "mse": 0.2724263370037079
+    }
+  ],
+  "test_tensor_reads": 0,
+  "test_reader_blocked": true,
+  "plateau_lr_trace": [
+    0.001,
+    0.001,
+    0.0005,
+    0.0005,
+    0.0005,
+    0.0005,
+    0.00025,
+    0.00025
+  ]
+}

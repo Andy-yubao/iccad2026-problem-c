@@ -1,0 +1,110 @@
+{
+  "variants": {
+    "retained_E7": {
+      "n": 100,
+      "Q_mean": 1.2115559836196388,
+      "Q_weighted": 1.147240094039843,
+      "Q_p95": 1.3828083404003013,
+      "Q_max": 1.472866021403696,
+      "feasible": 100,
+      "mean_difference_vs_retained": 0.0,
+      "wins": 0,
+      "ties": 100,
+      "losses": 0,
+      "end_to_end_seconds_mean": 1.2100433589983732,
+      "target_met_on_dev100": false
+    },
+    "geometry_control": {
+      "n": 100,
+      "Q_mean": 1.2115559836196388,
+      "Q_weighted": 1.147240094039843,
+      "Q_p95": 1.3828083404003013,
+      "Q_max": 1.472866021403696,
+      "feasible": 100,
+      "mean_difference_vs_retained": 0.0,
+      "wins": 0,
+      "ties": 100,
+      "losses": 0,
+      "end_to_end_seconds_mean": 1.2100433589983732,
+      "target_met_on_dev100": false,
+      "selection": {
+        "checkpoint": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\repair_friendly_draft\\runs\\20261017_factorial_seed0\\attention_geometry\\checkpoints\\best.pt",
+        "checkpoint_sha256": "47df667ed0b3994b60e554012255bcef1f7ec5cc76874b9e7493a30216f26c28",
+        "model_digest": "3d6ad177a8cd150d34408e8024e670db9c46ee21d266a977f94692c7cc3a7cb8",
+        "Q_mean": 1.2115559836196388,
+        "evaluation": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E8_fast_robust_postprocess\\runs\\20261018_robust_dev100_seed0",
+        "source": "retained E7 + unchanged E8, cached control"
+      }
+    },
+    "quality_aligned": {
+      "n": 100,
+      "Q_mean": 1.2115559836196388,
+      "Q_weighted": 1.147240094039843,
+      "Q_p95": 1.3828083404003013,
+      "Q_max": 1.472866021403696,
+      "feasible": 100,
+      "mean_difference_vs_retained": 0.0,
+      "wins": 0,
+      "ties": 100,
+      "losses": 0,
+      "end_to_end_seconds_mean": 1.2100433589983732,
+      "target_met_on_dev100": false,
+      "selection": {
+        "checkpoint": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\repair_friendly_draft\\runs\\20261017_factorial_seed0\\attention_geometry\\checkpoints\\best.pt",
+        "checkpoint_sha256": "47df667ed0b3994b60e554012255bcef1f7ec5cc76874b9e7493a30216f26c28",
+        "model_digest": "3d6ad177a8cd150d34408e8024e670db9c46ee21d266a977f94692c7cc3a7cb8",
+        "Q_mean": 1.2115559836196388,
+        "evaluation": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E8_fast_robust_postprocess\\runs\\20261018_robust_dev100_seed0",
+        "source": "retained E7 + unchanged E8, cached control"
+      }
+    }
+  },
+  "candidates": [
+    {
+      "variant": "geometry_control",
+      "node": "epoch005",
+      "Q_mean": 1.214180339580432,
+      "same_as_retained": false,
+      "feasible": 100,
+      "Q_max": 1.5082941308804323,
+      "mean_difference_vs_E8": 0.0026243559607930455,
+      "evaluation": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E9_model_postprocess_alignment\\runs\\20261018_quality_alignment_seed0\\geometry_control\\quality\\epoch005"
+    },
+    {
+      "variant": "geometry_control",
+      "node": "proxy_best",
+      "Q_mean": 1.2115564145553128,
+      "same_as_retained": true,
+      "feasible": 100,
+      "Q_max": 1.472866021403696,
+      "mean_difference_vs_E8": 4.309356740161974e-07,
+      "evaluation": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E9_model_postprocess_alignment\\runs\\20261018_quality_alignment_seed0\\geometry_control\\quality\\proxy_best"
+    },
+    {
+      "variant": "quality_aligned",
+      "node": "epoch005",
+      "Q_mean": 1.2159405123169562,
+      "same_as_retained": false,
+      "feasible": 100,
+      "Q_max": 1.4974805492015664,
+      "mean_difference_vs_E8": 0.004384528697317291,
+      "evaluation": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E9_model_postprocess_alignment\\runs\\20261018_quality_alignment_seed0\\quality_aligned\\quality\\epoch005"
+    },
+    {
+      "variant": "quality_aligned",
+      "node": "proxy_best",
+      "Q_mean": 1.2153897784400907,
+      "same_as_retained": false,
+      "feasible": 100,
+      "Q_max": 1.5051817921050428,
+      "mean_difference_vs_E8": 0.003833794820451644,
+      "evaluation": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E9_model_postprocess_alignment\\runs\\20261018_quality_alignment_seed0\\quality_aligned\\quality\\proxy_best"
+    }
+  ],
+  "paired_objective_contrast": {
+    "quality_minus_control_mean": 0.0,
+    "note": "Selected complete development results; selection/seed reuse must be inspected before attributing any benefit to the new loss."
+  },
+  "target": 1.2,
+  "test_payload_reads": 0
+}

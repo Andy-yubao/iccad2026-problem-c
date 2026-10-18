@@ -1,0 +1,21 @@
+{
+  "command": [
+    "experiments/graph_proposal/summarize.py",
+    "--det-results",
+    "experiments/graph_proposal/runs/20261016_deterministic_short_dev5_seed0/results.json",
+    "--flow-results",
+    "experiments/graph_proposal/runs/20261016_flow_5min_dev5_seed0/results.json",
+    "--det-train",
+    "experiments/graph_proposal/runs/20261016_deterministic_train_seed0_r2",
+    "--flow-train",
+    "experiments/graph_proposal/runs/20261016_flow_5min_train_seed0",
+    "--output",
+    "experiments/graph_proposal/runs/20261016_short_budget_comparison_seed0"
+  ],
+  "source_sha256": "98c2fd6f6d58cdfaefa0c7db3f0ea46c97f8b84e5f7bcb24611ecba7a0bdd68e",
+  "input_sha256": {
+    "experiments\\graph_proposal\\runs\\20261016_deterministic_short_dev5_seed0\\results.json": "0247f1aa354d8572f382fb0fd520e33316fdbf508d30527799268202cd9da926",
+    "experiments\\graph_proposal\\runs\\20261016_flow_5min_dev5_seed0\\results.json": "9527c394272f06625f38d2041d1153b38df72a204de475a2b60a94b23613666d"
+  },
+  "dataset_tensor_reads": 0
+}

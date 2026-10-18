@@ -1,0 +1,26 @@
+{
+  "command": "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe experiments/masked_construction/train.py --mode coverage --member-offset 6516 --max-layouts 1 --output experiments/masked_construction/runs/20261016_train1_coverage_seed0",
+  "utc": "2026-10-16T11:45:19.535419+00:00",
+  "mode": "coverage",
+  "seed": 0,
+  "torch": "2.7.1+cu128",
+  "python": "3.10.22 | packaged by conda-forge | (main, Oct  6 2026, 22:57:13) [MSC v.1944 64 bit (AMD64)]",
+  "device": "cpu",
+  "threads": 1,
+  "max_seconds": 3600.0,
+  "max_batches": 100000,
+  "members": [
+    [
+      "worker_94/layouts_224.th",
+      20
+    ]
+  ],
+  "manifest_sha256": "3ec379d0733e3f3f7f9c7f49fd72f9774d5a601109d662a091a452dbf1bde4c9",
+  "source_sha256": "4c5f15af3fa6ab07b8899be8702e8ee76af0a423739e1889cc2b4443fad6b07f",
+  "data_paths": {
+    "training_root": "E:\\project\\ICCAD\\2026\\problemC\\datasets\\floorset_lite",
+    "public_validation_root": "E:\\project\\ICCAD\\2026\\problemC\\datasets\\LiteTensorDataTest"
+  },
+  "supervision": "train-only teacher-forced prefix; nearest representable action; equal logits CE",
+  "budget_scope": "cumulative across resume; resource stop is not convergence"
+}

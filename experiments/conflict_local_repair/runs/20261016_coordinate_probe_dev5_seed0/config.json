@@ -1,0 +1,48 @@
+{
+  "command": [
+    "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+    "experiments/conflict_local_repair/probe.py",
+    "--seconds",
+    "3",
+    "--seed",
+    "0",
+    "--output",
+    "experiments/conflict_local_repair/runs/20261016_coordinate_probe_dev5_seed0"
+  ],
+  "created_utc": "2026-10-16T11:43:55.875286+00:00",
+  "git_head": "8d9ab142f5f2799d03f1f0ef4837cdf7948a95ef",
+  "git_status": " M README.md\n M experiments/README.md\n M references/README.md\n?? docs/aim.md\n?? experiments/conflict_local_repair/\n?? experiments/graph_proposal/\n?? experiments/masked_construction/\n?? experiments/short_term_plan.md\n?? experiments/topology_geometry/\n?? references/papers/ChiPFormer_ICML2023.pdf\n?? references/papers/ChipDiffusion_ICML2025.pdf\n?? references/papers/DC3_2104.12225.pdf\n?? references/papers/DiffPlace_2510.15897v2.pdf\n?? references/papers/FlowPlace_2604.23658v2.pdf\n?? references/papers/LearnToFloorplan_ICCD2020.pdf\n?? references/papers/MaskPlace_NeurIPS2022.pdf\n?? references/papers/PARSAC_2405.05495v3.pdf\n?? references/papers/README.md\n?? references/papers/RulePlanner_2601.22476v2.pdf\n?? references/papers/Trinity_2610.04957v1.pdf\n?? references/papers/literature_review.zh-CN.md\n?? references/papers/manifest.json\n?? scripts/fetch_literature.py\n",
+  "source_sha256": {
+    "experiments\\conflict_local_repair\\geometry.py": "1b50838eb80a8107ac40551c8500a05225e0319428bb997d23bf378430f96955",
+    "experiments\\conflict_local_repair\\packing.py": "3c0500b7fee120807e6bd3fa8e9f115e476782af1a3e7620859c6651a089ef30",
+    "experiments\\conflict_local_repair\\probe.py": "dbbefed610999248e8e0b0a4ef8ceb9f303027de1318caf4238894d290b04a52",
+    "datasets\\cases.py": "1fd51addaaae38164c22f1946712665beebac700054db4bb07ed4f9d44e0b168",
+    "datasets\\paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+    "datasets\\__init__.py": "03c36f364366be6c8a5091d6bd3dbec0788d7871747acdeac5fa89d4974cec21",
+    "scoring\\checks.py": "738f6b57e20dce58516f3f10d83689f8df273a84a02b2dce99c6ccc1f904763a",
+    "scoring\\evaluation.py": "356e0d1c788c6f25154b33fb1c2455388317d2cc0dd96ca50d7357c58612c611",
+    "scoring\\official.py": "478fbc228a56ec4b336b5d8687a44b22b749f30aae09372f57c08e7124270e03",
+    "scoring\\__init__.py": "933bf2be947e20bae164511f26afaa84c2f331d0dbdebc417d235db8358a9247",
+    "third_party\\FloorSet\\iccad2026contest\\iccad2026_evaluate.py": "64db37865b42baf11add62bdbf035690dca086cd4be7b5b4e58db756f20d8498"
+  },
+  "source_recovery": "source_snapshot.zip",
+  "initial": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\baseline\\runs\\stage1_dev_run1\\results.json",
+  "initial_sha256": "70f11cbe9dee910366dc8e6cc57e203a24b32b3b7e7292c91b0d0ca9fc6664ff",
+  "initial_variant": "search",
+  "seed": 0,
+  "seconds": 3.0,
+  "cpu_threads": 1,
+  "python": "3.10.22 | packaged by conda-forge | (main, Oct  6 2026, 22:57:13) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "torch": "2.7.1+cu128",
+  "numpy": "1.26.4",
+  "resolved_data_paths": {
+    "training_root": "E:\\project\\ICCAD\\2026\\problemC\\datasets\\floorset_lite",
+    "public_validation_root": "E:\\project\\ICCAD\\2026\\problemC\\datasets\\LiteTensorDataTest"
+  },
+  "split_sha256": "a1f23edae03194c1155d260415482d892e4cb5ad66170abc93af04aafc8cefbd",
+  "upstream": "aadddcc2238695eb21e6542b8a6cd9e9fe6b80fa",
+  "budget_scope": "equal incremental seconds; historical initialization cost excluded for all; not end-to-end 15s comparison",
+  "hypothesis": "Conflict targeting beats random same-size targeting and global feasible search from identical initialization.",
+  "learning_gate": "Need weighted Q gain plus >=3/5 same-direction improvements against random/global; no automatic training."
+}

@@ -1,0 +1,24 @@
+{
+  "baseline": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E8_fast_robust_postprocess\\runs\\20261018_stageA_dev100_seed0",
+  "baseline_sha256": {
+    "config.json": "dea84b73e51b958415e2ac6190e4f133ddc35f086688a32faaf6acb27ebd402e",
+    "cases.jsonl": "23740b9e087a2bbd1612a38e42e5e4779482b10b8caa6419993a4ab622182e66",
+    "drafts.jsonl": "33046f8f76f1001ad8e20ffe4c1f2f51c60e5f0fe757126f82712984a94dcf4c"
+  },
+  "source_sha256": {
+    "analyze_dev100.py": "e8d9dfd54751fcd75c31fb944a4128a17996a1bd4e5079298a3e70167fa1b097",
+    "guard.py": "4e4adfb1dedede451a4d530103681f97ca6c05516e2dbe96b84d63c136faa87f",
+    "solver.py": "cb5b0b6af3b8511d8a21b14178be188e31c61b58cba065c8c23847c2f9200325"
+  },
+  "target_workers": [
+    37,
+    45,
+    59,
+    65,
+    73
+  ],
+  "selection": "Retrospective two guard failures and three small soft-tail controls, all in fixed dev_quality100.",
+  "scope": "Terminal-candidate cache replay; not new inference or an online speed benchmark.",
+  "workset_sha256": "6b19332acce3102792310df8ff124a764fb2f34a08e3f0ae24c44f8f3f9f9277",
+  "test_payload_reads": 0
+}

@@ -1,0 +1,62 @@
+{
+  "status": "complete",
+  "completed_cases": 5,
+  "expected_cases": 5,
+  "scope": "diagnostic5 development panel; five-case probes are mechanism evidence only",
+  "test_payload_reads": 0,
+  "wall_seconds_this_invocation": 54.01934489997802,
+  "variants": {
+    "safe_plain120": {
+      "cases": 5,
+      "Q_mean": 1.3635570039784826,
+      "Q_weighted": 1.1674734177337867,
+      "Q_p95": 1.4872695968828196,
+      "Q_max": 1.4918246976412703,
+      "worst10percent_mean": 1.4918246976412703,
+      "Q_above1_5": 0,
+      "Q_above2": 0,
+      "feasible": 5,
+      "errors": 0,
+      "postprocess_seconds_mean": 8.479794419993414,
+      "postprocess_seconds_p95": 29.718503559997764,
+      "postprocess_seconds_max": 36.035656299995026,
+      "postprocess_seconds_total": 42.39897209996707,
+      "worker_wall_seconds_total": 43.63412479998078,
+      "end_to_end_seconds_total": 42.506898499967065,
+      "guard_fallback_count": 0
+    },
+    "conic_diagonal": {
+      "cases": 5,
+      "Q_mean": 1.3505556434233814,
+      "Q_weighted": 1.1672690942846358,
+      "Q_p95": 1.4721026558927601,
+      "Q_max": 1.472866021403696,
+      "worst10percent_mean": 1.472866021403696,
+      "Q_above1_5": 0,
+      "Q_above2": 0,
+      "feasible": 5,
+      "errors": 0,
+      "postprocess_seconds_mean": 0.8833397399983369,
+      "postprocess_seconds_p95": 1.3847272599989082,
+      "postprocess_seconds_max": 1.412614000000758,
+      "postprocess_seconds_total": 4.416698699991684,
+      "worker_wall_seconds_total": 4.696915100037586,
+      "end_to_end_seconds_total": 4.524625099991681,
+      "guard_fallback_count": 0
+    }
+  },
+  "paired_vs_safe_plain120": {
+    "conic_diagonal": {
+      "cases": 5,
+      "baseline_variant": "safe_plain120",
+      "Q_mean_difference": -0.013001360555101326,
+      "wins": 2,
+      "ties": 2,
+      "losses": 1,
+      "postprocess_speedup": 9.59969764295828,
+      "end_to_end_speedup": 9.394568071517178,
+      "inference_and_worker_wall_speedup": 9.1037448789182
+    }
+  },
+  "cumulative_wall_seconds_completed_invocations": 54.01934489997802
+}

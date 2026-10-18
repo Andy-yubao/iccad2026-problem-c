@@ -1,0 +1,87 @@
+{
+  "status": "complete",
+  "completed_cases": 5,
+  "expected_cases": 5,
+  "scope": "fixed dev_quality; pilot5 is mechanism evidence only",
+  "test_payload_reads": 0,
+  "wall_seconds_this_invocation": 33.292721500009065,
+  "variants": {
+    "control120": {
+      "cases": 5,
+      "Q_mean": 1.1579002698984349,
+      "Q_weighted": 1.1546084446314844,
+      "Q_p95": 1.2024392790473197,
+      "Q_max": 1.209774626223018,
+      "worst10percent_mean": 1.209774626223018,
+      "Q_above1_5": 0,
+      "Q_above2": 0,
+      "feasible": 5,
+      "errors": 0,
+      "postprocess_seconds_mean": 14.975136140012182,
+      "postprocess_seconds_p95": 22.751340660004644,
+      "postprocess_seconds_max": 22.78912850000779,
+      "postprocess_seconds_total": 74.87568070006091,
+      "worker_wall_seconds_total": 80.30247920000693,
+      "end_to_end_seconds_total": 74.96236070006853,
+      "guard_fallback_count": 0
+    },
+    "linear_area": {
+      "cases": 5,
+      "Q_mean": 8.287331565936487,
+      "Q_weighted": 7.8741153702257884,
+      "Q_p95": 9.999999,
+      "Q_max": 9.999999,
+      "worst10percent_mean": 9.999999,
+      "Q_above1_5": 4,
+      "Q_above2": 4,
+      "feasible": 5,
+      "errors": 0,
+      "postprocess_seconds_mean": 1.2904413799988106,
+      "postprocess_seconds_p95": 1.5113550399953966,
+      "postprocess_seconds_max": 1.5299460999958683,
+      "postprocess_seconds_total": 6.452206899994053,
+      "worker_wall_seconds_total": 11.770630000042729,
+      "end_to_end_seconds_total": 6.538886900001671,
+      "guard_fallback_count": 0
+    },
+    "linear_area_3s": {
+      "cases": 5,
+      "Q_mean": 8.272655789793593,
+      "Q_weighted": 7.8558987616560865,
+      "Q_p95": 9.999999,
+      "Q_max": 9.999999,
+      "worst10percent_mean": 9.999999,
+      "Q_above1_5": 4,
+      "Q_above2": 4,
+      "feasible": 5,
+      "errors": 0,
+      "postprocess_seconds_mean": 2.4567174200084994,
+      "postprocess_seconds_p95": 3.024008840008173,
+      "postprocess_seconds_max": 3.045763700007228,
+      "postprocess_seconds_total": 12.283587100042496,
+      "worker_wall_seconds_total": 17.5702190999873,
+      "end_to_end_seconds_total": 12.370267100050114,
+      "guard_fallback_count": 0
+    }
+  },
+  "paired_vs_control120": {
+    "linear_area": {
+      "cases": 5,
+      "Q_mean_difference": 7.129431296038052,
+      "wins": 0,
+      "ties": 0,
+      "losses": 5,
+      "postprocess_speedup": 11.6046620730854,
+      "end_to_end_speedup": 11.464085837002223
+    },
+    "linear_area_3s": {
+      "cases": 5,
+      "Q_mean_difference": 7.114755519895158,
+      "wins": 0,
+      "ties": 0,
+      "losses": 5,
+      "postprocess_speedup": 6.095587558442262,
+      "end_to_end_speedup": 6.059882142703681
+    }
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "status": "completed",
+  "cases": 100,
+  "test_reads": 0,
+  "wall_seconds_this_invocation": 1104.4839999999967,
+  "old_Q": 3.636240391294231,
+  "new_Q": 1.2626255118692635,
+  "new_feasible": 100,
+  "scope": "fixed100dev development evaluation, not independent test",
+  "Q_below_1_5_count": 97,
+  "wins": 100,
+  "metrics": {
+    "old": {
+      "weighted_Q": 3.636240391294231,
+      "feasible_count": 100,
+      "Q_mean": 3.7661200059842357,
+      "Q_median": 3.5356226705826863,
+      "Q_p95": 5.817205573487812,
+      "Q_max": 9.198258869041608,
+      "Q_below_1_5_count": 0,
+      "hpwl_gap_mean": 0.4553976427044686,
+      "area_gap_mean": 0.8357549402387768,
+      "boundary_violations_mean": 10.99,
+      "grouping_violations_mean": 4.68,
+      "mib_violations_mean": 3.93,
+      "violations_relative_mean": 0.39998528941143185
+    },
+    "new": {
+      "weighted_Q": 1.2626255118692635,
+      "feasible_count": 100,
+      "Q_mean": 1.2557830250547344,
+      "Q_median": 1.221768827074445,
+      "Q_p95": 1.4686589389924238,
+      "Q_max": 2.5331274682634146,
+      "Q_below_1_5_count": 97,
+      "hpwl_gap_mean": 0.018078736571701753,
+      "area_gap_mean": 0.008430692236970839,
+      "boundary_violations_mean": 0.45,
+      "grouping_violations_mean": 0.39,
+      "mib_violations_mean": 3.93,
+      "violations_relative_mean": 0.10044147313888116
+    },
+    "reference": {
+      "weighted_Q": 1.2329885620802317,
+      "feasible_count": 100,
+      "Q_mean": 1.2996407383770283,
+      "Q_median": 1.2892148990841568,
+      "Q_p95": 1.5241393924613,
+      "Q_max": 1.7133688813639787,
+      "Q_below_1_5_count": 94,
+      "hpwl_gap_mean": -3.966789274304871e-09,
+      "area_gap_mean": 0.0,
+      "boundary_violations_mean": 2.1,
+      "grouping_violations_mean": 0.06,
+      "mib_violations_mean": 3.89,
+      "violations_relative_mean": 0.12915294559223495
+    }
+  },
+  "timing": {
+    "mean_seconds": 10.869940000001806,
+    "post_only_mean_seconds": 10.853600000000442,
+    "median_seconds": 7.000499999980093,
+    "p95_seconds": 39.459799999996896,
+    "max_seconds": 61.07800000003772,
+    "over_15s_count": 25,
+    "over_120s_count": 0,
+    "old_mean_seconds": 0.4368900000001304,
+    "scope": "Postprocessing realtime; recorded original GPU feature/forward charged; dataset reads/scoring outside"
+  },
+  "by_size": {
+    "21–50": {
+      "count": 21,
+      "old_Q": 3.4084538839968,
+      "new_Q": 1.3038585937026177,
+      "below_1_5": 21
+    },
+    "51–90": {
+      "count": 45,
+      "old_Q": 3.829211776477419,
+      "new_Q": 1.243268944763404,
+      "below_1_5": 44
+    },
+    "91–120": {
+      "count": 34,
+      "old_Q": 3.6209091006308087,
+      "new_Q": 1.264125954951797,
+      "below_1_5": 32
+    }
+  },
+  "paired": {
+    "wins": 100,
+    "ties": 0,
+    "losses": 0
+  },
+  "ablations_dev5": [
+    {
+      "name": "位置LP",
+      "run": "20261017_ablation_position_dev5_seed0",
+      "Q": 2.9891493923208734,
+      "feasible": 5
+    },
+    {
+      "name": "位置＋形状",
+      "run": "20261017_ablation_unweighted_dev5_seed0",
+      "Q": 3.399057418613279,
+      "feasible": 4
+    },
+    {
+      "name": "位置＋形状＋严格输出守卫",
+      "run": "20261017_ablation_unweighted_dev5_seed0",
+      "Q": 1.8769788520771362,
+      "feasible": 5
+    },
+    {
+      "name": "完整重加权方案",
+      "run": "20261017_reweighted_shape_dev5_seed0",
+      "Q": 1.18812237015628,
+      "feasible": 5
+    }
+  ],
+  "displacement": {
+    "layout_mean_center_local": 0.7252853259599996,
+    "layout_mean_free_shape_log_change": 0.26952960956395344
+  },
+  "goal_met": true,
+  "guard_validation": {
+    "main100_strict_pass": 100,
+    "guard_rejected_main_outputs": 0,
+    "guard_mean_check_seconds": 0.00047000000020489094,
+    "ablation_raw_failed_count": 1,
+    "ablation_checked_fallback_cases": [
+      "dev:worker_0/layouts_1344.th:82"
+    ],
+    "ablation_checked_Q": 1.8769788520771362,
+    "scope": "Saved-output validation only; no new model/solver runs; fallback selects original legal control, never uses reference score",
+    "guard_source_sha256": "cb5b0b6af3b8511d8a21b14178be188e31c61b58cba065c8c23847c2f9200325",
+    "live_counterexample_probe": "guard_probe.json"
+  }
+}

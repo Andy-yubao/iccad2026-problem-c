@@ -1,0 +1,29 @@
+{
+  "purpose": "synthetic CUDA forward/backward/optimizer preflight only; no dataset reads",
+  "torch_version": "2.7.1+cu128",
+  "python": "3.10.22",
+  "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+  "deterministic_algorithms": true,
+  "cpu_threads": 1,
+  "seed": 0,
+  "synthetic_blocks": 3,
+  "dataset_tensor_reads": 0,
+  "branches": {
+    "deterministic": {
+      "status": "passed",
+      "loss": 0.6458408236503601,
+      "peak_cuda_allocated_bytes": 68737536,
+      "optimizer_steps": 1,
+      "finite_loss_gradients_parameters": true
+    },
+    "flow": {
+      "status": "passed",
+      "loss": 2.0435233116149902,
+      "peak_cuda_allocated_bytes": 68742656,
+      "optimizer_steps": 1,
+      "finite_loss_gradients_parameters": true
+    }
+  },
+  "device_name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+  "status": "passed"
+}

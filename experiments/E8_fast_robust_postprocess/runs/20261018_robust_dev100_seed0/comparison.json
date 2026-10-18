@@ -1,0 +1,88 @@
+{
+  "panel": "dev100",
+  "n": 100,
+  "model_frozen": true,
+  "test_payload_reads": 0,
+  "baseline": {
+    "cases": 100,
+    "Q_mean": 1.2155984975933527,
+    "Q_weighted": 1.1485114857655585,
+    "Q_p95": 1.421266989275411,
+    "Q_max": 1.4918246976412703,
+    "worst10percent_mean": 1.425797960496435,
+    "Q_above1_5": 0,
+    "Q_above2": 0,
+    "feasible": 100,
+    "errors": 0,
+    "postprocess_seconds_mean": 10.466442534000961,
+    "postprocess_seconds_p95": 32.39962626001506,
+    "postprocess_seconds_max": 61.24102730001323,
+    "postprocess_seconds_total": 1046.6442534000962,
+    "worker_wall_seconds_total": 1136.1098012001894,
+    "end_to_end_seconds_total": 1048.4508366999798,
+    "online_guard_fallback_count_before_replay": 2
+  },
+  "selected": {
+    "cases": 100,
+    "Q_mean": 1.2115559836196388,
+    "Q_weighted": 1.147240094039843,
+    "Q_p95": 1.3828083404003013,
+    "Q_max": 1.472866021403696,
+    "worst10percent_mean": 1.410204713273362,
+    "Q_above1_5": 0,
+    "Q_above2": 0,
+    "feasible": 100,
+    "errors": 0,
+    "postprocess_seconds_mean": 1.1919775259995367,
+    "postprocess_seconds_p95": 1.3905998299858766,
+    "postprocess_seconds_max": 1.4205652000091504,
+    "postprocess_seconds_total": 119.19775259995367,
+    "worker_wall_seconds_total": 126.31207040007575,
+    "end_to_end_seconds_total": 121.00433589983732,
+    "guard_fallback_count": 0
+  },
+  "baseline_quality_cached_guard_replay": true,
+  "paired_Q_mean_difference": -0.004042513973713642,
+  "paired_mean_difference_bootstrap95_descriptive": [
+    -0.008099396390640744,
+    -0.00017669564909283212
+  ],
+  "wins": 48,
+  "ties": 25,
+  "losses": 27,
+  "postprocess_speedup": 8.780738147914569,
+  "inference_postprocess_speedup": 8.664572462658253,
+  "inference_worker_wall_speedup": 8.881738541875059,
+  "kernel_sha256": "0b1a0295426c37a61f4abc13946b5dadf2c6f107375a02890e90ffe404be40e4",
+  "rescue_used_count": 0,
+  "reference_reused_count": 100,
+  "scope": "Adaptive development selection panel",
+  "policy": {
+    "fast_target_seconds": 1.3,
+    "total_target_seconds": 5.0,
+    "rescue_trigger": "no_public_proxy_improvement_over_initial_legal_row",
+    "seed_pack_target_max_seconds": 1.2
+  },
+  "metric_means": {
+    "hpwl_gap": {
+      "baseline": 0.005019472782722454,
+      "selected": 0.0018057303611875694
+    },
+    "area_gap": {
+      "baseline": 0.0027227742339724055,
+      "selected": -0.002801912829187031
+    },
+    "boundary_violations": {
+      "baseline": 0.11,
+      "selected": 0.14
+    },
+    "grouping_violations": {
+      "baseline": 0.16,
+      "selected": 0.16
+    },
+    "mib_violations": {
+      "baseline": 3.93,
+      "selected": 3.93
+    }
+  }
+}

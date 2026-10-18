@@ -1,0 +1,38 @@
+{
+  "disconnected_tight_subgroups": {
+    "components": {
+      "1": 2
+    },
+    "expected_violation": 1
+  },
+  "incompatible_mib_areas": {
+    "same_shape_possible": false,
+    "original_areas": [
+      1.0,
+      2.0
+    ],
+    "policy": "soft mismatch remains; never change target area"
+  },
+  "near_pin_not_final_right_boundary": {
+    "pin": [
+      1,
+      0
+    ],
+    "final_bbox_right": 3,
+    "violations": 1
+  },
+  "greedy_prefix_blocks_bounded_gap": {
+    "bounded_die_candidate_count": 0,
+    "unbounded_candidate_count": 5,
+    "conclusion": "future bounded-envelope deadlock possible; shelf avoids hard infeasibility but may inflate bbox"
+  },
+  "immutable_shape_anchor_obstacle": {
+    "overlap_pairs": [],
+    "area_violation_blocks": [],
+    "fixed_or_preplaced_shape_violations": [],
+    "preplaced_location_violations": [],
+    "invalid_geometry_blocks": [],
+    "dimension_or_location_violation_count": 0,
+    "is_feasible": true
+  }
+}

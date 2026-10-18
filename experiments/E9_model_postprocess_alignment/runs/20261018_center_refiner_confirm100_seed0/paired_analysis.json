@@ -1,0 +1,90 @@
+{
+  "status": "frozen_confirmation_completed",
+  "candidate": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E9_model_postprocess_alignment\\runs\\20261018_center_refiner_seed0\\center_refiner\\checkpoints\\best.pt",
+  "checkpoint_sha256": "a78aaf5469c3951c6495e4cf598b3f3839648f5e54adef1d0586ce115371aa8e",
+  "panels": {
+    "dev100": {
+      "old": {
+        "Q_mean": 1.2115559836196388,
+        "Q_weighted": 1.147240094039843,
+        "Q_p95": 1.3828083404003013,
+        "Q_max": 1.472866021403696,
+        "worst10percent_mean": 1.410204713273362,
+        "boundary_violations": 0.14,
+        "grouping_violations": 0.16,
+        "mib_violations": 3.93,
+        "hpwl_gap": 0.0018057303611875694,
+        "area_gap": -0.002801912829187031
+      },
+      "new": {
+        "Q_mean": 1.210117877463913,
+        "Q_weighted": 1.1451980903599677,
+        "Q_p95": 1.382448871013094,
+        "Q_max": 1.472882927855464,
+        "worst10percent_mean": 1.4094780167561967,
+        "boundary_violations": 0.13,
+        "grouping_violations": 0.15,
+        "mib_violations": 3.93,
+        "hpwl_gap": 0.0008456793746971125,
+        "area_gap": -0.0035002930179195246
+      },
+      "mean_difference": -0.0014381061557258868,
+      "relative_difference": -0.0011869910884590995,
+      "wins": 32,
+      "ties": 33,
+      "losses": 35,
+      "paired_bootstrap95_descriptive": [
+        -0.002979591002581949,
+        -0.00025365146402453925
+      ],
+      "feasible": 100,
+      "inference_and_postprocess_mean_seconds": 1.2192052370012971,
+      "wall_seconds": 240.704000000027,
+      "cases_sha256": "5f4d7d4534684cf7098662ddfa8bfd9ce75edc0b4735636ad9dc0102704dd012"
+    },
+    "confirm100": {
+      "old": {
+        "Q_mean": 1.2322174615245305,
+        "Q_weighted": 1.1820308891715055,
+        "Q_p95": 1.4693708654278035,
+        "Q_max": 2.047516434255032,
+        "worst10percent_mean": 1.548015456682077,
+        "boundary_violations": 0.28,
+        "grouping_violations": 0.27,
+        "mib_violations": 3.89,
+        "hpwl_gap": 0.010714691322525758,
+        "area_gap": -0.001265170862658046
+      },
+      "new": {
+        "Q_mean": 1.239277706934361,
+        "Q_weighted": 1.1988755988677484,
+        "Q_p95": 1.4776886280307324,
+        "Q_max": 2.221291374129592,
+        "worst10percent_mean": 1.5987265377451476,
+        "boundary_violations": 0.33,
+        "grouping_violations": 0.29,
+        "mib_violations": 3.89,
+        "hpwl_gap": 0.013787144661319218,
+        "area_gap": -0.0004545453334946494
+      },
+      "mean_difference": 0.00706024540983041,
+      "relative_difference": 0.005729707320569322,
+      "wins": 35,
+      "ties": 35,
+      "losses": 30,
+      "paired_bootstrap95_descriptive": [
+        0.0003523654162519294,
+        0.017091848337266534
+      ],
+      "feasible": 100,
+      "inference_and_postprocess_mean_seconds": 1.2979705869965255,
+      "wall_seconds": 287.43800000002375,
+      "cases_sha256": "9cc5ff852c272b13b8bbe1810dbb43f64d1e734cfcd0e6a917c97a65c37dabce"
+    }
+  },
+  "target_Q_mean": 1.2,
+  "target_met": false,
+  "test_payload_reads": 0,
+  "decision": "Retain original E7 plus E8 as main reference. Keep center-refiner checkpoint and results; do not promote or extend this training route.",
+  "scope": "Both panels are adaptive development data; bootstrap is descriptive, not a generalization guarantee or official contest score."
+}

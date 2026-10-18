@@ -1,0 +1,77 @@
+{
+  "status": "passed",
+  "seconds": 31.46899999998277,
+  "real_dev_cases": 5,
+  "optimizer_steps_per_variant": 4,
+  "test_payload_reads": 0,
+  "checks": [
+    {
+      "variant": "attention_geometry",
+      "batched_vs_single_max_abs": 5.960464477539062e-07,
+      "permutation_max_abs": 5.364418029785156e-07,
+      "resume_step_max_abs": 0.0,
+      "output_channels": 3,
+      "finite_gradients": true
+    },
+    {
+      "variant": "attention_occupancy",
+      "batched_vs_single_max_abs": 5.960464477539062e-07,
+      "permutation_max_abs": 5.364418029785156e-07,
+      "resume_step_max_abs": 0.0,
+      "output_channels": 3,
+      "finite_gradients": true
+    },
+    {
+      "variant": "rectangle_geometry",
+      "batched_vs_single_max_abs": 0.0,
+      "permutation_max_abs": 0.0,
+      "resume_step_max_abs": 0.0,
+      "output_channels": 3,
+      "finite_gradients": true
+    },
+    {
+      "variant": "rectangle_occupancy",
+      "batched_vs_single_max_abs": 0.0,
+      "permutation_max_abs": 0.0,
+      "resume_step_max_abs": 0.0,
+      "output_channels": 3,
+      "finite_gradients": true
+    }
+  ],
+  "benchmark": {
+    "attention_geometry": {
+      "parameters": 497299,
+      "batch5_train_step_seconds": 0.3803333333344199,
+      "batch5_forward_seconds": 0.009400000001187436,
+      "loss": 7.531965255737305,
+      "peak_cuda_allocated_bytes": 210760704
+    },
+    "attention_occupancy": {
+      "parameters": 497299,
+      "batch5_train_step_seconds": 0.1043333333315483,
+      "batch5_forward_seconds": 0.009400000001187436,
+      "loss": 18.450822830200195,
+      "peak_cuda_allocated_bytes": 214767616
+    },
+    "rectangle_geometry": {
+      "parameters": 539062,
+      "batch5_train_step_seconds": 0.11466666666092351,
+      "batch5_forward_seconds": 0.01710000000020955,
+      "loss": 10.379055976867676,
+      "peak_cuda_allocated_bytes": 246225408
+    },
+    "rectangle_occupancy": {
+      "parameters": 539062,
+      "batch5_train_step_seconds": 0.125,
+      "batch5_forward_seconds": 0.017199999999138526,
+      "loss": 41.67405700683594,
+      "peak_cuda_allocated_bytes": 246225408
+    }
+  },
+  "public_inference_matches_training": true,
+  "labels_excluded": true,
+  "immutable_specs_preserved": true,
+  "exact_geometry_synthetic_checks": true,
+  "loss_directional_gradient_checks": true,
+  "training_loop_integration": "not executed; only bounded in-memory gradient/restore checks"
+}

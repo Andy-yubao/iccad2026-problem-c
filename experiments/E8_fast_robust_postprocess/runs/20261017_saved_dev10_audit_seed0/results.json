@@ -1,0 +1,125 @@
+{
+  "status": "completed_saved_output_audit",
+  "scope": "Historical dev10; no solver/inference or test tensor reads; time not a synchronized speed control",
+  "source": "experiments\\repair_friendly_draft\\runs\\20261017_attention_geometry_dev10_seed0\\cases.jsonl",
+  "source_sha256": "b2d0252b6e2eb64449765f5a76cfdb121a0c81bc9c0e076d1011333db2bd8a38",
+  "cases": 10,
+  "solver_calls_this_audit": 0,
+  "test_payload_reads": 0,
+  "Q_mean": 1.1867714447249,
+  "seconds_mean": 9.578896890001488,
+  "shape_calls_mean": 10.6,
+  "shape_legal_fraction": 0.660377358490566,
+  "items": [
+    {
+      "case_id": "dev:worker_0/layouts_1344.th:82",
+      "block_count": 97,
+      "Q": 1.0965650247073995,
+      "seconds": 11.877797599998303,
+      "shape_calls": 11,
+      "fixed_lp_calls": 8,
+      "shape_legal": 3,
+      "projection_calls": 10,
+      "guard_fallback": 0
+    },
+    {
+      "case_id": "dev:worker_11/layouts_9184.th:88",
+      "block_count": 46,
+      "Q": 1.2775966418441882,
+      "seconds": 1.5737643000029493,
+      "shape_calls": 12,
+      "fixed_lp_calls": 8,
+      "shape_legal": 9,
+      "projection_calls": 6,
+      "guard_fallback": 0
+    },
+    {
+      "case_id": "dev:worker_22/layouts_1344.th:26",
+      "block_count": 85,
+      "Q": 1.1855570706728176,
+      "seconds": 9.136933699977817,
+      "shape_calls": 14,
+      "fixed_lp_calls": 8,
+      "shape_legal": 9,
+      "projection_calls": 7,
+      "guard_fallback": 0
+    },
+    {
+      "case_id": "dev:worker_33/layouts_5712.th:110",
+      "block_count": 42,
+      "Q": 1.33071219744735,
+      "seconds": 1.1146951999980956,
+      "shape_calls": 9,
+      "fixed_lp_calls": 8,
+      "shape_legal": 9,
+      "projection_calls": 3,
+      "guard_fallback": 0
+    },
+    {
+      "case_id": "dev:worker_44/layouts_5600.th:108",
+      "block_count": 97,
+      "Q": 1.1001807213797767,
+      "seconds": 11.77066450001439,
+      "shape_calls": 8,
+      "fixed_lp_calls": 8,
+      "shape_legal": 4,
+      "projection_calls": 5,
+      "guard_fallback": 0
+    },
+    {
+      "case_id": "dev:worker_55/layouts_5936.th:47",
+      "block_count": 92,
+      "Q": 1.1130932564441212,
+      "seconds": 26.5534689000051,
+      "shape_calls": 13,
+      "fixed_lp_calls": 8,
+      "shape_legal": 10,
+      "projection_calls": 5,
+      "guard_fallback": 0
+    },
+    {
+      "case_id": "dev:worker_66/layouts_2016.th:26",
+      "block_count": 104,
+      "Q": 1.1353989954321755,
+      "seconds": 13.852444000018295,
+      "shape_calls": 10,
+      "fixed_lp_calls": 8,
+      "shape_legal": 4,
+      "projection_calls": 5,
+      "guard_fallback": 0
+    },
+    {
+      "case_id": "dev:worker_77/layouts_0.th:110",
+      "block_count": 73,
+      "Q": 1.086904049521229,
+      "seconds": 6.37344419999863,
+      "shape_calls": 9,
+      "fixed_lp_calls": 8,
+      "shape_legal": 7,
+      "projection_calls": 3,
+      "guard_fallback": 0
+    },
+    {
+      "case_id": "dev:worker_88/layouts_5600.th:1",
+      "block_count": 34,
+      "Q": 1.3686085994554158,
+      "seconds": 1.0085591000097338,
+      "shape_calls": 12,
+      "fixed_lp_calls": 8,
+      "shape_legal": 10,
+      "projection_calls": 3,
+      "guard_fallback": 0
+    },
+    {
+      "case_id": "dev:worker_99/layouts_5152.th:26",
+      "block_count": 94,
+      "Q": 1.1730978903445266,
+      "seconds": 12.527197399991564,
+      "shape_calls": 8,
+      "fixed_lp_calls": 8,
+      "shape_legal": 5,
+      "projection_calls": 4,
+      "guard_fallback": 0
+    }
+  ]
+}

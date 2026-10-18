@@ -1,0 +1,87 @@
+{
+  "created_utc": "2026-10-17T04:57:25.582403+00:00",
+  "command": [
+    "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+    "E:\\project\\ICCAD\\2026\\problemC\\experiments\\intent_aware_repair\\gallery.py",
+    "--output",
+    "experiments/intent_aware_repair/runs/20261017_attention_geometry_gallery15_seed0"
+  ],
+  "checkpoint": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\intent_aware_repair\\runs\\20261017_geometry_only_factorial_seed0\\attention_geometry\\checkpoints\\best.pt",
+  "checkpoint_sha256": "16af0c449c766b3828630140c285d4f059a4a5d6fecef725aa07491fc3ad4651",
+  "model": "attention_geometry best; frozen before test illustrations",
+  "selection": "Rows1,3,5,7,10 in each panel of previous30-case gallery; fixed before inference, no scoreselection",
+  "selection_source": "experiments\\graph_proposal\\runs\\20261017_soft_constraint_gallery_seed0\\cases.jsonl",
+  "selection_source_sha256": "6206884a000d45ed97f3f4116bb469cf59a55fd258be6c61c7e45bbfff8d852d",
+  "panels": {
+    "train": [
+      "train:worker_0/layouts_6496.th:34",
+      "train:worker_22/layouts_9408.th:0",
+      "train:worker_44/layouts_8960.th:71",
+      "train:worker_66/layouts_6496.th:21",
+      "train:worker_99/layouts_9296.th:97"
+    ],
+    "dev": [
+      "dev:worker_0/layouts_1344.th:82",
+      "dev:worker_22/layouts_1344.th:26",
+      "dev:worker_44/layouts_5600.th:108",
+      "dev:worker_66/layouts_2016.th:26",
+      "dev:worker_99/layouts_5152.th:26"
+    ],
+    "local_test": [
+      "local_test:worker_0/layouts_5712.th:29",
+      "local_test:worker_8/layouts_4928.th:25",
+      "local_test:worker_16/layouts_5152.th:90",
+      "local_test:worker_25/layouts_1904.th:64",
+      "local_test:worker_37/layouts_5040.th:99"
+    ]
+  },
+  "test_authorization": "User explicitly requests5+5+5 illustrations of frozen new model on2026-10-17; only5alreadyopened test members",
+  "test_use": "New frozen-model inference/scoring on5previouslyaccessed members; no tuning, no additional test evaluation",
+  "workset_sha256": "6b19332acce3102792310df8ff124a764fb2f34a08e3f0ae24c44f8f3f9f9277",
+  "data_paths": {
+    "training_root": "E:\\project\\ICCAD\\2026\\problemC\\datasets\\floorset_lite",
+    "public_validation_root": "E:\\project\\ICCAD\\2026\\problemC\\datasets\\LiteTensorDataTest"
+  },
+  "postprocess": "UnchangedE1correct12+pack+fallback;15seconds percase including features/forward; not new repair",
+  "wall_budget_seconds": 600,
+  "cpu_threads": 2,
+  "torch": "2.7.1+cu128",
+  "device": "NVIDIA GeForce RTX 5080 Laptop GPU",
+  "source_sha256": {
+    "experiments/intent_aware_repair/batches.py": "8d3dd2afa0cba274d59b4bf3c594aca51fcbafc6974f3b09c67b7a1e37013a21",
+    "experiments/intent_aware_repair/data.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+    "experiments/intent_aware_repair/evaluate.py": "4ab0404a8f74254cafcfa674e606ddde857a7c506046ca5f86998f8ba2f99f14",
+    "experiments/intent_aware_repair/feasible.py": "9cfe70894d80fbe54ccaa1c3de60ef4ab111ac9b4472286d1ae6a0c5a1fdc756",
+    "experiments/intent_aware_repair/gallery.py": "789b057c3f4f59145c56157ca0c94548c1bc4ef1bd24133a1f746e43bdaced27",
+    "experiments/intent_aware_repair/inference.py": "8e5598d7ad8b03747bc1708d55845ab2053f1921aca3224b4f337bdb201015c4",
+    "experiments/intent_aware_repair/losses.py": "8965584660ae728d7cd327ed07ff8d83a2248c4f34dcaba2d9a23313c97f1d37",
+    "experiments/intent_aware_repair/model.py": "3d906a435ce01edaf5f41c6054c8df025c8ae40c00644978f2acbe8abc9c7469",
+    "experiments/intent_aware_repair/packing.py": "3c0500b7fee120807e6bd3fa8e9f115e476782af1a3e7620859c6651a089ef30",
+    "experiments/intent_aware_repair/plot.py": "66b905fe0c2822d13b8846486145d967e8fb86348fc952a49b0007b78b1ddde8",
+    "experiments/intent_aware_repair/plot_gallery.py": "5cee1e9991cc25ec086b2f2054e86078a8148d8d70a7eafb6b138d70600a1336",
+    "experiments/intent_aware_repair/postprocess.py": "da0e1572a822a589968a19e67e2d36dd5133c7d17b7ea9443bd743ee4653a272",
+    "experiments/intent_aware_repair/proposal_metrics.py": "9c4b145be849dba54a2f73b6fb9706c4326f5bb2ab06d224f67ea6fad4c39c39",
+    "experiments/intent_aware_repair/train.py": "5e98b3692f5d10ff22a98a1291f72eebde4ac191fb53778578872c8b64b36605",
+    "datasets/__init__.py": "03c36f364366be6c8a5091d6bd3dbec0788d7871747acdeac5fa89d4974cec21",
+    "datasets/cases.py": "1fd51addaaae38164c22f1946712665beebac700054db4bb07ed4f9d44e0b168",
+    "datasets/paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+    "datasets/worksets.py": "2ff073391b7d3456b6a0da93bf9cc54794000e02f5bef78e487c7015cb2cd76a",
+    "scoring/__init__.py": "933bf2be947e20bae164511f26afaa84c2f331d0dbdebc417d235db8358a9247",
+    "scoring/checks.py": "738f6b57e20dce58516f3f10d83689f8df273a84a02b2dce99c6ccc1f904763a",
+    "scoring/evaluation.py": "356e0d1c788c6f25154b33fb1c2455388317d2cc0dd96ca50d7357c58612c611",
+    "scoring/official.py": "478fbc228a56ec4b336b5d8687a44b22b749f30aae09372f57c08e7124270e03",
+    "protocol/workset_v2.json": "b520f75d67d12a00aa4f52953e1b9f3cf4ad1c55f1af67206b4c3bc75e9a5bb3",
+    "protocol/split_v1.json": "a1f23edae03194c1155d260415482d892e4cb5ad66170abc93af04aafc8cefbd",
+    "protocol/paths.json": "7a28cd42de0f10809500c43c48836576361e67a72e723f7b32a404186df9b419",
+    "third_party/FloorSet/iccad2026contest/iccad2026_evaluate.py": "64db37865b42baf11add62bdbf035690dca086cd4be7b5b4e58db756f20d8498"
+  },
+  "status": "completed",
+  "gpu_warmup_seconds": 15.421999999991385,
+  "timing": "Cold GPU initialization excluded and separately recorded; case features/forward/decode/frozen postprocessing included",
+  "correction": {
+    "scope": "First train case only; other14records unchanged; no test re-inference",
+    "reason": "Cold GPU initialization exceeded15s and starved pack deadline",
+    "original_record": "history/cold_start/first_case.json",
+    "raw_geometry_bitwise_identical": true
+  }
+}

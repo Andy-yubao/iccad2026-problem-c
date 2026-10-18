@@ -1,0 +1,105 @@
+{
+  "identity": {
+    "source_sha256": {
+      "datasets/__init__.py": "03c36f364366be6c8a5091d6bd3dbec0788d7871747acdeac5fa89d4974cec21",
+      "datasets/cases.py": "1fd51addaaae38164c22f1946712665beebac700054db4bb07ed4f9d44e0b168",
+      "datasets/paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+      "datasets/worksets.py": "9ac3ff0ee27fc0bee6d787ba8f9d2a923a01120cc8436a3a75b571ae269b2293",
+      "experiments/graph_proposal/data.py": "fce1995d64c27b482b1bf0b641554871467f967f6bb688018c51989a41e0a80e",
+      "experiments/graph_proposal/model.py": "599788ce8ab727da15ae843281cb54209572e76beac2c107996178097437ab21",
+      "experiments/graph_proposal/train.py": "cbcbeed0306a9dc10d3579b9e533096a51151c8dd60c7f20238a702fbeac8912",
+      "experiments/graph_proposal/train_supervised.py": "63dc700e766365c34d92d5eab51c0a287d47eb2d72f733af7acc64ba11d69d45",
+      "protocol/paths.json": "7a28cd42de0f10809500c43c48836576361e67a72e723f7b32a404186df9b419",
+      "protocol/split_v1.json": "a1f23edae03194c1155d260415482d892e4cb5ad66170abc93af04aafc8cefbd",
+      "protocol/workset_v2.json": "b520f75d67d12a00aa4f52953e1b9f3cf4ad1c55f1af67206b4c3bc75e9a5bb3"
+    },
+    "workset_sha256": "6b19332acce3102792310df8ff124a764fb2f34a08e3f0ae24c44f8f3f9f9277",
+    "data_paths": {
+      "training_root": "E:\\project\\ICCAD\\2026\\problemC\\datasets\\floorset_lite",
+      "public_validation_root": "E:\\project\\ICCAD\\2026\\problemC\\datasets\\LiteTensorDataTest"
+    },
+    "data_stat_sha256": "3bfaa75bbe2ed1ef86370628cf2864dfd69be70157da43e63f174e2345be5184",
+    "seed": 0,
+    "batch_size": 16,
+    "device": "cuda",
+    "threads": 1,
+    "validate_every": 250,
+    "early_patience": 8,
+    "min_epochs": 3,
+    "torch": "2.7.1+cu128",
+    "budget_seconds": 3600.0
+  },
+  "model": {
+    "kind": "deterministic",
+    "width": 64,
+    "layers": 3
+  },
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "clip_norm": 1.0
+  },
+  "scheduler": {
+    "name": "ReduceLROnPlateau",
+    "factor": 0.5,
+    "patience": 2,
+    "cooldown": 1,
+    "threshold_relative": 0.002,
+    "min_lr": 1e-05
+  },
+  "early_stop": {
+    "patience": 8,
+    "min_delta_relative": 0.002,
+    "minimum_full_epochs": 3,
+    "minimum_lr_reductions": 2
+  },
+  "workset_counts": {
+    "train": 20000,
+    "dev": 2500,
+    "local_test": 2500,
+    "train_monitor": 500,
+    "dev_monitor": 500,
+    "dev_quality": 100
+  },
+  "invocations": [
+    {
+      "command": [
+        "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+        "E:\\project\\ICCAD\\2026\\problemC\\experiments\\graph_proposal\\train_supervised.py",
+        "--run-dir",
+        "experiments/graph_proposal/runs/20261016_deterministic_workset_v2_seed0",
+        "--budget-seconds",
+        "3600",
+        "--device",
+        "cuda",
+        "--threads",
+        "1",
+        "--batch-size",
+        "16",
+        "--validate-every",
+        "250",
+        "--early-patience",
+        "8",
+        "--min-epochs",
+        "3",
+        "--seed",
+        "0"
+      ],
+      "prior_seconds": 0.0,
+      "created_utc": "2026-10-16T14:25:57.419553+00:00"
+    }
+  ],
+  "python": "3.10.22 | packaged by conda-forge | (main, Oct  6 2026, 22:57:13) [MSC v.1944 64 bit (AMD64)]",
+  "device_name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+  "git_head": "8d9ab142f5f2799d03f1f0ef4837cdf7948a95ef",
+  "git_status": " M .gitignore\n M README.md\n M docs/datasets.md\n M docs/protocol.md\n M docs/workspace_structure.md\n M experiments/README.md\n M references/README.md\n?? datasets/worksets.py\n?? docs/aim.md\n?? experiments/conflict_local_repair/\n?? experiments/graph_proposal/\n?? experiments/masked_construction/\n?? experiments/short_term_plan.md\n?? experiments/topology_geometry/\n?? protocol/workset_v2.json\n?? references/papers/ChiPFormer_ICML2023.pdf\n?? references/papers/ChipDiffusion_ICML2025.pdf\n?? references/papers/DC3_2104.12225.pdf\n?? references/papers/DiffPlace_2510.15897v2.pdf\n?? references/papers/FlowPlace_2604.23658v2.pdf\n?? references/papers/LearnToFloorplan_ICCD2020.pdf\n?? references/papers/MaskPlace_NeurIPS2022.pdf\n?? references/papers/PARSAC_2405.05495v3.pdf\n?? references/papers/README.md\n?? references/papers/RulePlanner_2601.22476v2.pdf\n?? references/papers/Trinity_2610.04957v1.pdf\n?? references/papers/literature_review.zh-CN.md\n?? references/papers/manifest.json\n?? scripts/fetch_literature.py\n",
+  "fresh_initialization": true,
+  "warm_start": null,
+  "validation_metric": "500dev mean per-layout masked MSE",
+  "sampling": "fresh global randperm of all20000 train members each epoch; seed+1000003*epoch",
+  "budget_scope": "whole invocation including preparation, validation, checkpoint and terminal evaluation; total across resumes",
+  "terminal_reserve": "estimate from initial500dev throughput, at least120s, at most600s; incomplete terminal evaluation explicitly reported",
+  "test_payload_reads": 0,
+  "source_snapshot": "source_snapshot.zip"
+}

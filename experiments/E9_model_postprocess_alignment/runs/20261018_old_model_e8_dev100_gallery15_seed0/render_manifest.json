@@ -1,0 +1,1125 @@
+{
+  "selection": "Final Q ascending, ties by case_id; ranks 1-5, 48-52, 96-100",
+  "sources": {
+    "final": {
+      "path": "experiments\\E8_fast_robust_postprocess\\runs\\20261018_robust_dev100_seed0\\cases.jsonl",
+      "sha256": "c2d5762767e295a27b3838a029fd20780e9e94509bc4074c0fce1a6a026313e2"
+    },
+    "draft": {
+      "path": "experiments\\E8_fast_robust_postprocess\\runs\\20261018_stageA_dev100_seed0\\drafts.jsonl",
+      "sha256": "33046f8f76f1001ad8e20ffe4c1f2f51c60e5f0fe757126f82712984a94dcf4c"
+    },
+    "reference": {
+      "path": "experiments\\intent_aware_repair\\runs\\20261017_geometry_only_factorial_seed0\\evaluation\\cases.jsonl",
+      "sha256": "7c7a450b4f606d7dbf9a915cadf025884747cbf94b5be6eabd48e365640f45b1"
+    }
+  },
+  "renderer_sha256": "cee782f22862ef6f36136a58fdd686a25b045a35c9cd56ca2795ee8176adc8bb",
+  "script_sha256": "60ea4c5a3dd8f593fe1cc580dc32b2b65537474e4bc59f2839fb609be55f4606",
+  "dataset_tensor_reads": 0,
+  "inference_calls": 0,
+  "solver_calls": 0,
+  "images": [
+    {
+      "band": "low",
+      "rank": 1,
+      "case_id": "dev:worker_64/layouts_3808.th:0",
+      "Q": 1.001572737459631,
+      "metrics": {
+        "is_feasible": true,
+        "overlap_violations": 0,
+        "area_violations": 0,
+        "dimension_violations": 0,
+        "hpwl_b2b": 42.74087159450742,
+        "hpwl_p2b": 13.141418208708627,
+        "hpwl_total": 55.88228980321605,
+        "hpwl_baseline": 55.707064628601074,
+        "hpwl_gap": 0.003145474919262008,
+        "bbox_area": 23664.823189378338,
+        "bbox_area_baseline": 24024.0,
+        "area_gap": -0.014950749692876386,
+        "fixed_violations": 0,
+        "preplaced_violations": 0,
+        "boundary_violations": 0,
+        "grouping_violations": 0,
+        "mib_violations": 0,
+        "total_soft_violations": 0,
+        "max_possible_violations": 41,
+        "violations_relative": 0.0,
+        "runtime_seconds": 1.2863283000187948,
+        "cost": 1.001572737459631,
+        "official_is_feasible_before_nonnegative_check": true,
+        "nonnegative_coordinate_violations": 0
+      },
+      "image": "low_rank001.png",
+      "dimensions": [
+        3315,
+        1988
+      ],
+      "sha256": "b1b9043ac79e72bb463585f1c2853b3f2ae6bcf633b90f1afb52a5672216e255",
+      "render": {
+        "axis_limits": [
+          -10.089789171218872,
+          142.08978917121888,
+          -10.089789171218872,
+          193.54050137519837
+        ],
+        "bounding_policy": "union of all three stages plus 5.5% maximum-span margin; no blocks cropped",
+        "grouping_colors": {
+          "1": [
+            0.5529411764705883,
+            0.8274509803921568,
+            0.7803921568627451,
+            1.0
+          ],
+          "2": [
+            1.0,
+            1.0,
+            0.7019607843137254,
+            1.0
+          ],
+          "3": [
+            0.7450980392156863,
+            0.7294117647058823,
+            0.8549019607843137,
+            1.0
+          ]
+        },
+        "mib_hatches": {
+          "1": "///"
+        },
+        "plot_overlap_axis_tolerance": 1.8345071220397952e-07
+      }
+    },
+    {
+      "band": "low",
+      "rank": 2,
+      "case_id": "dev:worker_94/layouts_7840.th:48",
+      "Q": 1.066488889381527,
+      "metrics": {
+        "is_feasible": true,
+        "overlap_violations": 0,
+        "area_violations": 0,
+        "dimension_violations": 0,
+        "hpwl_b2b": 547.9872011738782,
+        "hpwl_p2b": 0.6517466415788916,
+        "hpwl_total": 548.6389478154572,
+        "hpwl_baseline": 546.5907694101334,
+        "hpwl_gap": 0.0037471880608854146,
+        "bbox_area": 35784.57838779705,
+        "bbox_area_baseline": 35796.0,
+        "area_gap": -0.00031907509785860326,
+        "fixed_violations": 0,
+        "preplaced_violations": 0,
+        "boundary_violations": 0,
+        "grouping_violations": 0,
+        "mib_violations": 2,
+        "total_soft_violations": 2,
+        "max_possible_violations": 64,
+        "violations_relative": 0.03125,
+        "runtime_seconds": 1.399104800017085,
+        "cost": 1.066488889381527,
+        "official_is_feasible_before_nonnegative_check": true,
+        "nonnegative_coordinate_violations": 0
+      },
+      "image": "low_rank002.png",
+      "dimensions": [
+        3315,
+        1988
+      ],
+      "sha256": "982bccab6c7c4901d811f83d68e87e98e0d8bc6150a3da8df9aae66fcb15ac17",
+      "render": {
+        "axis_limits": [
+          -17.474263796806337,
+          131.64078677654265,
+          -17.474263796806337,
+          335.18815101146697
+        ],
+        "bounding_policy": "union of all three stages plus 5.5% maximum-span margin; no blocks cropped",
+        "grouping_colors": {
+          "1": [
+            0.5529411764705883,
+            0.8274509803921568,
+            0.7803921568627451,
+            1.0
+          ],
+          "2": [
+            1.0,
+            1.0,
+            0.7019607843137254,
+            1.0
+          ],
+          "3": [
+            0.7450980392156863,
+            0.7294117647058823,
+            0.8549019607843137,
+            1.0
+          ]
+        },
+        "mib_hatches": {
+          "1": "///"
+        },
+        "plot_overlap_axis_tolerance": 3.1771388721466067e-07
+      }
+    },
+    {
+      "band": "low",
+      "rank": 3,
+      "case_id": "dev:worker_62/layouts_6496.th:100",
+      "Q": 1.0731526522879777,
+      "metrics": {
+        "is_feasible": true,
+        "overlap_violations": 0,
+        "area_violations": 0,
+        "dimension_violations": 0,
+        "hpwl_b2b": 128.2039054611,
+        "hpwl_p2b": 12.559042066727768,
+        "hpwl_total": 140.76294752782775,
+        "hpwl_baseline": 141.76824188232422,
+        "hpwl_gap": -0.007091111106046745,
+        "bbox_area": 33365.62160395122,
+        "bbox_area_baseline": 32769.0,
+        "area_gap": 0.01820689077943245,
+        "fixed_violations": 0,
+        "preplaced_violations": 0,
+        "boundary_violations": 0,
+        "grouping_violations": 0,
+        "mib_violations": 2,
+        "total_soft_violations": 2,
+        "max_possible_violations": 65,
+        "violations_relative": 0.03076923076923077,
+        "runtime_seconds": 1.3347202000149991,
+        "cost": 1.0731526522879777,
+        "official_is_feasible_before_nonnegative_check": true,
+        "nonnegative_coordinate_violations": 0
+      },
+      "image": "low_rank003.png",
+      "dimensions": [
+        3315,
+        1988
+      ],
+      "sha256": "d96cf211c38e5362e0d07c003aa2ae9c521ab8b9da9b1f62f732fbaeebb08e0a",
+      "render": {
+        "axis_limits": [
+          -18.205000000000002,
+          119.75025890141667,
+          -18.205000000000002,
+          349.205
+        ],
+        "bounding_policy": "union of all three stages plus 5.5% maximum-span margin; no blocks cropped",
+        "grouping_colors": {
+          "1": [
+            0.5529411764705883,
+            0.8274509803921568,
+            0.7803921568627451,
+            1.0
+          ],
+          "2": [
+            1.0,
+            1.0,
+            0.7019607843137254,
+            1.0
+          ],
+          "3": [
+            0.7450980392156863,
+            0.7294117647058823,
+            0.8549019607843137,
+            1.0
+          ],
+          "4": [
+            0.984313725490196,
+            0.5019607843137255,
+            0.4470588235294118,
+            1.0
+          ]
+        },
+        "mib_hatches": {
+          "1": "///"
+        },
+        "plot_overlap_axis_tolerance": 3.3100000000000004e-07
+      }
+    },
+    {
+      "band": "low",
+      "rank": 4,
+      "case_id": "dev:worker_48/layouts_0.th:32",
+      "Q": 1.077099056306891,
+      "metrics": {
+        "is_feasible": true,
+        "overlap_violations": 0,
+        "area_violations": 0,
+        "dimension_violations": 0,
+        "hpwl_b2b": 336.14863259241446,
+        "hpwl_p2b": 9.21894455994874,
+        "hpwl_total": 345.3675771523632,
+        "hpwl_baseline": 344.2676725387573,
+        "hpwl_gap": 0.0031949111152225484,
+        "bbox_area": 30301.527871836224,
+        "bbox_area_baseline": 30226.0,
+        "area_gap": 0.002498771648124933,
+        "fixed_violations": 0,
+        "preplaced_violations": 0,
+        "boundary_violations": 0,
+        "grouping_violations": 0,
+        "mib_violations": 2,
+        "total_soft_violations": 2,
+        "max_possible_violations": 56,
+        "violations_relative": 0.03571428571428571,
+        "runtime_seconds": 1.3592918000067584,
+        "cost": 1.077099056306891,
+        "official_is_feasible_before_nonnegative_check": true,
+        "nonnegative_coordinate_violations": 0
+      },
+      "image": "low_rank004.png",
+      "dimensions": [
+        3315,
+        1988
+      ],
+      "sha256": "9386de0e7568dd093ab13ae58aef704a0685f10b53a2122911435c632f6fd39d",
+      "render": {
+        "axis_limits": [
+          -14.456216598599568,
+          134.65683152779877,
+          -14.456216598599568,
+          277.29651839131895
+        ],
+        "bounding_policy": "union of all three stages plus 5.5% maximum-span margin; no blocks cropped",
+        "grouping_colors": {
+          "1": [
+            0.5529411764705883,
+            0.8274509803921568,
+            0.7803921568627451,
+            1.0
+          ],
+          "2": [
+            1.0,
+            1.0,
+            0.7019607843137254,
+            1.0
+          ],
+          "3": [
+            0.7450980392156863,
+            0.7294117647058823,
+            0.8549019607843137,
+            1.0
+          ]
+        },
+        "mib_hatches": {
+          "1": "///"
+        },
+        "plot_overlap_axis_tolerance": 2.628403017927194e-07
+      }
+    },
+    {
+      "band": "low",
+      "rank": 5,
+      "case_id": "dev:worker_44/layouts_5600.th:108",
+      "Q": 1.079175473537552,
+      "metrics": {
+        "is_feasible": true,
+        "overlap_violations": 0,
+        "area_violations": 0,
+        "dimension_violations": 0,
+        "hpwl_b2b": 91.17495522520046,
+        "hpwl_p2b": 51.38080708436529,
+        "hpwl_total": 142.55576230956575,
+        "hpwl_baseline": 139.0011444091797,
+        "hpwl_gap": 0.025572580107126906,
+        "bbox_area": 29169.938799160256,
+        "bbox_area_baseline": 29886.0,
+        "area_gap": -0.023959753758942107,
+        "fixed_violations": 0,
+        "preplaced_violations": 0,
+        "boundary_violations": 0,
+        "grouping_violations": 0,
+        "mib_violations": 2,
+        "total_soft_violations": 2,
+        "max_possible_violations": 63,
+        "violations_relative": 0.031746031746031744,
+        "runtime_seconds": 1.2782886999775656,
+        "cost": 1.079175473537552,
+        "official_is_feasible_before_nonnegative_check": true,
+        "nonnegative_coordinate_violations": 0
+      },
+      "image": "low_rank005.png",
+      "dimensions": [
+        3315,
+        1988
+      ],
+      "sha256": "661e90f381f37e50c9baa1f4a34d9e8a214bd12cf61d1932af367e234bd2b14e",
+      "render": {
+        "axis_limits": [
+          -16.34365071296692,
+          123.90335274070152,
+          -16.34365071296692,
+          313.5009364032745
+        ],
+        "bounding_policy": "union of all three stages plus 5.5% maximum-span margin; no blocks cropped",
+        "grouping_colors": {
+          "1": [
+            0.5529411764705883,
+            0.8274509803921568,
+            0.7803921568627451,
+            1.0
+          ],
+          "2": [
+            1.0,
+            1.0,
+            0.7019607843137254,
+            1.0
+          ],
+          "3": [
+            0.7450980392156863,
+            0.7294117647058823,
+            0.8549019607843137,
+            1.0
+          ],
+          "4": [
+            0.984313725490196,
+            0.5019607843137255,
+            0.4470588235294118,
+            1.0
+          ]
+        },
+        "mib_hatches": {
+          "1": "///"
+        },
+        "plot_overlap_axis_tolerance": 2.9715728569030765e-07
+      }
+    },
+    {
+      "band": "middle",
+      "rank": 48,
+      "case_id": "dev:worker_91/layouts_5712.th:100",
+      "Q": 1.188595108032383,
+      "metrics": {
+        "is_feasible": true,
+        "overlap_violations": 0,
+        "area_violations": 0,
+        "dimension_violations": 0,
+        "hpwl_b2b": 112.03541875309665,
+        "hpwl_p2b": 3.438913019134138,
+        "hpwl_total": 115.47433177223078,
+        "hpwl_baseline": 115.0973551273346,
+        "hpwl_gap": 0.0032752850356911486,
+        "bbox_area": 18318.909965288767,
+        "bbox_area_baseline": 18156.0,
+        "area_gap": 0.008972789451903895,
+        "fixed_violations": 0,
+        "preplaced_violations": 0,
+        "boundary_violations": 0,
+        "grouping_violations": 0,
+        "mib_violations": 4,
+        "total_soft_violations": 4,
+        "max_possible_violations": 48,
+        "violations_relative": 0.08333333333333333,
+        "runtime_seconds": 1.2443966999999247,
+        "cost": 1.188595108032383,
+        "official_is_feasible_before_nonnegative_check": true,
+        "nonnegative_coordinate_violations": 0
+      },
+      "image": "middle_rank048.png",
+      "dimensions": [
+        3315,
+        1988
+      ],
+      "sha256": "cb7204025b5787db5eb9e249ca78d509ab5e7a5c8ad80821b56b33f320b32823",
+      "render": {
+        "axis_limits": [
+          -11.22,
+          108.03039405072806,
+          -11.22,
+          215.22
+        ],
+        "bounding_policy": "union of all three stages plus 5.5% maximum-span margin; no blocks cropped",
+        "grouping_colors": {
+          "1": [
+            0.5529411764705883,
+            0.8274509803921568,
+            0.7803921568627451,
+            1.0
+          ],
+          "2": [
+            1.0,
+            1.0,
+            0.7019607843137254,
+            1.0
+          ],
+          "3": [
+            0.7450980392156863,
+            0.7294117647058823,
+            0.8549019607843137,
+            1.0
+          ]
+        },
+        "mib_hatches": {
+          "1": "///"
+        },
+        "plot_overlap_axis_tolerance": 2.04e-07
+      }
+    },
+    {
+      "band": "middle",
+      "rank": 49,
+      "case_id": "dev:worker_85/layouts_1008.th:26",
+      "Q": 1.193427915268771,
+      "metrics": {
+        "is_feasible": true,
+        "overlap_violations": 0,
+        "area_violations": 0,
+        "dimension_violations": 0,
+        "hpwl_b2b": 100.91599062658807,
+        "hpwl_p2b": 19.509991543788825,
+        "hpwl_total": 120.4259821703769,
+        "hpwl_baseline": 120.09161376953125,
+        "hpwl_gap": 0.002784277688926196,
+        "bbox_area": 24158.567661012243,
+        "bbox_area_baseline": 24610.0,
+        "area_gap": -0.01834345140137169,
+        "fixed_violations": 0,
+        "preplaced_violations": 0,
+        "boundary_violations": 0,
+        "grouping_violations": 0,
+        "mib_violations": 5,
+        "total_soft_violations": 5,
+        "max_possible_violations": 57,
+        "violations_relative": 0.08771929824561403,
+        "runtime_seconds": 1.2588577000133228,
+        "cost": 1.193427915268771,
+        "official_is_feasible_before_nonnegative_check": true,
+        "nonnegative_coordinate_violations": 0
+      },
+      "image": "middle_rank049.png",
+      "dimensions": [
+        3315,
+        1988
+      ],
+      "sha256": "556a2432b2dfeb066794ce7c146a1c29d421fda65080e34ac6e65e2afa88f183",
+      "render": {
+        "axis_limits": [
+          -11.81114478111267,
+          130.55998918813128,
+          -11.81114478111267,
+          226.55923171043395
+        ],
+        "bounding_policy": "union of all three stages plus 5.5% maximum-span margin; no blocks cropped",
+        "grouping_colors": {
+          "1": [
+            0.5529411764705883,
+            0.8274509803921568,
+            0.7803921568627451,
+            1.0
+          ],
+          "2": [
+            1.0,
+            1.0,
+            0.7019607843137254,
+            1.0
+          ],
+          "3": [
+            0.7450980392156863,
+            0.7294117647058823,
+            0.8549019607843137,
+            1.0
+          ],
+          "4": [
+            0.984313725490196,
+            0.5019607843137255,
+            0.4470588235294118,
+            1.0
+          ]
+        },
+        "mib_hatches": {
+          "1": "///"
+        },
+        "plot_overlap_axis_tolerance": 2.147480869293213e-07
+      }
+    },
+    {
+      "band": "middle",
+      "rank": 50,
+      "case_id": "dev:worker_40/layouts_4368.th:89",
+      "Q": 1.2027557527886075,
+      "metrics": {
+        "is_feasible": true,
+        "overlap_violations": 0,
+        "area_violations": 0,
+        "dimension_violations": 0,
+        "hpwl_b2b": 187.42777941202897,
+        "hpwl_p2b": 45.59850032702029,
+        "hpwl_total": 233.02627973904924,
+        "hpwl_baseline": 233.99023056030273,
+        "hpwl_gap": -0.004119619947145897,
+        "bbox_area": 30879.078217066086,
+        "bbox_area_baseline": 31376.0,
+        "area_gap": -0.01583763969065254,
+        "fixed_violations": 0,
+        "preplaced_violations": 0,
+        "boundary_violations": 0,
+        "grouping_violations": 0,
+        "mib_violations": 6,
+        "total_soft_violations": 6,
+        "max_possible_violations": 65,
+        "violations_relative": 0.09230769230769231,
+        "runtime_seconds": 1.2213377000007313,
+        "cost": 1.2027557527886075,
+        "official_is_feasible_before_nonnegative_check": true,
+        "nonnegative_coordinate_violations": 0
+      },
+      "image": "middle_rank050.png",
+      "dimensions": [
+        3315,
+        1988
+      ],
+      "sha256": "a91f4ee90b97a4ad8010595711d612d568d21218c26e9457f0b790b3436b30b4",
+      "render": {
+        "axis_limits": [
+          -16.30497055053711,
+          130.8989783009136,
+          -16.30497055053711,
+          312.75898056030275
+        ],
+        "bounding_policy": "union of all three stages plus 5.5% maximum-span margin; no blocks cropped",
+        "grouping_colors": {
+          "1": [
+            0.5529411764705883,
+            0.8274509803921568,
+            0.7803921568627451,
+            1.0
+          ],
+          "2": [
+            1.0,
+            1.0,
+            0.7019607843137254,
+            1.0
+          ],
+          "3": [
+            0.7450980392156863,
+            0.7294117647058823,
+            0.8549019607843137,
+            1.0
+          ],
+          "4": [
+            0.984313725490196,
+            0.5019607843137255,
+            0.4470588235294118,
+            1.0
+          ]
+        },
+        "mib_hatches": {
+          "1": "///"
+        },
+        "plot_overlap_axis_tolerance": 2.9645401000976563e-07
+      }
+    },
+    {
+      "band": "middle",
+      "rank": 51,
+      "case_id": "dev:worker_23/layouts_7952.th:17",
+      "Q": 1.2027662343872845,
+      "metrics": {
+        "is_feasible": true,
+        "overlap_violations": 0,
+        "area_violations": 0,
+        "dimension_violations": 0,
+        "hpwl_b2b": 64.05764996437826,
+        "hpwl_p2b": 2.5949219648632242,
+        "hpwl_total": 66.65257192924147,
+        "hpwl_baseline": 65.79437160491943,
+        "hpwl_gap": 0.013043673849114987,
+        "bbox_area": 22731.708363679347,
+        "bbox_area_baseline": 22374.0,
+        "area_gap": 0.015987680507702995,
+        "fixed_violations": 0,
+        "preplaced_violations": 0,
+        "boundary_violations": 0,
+        "grouping_violations": 0,
+        "mib_violations": 4,
+        "total_soft_violations": 4,
+        "max_possible_violations": 47,
+        "violations_relative": 0.0851063829787234,
+        "runtime_seconds": 1.2681609999854118,
+        "cost": 1.2027662343872845,
+        "official_is_feasible_before_nonnegative_check": true,
+        "nonnegative_coordinate_violations": 0
+      },
+      "image": "middle_rank051.png",
+      "dimensions": [
+        3315,
+        1988
+      ],
+      "sha256": "78cb384987c932ad0c5b68042ee65bcfd04a9012150905de7c46cb8955cae8af",
+      "render": {
+        "axis_limits": [
+          -11.012826738357544,
+          127.09370176479803,
+          -11.012826738357544,
+          211.24604016304016
+        ],
+        "bounding_policy": "union of all three stages plus 5.5% maximum-span margin; no blocks cropped",
+        "grouping_colors": {
+          "1": [
+            0.5529411764705883,
+            0.8274509803921568,
+            0.7803921568627451,
+            1.0
+          ],
+          "2": [
+            1.0,
+            1.0,
+            0.7019607843137254,
+            1.0
+          ],
+          "3": [
+            0.7450980392156863,
+            0.7294117647058823,
+            0.8549019607843137,
+            1.0
+          ],
+          "4": [
+            0.984313725490196,
+            0.5019607843137255,
+            0.4470588235294118,
+            1.0
+          ]
+        },
+        "mib_hatches": {
+          "1": "///"
+        },
+        "plot_overlap_axis_tolerance": 2.0023321342468262e-07
+      }
+    },
+    {
+      "band": "middle",
+      "rank": 52,
+      "case_id": "dev:worker_20/layouts_9296.th:55",
+      "Q": 1.2038163810709548,
+      "metrics": {
+        "is_feasible": true,
+        "overlap_violations": 0,
+        "area_violations": 0,
+        "dimension_violations": 0,
+        "hpwl_b2b": 71.4532049062647,
+        "hpwl_p2b": 0.22667627623285896,
+        "hpwl_total": 71.67988118249757,
+        "hpwl_baseline": 72.89661015570164,
+        "hpwl_gap": -0.016691159857848383,
+        "bbox_area": 25100.06004861349,
+        "bbox_area_baseline": 24717.0,
+        "area_gap": 0.015497837464639314,
+        "fixed_violations": 0,
+        "preplaced_violations": 0,
+        "boundary_violations": 2,
+        "grouping_violations": 0,
+        "mib_violations": 2,
+        "total_soft_violations": 4,
+        "max_possible_violations": 45,
+        "violations_relative": 0.08888888888888889,
+        "runtime_seconds": 1.2407753000152297,
+        "cost": 1.2038163810709548,
+        "official_is_feasible_before_nonnegative_check": true,
+        "nonnegative_coordinate_violations": 0
+      },
+      "image": "middle_rank052.png",
+      "dimensions": [
+        3315,
+        1988
+      ],
+      "sha256": "8268e3b8956a6ecd8e7f51bd135fef34ec241a5c6772fc47b626a71f4084ce28",
+      "render": {
+        "axis_limits": [
+          -12.705,
+          133.82056192477293,
+          -12.705,
+          243.705
+        ],
+        "bounding_policy": "union of all three stages plus 5.5% maximum-span margin; no blocks cropped",
+        "grouping_colors": {
+          "1": [
+            0.5529411764705883,
+            0.8274509803921568,
+            0.7803921568627451,
+            1.0
+          ],
+          "2": [
+            1.0,
+            1.0,
+            0.7019607843137254,
+            1.0
+          ],
+          "3": [
+            0.7450980392156863,
+            0.7294117647058823,
+            0.8549019607843137,
+            1.0
+          ]
+        },
+        "mib_hatches": {
+          "1": "///"
+        },
+        "plot_overlap_axis_tolerance": 2.3100000000000002e-07
+      }
+    },
+    {
+      "band": "high",
+      "rank": 96,
+      "case_id": "dev:worker_73/layouts_5152.th:2",
+      "Q": 1.4231283993633876,
+      "metrics": {
+        "is_feasible": true,
+        "overlap_violations": 0,
+        "area_violations": 0,
+        "dimension_violations": 0,
+        "hpwl_b2b": 10.78761636364021,
+        "hpwl_p2b": 0.7273393319523243,
+        "hpwl_total": 11.514955695592533,
+        "hpwl_baseline": 11.28805285692215,
+        "hpwl_gap": 0.020101149555765994,
+        "bbox_area": 9846.62204588995,
+        "bbox_area_baseline": 9894.0,
+        "area_gap": -0.004788554084298592,
+        "fixed_violations": 0,
+        "preplaced_violations": 0,
+        "boundary_violations": 0,
+        "grouping_violations": 0,
+        "mib_violations": 6,
+        "total_soft_violations": 6,
+        "max_possible_violations": 35,
+        "violations_relative": 0.17142857142857143,
+        "runtime_seconds": 0.8623347000102513,
+        "cost": 1.4231283993633876,
+        "official_is_feasible_before_nonnegative_check": true,
+        "nonnegative_coordinate_violations": 0
+      },
+      "image": "high_rank096.png",
+      "dimensions": [
+        3315,
+        1988
+      ],
+      "sha256": "6e6471a5320e798c0c17a66ee214bff02041d5a9df87dc5b6503847590e6d41f",
+      "render": {
+        "axis_limits": [
+          -5.8545747094576654,
+          112.30138760868795,
+          -5.8545747094576654,
+          103.73785218847843
+        ],
+        "bounding_policy": "union of all three stages plus 5.5% maximum-span margin; no blocks cropped",
+        "grouping_colors": {
+          "1": [
+            0.5529411764705883,
+            0.8274509803921568,
+            0.7803921568627451,
+            1.0
+          ],
+          "2": [
+            1.0,
+            1.0,
+            0.7019607843137254,
+            1.0
+          ],
+          "3": [
+            0.7450980392156863,
+            0.7294117647058823,
+            0.8549019607843137,
+            1.0
+          ],
+          "4": [
+            0.984313725490196,
+            0.5019607843137255,
+            0.4470588235294118,
+            1.0
+          ]
+        },
+        "mib_hatches": {
+          "1": "///"
+        },
+        "plot_overlap_axis_tolerance": 1.0644681289923029e-07
+      }
+    },
+    {
+      "band": "high",
+      "rank": 97,
+      "case_id": "dev:worker_95/layouts_336.th:36",
+      "Q": 1.4482709119769421,
+      "metrics": {
+        "is_feasible": true,
+        "overlap_violations": 0,
+        "area_violations": 0,
+        "dimension_violations": 0,
+        "hpwl_b2b": 6.44978242524173,
+        "hpwl_p2b": 0.6617535944012722,
+        "hpwl_total": 7.111536019643002,
+        "hpwl_baseline": 7.132395386695862,
+        "hpwl_gap": -0.0029245948831957717,
+        "bbox_area": 14284.157105144968,
+        "bbox_area_baseline": 14388.0,
+        "area_gap": -0.00721732658152848,
+        "fixed_violations": 0,
+        "preplaced_violations": 0,
+        "boundary_violations": 0,
+        "grouping_violations": 0,
+        "mib_violations": 5,
+        "total_soft_violations": 5,
+        "max_possible_violations": 27,
+        "violations_relative": 0.18518518518518517,
+        "runtime_seconds": 0.6667444000195246,
+        "cost": 1.4482709119769421,
+        "official_is_feasible_before_nonnegative_check": true,
+        "nonnegative_coordinate_violations": 0
+      },
+      "image": "high_rank097.png",
+      "dimensions": [
+        3315,
+        1988
+      ],
+      "sha256": "14ee536a8d90d47f67c3f4d91bda7e2cff6f57378b2b80c7110fe19ff600ee6c",
+      "render": {
+        "axis_limits": [
+          -7.472420043945313,
+          119.43250666044361,
+          -7.472420043945313,
+          143.3346026611328
+        ],
+        "bounding_policy": "union of all three stages plus 5.5% maximum-span margin; no blocks cropped",
+        "grouping_colors": {
+          "1": [
+            0.5529411764705883,
+            0.8274509803921568,
+            0.7803921568627451,
+            1.0
+          ],
+          "2": [
+            1.0,
+            1.0,
+            0.7019607843137254,
+            1.0
+          ],
+          "3": [
+            0.7450980392156863,
+            0.7294117647058823,
+            0.8549019607843137,
+            1.0
+          ]
+        },
+        "mib_hatches": {
+          "1": "///"
+        },
+        "plot_overlap_axis_tolerance": 1.3586218261718751e-07
+      }
+    },
+    {
+      "band": "high",
+      "rank": 98,
+      "case_id": "dev:worker_89/layouts_224.th:93",
+      "Q": 1.4586260030408096,
+      "metrics": {
+        "is_feasible": true,
+        "overlap_violations": 0,
+        "area_violations": 0,
+        "dimension_violations": 0,
+        "hpwl_b2b": 13.362845874187174,
+        "hpwl_p2b": 3.6920692422174852,
+        "hpwl_total": 17.054915116404658,
+        "hpwl_baseline": 16.970131874084473,
+        "hpwl_gap": 0.004996027311352822,
+        "bbox_area": 12234.835180284497,
+        "bbox_area_baseline": 12441.0,
+        "area_gap": -0.016571402597500423,
+        "fixed_violations": 0,
+        "preplaced_violations": 0,
+        "boundary_violations": 0,
+        "grouping_violations": 0,
+        "mib_violations": 6,
+        "total_soft_violations": 6,
+        "max_possible_violations": 32,
+        "violations_relative": 0.1875,
+        "runtime_seconds": 1.0509700999828056,
+        "cost": 1.4586260030408096,
+        "official_is_feasible_before_nonnegative_check": true,
+        "nonnegative_coordinate_violations": 0
+      },
+      "image": "high_rank098.png",
+      "dimensions": [
+        3315,
+        1988
+      ],
+      "sha256": "db2c9d136be4cfa4961f80dc7ce98d08e8d21dbba5fb7b90fcc0e1243396b309",
+      "render": {
+        "axis_limits": [
+          -7.96854469537735,
+          95.89955631534045,
+          -7.96854469537735,
+          152.85117552042007
+        ],
+        "bounding_policy": "union of all three stages plus 5.5% maximum-span margin; no blocks cropped",
+        "grouping_colors": {
+          "1": [
+            0.5529411764705883,
+            0.8274509803921568,
+            0.7803921568627451,
+            1.0
+          ],
+          "2": [
+            1.0,
+            1.0,
+            0.7019607843137254,
+            1.0
+          ],
+          "3": [
+            0.7450980392156863,
+            0.7294117647058823,
+            0.8549019607843137,
+            1.0
+          ]
+        },
+        "mib_hatches": {
+          "1": "///"
+        },
+        "plot_overlap_axis_tolerance": 1.4488263082504272e-07
+      }
+    },
+    {
+      "band": "high",
+      "rank": 99,
+      "case_id": "dev:worker_59/layouts_784.th:6",
+      "Q": 1.4690491938490167,
+      "metrics": {
+        "is_feasible": true,
+        "overlap_violations": 0,
+        "area_violations": 0,
+        "dimension_violations": 0,
+        "hpwl_b2b": 4.173825267701383,
+        "hpwl_p2b": 0.22500386139564726,
+        "hpwl_total": 4.39882912909703,
+        "hpwl_baseline": 4.459505870938301,
+        "hpwl_gap": -0.013606158080582223,
+        "bbox_area": 7872.4383097857135,
+        "bbox_area_baseline": 7968.0,
+        "area_gap": -0.01199318401283716,
+        "fixed_violations": 0,
+        "preplaced_violations": 0,
+        "boundary_violations": 0,
+        "grouping_violations": 1,
+        "mib_violations": 4,
+        "total_soft_violations": 5,
+        "max_possible_violations": 26,
+        "violations_relative": 0.19230769230769232,
+        "runtime_seconds": 0.5102041999925859,
+        "cost": 1.4690491938490167,
+        "official_is_feasible_before_nonnegative_check": true,
+        "nonnegative_coordinate_violations": 0
+      },
+      "image": "high_rank099.png",
+      "dimensions": [
+        3315,
+        1988
+      ],
+      "sha256": "b6ef354197b2defa399756cf014297805b2567b74edb587fa634696b2dcd9f84",
+      "render": {
+        "axis_limits": [
+          -5.28,
+          101.28,
+          -5.28,
+          90.72439125061035
+        ],
+        "bounding_policy": "union of all three stages plus 5.5% maximum-span margin; no blocks cropped",
+        "grouping_colors": {
+          "1": [
+            0.5529411764705883,
+            0.8274509803921568,
+            0.7803921568627451,
+            1.0
+          ],
+          "2": [
+            1.0,
+            1.0,
+            0.7019607843137254,
+            1.0
+          ],
+          "3": [
+            0.7450980392156863,
+            0.7294117647058823,
+            0.8549019607843137,
+            1.0
+          ]
+        },
+        "mib_hatches": {
+          "1": "///"
+        },
+        "plot_overlap_axis_tolerance": 9.600000000000001e-08
+      }
+    },
+    {
+      "band": "high",
+      "rank": 100,
+      "case_id": "dev:worker_37/layouts_7616.th:72",
+      "Q": 1.472866021403696,
+      "metrics": {
+        "is_feasible": true,
+        "overlap_violations": 0,
+        "area_violations": 0,
+        "dimension_violations": 0,
+        "hpwl_b2b": 2.8185159549843544,
+        "hpwl_p2b": 0.1280776798508506,
+        "hpwl_total": 2.946593634835205,
+        "hpwl_baseline": 2.9313613325357437,
+        "hpwl_gap": 0.0051963236774651075,
+        "bbox_area": 6788.473924096425,
+        "bbox_area_baseline": 6800.0,
+        "area_gap": -0.0016950111622903773,
+        "fixed_violations": 0,
+        "preplaced_violations": 0,
+        "boundary_violations": 0,
+        "grouping_violations": 0,
+        "mib_violations": 5,
+        "total_soft_violations": 5,
+        "max_possible_violations": 26,
+        "violations_relative": 0.19230769230769232,
+        "runtime_seconds": 0.4157005000161007,
+        "cost": 1.472866021403696,
+        "official_is_feasible_before_nonnegative_check": true,
+        "nonnegative_coordinate_violations": 0
+      },
+      "image": "high_rank100.png",
+      "dimensions": [
+        3315,
+        1988
+      ],
+      "sha256": "2142fc9b48ed5251f00c5c4b267d79a2e1c07d3ff6923c0d64563ca10d210291",
+      "render": {
+        "axis_limits": [
+          -5.5,
+          75.54699537227862,
+          -5.5,
+          105.5
+        ],
+        "bounding_policy": "union of all three stages plus 5.5% maximum-span margin; no blocks cropped",
+        "grouping_colors": {
+          "1": [
+            0.5529411764705883,
+            0.8274509803921568,
+            0.7803921568627451,
+            1.0
+          ],
+          "2": [
+            1.0,
+            1.0,
+            0.7019607843137254,
+            1.0
+          ],
+          "3": [
+            0.7450980392156863,
+            0.7294117647058823,
+            0.8549019607843137,
+            1.0
+          ]
+        },
+        "mib_hatches": {
+          "1": "///"
+        },
+        "plot_overlap_axis_tolerance": 1.0000000000000001e-07
+      }
+    }
+  ]
+}

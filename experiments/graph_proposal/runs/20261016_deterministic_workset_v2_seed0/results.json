@@ -1,0 +1,29 @@
+{
+  "status": "stopped",
+  "stop_reason": "user_requested_stop_via_exec_interrupt",
+  "converged": false,
+  "total_steps": 7254,
+  "samples_seen": 116064,
+  "unique_train_samples_seen": 20000,
+  "epoch_fraction": 5.8032,
+  "last_logged_step": 7350,
+  "last_budget_record_step": 7387,
+  "accumulated_seconds": 1606.6037250999943,
+  "requested_budget_seconds": 3600,
+  "best": {
+    "reference": 0.07443081371858716,
+    "bad_checks": 1,
+    "lr_reductions": 1,
+    "min_delta_relative": 0.002,
+    "best_metric": 0.07428781043738127,
+    "best_step": 7250,
+    "best_epoch": 5.8,
+    "validation_checks": 30
+  },
+  "best_checkpoint": "checkpoints/best.pt",
+  "latest_checkpoint": "checkpoints/latest.pt",
+  "best_sha256": "dca8ddc179308a30623edc8b8f6536a1c254b1452d3b63216f0a3846f7d5fe76",
+  "terminal_complete": false,
+  "stop_note": "Execution interrupt stopped the process; final uncheckpointed updates are not recoverable. Evaluation freezes pre-existing validation-best weights; no resume or additional training.",
+  "test_authorization": "User explicitly requested stopping training then testing and scoring; local_test2500 may now be evaluated once with frozen model and solver."
+}

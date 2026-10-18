@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-10-17T23:57:51.163713+00:00",
+  "command": [
+    "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+    "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E9_model_postprocess_alignment\\quality_bound.py",
+    "--output",
+    "experiments/E9_model_postprocess_alignment/runs/20261018_official_quality_bound_dev100_seed0"
+  ],
+  "git_head": "8d9ab142f5f2799d03f1f0ef4837cdf7948a95ef",
+  "git_status": " M .gitignore\n M AGENTS.md\n M README.md\n M docs/datasets.md\n M docs/protocol.md\n M docs/workspace_structure.md\n M environment.yml\n M experiments/README.md\n M references/README.md\n?? datasets/worksets.py\n?? docs/aim.md\n?? experiments/E8_fast_robust_postprocess/\n?? experiments/E9_model_postprocess_alignment/\n?? experiments/conflict_local_repair/\n?? experiments/graph_proposal/\n?? experiments/intent_aware_repair/\n?? experiments/masked_construction/\n?? experiments/repair_friendly_draft/\n?? experiments/short_term_plan.md\n?? experiments/topology_geometry/\n?? history/20261017_alternating_optimization/\n?? history/20261017_direction_review/\n?? history/20261018_E8_mechanism_screening/\n?? protocol/workset_v2.json\n?? references/papers/ChiPFormer_ICML2023.pdf\n?? references/papers/ChipDiffusion_ICML2025.pdf\n?? references/papers/DC3_2104.12225.pdf\n?? references/papers/DiffPlace_2510.15897v2.pdf\n?? references/papers/FlowPlace_2604.23658v2.pdf\n?? references/papers/LearnToFloorplan_ICCD2020.pdf\n?? references/papers/MaskPlace_NeurIPS2022.pdf\n?? references/papers/PARSAC_2405.05495v3.pdf\n?? references/papers/README.md\n?? references/papers/RulePlanner_2601.22476v2.pdf\n?? references/papers/Trinity_2610.04957v1.pdf\n?? references/papers/literature_review.zh-CN.md\n?? references/papers/manifest.json\n?? scripts/fetch_literature.py\n?? visualization/\n",
+  "source_sha256": "7c7a450b4f606d7dbf9a915cadf025884747cbf94b5be6eabd48e365640f45b1",
+  "data_paths": {
+    "training_root": "E:\\project\\ICCAD\\2026\\problemC\\datasets\\floorset_lite",
+    "public_validation_root": "E:\\project\\ICCAD\\2026\\problemC\\datasets\\LiteTensorDataTest"
+  },
+  "versions": {
+    "numpy": "1.26.4",
+    "torch": "2.7.1+cu128",
+    "scipy": "1.15.3",
+    "clarabel": "0.11.1",
+    "highspy": "1.15.1",
+    "shapely": "2.1.2"
+  },
+  "python": "3.10.22 | packaged by conda-forge | (main, Oct  6 2026, 22:57:13) [MSC v.1944 64 bit (AMD64)]",
+  "cuda": "12.8",
+  "device": "NVIDIA GeForce RTX 5080 Laptop GPU",
+  "source": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\intent_aware_repair\\runs\\20261017_geometry_only_factorial_seed0\\evaluation\\cases.jsonl",
+  "selected": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E8_fast_robust_postprocess\\runs\\20261018_robust_dev100_seed0\\cases.jsonl",
+  "selected_sha256": "c2d5762767e295a27b3838a029fd20780e9e94509bc4074c0fce1a6a026313e2",
+  "dataset_tensor_reads": 0,
+  "test_payload_reads": 0,
+  "note": "Saved public areas/constraints; masked locked specs reconstructed only from publicly allowed reference channels. No solver use of free reference geometry."
+}

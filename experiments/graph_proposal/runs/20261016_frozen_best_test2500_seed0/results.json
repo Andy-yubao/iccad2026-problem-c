@@ -1,0 +1,587 @@
+{
+  "status": "user_stopped_partial",
+  "stop_reason": "user_requested_about500_cases_then_analysis",
+  "test_cases": 957,
+  "requested_test_cases": 2500,
+  "formal_complete": false,
+  "summary": {
+    "deterministic": {
+      "case_count": 957,
+      "feasible_count": 957,
+      "feasible_rate": 1.0,
+      "execution_error_count": 0,
+      "neutral_runtime_mean_cost_all_cases": 3.9101035910973976,
+      "neutral_runtime_weighted_cost_all_cases": 3.8591847904361365,
+      "mean_hpwl_gap_returned_geometry": 0.5148289361766387,
+      "mean_area_gap_returned_geometry": 0.802421497538761,
+      "mean_boundary_violations_returned_geometry": 10.557993730407523,
+      "mean_grouping_violations_returned_geometry": 4.609195402298851,
+      "mean_mib_violations_returned_geometry": 3.968652037617555,
+      "returned_geometry_metric_count": 957,
+      "total_solve_seconds": 310.2310000001162,
+      "total_worker_wall_seconds": 0,
+      "max_peak_worker_memory_bytes": null,
+      "quality_scope": "all returned geometries, including infeasible ones; errors have undefined gaps and cost 10",
+      "fallback_count": 0,
+      "mean_solve_seconds": 0.32417032392906603
+    }
+  },
+  "supervised": {
+    "train": {
+      "sample_count": 20000,
+      "requested_count": 20000,
+      "complete": true,
+      "mse": 0.07487087662806735,
+      "center_mse": 0.0035458041902311378,
+      "log_ratio_mse": 0.23388887894041835,
+      "aggregation": "mean per-layout masked MSE"
+    },
+    "dev": {
+      "sample_count": 2500,
+      "requested_count": 2500,
+      "complete": true,
+      "mse": 0.07507702635973693,
+      "center_mse": 0.0033566820433363316,
+      "log_ratio_mse": 0.23462265514731406,
+      "aggregation": "mean per-layout masked MSE"
+    },
+    "local_test": {
+      "sample_count": 957,
+      "requested_count": 2500,
+      "complete": false,
+      "mse": 0.07598616301725339,
+      "center_mse": 0.0037432740061824153,
+      "log_ratio_mse": 0.2358397694699692,
+      "aggregation": "mean per-layout masked MSE",
+      "scope": "all durably completed cases before user stop; ordered prefix, not representative full workset"
+    }
+  },
+  "analysis": {
+    "test_record_sha256": "16e96f8822bc8bda8942a5652dc999880d13d82b4fe05109a0fc330c45b2f103",
+    "coverage": {
+      "workers_count": 39,
+      "workers_total": 100,
+      "worker_case_counts": {
+        "worker_0": 25,
+        "worker_1": 25,
+        "worker_2": 25,
+        "worker_3": 25,
+        "worker_4": 25,
+        "worker_5": 25,
+        "worker_6": 25,
+        "worker_7": 25,
+        "worker_8": 25,
+        "worker_9": 25,
+        "worker_10": 25,
+        "worker_11": 25,
+        "worker_12": 25,
+        "worker_13": 25,
+        "worker_14": 25,
+        "worker_15": 25,
+        "worker_16": 25,
+        "worker_17": 25,
+        "worker_18": 25,
+        "worker_19": 25,
+        "worker_20": 25,
+        "worker_21": 25,
+        "worker_22": 25,
+        "worker_23": 25,
+        "worker_24": 25,
+        "worker_25": 25,
+        "worker_26": 25,
+        "worker_27": 25,
+        "worker_28": 25,
+        "worker_29": 25,
+        "worker_30": 25,
+        "worker_31": 25,
+        "worker_32": 25,
+        "worker_33": 25,
+        "worker_34": 25,
+        "worker_35": 25,
+        "worker_36": 25,
+        "worker_37": 25,
+        "worker_38": 7
+      },
+      "full_workers_25_cases": 38,
+      "first_case": "local_test:worker_0/layouts_3024.th:32",
+      "last_case": "local_test:worker_38/layouts_2576.th:41",
+      "block_count_mean": 69.15151515151516,
+      "block_count_quantiles": {
+        "min": 21.0,
+        "p10": 27.0,
+        "median": 69.0,
+        "p90": 112.0,
+        "p95": 117.0,
+        "max": 120.0
+      },
+      "warning": "Original member order groups workers. This interrupted prefix is not a balanced random500 panel; no subset selected by score."
+    },
+    "quality_quantiles": {
+      "min": 1.6901579931582296,
+      "p10": 2.612325064631067,
+      "median": 3.5828087660098853,
+      "p90": 5.567997670391409,
+      "p95": 6.660301668274769,
+      "max": 9.999999
+    },
+    "solve_seconds_quantiles": {
+      "min": 0.030999999988125637,
+      "p10": 0.0470000000204891,
+      "median": 0.2659999999741558,
+      "p90": 0.7030000000086147,
+      "p95": 0.7650000000139698,
+      "max": 0.9059999999881256
+    },
+    "mean_violations_relative": 0.4135910823057253,
+    "capped_feasible_cost_count": 6,
+    "weight_effective_case_count": 241.18226110129024,
+    "independent_feasible_count": 957,
+    "budget_overrun_count": 0,
+    "repair": {
+      "case_count": 957,
+      "continuous_displacement_mean_mean": 5.8523294228043685,
+      "final_displacement_mean_mean": 34.500136585066336,
+      "continuous_seconds_mean": 0.23018599791074457,
+      "geometry_seconds_mean": 0.08036259143135088
+    },
+    "descriptive_pearson_correlations": {
+      "prediction_mse_vs_final_cost": 0.012304298352811029,
+      "center_mse_vs_final_cost": 0.004394651970671929,
+      "shape_mse_vs_final_cost": 0.012775524196754815
+    },
+    "size_bins": {
+      "small_0_49": {
+        "case_count": 335,
+        "feasible_count": 335,
+        "feasible_rate": 1.0,
+        "execution_error_count": 0,
+        "neutral_runtime_mean_cost_all_cases": 3.996944537120988,
+        "neutral_runtime_weighted_cost_all_cases": 4.055018721749519,
+        "mean_hpwl_gap_returned_geometry": 0.5759961123468824,
+        "mean_area_gap_returned_geometry": 0.6790710260936432,
+        "mean_boundary_violations_returned_geometry": 5.922388059701492,
+        "mean_grouping_violations_returned_geometry": 2.925373134328358,
+        "mean_mib_violations_returned_geometry": 4.161194029850746,
+        "returned_geometry_metric_count": 335,
+        "total_solve_seconds": 24.565000000147847,
+        "total_worker_wall_seconds": 0,
+        "max_peak_worker_memory_bytes": null,
+        "quality_scope": "all returned geometries, including infeasible ones; errors have undefined gaps and cost 10"
+      },
+      "medium_50_89": {
+        "case_count": 310,
+        "feasible_count": 310,
+        "feasible_rate": 1.0,
+        "execution_error_count": 0,
+        "neutral_runtime_mean_cost_all_cases": 3.87824213840834,
+        "neutral_runtime_weighted_cost_all_cases": 3.701455826694282,
+        "mean_hpwl_gap_returned_geometry": 0.5137622062384954,
+        "mean_area_gap_returned_geometry": 0.803992355070541,
+        "mean_boundary_violations_returned_geometry": 11.064516129032258,
+        "mean_grouping_violations_returned_geometry": 4.754838709677419,
+        "mean_mib_violations_returned_geometry": 3.8129032258064517,
+        "returned_geometry_metric_count": 310,
+        "total_solve_seconds": 88.09700000009616,
+        "total_worker_wall_seconds": 0,
+        "max_peak_worker_memory_bytes": null,
+        "quality_scope": "all returned geometries, including infeasible ones; errors have undefined gaps and cost 10"
+      },
+      "large_90_plus": {
+        "case_count": 312,
+        "feasible_count": 312,
+        "feasible_rate": 1.0,
+        "execution_error_count": 0,
+        "neutral_runtime_mean_cost_all_cases": 3.848518121275936,
+        "neutral_runtime_weighted_cost_all_cases": 3.8684295907651114,
+        "mean_hpwl_gap_returned_geometry": 0.4502125331759747,
+        "mean_area_gap_returned_geometry": 0.9333043247799865,
+        "mean_boundary_violations_returned_geometry": 15.032051282051283,
+        "mean_grouping_violations_returned_geometry": 6.272435897435898,
+        "mean_mib_violations_returned_geometry": 3.9166666666666665,
+        "returned_geometry_metric_count": 312,
+        "total_solve_seconds": 197.56899999987218,
+        "total_worker_wall_seconds": 0,
+        "max_peak_worker_memory_bytes": null,
+        "quality_scope": "all returned geometries, including infeasible ones; errors have undefined gaps and cost 10"
+      }
+    },
+    "checkpoint_hash_verified": true,
+    "training_validation_samples": [
+      {
+        "phase": "validation",
+        "step": 0,
+        "epoch_fraction": 0.0,
+        "train_monitor": {
+          "sample_count": 500,
+          "requested_count": 500,
+          "complete": true,
+          "mse": 0.3518078269660473,
+          "center_mse": 0.3783005986213684,
+          "log_ratio_mse": 0.2927111238539219,
+          "aggregation": "mean of per-layout masked MSE, identical to training objective"
+        },
+        "train_monitor_seen_only": null,
+        "train_monitor_seen_count": 0,
+        "dev_monitor": {
+          "sample_count": 500,
+          "requested_count": 500,
+          "complete": true,
+          "mse": 0.352579501748085,
+          "center_mse": 0.3806304894089699,
+          "log_ratio_mse": 0.28993778759241107,
+          "aggregation": "mean of per-layout masked MSE, identical to training objective"
+        },
+        "learning_rate": 0.001,
+        "early": {
+          "reference": 0.352579501748085,
+          "bad_checks": 0,
+          "lr_reductions": 0,
+          "min_delta_relative": 0.002,
+          "best_metric": 0.352579501748085,
+          "best_step": 0,
+          "best_epoch": 0.0,
+          "validation_checks": 1
+        },
+        "seconds": 18.8985234000138,
+        "accumulated_seconds": 135.7870203999919
+      },
+      {
+        "phase": "validation",
+        "step": 250,
+        "epoch_fraction": 0.2,
+        "train_monitor": {
+          "sample_count": 500,
+          "requested_count": 500,
+          "complete": true,
+          "mse": 0.09128228850662708,
+          "center_mse": 0.011175664391834289,
+          "log_ratio_mse": 0.2698186934739351,
+          "aggregation": "mean of per-layout masked MSE, identical to training objective"
+        },
+        "train_monitor_seen_only": {
+          "sample_count": 94,
+          "requested_count": 94,
+          "complete": true,
+          "mse": 0.0915580848033758,
+          "center_mse": 0.011578061766526166,
+          "log_ratio_mse": 0.27006052640524314,
+          "aggregation": "mean of per-layout masked MSE, identical to training objective"
+        },
+        "train_monitor_seen_count": 94,
+        "dev_monitor": {
+          "sample_count": 500,
+          "requested_count": 500,
+          "complete": true,
+          "mse": 0.08927808913588524,
+          "center_mse": 0.010530821888707579,
+          "log_ratio_mse": 0.2644190439283848,
+          "aggregation": "mean of per-layout masked MSE, identical to training objective"
+        },
+        "learning_rate": 0.001,
+        "early": {
+          "reference": 0.08927808913588524,
+          "bad_checks": 0,
+          "lr_reductions": 0,
+          "min_delta_relative": 0.002,
+          "best_metric": 0.08927808913588524,
+          "best_step": 250,
+          "best_epoch": 0.2,
+          "validation_checks": 2
+        },
+        "seconds": 3.374642799986759,
+        "accumulated_seconds": 184.67580759999692
+      },
+      {
+        "phase": "validation",
+        "step": 1000,
+        "epoch_fraction": 0.8,
+        "train_monitor": {
+          "sample_count": 500,
+          "requested_count": 500,
+          "complete": true,
+          "mse": 0.08476577875763178,
+          "center_mse": 0.005733744312077761,
+          "log_ratio_mse": 0.2609269444942474,
+          "aggregation": "mean of per-layout masked MSE, identical to training objective"
+        },
+        "train_monitor_seen_only": {
+          "sample_count": 402,
+          "requested_count": 402,
+          "complete": true,
+          "mse": 0.0847225184390201,
+          "center_mse": 0.005669831416734138,
+          "log_ratio_mse": 0.2610512216441074,
+          "aggregation": "mean of per-layout masked MSE, identical to training objective"
+        },
+        "train_monitor_seen_count": 402,
+        "dev_monitor": {
+          "sample_count": 500,
+          "requested_count": 500,
+          "complete": true,
+          "mse": 0.08293196888267994,
+          "center_mse": 0.0054295450847130266,
+          "log_ratio_mse": 0.2553578718602657,
+          "aggregation": "mean of per-layout masked MSE, identical to training objective"
+        },
+        "learning_rate": 0.001,
+        "early": {
+          "reference": 0.08293196888267994,
+          "bad_checks": 0,
+          "lr_reductions": 0,
+          "min_delta_relative": 0.002,
+          "best_metric": 0.08293196888267994,
+          "best_step": 1000,
+          "best_epoch": 0.8,
+          "validation_checks": 5
+        },
+        "seconds": 3.967923600022914,
+        "accumulated_seconds": 326.1056311999855
+      },
+      {
+        "phase": "validation",
+        "step": 2250,
+        "epoch_fraction": 1.8,
+        "train_monitor": {
+          "sample_count": 500,
+          "requested_count": 500,
+          "complete": true,
+          "mse": 0.08119010144472122,
+          "center_mse": 0.004844033590052277,
+          "log_ratio_mse": 0.25137069256603717,
+          "aggregation": "mean of per-layout masked MSE, identical to training objective"
+        },
+        "train_monitor_seen_only": {
+          "sample_count": 500,
+          "requested_count": 500,
+          "complete": true,
+          "mse": 0.08119010144472122,
+          "center_mse": 0.004844033590052277,
+          "log_ratio_mse": 0.25137069256603717,
+          "aggregation": "mean of per-layout masked MSE, identical to training objective"
+        },
+        "train_monitor_seen_count": 500,
+        "dev_monitor": {
+          "sample_count": 500,
+          "requested_count": 500,
+          "complete": true,
+          "mse": 0.07983824909478426,
+          "center_mse": 0.004602065975312143,
+          "log_ratio_mse": 0.24723124384880066,
+          "aggregation": "mean of per-layout masked MSE, identical to training objective"
+        },
+        "learning_rate": 0.001,
+        "early": {
+          "reference": 0.07983824909478426,
+          "bad_checks": 0,
+          "lr_reductions": 0,
+          "min_delta_relative": 0.002,
+          "best_metric": 0.07983824909478426,
+          "best_step": 2250,
+          "best_epoch": 1.8,
+          "validation_checks": 10
+        },
+        "seconds": 4.270646899996791,
+        "accumulated_seconds": 594.8343083999935
+      },
+      {
+        "phase": "validation",
+        "step": 3500,
+        "epoch_fraction": 2.8,
+        "train_monitor": {
+          "sample_count": 500,
+          "requested_count": 500,
+          "complete": true,
+          "mse": 0.07907261187210679,
+          "center_mse": 0.004591934208059684,
+          "log_ratio_mse": 0.2450836700797081,
+          "aggregation": "mean of per-layout masked MSE, identical to training objective"
+        },
+        "train_monitor_seen_only": {
+          "sample_count": 500,
+          "requested_count": 500,
+          "complete": true,
+          "mse": 0.07907261187210679,
+          "center_mse": 0.004591934208059684,
+          "log_ratio_mse": 0.2450836700797081,
+          "aggregation": "mean of per-layout masked MSE, identical to training objective"
+        },
+        "train_monitor_seen_count": 500,
+        "dev_monitor": {
+          "sample_count": 500,
+          "requested_count": 500,
+          "complete": true,
+          "mse": 0.07828669799864292,
+          "center_mse": 0.004468954502372071,
+          "log_ratio_mse": 0.2425052535533905,
+          "aggregation": "mean of per-layout masked MSE, identical to training objective"
+        },
+        "learning_rate": 0.001,
+        "early": {
+          "reference": 0.07828669799864292,
+          "bad_checks": 0,
+          "lr_reductions": 0,
+          "min_delta_relative": 0.002,
+          "best_metric": 0.07828669799864292,
+          "best_step": 3500,
+          "best_epoch": 2.8,
+          "validation_checks": 15
+        },
+        "seconds": 4.452529400005005,
+        "accumulated_seconds": 855.1484945999982
+      },
+      {
+        "phase": "validation",
+        "step": 4750,
+        "epoch_fraction": 3.8,
+        "train_monitor": {
+          "sample_count": 500,
+          "requested_count": 500,
+          "complete": true,
+          "mse": 0.07698534568399192,
+          "center_mse": 0.004061435925192199,
+          "log_ratio_mse": 0.23953527469933034,
+          "aggregation": "mean of per-layout masked MSE, identical to training objective"
+        },
+        "train_monitor_seen_only": {
+          "sample_count": 500,
+          "requested_count": 500,
+          "complete": true,
+          "mse": 0.07698534568399192,
+          "center_mse": 0.004061435925192199,
+          "log_ratio_mse": 0.23953527469933034,
+          "aggregation": "mean of per-layout masked MSE, identical to training objective"
+        },
+        "train_monitor_seen_count": 500,
+        "dev_monitor": {
+          "sample_count": 500,
+          "requested_count": 500,
+          "complete": true,
+          "mse": 0.0763224561214447,
+          "center_mse": 0.003914564672741107,
+          "log_ratio_mse": 0.23740040288865566,
+          "aggregation": "mean of per-layout masked MSE, identical to training objective"
+        },
+        "learning_rate": 0.001,
+        "early": {
+          "reference": 0.0763224561214447,
+          "bad_checks": 0,
+          "lr_reductions": 0,
+          "min_delta_relative": 0.002,
+          "best_metric": 0.0763224561214447,
+          "best_step": 4750,
+          "best_epoch": 3.8,
+          "validation_checks": 20
+        },
+        "seconds": 4.235993300011614,
+        "accumulated_seconds": 1102.233601999993
+      },
+      {
+        "phase": "validation",
+        "step": 6000,
+        "epoch_fraction": 4.8,
+        "train_monitor": {
+          "sample_count": 500,
+          "requested_count": 500,
+          "complete": true,
+          "mse": 0.07525031580030918,
+          "center_mse": 0.003674612835631706,
+          "log_ratio_mse": 0.23478159247338773,
+          "aggregation": "mean of per-layout masked MSE, identical to training objective"
+        },
+        "train_monitor_seen_only": {
+          "sample_count": 500,
+          "requested_count": 500,
+          "complete": true,
+          "mse": 0.07525031580030918,
+          "center_mse": 0.003674612835631706,
+          "log_ratio_mse": 0.23478159247338773,
+          "aggregation": "mean of per-layout masked MSE, identical to training objective"
+        },
+        "train_monitor_seen_count": 500,
+        "dev_monitor": {
+          "sample_count": 500,
+          "requested_count": 500,
+          "complete": true,
+          "mse": 0.07508730740845203,
+          "center_mse": 0.00352396237233188,
+          "log_ratio_mse": 0.2342696754038334,
+          "aggregation": "mean of per-layout masked MSE, identical to training objective"
+        },
+        "learning_rate": 0.0005,
+        "early": {
+          "reference": 0.07517587263509631,
+          "bad_checks": 1,
+          "lr_reductions": 1,
+          "min_delta_relative": 0.002,
+          "best_metric": 0.07508730740845203,
+          "best_step": 6000,
+          "best_epoch": 4.8,
+          "validation_checks": 25
+        },
+        "seconds": 4.263286900008097,
+        "accumulated_seconds": 1341.8225848999864
+      },
+      {
+        "phase": "validation",
+        "step": 7250,
+        "epoch_fraction": 5.8,
+        "train_monitor": {
+          "sample_count": 500,
+          "requested_count": 500,
+          "complete": true,
+          "mse": 0.07456254178285598,
+          "center_mse": 0.003588369277189486,
+          "log_ratio_mse": 0.232748256072402,
+          "aggregation": "mean of per-layout masked MSE, identical to training objective"
+        },
+        "train_monitor_seen_only": {
+          "sample_count": 500,
+          "requested_count": 500,
+          "complete": true,
+          "mse": 0.07456254178285598,
+          "center_mse": 0.003588369277189486,
+          "log_ratio_mse": 0.232748256072402,
+          "aggregation": "mean of per-layout masked MSE, identical to training objective"
+        },
+        "train_monitor_seen_count": 500,
+        "dev_monitor": {
+          "sample_count": 500,
+          "requested_count": 500,
+          "complete": true,
+          "mse": 0.07428781043738127,
+          "center_mse": 0.0034203259396599606,
+          "log_ratio_mse": 0.23190586042404174,
+          "aggregation": "mean of per-layout masked MSE, identical to training objective"
+        },
+        "learning_rate": 0.0005,
+        "early": {
+          "reference": 0.07443081371858716,
+          "bad_checks": 1,
+          "lr_reductions": 1,
+          "min_delta_relative": 0.002,
+          "best_metric": 0.07428781043738127,
+          "best_step": 7250,
+          "best_epoch": 5.8,
+          "validation_checks": 30
+        },
+        "seconds": 4.314274999982445,
+        "accumulated_seconds": 1582.6733733
+      }
+    ]
+  },
+  "frozen_checkpoint_sha256": "dca8ddc179308a30623edc8b8f6536a1c254b1452d3b63216f0a3846f7d5fe76",
+  "test_used_for_tuning": false,
+  "official_contest_score": null,
+  "last_periodic_progress": {
+    "phase": "local_test",
+    "processed": 950,
+    "total": 2500,
+    "last_case_Q": 3.8486199640041066,
+    "wall_seconds": 507.51600000000326,
+    "test_error_count": 0,
+    "last_solve_seconds": 0.125
+  },
+  "stop_note": "Process interrupted on request; all complete durable JSONL rows retained, no further inference. Directory name preserves original2500 intent.",
+  "exposure_note": "Completed test rows and possibly in-flight shard were accessed; full2500 completion is not claimed. Test results never select weights or solver settings.",
+  "source_note": "Evaluation source is frozen in source_snapshot.zip. Reporting helper plot_training.py was edited only after termination."
+}

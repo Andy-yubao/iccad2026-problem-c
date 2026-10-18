@@ -1,0 +1,182 @@
+{
+  "source": "Saved cases.jsonl only; no dataset or checkpoint reads; no inference.",
+  "cases_sha256": "a690229d1bdbb351a8e3d57ce8c6cd6045b6a350922bf913dbb020fca12f8481",
+  "run_status": "completed",
+  "fixed_rule": "Dev workers 0,24,49,74,99; one case per worker. Lexical case_id tie-break if duplicates.",
+  "fixed": [
+    {
+      "panel": "dev",
+      "case_id": "dev:worker_0/layouts_1344.th:82",
+      "source": {
+        "split": "dev",
+        "workset": "dev_quality",
+        "shard": "worker_0/layouts_1344.th",
+        "sample_index": 82,
+        "paths": [
+          "datasets/floorset_lite/worker_0/layouts_1344.th"
+        ],
+        "workset_sha256": "6b19332acce3102792310df8ff124a764fb2f34a08e3f0ae24c44f8f3f9f9277"
+      },
+      "worker": 0,
+      "translation_radius_lb": 0.4649382091153275
+    },
+    {
+      "panel": "dev",
+      "case_id": "dev:worker_24/layouts_9632.th:47",
+      "source": {
+        "split": "dev",
+        "workset": "dev_quality",
+        "shard": "worker_24/layouts_9632.th",
+        "sample_index": 47,
+        "paths": [
+          "datasets/floorset_lite/worker_24/layouts_9632.th"
+        ],
+        "workset_sha256": "6b19332acce3102792310df8ff124a764fb2f34a08e3f0ae24c44f8f3f9f9277"
+      },
+      "worker": 24,
+      "translation_radius_lb": 0.5660120519460835
+    },
+    {
+      "panel": "dev",
+      "case_id": "dev:worker_49/layouts_3696.th:85",
+      "source": {
+        "split": "dev",
+        "workset": "dev_quality",
+        "shard": "worker_49/layouts_3696.th",
+        "sample_index": 85,
+        "paths": [
+          "datasets/floorset_lite/worker_49/layouts_3696.th"
+        ],
+        "workset_sha256": "6b19332acce3102792310df8ff124a764fb2f34a08e3f0ae24c44f8f3f9f9277"
+      },
+      "worker": 49,
+      "translation_radius_lb": 0.9614556549879717
+    },
+    {
+      "panel": "dev",
+      "case_id": "dev:worker_74/layouts_7168.th:65",
+      "source": {
+        "split": "dev",
+        "workset": "dev_quality",
+        "shard": "worker_74/layouts_7168.th",
+        "sample_index": 65,
+        "paths": [
+          "datasets/floorset_lite/worker_74/layouts_7168.th"
+        ],
+        "workset_sha256": "6b19332acce3102792310df8ff124a764fb2f34a08e3f0ae24c44f8f3f9f9277"
+      },
+      "worker": 74,
+      "translation_radius_lb": 0.7727793950527646
+    },
+    {
+      "panel": "dev",
+      "case_id": "dev:worker_99/layouts_5152.th:26",
+      "source": {
+        "split": "dev",
+        "workset": "dev_quality",
+        "shard": "worker_99/layouts_5152.th",
+        "sample_index": 26,
+        "paths": [
+          "datasets/floorset_lite/worker_99/layouts_5152.th"
+        ],
+        "workset_sha256": "6b19332acce3102792310df8ff124a764fb2f34a08e3f0ae24c44f8f3f9f9277"
+      },
+      "worker": 99,
+      "translation_radius_lb": 0.5114567934057933
+    }
+  ],
+  "missing_fixed_workers": [],
+  "rank_rule": "Dev only, finite deterministic translation_radius_lb ascending, case_id tie-break; ranks 0, floor((n-1)/2), n-1. These are diagnostic extrema, not representative estimates.",
+  "ranked_dev_count": 100,
+  "translation_lb_rank_examples": [
+    {
+      "panel": "dev",
+      "case_id": "dev:worker_96/layouts_6496.th:32",
+      "source": {
+        "split": "dev",
+        "workset": "dev_quality",
+        "shard": "worker_96/layouts_6496.th",
+        "sample_index": 32,
+        "paths": [
+          "datasets/floorset_lite/worker_96/layouts_6496.th"
+        ],
+        "workset_sha256": "6b19332acce3102792310df8ff124a764fb2f34a08e3f0ae24c44f8f3f9f9277"
+      },
+      "worker": 96,
+      "translation_radius_lb": 0.3104322949365146
+    },
+    {
+      "panel": "dev",
+      "case_id": "dev:worker_95/layouts_336.th:36",
+      "source": {
+        "split": "dev",
+        "workset": "dev_quality",
+        "shard": "worker_95/layouts_336.th",
+        "sample_index": 36,
+        "paths": [
+          "datasets/floorset_lite/worker_95/layouts_336.th"
+        ],
+        "workset_sha256": "6b19332acce3102792310df8ff124a764fb2f34a08e3f0ae24c44f8f3f9f9277"
+      },
+      "worker": 95,
+      "translation_radius_lb": 0.5098527671209259
+    },
+    {
+      "panel": "dev",
+      "case_id": "dev:worker_84/layouts_7168.th:2",
+      "source": {
+        "split": "dev",
+        "workset": "dev_quality",
+        "shard": "worker_84/layouts_7168.th",
+        "sample_index": 2,
+        "paths": [
+          "datasets/floorset_lite/worker_84/layouts_7168.th"
+        ],
+        "workset_sha256": "6b19332acce3102792310df8ff124a764fb2f34a08e3f0ae24c44f8f3f9f9277"
+      },
+      "worker": 84,
+      "translation_radius_lb": 1.3601237539797209
+    }
+  ],
+  "ecdf_available_layout_counts": {
+    "Train / model": {
+      "pair_relative_local_mean": 100,
+      "center_error_local_mean": 100,
+      "pair_overlap_area_fraction": 100,
+      "translation_radius_lb": 100,
+      "direction_any_separation_retained_fraction": 100,
+      "shape_log_ratio_rmse_free": 100
+    },
+    "Dev / model": {
+      "pair_relative_local_mean": 100,
+      "center_error_local_mean": 100,
+      "pair_overlap_area_fraction": 100,
+      "translation_radius_lb": 100,
+      "direction_any_separation_retained_fraction": 100,
+      "shape_log_ratio_rmse_free": 100
+    },
+    "Train / heuristic": {
+      "pair_relative_local_mean": 100,
+      "center_error_local_mean": 100,
+      "pair_overlap_area_fraction": 100,
+      "translation_radius_lb": 100,
+      "direction_any_separation_retained_fraction": 100,
+      "shape_log_ratio_rmse_free": 100
+    },
+    "Dev / heuristic": {
+      "pair_relative_local_mean": 100,
+      "center_error_local_mean": 100,
+      "pair_overlap_area_fraction": 100,
+      "translation_radius_lb": 100,
+      "direction_any_separation_retained_fraction": 100,
+      "shape_log_ratio_rmse_free": 100
+    }
+  },
+  "plot_overlap_tolerance": "Both intersection dimensions > 1e-9 * combined reference/model span; visualization only, not hard feasibility.",
+  "caveats": [
+    "Raw decoded proposals, no postprocessing.",
+    "Translation lower bound is necessary only for fixed predicted shapes; it is not a repair solver.",
+    "Undefined metrics omitted from their own ECDF; see per-metric counts.",
+    "Illegal-layout HPWL/bbox cannot be interpreted as feasible solution performance."
+  ]
+}

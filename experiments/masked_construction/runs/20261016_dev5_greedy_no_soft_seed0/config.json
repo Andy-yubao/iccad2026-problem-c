@@ -1,0 +1,24 @@
+{
+  "command": "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe experiments/masked_construction/run.py --output experiments/masked_construction/runs/20261016_dev5_greedy_no_soft_seed0",
+  "utc": "2026-10-16T11:42:54.971260+00:00",
+  "seed": 0,
+  "threads": 1,
+  "device": "cpu",
+  "seconds_per_variant": 7.5,
+  "aggregate_solver_budget_seconds": 90,
+  "paths": {
+    "training_root": "E:\\project\\ICCAD\\2026\\problemC\\datasets\\floorset_lite",
+    "public_validation_root": "E:\\project\\ICCAD\\2026\\problemC\\datasets\\LiteTensorDataTest"
+  },
+  "python": "3.10.22 | packaged by conda-forge | (main, Oct  6 2026, 22:57:13) [MSC v.1944 64 bit (AMD64)]",
+  "torch": "2.7.1+cu128",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "source_sha256": {
+    "experiments/masked_construction/construction.py": "1323c0156e7fd40662800c6c85cd1c3a5c8374281f4e83d7238b834caefe87a5",
+    "experiments/masked_construction/counterexamples.py": "2f13705235a8c07eeeb2942200cfba9eaa338d67d9ddb7a773d7df59874b408b",
+    "experiments/masked_construction/run.py": "cd6a783464f9f99d82da27f3017218c21b1aba5ce621b547fcc8b634c6c56953"
+  },
+  "split_sha256": "a1f23edae03194c1155d260415482d892e4cb5ad66170abc93af04aafc8cefbd",
+  "stage_note": "raw is per-step unconstrained winner against final prefix; continuous is identity; final masks each placement",
+  "quality": "official neutral runtime Q; actual solver time separate; not contest score"
+}

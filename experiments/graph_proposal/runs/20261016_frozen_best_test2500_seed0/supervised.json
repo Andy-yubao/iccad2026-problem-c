@@ -1,0 +1,30 @@
+{
+  "train": {
+    "sample_count": 20000,
+    "requested_count": 20000,
+    "complete": true,
+    "mse": 0.07487087662806735,
+    "center_mse": 0.0035458041902311378,
+    "log_ratio_mse": 0.23388887894041835,
+    "aggregation": "mean per-layout masked MSE"
+  },
+  "dev": {
+    "sample_count": 2500,
+    "requested_count": 2500,
+    "complete": true,
+    "mse": 0.07507702635973693,
+    "center_mse": 0.0033566820433363316,
+    "log_ratio_mse": 0.23462265514731406,
+    "aggregation": "mean per-layout masked MSE"
+  },
+  "local_test": {
+    "sample_count": 957,
+    "requested_count": 2500,
+    "complete": false,
+    "mse": 0.07598616301725339,
+    "center_mse": 0.0037432740061824153,
+    "log_ratio_mse": 0.2358397694699692,
+    "aggregation": "mean per-layout masked MSE",
+    "scope": "all durably completed cases before user stop; ordered prefix, not representative full workset"
+  }
+}

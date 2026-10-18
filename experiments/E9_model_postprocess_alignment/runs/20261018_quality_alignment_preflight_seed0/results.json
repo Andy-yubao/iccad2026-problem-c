@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "fixture_only": true,
+  "real_dev_cases": 1,
+  "synthetic_cases": 5,
+  "test_payload_reads": 0,
+  "gradient_losses": {
+    "geometry_control": 2.5554637908935547,
+    "quality_aligned": 2.5748393535614014
+  },
+  "max_wire_error": 2.8312206268310547e-06,
+  "label_isolation": true,
+  "resume": {
+    "geometry_control": {
+      "model_exactly_equal": true,
+      "steps": 6,
+      "resume_at_step": 3,
+      "scheduler_equal": true,
+      "seen_equal": true,
+      "epoch": 2,
+      "cursor": 5
+    },
+    "quality_aligned": {
+      "model_exactly_equal": true,
+      "steps": 6,
+      "resume_at_step": 3,
+      "scheduler_equal": true,
+      "seen_equal": true,
+      "epoch": 2,
+      "cursor": 5
+    }
+  },
+  "retained_model_draft_max_difference": 0.0,
+  "frozen_E8_Q_match": 1.0797423158655346,
+  "synthetic_checkpoint_rejected_for_research": true,
+  "wall_seconds": 46.07900000002701
+}

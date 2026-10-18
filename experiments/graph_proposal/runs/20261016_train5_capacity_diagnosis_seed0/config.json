@@ -1,0 +1,100 @@
+{
+  "command": [
+    "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+    "E:\\project\\ICCAD\\2026\\problemC\\experiments\\graph_proposal\\diagnose_capacity.py",
+    "--checkpoint",
+    "experiments/graph_proposal/runs/20261016_deterministic_workset_v2_seed0/checkpoints/best.pt",
+    "--output",
+    "experiments/graph_proposal/runs/20261016_train5_capacity_diagnosis_seed0",
+    "--steps",
+    "1500",
+    "--probe-seconds",
+    "150"
+  ],
+  "created_utc": "2026-10-16T15:17:54.917494+00:00",
+  "checkpoint": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\graph_proposal\\runs\\20261016_deterministic_workset_v2_seed0\\checkpoints\\best.pt",
+  "checkpoint_sha256": "dca8ddc179308a30623edc8b8f6536a1c254b1452d3b63216f0a3846f7d5fe76",
+  "workset_sha256": "6b19332acce3102792310df8ff124a764fb2f34a08e3f0ae24c44f8f3f9f9277",
+  "data_paths": {
+    "training_root": "E:\\project\\ICCAD\\2026\\problemC\\datasets\\floorset_lite",
+    "public_validation_root": "E:\\project\\ICCAD\\2026\\problemC\\datasets\\LiteTensorDataTest"
+  },
+  "selection": "firsttrain member in numeric workers0,24,49,74,99, chosen before payloads/scores",
+  "members": [
+    [
+      "worker_0/layouts_5040.th",
+      0
+    ],
+    [
+      "worker_24/layouts_4144.th",
+      0
+    ],
+    [
+      "worker_49/layouts_336.th",
+      0
+    ],
+    [
+      "worker_74/layouts_2800.th",
+      0
+    ],
+    [
+      "worker_99/layouts_4256.th",
+      2
+    ]
+  ],
+  "test_payload_reads": 0,
+  "budget": {
+    "global_wall_seconds": 600,
+    "probe_seconds_each": 150.0,
+    "steps_each": 1500,
+    "cases": 5,
+    "geometry_seconds_per_variant": 15
+  },
+  "probes": {
+    "small": {
+      "width": 64,
+      "layers": 3
+    },
+    "large": {
+      "width": 128,
+      "layers": 6
+    }
+  },
+  "probe_controls": "fresh seed0 each; all5cases eachupdate; AdamW.001/decay.0001/clip1; trainMSE check100; plateauLR.5 patience2 min1e-5; stoptrainMSE<1e-5 or8badchecks after500steps",
+  "oracle_note": "Train labels deliberately used for labelled diagnostic variants only; no deployable input-only performance claim.",
+  "quality_note": "Official neutralruntime Q, runtime=median_runtime=1; not formal contest score.",
+  "torch": "2.7.1+cu128",
+  "gpu": "NVIDIA GeForce RTX 5080 Laptop GPU",
+  "inference_device": "cpu",
+  "threads": 1,
+  "git_head": "8d9ab142f5f2799d03f1f0ef4837cdf7948a95ef",
+  "source_sha256": {
+    "datasets/__init__.py": "03c36f364366be6c8a5091d6bd3dbec0788d7871747acdeac5fa89d4974cec21",
+    "datasets/cases.py": "1fd51addaaae38164c22f1946712665beebac700054db4bb07ed4f9d44e0b168",
+    "datasets/paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+    "datasets/worksets.py": "2ff073391b7d3456b6a0da93bf9cc54794000e02f5bef78e487c7015cb2cd76a",
+    "experiments/graph_proposal/check.py": "64e13048ed3e6454e6236136b330f66ff2a880814493fbcce6f07d4f10e3bfe9",
+    "experiments/graph_proposal/check_io.py": "58e486837b2055749e8bb0cf1c3f7cc9256869479b7cf633f8797c9e343bc062",
+    "experiments/graph_proposal/data.py": "fce1995d64c27b482b1bf0b641554871467f967f6bb688018c51989a41e0a80e",
+    "experiments/graph_proposal/diagnose_capacity.py": "9a2b6d31c2a6455169eef0ed2ba053b448611413b8010784989d50d7b4f591dd",
+    "experiments/graph_proposal/evaluate_frozen.py": "5341a511e041ce10c5340aabeaca85e3595d9c3aff546f1e5d503ae54f7976a1",
+    "experiments/graph_proposal/evaluate_workset.py": "e5b36efba2763019348a1e5f91fb1fa04959075664b28023140751f6b7e2ed8d",
+    "experiments/graph_proposal/feasible.py": "9cfe70894d80fbe54ccaa1c3de60ef4ab111ac9b4472286d1ae6a0c5a1fdc756",
+    "experiments/graph_proposal/model.py": "599788ce8ab727da15ae843281cb54209572e76beac2c107996178097437ab21",
+    "experiments/graph_proposal/packing.py": "3c0500b7fee120807e6bd3fa8e9f115e476782af1a3e7620859c6651a089ef30",
+    "experiments/graph_proposal/pipeline.py": "9caa6af344560b66af940b1f9ebb81634f750cd1989b2d24db454b7f60689471",
+    "experiments/graph_proposal/plot_training.py": "0bb5856a46fb34f58791c33cad30ea3adb8d294c14d22311f8fd83e10a56c0fe",
+    "experiments/graph_proposal/run.py": "517ac1c6a0dba0cf48febb5f893bb0620f1c62e13aabc8826cf366ef54601804",
+    "experiments/graph_proposal/summarize.py": "98c2fd6f6d58cdfaefa0c7db3f0ea46c97f8b84e5f7bcb24611ecba7a0bdd68e",
+    "experiments/graph_proposal/train.py": "cbcbeed0306a9dc10d3579b9e533096a51151c8dd60c7f20238a702fbeac8912",
+    "experiments/graph_proposal/train_supervised.py": "63dc700e766365c34d92d5eab51c0a287d47eb2d72f733af7acc64ba11d69d45",
+    "protocol/paths.json": "7a28cd42de0f10809500c43c48836576361e67a72e723f7b32a404186df9b419",
+    "protocol/split_v1.json": "a1f23edae03194c1155d260415482d892e4cb5ad66170abc93af04aafc8cefbd",
+    "protocol/workset_v2.json": "b520f75d67d12a00aa4f52953e1b9f3cf4ad1c55f1af67206b4c3bc75e9a5bb3",
+    "scoring/__init__.py": "933bf2be947e20bae164511f26afaa84c2f331d0dbdebc417d235db8358a9247",
+    "scoring/checks.py": "738f6b57e20dce58516f3f10d83689f8df273a84a02b2dce99c6ccc1f904763a",
+    "scoring/evaluation.py": "356e0d1c788c6f25154b33fb1c2455388317d2cc0dd96ca50d7357c58612c611",
+    "scoring/official.py": "478fbc228a56ec4b336b5d8687a44b22b749f30aae09372f57c08e7124270e03",
+    "third_party/FloorSet/iccad2026contest/iccad2026_evaluate.py": "64db37865b42baf11add62bdbf035690dca086cd4be7b5b4e58db756f20d8498"
+  }
+}

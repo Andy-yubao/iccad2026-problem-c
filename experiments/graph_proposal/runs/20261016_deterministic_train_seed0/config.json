@@ -1,0 +1,78 @@
+{
+  "identity": {
+    "source_sha256": {
+      "datasets/__init__.py": "03c36f364366be6c8a5091d6bd3dbec0788d7871747acdeac5fa89d4974cec21",
+      "datasets/cases.py": "1fd51addaaae38164c22f1946712665beebac700054db4bb07ed4f9d44e0b168",
+      "datasets/paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+      "experiments/graph_proposal/data.py": "fce1995d64c27b482b1bf0b641554871467f967f6bb688018c51989a41e0a80e",
+      "experiments/graph_proposal/model.py": "599788ce8ab727da15ae843281cb54209572e76beac2c107996178097437ab21",
+      "experiments/graph_proposal/train.py": "9e291d6969a42c996e969e8896145054fad8b2724d1fe58269166fbe6ba06e23",
+      "scoring/__init__.py": "933bf2be947e20bae164511f26afaa84c2f331d0dbdebc417d235db8358a9247",
+      "scoring/checks.py": "738f6b57e20dce58516f3f10d83689f8df273a84a02b2dce99c6ccc1f904763a",
+      "scoring/evaluation.py": "356e0d1c788c6f25154b33fb1c2455388317d2cc0dd96ca50d7357c58612c611",
+      "scoring/official.py": "478fbc228a56ec4b336b5d8687a44b22b749f30aae09372f57c08e7124270e03",
+      "third_party/FloorSet/iccad2026contest/iccad2026_evaluate.py": "64db37865b42baf11add62bdbf035690dca086cd4be7b5b4e58db756f20d8498",
+      "third_party/FloorSet/iccad2026contest/optimizer_template.py": "34f42cf5e38d459d44ae42cdab42efa4cd285f5aa1a81d6b1811a26db6e9131c",
+      "third_party/FloorSet/iccad2026contest/training_example.py": "f79a325de9454026c26b9c0278c4610fd79df99e56f8ef3f3a330080fdd34266"
+    },
+    "members_sha256": "17b60194da39544eb388d4dd593cfc156955026e6803c3e8192ae72dcc6dc0e4",
+    "split_sha256": "a1f23edae03194c1155d260415482d892e4cb5ad66170abc93af04aafc8cefbd",
+    "resolved_data_paths": {
+      "training_root": "E:\\project\\ICCAD\\2026\\problemC\\datasets\\floorset_lite",
+      "public_validation_root": "E:\\project\\ICCAD\\2026\\problemC\\datasets\\LiteTensorDataTest"
+    },
+    "data_stat_sha256": "32305076017b6c3ef81d27e1643fb2096bde18aba2dfc4688f043ed319df436a",
+    "seed": 0,
+    "batch_size": 4,
+    "kind": "deterministic",
+    "device": "cuda",
+    "threads": 1,
+    "torch_version": "2.7.1+cu128"
+  },
+  "model": {
+    "kind": "deterministic",
+    "width": 64,
+    "layers": 3
+  },
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0001
+  },
+  "manifest": "experiments\\graph_proposal\\train_members.json",
+  "sample_count": 19936,
+  "python": "3.10.22",
+  "git_revision": "8d9ab142f5f2799d03f1f0ef4837cdf7948a95ef",
+  "git_status": " M .gitignore\n M README.md\n M experiments/README.md\n M references/README.md\n?? docs/aim.md\n?? experiments/conflict_local_repair/\n?? experiments/graph_proposal/\n?? experiments/masked_construction/\n?? experiments/short_term_plan.md\n?? experiments/topology_geometry/\n?? references/papers/ChiPFormer_ICML2023.pdf\n?? references/papers/ChipDiffusion_ICML2025.pdf\n?? references/papers/DC3_2104.12225.pdf\n?? references/papers/DiffPlace_2510.15897v2.pdf\n?? references/papers/FlowPlace_2604.23658v2.pdf\n?? references/papers/LearnToFloorplan_ICCD2020.pdf\n?? references/papers/MaskPlace_NeurIPS2022.pdf\n?? references/papers/PARSAC_2405.05495v3.pdf\n?? references/papers/README.md\n?? references/papers/RulePlanner_2601.22476v2.pdf\n?? references/papers/Trinity_2610.04957v1.pdf\n?? references/papers/literature_review.zh-CN.md\n?? references/papers/manifest.json\n?? scripts/fetch_literature.py\n",
+  "source_snapshot": {
+    "path": "source_snapshot.zip",
+    "sha256": "1d3e631b4762d021de10d08a6b027894d6ac595f2f5e22bdd6385487bddc2b91"
+  },
+  "device_name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+  "data_identity_method": "selected shard path/size/mtime_ns; no repeated full dataset content hash",
+  "invocations": [
+    {
+      "command": [
+        "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+        "E:\\project\\ICCAD\\2026\\problemC\\experiments\\graph_proposal\\train.py",
+        "--kind",
+        "deterministic",
+        "--run-dir",
+        "experiments/graph_proposal/runs/20261016_deterministic_train_seed0",
+        "--budget-seconds",
+        "3600",
+        "--batch-size",
+        "4",
+        "--seed",
+        "0",
+        "--device",
+        "cuda",
+        "--threads",
+        "1"
+      ],
+      "requested_budget_seconds": 3600.0,
+      "prior_accumulated_seconds": 0.0,
+      "max_batches": null
+    }
+  ]
+}

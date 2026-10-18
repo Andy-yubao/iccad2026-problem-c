@@ -1,0 +1,34 @@
+{
+  "training_run": "experiments\\repair_friendly_draft\\runs\\20261017_remaining_fast_seed0",
+  "source_fingerprint_matches_saved": true,
+  "stop_file_exists": false,
+  "completed_variants": {
+    "attention_occupancy": {
+      "stop_reason": "validation_early_stop",
+      "terminal_dev": "completed"
+    },
+    "rectangle_geometry": {
+      "stop_reason": "validation_early_stop",
+      "terminal_dev": "completed"
+    }
+  },
+  "resume_variant": "rectangle_occupancy",
+  "resume_step": 853,
+  "resume_epoch": 1.3648,
+  "assistant_started_long_training": false,
+  "resume_command": [
+    "python",
+    "-B",
+    "-m",
+    "experiments.repair_friendly_draft.train",
+    "--run-dir",
+    "experiments/repair_friendly_draft/runs/20261017_remaining_fast_seed0",
+    "--schedule",
+    "fast",
+    "--variants",
+    "attention_occupancy",
+    "rectangle_geometry",
+    "rectangle_occupancy",
+    "--resume"
+  ]
+}

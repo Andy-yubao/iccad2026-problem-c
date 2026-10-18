@@ -1,0 +1,1 @@
+Original first-case cold-start evidence. Its raw prediction is bitwise unchanged; only this train case was rerun after warm-up because initialization exhausted its postprocessing budget. Other14 cases were retained. Source/config/results here preserve the pre-correction state; original run path remains recorded unchanged.

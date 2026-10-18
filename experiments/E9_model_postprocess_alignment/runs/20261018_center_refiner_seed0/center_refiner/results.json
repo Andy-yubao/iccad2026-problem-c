@@ -1,0 +1,45 @@
+{
+  "stop_reason": "validation_early_stop",
+  "step": 6250,
+  "epoch": 10.0,
+  "arm_seconds": 908.125,
+  "architecture": {
+    "architecture": "center_refiner",
+    "width": 96,
+    "layers": 4
+  },
+  "trainable_parameters": 12194,
+  "total_parameters": 509493,
+  "best_proxy": {
+    "best": 0.37346276664733885,
+    "significant_best": 0.37387206649780275,
+    "bad": 10,
+    "checks": 11,
+    "last_drop": 8,
+    "best_step": 5625
+  },
+  "selection": {
+    "checkpoint": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E9_model_postprocess_alignment\\runs\\20261018_center_refiner_seed0\\center_refiner\\checkpoints\\best.pt",
+    "model_digest": "993dba1470f71164e5bcbbcc904a53119dd6551031faf3129d30f46fa6d878a3",
+    "Q_mean": 1.210117877463913,
+    "evaluation": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E9_model_postprocess_alignment\\runs\\20261018_center_refiner_seed0\\center_refiner\\quality\\proxy_best"
+  },
+  "quality_nodes": {
+    "epoch005": {
+      "checkpoint": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E9_model_postprocess_alignment\\runs\\20261018_center_refiner_seed0\\center_refiner\\checkpoints\\epoch005.pt",
+      "model_digest": "6a3a5984ccd7f81f26ca08db33ae8fcbab03e621026cd5e9b213ad75dad9f164",
+      "Q_mean": 1.2131814122465934,
+      "evaluation": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E9_model_postprocess_alignment\\runs\\20261018_center_refiner_seed0\\center_refiner\\quality\\epoch005"
+    },
+    "proxy_best": {
+      "checkpoint": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E9_model_postprocess_alignment\\runs\\20261018_center_refiner_seed0\\center_refiner\\checkpoints\\best.pt",
+      "model_digest": "993dba1470f71164e5bcbbcc904a53119dd6551031faf3129d30f46fa6d878a3",
+      "Q_mean": 1.210117877463913,
+      "evaluation": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E9_model_postprocess_alignment\\runs\\20261018_center_refiner_seed0\\center_refiner\\quality\\proxy_best"
+    }
+  },
+  "terminal_dev2500": "completed",
+  "unique_train_seen": 20000,
+  "test_payload_reads": 0,
+  "peak_cuda_allocated_bytes": 213479424
+}

@@ -1,0 +1,9 @@
+# 首组停止后的fast规则与日志调整检查
+
+用户明确停止首组，不要求补全收敛，批准后三组采用此前建议的更积极规则，并接受首组与后三组训练策略不同。旧20261017_factorial_seed0目录保持原样，不将user_stop改为early_stop，不覆盖或搬动best/latest。
+
+fast为LR patience2、相对显著改善0.5%、倍率0.5、cooldown1、最低3e-6；早停耐心10，至少10轮、至少2次下降、最后下降后观察3次。常数验证序列检查首个best后连续3次无改善即减半；验证scheduler状态可原样恢复、早停边界及monitor字段顺序。metadata-only检查确认缺失首组checkpoint可从额外旧目录按引用解析。results.json保留旧best、结果、日志和config的SHA-256，供检查原记录未改。
+
+真实循环检查另存20261017_fast_schedule_smoke_seed0，仅复用固定dev5作训练与监测夹具：后三组各2轮、batch3、4个step，均完成best/latest与终末夹具评价；终端额外显示简短VALIDATION行，持久run.log仍为JSON，主指标移到开头。这不是正式训练或质量证据，没有读取测试数据。
+
+正式训练尚未由助手启动。用户命令使用全新20261017_remaining_fast_seed0，明确只选attention_occupancy、rectangle_geometry、rectangle_occupancy。后续评价可以组合新目录与旧首组，逐一记录训练策略和checkpoint来源；不将结果包装成四组严格同训练条件的消融。

@@ -1,0 +1,59 @@
+{
+  "run_dir": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\graph_proposal\\runs\\20261016_deterministic_workset_v2_seed0",
+  "plot": "training_diagnostics.png",
+  "validation_records": 30,
+  "stop_reason": "user_requested_stop_via_exec_interrupt",
+  "best_step": 7250,
+  "best_epoch": 5.8,
+  "best_dev_monitor_mse": 0.07428781043738127,
+  "last_fixed_panel_gap": -0.00027473134547471856,
+  "terminal_metrics": {
+    "evaluated_checkpoint": "checkpoints/best.pt",
+    "best_step": 7250,
+    "evaluation_source": "../20261016_frozen_best_test2500_seed0/supervised.json",
+    "evaluation_mode": "separate CPU evaluation after user stopped training",
+    "dev_monitor": {
+      "sample_count": 500,
+      "requested_count": 500,
+      "complete": true,
+      "mse": 0.07428781043738127,
+      "center_mse": 0.0034203259396599606,
+      "log_ratio_mse": 0.23190586042404174,
+      "aggregation": "mean of per-layout masked MSE, identical to training objective"
+    },
+    "train_full": {
+      "sample_count": 20000,
+      "requested_count": 20000,
+      "complete": true,
+      "mse": 0.07487087662806735,
+      "center_mse": 0.0035458041902311378,
+      "log_ratio_mse": 0.23388887894041835,
+      "aggregation": "mean per-layout masked MSE"
+    },
+    "dev_full": {
+      "sample_count": 2500,
+      "requested_count": 2500,
+      "complete": true,
+      "mse": 0.07507702635973693,
+      "center_mse": 0.0033566820433363316,
+      "log_ratio_mse": 0.23462265514731406,
+      "aggregation": "mean per-layout masked MSE"
+    },
+    "train_monitor_seen_at_best": {
+      "sample_count": 500,
+      "requested_count": 500,
+      "complete": true,
+      "mse": 0.07456254178285598,
+      "center_mse": 0.003588369277189486,
+      "log_ratio_mse": 0.232748256072402,
+      "aggregation": "mean of per-layout masked MSE, identical to training objective"
+    },
+    "train_monitor_unseen_at_best": null,
+    "train_unique_seen_at_best": 20000,
+    "train_unique_seen_at_stop": 20000,
+    "test_evaluation": "separate explicitly authorized frozen evaluation; test not used for this curve or weight selection"
+  },
+  "caveat": "Train and dev curves use fixed 500-layout panels and the same mean-per-layout objective. Before epoch 1 some train-monitor layouts are unseen; the dotted subset changes as training proceeds. A positive gap can reflect overfitting or distribution differences; loss alone does not establish either. Early stopping or a time limit does not prove convergence. Test evaluation is separate and never drives these curves or checkpoint selection.",
+  "dataset_payload_reads": 0,
+  "checkpoint_reads": 0
+}

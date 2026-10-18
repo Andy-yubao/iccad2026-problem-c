@@ -1,0 +1,88 @@
+{
+  "panel": "confirm100",
+  "n": 100,
+  "model_frozen": true,
+  "test_payload_reads": 0,
+  "baseline": {
+    "cases": 100,
+    "Q_mean": 1.2801173907771126,
+    "Q_weighted": 1.366404074948466,
+    "Q_p95": 1.5999787434822705,
+    "Q_max": 3.353213383018158,
+    "worst10percent_mean": 1.9388347862708966,
+    "Q_above1_5": 7,
+    "Q_above2": 3,
+    "feasible": 100,
+    "errors": 0,
+    "postprocess_seconds_mean": 12.710490313002083,
+    "postprocess_seconds_p95": 38.96599158999887,
+    "postprocess_seconds_max": 78.6623161000025,
+    "postprocess_seconds_total": 1271.0490313002083,
+    "worker_wall_seconds_total": 1278.454051300214,
+    "end_to_end_seconds_total": 1272.791365000332,
+    "guard_fallback_count": 0
+  },
+  "selected": {
+    "cases": 100,
+    "Q_mean": 1.2322174615245305,
+    "Q_weighted": 1.1820308891715055,
+    "Q_p95": 1.4693708654278035,
+    "Q_max": 2.047516434255032,
+    "worst10percent_mean": 1.548015456682077,
+    "Q_above1_5": 4,
+    "Q_above2": 1,
+    "feasible": 100,
+    "errors": 0,
+    "postprocess_seconds_mean": 1.238318772999046,
+    "postprocess_seconds_p95": 1.412059435005358,
+    "postprocess_seconds_max": 4.898164399986854,
+    "postprocess_seconds_total": 123.83187729990459,
+    "worker_wall_seconds_total": 131.3431491999654,
+    "end_to_end_seconds_total": 125.5742110000283,
+    "guard_fallback_count": 0
+  },
+  "baseline_quality_cached_guard_replay": false,
+  "paired_Q_mean_difference": -0.047899929252582046,
+  "paired_mean_difference_bootstrap95_descriptive": [
+    -0.11318828709266365,
+    -0.003255194168617476
+  ],
+  "wins": 52,
+  "ties": 20,
+  "losses": 28,
+  "postprocess_speedup": 10.264312057725604,
+  "inference_postprocess_speedup": 10.135770353357389,
+  "inference_worker_wall_speedup": 9.619354095603468,
+  "kernel_sha256": "0b1a0295426c37a61f4abc13946b5dadf2c6f107375a02890e90ffe404be40e4",
+  "rescue_used_count": 1,
+  "reference_reused_count": 100,
+  "scope": "Adaptive development validation after confirmation failure feedback",
+  "policy": {
+    "fast_target_seconds": 1.3,
+    "total_target_seconds": 5.0,
+    "rescue_trigger": "no_public_proxy_improvement_over_initial_legal_row",
+    "seed_pack_target_max_seconds": 1.2
+  },
+  "metric_means": {
+    "hpwl_gap": {
+      "baseline": 0.02778062997618689,
+      "selected": 0.010714691322525758
+    },
+    "area_gap": {
+      "baseline": 0.01576250157272782,
+      "selected": -0.001265170862658046
+    },
+    "boundary_violations": {
+      "baseline": 0.64,
+      "selected": 0.28
+    },
+    "grouping_violations": {
+      "baseline": 0.34,
+      "selected": 0.27
+    },
+    "mib_violations": {
+      "baseline": 3.89,
+      "selected": 3.89
+    }
+  }
+}
