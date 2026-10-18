@@ -20,7 +20,8 @@ problemC/
 │   └── git.md
 ├── experiments/
 │   ├── README.md              # 实验索引
-│   └── baseline/              # 当前唯一保留的硬约束基线
+│   ├── E10_integrated_baseline/ # 当前模型＋后处理联合基线
+│   └── baseline/              # 无训练硬约束参照
 ├── datasets/                  # 可复用的数据处理代码与唯一数据副本
 │   ├── paths.py               # 路径解析、冻结训练索引
 │   ├── cases.py               # 冻结 dev/公开面板、标签隔离与输入遮罩

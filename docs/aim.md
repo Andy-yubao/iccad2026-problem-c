@@ -23,7 +23,7 @@ $$
 
 越低越好；参考质量且无软违反时为 1.0。现有 [evaluate_case](../scoring/evaluation.py) 通过 `runtime=median_runtime=1` 实现这一口径，实测耗时另列。非负坐标等独立复核仍照现有接口执行，不能为对齐榜单而放宽合法性。
 
-后续按用户确认的工程口径，将赛题“near-optimality by construction”的参考布局作为近似最优参照，用于模型的几何/关系学习及质量差距分析，不把求证每例数学全局最优作为前置任务。参考解实际Q仍按官方评分计算；已观察到的软违反不抹除，也不把所有参考Q强设为1。提议结构、可微调程度和最终Q分别评价，具体研究计划见[确定性提议与最小改动修复](../experiments/graph_proposal/next_stage_plan.md)。
+后续按用户确认的工程口径，将赛题“near-optimality by construction”的参考布局作为近似最优参照，用于模型的几何/关系学习及质量差距分析，不把求证每例数学全局最优作为前置任务。参考解实际Q仍按官方评分计算；已观察到的软违反不抹除，也不把所有参考Q强设为1。提议结构、可微调程度和最终Q分别评价，具体研究计划见[确定性提议与最小改动修复](../history/20261018_E10_consolidation/experiments/graph_proposal/next_stage_plan.md)。
 
 ## 2. 数值核查与历史目标
 
