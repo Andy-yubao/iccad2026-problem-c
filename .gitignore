@@ -19,3 +19,12 @@ experiments/**/runs/**/*.pth
 history/**/checkpoints/
 history/**/*.pt
 history/**/*.pth
+
+# E14 derived numeric input caches and full layout traces stay local.
+experiments/E14_stable_teacher/runs/**/train.json
+experiments/E14_stable_teacher/runs/**/dev.json
+experiments/E14_stable_teacher/runs/**/results.json
+experiments/E14_stable_teacher/runs/**/*.npz
+experiments/E14_stable_teacher/runs/teacher_*/
+experiments/E14_stable_teacher/runs/**/*.tmp
+experiments/E14_stable_teacher/runs/background_generation/

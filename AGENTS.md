@@ -6,7 +6,7 @@
 - 复用 datasets/ 的数据处理、scoring/ 的官方输出评分及 visualization/ 的纯展示绘图；模型 Loss、构造、搜索、合法化等在各实验独立维护，允许复制，不跨实验导入私有算法。布局图统一调用 visualization/。
 - 使用独立 conda 环境；保留官方原件，实际数据位置由 protocol/paths.json 解析。
 - 固定使用 protocol/split_v1.json 的 80/10/10 划分，保持冻结文件原件；本地测试封存，公开验证只作兼容与公开对照。
-- 后续训练统一采用 protocol/workset_v2.json 的 20,000/2,500/2,500 工作集；固定 500 例验证监测，使用学习率下降、早停及 best/latest 保存。dev5 仅作代码排错，具体参数和评估边界见 docs/protocol.md。
+- 原始 protocol/split_v1.json 与历史 workset_v2.json 保持冻结；新 MIB 派生任务及后续新训练采用 protocol/derived_workset_v3.json 的 16,000/2,000/2,000 规范，测试默认封存。固定 500 例验证监测，使用学习率下降、早停及 best/latest 保存。dev5 仅作代码排错，具体参数和评估边界见 docs/protocol.md。
 - 默认最多 5 例轻量验证，只检查改动相关行为，不堆测试框架或重复全量检查。
 - 预计可能超过 20 分钟的训练/推理，只交付命令让用户执行；不代为前台、后台启动或续跑，不拆任务规避。
 - 早期发散机制与架构，允许推倒重来；后期再调参。改善必须用消融、反例或对照说明原因。

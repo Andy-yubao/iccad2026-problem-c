@@ -1,0 +1,34 @@
+{
+  "train": {
+    "selected": 16000,
+    "examined": 33543,
+    "sequential_acceptance_fraction": 0.4769996720627255,
+    "rejections": {
+      "locked_dimensions_disagree": 4710,
+      "mean_area_incompatible_with_locked_shape": 12833
+    },
+    "worker_count": 100,
+    "per_worker_counts": [
+      160
+    ],
+    "modified_MIB_block_relative_area_change_mean": 0.9389789037524288,
+    "modified_MIB_block_relative_area_change_max": 29.95535659790039,
+    "scope": "sequential quota scan, not full-pool prevalence; changed task distribution is distinct from original raw tasks"
+  },
+  "dev": {
+    "selected": 2000,
+    "examined": 10522,
+    "sequential_acceptance_fraction": 0.19007793195210035,
+    "rejections": {
+      "locked_dimensions_disagree": 2359,
+      "mean_area_incompatible_with_locked_shape": 6163
+    },
+    "worker_count": 100,
+    "per_worker_counts": [
+      20
+    ],
+    "modified_MIB_block_relative_area_change_mean": 0.9132921416759768,
+    "modified_MIB_block_relative_area_change_max": 23.23958396911621,
+    "scope": "sequential quota scan, not full-pool prevalence; changed task distribution is distinct from original raw tasks"
+  }
+}

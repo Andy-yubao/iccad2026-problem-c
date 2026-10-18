@@ -2,6 +2,7 @@
 
 | 目录 | 当前用途 |
 |---|---|
+| [E14_stable_teacher](E14_stable_teacher/README.md) | 当前修正任务流程：100＋另500验收通过，600硬合法、无Q>1.8/退化；500均值1.039376/最大1.458786，附额外计算成本；新版16k/2k/2k规范、测试封存和教师生成入口 |
 | [E10_integrated_baseline](E10_integrated_baseline/README.md) | 当前联合基线：E7冻结模型＋E8 conic_robust；后续工作的起点 |
 | [baseline](baseline/README.md) | 保留的无训练硬约束对照与官方模板诊断 |
 

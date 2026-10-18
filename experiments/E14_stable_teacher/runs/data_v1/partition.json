@@ -1,0 +1,19 @@
+{
+  "version": "E14.mean_area.v1",
+  "targets": {
+    "train": 16000,
+    "dev": 2000,
+    "local_test": 2000
+  },
+  "original_split_unchanged": true,
+  "local_test_read": false,
+  "test_status": "sealed; deterministic candidate order and public compatibility rule registered, membership not materialized",
+  "test_candidate_order_sha256": "59c2d2710de16cb0fecc23cf7dc162732cc7fe275c2c128cd270536046a41cae",
+  "test_selection": "20 compatible members per worker in versioned hash order, deficits filled in same order; requires separate sealed-read authorization",
+  "train_generation": "new corrected tasks only; never use the legacy teacher bank",
+  "files": {
+    "train": "train.json",
+    "dev": "dev.json",
+    "panels": "panels.json"
+  }
+}

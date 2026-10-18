@@ -214,3 +214,26 @@ class LayoutReader:
         inputs, reference, metrics, source = self._read(index)
         return RawLayoutCase(f"{source['split']}:{source['shard']}:{source['sample_index']}",
                              source, inputs, reference.tolist(), metrics)
+
+
+class FrozenMemberReader(LayoutReader):
+    """Read explicit versioned members while enforcing the original shard split.
+
+    Membership selection belongs to the experiment. Reuses the masked raw loader;
+    does not relax the sealed local-test gate or change either frozen manifest.
+    """
+    def __init__(self, members, name, *, identity, allow_local_test=False):
+        if name not in PRIMARY or (name == 'local_test' and not allow_local_test):
+            raise ValueError('Explicit members require train/dev or authorized local_test')
+        split = json.loads((ROOT / 'protocol/split_v1.json').read_text(encoding='utf-8'))
+        allowed = set(split['shards'][name])
+        self.members = tuple((str(shard), int(row)) for shard, row in members)
+        if len(set(self.members)) != len(self.members):
+            raise ValueError('Duplicate explicit members')
+        if any(shard not in allowed or not 0 <= row < ROWS_PER_SHARD for shard, row in self.members):
+            raise ValueError('Explicit member violates the frozen shard partition')
+        self.name = name
+        self.manifest = {'manifest_sha256': identity}
+        self._allowed_members = frozenset(self.members)
+        self.root = dataset_paths()['training_root']
+        self.cached_path = self.cached_raw = None
