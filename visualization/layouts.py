@@ -101,6 +101,9 @@ def plot_case(row, destination, *, stages=None):
     from matplotlib.lines import Line2D
 
     stages = stages or STAGES
+    columns = len(stages)
+    if not 1 <= columns <= 3:
+        raise ValueError("Layout comparison supports one to three saved stages")
     validate_case(row, stages)
     constraints = row["constraints"]
     groups, mibs = group_ids(constraints, 3), group_ids(constraints, 2)
@@ -118,15 +121,18 @@ def plot_case(row, destination, *, stages=None):
     # Reserve separate bands for stage statistics, group tables and shared legend.
     max_groups = max(math.ceil(len(groups) / 5), 1) + max(math.ceil(len(mibs) / 5), 1)
     table_height = max(.072, .018 * (max_groups + 2))
-    legend_rows = math.ceil((len(groups) + len(mibs) + 7) / 7)
+    legend_columns = 7 if columns == 3 else (5 if columns == 2 else 3)
+    legend_rows = math.ceil((len(groups) + len(mibs) + 7) / legend_columns)
     legend_height = max(.065, legend_rows * .026 + .025)
     table_bottom = .065 + legend_height + .025
     table_top = table_bottom + table_height
     axes_bottom = table_top + .135
     plt.rcParams.update({"font.size": 10, "hatch.linewidth": .45, "axes.spines.top": False,
                          "axes.spines.right": False, "savefig.facecolor": "white"})
-    fig = plt.figure(figsize=(19.5, 11.7))
-    axes = [fig.add_axes((.035 + index * .323, axes_bottom, .30, .88 - axes_bottom)) for index in range(3)]
+    fig = plt.figure(figsize=(19.5 if columns == 3 else (13.0 if columns == 2 else 8.8), 11.7))
+    lefts = [.035 + index * .323 for index in range(3)] if columns == 3 else [.05 + index * .92 / columns for index in range(columns)]
+    width = .30 if columns == 3 else .92 / columns - .025
+    axes = [fig.add_axes((left, axes_bottom, width, .88 - axes_bottom)) for left in lefts]
     for index, ((stage, title), ax) in enumerate(zip(stages, axes)):
         variant = row["variants"][stage]
         rects = variant["positions"]
@@ -166,13 +172,13 @@ def plot_case(row, destination, *, stages=None):
         ax.set_aspect("equal", adjustable="box")
         ax.tick_params(labelsize=8)
         ax.set_title(title, fontsize=13, pad=12)
-        left = .035 + index * .323
+        left = lefts[index]
         fig.text(left, axes_bottom - .04, status_text(variant), fontsize=10, linespacing=1.7, va="top")
         fig.text(left, table_top, detail_text(variant), fontsize=8.5,
                  family="monospace", linespacing=1.5, va="top", color="#334155")
-    fig.suptitle(f"{row['panel']} | {row['case_id']} | {len(constraints)} blocks", fontsize=15, y=.975)
-    fig.text(.5, .935, "Same module IDs and coordinate scale across columns; each column shows only its own layout.",
-             ha="center", fontsize=10, color="#475569")
+    fig.suptitle(f"{row['panel']} | {row['case_id']} | {len(constraints)} blocks", fontsize=15 if columns == 3 else 11, y=.975)
+    caption = "Same module IDs and coordinate scale across columns; each column shows only its own layout." if columns > 1 else "Saved E14 output; module IDs and constraints follow the source task."
+    fig.text(.5, .935, caption, ha="center", fontsize=10 if columns > 1 else 9, color="#475569")
     legend = [Patch(facecolor=colors[group], edgecolor="#475569", label=f"Grouping G{group}") for group in groups]
     legend += [Patch(facecolor="white", edgecolor="#475569", hatch=patterns[group], label=f"MIB M{group}") for group in mibs]
     legend += [Patch(facecolor="#e5e7eb", edgecolor="#475569", label="No grouping"),
@@ -182,15 +188,19 @@ def plot_case(row, destination, *, stages=None):
                Patch(facecolor="none", edgecolor="#dc2626", linewidth=1.5, label="Overlapping block"),
                Line2D([], [], color="#64748b", ls="--", label="Own layout bbox"),
                Patch(facecolor="white", label="F: fixed shape; P: preplaced")]
-    fig.legend(handles=legend, loc="lower center", bbox_to_anchor=(.5, .065), ncol=7,
-               fontsize=8, frameon=True, edgecolor="#e2e8f0", title="Constraint identities are unchanged across all three stages", title_fontsize=9)
+    fig.legend(handles=legend, loc="lower center", bbox_to_anchor=(.5, .065), ncol=legend_columns,
+               fontsize=8, frameon=True, edgecolor="#e2e8f0", title="Constraint identities are unchanged across all three stages" if columns == 3 else "Constraint key for the saved layout", title_fontsize=9)
     fig.text(.035, .024,
-             "B/G/M = official boundary / grouping / MIB violation counts. Q uses neutral runtime; illegal proposals are not feasible-quality results.\n"
-             "Boundary badges show status against each layout's own bbox. Group components=1 and MIB distinct shapes=1 indicate consistency. "
-             "Overlap outlines are visual only (1e-9 span tolerance).", fontsize=8, color="#475569")
+             ("B/G/M = official boundary / grouping / MIB violation counts. Q uses neutral runtime; illegal proposals are not feasible-quality results.\n"
+              "Boundary badges show status against each layout's own bbox. Group components=1 and MIB distinct shapes=1 indicate consistency. "
+              "Overlap outlines are visual only (1e-9 span tolerance).") if columns == 3 else
+             "B/G/M = official boundary / grouping / MIB violations; Q uses neutral runtime.\n"
+             "Badges refer to this layout's bbox. Red overlap outlines use a visual-only tolerance.",
+             fontsize=8, color="#475569")
     fig.savefig(destination, dpi=170, facecolor="white")
     plt.close(fig)
     return {"axis_limits": list(limits), "bounding_policy": "union of all three stages plus 5.5% maximum-span margin; no blocks cropped",
+            "axes_bounds": [list(ax.get_position().bounds) for ax in axes],
             "grouping_colors": {str(group): list(colors[group]) for group in groups},
             "mib_hatches": {str(group): patterns[group] for group in mibs},
             "plot_overlap_axis_tolerance": span * 1e-9}

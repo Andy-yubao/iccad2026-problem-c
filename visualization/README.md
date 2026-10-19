@@ -4,6 +4,8 @@
 
 保留Set3分组配色、MIB组纹理、模块编号/G/M/F/P标签、L/R/T/B状态徽记、重叠红轮廓、自身bbox虚线、三栏共享范围、底部统计和图例。每张PNG为3315×1989左右（19.5×11.7英寸、170dpi）。
 
+显式`stages`支持1～3个已保存布局；默认三栏保持原像素输出不变，单栏/双栏按实际列数安排画布和图例，避免空列。返回的`axes_bounds`可用于纯展示总览缩略图，不更改坐标或指标。
+
 ```python
 from visualization.layouts import plot_case, plot_evaluation_case
 
