@@ -1,0 +1,107 @@
+{
+  "train": {
+    "count": 5,
+    "improved": 5,
+    "worse": 0,
+    "rows": [
+      {
+        "case_id": "train:worker_0/layouts_5040.th:63",
+        "reference_Q": 1.8503681468485786,
+        "teacher_Q": 1.5865128974999683,
+        "delta": -0.2638552493486104,
+        "reference_legal": true,
+        "teacher_legal": true,
+        "rescue": false
+      },
+      {
+        "case_id": "train:worker_24/layouts_4144.th:69",
+        "reference_Q": 1.8749301934539637,
+        "teacher_Q": 1.408967466481907,
+        "delta": -0.46596272697205676,
+        "reference_legal": true,
+        "teacher_legal": true,
+        "rescue": false
+      },
+      {
+        "case_id": "train:worker_49/layouts_336.th:15",
+        "reference_Q": 1.254096125453696,
+        "teacher_Q": 1.1836345577176688,
+        "delta": -0.07046156773602719,
+        "reference_legal": true,
+        "teacher_legal": true,
+        "rescue": false
+      },
+      {
+        "case_id": "train:worker_74/layouts_2800.th:35",
+        "reference_Q": 1.3089571732352356,
+        "teacher_Q": 1.1223050103450638,
+        "delta": -0.18665216289017184,
+        "reference_legal": true,
+        "teacher_legal": true,
+        "rescue": false
+      },
+      {
+        "case_id": "train:worker_99/layouts_4256.th:50",
+        "reference_Q": 1.415985997544786,
+        "teacher_Q": 1.2428303319121348,
+        "delta": -0.17315566563265117,
+        "reference_legal": true,
+        "teacher_legal": true,
+        "rescue": false
+      }
+    ]
+  },
+  "dev_monitor": {
+    "count": 5,
+    "improved": 5,
+    "worse": 0,
+    "rows": [
+      {
+        "case_id": "train:worker_0/layouts_5040.th:63",
+        "reference_Q": 1.8503681468485786,
+        "teacher_Q": 1.5865128974999683,
+        "delta": -0.2638552493486104,
+        "reference_legal": true,
+        "teacher_legal": true,
+        "rescue": false
+      },
+      {
+        "case_id": "train:worker_24/layouts_4144.th:69",
+        "reference_Q": 1.8749301934539637,
+        "teacher_Q": 1.408967466481907,
+        "delta": -0.46596272697205676,
+        "reference_legal": true,
+        "teacher_legal": true,
+        "rescue": false
+      },
+      {
+        "case_id": "train:worker_49/layouts_336.th:15",
+        "reference_Q": 1.254096125453696,
+        "teacher_Q": 1.1836345577176688,
+        "delta": -0.07046156773602719,
+        "reference_legal": true,
+        "teacher_legal": true,
+        "rescue": false
+      },
+      {
+        "case_id": "train:worker_74/layouts_2800.th:35",
+        "reference_Q": 1.3089571732352356,
+        "teacher_Q": 1.1223050103450638,
+        "delta": -0.18665216289017184,
+        "reference_legal": true,
+        "teacher_legal": true,
+        "rescue": false
+      },
+      {
+        "case_id": "train:worker_99/layouts_4256.th:50",
+        "reference_Q": 1.415985997544786,
+        "teacher_Q": 1.2428303319121348,
+        "delta": -0.17315566563265117,
+        "reference_legal": true,
+        "teacher_legal": true,
+        "rescue": false
+      }
+    ]
+  },
+  "scope": "Same neutral-runtime official Q; all teacher targets retained, original references are audit-only."
+}

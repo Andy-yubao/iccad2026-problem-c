@@ -1,5 +1,22 @@
 # E10：E7 模型与 E8 后处理联合基线
 
+## MIB 平均面积派生开发100例诊断
+
+2026-10-18用户授权生成100例并自行运行。入口 [mib_panel.py](mib_panel.py)，[运行与结论](runs/20261018_mean_area_mib100_seed0/analysis.md)，[成员和修改清单](runs/20261018_mean_area_mib100_seed0/panel.json)，[逐例结果](runs/20261018_mean_area_mib100_seed0/results.json)。冻结模型和后处理不变，无训练；原始/平均面积输入配对评价，共200次求解。
+
+已完成：同成员原输入平均Q=1.198874，平均面积后=1.046346，加权Q=1.055839、最大Q=1.998933；两条件均100/100硬合法，修改后100/100例MIB违反为零。配对90胜/7平/3负，修改后推理＋后处理平均1.235秒。尾部仍有边界/连通/线长损失，不说明原始数据任务已达到该成绩。
+
+按公开输入将每个MIB组的面积统一为组内算术平均值，保持组面积总和、约束、固定尺寸和预放置规格。组内锁定宽高不一致，或平均面积无法容纳锁定形状时拒绝该例。优先每worker的dev_quality成员，其后按冻结dev顺序寻找首个兼容成员；无兼容成员的worker缺额按冻结dev顺序补足。共检查426例，选100例覆盖98个worker，保留原dev_quality成员47例。选择不使用Q或自由块参考几何，不读取local_test。原始数据与冻结索引不修改；派生完整数据保存在本机运行目录的dataset.pt（不入Git），修改清单可用于重建。
+
+原参考HPWL/bbox分母作为两个条件的共同诊断参照。面积变化后原自由块参考布局未必满足新面积，故该Q是固定原参照的反事实诊断，不是重新标定的合成比赛成绩，更不是正式比赛分数。筛选偏向可修改的MIB组，不把本面板与原dev100均值直接相减；仅局部MIB/面积/锁定尺寸兼容有显式公共形状见证，不保证所有软约束同时满足。
+
+```powershell
+& .\.conda\envs\iccad2026\python.exe -B experiments/E10_integrated_baseline/mib_panel.py prepare --output experiments/E10_integrated_baseline/runs/<新运行目录>
+& .\.conda\envs\iccad2026\python.exe -B experiments/E10_integrated_baseline/mib_panel.py run --output experiments/E10_integrated_baseline/runs/<新运行目录>
+```
+
+prepare拒绝覆盖；run按已完成配对恢复。每次恢复保留同一数据/冻结模型/种子和5秒后处理目标，不改变候选或调参。正常完成后停止；源代码快照、命令、输入哈希、评分与独立硬检查随运行保存。
+
 2026-10-18 整合。当前工作的唯一学习型基线：冻结 E7 `attention_geometry` 第77轮 best 模型，接 E8 `conic_robust` 后处理。E9 中心修正候选在另一开发100例退化，不纳入。整合不新增训练、不改变算法或冻结数据划分。
 
 ## 使用

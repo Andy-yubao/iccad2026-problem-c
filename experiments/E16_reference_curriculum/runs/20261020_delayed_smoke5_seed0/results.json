@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "16": {
+      "warmup_epochs": 15,
+      "transition_end": 30,
+      "scheduler_start": 25,
+      "boundaries_and_controller": "passed",
+      "finite_updates_and_resume": "passed; 2 steps on same 3 train / 2 dev cases"
+    },
+    "21": {
+      "warmup_epochs": 20,
+      "transition_end": 35,
+      "scheduler_start": 30,
+      "boundaries_and_controller": "passed",
+      "finite_updates_and_resume": "passed; 2 steps on same 3 train / 2 dev cases"
+    }
+  },
+  "unique_real_cases": 5,
+  "test_read": false,
+  "postprocessing_calls": 0
+}

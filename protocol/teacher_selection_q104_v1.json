@@ -1,0 +1,19 @@
+{
+  "version": "E14.teacher_selection.q104.v1",
+  "task_version": "E14.mean_area.v1",
+  "parent": "protocol/derived_workset_v3.json",
+  "quality_max_inclusive": 1.04,
+  "require_official_and_independent_hard_legal": true,
+  "strata": [[1,40],[41,60],[61,80],[81,100],[101,110],[111,120]],
+  "quotas": [2487,3409,3397,3131,1906,1670],
+  "target": 16000,
+  "quota_basis": "Actual module-count distribution of the frozen v3 train16000 members",
+  "selection": "Import all qualifying existing records, then lowest accepted/quota stratum first; deterministic candidate order; stop each stratum at quota",
+  "expansion": "Only split_v1 train shards; SHA256('E14.q104.v1:'+shard) ranked within each worker; round-robin workers; rows ranked with same hash prefix and shard:row; apply unchanged MIB compatibility transformation",
+  "registration": "bank.sqlite3 candidates includes original and expanded members, N, origin and every outcome; accepted.json is the exported training membership",
+  "validation": "Original v3 dev2000 and fixed dev_monitor500 remain unfiltered and disjoint from all teacher train candidates",
+  "local_test_read": false,
+  "Q_scope": "Neutral-time diagnostic Q with original reference denominators after input-area transformation; not an official contest score or student-model result",
+  "budget_defaults": {"cumulative_new_generation_seconds": 172800, "cumulative_new_solves": 60000},
+  "failure_policy": "Quality rejection continues including Q>2; hard/solver/data errors stop and leave candidate pending for investigated retry"
+}

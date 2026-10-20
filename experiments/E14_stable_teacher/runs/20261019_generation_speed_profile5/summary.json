@@ -1,0 +1,110 @@
+{
+  "cases": [
+    {
+      "member": [
+        "worker_25/layouts_3808.th",
+        47
+      ],
+      "n": 34,
+      "input_load_seconds": 0.915661100007128,
+      "inference_seconds": 0.015541700005996972,
+      "solve_seconds": 0.976172500057146,
+      "score_seconds": 0.012125699955504388,
+      "encode_compress_seconds": 0.0072687999927438796,
+      "Q": 1.0,
+      "hard_legal": true,
+      "stability_seconds": 0.015041399979963899
+    },
+    {
+      "member": [
+        "worker_15/layouts_2800.th",
+        108
+      ],
+      "n": 59,
+      "input_load_seconds": 0.06537330005085096,
+      "inference_seconds": 0.01635369996074587,
+      "solve_seconds": 1.2604372999630868,
+      "score_seconds": 0.038189199985936284,
+      "encode_compress_seconds": 0.016547099978197366,
+      "Q": 1.0031690279189913,
+      "hard_legal": true,
+      "stability_seconds": 0.04496469994774088
+    },
+    {
+      "member": [
+        "worker_8/layouts_3808.th",
+        67
+      ],
+      "n": 63,
+      "input_load_seconds": 0.02736070001265034,
+      "inference_seconds": 0.015095699985977262,
+      "solve_seconds": 1.285816400020849,
+      "score_seconds": 0.023699099954683334,
+      "encode_compress_seconds": 0.01812330004759133,
+      "Q": 1.0238593181061433,
+      "hard_legal": true,
+      "stability_seconds": 0.030706999998074025
+    },
+    {
+      "member": [
+        "worker_31/layouts_4032.th",
+        63
+      ],
+      "n": 110,
+      "input_load_seconds": 0.05830460001016036,
+      "inference_seconds": 0.024346599995624274,
+      "solve_seconds": 1.4589486999902874,
+      "score_seconds": 0.05087690002983436,
+      "encode_compress_seconds": 0.049311299982946366,
+      "Q": 1.027593749445753,
+      "hard_legal": true,
+      "stability_seconds": 0.06053569994401187
+    },
+    {
+      "member": [
+        "worker_10/layouts_7728.th",
+        101
+      ],
+      "n": 111,
+      "input_load_seconds": 0.10109660000307485,
+      "inference_seconds": 0.021531300037167966,
+      "solve_seconds": 1.4955980000086129,
+      "score_seconds": 0.07099720003316179,
+      "encode_compress_seconds": 0.05177139997249469,
+      "Q": 1.0139009623131252,
+      "hard_legal": true,
+      "stability_seconds": 0.08071960002416745
+    }
+  ],
+  "mean": {
+    "input_load_seconds": 0.2335592600167729,
+    "inference_seconds": 0.01857379999710247,
+    "solve_seconds": 1.2953945800079965,
+    "score_seconds": 0.03917761999182403,
+    "encode_compress_seconds": 0.028604379994794725,
+    "stability_seconds": 0.046393679978791624
+  },
+  "model_load_seconds": 0.043382300005760044,
+  "logical_cpu": 24,
+  "gpu": "NVIDIA GeForce RTX 5080 Laptop GPU",
+  "draft_benchmarks": {
+    "cpu_single_draft_per_case_seconds": 0.016822563998866825,
+    "cpu_batch5_forward_per_case_seconds": 0.011005998000036925,
+    "cpu_batch5_draft_per_case_seconds": 0.014187491999473422,
+    "cpu_batch_vs_single_max_abs": 0.0001373291015625,
+    "cuda_single_draft_per_case_seconds": 0.013203928000293672,
+    "cuda_batch5_forward_per_case_seconds": 0.0015194939996581525,
+    "cuda_batch5_draft_per_case_seconds": 0.003949543999042362,
+    "cuda_batch_vs_single_max_abs": 0.000213623046875
+  },
+  "cpu_cuda_max_abs_by_case": [
+    6.103515625e-05,
+    9.1552734375e-05,
+    0.0001068115234375,
+    0.000152587890625,
+    0.0002288818359375
+  ],
+  "scope": "five train cases; timing diagnosis, not throughput or quality validation; cProfile adds overhead",
+  "teacher_bank_modified": false,
+  "local_test_read": false
+}

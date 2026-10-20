@@ -1,0 +1,17 @@
+{
+  "version": "E14.archive25000.v1",
+  "task_version": "E14.mean_area.v1",
+  "distinct_layout_target": 25000,
+  "archive_strata_quotas": [3886,5327,5308,4892,2978,2609],
+  "archive_quota_rule": "Hamilton rounding of original v3 train16000 module-count proportions to 25000",
+  "teacher_strata_quotas": [2487,3409,3397,3131,1906,1670],
+  "default_teacher_quality_max_inclusive": 1.06,
+  "historical_drop_policy": "Recompute every historically rejected member before dispatching unseen members, including drops with old saved layouts",
+  "retention": "Save every returned layout regardless of Q or legality; store source, derived input areas, scoring, execution provenance. Never delete on teacher threshold changes",
+  "target_semantics": "25000 distinct members with durable layouts, including imported accepted members and recomputed historical drops. Retries are separate attempted work, never additional distinct samples",
+  "training_partition_only": true,
+  "local_test_read": false,
+  "selection": "Among hard-legal archived members at/below chosen Q, sort by (Q,candidate id) in each stratum and take up to teacher quota; report shortages at 25000 without silently expanding target",
+  "max_new_wall_seconds": 172800,
+  "max_new_attempts": 60000
+}

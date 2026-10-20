@@ -1,0 +1,4364 @@
+{
+  "status": "user_stop",
+  "finished": false,
+  "epoch": 68,
+  "cursor": 9504,
+  "step": 68594,
+  "seen_count": 16000,
+  "elapsed_seconds": 11138.346907299943,
+  "best_proxy": 3.8866646023273463,
+  "best_epoch": 66,
+  "bad_checks": 2,
+  "history": [
+    {
+      "epoch": 5,
+      "step": 5000,
+      "dev_monitor": {
+        "total": 0.9724237289428711,
+        "supervision": 0.9724237289428711,
+        "center_mse": 0.4476842277050018,
+        "shape_mse": 0.5247394905090332,
+        "quality_proxy": 1.1986393823623658,
+        "wire_ratio": 0.9575857772827149,
+        "bbox_ratio": 1.0847456855773925,
+        "boundary": 0.06663026142120361,
+        "grouping": 0.021967887669801713,
+        "mib": 0.00013867603483959102,
+        "overlap": 0.46507028937339784,
+        "count": 500,
+        "selection_proxy": 5.897963462543488
+      },
+      "train_monitor": {
+        "total": 0.8976602025032043,
+        "supervision": 0.8976602025032043,
+        "center_mse": 0.39563294196128845,
+        "shape_mse": 0.5020272645950318,
+        "quality_proxy": 1.1816321868896484,
+        "wire_ratio": 0.9665666966438293,
+        "bbox_ratio": 1.0814570846557616,
+        "boundary": 0.0598928200006485,
+        "grouping": 0.01881301838159561,
+        "mib": 0.00010430525059928186,
+        "overlap": 0.443891384601593,
+        "count": 500,
+        "selection_proxy": 5.665429043030738
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 4419.029636599938,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.8976602025032043,
+        "supervision": 0.8976602025032043,
+        "center_mse": 0.39563294196128845,
+        "shape_mse": 0.5020272645950318,
+        "quality_proxy": 1.1816321868896484,
+        "wire_ratio": 0.9665666966438293,
+        "bbox_ratio": 1.0814570846557616,
+        "boundary": 0.0598928200006485,
+        "grouping": 0.01881301838159561,
+        "mib": 0.00010430525059928186,
+        "overlap": 0.443891384601593,
+        "count": 500,
+        "selection_proxy": 5.665429043030738
+      }
+    },
+    {
+      "epoch": 6,
+      "step": 6000,
+      "dev_monitor": {
+        "total": 0.9513384037017822,
+        "supervision": 0.9513384037017822,
+        "center_mse": 0.4282639818191528,
+        "shape_mse": 0.5230744328498841,
+        "quality_proxy": 1.193146122932434,
+        "wire_ratio": 0.9671313896179199,
+        "bbox_ratio": 1.0958212928771973,
+        "boundary": 0.06055584567785263,
+        "grouping": 0.02011863923072815,
+        "mib": 0.00016040013617021033,
+        "overlap": 0.44861219120025636,
+        "count": 500,
+        "selection_proxy": 5.726834955120086
+      },
+      "train_monitor": {
+        "total": 0.8828216524124145,
+        "supervision": 0.8828216524124145,
+        "center_mse": 0.3826956148147583,
+        "shape_mse": 0.5001260411739349,
+        "quality_proxy": 1.172874885559082,
+        "wire_ratio": 0.9756787967681885,
+        "bbox_ratio": 1.0907864990234375,
+        "boundary": 0.0524489027261734,
+        "grouping": 0.017240277379751204,
+        "mib": 0.00013193600048543884,
+        "overlap": 0.4257731010913849,
+        "count": 500,
+        "selection_proxy": 5.474746979093552
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 4509.111512499978,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.8828216524124145,
+        "supervision": 0.8828216524124145,
+        "center_mse": 0.3826956148147583,
+        "shape_mse": 0.5001260411739349,
+        "quality_proxy": 1.172874885559082,
+        "wire_ratio": 0.9756787967681885,
+        "bbox_ratio": 1.0907864990234375,
+        "boundary": 0.0524489027261734,
+        "grouping": 0.017240277379751204,
+        "mib": 0.00013193600048543884,
+        "overlap": 0.4257731010913849,
+        "count": 500,
+        "selection_proxy": 5.474746979093552
+      }
+    },
+    {
+      "epoch": 7,
+      "step": 7000,
+      "dev_monitor": {
+        "total": 0.9445271892547608,
+        "supervision": 0.9445271892547608,
+        "center_mse": 0.42292108488082886,
+        "shape_mse": 0.5216061160564422,
+        "quality_proxy": 1.1754421367645265,
+        "wire_ratio": 0.9691327090263366,
+        "bbox_ratio": 1.089523485183716,
+        "boundary": 0.054645744562149046,
+        "grouping": 0.018231246024370193,
+        "mib": 0.00018003015057183803,
+        "overlap": 0.4345960063934326,
+        "count": 500,
+        "selection_proxy": 5.56862856016159
+      },
+      "train_monitor": {
+        "total": 0.8607456421852112,
+        "supervision": 0.8607456421852112,
+        "center_mse": 0.3630863127708435,
+        "shape_mse": 0.4976593313217163,
+        "quality_proxy": 1.1514635753631592,
+        "wire_ratio": 0.9780131273269653,
+        "bbox_ratio": 1.0825939521789552,
+        "boundary": 0.04497764629125595,
+        "grouping": 0.015453452073037624,
+        "mib": 0.00014891647794866003,
+        "overlap": 0.4159120621681213,
+        "count": 500,
+        "selection_proxy": 5.353621479153633
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 4591.408834599948,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.8607456421852112,
+        "supervision": 0.8607456421852112,
+        "center_mse": 0.3630863127708435,
+        "shape_mse": 0.4976593313217163,
+        "quality_proxy": 1.1514635753631592,
+        "wire_ratio": 0.9780131273269653,
+        "bbox_ratio": 1.0825939521789552,
+        "boundary": 0.04497764629125595,
+        "grouping": 0.015453452073037624,
+        "mib": 0.00014891647794866003,
+        "overlap": 0.4159120621681213,
+        "count": 500,
+        "selection_proxy": 5.353621479153633
+      }
+    },
+    {
+      "epoch": 8,
+      "step": 8000,
+      "dev_monitor": {
+        "total": 0.9047508940696717,
+        "supervision": 0.9047508940696717,
+        "center_mse": 0.3882055988311768,
+        "shape_mse": 0.5165453085899353,
+        "quality_proxy": 1.1421025009155275,
+        "wire_ratio": 0.9584219484329224,
+        "bbox_ratio": 1.0597219924926757,
+        "boundary": 0.04964583003520966,
+        "grouping": 0.01666280374675989,
+        "mib": 0.000206633448950015,
+        "overlap": 0.431993501663208,
+        "count": 500,
+        "selection_proxy": 5.50727506225109
+      },
+      "train_monitor": {
+        "total": 0.8266930027008057,
+        "supervision": 0.8266930027008057,
+        "center_mse": 0.33315511465072634,
+        "shape_mse": 0.4935378823280335,
+        "quality_proxy": 1.1231067676544189,
+        "wire_ratio": 0.9674603614807129,
+        "bbox_ratio": 1.053780511856079,
+        "boundary": 0.04195240807533264,
+        "grouping": 0.014109034761786462,
+        "mib": 0.00018171835818793624,
+        "overlap": 0.4158352253437042,
+        "count": 500,
+        "selection_proxy": 5.322793671226501
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 4673.763269599993,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.8266930027008057,
+        "supervision": 0.8266930027008057,
+        "center_mse": 0.33315511465072634,
+        "shape_mse": 0.4935378823280335,
+        "quality_proxy": 1.1231067676544189,
+        "wire_ratio": 0.9674603614807129,
+        "bbox_ratio": 1.053780511856079,
+        "boundary": 0.04195240807533264,
+        "grouping": 0.014109034761786462,
+        "mib": 0.00018171835818793624,
+        "overlap": 0.4158352253437042,
+        "count": 500,
+        "selection_proxy": 5.322793671226501
+      }
+    },
+    {
+      "epoch": 9,
+      "step": 9000,
+      "dev_monitor": {
+        "total": 0.9024726753234863,
+        "supervision": 0.9024726753234863,
+        "center_mse": 0.38876826310157775,
+        "shape_mse": 0.5137044231891632,
+        "quality_proxy": 1.1462092638015746,
+        "wire_ratio": 0.950990023612976,
+        "bbox_ratio": 1.0533703689575196,
+        "boundary": 0.05636448788642883,
+        "grouping": 0.015430101558566094,
+        "mib": 0.00021994087751954795,
+        "overlap": 0.43747066068649293,
+        "count": 500,
+        "selection_proxy": 5.566039504432679
+      },
+      "train_monitor": {
+        "total": 0.8332793793678284,
+        "supervision": 0.8332793793678284,
+        "center_mse": 0.34264693689346315,
+        "shape_mse": 0.4906324486732483,
+        "quality_proxy": 1.1223609714508056,
+        "wire_ratio": 0.9607942914962768,
+        "bbox_ratio": 1.0464674224853516,
+        "boundary": 0.045837744653224946,
+        "grouping": 0.0133486218303442,
+        "mib": 0.00017869424587115646,
+        "overlap": 0.4218032088279724,
+        "count": 500,
+        "selection_proxy": 5.382057028698921
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 4778.788468999963,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.8332793793678284,
+        "supervision": 0.8332793793678284,
+        "center_mse": 0.34264693689346315,
+        "shape_mse": 0.4906324486732483,
+        "quality_proxy": 1.1223609714508056,
+        "wire_ratio": 0.9607942914962768,
+        "bbox_ratio": 1.0464674224853516,
+        "boundary": 0.045837744653224946,
+        "grouping": 0.0133486218303442,
+        "mib": 0.00017869424587115646,
+        "overlap": 0.4218032088279724,
+        "count": 500,
+        "selection_proxy": 5.382057028698921
+      }
+    },
+    {
+      "epoch": 10,
+      "step": 10000,
+      "dev_monitor": {
+        "total": 0.8704815220832824,
+        "supervision": 0.8704815220832824,
+        "center_mse": 0.359053631067276,
+        "shape_mse": 0.5114278786182404,
+        "quality_proxy": 1.136438961982727,
+        "wire_ratio": 0.9578851261138916,
+        "bbox_ratio": 1.0723916912078857,
+        "boundary": 0.04297711032629013,
+        "grouping": 0.017437921583652496,
+        "mib": 0.0002352507853647694,
+        "overlap": 0.4105037407875061,
+        "count": 500,
+        "selection_proxy": 5.285000445961953
+      },
+      "train_monitor": {
+        "total": 0.7929295167922974,
+        "supervision": 0.7929295167922974,
+        "center_mse": 0.30523513960838317,
+        "shape_mse": 0.4876943633556366,
+        "quality_proxy": 1.1224680137634278,
+        "wire_ratio": 0.9671922974586487,
+        "bbox_ratio": 1.0687583808898926,
+        "boundary": 0.03665743464231491,
+        "grouping": 0.015387070059776306,
+        "mib": 0.00020183926314348356,
+        "overlap": 0.39447608709335324,
+        "count": 500,
+        "selection_proxy": 5.106875360536575
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 4905.580650699965,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.7929295167922974,
+        "supervision": 0.7929295167922974,
+        "center_mse": 0.30523513960838317,
+        "shape_mse": 0.4876943633556366,
+        "quality_proxy": 1.1224680137634278,
+        "wire_ratio": 0.9671922974586487,
+        "bbox_ratio": 1.0687583808898926,
+        "boundary": 0.03665743464231491,
+        "grouping": 0.015387070059776306,
+        "mib": 0.00020183926314348356,
+        "overlap": 0.39447608709335324,
+        "count": 500,
+        "selection_proxy": 5.106875360536575
+      }
+    },
+    {
+      "epoch": 11,
+      "step": 11000,
+      "dev_monitor": {
+        "total": 0.8857389421463012,
+        "supervision": 0.8857389421463012,
+        "center_mse": 0.37610436511039735,
+        "shape_mse": 0.5096345839500427,
+        "quality_proxy": 1.151970781326294,
+        "wire_ratio": 0.9740989065170288,
+        "bbox_ratio": 1.0820004415512086,
+        "boundary": 0.04366201251745224,
+        "grouping": 0.01803050470352173,
+        "mib": 0.00026803304557688535,
+        "overlap": 0.40323767757415774,
+        "count": 500,
+        "selection_proxy": 5.228634504175186
+      },
+      "train_monitor": {
+        "total": 0.7998467154502868,
+        "supervision": 0.7998467154502868,
+        "center_mse": 0.31463099694252017,
+        "shape_mse": 0.48521572494506837,
+        "quality_proxy": 1.1404357652664185,
+        "wire_ratio": 0.9818382816314697,
+        "bbox_ratio": 1.078467191696167,
+        "boundary": 0.03811433923244476,
+        "grouping": 0.016808945268392564,
+        "mib": 0.00021822823560796678,
+        "overlap": 0.3849102630615234,
+        "count": 500,
+        "selection_proxy": 5.029530731654167
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 5034.2588807999855,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.7998467154502868,
+        "supervision": 0.7998467154502868,
+        "center_mse": 0.31463099694252017,
+        "shape_mse": 0.48521572494506837,
+        "quality_proxy": 1.1404357652664185,
+        "wire_ratio": 0.9818382816314697,
+        "bbox_ratio": 1.078467191696167,
+        "boundary": 0.03811433923244476,
+        "grouping": 0.016808945268392564,
+        "mib": 0.00021822823560796678,
+        "overlap": 0.3849102630615234,
+        "count": 500,
+        "selection_proxy": 5.029530731654167
+      }
+    },
+    {
+      "epoch": 12,
+      "step": 12000,
+      "dev_monitor": {
+        "total": 0.8612501525878906,
+        "supervision": 0.8612501525878906,
+        "center_mse": 0.35424784445762636,
+        "shape_mse": 0.5070023012161254,
+        "quality_proxy": 1.1433073387145996,
+        "wire_ratio": 0.9747195763587951,
+        "bbox_ratio": 1.0782886629104613,
+        "boundary": 0.0423428036570549,
+        "grouping": 0.015745905503630638,
+        "mib": 0.00031290289014577864,
+        "overlap": 0.394215452671051,
+        "count": 500,
+        "selection_proxy": 5.128524373054504
+      },
+      "train_monitor": {
+        "total": 0.7897164025306702,
+        "supervision": 0.7897164025306702,
+        "center_mse": 0.3065773463249207,
+        "shape_mse": 0.4831390616893768,
+        "quality_proxy": 1.1260726718902587,
+        "wire_ratio": 0.9815396385192872,
+        "bbox_ratio": 1.0725768299102783,
+        "boundary": 0.035237788617610934,
+        "grouping": 0.014011246435344219,
+        "mib": 0.00025817407306749374,
+        "overlap": 0.37829950952529906,
+        "count": 500,
+        "selection_proxy": 4.948553587269783
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 5163.355304899975,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.7897164025306702,
+        "supervision": 0.7897164025306702,
+        "center_mse": 0.3065773463249207,
+        "shape_mse": 0.4831390616893768,
+        "quality_proxy": 1.1260726718902587,
+        "wire_ratio": 0.9815396385192872,
+        "bbox_ratio": 1.0725768299102783,
+        "boundary": 0.035237788617610934,
+        "grouping": 0.014011246435344219,
+        "mib": 0.00025817407306749374,
+        "overlap": 0.37829950952529906,
+        "count": 500,
+        "selection_proxy": 4.948553587269783
+      }
+    },
+    {
+      "epoch": 13,
+      "step": 13000,
+      "dev_monitor": {
+        "total": 0.8494509224891662,
+        "supervision": 0.8494509224891662,
+        "center_mse": 0.3456402864456177,
+        "shape_mse": 0.5038106391429901,
+        "quality_proxy": 1.1297344427108764,
+        "wire_ratio": 0.9605621290206909,
+        "bbox_ratio": 1.0645252771377562,
+        "boundary": 0.043717448949813845,
+        "grouping": 0.014577795118093491,
+        "mib": 0.0003001208578934893,
+        "overlap": 0.39870820140838625,
+        "count": 500,
+        "selection_proxy": 5.159289002919198
+      },
+      "train_monitor": {
+        "total": 0.774086473941803,
+        "supervision": 0.774086473941803,
+        "center_mse": 0.2944001934528351,
+        "shape_mse": 0.4796862816810608,
+        "quality_proxy": 1.1160683450698852,
+        "wire_ratio": 0.9687499322891235,
+        "bbox_ratio": 1.0608214826583862,
+        "boundary": 0.03709222388267517,
+        "grouping": 0.01330361869931221,
+        "mib": 0.00024547477753367273,
+        "overlap": 0.38119935512542724,
+        "count": 500,
+        "selection_proxy": 4.966766220021248
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 5291.573963999981,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.774086473941803,
+        "supervision": 0.774086473941803,
+        "center_mse": 0.2944001934528351,
+        "shape_mse": 0.4796862816810608,
+        "quality_proxy": 1.1160683450698852,
+        "wire_ratio": 0.9687499322891235,
+        "bbox_ratio": 1.0608214826583862,
+        "boundary": 0.03709222388267517,
+        "grouping": 0.01330361869931221,
+        "mib": 0.00024547477753367273,
+        "overlap": 0.38119935512542724,
+        "count": 500,
+        "selection_proxy": 4.966766220021248
+      }
+    },
+    {
+      "epoch": 14,
+      "step": 14000,
+      "dev_monitor": {
+        "total": 0.8258812780380249,
+        "supervision": 0.8258812780380249,
+        "center_mse": 0.32439081621170046,
+        "shape_mse": 0.5014904723167419,
+        "quality_proxy": 1.1257227478027343,
+        "wire_ratio": 0.9691292591094971,
+        "bbox_ratio": 1.06856800365448,
+        "boundary": 0.03942462944984436,
+        "grouping": 0.013665430888533591,
+        "mib": 0.000347002801252529,
+        "overlap": 0.38436363530158996,
+        "count": 500,
+        "selection_proxy": 5.0106531647205355
+      },
+      "train_monitor": {
+        "total": 0.7518211221694946,
+        "supervision": 0.7518211221694946,
+        "center_mse": 0.2752669999599457,
+        "shape_mse": 0.476554119348526,
+        "quality_proxy": 1.107825834274292,
+        "wire_ratio": 0.9741271595954895,
+        "bbox_ratio": 1.0603491344451905,
+        "boundary": 0.03285691714286804,
+        "grouping": 0.012165577314794064,
+        "mib": 0.0002713361366186291,
+        "overlap": 0.36861885809898376,
+        "count": 500,
+        "selection_proxy": 4.831605471372605
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 5419.078497499984,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.7518211221694946,
+        "supervision": 0.7518211221694946,
+        "center_mse": 0.2752669999599457,
+        "shape_mse": 0.476554119348526,
+        "quality_proxy": 1.107825834274292,
+        "wire_ratio": 0.9741271595954895,
+        "bbox_ratio": 1.0603491344451905,
+        "boundary": 0.03285691714286804,
+        "grouping": 0.012165577314794064,
+        "mib": 0.0002713361366186291,
+        "overlap": 0.36861885809898376,
+        "count": 500,
+        "selection_proxy": 4.831605471372605
+      }
+    },
+    {
+      "epoch": 15,
+      "step": 15000,
+      "dev_monitor": {
+        "total": 0.8243823623657227,
+        "supervision": 0.8243823623657227,
+        "center_mse": 0.3259528903961182,
+        "shape_mse": 0.49842947363853457,
+        "quality_proxy": 1.1039348402023315,
+        "wire_ratio": 0.963227089881897,
+        "bbox_ratio": 1.05197624874115,
+        "boundary": 0.03472183346748352,
+        "grouping": 0.013125339195132256,
+        "mib": 0.00031940914364531634,
+        "overlap": 0.38756377005577086,
+        "count": 500,
+        "selection_proxy": 5.020791658878326
+      },
+      "train_monitor": {
+        "total": 0.7436515083312988,
+        "supervision": 0.7436515083312988,
+        "center_mse": 0.27023945236206054,
+        "shape_mse": 0.47341206288337706,
+        "quality_proxy": 1.095786877632141,
+        "wire_ratio": 0.971382399559021,
+        "bbox_ratio": 1.0503746976852417,
+        "boundary": 0.029506751954555512,
+        "grouping": 0.012689432330429554,
+        "mib": 0.0002579856019001454,
+        "overlap": 0.3678878679275513,
+        "count": 500,
+        "selection_proxy": 4.811848132324219
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 5548.787002799974,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.7436515083312988,
+        "supervision": 0.7436515083312988,
+        "center_mse": 0.27023945236206054,
+        "shape_mse": 0.47341206288337706,
+        "quality_proxy": 1.095786877632141,
+        "wire_ratio": 0.971382399559021,
+        "bbox_ratio": 1.0503746976852417,
+        "boundary": 0.029506751954555512,
+        "grouping": 0.012689432330429554,
+        "mib": 0.0002579856019001454,
+        "overlap": 0.3678878679275513,
+        "count": 500,
+        "selection_proxy": 4.811848132324219
+      }
+    },
+    {
+      "epoch": 16,
+      "step": 16000,
+      "dev_monitor": {
+        "total": 0.8346595907211304,
+        "supervision": 0.8346595907211304,
+        "center_mse": 0.33791635918617247,
+        "shape_mse": 0.4967432293891907,
+        "quality_proxy": 1.1204280376434326,
+        "wire_ratio": 0.9610481204986572,
+        "bbox_ratio": 1.0552104530334472,
+        "boundary": 0.04237975037097931,
+        "grouping": 0.013443086728453636,
+        "mib": 0.0003265442402334884,
+        "overlap": 0.39011467599868777,
+        "count": 500,
+        "selection_proxy": 5.063307777166367
+      },
+      "train_monitor": {
+        "total": 0.7616473774909973,
+        "supervision": 0.7616473774909973,
+        "center_mse": 0.2892286853790283,
+        "shape_mse": 0.47241869592666624,
+        "quality_proxy": 1.1045865364074707,
+        "wire_ratio": 0.9691714811325073,
+        "bbox_ratio": 1.049294921875,
+        "boundary": 0.035058647125959394,
+        "grouping": 0.012356483548879624,
+        "mib": 0.00026154700992628933,
+        "overlap": 0.37199203586578367,
+        "count": 500,
+        "selection_proxy": 4.862589263939857
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 5678.04187029996,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.7616473774909973,
+        "supervision": 0.7616473774909973,
+        "center_mse": 0.2892286853790283,
+        "shape_mse": 0.47241869592666624,
+        "quality_proxy": 1.1045865364074707,
+        "wire_ratio": 0.9691714811325073,
+        "bbox_ratio": 1.049294921875,
+        "boundary": 0.035058647125959394,
+        "grouping": 0.012356483548879624,
+        "mib": 0.00026154700992628933,
+        "overlap": 0.37199203586578367,
+        "count": 500,
+        "selection_proxy": 4.862589263939857
+      }
+    },
+    {
+      "epoch": 17,
+      "step": 17000,
+      "dev_monitor": {
+        "total": 0.8056636877059936,
+        "supervision": 0.8056636877059936,
+        "center_mse": 0.31141858220100405,
+        "shape_mse": 0.4942451033592224,
+        "quality_proxy": 1.1067784004211425,
+        "wire_ratio": 0.9659700498580933,
+        "bbox_ratio": 1.0645580263137817,
+        "boundary": 0.03369109904766083,
+        "grouping": 0.011754498571157455,
+        "mib": 0.00031158505217172204,
+        "overlap": 0.36730363035202024,
+        "count": 500,
+        "selection_proxy": 4.820097888326645
+      },
+      "train_monitor": {
+        "total": 0.726443998336792,
+        "supervision": 0.726443998336792,
+        "center_mse": 0.2579523048400879,
+        "shape_mse": 0.46849169278144837,
+        "quality_proxy": 1.098954824447632,
+        "wire_ratio": 0.9734299535751343,
+        "bbox_ratio": 1.0631929006576537,
+        "boundary": 0.028888622283935548,
+        "grouping": 0.011168772056698799,
+        "mib": 0.00026430491625797003,
+        "overlap": 0.3480512628555298,
+        "count": 500,
+        "selection_proxy": 4.615789652919769
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 5805.562577199948,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.726443998336792,
+        "supervision": 0.726443998336792,
+        "center_mse": 0.2579523048400879,
+        "shape_mse": 0.46849169278144837,
+        "quality_proxy": 1.098954824447632,
+        "wire_ratio": 0.9734299535751343,
+        "bbox_ratio": 1.0631929006576537,
+        "boundary": 0.028888622283935548,
+        "grouping": 0.011168772056698799,
+        "mib": 0.00026430491625797003,
+        "overlap": 0.3480512628555298,
+        "count": 500,
+        "selection_proxy": 4.615789652919769
+      }
+    },
+    {
+      "epoch": 18,
+      "step": 18000,
+      "dev_monitor": {
+        "total": 0.8012795386314392,
+        "supervision": 0.8012795386314392,
+        "center_mse": 0.31109358358383177,
+        "shape_mse": 0.49018595218658445,
+        "quality_proxy": 1.0965174884796143,
+        "wire_ratio": 0.9650141339302063,
+        "bbox_ratio": 1.0490001974105836,
+        "boundary": 0.03233964473009109,
+        "grouping": 0.012079823106527329,
+        "mib": 0.00033569698419887574,
+        "overlap": 0.36496255779266357,
+        "count": 500,
+        "selection_proxy": 4.786207043337822
+      },
+      "train_monitor": {
+        "total": 0.7176418175697327,
+        "supervision": 0.7176418175697327,
+        "center_mse": 0.2538984684944153,
+        "shape_mse": 0.4637433404922485,
+        "quality_proxy": 1.0855250759124755,
+        "wire_ratio": 0.9717628350257873,
+        "bbox_ratio": 1.0445960388183593,
+        "boundary": 0.027284367501735688,
+        "grouping": 0.011122864492237568,
+        "mib": 0.0002655880134552717,
+        "overlap": 0.34824988746643065,
+        "count": 500,
+        "selection_proxy": 4.603906041455269
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 5929.541018499993,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.7176418175697327,
+        "supervision": 0.7176418175697327,
+        "center_mse": 0.2538984684944153,
+        "shape_mse": 0.4637433404922485,
+        "quality_proxy": 1.0855250759124755,
+        "wire_ratio": 0.9717628350257873,
+        "bbox_ratio": 1.0445960388183593,
+        "boundary": 0.027284367501735688,
+        "grouping": 0.011122864492237568,
+        "mib": 0.0002655880134552717,
+        "overlap": 0.34824988746643065,
+        "count": 500,
+        "selection_proxy": 4.603906041455269
+      }
+    },
+    {
+      "epoch": 19,
+      "step": 19000,
+      "dev_monitor": {
+        "total": 0.8075360617637635,
+        "supervision": 0.8075360617637635,
+        "center_mse": 0.3189972815513611,
+        "shape_mse": 0.4885387835502625,
+        "quality_proxy": 1.118156349182129,
+        "wire_ratio": 0.9692591457366944,
+        "bbox_ratio": 1.0654420003890992,
+        "boundary": 0.03678772404789925,
+        "grouping": 0.01326789291203022,
+        "mib": 0.00034727515786653384,
+        "overlap": 0.3566605870723724,
+        "count": 500,
+        "selection_proxy": 4.725139022994041
+      },
+      "train_monitor": {
+        "total": 0.7271603288650512,
+        "supervision": 0.7271603288650512,
+        "center_mse": 0.2639679968357086,
+        "shape_mse": 0.46319233274459837,
+        "quality_proxy": 1.1047996826171875,
+        "wire_ratio": 0.9756087560653687,
+        "bbox_ratio": 1.061133620262146,
+        "boundary": 0.029935589730739592,
+        "grouping": 0.012984883069992065,
+        "mib": 0.0002937721279449761,
+        "overlap": 0.33914155220985415,
+        "count": 500,
+        "selection_proxy": 4.532573221158982
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 6039.38266959996,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.7271603288650512,
+        "supervision": 0.7271603288650512,
+        "center_mse": 0.2639679968357086,
+        "shape_mse": 0.46319233274459837,
+        "quality_proxy": 1.1047996826171875,
+        "wire_ratio": 0.9756087560653687,
+        "bbox_ratio": 1.061133620262146,
+        "boundary": 0.029935589730739592,
+        "grouping": 0.012984883069992065,
+        "mib": 0.0002937721279449761,
+        "overlap": 0.33914155220985415,
+        "count": 500,
+        "selection_proxy": 4.532573221158982
+      }
+    },
+    {
+      "epoch": 20,
+      "step": 20000,
+      "dev_monitor": {
+        "total": 0.7972113099098206,
+        "supervision": 0.7972113099098206,
+        "center_mse": 0.312388701915741,
+        "shape_mse": 0.48482259845733644,
+        "quality_proxy": 1.1042544507980347,
+        "wire_ratio": 0.9712362575531006,
+        "bbox_ratio": 1.0692117147445679,
+        "boundary": 0.029769293665885925,
+        "grouping": 0.01192701157927513,
+        "mib": 0.00031892899749800564,
+        "overlap": 0.34800753116607663,
+        "count": 500,
+        "selection_proxy": 4.624190327954293
+      },
+      "train_monitor": {
+        "total": 0.7127974128723145,
+        "supervision": 0.7127974128723145,
+        "center_mse": 0.25400863885879515,
+        "shape_mse": 0.4587887849807739,
+        "quality_proxy": 1.0975856170654297,
+        "wire_ratio": 0.9789952044486999,
+        "bbox_ratio": 1.0664362983703612,
+        "boundary": 0.02523640504479408,
+        "grouping": 0.011931710690259934,
+        "mib": 0.00026681445160647854,
+        "overlap": 0.32886523270606993,
+        "count": 500,
+        "selection_proxy": 4.421877814769744
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 6122.020060299954,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.7127974128723145,
+        "supervision": 0.7127974128723145,
+        "center_mse": 0.25400863885879515,
+        "shape_mse": 0.4587887849807739,
+        "quality_proxy": 1.0975856170654297,
+        "wire_ratio": 0.9789952044486999,
+        "bbox_ratio": 1.0664362983703612,
+        "boundary": 0.02523640504479408,
+        "grouping": 0.011931710690259934,
+        "mib": 0.00026681445160647854,
+        "overlap": 0.32886523270606993,
+        "count": 500,
+        "selection_proxy": 4.421877814769744
+      }
+    },
+    {
+      "epoch": 21,
+      "step": 21000,
+      "dev_monitor": {
+        "total": 0.7822417345046997,
+        "supervision": 0.7822417345046997,
+        "center_mse": 0.29838472414016726,
+        "shape_mse": 0.4838570122718811,
+        "quality_proxy": 1.0927112894058228,
+        "wire_ratio": 0.9628829398155212,
+        "bbox_ratio": 1.0507960987091065,
+        "boundary": 0.03064104875922203,
+        "grouping": 0.011979764983057976,
+        "mib": 0.00031507283099927006,
+        "overlap": 0.34961716175079344,
+        "count": 500,
+        "selection_proxy": 4.627994993638993
+      },
+      "train_monitor": {
+        "total": 0.7003120846748352,
+        "supervision": 0.7003120846748352,
+        "center_mse": 0.24347215700149535,
+        "shape_mse": 0.456839923620224,
+        "quality_proxy": 1.0798401584625243,
+        "wire_ratio": 0.9701748485565186,
+        "bbox_ratio": 1.0450245418548585,
+        "boundary": 0.024674678429961204,
+        "grouping": 0.011178018011152745,
+        "mib": 0.00026753323804587124,
+        "overlap": 0.33273129630088805,
+        "count": 500,
+        "selection_proxy": 4.442168725705146
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 6207.233551299956,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.7003120846748352,
+        "supervision": 0.7003120846748352,
+        "center_mse": 0.24347215700149535,
+        "shape_mse": 0.456839923620224,
+        "quality_proxy": 1.0798401584625243,
+        "wire_ratio": 0.9701748485565186,
+        "bbox_ratio": 1.0450245418548585,
+        "boundary": 0.024674678429961204,
+        "grouping": 0.011178018011152745,
+        "mib": 0.00026753323804587124,
+        "overlap": 0.33273129630088805,
+        "count": 500,
+        "selection_proxy": 4.442168725705146
+      }
+    },
+    {
+      "epoch": 22,
+      "step": 22000,
+      "dev_monitor": {
+        "total": 0.7728441581726074,
+        "supervision": 0.7728441581726074,
+        "center_mse": 0.29308093214035036,
+        "shape_mse": 0.4797632291316986,
+        "quality_proxy": 1.1001149101257324,
+        "wire_ratio": 0.9799961633682251,
+        "bbox_ratio": 1.0771154460906982,
+        "boundary": 0.024519838929176332,
+        "grouping": 0.010997896611690521,
+        "mib": 0.00026180569879943503,
+        "overlap": 0.3318236598968506,
+        "count": 500,
+        "selection_proxy": 4.456993717002868
+      },
+      "train_monitor": {
+        "total": 0.6895399785041809,
+        "supervision": 0.6895399785041809,
+        "center_mse": 0.2361787419319153,
+        "shape_mse": 0.453361221075058,
+        "quality_proxy": 1.0902081003189088,
+        "wire_ratio": 0.9869284195899963,
+        "bbox_ratio": 1.073014045715332,
+        "boundary": 0.019245429798960687,
+        "grouping": 0.010654837392270565,
+        "mib": 0.00021816288493573666,
+        "overlap": 0.31389034509658814,
+        "count": 500,
+        "selection_proxy": 4.263588550209999
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 6322.712187999976,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.6895399785041809,
+        "supervision": 0.6895399785041809,
+        "center_mse": 0.2361787419319153,
+        "shape_mse": 0.453361221075058,
+        "quality_proxy": 1.0902081003189088,
+        "wire_ratio": 0.9869284195899963,
+        "bbox_ratio": 1.073014045715332,
+        "boundary": 0.019245429798960687,
+        "grouping": 0.010654837392270565,
+        "mib": 0.00021816288493573666,
+        "overlap": 0.31389034509658814,
+        "count": 500,
+        "selection_proxy": 4.263588550209999
+      }
+    },
+    {
+      "epoch": 23,
+      "step": 23000,
+      "dev_monitor": {
+        "total": 0.770270827293396,
+        "supervision": 0.770270827293396,
+        "center_mse": 0.29367498004436493,
+        "shape_mse": 0.476595841884613,
+        "quality_proxy": 1.0879539318084717,
+        "wire_ratio": 0.9686611976623535,
+        "bbox_ratio": 1.052965440750122,
+        "boundary": 0.028128463387489318,
+        "grouping": 0.010155487827956677,
+        "mib": 0.0002863510028691962,
+        "overlap": 0.3432879333496094,
+        "count": 500,
+        "selection_proxy": 4.559346806669235
+      },
+      "train_monitor": {
+        "total": 0.6889966549873352,
+        "supervision": 0.6889966549873352,
+        "center_mse": 0.238495565533638,
+        "shape_mse": 0.45050108289718627,
+        "quality_proxy": 1.0763614540100097,
+        "wire_ratio": 0.9748872365951539,
+        "bbox_ratio": 1.0479220085144043,
+        "boundary": 0.022607320308685303,
+        "grouping": 0.009634157456457616,
+        "mib": 0.00023694237519521265,
+        "overlap": 0.327145742893219,
+        "count": 500,
+        "selection_proxy": 4.382268715691566
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 6405.232821599988,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.6889966549873352,
+        "supervision": 0.6889966549873352,
+        "center_mse": 0.238495565533638,
+        "shape_mse": 0.45050108289718627,
+        "quality_proxy": 1.0763614540100097,
+        "wire_ratio": 0.9748872365951539,
+        "bbox_ratio": 1.0479220085144043,
+        "boundary": 0.022607320308685303,
+        "grouping": 0.009634157456457616,
+        "mib": 0.00023694237519521265,
+        "overlap": 0.327145742893219,
+        "count": 500,
+        "selection_proxy": 4.382268715691566
+      }
+    },
+    {
+      "epoch": 24,
+      "step": 24000,
+      "dev_monitor": {
+        "total": 0.7786856031417847,
+        "supervision": 0.7786856031417847,
+        "center_mse": 0.30160424995422364,
+        "shape_mse": 0.47708134865760804,
+        "quality_proxy": 1.0755857782363891,
+        "wire_ratio": 0.9641384925842286,
+        "bbox_ratio": 1.0401011352539062,
+        "boundary": 0.026923007637262346,
+        "grouping": 0.00953513741493225,
+        "mib": 0.00027484052104409783,
+        "overlap": 0.3447409038543701,
+        "count": 500,
+        "selection_proxy": 4.561929096937179
+      },
+      "train_monitor": {
+        "total": 0.6953961534500122,
+        "supervision": 0.6953961534500122,
+        "center_mse": 0.24457622814178467,
+        "shape_mse": 0.4508199272155762,
+        "quality_proxy": 1.0682492189407349,
+        "wire_ratio": 0.9715081615447998,
+        "bbox_ratio": 1.0360966758728027,
+        "boundary": 0.02294614511728287,
+        "grouping": 0.009033279046416282,
+        "mib": 0.00024396706133848056,
+        "overlap": 0.32893273162841796,
+        "count": 500,
+        "selection_proxy": 4.392346342897414
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 6487.369175499945,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.6953961534500122,
+        "supervision": 0.6953961534500122,
+        "center_mse": 0.24457622814178467,
+        "shape_mse": 0.4508199272155762,
+        "quality_proxy": 1.0682492189407349,
+        "wire_ratio": 0.9715081615447998,
+        "bbox_ratio": 1.0360966758728027,
+        "boundary": 0.02294614511728287,
+        "grouping": 0.009033279046416282,
+        "mib": 0.00024396706133848056,
+        "overlap": 0.32893273162841796,
+        "count": 500,
+        "selection_proxy": 4.392346342897414
+      }
+    },
+    {
+      "epoch": 25,
+      "step": 25000,
+      "dev_monitor": {
+        "total": 0.7533025875091552,
+        "supervision": 0.7533025875091552,
+        "center_mse": 0.2807011232376099,
+        "shape_mse": 0.4726014609336853,
+        "quality_proxy": 1.0664558563232422,
+        "wire_ratio": 0.9631418914794921,
+        "bbox_ratio": 1.0391410884857177,
+        "boundary": 0.023484680414199828,
+        "grouping": 0.008901116080582142,
+        "mib": 0.0002713852465385571,
+        "overlap": 0.3381707901954651,
+        "count": 500,
+        "selection_proxy": 4.4858288876533505
+      },
+      "train_monitor": {
+        "total": 0.6706726288795472,
+        "supervision": 0.6706726288795472,
+        "center_mse": 0.22433137583732604,
+        "shape_mse": 0.446341251373291,
+        "quality_proxy": 1.0580823249816895,
+        "wire_ratio": 0.9703897213935853,
+        "bbox_ratio": 1.0342707996368408,
+        "boundary": 0.01893275624513626,
+        "grouping": 0.008710756845772267,
+        "mib": 0.00023252573501667938,
+        "overlap": 0.32134832310676575,
+        "count": 500,
+        "selection_proxy": 4.305099187493324
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 6569.898253899941,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.6706726288795472,
+        "supervision": 0.6706726288795472,
+        "center_mse": 0.22433137583732604,
+        "shape_mse": 0.446341251373291,
+        "quality_proxy": 1.0580823249816895,
+        "wire_ratio": 0.9703897213935853,
+        "bbox_ratio": 1.0342707996368408,
+        "boundary": 0.01893275624513626,
+        "grouping": 0.008710756845772267,
+        "mib": 0.00023252573501667938,
+        "overlap": 0.32134832310676575,
+        "count": 500,
+        "selection_proxy": 4.305099187493324
+      }
+    },
+    {
+      "epoch": 26,
+      "step": 26000,
+      "dev_monitor": {
+        "total": 0.7744002437591553,
+        "supervision": 0.7744002437591553,
+        "center_mse": 0.30264574909210207,
+        "shape_mse": 0.47175449633598326,
+        "quality_proxy": 1.1015022029876709,
+        "wire_ratio": 0.9796979026794433,
+        "bbox_ratio": 1.0687446393966675,
+        "boundary": 0.02778378289937973,
+        "grouping": 0.010615024641156197,
+        "mib": 0.00024166433804202826,
+        "overlap": 0.3218475651741028,
+        "count": 500,
+        "selection_proxy": 4.358697866916657
+      },
+      "train_monitor": {
+        "total": 0.6807952280044556,
+        "supervision": 0.6807952280044556,
+        "center_mse": 0.23714706301689148,
+        "shape_mse": 0.44364815855026246,
+        "quality_proxy": 1.0857472915649413,
+        "wire_ratio": 0.9841857891082764,
+        "bbox_ratio": 1.0605760021209716,
+        "boundary": 0.021794994160532953,
+        "grouping": 0.009683294601738453,
+        "mib": 0.00020490366051672027,
+        "overlap": 0.30636898946762087,
+        "count": 500,
+        "selection_proxy": 4.183476947641373
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 6652.140492799983,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.6807952280044556,
+        "supervision": 0.6807952280044556,
+        "center_mse": 0.23714706301689148,
+        "shape_mse": 0.44364815855026246,
+        "quality_proxy": 1.0857472915649413,
+        "wire_ratio": 0.9841857891082764,
+        "bbox_ratio": 1.0605760021209716,
+        "boundary": 0.021794994160532953,
+        "grouping": 0.009683294601738453,
+        "mib": 0.00020490366051672027,
+        "overlap": 0.30636898946762087,
+        "count": 500,
+        "selection_proxy": 4.183476947641373
+      }
+    },
+    {
+      "epoch": 27,
+      "step": 27000,
+      "dev_monitor": {
+        "total": 0.7578659882545471,
+        "supervision": 0.7578659882545471,
+        "center_mse": 0.28752653419971463,
+        "shape_mse": 0.47033943963050845,
+        "quality_proxy": 1.0667307739257812,
+        "wire_ratio": 0.9585216922760009,
+        "bbox_ratio": 1.0358103847503661,
+        "boundary": 0.024937354296445845,
+        "grouping": 0.00962857934832573,
+        "mib": 0.00021644073585048318,
+        "overlap": 0.33750458717346193,
+        "count": 500,
+        "selection_proxy": 4.479669945073128
+      },
+      "train_monitor": {
+        "total": 0.6720603609085083,
+        "supervision": 0.6720603609085083,
+        "center_mse": 0.22899544382095338,
+        "shape_mse": 0.4430649151802063,
+        "quality_proxy": 1.0583793601989746,
+        "wire_ratio": 0.9660136685371399,
+        "bbox_ratio": 1.0312777891159057,
+        "boundary": 0.020757252514362334,
+        "grouping": 0.008918471209704876,
+        "mib": 0.00019109066866803914,
+        "overlap": 0.3190651800632477,
+        "count": 500,
+        "selection_proxy": 4.282634178876877
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 6734.232053799962,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.6720603609085083,
+        "supervision": 0.6720603609085083,
+        "center_mse": 0.22899544382095338,
+        "shape_mse": 0.4430649151802063,
+        "quality_proxy": 1.0583793601989746,
+        "wire_ratio": 0.9660136685371399,
+        "bbox_ratio": 1.0312777891159057,
+        "boundary": 0.020757252514362334,
+        "grouping": 0.008918471209704876,
+        "mib": 0.00019109066866803914,
+        "overlap": 0.3190651800632477,
+        "count": 500,
+        "selection_proxy": 4.282634178876877
+      }
+    },
+    {
+      "epoch": 28,
+      "step": 28000,
+      "dev_monitor": {
+        "total": 0.7533862481117248,
+        "supervision": 0.7533862481117248,
+        "center_mse": 0.28328471422195434,
+        "shape_mse": 0.4701015362739563,
+        "quality_proxy": 1.0917961750030518,
+        "wire_ratio": 0.9793820896148682,
+        "bbox_ratio": 1.0670999488830566,
+        "boundary": 0.022138489812612534,
+        "grouping": 0.011910160705447197,
+        "mib": 0.0002289335655514151,
+        "overlap": 0.31129678869247435,
+        "count": 500,
+        "selection_proxy": 4.242433374333381
+      },
+      "train_monitor": {
+        "total": 0.6674643311500549,
+        "supervision": 0.6674643311500549,
+        "center_mse": 0.22489518213272094,
+        "shape_mse": 0.44256914472579956,
+        "quality_proxy": 1.0888751163482666,
+        "wire_ratio": 0.9853178491592407,
+        "bbox_ratio": 1.066458924293518,
+        "boundary": 0.019432377099990846,
+        "grouping": 0.011866733029484749,
+        "mib": 0.00019425171116017737,
+        "overlap": 0.2940060248374939,
+        "count": 500,
+        "selection_proxy": 4.062308581280708
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 6816.875741599943,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.6674643311500549,
+        "supervision": 0.6674643311500549,
+        "center_mse": 0.22489518213272094,
+        "shape_mse": 0.44256914472579956,
+        "quality_proxy": 1.0888751163482666,
+        "wire_ratio": 0.9853178491592407,
+        "bbox_ratio": 1.066458924293518,
+        "boundary": 0.019432377099990846,
+        "grouping": 0.011866733029484749,
+        "mib": 0.00019425171116017737,
+        "overlap": 0.2940060248374939,
+        "count": 500,
+        "selection_proxy": 4.062308581280708
+      }
+    },
+    {
+      "epoch": 29,
+      "step": 29000,
+      "dev_monitor": {
+        "total": 0.7472778062820434,
+        "supervision": 0.7472778062820434,
+        "center_mse": 0.27928797841072084,
+        "shape_mse": 0.467989821434021,
+        "quality_proxy": 1.085640464782715,
+        "wire_ratio": 0.9719239730834961,
+        "bbox_ratio": 1.0589680395126342,
+        "boundary": 0.024657453268766404,
+        "grouping": 0.010221477136015893,
+        "mib": 0.00021829678915673867,
+        "overlap": 0.31810522031784055,
+        "count": 500,
+        "selection_proxy": 4.304056558275223
+      },
+      "train_monitor": {
+        "total": 0.6596060810089112,
+        "supervision": 0.6596060810089112,
+        "center_mse": 0.21969605374336243,
+        "shape_mse": 0.4399100317955017,
+        "quality_proxy": 1.0760433168411254,
+        "wire_ratio": 0.9781427216529847,
+        "bbox_ratio": 1.0539970054626464,
+        "boundary": 0.0201978916823864,
+        "grouping": 0.009609303209930658,
+        "mib": 0.0001795355505309999,
+        "overlap": 0.30029291129112246,
+        "count": 500,
+        "selection_proxy": 4.111952733802795
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 6899.5151020999765,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.6596060810089112,
+        "supervision": 0.6596060810089112,
+        "center_mse": 0.21969605374336243,
+        "shape_mse": 0.4399100317955017,
+        "quality_proxy": 1.0760433168411254,
+        "wire_ratio": 0.9781427216529847,
+        "bbox_ratio": 1.0539970054626464,
+        "boundary": 0.0201978916823864,
+        "grouping": 0.009609303209930658,
+        "mib": 0.0001795355505309999,
+        "overlap": 0.30029291129112246,
+        "count": 500,
+        "selection_proxy": 4.111952733802795
+      }
+    },
+    {
+      "epoch": 30,
+      "step": 30000,
+      "dev_monitor": {
+        "total": 0.7607066049575806,
+        "supervision": 0.7607066049575806,
+        "center_mse": 0.29264966821670535,
+        "shape_mse": 0.4680569317340851,
+        "quality_proxy": 1.0919667596817018,
+        "wire_ratio": 0.9743861312866211,
+        "bbox_ratio": 1.0734803075790404,
+        "boundary": 0.021789581567049028,
+        "grouping": 0.012020741671323776,
+        "mib": 0.0002064432008191943,
+        "overlap": 0.3062500970363617,
+        "count": 500,
+        "selection_proxy": 4.192503060293197
+      },
+      "train_monitor": {
+        "total": 0.6757922420501709,
+        "supervision": 0.6757922420501709,
+        "center_mse": 0.23490585231781005,
+        "shape_mse": 0.44088639068603513,
+        "quality_proxy": 1.086350498199463,
+        "wire_ratio": 0.9821637229919433,
+        "bbox_ratio": 1.0726951999664307,
+        "boundary": 0.018215678334236145,
+        "grouping": 0.011067642614245414,
+        "mib": 0.00017720502815791406,
+        "overlap": 0.28765518236160276,
+        "count": 500,
+        "selection_proxy": 3.996691933917999
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 6996.991034499952,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.6757922420501709,
+        "supervision": 0.6757922420501709,
+        "center_mse": 0.23490585231781005,
+        "shape_mse": 0.44088639068603513,
+        "quality_proxy": 1.086350498199463,
+        "wire_ratio": 0.9821637229919433,
+        "bbox_ratio": 1.0726951999664307,
+        "boundary": 0.018215678334236145,
+        "grouping": 0.011067642614245414,
+        "mib": 0.00017720502815791406,
+        "overlap": 0.28765518236160276,
+        "count": 500,
+        "selection_proxy": 3.996691933917999
+      }
+    },
+    {
+      "epoch": 31,
+      "step": 31000,
+      "dev_monitor": {
+        "total": 0.741322862625122,
+        "supervision": 0.741322862625122,
+        "center_mse": 0.2765313289165497,
+        "shape_mse": 0.4647915408611298,
+        "quality_proxy": 1.0727710609436034,
+        "wire_ratio": 0.9688893432617187,
+        "bbox_ratio": 1.044600606918335,
+        "boundary": 0.022784570813179018,
+        "grouping": 0.010015155456960202,
+        "mib": 0.0002133126116823405,
+        "overlap": 0.32217462968826294,
+        "count": 500,
+        "selection_proxy": 4.331583500957489
+      },
+      "train_monitor": {
+        "total": 0.6528361024856567,
+        "supervision": 0.6528361024856567,
+        "center_mse": 0.2161728677749634,
+        "shape_mse": 0.4366632344722748,
+        "quality_proxy": 1.0650620012283325,
+        "wire_ratio": 0.976662865638733,
+        "bbox_ratio": 1.0408925056457519,
+        "boundary": 0.019075206965208053,
+        "grouping": 0.008884705886244773,
+        "mib": 0.00018224361905595289,
+        "overlap": 0.30372993659973146,
+        "count": 500,
+        "selection_proxy": 4.13500317234993
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 7127.552514599985,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.6528361024856567,
+        "supervision": 0.6528361024856567,
+        "center_mse": 0.2161728677749634,
+        "shape_mse": 0.4366632344722748,
+        "quality_proxy": 1.0650620012283325,
+        "wire_ratio": 0.976662865638733,
+        "bbox_ratio": 1.0408925056457519,
+        "boundary": 0.019075206965208053,
+        "grouping": 0.008884705886244773,
+        "mib": 0.00018224361905595289,
+        "overlap": 0.30372993659973146,
+        "count": 500,
+        "selection_proxy": 4.13500317234993
+      }
+    },
+    {
+      "epoch": 32,
+      "step": 32000,
+      "dev_monitor": {
+        "total": 0.7324209709167481,
+        "supervision": 0.7324209709167481,
+        "center_mse": 0.2675619163513184,
+        "shape_mse": 0.4648590574264526,
+        "quality_proxy": 1.0662873001098634,
+        "wire_ratio": 0.9725248236656189,
+        "bbox_ratio": 1.0417726545333863,
+        "boundary": 0.021159571409225465,
+        "grouping": 0.008188932307064533,
+        "mib": 0.0002207795095164329,
+        "overlap": 0.32254132533073426,
+        "count": 500,
+        "selection_proxy": 4.328321601963044
+      },
+      "train_monitor": {
+        "total": 0.6500414266586304,
+        "supervision": 0.6500414266586304,
+        "center_mse": 0.2137223494052887,
+        "shape_mse": 0.4363190770149231,
+        "quality_proxy": 1.0608309698104859,
+        "wire_ratio": 0.9789987006187439,
+        "bbox_ratio": 1.0386023960113526,
+        "boundary": 0.017778581947088243,
+        "grouping": 0.008052305057644845,
+        "mib": 0.00018433114149956964,
+        "overlap": 0.30253334188461306,
+        "count": 500,
+        "selection_proxy": 4.118666459989548
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 7256.608666299959,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.6500414266586304,
+        "supervision": 0.6500414266586304,
+        "center_mse": 0.2137223494052887,
+        "shape_mse": 0.4363190770149231,
+        "quality_proxy": 1.0608309698104859,
+        "wire_ratio": 0.9789987006187439,
+        "bbox_ratio": 1.0386023960113526,
+        "boundary": 0.017778581947088243,
+        "grouping": 0.008052305057644845,
+        "mib": 0.00018433114149956964,
+        "overlap": 0.30253334188461306,
+        "count": 500,
+        "selection_proxy": 4.118666459989548
+      }
+    },
+    {
+      "epoch": 33,
+      "step": 33000,
+      "dev_monitor": {
+        "total": 0.7308815956115723,
+        "supervision": 0.7308815956115723,
+        "center_mse": 0.26809847927093505,
+        "shape_mse": 0.46278311347961426,
+        "quality_proxy": 1.0746696815490722,
+        "wire_ratio": 0.9719884595870971,
+        "bbox_ratio": 1.0514849348068238,
+        "boundary": 0.021587699607014656,
+        "grouping": 0.009672281920909881,
+        "mib": 0.00020650733151705936,
+        "overlap": 0.3151439700126648,
+        "count": 500,
+        "selection_proxy": 4.262653461456299
+      },
+      "train_monitor": {
+        "total": 0.6442772459983825,
+        "supervision": 0.6442772459983825,
+        "center_mse": 0.21041127681732177,
+        "shape_mse": 0.4338659648895264,
+        "quality_proxy": 1.0692288951873778,
+        "wire_ratio": 0.9793933839797974,
+        "bbox_ratio": 1.0500198307037354,
+        "boundary": 0.01836197155714035,
+        "grouping": 0.00871712850034237,
+        "mib": 0.0001820440693118144,
+        "overlap": 0.2958174977302551,
+        "count": 500,
+        "selection_proxy": 4.059617734789848
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 7384.408807699976,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.6442772459983825,
+        "supervision": 0.6442772459983825,
+        "center_mse": 0.21041127681732177,
+        "shape_mse": 0.4338659648895264,
+        "quality_proxy": 1.0692288951873778,
+        "wire_ratio": 0.9793933839797974,
+        "bbox_ratio": 1.0500198307037354,
+        "boundary": 0.01836197155714035,
+        "grouping": 0.00871712850034237,
+        "mib": 0.0001820440693118144,
+        "overlap": 0.2958174977302551,
+        "count": 500,
+        "selection_proxy": 4.059617734789848
+      }
+    },
+    {
+      "epoch": 34,
+      "step": 34000,
+      "dev_monitor": {
+        "total": 0.7431863250732422,
+        "supervision": 0.7431863250732422,
+        "center_mse": 0.2806862088441849,
+        "shape_mse": 0.46250011706352234,
+        "quality_proxy": 1.0801531925201415,
+        "wire_ratio": 0.9733522291183472,
+        "bbox_ratio": 1.0613515157699585,
+        "boundary": 0.020938644379377366,
+        "grouping": 0.010251394718885422,
+        "mib": 0.00021062633697874845,
+        "overlap": 0.3046020708084106,
+        "count": 500,
+        "selection_proxy": 4.16333321685791
+      },
+      "train_monitor": {
+        "total": 0.6584620428085327,
+        "supervision": 0.6584620428085327,
+        "center_mse": 0.22398031938076018,
+        "shape_mse": 0.4344817171096802,
+        "quality_proxy": 1.0744571132659912,
+        "wire_ratio": 0.9801614866256714,
+        "bbox_ratio": 1.0598288555145263,
+        "boundary": 0.017614473938941954,
+        "grouping": 0.009436946246773005,
+        "mib": 0.0001795408637262881,
+        "overlap": 0.2869845492839813,
+        "count": 500,
+        "selection_proxy": 3.977225708246231
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 7509.00257479999,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.6584620428085327,
+        "supervision": 0.6584620428085327,
+        "center_mse": 0.22398031938076018,
+        "shape_mse": 0.4344817171096802,
+        "quality_proxy": 1.0744571132659912,
+        "wire_ratio": 0.9801614866256714,
+        "bbox_ratio": 1.0598288555145263,
+        "boundary": 0.017614473938941954,
+        "grouping": 0.009436946246773005,
+        "mib": 0.0001795408637262881,
+        "overlap": 0.2869845492839813,
+        "count": 500,
+        "selection_proxy": 3.977225708246231
+      }
+    },
+    {
+      "epoch": 35,
+      "step": 35000,
+      "dev_monitor": {
+        "total": 0.7559079356193542,
+        "supervision": 0.7559079356193542,
+        "center_mse": 0.29163068628311156,
+        "shape_mse": 0.4642772603034973,
+        "quality_proxy": 1.074755877494812,
+        "wire_ratio": 0.9692582893371582,
+        "bbox_ratio": 1.0478835144042968,
+        "boundary": 0.023045495361089706,
+        "grouping": 0.009859491005539895,
+        "mib": 0.0001875058296136558,
+        "overlap": 0.3159874131679535,
+        "count": 500,
+        "selection_proxy": 4.272425405955315
+      },
+      "train_monitor": {
+        "total": 0.6676591377258301,
+        "supervision": 0.6676591377258301,
+        "center_mse": 0.2332958860397339,
+        "shape_mse": 0.4343632535934448,
+        "quality_proxy": 1.0710600051879884,
+        "wire_ratio": 0.9761996273994445,
+        "bbox_ratio": 1.0450687160491943,
+        "boundary": 0.02058947688341141,
+        "grouping": 0.009476159784942866,
+        "mib": 0.00014728069215198046,
+        "overlap": 0.2981313304901123,
+        "count": 500,
+        "selection_proxy": 4.085756266975403
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 7634.676198399975,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.6676591377258301,
+        "supervision": 0.6676591377258301,
+        "center_mse": 0.2332958860397339,
+        "shape_mse": 0.4343632535934448,
+        "quality_proxy": 1.0710600051879884,
+        "wire_ratio": 0.9761996273994445,
+        "bbox_ratio": 1.0450687160491943,
+        "boundary": 0.02058947688341141,
+        "grouping": 0.009476159784942866,
+        "mib": 0.00014728069215198046,
+        "overlap": 0.2981313304901123,
+        "count": 500,
+        "selection_proxy": 4.085756266975403
+      }
+    },
+    {
+      "epoch": 36,
+      "step": 36000,
+      "dev_monitor": {
+        "total": 0.7441899681091309,
+        "supervision": 0.7441899681091309,
+        "center_mse": 0.2829543499946594,
+        "shape_mse": 0.4612356202602386,
+        "quality_proxy": 1.0651306800842286,
+        "wire_ratio": 0.9677202138900757,
+        "bbox_ratio": 1.0349951667785644,
+        "boundary": 0.02218227791786194,
+        "grouping": 0.009519182205200195,
+        "mib": 0.00018502668419387191,
+        "overlap": 0.31573152327537535,
+        "count": 500,
+        "selection_proxy": 4.259655411243439
+      },
+      "train_monitor": {
+        "total": 0.6462540717124939,
+        "supervision": 0.6462540717124939,
+        "center_mse": 0.21458637189865112,
+        "shape_mse": 0.43166769194602966,
+        "quality_proxy": 1.057330877304077,
+        "wire_ratio": 0.974684461593628,
+        "bbox_ratio": 1.0304854106903076,
+        "boundary": 0.01790732678771019,
+        "grouping": 0.009313123639672995,
+        "mib": 0.00015251281473319976,
+        "overlap": 0.29825033283233643,
+        "count": 500,
+        "selection_proxy": 4.072146909213066
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 7759.523525699973,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.6462540717124939,
+        "supervision": 0.6462540717124939,
+        "center_mse": 0.21458637189865112,
+        "shape_mse": 0.43166769194602966,
+        "quality_proxy": 1.057330877304077,
+        "wire_ratio": 0.974684461593628,
+        "bbox_ratio": 1.0304854106903076,
+        "boundary": 0.01790732678771019,
+        "grouping": 0.009313123639672995,
+        "mib": 0.00015251281473319976,
+        "overlap": 0.29825033283233643,
+        "count": 500,
+        "selection_proxy": 4.072146909213066
+      }
+    },
+    {
+      "epoch": 37,
+      "step": 37000,
+      "dev_monitor": {
+        "total": 0.7309709954261779,
+        "supervision": 0.7309709954261779,
+        "center_mse": 0.2708942093849182,
+        "shape_mse": 0.4600767955780029,
+        "quality_proxy": 1.0787629795074463,
+        "wire_ratio": 0.9747351112365723,
+        "bbox_ratio": 1.0487090139389037,
+        "boundary": 0.024248789101839065,
+        "grouping": 0.009083499401807785,
+        "mib": 0.00018817790423054248,
+        "overlap": 0.31199036836624144,
+        "count": 500,
+        "selection_proxy": 4.23521521294117
+      },
+      "train_monitor": {
+        "total": 0.6469686641693115,
+        "supervision": 0.6469686641693115,
+        "center_mse": 0.21718716406822206,
+        "shape_mse": 0.4297815053462982,
+        "quality_proxy": 1.0703086853027344,
+        "wire_ratio": 0.9803418898582459,
+        "bbox_ratio": 1.044277859687805,
+        "boundary": 0.019982613533735274,
+        "grouping": 0.008861440367996692,
+        "mib": 0.00015534995953203179,
+        "overlap": 0.29467049264907835,
+        "count": 500,
+        "selection_proxy": 4.049362045001983
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 7884.79888789996,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.6469686641693115,
+        "supervision": 0.6469686641693115,
+        "center_mse": 0.21718716406822206,
+        "shape_mse": 0.4297815053462982,
+        "quality_proxy": 1.0703086853027344,
+        "wire_ratio": 0.9803418898582459,
+        "bbox_ratio": 1.044277859687805,
+        "boundary": 0.019982613533735274,
+        "grouping": 0.008861440367996692,
+        "mib": 0.00015534995953203179,
+        "overlap": 0.29467049264907835,
+        "count": 500,
+        "selection_proxy": 4.049362045001983
+      }
+    },
+    {
+      "epoch": 38,
+      "step": 38000,
+      "dev_monitor": {
+        "total": 0.7202331027984619,
+        "supervision": 0.7202331027984619,
+        "center_mse": 0.26144506013393404,
+        "shape_mse": 0.45878804445266724,
+        "quality_proxy": 1.0783479967117309,
+        "wire_ratio": 0.979517557144165,
+        "bbox_ratio": 1.0551033163070678,
+        "boundary": 0.021423393622040748,
+        "grouping": 0.008885421350598336,
+        "mib": 0.00020997161348350346,
+        "overlap": 0.30185575342178345,
+        "count": 500,
+        "selection_proxy": 4.132917186069488
+      },
+      "train_monitor": {
+        "total": 0.6325865740776062,
+        "supervision": 0.6325865740776062,
+        "center_mse": 0.20318623733520508,
+        "shape_mse": 0.42940034890174866,
+        "quality_proxy": 1.0679709539413451,
+        "wire_ratio": 0.9852212324142456,
+        "bbox_ratio": 1.05059108543396,
+        "boundary": 0.016578315675258637,
+        "grouping": 0.008285562232136726,
+        "mib": 0.0001685162553039845,
+        "overlap": 0.2841428961753845,
+        "count": 500,
+        "selection_proxy": 3.9410292443990707
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 8010.540284099989,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.6325865740776062,
+        "supervision": 0.6325865740776062,
+        "center_mse": 0.20318623733520508,
+        "shape_mse": 0.42940034890174866,
+        "quality_proxy": 1.0679709539413451,
+        "wire_ratio": 0.9852212324142456,
+        "bbox_ratio": 1.05059108543396,
+        "boundary": 0.016578315675258637,
+        "grouping": 0.008285562232136726,
+        "mib": 0.0001685162553039845,
+        "overlap": 0.2841428961753845,
+        "count": 500,
+        "selection_proxy": 3.9410292443990707
+      }
+    },
+    {
+      "epoch": 39,
+      "step": 39000,
+      "dev_monitor": {
+        "total": 0.7346470103263855,
+        "supervision": 0.7346470103263855,
+        "center_mse": 0.27339454960823056,
+        "shape_mse": 0.4612524507045746,
+        "quality_proxy": 1.0886746463775634,
+        "wire_ratio": 0.9797527451515198,
+        "bbox_ratio": 1.0683310508728028,
+        "boundary": 0.02172542789578438,
+        "grouping": 0.01039615809172392,
+        "mib": 0.00019478563155280427,
+        "overlap": 0.2961569299697876,
+        "count": 500,
+        "selection_proxy": 4.086976296591758
+      },
+      "train_monitor": {
+        "total": 0.6433887224197388,
+        "supervision": 0.6433887224197388,
+        "center_mse": 0.21360046339035035,
+        "shape_mse": 0.42978826713562013,
+        "quality_proxy": 1.0819093942642213,
+        "wire_ratio": 0.98666255235672,
+        "bbox_ratio": 1.0657025928497315,
+        "boundary": 0.017999766185879708,
+        "grouping": 0.009709772199392319,
+        "mib": 0.00015386415709508583,
+        "overlap": 0.2778342430591583,
+        "count": 500,
+        "selection_proxy": 3.8924212609767914
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 8134.474409099959,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.6433887224197388,
+        "supervision": 0.6433887224197388,
+        "center_mse": 0.21360046339035035,
+        "shape_mse": 0.42978826713562013,
+        "quality_proxy": 1.0819093942642213,
+        "wire_ratio": 0.98666255235672,
+        "bbox_ratio": 1.0657025928497315,
+        "boundary": 0.017999766185879708,
+        "grouping": 0.009709772199392319,
+        "mib": 0.00015386415709508583,
+        "overlap": 0.2778342430591583,
+        "count": 500,
+        "selection_proxy": 3.8924212609767914
+      }
+    },
+    {
+      "epoch": 40,
+      "step": 40000,
+      "dev_monitor": {
+        "total": 0.714730224609375,
+        "supervision": 0.714730224609375,
+        "center_mse": 0.25844584584236147,
+        "shape_mse": 0.4562843823432922,
+        "quality_proxy": 1.066010263442993,
+        "wire_ratio": 0.9709620618820191,
+        "bbox_ratio": 1.0428054580688477,
+        "boundary": 0.02061369526386261,
+        "grouping": 0.008762621760368346,
+        "mib": 0.00018692831264343113,
+        "overlap": 0.3114394860267639,
+        "count": 500,
+        "selection_proxy": 4.216141634941101
+      },
+      "train_monitor": {
+        "total": 0.6222605402469635,
+        "supervision": 0.6222605402469635,
+        "center_mse": 0.19697374725341796,
+        "shape_mse": 0.4252867937088013,
+        "quality_proxy": 1.0589405059814454,
+        "wire_ratio": 0.9779108018875122,
+        "bbox_ratio": 1.0396157665252685,
+        "boundary": 0.016755868926644324,
+        "grouping": 0.008183724820613861,
+        "mib": 0.00014901309521519579,
+        "overlap": 0.2924760284423828,
+        "count": 500,
+        "selection_proxy": 4.014813817417622
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 8260.123485699994,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.6222605402469635,
+        "supervision": 0.6222605402469635,
+        "center_mse": 0.19697374725341796,
+        "shape_mse": 0.4252867937088013,
+        "quality_proxy": 1.0589405059814454,
+        "wire_ratio": 0.9779108018875122,
+        "bbox_ratio": 1.0396157665252685,
+        "boundary": 0.016755868926644324,
+        "grouping": 0.008183724820613861,
+        "mib": 0.00014901309521519579,
+        "overlap": 0.2924760284423828,
+        "count": 500,
+        "selection_proxy": 4.014813817417622
+      }
+    },
+    {
+      "epoch": 41,
+      "step": 41000,
+      "dev_monitor": {
+        "total": 0.7116787824630737,
+        "supervision": 0.7116787824630737,
+        "center_mse": 0.2566230924129486,
+        "shape_mse": 0.4550556898117065,
+        "quality_proxy": 1.0717287273406984,
+        "wire_ratio": 0.9743735594749451,
+        "bbox_ratio": 1.0544614677429198,
+        "boundary": 0.01947097772359848,
+        "grouping": 0.009005589246749877,
+        "mib": 0.00017904570049722678,
+        "overlap": 0.3038550853729248,
+        "count": 500,
+        "selection_proxy": 4.1458635201931
+      },
+      "train_monitor": {
+        "total": 0.6210953712463378,
+        "supervision": 0.6210953712463378,
+        "center_mse": 0.1967282497882843,
+        "shape_mse": 0.42436710953712464,
+        "quality_proxy": 1.065201723098755,
+        "wire_ratio": 0.9814992170333863,
+        "bbox_ratio": 1.0506599559783936,
+        "boundary": 0.015991932064294816,
+        "grouping": 0.008419078636914492,
+        "mib": 0.00015005631788517348,
+        "overlap": 0.28420703983306883,
+        "count": 500,
+        "selection_proxy": 3.9383268899917603
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 8375.113954899949,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.6210953712463378,
+        "supervision": 0.6210953712463378,
+        "center_mse": 0.1967282497882843,
+        "shape_mse": 0.42436710953712464,
+        "quality_proxy": 1.065201723098755,
+        "wire_ratio": 0.9814992170333863,
+        "bbox_ratio": 1.0506599559783936,
+        "boundary": 0.015991932064294816,
+        "grouping": 0.008419078636914492,
+        "mib": 0.00015005631788517348,
+        "overlap": 0.28420703983306883,
+        "count": 500,
+        "selection_proxy": 3.9383268899917603
+      }
+    },
+    {
+      "epoch": 42,
+      "step": 42000,
+      "dev_monitor": {
+        "total": 0.7230528216362,
+        "supervision": 0.7230528216362,
+        "center_mse": 0.26306185746192934,
+        "shape_mse": 0.45999095940589907,
+        "quality_proxy": 1.065220733642578,
+        "wire_ratio": 0.9721762609481811,
+        "bbox_ratio": 1.0522291564941406,
+        "boundary": 0.016800673231482505,
+        "grouping": 0.009522713012993336,
+        "mib": 0.0001856237847241573,
+        "overlap": 0.3097204990386963,
+        "count": 500,
+        "selection_proxy": 4.198578365111351
+      },
+      "train_monitor": {
+        "total": 0.6248357133865357,
+        "supervision": 0.6248357133865357,
+        "center_mse": 0.19830100631713868,
+        "shape_mse": 0.42653471779823304,
+        "quality_proxy": 1.0615276412963868,
+        "wire_ratio": 0.9791934571266174,
+        "bbox_ratio": 1.0500731296539307,
+        "boundary": 0.013425572723150253,
+        "grouping": 0.009867757424712182,
+        "mib": 0.00015384212887147443,
+        "overlap": 0.289393634557724,
+        "count": 500,
+        "selection_proxy": 3.986705772542953
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 8503.659740099974,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.6248357133865357,
+        "supervision": 0.6248357133865357,
+        "center_mse": 0.19830100631713868,
+        "shape_mse": 0.42653471779823304,
+        "quality_proxy": 1.0615276412963868,
+        "wire_ratio": 0.9791934571266174,
+        "bbox_ratio": 1.0500731296539307,
+        "boundary": 0.013425572723150253,
+        "grouping": 0.009867757424712182,
+        "mib": 0.00015384212887147443,
+        "overlap": 0.289393634557724,
+        "count": 500,
+        "selection_proxy": 3.986705772542953
+      }
+    },
+    {
+      "epoch": 43,
+      "step": 43000,
+      "dev_monitor": {
+        "total": 0.719492609500885,
+        "supervision": 0.719492609500885,
+        "center_mse": 0.26143651711940763,
+        "shape_mse": 0.45805608582496643,
+        "quality_proxy": 1.0547400283813477,
+        "wire_ratio": 0.9698740215301513,
+        "bbox_ratio": 1.0407553281784057,
+        "boundary": 0.016422474324703215,
+        "grouping": 0.008113972321152687,
+        "mib": 0.0001762148968409747,
+        "overlap": 0.3042666125297546,
+        "count": 500,
+        "selection_proxy": 4.133380784153938
+      },
+      "train_monitor": {
+        "total": 0.6221181058883667,
+        "supervision": 0.6221181058883667,
+        "center_mse": 0.19828281450271606,
+        "shape_mse": 0.423835289478302,
+        "quality_proxy": 1.0503802251815797,
+        "wire_ratio": 0.9774951891899109,
+        "bbox_ratio": 1.037961992263794,
+        "boundary": 0.013327338635921478,
+        "grouping": 0.007853415332734585,
+        "mib": 0.00014505862034275196,
+        "overlap": 0.2844783420562744,
+        "count": 500,
+        "selection_proxy": 3.926269551038742
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 8633.493173599942,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.6221181058883667,
+        "supervision": 0.6221181058883667,
+        "center_mse": 0.19828281450271606,
+        "shape_mse": 0.423835289478302,
+        "quality_proxy": 1.0503802251815797,
+        "wire_ratio": 0.9774951891899109,
+        "bbox_ratio": 1.037961992263794,
+        "boundary": 0.013327338635921478,
+        "grouping": 0.007853415332734585,
+        "mib": 0.00014505862034275196,
+        "overlap": 0.2844783420562744,
+        "count": 500,
+        "selection_proxy": 3.926269551038742
+      }
+    },
+    {
+      "epoch": 44,
+      "step": 44000,
+      "dev_monitor": {
+        "total": 0.7038156580924988,
+        "supervision": 0.7038156580924988,
+        "center_mse": 0.2527216629981995,
+        "shape_mse": 0.45109398460388184,
+        "quality_proxy": 1.0672638931274414,
+        "wire_ratio": 0.9756430063247681,
+        "bbox_ratio": 1.0506728000640868,
+        "boundary": 0.01712577584385872,
+        "grouping": 0.009731848895549775,
+        "mib": 0.0001953715335112065,
+        "overlap": 0.2918962297439575,
+        "count": 500,
+        "selection_proxy": 4.021416973471641
+      },
+      "train_monitor": {
+        "total": 0.6098120708465576,
+        "supervision": 0.6098120708465576,
+        "center_mse": 0.1913668146133423,
+        "shape_mse": 0.4184452610015869,
+        "quality_proxy": 1.0616531858444214,
+        "wire_ratio": 0.9819202480316163,
+        "bbox_ratio": 1.047230463027954,
+        "boundary": 0.014128183081746102,
+        "grouping": 0.009253434415906668,
+        "mib": 0.000157290469360305,
+        "overlap": 0.2727912018299103,
+        "count": 500,
+        "selection_proxy": 3.8200558076858524
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 5e-05,
+      "elapsed_seconds": 8761.458035199961,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.6098120708465576,
+        "supervision": 0.6098120708465576,
+        "center_mse": 0.1913668146133423,
+        "shape_mse": 0.4184452610015869,
+        "quality_proxy": 1.0616531858444214,
+        "wire_ratio": 0.9819202480316163,
+        "bbox_ratio": 1.047230463027954,
+        "boundary": 0.014128183081746102,
+        "grouping": 0.009253434415906668,
+        "mib": 0.000157290469360305,
+        "overlap": 0.2727912018299103,
+        "count": 500,
+        "selection_proxy": 3.8200558076858524
+      }
+    },
+    {
+      "epoch": 45,
+      "step": 45000,
+      "dev_monitor": {
+        "total": 0.7036877627372742,
+        "supervision": 0.7036877627372742,
+        "center_mse": 0.25168867969512937,
+        "shape_mse": 0.45199907827377317,
+        "quality_proxy": 1.062211401939392,
+        "wire_ratio": 0.974430477142334,
+        "bbox_ratio": 1.0440959968566894,
+        "boundary": 0.017979253351688384,
+        "grouping": 0.008300573505461217,
+        "mib": 0.0001942558870650828,
+        "overlap": 0.29936378049850465,
+        "count": 500,
+        "selection_proxy": 4.091033595061303
+      },
+      "train_monitor": {
+        "total": 0.6052867136001587,
+        "supervision": 0.6052867136001587,
+        "center_mse": 0.18941506481170653,
+        "shape_mse": 0.4158716530799866,
+        "quality_proxy": 1.0574763326644898,
+        "wire_ratio": 0.9808814487457276,
+        "bbox_ratio": 1.0411367416381836,
+        "boundary": 0.015142967641353608,
+        "grouping": 0.00793144640699029,
+        "mib": 0.00015920339917647653,
+        "overlap": 0.2797299280166626,
+        "count": 500,
+        "selection_proxy": 3.8850399485111238
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 5e-05,
+      "elapsed_seconds": 8894.216601299995,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.6052867136001587,
+        "supervision": 0.6052867136001587,
+        "center_mse": 0.18941506481170653,
+        "shape_mse": 0.4158716530799866,
+        "quality_proxy": 1.0574763326644898,
+        "wire_ratio": 0.9808814487457276,
+        "bbox_ratio": 1.0411367416381836,
+        "boundary": 0.015142967641353608,
+        "grouping": 0.00793144640699029,
+        "mib": 0.00015920339917647653,
+        "overlap": 0.2797299280166626,
+        "count": 500,
+        "selection_proxy": 3.8850399485111238
+      }
+    },
+    {
+      "epoch": 46,
+      "step": 46000,
+      "dev_monitor": {
+        "total": 0.7009437584877014,
+        "supervision": 0.7009437584877014,
+        "center_mse": 0.24959942519664766,
+        "shape_mse": 0.4513443238735199,
+        "quality_proxy": 1.064699538230896,
+        "wire_ratio": 0.9749712438583374,
+        "bbox_ratio": 1.0456654462814332,
+        "boundary": 0.01833167839050293,
+        "grouping": 0.008663145393133164,
+        "mib": 0.00019576633884571494,
+        "overlap": 0.2958184463977814,
+        "count": 500,
+        "selection_proxy": 4.057931190133094
+      },
+      "train_monitor": {
+        "total": 0.5981179585456848,
+        "supervision": 0.5981179585456848,
+        "center_mse": 0.18356933462619782,
+        "shape_mse": 0.4145486264228821,
+        "quality_proxy": 1.0579890480041505,
+        "wire_ratio": 0.9812198033332825,
+        "bbox_ratio": 1.041979902267456,
+        "boundary": 0.014441261202096939,
+        "grouping": 0.00859402784332633,
+        "mib": 0.0001593076070130337,
+        "overlap": 0.27691981983184816,
+        "count": 500,
+        "selection_proxy": 3.8570931442499163
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 5e-05,
+      "elapsed_seconds": 8999.284218599962,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.5981179585456848,
+        "supervision": 0.5981179585456848,
+        "center_mse": 0.18356933462619782,
+        "shape_mse": 0.4145486264228821,
+        "quality_proxy": 1.0579890480041505,
+        "wire_ratio": 0.9812198033332825,
+        "bbox_ratio": 1.041979902267456,
+        "boundary": 0.014441261202096939,
+        "grouping": 0.00859402784332633,
+        "mib": 0.0001593076070130337,
+        "overlap": 0.27691981983184816,
+        "count": 500,
+        "selection_proxy": 3.8570931442499163
+      }
+    },
+    {
+      "epoch": 47,
+      "step": 47000,
+      "dev_monitor": {
+        "total": 0.7157285203933715,
+        "supervision": 0.7157285203933715,
+        "center_mse": 0.26273345935344694,
+        "shape_mse": 0.452995058298111,
+        "quality_proxy": 1.0777738399505614,
+        "wire_ratio": 0.9852179493904114,
+        "bbox_ratio": 1.058958553314209,
+        "boundary": 0.01856111603975296,
+        "grouping": 0.009081449896097183,
+        "mib": 0.00020022903301287443,
+        "overlap": 0.2937295022010803,
+        "count": 500,
+        "selection_proxy": 4.050855287981032
+      },
+      "train_monitor": {
+        "total": 0.6065523319244385,
+        "supervision": 0.6065523319244385,
+        "center_mse": 0.1919641581773758,
+        "shape_mse": 0.41458817315101626,
+        "quality_proxy": 1.069874882698059,
+        "wire_ratio": 0.9902948722839355,
+        "bbox_ratio": 1.0554475708007813,
+        "boundary": 0.01448301187157631,
+        "grouping": 0.008859348960220814,
+        "mib": 0.0001594696488464251,
+        "overlap": 0.27230352687835696,
+        "count": 500,
+        "selection_proxy": 3.8232377680778504
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 5e-05,
+      "elapsed_seconds": 9131.154457799974,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.6065523319244385,
+        "supervision": 0.6065523319244385,
+        "center_mse": 0.1919641581773758,
+        "shape_mse": 0.41458817315101626,
+        "quality_proxy": 1.069874882698059,
+        "wire_ratio": 0.9902948722839355,
+        "bbox_ratio": 1.0554475708007813,
+        "boundary": 0.01448301187157631,
+        "grouping": 0.008859348960220814,
+        "mib": 0.0001594696488464251,
+        "overlap": 0.27230352687835696,
+        "count": 500,
+        "selection_proxy": 3.8232377680778504
+      }
+    },
+    {
+      "epoch": 48,
+      "step": 48000,
+      "dev_monitor": {
+        "total": 0.7023787288665772,
+        "supervision": 0.7023787288665772,
+        "center_mse": 0.2502174462080002,
+        "shape_mse": 0.45216128587722776,
+        "quality_proxy": 1.0595982275009155,
+        "wire_ratio": 0.9709549751281739,
+        "bbox_ratio": 1.0453483333587648,
+        "boundary": 0.01623228055238724,
+        "grouping": 0.009296712458133698,
+        "mib": 0.0001942910652142018,
+        "overlap": 0.29581271719932556,
+        "count": 500,
+        "selection_proxy": 4.0528443359374995
+      },
+      "train_monitor": {
+        "total": 0.6002619981765747,
+        "supervision": 0.6002619981765747,
+        "center_mse": 0.18446779906749725,
+        "shape_mse": 0.4157941951751709,
+        "quality_proxy": 1.0529655570983887,
+        "wire_ratio": 0.9777900910377503,
+        "bbox_ratio": 1.0418795642852783,
+        "boundary": 0.01292796452343464,
+        "grouping": 0.00847225422412157,
+        "mib": 0.00016514773224480451,
+        "overlap": 0.2760327422618866,
+        "count": 500,
+        "selection_proxy": 3.8433060796260836
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 5e-05,
+      "elapsed_seconds": 9264.159854499972,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.6002619981765747,
+        "supervision": 0.6002619981765747,
+        "center_mse": 0.18446779906749725,
+        "shape_mse": 0.4157941951751709,
+        "quality_proxy": 1.0529655570983887,
+        "wire_ratio": 0.9777900910377503,
+        "bbox_ratio": 1.0418795642852783,
+        "boundary": 0.01292796452343464,
+        "grouping": 0.00847225422412157,
+        "mib": 0.00016514773224480451,
+        "overlap": 0.2760327422618866,
+        "count": 500,
+        "selection_proxy": 3.8433060796260836
+      }
+    },
+    {
+      "epoch": 49,
+      "step": 49000,
+      "dev_monitor": {
+        "total": 0.6958052096366882,
+        "supervision": 0.6958052096366882,
+        "center_mse": 0.24571113359928132,
+        "shape_mse": 0.45009407138824464,
+        "quality_proxy": 1.062010256767273,
+        "wire_ratio": 0.9765763111114502,
+        "bbox_ratio": 1.0440168647766113,
+        "boundary": 0.01714860388636589,
+        "grouping": 0.008515972509980202,
+        "mib": 0.0001922520133666694,
+        "overlap": 0.2929207172393799,
+        "count": 500,
+        "selection_proxy": 4.026007689642906
+      },
+      "train_monitor": {
+        "total": 0.5903993887901307,
+        "supervision": 0.5903993887901307,
+        "center_mse": 0.1793936550617218,
+        "shape_mse": 0.41100573444366456,
+        "quality_proxy": 1.0552563858032227,
+        "wire_ratio": 0.982908591747284,
+        "bbox_ratio": 1.0398870258331299,
+        "boundary": 0.013701611697673798,
+        "grouping": 0.008068397492170334,
+        "mib": 0.0001592738275649026,
+        "overlap": 0.2744625124931335,
+        "count": 500,
+        "selection_proxy": 3.8294014801740643
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 2.5e-05,
+      "elapsed_seconds": 9359.697092799994,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.5903993887901307,
+        "supervision": 0.5903993887901307,
+        "center_mse": 0.1793936550617218,
+        "shape_mse": 0.41100573444366456,
+        "quality_proxy": 1.0552563858032227,
+        "wire_ratio": 0.982908591747284,
+        "bbox_ratio": 1.0398870258331299,
+        "boundary": 0.013701611697673798,
+        "grouping": 0.008068397492170334,
+        "mib": 0.0001592738275649026,
+        "overlap": 0.2744625124931335,
+        "count": 500,
+        "selection_proxy": 3.8294014801740643
+      }
+    },
+    {
+      "epoch": 50,
+      "step": 50000,
+      "dev_monitor": {
+        "total": 0.6929017004966735,
+        "supervision": 0.6929017004966735,
+        "center_mse": 0.24410823678970336,
+        "shape_mse": 0.4487934579849243,
+        "quality_proxy": 1.0633769664764405,
+        "wire_ratio": 0.9743207921981811,
+        "bbox_ratio": 1.0482068452835083,
+        "boundary": 0.017181786581873894,
+        "grouping": 0.008675659254193306,
+        "mib": 0.00019912209996255116,
+        "overlap": 0.2908368830680847,
+        "count": 500,
+        "selection_proxy": 4.006390882182122
+      },
+      "train_monitor": {
+        "total": 0.5878661451339722,
+        "supervision": 0.5878661451339722,
+        "center_mse": 0.1789680027961731,
+        "shape_mse": 0.4088981437683106,
+        "quality_proxy": 1.0564042205810547,
+        "wire_ratio": 0.9806195192337036,
+        "bbox_ratio": 1.043733501434326,
+        "boundary": 0.013670809477567672,
+        "grouping": 0.00827913338318467,
+        "mib": 0.00016391799005214126,
+        "overlap": 0.27277522516250613,
+        "count": 500,
+        "selection_proxy": 3.813549779462815
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 2.5e-05,
+      "elapsed_seconds": 9443.542700599995,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.5878661451339722,
+        "supervision": 0.5878661451339722,
+        "center_mse": 0.1789680027961731,
+        "shape_mse": 0.4088981437683106,
+        "quality_proxy": 1.0564042205810547,
+        "wire_ratio": 0.9806195192337036,
+        "bbox_ratio": 1.043733501434326,
+        "boundary": 0.013670809477567672,
+        "grouping": 0.00827913338318467,
+        "mib": 0.00016391799005214126,
+        "overlap": 0.27277522516250613,
+        "count": 500,
+        "selection_proxy": 3.813549779462815
+      }
+    },
+    {
+      "epoch": 51,
+      "step": 51000,
+      "dev_monitor": {
+        "total": 0.6957522249221801,
+        "supervision": 0.6957522249221801,
+        "center_mse": 0.24680672955513,
+        "shape_mse": 0.4489454960823059,
+        "quality_proxy": 1.062736662864685,
+        "wire_ratio": 0.9758990969657898,
+        "bbox_ratio": 1.0470439329147339,
+        "boundary": 0.01704767620563507,
+        "grouping": 0.008385508410632611,
+        "mib": 0.00019939333153888583,
+        "overlap": 0.2917084181308746,
+        "count": 500,
+        "selection_proxy": 4.01460845541954
+      },
+      "train_monitor": {
+        "total": 0.5880269150733948,
+        "supervision": 0.5880269150733948,
+        "center_mse": 0.17856683683395386,
+        "shape_mse": 0.40946008276939394,
+        "quality_proxy": 1.0556873817443848,
+        "wire_ratio": 0.9821860275268555,
+        "bbox_ratio": 1.0430907516479493,
+        "boundary": 0.013399732202291488,
+        "grouping": 0.007956401877105236,
+        "mib": 0.00016836076689651235,
+        "overlap": 0.27327938795089723,
+        "count": 500,
+        "selection_proxy": 3.817882607007027
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 2.5e-05,
+      "elapsed_seconds": 9526.37399589998,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.5880269150733948,
+        "supervision": 0.5880269150733948,
+        "center_mse": 0.17856683683395386,
+        "shape_mse": 0.40946008276939394,
+        "quality_proxy": 1.0556873817443848,
+        "wire_ratio": 0.9821860275268555,
+        "bbox_ratio": 1.0430907516479493,
+        "boundary": 0.013399732202291488,
+        "grouping": 0.007956401877105236,
+        "mib": 0.00016836076689651235,
+        "overlap": 0.27327938795089723,
+        "count": 500,
+        "selection_proxy": 3.817882607007027
+      }
+    },
+    {
+      "epoch": 52,
+      "step": 52000,
+      "dev_monitor": {
+        "total": 0.6962791509628296,
+        "supervision": 0.6962791509628296,
+        "center_mse": 0.24629820132255553,
+        "shape_mse": 0.4499809579849243,
+        "quality_proxy": 1.0575401401519775,
+        "wire_ratio": 0.9737490367889404,
+        "bbox_ratio": 1.044028733253479,
+        "boundary": 0.015272572830319405,
+        "grouping": 0.008856641389429569,
+        "mib": 0.00019641664397204294,
+        "overlap": 0.29425639200210574,
+        "count": 500,
+        "selection_proxy": 4.034918017721177
+      },
+      "train_monitor": {
+        "total": 0.5882863550186157,
+        "supervision": 0.5882863550186157,
+        "center_mse": 0.17960557579994202,
+        "shape_mse": 0.40868077874183656,
+        "quality_proxy": 1.051102970123291,
+        "wire_ratio": 0.9803156418800354,
+        "bbox_ratio": 1.0402887363433837,
+        "boundary": 0.011897500768303872,
+        "grouping": 0.008337489960715174,
+        "mib": 0.00016539565532002598,
+        "overlap": 0.27470629787445067,
+        "count": 500,
+        "selection_proxy": 3.8275802666187286
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 2.5e-05,
+      "elapsed_seconds": 9609.616488499974,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.5882863550186157,
+        "supervision": 0.5882863550186157,
+        "center_mse": 0.17960557579994202,
+        "shape_mse": 0.40868077874183656,
+        "quality_proxy": 1.051102970123291,
+        "wire_ratio": 0.9803156418800354,
+        "bbox_ratio": 1.0402887363433837,
+        "boundary": 0.011897500768303872,
+        "grouping": 0.008337489960715174,
+        "mib": 0.00016539565532002598,
+        "overlap": 0.27470629787445067,
+        "count": 500,
+        "selection_proxy": 3.8275802666187286
+      }
+    },
+    {
+      "epoch": 53,
+      "step": 53000,
+      "dev_monitor": {
+        "total": 0.6963990769386291,
+        "supervision": 0.6963990769386291,
+        "center_mse": 0.2476216517686844,
+        "shape_mse": 0.4487774338722229,
+        "quality_proxy": 1.0673701648712157,
+        "wire_ratio": 0.9762943983078003,
+        "bbox_ratio": 1.0512073535919189,
+        "boundary": 0.017668486431241037,
+        "grouping": 0.008935859829187393,
+        "mib": 0.00020529409416485578,
+        "overlap": 0.2899330415725708,
+        "count": 500,
+        "selection_proxy": 4.001520534443856
+      },
+      "train_monitor": {
+        "total": 0.586278389453888,
+        "supervision": 0.586278389453888,
+        "center_mse": 0.17872564923763276,
+        "shape_mse": 0.4075527443885803,
+        "quality_proxy": 1.0599185848236083,
+        "wire_ratio": 0.9827760553359985,
+        "bbox_ratio": 1.046968282699585,
+        "boundary": 0.013849240943789483,
+        "grouping": 0.008505032969638705,
+        "mib": 0.0001689267463516444,
+        "overlap": 0.27147912216186526,
+        "count": 500,
+        "selection_proxy": 3.8040237259149556
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 2.5e-05,
+      "elapsed_seconds": 9726.055062499945,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.586278389453888,
+        "supervision": 0.586278389453888,
+        "center_mse": 0.17872564923763276,
+        "shape_mse": 0.4075527443885803,
+        "quality_proxy": 1.0599185848236083,
+        "wire_ratio": 0.9827760553359985,
+        "bbox_ratio": 1.046968282699585,
+        "boundary": 0.013849240943789483,
+        "grouping": 0.008505032969638705,
+        "mib": 0.0001689267463516444,
+        "overlap": 0.27147912216186526,
+        "count": 500,
+        "selection_proxy": 3.8040237259149556
+      }
+    },
+    {
+      "epoch": 54,
+      "step": 54000,
+      "dev_monitor": {
+        "total": 0.6916821689605713,
+        "supervision": 0.6916821689605713,
+        "center_mse": 0.24343216621875763,
+        "shape_mse": 0.44825000715255736,
+        "quality_proxy": 1.0622791728973389,
+        "wire_ratio": 0.9732969884872437,
+        "bbox_ratio": 1.0440874938964844,
+        "boundary": 0.017414570286870004,
+        "grouping": 0.009181326113641261,
+        "mib": 0.00019757451576879248,
+        "overlap": 0.29010013365745546,
+        "count": 500,
+        "selection_proxy": 3.997864617919922
+      },
+      "train_monitor": {
+        "total": 0.5849137501716614,
+        "supervision": 0.5849137501716614,
+        "center_mse": 0.17729469180107116,
+        "shape_mse": 0.40761906480789184,
+        "quality_proxy": 1.0546563940048217,
+        "wire_ratio": 0.9799927883148193,
+        "bbox_ratio": 1.0392722415924072,
+        "boundary": 0.013721244230866432,
+        "grouping": 0.008627404280006886,
+        "mib": 0.000163291274337098,
+        "overlap": 0.27229215574264526,
+        "count": 500,
+        "selection_proxy": 3.806823638939857
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 2.5e-05,
+      "elapsed_seconds": 9813.14617969998,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.5849137501716614,
+        "supervision": 0.5849137501716614,
+        "center_mse": 0.17729469180107116,
+        "shape_mse": 0.40761906480789184,
+        "quality_proxy": 1.0546563940048217,
+        "wire_ratio": 0.9799927883148193,
+        "bbox_ratio": 1.0392722415924072,
+        "boundary": 0.013721244230866432,
+        "grouping": 0.008627404280006886,
+        "mib": 0.000163291274337098,
+        "overlap": 0.27229215574264526,
+        "count": 500,
+        "selection_proxy": 3.806823638939857
+      }
+    },
+    {
+      "epoch": 55,
+      "step": 55000,
+      "dev_monitor": {
+        "total": 0.6941384844779969,
+        "supervision": 0.6941384844779969,
+        "center_mse": 0.24474464869499207,
+        "shape_mse": 0.44939383268356325,
+        "quality_proxy": 1.063474802017212,
+        "wire_ratio": 0.9762113409042359,
+        "bbox_ratio": 1.0482998619079589,
+        "boundary": 0.01666055580973625,
+        "grouping": 0.008746279381215572,
+        "mib": 0.00020276690606260673,
+        "overlap": 0.29214541625976564,
+        "count": 500,
+        "selection_proxy": 4.019635888838768
+      },
+      "train_monitor": {
+        "total": 0.5866280410289765,
+        "supervision": 0.5866280410289765,
+        "center_mse": 0.18051110351085664,
+        "shape_mse": 0.4061169323921204,
+        "quality_proxy": 1.056767692565918,
+        "wire_ratio": 0.9827907090187072,
+        "bbox_ratio": 1.0441068458557128,
+        "boundary": 0.013171015530824661,
+        "grouping": 0.00832141358591616,
+        "mib": 0.0001670378299895674,
+        "overlap": 0.27345671272277833,
+        "count": 500,
+        "selection_proxy": 3.8206662218451504
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 2.5e-05,
+      "elapsed_seconds": 9895.386088999978,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.5866280410289765,
+        "supervision": 0.5866280410289765,
+        "center_mse": 0.18051110351085664,
+        "shape_mse": 0.4061169323921204,
+        "quality_proxy": 1.056767692565918,
+        "wire_ratio": 0.9827907090187072,
+        "bbox_ratio": 1.0441068458557128,
+        "boundary": 0.013171015530824661,
+        "grouping": 0.00832141358591616,
+        "mib": 0.0001670378299895674,
+        "overlap": 0.27345671272277833,
+        "count": 500,
+        "selection_proxy": 3.8206662218451504
+      }
+    },
+    {
+      "epoch": 56,
+      "step": 56000,
+      "dev_monitor": {
+        "total": 0.6969234619140625,
+        "supervision": 0.6969234619140625,
+        "center_mse": 0.24778514528274537,
+        "shape_mse": 0.4491383056640625,
+        "quality_proxy": 1.0620254497528077,
+        "wire_ratio": 0.9775299158096313,
+        "bbox_ratio": 1.0473973064422608,
+        "boundary": 0.01609235183894634,
+        "grouping": 0.008488481245934962,
+        "mib": 0.00020008410583250224,
+        "overlap": 0.29035132575035094,
+        "count": 500,
+        "selection_proxy": 4.00038488035202
+      },
+      "train_monitor": {
+        "total": 0.5863997945785523,
+        "supervision": 0.5863997945785523,
+        "center_mse": 0.17943581902980804,
+        "shape_mse": 0.40696398258209227,
+        "quality_proxy": 1.05516180229187,
+        "wire_ratio": 0.9839440774917603,
+        "bbox_ratio": 1.0429069480895996,
+        "boundary": 0.012569973260164262,
+        "grouping": 0.008131074078381062,
+        "mib": 0.00016709184541832656,
+        "overlap": 0.27187816858291625,
+        "count": 500,
+        "selection_proxy": 3.8032634778499603
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 2.5e-05,
+      "elapsed_seconds": 10013.227903199964,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.5863997945785523,
+        "supervision": 0.5863997945785523,
+        "center_mse": 0.17943581902980804,
+        "shape_mse": 0.40696398258209227,
+        "quality_proxy": 1.05516180229187,
+        "wire_ratio": 0.9839440774917603,
+        "bbox_ratio": 1.0429069480895996,
+        "boundary": 0.012569973260164262,
+        "grouping": 0.008131074078381062,
+        "mib": 0.00016709184541832656,
+        "overlap": 0.27187816858291625,
+        "count": 500,
+        "selection_proxy": 3.8032634778499603
+      }
+    },
+    {
+      "epoch": 57,
+      "step": 57000,
+      "dev_monitor": {
+        "total": 0.6938159713745117,
+        "supervision": 0.6938159713745117,
+        "center_mse": 0.24591962385177613,
+        "shape_mse": 0.4478963577747345,
+        "quality_proxy": 1.0666206111907959,
+        "wire_ratio": 0.9799757285118103,
+        "bbox_ratio": 1.0528844890594482,
+        "boundary": 0.01637061484158039,
+        "grouping": 0.008519429437816143,
+        "mib": 0.00020521058107260615,
+        "overlap": 0.2869691622257233,
+        "count": 500,
+        "selection_proxy": 3.9710030320167546
+      },
+      "train_monitor": {
+        "total": 0.5839481012821197,
+        "supervision": 0.5839481012821197,
+        "center_mse": 0.17877972531318664,
+        "shape_mse": 0.40516837549209594,
+        "quality_proxy": 1.0595018634796143,
+        "wire_ratio": 0.9859953451156617,
+        "bbox_ratio": 1.0483737354278564,
+        "boundary": 0.012839893281459808,
+        "grouping": 0.008152192488312721,
+        "mib": 0.00016657735939952544,
+        "overlap": 0.26794914674758913,
+        "count": 500,
+        "selection_proxy": 3.7681907360196116
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 2.5e-05,
+      "elapsed_seconds": 10095.613830799994,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.5839481012821197,
+        "supervision": 0.5839481012821197,
+        "center_mse": 0.17877972531318664,
+        "shape_mse": 0.40516837549209594,
+        "quality_proxy": 1.0595018634796143,
+        "wire_ratio": 0.9859953451156617,
+        "bbox_ratio": 1.0483737354278564,
+        "boundary": 0.012839893281459808,
+        "grouping": 0.008152192488312721,
+        "mib": 0.00016657735939952544,
+        "overlap": 0.26794914674758913,
+        "count": 500,
+        "selection_proxy": 3.7681907360196116
+      }
+    },
+    {
+      "epoch": 58,
+      "step": 58000,
+      "dev_monitor": {
+        "total": 0.6963373746871948,
+        "supervision": 0.6963373746871948,
+        "center_mse": 0.2469118468761444,
+        "shape_mse": 0.44942553782463074,
+        "quality_proxy": 1.0631307544708253,
+        "wire_ratio": 0.9751960434913636,
+        "bbox_ratio": 1.0467014245986939,
+        "boundary": 0.01702586978673935,
+        "grouping": 0.008862580120563507,
+        "mib": 0.00020256396796321496,
+        "overlap": 0.28955099153518676,
+        "count": 500,
+        "selection_proxy": 3.993457538557053
+      },
+      "train_monitor": {
+        "total": 0.5815253586769104,
+        "supervision": 0.5815253586769104,
+        "center_mse": 0.1755015037059784,
+        "shape_mse": 0.40602384495735167,
+        "quality_proxy": 1.055447338104248,
+        "wire_ratio": 0.9820116333961487,
+        "bbox_ratio": 1.0413366765975953,
+        "boundary": 0.013253483578562736,
+        "grouping": 0.00846579534560442,
+        "mib": 0.00016730803571408614,
+        "overlap": 0.2715039324760437,
+        "count": 500,
+        "selection_proxy": 3.7995629307985306
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 2.5e-05,
+      "elapsed_seconds": 10178.039354699955,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.5815253586769104,
+        "supervision": 0.5815253586769104,
+        "center_mse": 0.1755015037059784,
+        "shape_mse": 0.40602384495735167,
+        "quality_proxy": 1.055447338104248,
+        "wire_ratio": 0.9820116333961487,
+        "bbox_ratio": 1.0413366765975953,
+        "boundary": 0.013253483578562736,
+        "grouping": 0.00846579534560442,
+        "mib": 0.00016730803571408614,
+        "overlap": 0.2715039324760437,
+        "count": 500,
+        "selection_proxy": 3.7995629307985306
+      }
+    },
+    {
+      "epoch": 59,
+      "step": 59000,
+      "dev_monitor": {
+        "total": 0.6923263120651245,
+        "supervision": 0.6923263120651245,
+        "center_mse": 0.24341382348537446,
+        "shape_mse": 0.4489124722480774,
+        "quality_proxy": 1.0660878505706788,
+        "wire_ratio": 0.9781960301399231,
+        "bbox_ratio": 1.0494215698242189,
+        "boundary": 0.016799245715141298,
+        "grouping": 0.009135651350021362,
+        "mib": 0.00020462782483082265,
+        "overlap": 0.28592216873168946,
+        "count": 500,
+        "selection_proxy": 3.9599258534908297
+      },
+      "train_monitor": {
+        "total": 0.579236882686615,
+        "supervision": 0.579236882686615,
+        "center_mse": 0.1753327980041504,
+        "shape_mse": 0.4039040904045105,
+        "quality_proxy": 1.0582674741744995,
+        "wire_ratio": 0.9846815085411071,
+        "bbox_ratio": 1.0442926731109619,
+        "boundary": 0.013231571316719055,
+        "grouping": 0.008487627167254687,
+        "mib": 0.0001709955192054622,
+        "overlap": 0.2676199026107788,
+        "count": 500,
+        "selection_proxy": 3.763428344416618
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 2.5e-05,
+      "elapsed_seconds": 10260.280308799993,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.579236882686615,
+        "supervision": 0.579236882686615,
+        "center_mse": 0.1753327980041504,
+        "shape_mse": 0.4039040904045105,
+        "quality_proxy": 1.0582674741744995,
+        "wire_ratio": 0.9846815085411071,
+        "bbox_ratio": 1.0442926731109619,
+        "boundary": 0.013231571316719055,
+        "grouping": 0.008487627167254687,
+        "mib": 0.0001709955192054622,
+        "overlap": 0.2676199026107788,
+        "count": 500,
+        "selection_proxy": 3.763428344416618
+      }
+    },
+    {
+      "epoch": 60,
+      "step": 60000,
+      "dev_monitor": {
+        "total": 0.6935989036560058,
+        "supervision": 0.6935989036560058,
+        "center_mse": 0.2454212908744812,
+        "shape_mse": 0.44817759823799136,
+        "quality_proxy": 1.0654230213165283,
+        "wire_ratio": 0.9783618392944335,
+        "bbox_ratio": 1.0490970392227172,
+        "boundary": 0.01713072855770588,
+        "grouping": 0.008513169512152672,
+        "mib": 0.00020288556261220946,
+        "overlap": 0.2881393368244171,
+        "count": 500,
+        "selection_proxy": 3.9814963347434995
+      },
+      "train_monitor": {
+        "total": 0.5783346409797668,
+        "supervision": 0.5783346409797668,
+        "center_mse": 0.17531624805927276,
+        "shape_mse": 0.4030184042453766,
+        "quality_proxy": 1.056653437614441,
+        "wire_ratio": 0.9845983667373657,
+        "bbox_ratio": 1.0432957267761231,
+        "boundary": 0.013009261041879654,
+        "grouping": 0.008178730111569166,
+        "mib": 0.00016520727053284646,
+        "overlap": 0.26981291055679324,
+        "count": 500,
+        "selection_proxy": 3.7836992752313616
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 2.5e-05,
+      "elapsed_seconds": 10342.989168199943,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.5783346409797668,
+        "supervision": 0.5783346409797668,
+        "center_mse": 0.17531624805927276,
+        "shape_mse": 0.4030184042453766,
+        "quality_proxy": 1.056653437614441,
+        "wire_ratio": 0.9845983667373657,
+        "bbox_ratio": 1.0432957267761231,
+        "boundary": 0.013009261041879654,
+        "grouping": 0.008178730111569166,
+        "mib": 0.00016520727053284646,
+        "overlap": 0.26981291055679324,
+        "count": 500,
+        "selection_proxy": 3.7836992752313616
+      }
+    },
+    {
+      "epoch": 61,
+      "step": 61000,
+      "dev_monitor": {
+        "total": 0.6957758779525757,
+        "supervision": 0.6957758779525757,
+        "center_mse": 0.24697848892211913,
+        "shape_mse": 0.4487973823547363,
+        "quality_proxy": 1.0682519092559815,
+        "wire_ratio": 0.977052077293396,
+        "bbox_ratio": 1.0552213764190674,
+        "boundary": 0.01652025018632412,
+        "grouping": 0.009342347294092179,
+        "mib": 0.0001950018330826424,
+        "overlap": 0.28496380615234373,
+        "count": 500,
+        "selection_proxy": 3.952678764677048
+      },
+      "train_monitor": {
+        "total": 0.5827449867725373,
+        "supervision": 0.5827449867725373,
+        "center_mse": 0.1795193566083908,
+        "shape_mse": 0.40322563123703004,
+        "quality_proxy": 1.0606467113494873,
+        "wire_ratio": 0.98342804479599,
+        "bbox_ratio": 1.0504192905426026,
+        "boundary": 0.01285630401968956,
+        "grouping": 0.00884117639437318,
+        "mib": 0.00016403848788468166,
+        "overlap": 0.2667174162864685,
+        "count": 500,
+        "selection_proxy": 3.7569581235527996
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 2.5e-05,
+      "elapsed_seconds": 10425.635716399993,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.5827449867725373,
+        "supervision": 0.5827449867725373,
+        "center_mse": 0.1795193566083908,
+        "shape_mse": 0.40322563123703004,
+        "quality_proxy": 1.0606467113494873,
+        "wire_ratio": 0.98342804479599,
+        "bbox_ratio": 1.0504192905426026,
+        "boundary": 0.01285630401968956,
+        "grouping": 0.00884117639437318,
+        "mib": 0.00016403848788468166,
+        "overlap": 0.2667174162864685,
+        "count": 500,
+        "selection_proxy": 3.7569581235527996
+      }
+    },
+    {
+      "epoch": 62,
+      "step": 62000,
+      "dev_monitor": {
+        "total": 0.6900796151161194,
+        "supervision": 0.6900796151161194,
+        "center_mse": 0.2417308828830719,
+        "shape_mse": 0.44834872674942017,
+        "quality_proxy": 1.0603181343078614,
+        "wire_ratio": 0.9759519214630127,
+        "bbox_ratio": 1.0434518690109253,
+        "boundary": 0.016544182419776916,
+        "grouping": 0.008554672077298164,
+        "mib": 0.00020926027040695772,
+        "overlap": 0.28744562458992007,
+        "count": 500,
+        "selection_proxy": 3.969278360962868
+      },
+      "train_monitor": {
+        "total": 0.5746286582946777,
+        "supervision": 0.5746286582946777,
+        "center_mse": 0.1729897587299347,
+        "shape_mse": 0.4016389014720917,
+        "quality_proxy": 1.0521783123016357,
+        "wire_ratio": 0.9822932567596435,
+        "bbox_ratio": 1.0375048866271972,
+        "boundary": 0.012778188735246658,
+        "grouping": 0.008192420592531563,
+        "mib": 0.00016900861740577966,
+        "overlap": 0.2700376057624817,
+        "count": 500,
+        "selection_proxy": 3.781285802841187
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 2.5e-05,
+      "elapsed_seconds": 10508.474509399966,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.5746286582946777,
+        "supervision": 0.5746286582946777,
+        "center_mse": 0.1729897587299347,
+        "shape_mse": 0.4016389014720917,
+        "quality_proxy": 1.0521783123016357,
+        "wire_ratio": 0.9822932567596435,
+        "bbox_ratio": 1.0375048866271972,
+        "boundary": 0.012778188735246658,
+        "grouping": 0.008192420592531563,
+        "mib": 0.00016900861740577966,
+        "overlap": 0.2700376057624817,
+        "count": 500,
+        "selection_proxy": 3.781285802841187
+      }
+    },
+    {
+      "epoch": 63,
+      "step": 63000,
+      "dev_monitor": {
+        "total": 0.6911330652236939,
+        "supervision": 0.6911330652236939,
+        "center_mse": 0.24232866597175598,
+        "shape_mse": 0.4488044021129608,
+        "quality_proxy": 1.062919267654419,
+        "wire_ratio": 0.9774013996124268,
+        "bbox_ratio": 1.047623740196228,
+        "boundary": 0.016423901975154878,
+        "grouping": 0.00857947513461113,
+        "mib": 0.00019997666726703756,
+        "overlap": 0.28885584235191347,
+        "count": 500,
+        "selection_proxy": 3.986034344434738
+      },
+      "train_monitor": {
+        "total": 0.575841251373291,
+        "supervision": 0.575841251373291,
+        "center_mse": 0.174796715259552,
+        "shape_mse": 0.4010445396900177,
+        "quality_proxy": 1.0564727420806885,
+        "wire_ratio": 0.9837566170692443,
+        "bbox_ratio": 1.0430524082183839,
+        "boundary": 0.013145881235599517,
+        "grouping": 0.008220367735251784,
+        "mib": 0.00016785740363411606,
+        "overlap": 0.27033585667610166,
+        "count": 500,
+        "selection_proxy": 3.78862337141037
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 2.5e-05,
+      "elapsed_seconds": 10591.09288489999,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.575841251373291,
+        "supervision": 0.575841251373291,
+        "center_mse": 0.174796715259552,
+        "shape_mse": 0.4010445396900177,
+        "quality_proxy": 1.0564727420806885,
+        "wire_ratio": 0.9837566170692443,
+        "bbox_ratio": 1.0430524082183839,
+        "boundary": 0.013145881235599517,
+        "grouping": 0.008220367735251784,
+        "mib": 0.00016785740363411606,
+        "overlap": 0.27033585667610166,
+        "count": 500,
+        "selection_proxy": 3.78862337141037
+      }
+    },
+    {
+      "epoch": 64,
+      "step": 64000,
+      "dev_monitor": {
+        "total": 0.6960568690299987,
+        "supervision": 0.6960568690299987,
+        "center_mse": 0.24656972670555113,
+        "shape_mse": 0.4494871311187744,
+        "quality_proxy": 1.0581622838973999,
+        "wire_ratio": 0.9747458176612854,
+        "bbox_ratio": 1.0434765186309813,
+        "boundary": 0.016116880536079407,
+        "grouping": 0.008211521938443184,
+        "mib": 0.00019715458250720984,
+        "overlap": 0.2907843441963196,
+        "count": 500,
+        "selection_proxy": 4.000808569312095
+      },
+      "train_monitor": {
+        "total": 0.5763360936641693,
+        "supervision": 0.5763360936641693,
+        "center_mse": 0.1746600341796875,
+        "shape_mse": 0.40167605447769167,
+        "quality_proxy": 1.050168839454651,
+        "wire_ratio": 0.9810515694618225,
+        "bbox_ratio": 1.038128963470459,
+        "boundary": 0.012529992252588272,
+        "grouping": 0.007598820187151432,
+        "mib": 0.00016047754138708115,
+        "overlap": 0.2731912820339203,
+        "count": 500,
+        "selection_proxy": 3.8108984644770625
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 2.5e-05,
+      "elapsed_seconds": 10673.809512499953,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.5763360936641693,
+        "supervision": 0.5763360936641693,
+        "center_mse": 0.1746600341796875,
+        "shape_mse": 0.40167605447769167,
+        "quality_proxy": 1.050168839454651,
+        "wire_ratio": 0.9810515694618225,
+        "bbox_ratio": 1.038128963470459,
+        "boundary": 0.012529992252588272,
+        "grouping": 0.007598820187151432,
+        "mib": 0.00016047754138708115,
+        "overlap": 0.2731912820339203,
+        "count": 500,
+        "selection_proxy": 3.8108984644770625
+      }
+    },
+    {
+      "epoch": 65,
+      "step": 65000,
+      "dev_monitor": {
+        "total": 0.6925192666053772,
+        "supervision": 0.6925192666053772,
+        "center_mse": 0.24622764027118682,
+        "shape_mse": 0.4462916204929352,
+        "quality_proxy": 1.0712691097259521,
+        "wire_ratio": 0.9804300761222839,
+        "bbox_ratio": 1.0563506298065186,
+        "boundary": 0.01694215080142021,
+        "grouping": 0.009291585840284824,
+        "mib": 0.00020564083044882864,
+        "overlap": 0.2795707640647888,
+        "count": 500,
+        "selection_proxy": 3.9016027137041096
+      },
+      "train_monitor": {
+        "total": 0.5813627369403839,
+        "supervision": 0.5813627369403839,
+        "center_mse": 0.17993214750289918,
+        "shape_mse": 0.4014305851459503,
+        "quality_proxy": 1.0614553565979004,
+        "wire_ratio": 0.9864513692855835,
+        "bbox_ratio": 1.0500944194793702,
+        "boundary": 0.012502503752708435,
+        "grouping": 0.008920212216675282,
+        "mib": 0.00016850767197320237,
+        "overlap": 0.26270430207252504,
+        "count": 500,
+        "selection_proxy": 3.7175665141701697
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 2.5e-05,
+      "elapsed_seconds": 10757.214574099984,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.5813627369403839,
+        "supervision": 0.5813627369403839,
+        "center_mse": 0.17993214750289918,
+        "shape_mse": 0.4014305851459503,
+        "quality_proxy": 1.0614553565979004,
+        "wire_ratio": 0.9864513692855835,
+        "bbox_ratio": 1.0500944194793702,
+        "boundary": 0.012502503752708435,
+        "grouping": 0.008920212216675282,
+        "mib": 0.00016850767197320237,
+        "overlap": 0.26270430207252504,
+        "count": 500,
+        "selection_proxy": 3.7175665141701697
+      }
+    },
+    {
+      "epoch": 66,
+      "step": 66000,
+      "dev_monitor": {
+        "total": 0.6927014169692993,
+        "supervision": 0.6927014169692993,
+        "center_mse": 0.24538238716125488,
+        "shape_mse": 0.44731903028488157,
+        "quality_proxy": 1.0713647155761719,
+        "wire_ratio": 0.9812199020385742,
+        "bbox_ratio": 1.059556251525879,
+        "boundary": 0.016052067130804062,
+        "grouping": 0.009230189338326453,
+        "mib": 0.00020606082235462964,
+        "overlap": 0.278066481590271,
+        "count": 500,
+        "selection_proxy": 3.8866646023273463
+      },
+      "train_monitor": {
+        "total": 0.5737393136024476,
+        "supervision": 0.5737393136024476,
+        "center_mse": 0.17577149653434754,
+        "shape_mse": 0.39796781945228576,
+        "quality_proxy": 1.0626177101135255,
+        "wire_ratio": 0.9873677787780761,
+        "bbox_ratio": 1.054109260559082,
+        "boundary": 0.011842263534665108,
+        "grouping": 0.00892427352257073,
+        "mib": 0.00017305711144581436,
+        "overlap": 0.26059268283843995,
+        "count": 500,
+        "selection_proxy": 3.6972315041780477
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 2.5e-05,
+      "elapsed_seconds": 10840.008118699945,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.5737393136024476,
+        "supervision": 0.5737393136024476,
+        "center_mse": 0.17577149653434754,
+        "shape_mse": 0.39796781945228576,
+        "quality_proxy": 1.0626177101135255,
+        "wire_ratio": 0.9873677787780761,
+        "bbox_ratio": 1.054109260559082,
+        "boundary": 0.011842263534665108,
+        "grouping": 0.00892427352257073,
+        "mib": 0.00017305711144581436,
+        "overlap": 0.26059268283843995,
+        "count": 500,
+        "selection_proxy": 3.6972315041780477
+      }
+    },
+    {
+      "epoch": 67,
+      "step": 67000,
+      "dev_monitor": {
+        "total": 0.6954542722702026,
+        "supervision": 0.6954542722702026,
+        "center_mse": 0.2482369921207428,
+        "shape_mse": 0.44721728134155275,
+        "quality_proxy": 1.061706573486328,
+        "wire_ratio": 0.9788338570594788,
+        "bbox_ratio": 1.0460018100738526,
+        "boundary": 0.015992373198270796,
+        "grouping": 0.008448631696403027,
+        "mib": 0.00020336368487915024,
+        "overlap": 0.2863451075553894,
+        "count": 500,
+        "selection_proxy": 3.9599303626537323
+      },
+      "train_monitor": {
+        "total": 0.5760545060634613,
+        "supervision": 0.5760545060634613,
+        "center_mse": 0.1777084332704544,
+        "shape_mse": 0.3983460693359375,
+        "quality_proxy": 1.0539954357147217,
+        "wire_ratio": 0.9850432362556457,
+        "bbox_ratio": 1.0404887704849244,
+        "boundary": 0.01231626906991005,
+        "grouping": 0.008124154899269343,
+        "mib": 0.00017429109662771226,
+        "overlap": 0.2671478543281555,
+        "count": 500,
+        "selection_proxy": 3.75427670429945
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 2.5e-05,
+      "elapsed_seconds": 10956.780449499958,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.5760545060634613,
+        "supervision": 0.5760545060634613,
+        "center_mse": 0.1777084332704544,
+        "shape_mse": 0.3983460693359375,
+        "quality_proxy": 1.0539954357147217,
+        "wire_ratio": 0.9850432362556457,
+        "bbox_ratio": 1.0404887704849244,
+        "boundary": 0.01231626906991005,
+        "grouping": 0.008124154899269343,
+        "mib": 0.00017429109662771226,
+        "overlap": 0.2671478543281555,
+        "count": 500,
+        "selection_proxy": 3.75427670429945
+      }
+    },
+    {
+      "epoch": 68,
+      "step": 68000,
+      "dev_monitor": {
+        "total": 0.6953453245162964,
+        "supervision": 0.6953453245162964,
+        "center_mse": 0.24752614426612854,
+        "shape_mse": 0.44781917905807495,
+        "quality_proxy": 1.0657579679489135,
+        "wire_ratio": 0.9792241039276123,
+        "bbox_ratio": 1.0527798042297363,
+        "boundary": 0.01591817094385624,
+        "grouping": 0.00875856664031744,
+        "mib": 0.00020126116654137148,
+        "overlap": 0.28190556025505065,
+        "count": 500,
+        "selection_proxy": 3.9195808367252347
+      },
+      "train_monitor": {
+        "total": 0.574022367477417,
+        "supervision": 0.574022367477417,
+        "center_mse": 0.17711136209964753,
+        "shape_mse": 0.3969110097885132,
+        "quality_proxy": 1.0570848169326783,
+        "wire_ratio": 0.9855354413986206,
+        "bbox_ratio": 1.047047410964966,
+        "boundary": 0.012192707151174546,
+        "grouping": 0.008030781593173742,
+        "mib": 0.00017321106139570476,
+        "overlap": 0.2636312758922577,
+        "count": 500,
+        "selection_proxy": 3.722098694229126
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "lr": 2.5e-05,
+      "elapsed_seconds": 11083.008033099992,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.574022367477417,
+        "supervision": 0.574022367477417,
+        "center_mse": 0.17711136209964753,
+        "shape_mse": 0.3969110097885132,
+        "quality_proxy": 1.0570848169326783,
+        "wire_ratio": 0.9855354413986206,
+        "bbox_ratio": 1.047047410964966,
+        "boundary": 0.012192707151174546,
+        "grouping": 0.008030781593173742,
+        "mib": 0.00017321106139570476,
+        "overlap": 0.2636312758922577,
+        "count": 500,
+        "selection_proxy": 3.722098694229126
+      }
+    }
+  ],
+  "gradients": [
+    {
+      "epoch": 1,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 1801.88037109375,
+      "quality_grad_norm": 556.03662109375,
+      "overlap_grad_norm": 97.01997375488281
+    },
+    {
+      "epoch": 2,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 68.86812591552734,
+      "quality_grad_norm": 21.650686264038086,
+      "overlap_grad_norm": 8.208979606628418
+    },
+    {
+      "epoch": 3,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 27.997114181518555,
+      "quality_grad_norm": 21.105379104614258,
+      "overlap_grad_norm": 9.720895767211914
+    },
+    {
+      "epoch": 4,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 15.51235580444336,
+      "quality_grad_norm": 14.391297340393066,
+      "overlap_grad_norm": 8.406195640563965
+    },
+    {
+      "epoch": 5,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 11.275418281555176,
+      "quality_grad_norm": 9.944941520690918,
+      "overlap_grad_norm": 5.88374662399292
+    },
+    {
+      "epoch": 6,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 7.04331636428833
+    },
+    {
+      "epoch": 7,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 8.464799880981445
+    },
+    {
+      "epoch": 8,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 9.113737106323242
+    },
+    {
+      "epoch": 9,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 8.356880187988281
+    },
+    {
+      "epoch": 10,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 10.108546257019043
+    },
+    {
+      "epoch": 11,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 5.544745922088623
+    },
+    {
+      "epoch": 12,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 5.60203218460083
+    },
+    {
+      "epoch": 13,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 5.3568830490112305
+    },
+    {
+      "epoch": 14,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 7.038896083831787
+    },
+    {
+      "epoch": 15,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 3.8201568126678467
+    },
+    {
+      "epoch": 16,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 5.287851810455322
+    },
+    {
+      "epoch": 17,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 9.013272285461426
+    },
+    {
+      "epoch": 18,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 7.3351640701293945
+    },
+    {
+      "epoch": 19,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 9.246088981628418
+    },
+    {
+      "epoch": 20,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 6.423681259155273
+    },
+    {
+      "epoch": 21,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 6.005419731140137
+    },
+    {
+      "epoch": 22,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 3.7593348026275635
+    },
+    {
+      "epoch": 23,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 4.211758613586426
+    },
+    {
+      "epoch": 24,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 5.453633785247803
+    },
+    {
+      "epoch": 25,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 3.6132733821868896
+    },
+    {
+      "epoch": 26,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 5.4349846839904785
+    },
+    {
+      "epoch": 27,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 4.524156093597412
+    },
+    {
+      "epoch": 28,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 7.090602397918701
+    },
+    {
+      "epoch": 29,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 5.047139644622803
+    },
+    {
+      "epoch": 30,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 6.45332670211792
+    },
+    {
+      "epoch": 31,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 6.304982662200928
+    },
+    {
+      "epoch": 32,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 4.450273036956787
+    },
+    {
+      "epoch": 33,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 4.644515514373779
+    },
+    {
+      "epoch": 34,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 5.0602545738220215
+    },
+    {
+      "epoch": 35,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 6.1039958000183105
+    },
+    {
+      "epoch": 36,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 7.811273574829102
+    },
+    {
+      "epoch": 37,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 4.714012145996094
+    },
+    {
+      "epoch": 38,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 5.344610214233398
+    },
+    {
+      "epoch": 39,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 4.296535491943359
+    },
+    {
+      "epoch": 40,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 5.192561626434326
+    },
+    {
+      "epoch": 41,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 7.873682022094727
+    },
+    {
+      "epoch": 42,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 3.8959577083587646
+    },
+    {
+      "epoch": 43,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 4.390102386474609
+    },
+    {
+      "epoch": 44,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 6.328908443450928
+    },
+    {
+      "epoch": 45,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 5.532587051391602
+    },
+    {
+      "epoch": 46,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 3.938124179840088
+    },
+    {
+      "epoch": 47,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 5.328084468841553
+    },
+    {
+      "epoch": 48,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 6.400866508483887
+    },
+    {
+      "epoch": 49,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 3.5298657417297363
+    },
+    {
+      "epoch": 50,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 4.608660697937012
+    },
+    {
+      "epoch": 51,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 2.2755820751190186
+    },
+    {
+      "epoch": 52,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 3.766906976699829
+    },
+    {
+      "epoch": 53,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 4.84434175491333
+    },
+    {
+      "epoch": 54,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 3.456051826477051
+    },
+    {
+      "epoch": 55,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 4.090278148651123
+    },
+    {
+      "epoch": 56,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 5.946642875671387
+    },
+    {
+      "epoch": 57,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 3.263042688369751
+    },
+    {
+      "epoch": 58,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 6.090644359588623
+    },
+    {
+      "epoch": 59,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 3.8177783489227295
+    },
+    {
+      "epoch": 60,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 3.8231635093688965
+    },
+    {
+      "epoch": 61,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 2.4865849018096924
+    },
+    {
+      "epoch": 62,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 4.839737415313721
+    },
+    {
+      "epoch": 63,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 6.459975719451904
+    },
+    {
+      "epoch": 64,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 4.986152172088623
+    },
+    {
+      "epoch": 65,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 4.645212173461914
+    },
+    {
+      "epoch": 66,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 6.076964855194092
+    },
+    {
+      "epoch": 67,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 3.883110523223877
+    },
+    {
+      "epoch": 68,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 4.258179664611816
+    },
+    {
+      "epoch": 69,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.0,
+        "overlap": 0.0
+      },
+      "supervision_grad_norm": 5.4453020095825195
+    }
+  ],
+  "full_dev_complete": false,
+  "postprocessing_calls": 0,
+  "implementation_check": false,
+  "test_read": false,
+  "tail_test_read": false
+}

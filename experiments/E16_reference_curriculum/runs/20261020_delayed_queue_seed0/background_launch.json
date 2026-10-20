@@ -1,0 +1,41 @@
+{
+  "launched_at": "2026-10-20T08:48:03.4660750+08:00",
+  "queue_pid": 12232,
+  "status": "training_running_verified",
+  "hours_per_arm": 4,
+  "order": [
+    16,
+    21
+  ],
+  "parameters_per_arm": 497299,
+  "device": "cuda",
+  "concurrent_arms": 1,
+  "automatic_solver_evaluation": false,
+  "test_read": false,
+  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File E:\\project\\ICCAD\\2026\\problemC\\experiments\\E16_reference_curriculum\\launch_delayed.ps1 -HoursPerArm 4",
+  "stdout": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E16_reference_curriculum\\runs\\20261020_delayed_queue_seed0\\stdout_persistent.log",
+  "stderr": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E16_reference_curriculum\\runs\\20261020_delayed_queue_seed0\\stderr_persistent.log",
+  "user_authorization": "2026-10-20 explicit background training request and 4 hours per arm confirmation",
+  "prior_attempt": {
+    "queue_pid": 46280,
+    "stdout": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E16_reference_curriculum\\runs\\20261020_delayed_queue_seed0\\stdout.log",
+    "stderr": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E16_reference_curriculum\\runs\\20261020_delayed_queue_seed0\\stderr.log",
+    "status": "exited_before_training_output"
+  },
+  "verified_at_utc": "2026-10-20T00:49:37.677157+00:00",
+  "verified_step": 100,
+  "verified_seen_count": 1600,
+  "first_arm": "start16 running",
+  "second_arm": "start21 queued; starts after first arm finishes",
+  "schedules": {
+    "16": {
+      "transition_end_epoch": 30,
+      "scheduler_start_epoch": 25
+    },
+    "21": {
+      "transition_end_epoch": 35,
+      "scheduler_start_epoch": 30
+    }
+  },
+  "assistant_followup": "No continuous monitoring or automatic followup scheduled"
+}

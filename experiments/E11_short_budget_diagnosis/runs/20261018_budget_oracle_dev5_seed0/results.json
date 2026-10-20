@@ -1,0 +1,9 @@
+{
+  "status": "startup_error",
+  "error": "Official evaluator accessor returns a module; inspecting type(module) as a class failed while recording provenance.",
+  "case_count": 0,
+  "trial_count": 0,
+  "layout_tensors_read": false,
+  "local_test_read": false,
+  "correction": "Record the module __file__ directly. Corrected run uses suffix _r2."
+}

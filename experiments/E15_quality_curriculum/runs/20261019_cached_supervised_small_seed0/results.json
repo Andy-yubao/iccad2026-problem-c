@@ -1,0 +1,29 @@
+{
+  "status": "user_finalized",
+  "elapsed_seconds": 11138.356322999985,
+  "steps": 68594,
+  "epochs": 68,
+  "best_epoch": 66,
+  "best_proxy": 3.8866646023273463,
+  "full_dev_complete": false,
+  "postprocessing_calls": 0,
+  "test_read": false,
+  "tail_test_read": false,
+  "implementation_check": false,
+  "final_postprocessed_Q": "not run; one frozen best assessment is a separate stage",
+  "finished": true,
+  "user_finalization": {
+    "reason": "User explicitly ended the first model training",
+    "completed_epochs": 68,
+    "partial_epoch_cursor": 9504,
+    "step": 68594,
+    "elapsed_seconds": 11138.298722599982,
+    "best_epoch": 66,
+    "best_step": 66000,
+    "best_checkpoint_sha256": "8883088e47264681c11bf54af47310b72106f476ee752cd66d317c233b9d713b",
+    "best_weights_unchanged": true,
+    "training_identity_unchanged": true,
+    "status": "user_finalized",
+    "scope": "Use frozen existing best for the one dev500 final pass; never resume this model"
+  }
+}

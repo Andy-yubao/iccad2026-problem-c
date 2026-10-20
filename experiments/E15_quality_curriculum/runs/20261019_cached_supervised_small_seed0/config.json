@@ -1,0 +1,2295 @@
+{
+  "identity": {
+    "revision": "E15.cached_no_repair.v2",
+    "arm": "supervised_small",
+    "initialization": "random; preserved on explicit continuation",
+    "width": 96,
+    "layers": 4,
+    "parameters": 497299,
+    "sources": {
+      "datasets/__init__.py": "03c36f364366be6c8a5091d6bd3dbec0788d7871747acdeac5fa89d4974cec21",
+      "datasets/cases.py": "1fd51addaaae38164c22f1946712665beebac700054db4bb07ed4f9d44e0b168",
+      "datasets/paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+      "datasets/quality_layouts.py": "94f374fa9562770a9c7deadb645d73c3af1fc1a20251f98f1dce4ac575820191",
+      "datasets/worksets.py": "013087151ab8e1195d7d2757e777839f521486425eeaff4c45fed4e370df233c",
+      "experiments/E15_quality_curriculum/__init__.py": "9627c06c7604dbef1ac69d2e1546fb3087a94ed95af6baaff67c7b0d93e0a2c8",
+      "experiments/E15_quality_curriculum/archive_compat_check.py": "1e653da980d565e6fe3b5bbe20319b685a7a2c5f135d87e77b867d043daab01e",
+      "experiments/E15_quality_curriculum/assess.py": "d0a1ec92a9b27b69c35520da5929d9b686fadfa39baafff322044648eeefdc13",
+      "experiments/E15_quality_curriculum/backend/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "experiments/E15_quality_curriculum/backend/conic_geometry.py": "0b1a0295426c37a61f4abc13946b5dadf2c6f107375a02890e90ffe404be40e4",
+      "experiments/E15_quality_curriculum/backend/frozen/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "experiments/E15_quality_curriculum/backend/frozen/canonical_geometry.py": "04924bc4150f82862ed4da6cb67fc08779bbf98fcf24e24abd41b1c64d4e2521",
+      "experiments/E15_quality_curriculum/backend/frozen/feasible.py": "9cfe70894d80fbe54ccaa1c3de60ef4ab111ac9b4472286d1ae6a0c5a1fdc756",
+      "experiments/E15_quality_curriculum/backend/frozen/global_refine.py": "088021ede3290fcd6cf60726a054f7958309e4267d4353a699b80697078ab716",
+      "experiments/E15_quality_curriculum/backend/frozen/packing.py": "3c0500b7fee120807e6bd3fa8e9f115e476782af1a3e7620859c6651a089ef30",
+      "experiments/E15_quality_curriculum/backend/frozen/postprocess.py": "da0e1572a822a589968a19e67e2d36dd5133c7d17b7ea9443bd743ee4653a272",
+      "experiments/E15_quality_curriculum/backend/frozen/shape_lp.py": "2988df542aa80602f091963e1506da8085152ea0eca4846f6dc6c0a25ef13c94",
+      "experiments/E15_quality_curriculum/backend/frozen/solver.py": "cb5b0b6af3b8511d8a21b14178be188e31c61b58cba065c8c23847c2f9200325",
+      "experiments/E15_quality_curriculum/backend/frozen/topology_mip.py": "e392857196dbde4b3c1f3668862c9779e9c686f17ca89a820078421573b46df5",
+      "experiments/E15_quality_curriculum/backend/guard.py": "4e4adfb1dedede451a4d530103681f97ca6c05516e2dbe96b84d63c136faa87f",
+      "experiments/E15_quality_curriculum/backend/observe.py": "6fb401b9a7ebccec7063de8e9feeaf28bee310ac8a39b221b78d40e438432ec3",
+      "experiments/E15_quality_curriculum/backend/optimizer.py": "6373f5e7477f528e09e599c9a478b712bfbeb0ec29037bed1595d8c82af2ca36",
+      "experiments/E15_quality_curriculum/backend/reduction.py": "4587a5c9c486c59719e76ef64396398edb92e6011d8c0c0cd4f538cad52c4b50",
+      "experiments/E15_quality_curriculum/backend/rescue.py": "b928986f58fb3215140fe05acc36ddde92ce7aad99197fb2a975b7743a8c2e59",
+      "experiments/E15_quality_curriculum/backend/robust.py": "ceea8f18d0e2979279f4cf711b7702436912fbae77095d9559e603401176c99b",
+      "experiments/E15_quality_curriculum/backend/selection.py": "c21486a437531fed9a6717bcde6ce2ca062153ea717f9ae135b5b72e05500350",
+      "experiments/E15_quality_curriculum/backend/stable.py": "dc5a1e0afbec79e33f1ca6603a7d3186045a52ccc543ac756b508dbf8159bcce",
+      "experiments/E15_quality_curriculum/cache.py": "5dcb702d43f348898e3a8d0cf18ed9fdecc4508950b7515579326a796f762706",
+      "experiments/E15_quality_curriculum/data.py": "8fc01a9e053c64adb92c5c04f38de7541472542c6c1500f175e43878e4aa9bcf",
+      "experiments/E15_quality_curriculum/evaluation.py": "753011864c034a2f294aadadbd8ca53ca8cc4dbca374efabb89c820601db18ac",
+      "experiments/E15_quality_curriculum/features.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+      "experiments/E15_quality_curriculum/final_evaluate.py": "19d0eaddf553d683fe893e0bf44240c921afafa6a98b32bcd80efac2269fe52f",
+      "experiments/E15_quality_curriculum/io.py": "ee1f752f4a1391e2c957329bc80e54d15ce309d9b14ada037a6dda5de6cf5aaa",
+      "experiments/E15_quality_curriculum/loss.py": "96e87ccec2a27df8ac0106de955139e7aec64af1eca1991ac71d2e42e1e64904",
+      "experiments/E15_quality_curriculum/migrate.py": "665bca2f176cc1bc525b1d8550248c34f18f778436b5faf8a61d198cb3f6c30f",
+      "experiments/E15_quality_curriculum/model.py": "73a5c0bd5d2ef87e05a25dc0814befb36444669ece64830344512760d97db499",
+      "experiments/E15_quality_curriculum/smoke.py": "50d6486574d4361679f1617e852f39919fef467744c12623362f6234aa68e5b3",
+      "experiments/E15_quality_curriculum/smoke_cached.py": "6984d32ce079d6b123a62af82d947b04507fd16f9db1b8a9ef052d4af257493e",
+      "experiments/E15_quality_curriculum/train.py": "6090646803feba30cea6b3a24214c592d2f764f20b83a305a71e1b02da78ee26",
+      "scoring/__init__.py": "933bf2be947e20bae164511f26afaa84c2f331d0dbdebc417d235db8358a9247",
+      "scoring/checks.py": "738f6b57e20dce58516f3f10d83689f8df273a84a02b2dce99c6ccc1f904763a",
+      "scoring/evaluation.py": "356e0d1c788c6f25154b33fb1c2455388317d2cc0dd96ca50d7357c58612c611",
+      "scoring/official.py": "478fbc228a56ec4b336b5d8687a44b22b749f30aae09372f57c08e7124270e03",
+      "third_party/FloorSet/cost.py": "b60561556f79aa41c196c8fcaddea57840aab41059c76dbc3f80b4fdde6b48c3",
+      "third_party/FloorSet/iccad2026contest/iccad2026_evaluate.py": "64db37865b42baf11add62bdbf035690dca086cd4be7b5b4e58db756f20d8498",
+      "third_party/FloorSet/utils.py": "9299d9257f5bd932001896307f2296b51cc5567f44150db5514f357ed93c121e"
+    },
+    "registry_sha256": "4a30f802aa541b3da17d31bfeeead54f4425beb86c69231cfdd367ecc35c4860",
+    "paths_sha256": "7a28cd42de0f10809500c43c48836576361e67a72e723f7b32a404186df9b419",
+    "cache_identity": {
+      "format": "E15.packed_public_v1",
+      "registry": "4a30f802aa541b3da17d31bfeeead54f4425beb86c69231cfdd367ecc35c4860",
+      "paths": "7a28cd42de0f10809500c43c48836576361e67a72e723f7b32a404186df9b419",
+      "preparation_sources": {
+        "datasets/quality_layouts.py": "94f374fa9562770a9c7deadb645d73c3af1fc1a20251f98f1dce4ac575820191",
+        "experiments/E15_quality_curriculum/features.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+        "experiments/E15_quality_curriculum/data.py": "8fc01a9e053c64adb92c5c04f38de7541472542c6c1500f175e43878e4aa9bcf",
+        "experiments/E15_quality_curriculum/cache.py": "5dcb702d43f348898e3a8d0cf18ed9fdecc4508950b7515579326a796f762706"
+      }
+    },
+    "seed": 0,
+    "device": "cuda",
+    "torch": "2.7.1+cu128",
+    "numpy": "1.26.4",
+    "cuda": "12.8",
+    "device_name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+    "max_seconds": 14400.0,
+    "max_epochs": 200,
+    "batch_size": 16,
+    "lr": 0.0001,
+    "weight_decay": 0.0001,
+    "clip_norm": 1.0,
+    "monitor_interval_epochs": 1,
+    "schedule": "epochs1..5 sup1 quality.05 overlap10; linear epochs6..20 to sup.05 quality1 overlap10; supervised sup1 only",
+    "selection": "dev500: quality_proxy + 10*overlap + .05*supervision; fixed across arms/epochs",
+    "lr_patience_checks": 4,
+    "early_patience_checks": 12,
+    "scheduler_start_epoch": 20,
+    "training_postprocessing": false,
+    "validation_postprocessing": false,
+    "implementation_check": false,
+    "test_read": false,
+    "tail_test_read": false
+  },
+  "continuation": {
+    "source_run": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E15_quality_curriculum\\runs\\20261019_supervised_small_seed0",
+    "source_checkpoint_sha256": "f9639816709a1843295b3ea95d57104e32eaace88d21e987f8fdfbea15662a48",
+    "source_identity": {
+      "arm": "supervised_small",
+      "initialization": "random; no pretrained weights",
+      "width": 96,
+      "layers": 4,
+      "parameters": 497299,
+      "sources": {
+        "datasets/__init__.py": "03c36f364366be6c8a5091d6bd3dbec0788d7871747acdeac5fa89d4974cec21",
+        "datasets/cases.py": "1fd51addaaae38164c22f1946712665beebac700054db4bb07ed4f9d44e0b168",
+        "datasets/paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+        "datasets/quality_layouts.py": "5c797b43f8bf3e47933db1f84cb844cd10750cf49ee32b653110e10eff20b87e",
+        "datasets/worksets.py": "013087151ab8e1195d7d2757e777839f521486425eeaff4c45fed4e370df233c",
+        "experiments/E15_quality_curriculum/__init__.py": "9627c06c7604dbef1ac69d2e1546fb3087a94ed95af6baaff67c7b0d93e0a2c8",
+        "experiments/E15_quality_curriculum/assess.py": "d0a1ec92a9b27b69c35520da5929d9b686fadfa39baafff322044648eeefdc13",
+        "experiments/E15_quality_curriculum/backend/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "experiments/E15_quality_curriculum/backend/conic_geometry.py": "0b1a0295426c37a61f4abc13946b5dadf2c6f107375a02890e90ffe404be40e4",
+        "experiments/E15_quality_curriculum/backend/frozen/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "experiments/E15_quality_curriculum/backend/frozen/canonical_geometry.py": "04924bc4150f82862ed4da6cb67fc08779bbf98fcf24e24abd41b1c64d4e2521",
+        "experiments/E15_quality_curriculum/backend/frozen/feasible.py": "9cfe70894d80fbe54ccaa1c3de60ef4ab111ac9b4472286d1ae6a0c5a1fdc756",
+        "experiments/E15_quality_curriculum/backend/frozen/global_refine.py": "088021ede3290fcd6cf60726a054f7958309e4267d4353a699b80697078ab716",
+        "experiments/E15_quality_curriculum/backend/frozen/packing.py": "3c0500b7fee120807e6bd3fa8e9f115e476782af1a3e7620859c6651a089ef30",
+        "experiments/E15_quality_curriculum/backend/frozen/postprocess.py": "da0e1572a822a589968a19e67e2d36dd5133c7d17b7ea9443bd743ee4653a272",
+        "experiments/E15_quality_curriculum/backend/frozen/shape_lp.py": "2988df542aa80602f091963e1506da8085152ea0eca4846f6dc6c0a25ef13c94",
+        "experiments/E15_quality_curriculum/backend/frozen/solver.py": "cb5b0b6af3b8511d8a21b14178be188e31c61b58cba065c8c23847c2f9200325",
+        "experiments/E15_quality_curriculum/backend/frozen/topology_mip.py": "e392857196dbde4b3c1f3668862c9779e9c686f17ca89a820078421573b46df5",
+        "experiments/E15_quality_curriculum/backend/guard.py": "4e4adfb1dedede451a4d530103681f97ca6c05516e2dbe96b84d63c136faa87f",
+        "experiments/E15_quality_curriculum/backend/observe.py": "6fb401b9a7ebccec7063de8e9feeaf28bee310ac8a39b221b78d40e438432ec3",
+        "experiments/E15_quality_curriculum/backend/optimizer.py": "6373f5e7477f528e09e599c9a478b712bfbeb0ec29037bed1595d8c82af2ca36",
+        "experiments/E15_quality_curriculum/backend/reduction.py": "4587a5c9c486c59719e76ef64396398edb92e6011d8c0c0cd4f538cad52c4b50",
+        "experiments/E15_quality_curriculum/backend/rescue.py": "b928986f58fb3215140fe05acc36ddde92ce7aad99197fb2a975b7743a8c2e59",
+        "experiments/E15_quality_curriculum/backend/robust.py": "ceea8f18d0e2979279f4cf711b7702436912fbae77095d9559e603401176c99b",
+        "experiments/E15_quality_curriculum/backend/selection.py": "c21486a437531fed9a6717bcde6ce2ca062153ea717f9ae135b5b72e05500350",
+        "experiments/E15_quality_curriculum/backend/stable.py": "dc5a1e0afbec79e33f1ca6603a7d3186045a52ccc543ac756b508dbf8159bcce",
+        "experiments/E15_quality_curriculum/data.py": "c9fbf34e0bb057962928be5ddf7275a60e08d8d2a092fbde70f739fe4363b91b",
+        "experiments/E15_quality_curriculum/evaluation.py": "753011864c034a2f294aadadbd8ca53ca8cc4dbca374efabb89c820601db18ac",
+        "experiments/E15_quality_curriculum/features.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+        "experiments/E15_quality_curriculum/io.py": "f1d2e214551c578ae95a1ecac5eed5fce7b17b756259e97661524fa6b258919f",
+        "experiments/E15_quality_curriculum/loss.py": "baff6d6add8a72a6ffabef554036051d6130248bbbb76686bf01216891c1f78e",
+        "experiments/E15_quality_curriculum/model.py": "73a5c0bd5d2ef87e05a25dc0814befb36444669ece64830344512760d97db499",
+        "experiments/E15_quality_curriculum/smoke.py": "4b22588e12d97416cd407398e0f58ac9c6440626f8b98c2d4a40674100d6ea60",
+        "experiments/E15_quality_curriculum/train.py": "7a1d1526a421e3f0579529d9ddc1dae040dcb1efa33eb75faf7cc1e0c2654da3",
+        "scoring/__init__.py": "933bf2be947e20bae164511f26afaa84c2f331d0dbdebc417d235db8358a9247",
+        "scoring/checks.py": "738f6b57e20dce58516f3f10d83689f8df273a84a02b2dce99c6ccc1f904763a",
+        "scoring/evaluation.py": "356e0d1c788c6f25154b33fb1c2455388317d2cc0dd96ca50d7357c58612c611",
+        "scoring/official.py": "478fbc228a56ec4b336b5d8687a44b22b749f30aae09372f57c08e7124270e03",
+        "third_party/FloorSet/cost.py": "b60561556f79aa41c196c8fcaddea57840aab41059c76dbc3f80b4fdde6b48c3",
+        "third_party/FloorSet/iccad2026contest/iccad2026_evaluate.py": "64db37865b42baf11add62bdbf035690dca086cd4be7b5b4e58db756f20d8498",
+        "third_party/FloorSet/utils.py": "9299d9257f5bd932001896307f2296b51cc5567f44150db5514f357ed93c121e"
+      },
+      "registry_sha256": "4a30f802aa541b3da17d31bfeeead54f4425beb86c69231cfdd367ecc35c4860",
+      "paths_sha256": "7a28cd42de0f10809500c43c48836576361e67a72e723f7b32a404186df9b419",
+      "seed": 0,
+      "device": "cuda",
+      "torch": "2.7.1+cu128",
+      "cuda": "12.8",
+      "numpy": "1.26.4",
+      "device_name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+      "max_seconds": 14400.0,
+      "max_epochs": 200,
+      "batch_size": 16,
+      "lr": 0.0001,
+      "weight_decay": 0.0001,
+      "clip_norm": 1.0,
+      "quality_monitor_epochs": "5, then every10, plus max_epochs",
+      "schedule": "epochs1..5: sup1 quality.05 overlap10; linear epochs6..20 to sup.05 quality1 overlap10; supervised arm sup1 only",
+      "selection": "lexicographic (infeasible count, module-count weighted real postprocessed Q), min_delta=1e-5",
+      "lr_patience_quality_checks": 4,
+      "early_patience_quality_checks": 12,
+      "scheduler_start_epoch": 20,
+      "quality_panel_members": [
+        [
+          "worker_27/layouts_7504.th",
+          111
+        ],
+        [
+          "worker_5/layouts_7952.th",
+          68
+        ],
+        [
+          "worker_12/layouts_6048.th",
+          40
+        ],
+        [
+          "worker_12/layouts_6048.th",
+          45
+        ],
+        [
+          "worker_27/layouts_7504.th",
+          81
+        ],
+        [
+          "worker_12/layouts_6048.th",
+          9
+        ],
+        [
+          "worker_26/layouts_4256.th",
+          33
+        ],
+        [
+          "worker_15/layouts_448.th",
+          105
+        ],
+        [
+          "worker_12/layouts_6048.th",
+          48
+        ],
+        [
+          "worker_77/layouts_6496.th",
+          67
+        ],
+        [
+          "worker_77/layouts_6496.th",
+          92
+        ],
+        [
+          "worker_22/layouts_7056.th",
+          44
+        ],
+        [
+          "worker_5/layouts_7952.th",
+          45
+        ],
+        [
+          "worker_15/layouts_448.th",
+          36
+        ],
+        [
+          "worker_42/layouts_8288.th",
+          27
+        ],
+        [
+          "worker_22/layouts_7056.th",
+          25
+        ],
+        [
+          "worker_5/layouts_7952.th",
+          78
+        ],
+        [
+          "worker_22/layouts_7056.th",
+          86
+        ],
+        [
+          "worker_15/layouts_448.th",
+          54
+        ],
+        [
+          "worker_15/layouts_448.th",
+          52
+        ],
+        [
+          "worker_5/layouts_7952.th",
+          32
+        ],
+        [
+          "worker_5/layouts_7952.th",
+          84
+        ],
+        [
+          "worker_77/layouts_6496.th",
+          72
+        ],
+        [
+          "worker_15/layouts_448.th",
+          39
+        ],
+        [
+          "worker_22/layouts_7056.th",
+          32
+        ],
+        [
+          "worker_92/layouts_4032.th",
+          80
+        ],
+        [
+          "worker_22/layouts_7056.th",
+          108
+        ],
+        [
+          "worker_22/layouts_7056.th",
+          22
+        ],
+        [
+          "worker_22/layouts_7056.th",
+          61
+        ],
+        [
+          "worker_22/layouts_7056.th",
+          49
+        ],
+        [
+          "worker_22/layouts_7056.th",
+          24
+        ],
+        [
+          "worker_27/layouts_7504.th",
+          0
+        ],
+        [
+          "worker_5/layouts_7952.th",
+          48
+        ],
+        [
+          "worker_89/layouts_5600.th",
+          0
+        ],
+        [
+          "worker_22/layouts_7056.th",
+          35
+        ],
+        [
+          "worker_22/layouts_7056.th",
+          72
+        ],
+        [
+          "worker_27/layouts_7504.th",
+          98
+        ],
+        [
+          "worker_77/layouts_6496.th",
+          34
+        ],
+        [
+          "worker_15/layouts_448.th",
+          69
+        ],
+        [
+          "worker_12/layouts_6048.th",
+          44
+        ],
+        [
+          "worker_5/layouts_7952.th",
+          55
+        ],
+        [
+          "worker_15/layouts_448.th",
+          104
+        ],
+        [
+          "worker_5/layouts_7952.th",
+          30
+        ],
+        [
+          "worker_21/layouts_9072.th",
+          0
+        ],
+        [
+          "worker_77/layouts_6496.th",
+          109
+        ],
+        [
+          "worker_22/layouts_7056.th",
+          34
+        ],
+        [
+          "worker_34/layouts_1456.th",
+          8
+        ],
+        [
+          "worker_22/layouts_7056.th",
+          63
+        ],
+        [
+          "worker_22/layouts_7056.th",
+          78
+        ],
+        [
+          "worker_77/layouts_6496.th",
+          55
+        ],
+        [
+          "worker_27/layouts_7504.th",
+          67
+        ],
+        [
+          "worker_12/layouts_6048.th",
+          63
+        ],
+        [
+          "worker_5/layouts_7952.th",
+          103
+        ],
+        [
+          "worker_12/layouts_6048.th",
+          67
+        ],
+        [
+          "worker_30/layouts_1904.th",
+          0
+        ],
+        [
+          "worker_77/layouts_6496.th",
+          87
+        ],
+        [
+          "worker_77/layouts_6496.th",
+          84
+        ],
+        [
+          "worker_15/layouts_448.th",
+          82
+        ],
+        [
+          "worker_12/layouts_6048.th",
+          25
+        ],
+        [
+          "worker_5/layouts_7952.th",
+          16
+        ],
+        [
+          "worker_42/layouts_8288.th",
+          0
+        ],
+        [
+          "worker_15/layouts_448.th",
+          11
+        ],
+        [
+          "worker_15/layouts_448.th",
+          7
+        ],
+        [
+          "worker_22/layouts_7056.th",
+          75
+        ],
+        [
+          "worker_5/layouts_7952.th",
+          28
+        ],
+        [
+          "worker_77/layouts_6496.th",
+          29
+        ],
+        [
+          "worker_22/layouts_7056.th",
+          59
+        ],
+        [
+          "worker_12/layouts_6048.th",
+          27
+        ],
+        [
+          "worker_63/layouts_6720.th",
+          86
+        ],
+        [
+          "worker_20/layouts_5600.th",
+          90
+        ],
+        [
+          "worker_63/layouts_6720.th",
+          65
+        ],
+        [
+          "worker_66/layouts_9856.th",
+          59
+        ],
+        [
+          "worker_63/layouts_6720.th",
+          19
+        ],
+        [
+          "worker_3/layouts_896.th",
+          109
+        ],
+        [
+          "worker_3/layouts_896.th",
+          42
+        ],
+        [
+          "worker_63/layouts_6720.th",
+          53
+        ],
+        [
+          "worker_70/layouts_5600.th",
+          106
+        ],
+        [
+          "worker_66/layouts_9856.th",
+          12
+        ],
+        [
+          "worker_66/layouts_9856.th",
+          29
+        ],
+        [
+          "worker_66/layouts_9856.th",
+          73
+        ],
+        [
+          "worker_20/layouts_5600.th",
+          19
+        ],
+        [
+          "worker_3/layouts_896.th",
+          0
+        ],
+        [
+          "worker_93/layouts_5264.th",
+          92
+        ],
+        [
+          "worker_66/layouts_9856.th",
+          74
+        ],
+        [
+          "worker_66/layouts_9856.th",
+          9
+        ],
+        [
+          "worker_63/layouts_6720.th",
+          14
+        ],
+        [
+          "worker_3/layouts_896.th",
+          67
+        ],
+        [
+          "worker_60/layouts_8288.th",
+          10
+        ],
+        [
+          "worker_20/layouts_5600.th",
+          95
+        ],
+        [
+          "worker_3/layouts_896.th",
+          35
+        ],
+        [
+          "worker_60/layouts_8288.th",
+          71
+        ],
+        [
+          "worker_93/layouts_5264.th",
+          19
+        ],
+        [
+          "worker_66/layouts_9856.th",
+          106
+        ],
+        [
+          "worker_60/layouts_8288.th",
+          46
+        ],
+        [
+          "worker_66/layouts_9856.th",
+          67
+        ],
+        [
+          "worker_60/layouts_8288.th",
+          86
+        ],
+        [
+          "worker_93/layouts_5264.th",
+          102
+        ],
+        [
+          "worker_60/layouts_8288.th",
+          73
+        ],
+        [
+          "worker_66/layouts_9856.th",
+          43
+        ],
+        [
+          "worker_70/layouts_5600.th",
+          59
+        ],
+        [
+          "worker_60/layouts_8288.th",
+          85
+        ],
+        [
+          "worker_3/layouts_896.th",
+          60
+        ],
+        [
+          "worker_70/layouts_5600.th",
+          65
+        ],
+        [
+          "worker_93/layouts_5264.th",
+          23
+        ],
+        [
+          "worker_66/layouts_9856.th",
+          109
+        ],
+        [
+          "worker_2/layouts_4256.th",
+          8
+        ],
+        [
+          "worker_66/layouts_9856.th",
+          94
+        ],
+        [
+          "worker_60/layouts_8288.th",
+          80
+        ],
+        [
+          "worker_60/layouts_8288.th",
+          22
+        ],
+        [
+          "worker_66/layouts_9856.th",
+          2
+        ],
+        [
+          "worker_93/layouts_5264.th",
+          91
+        ],
+        [
+          "worker_20/layouts_5600.th",
+          60
+        ],
+        [
+          "worker_3/layouts_896.th",
+          3
+        ],
+        [
+          "worker_3/layouts_896.th",
+          43
+        ],
+        [
+          "worker_66/layouts_9856.th",
+          46
+        ],
+        [
+          "worker_20/layouts_5600.th",
+          37
+        ],
+        [
+          "worker_93/layouts_5264.th",
+          58
+        ],
+        [
+          "worker_20/layouts_5600.th",
+          85
+        ],
+        [
+          "worker_63/layouts_6720.th",
+          69
+        ],
+        [
+          "worker_60/layouts_8288.th",
+          35
+        ],
+        [
+          "worker_3/layouts_896.th",
+          69
+        ],
+        [
+          "worker_3/layouts_896.th",
+          52
+        ],
+        [
+          "worker_66/layouts_9856.th",
+          64
+        ],
+        [
+          "worker_63/layouts_6720.th",
+          13
+        ],
+        [
+          "worker_63/layouts_6720.th",
+          63
+        ],
+        [
+          "worker_93/layouts_5264.th",
+          54
+        ],
+        [
+          "worker_70/layouts_5600.th",
+          11
+        ],
+        [
+          "worker_20/layouts_5600.th",
+          64
+        ],
+        [
+          "worker_63/layouts_6720.th",
+          110
+        ],
+        [
+          "worker_20/layouts_5600.th",
+          1
+        ],
+        [
+          "worker_37/layouts_9632.th",
+          48
+        ],
+        [
+          "worker_60/layouts_8288.th",
+          15
+        ],
+        [
+          "worker_37/layouts_9632.th",
+          77
+        ],
+        [
+          "worker_63/layouts_6720.th",
+          8
+        ],
+        [
+          "worker_63/layouts_6720.th",
+          67
+        ],
+        [
+          "worker_60/layouts_8288.th",
+          0
+        ],
+        [
+          "worker_66/layouts_9856.th",
+          52
+        ],
+        [
+          "worker_93/layouts_5264.th",
+          14
+        ],
+        [
+          "worker_3/layouts_896.th",
+          102
+        ],
+        [
+          "worker_66/layouts_9856.th",
+          22
+        ],
+        [
+          "worker_20/layouts_5600.th",
+          52
+        ],
+        [
+          "worker_93/layouts_5264.th",
+          72
+        ],
+        [
+          "worker_70/layouts_5600.th",
+          51
+        ],
+        [
+          "worker_66/layouts_9856.th",
+          32
+        ],
+        [
+          "worker_93/layouts_5264.th",
+          43
+        ],
+        [
+          "worker_93/layouts_5264.th",
+          84
+        ],
+        [
+          "worker_3/layouts_896.th",
+          31
+        ],
+        [
+          "worker_93/layouts_5264.th",
+          5
+        ],
+        [
+          "worker_20/layouts_5600.th",
+          102
+        ],
+        [
+          "worker_70/layouts_5600.th",
+          81
+        ],
+        [
+          "worker_3/layouts_896.th",
+          58
+        ],
+        [
+          "worker_3/layouts_896.th",
+          10
+        ],
+        [
+          "worker_66/layouts_9856.th",
+          102
+        ],
+        [
+          "worker_93/layouts_5264.th",
+          12
+        ],
+        [
+          "worker_63/layouts_6720.th",
+          21
+        ],
+        [
+          "worker_63/layouts_6720.th",
+          87
+        ],
+        [
+          "worker_66/layouts_9856.th",
+          49
+        ],
+        [
+          "worker_66/layouts_9856.th",
+          10
+        ],
+        [
+          "worker_93/layouts_5264.th",
+          33
+        ],
+        [
+          "worker_3/layouts_896.th",
+          107
+        ],
+        [
+          "worker_66/layouts_9856.th",
+          79
+        ],
+        [
+          "worker_20/layouts_5600.th",
+          82
+        ],
+        [
+          "worker_93/layouts_5264.th",
+          9
+        ],
+        [
+          "worker_20/layouts_5600.th",
+          27
+        ],
+        [
+          "worker_60/layouts_8288.th",
+          100
+        ],
+        [
+          "worker_60/layouts_8288.th",
+          45
+        ],
+        [
+          "worker_98/layouts_8176.th",
+          0
+        ],
+        [
+          "worker_60/layouts_8288.th",
+          5
+        ],
+        [
+          "worker_63/layouts_6720.th",
+          39
+        ],
+        [
+          "worker_3/layouts_896.th",
+          83
+        ],
+        [
+          "worker_3/layouts_896.th",
+          63
+        ],
+        [
+          "worker_63/layouts_6720.th",
+          2
+        ],
+        [
+          "worker_64/layouts_6944.th",
+          105
+        ],
+        [
+          "worker_29/layouts_4368.th",
+          59
+        ],
+        [
+          "worker_36/layouts_8400.th",
+          77
+        ],
+        [
+          "worker_7/layouts_4032.th",
+          10
+        ],
+        [
+          "worker_75/layouts_1344.th",
+          68
+        ],
+        [
+          "worker_7/layouts_4032.th",
+          65
+        ],
+        [
+          "worker_18/layouts_7280.th",
+          111
+        ],
+        [
+          "worker_36/layouts_8400.th",
+          88
+        ],
+        [
+          "worker_75/layouts_1344.th",
+          4
+        ],
+        [
+          "worker_36/layouts_8400.th",
+          10
+        ],
+        [
+          "worker_7/layouts_4032.th",
+          52
+        ],
+        [
+          "worker_75/layouts_1344.th",
+          25
+        ],
+        [
+          "worker_75/layouts_1344.th",
+          84
+        ],
+        [
+          "worker_29/layouts_4368.th",
+          82
+        ],
+        [
+          "worker_7/layouts_4032.th",
+          78
+        ],
+        [
+          "worker_75/layouts_1344.th",
+          85
+        ],
+        [
+          "worker_75/layouts_1344.th",
+          86
+        ],
+        [
+          "worker_18/layouts_7280.th",
+          61
+        ],
+        [
+          "worker_36/layouts_8400.th",
+          68
+        ],
+        [
+          "worker_75/layouts_1344.th",
+          104
+        ],
+        [
+          "worker_75/layouts_1344.th",
+          106
+        ],
+        [
+          "worker_75/layouts_1344.th",
+          29
+        ],
+        [
+          "worker_41/layouts_4704.th",
+          57
+        ],
+        [
+          "worker_41/layouts_4704.th",
+          60
+        ],
+        [
+          "worker_18/layouts_7280.th",
+          12
+        ],
+        [
+          "worker_41/layouts_4704.th",
+          99
+        ],
+        [
+          "worker_36/layouts_8400.th",
+          29
+        ],
+        [
+          "worker_41/layouts_4704.th",
+          13
+        ],
+        [
+          "worker_18/layouts_7280.th",
+          8
+        ],
+        [
+          "worker_7/layouts_4032.th",
+          94
+        ],
+        [
+          "worker_41/layouts_4704.th",
+          76
+        ],
+        [
+          "worker_55/layouts_6720.th",
+          10
+        ],
+        [
+          "worker_29/layouts_4368.th",
+          27
+        ],
+        [
+          "worker_41/layouts_4704.th",
+          31
+        ],
+        [
+          "worker_29/layouts_4368.th",
+          40
+        ],
+        [
+          "worker_36/layouts_8400.th",
+          84
+        ],
+        [
+          "worker_41/layouts_4704.th",
+          87
+        ],
+        [
+          "worker_55/layouts_6720.th",
+          103
+        ],
+        [
+          "worker_75/layouts_1344.th",
+          22
+        ],
+        [
+          "worker_18/layouts_7280.th",
+          93
+        ],
+        [
+          "worker_29/layouts_4368.th",
+          21
+        ],
+        [
+          "worker_29/layouts_4368.th",
+          0
+        ],
+        [
+          "worker_75/layouts_1344.th",
+          46
+        ],
+        [
+          "worker_7/layouts_4032.th",
+          9
+        ],
+        [
+          "worker_7/layouts_4032.th",
+          101
+        ],
+        [
+          "worker_7/layouts_4032.th",
+          4
+        ],
+        [
+          "worker_75/layouts_1344.th",
+          51
+        ],
+        [
+          "worker_36/layouts_8400.th",
+          111
+        ],
+        [
+          "worker_7/layouts_4032.th",
+          26
+        ],
+        [
+          "worker_55/layouts_6720.th",
+          84
+        ],
+        [
+          "worker_36/layouts_8400.th",
+          4
+        ],
+        [
+          "worker_55/layouts_6720.th",
+          4
+        ],
+        [
+          "worker_29/layouts_4368.th",
+          93
+        ],
+        [
+          "worker_18/layouts_7280.th",
+          109
+        ],
+        [
+          "worker_18/layouts_7280.th",
+          71
+        ],
+        [
+          "worker_41/layouts_4704.th",
+          14
+        ],
+        [
+          "worker_36/layouts_8400.th",
+          85
+        ],
+        [
+          "worker_29/layouts_4368.th",
+          94
+        ],
+        [
+          "worker_75/layouts_1344.th",
+          20
+        ],
+        [
+          "worker_29/layouts_4368.th",
+          72
+        ],
+        [
+          "worker_36/layouts_8400.th",
+          27
+        ],
+        [
+          "worker_18/layouts_7280.th",
+          59
+        ],
+        [
+          "worker_29/layouts_4368.th",
+          54
+        ],
+        [
+          "worker_29/layouts_4368.th",
+          109
+        ],
+        [
+          "worker_29/layouts_4368.th",
+          48
+        ],
+        [
+          "worker_29/layouts_4368.th",
+          79
+        ],
+        [
+          "worker_18/layouts_7280.th",
+          60
+        ],
+        [
+          "worker_55/layouts_6720.th",
+          15
+        ],
+        [
+          "worker_75/layouts_1344.th",
+          44
+        ],
+        [
+          "worker_55/layouts_6720.th",
+          5
+        ],
+        [
+          "worker_41/layouts_4704.th",
+          7
+        ],
+        [
+          "worker_41/layouts_4704.th",
+          95
+        ],
+        [
+          "worker_36/layouts_8400.th",
+          21
+        ],
+        [
+          "worker_36/layouts_8400.th",
+          61
+        ],
+        [
+          "worker_7/layouts_4032.th",
+          48
+        ],
+        [
+          "worker_0/layouts_8512.th",
+          0
+        ],
+        [
+          "worker_41/layouts_4704.th",
+          81
+        ],
+        [
+          "worker_41/layouts_4704.th",
+          20
+        ],
+        [
+          "worker_75/layouts_1344.th",
+          41
+        ],
+        [
+          "worker_7/layouts_4032.th",
+          32
+        ],
+        [
+          "worker_55/layouts_6720.th",
+          37
+        ],
+        [
+          "worker_18/layouts_7280.th",
+          98
+        ],
+        [
+          "worker_7/layouts_4032.th",
+          105
+        ],
+        [
+          "worker_55/layouts_6720.th",
+          92
+        ],
+        [
+          "worker_7/layouts_4032.th",
+          34
+        ],
+        [
+          "worker_29/layouts_4368.th",
+          15
+        ],
+        [
+          "worker_18/layouts_7280.th",
+          100
+        ],
+        [
+          "worker_36/layouts_8400.th",
+          99
+        ],
+        [
+          "worker_75/layouts_1344.th",
+          61
+        ],
+        [
+          "worker_18/layouts_7280.th",
+          85
+        ],
+        [
+          "worker_41/layouts_4704.th",
+          74
+        ],
+        [
+          "worker_18/layouts_7280.th",
+          62
+        ],
+        [
+          "worker_75/layouts_1344.th",
+          43
+        ],
+        [
+          "worker_29/layouts_4368.th",
+          52
+        ],
+        [
+          "worker_7/layouts_4032.th",
+          45
+        ],
+        [
+          "worker_36/layouts_8400.th",
+          25
+        ],
+        [
+          "worker_29/layouts_4368.th",
+          106
+        ],
+        [
+          "worker_29/layouts_4368.th",
+          49
+        ],
+        [
+          "worker_36/layouts_8400.th",
+          18
+        ],
+        [
+          "worker_29/layouts_4368.th",
+          88
+        ],
+        [
+          "worker_29/layouts_4368.th",
+          11
+        ],
+        [
+          "worker_7/layouts_4032.th",
+          28
+        ],
+        [
+          "worker_18/layouts_7280.th",
+          36
+        ],
+        [
+          "worker_29/layouts_4368.th",
+          8
+        ],
+        [
+          "worker_18/layouts_7280.th",
+          10
+        ],
+        [
+          "worker_29/layouts_4368.th",
+          55
+        ],
+        [
+          "worker_36/layouts_8400.th",
+          26
+        ],
+        [
+          "worker_55/layouts_6720.th",
+          49
+        ],
+        [
+          "worker_36/layouts_8400.th",
+          73
+        ],
+        [
+          "worker_29/layouts_4368.th",
+          89
+        ],
+        [
+          "worker_7/layouts_4032.th",
+          42
+        ],
+        [
+          "worker_16/layouts_2464.th",
+          0
+        ],
+        [
+          "worker_75/layouts_1344.th",
+          103
+        ],
+        [
+          "worker_54/layouts_2576.th",
+          101
+        ],
+        [
+          "worker_6/layouts_1680.th",
+          37
+        ],
+        [
+          "worker_17/layouts_3920.th",
+          104
+        ],
+        [
+          "worker_48/layouts_4480.th",
+          80
+        ],
+        [
+          "worker_1/layouts_5488.th",
+          0
+        ],
+        [
+          "worker_17/layouts_3920.th",
+          29
+        ],
+        [
+          "worker_68/layouts_5376.th",
+          61
+        ],
+        [
+          "worker_17/layouts_3920.th",
+          11
+        ],
+        [
+          "worker_8/layouts_7056.th",
+          49
+        ],
+        [
+          "worker_6/layouts_1680.th",
+          54
+        ],
+        [
+          "worker_1/layouts_5488.th",
+          44
+        ],
+        [
+          "worker_1/layouts_5488.th",
+          43
+        ],
+        [
+          "worker_8/layouts_7056.th",
+          106
+        ],
+        [
+          "worker_8/layouts_7056.th",
+          104
+        ],
+        [
+          "worker_8/layouts_7056.th",
+          59
+        ],
+        [
+          "worker_68/layouts_5376.th",
+          4
+        ],
+        [
+          "worker_6/layouts_1680.th",
+          74
+        ],
+        [
+          "worker_46/layouts_9968.th",
+          1
+        ],
+        [
+          "worker_48/layouts_4480.th",
+          36
+        ],
+        [
+          "worker_48/layouts_4480.th",
+          107
+        ],
+        [
+          "worker_8/layouts_7056.th",
+          29
+        ],
+        [
+          "worker_8/layouts_7056.th",
+          40
+        ],
+        [
+          "worker_8/layouts_7056.th",
+          21
+        ],
+        [
+          "worker_1/layouts_5488.th",
+          5
+        ],
+        [
+          "worker_48/layouts_4480.th",
+          81
+        ],
+        [
+          "worker_54/layouts_2576.th",
+          79
+        ],
+        [
+          "worker_54/layouts_2576.th",
+          95
+        ],
+        [
+          "worker_17/layouts_3920.th",
+          16
+        ],
+        [
+          "worker_6/layouts_1680.th",
+          26
+        ],
+        [
+          "worker_48/layouts_4480.th",
+          93
+        ],
+        [
+          "worker_46/layouts_9968.th",
+          19
+        ],
+        [
+          "worker_48/layouts_4480.th",
+          101
+        ],
+        [
+          "worker_54/layouts_2576.th",
+          16
+        ],
+        [
+          "worker_6/layouts_1680.th",
+          43
+        ],
+        [
+          "worker_8/layouts_7056.th",
+          34
+        ],
+        [
+          "worker_17/layouts_3920.th",
+          60
+        ],
+        [
+          "worker_48/layouts_4480.th",
+          17
+        ],
+        [
+          "worker_68/layouts_5376.th",
+          58
+        ],
+        [
+          "worker_8/layouts_7056.th",
+          7
+        ],
+        [
+          "worker_17/layouts_3920.th",
+          74
+        ],
+        [
+          "worker_48/layouts_4480.th",
+          12
+        ],
+        [
+          "worker_1/layouts_5488.th",
+          107
+        ],
+        [
+          "worker_54/layouts_2576.th",
+          52
+        ],
+        [
+          "worker_46/layouts_9968.th",
+          94
+        ],
+        [
+          "worker_1/layouts_5488.th",
+          11
+        ],
+        [
+          "worker_54/layouts_2576.th",
+          7
+        ],
+        [
+          "worker_8/layouts_7056.th",
+          38
+        ],
+        [
+          "worker_8/layouts_7056.th",
+          12
+        ],
+        [
+          "worker_1/layouts_5488.th",
+          4
+        ],
+        [
+          "worker_48/layouts_4480.th",
+          5
+        ],
+        [
+          "worker_8/layouts_7056.th",
+          77
+        ],
+        [
+          "worker_1/layouts_5488.th",
+          13
+        ],
+        [
+          "worker_46/layouts_9968.th",
+          52
+        ],
+        [
+          "worker_46/layouts_9968.th",
+          25
+        ],
+        [
+          "worker_48/layouts_4480.th",
+          39
+        ],
+        [
+          "worker_8/layouts_7056.th",
+          48
+        ],
+        [
+          "worker_54/layouts_2576.th",
+          106
+        ],
+        [
+          "worker_54/layouts_2576.th",
+          102
+        ],
+        [
+          "worker_17/layouts_3920.th",
+          2
+        ],
+        [
+          "worker_46/layouts_9968.th",
+          97
+        ],
+        [
+          "worker_68/layouts_5376.th",
+          21
+        ],
+        [
+          "worker_95/layouts_7616.th",
+          0
+        ],
+        [
+          "worker_54/layouts_2576.th",
+          80
+        ],
+        [
+          "worker_46/layouts_9968.th",
+          35
+        ],
+        [
+          "worker_17/layouts_3920.th",
+          25
+        ],
+        [
+          "worker_46/layouts_9968.th",
+          57
+        ],
+        [
+          "worker_17/layouts_3920.th",
+          10
+        ],
+        [
+          "worker_48/layouts_4480.th",
+          9
+        ],
+        [
+          "worker_54/layouts_2576.th",
+          14
+        ],
+        [
+          "worker_17/layouts_3920.th",
+          106
+        ],
+        [
+          "worker_1/layouts_5488.th",
+          82
+        ],
+        [
+          "worker_1/layouts_5488.th",
+          24
+        ],
+        [
+          "worker_46/layouts_9968.th",
+          23
+        ],
+        [
+          "worker_46/layouts_9968.th",
+          84
+        ],
+        [
+          "worker_8/layouts_7056.th",
+          33
+        ],
+        [
+          "worker_46/layouts_9968.th",
+          101
+        ],
+        [
+          "worker_1/layouts_5488.th",
+          27
+        ],
+        [
+          "worker_6/layouts_1680.th",
+          68
+        ],
+        [
+          "worker_48/layouts_4480.th",
+          62
+        ],
+        [
+          "worker_54/layouts_2576.th",
+          58
+        ],
+        [
+          "worker_1/layouts_5488.th",
+          42
+        ],
+        [
+          "worker_17/layouts_3920.th",
+          19
+        ],
+        [
+          "worker_6/layouts_1680.th",
+          46
+        ],
+        [
+          "worker_46/layouts_9968.th",
+          111
+        ],
+        [
+          "worker_68/layouts_5376.th",
+          64
+        ],
+        [
+          "worker_46/layouts_9968.th",
+          105
+        ],
+        [
+          "worker_8/layouts_7056.th",
+          42
+        ],
+        [
+          "worker_1/layouts_5488.th",
+          87
+        ],
+        [
+          "worker_46/layouts_9968.th",
+          24
+        ],
+        [
+          "worker_1/layouts_5488.th",
+          30
+        ],
+        [
+          "worker_54/layouts_2576.th",
+          31
+        ],
+        [
+          "worker_6/layouts_1680.th",
+          27
+        ],
+        [
+          "worker_17/layouts_3920.th",
+          18
+        ],
+        [
+          "worker_6/layouts_1680.th",
+          64
+        ],
+        [
+          "worker_46/layouts_9968.th",
+          106
+        ],
+        [
+          "worker_68/layouts_5376.th",
+          101
+        ],
+        [
+          "worker_48/layouts_4480.th",
+          46
+        ],
+        [
+          "worker_68/layouts_5376.th",
+          25
+        ],
+        [
+          "worker_46/layouts_9968.th",
+          42
+        ],
+        [
+          "worker_17/layouts_3920.th",
+          43
+        ],
+        [
+          "worker_8/layouts_7056.th",
+          36
+        ],
+        [
+          "worker_8/layouts_7056.th",
+          72
+        ],
+        [
+          "worker_46/layouts_9968.th",
+          93
+        ],
+        [
+          "worker_54/layouts_2576.th",
+          86
+        ],
+        [
+          "worker_17/layouts_3920.th",
+          56
+        ],
+        [
+          "worker_48/layouts_4480.th",
+          110
+        ],
+        [
+          "worker_10/layouts_8288.th",
+          81
+        ],
+        [
+          "worker_13/layouts_3360.th",
+          70
+        ],
+        [
+          "worker_10/layouts_8288.th",
+          98
+        ],
+        [
+          "worker_28/layouts_8064.th",
+          5
+        ],
+        [
+          "worker_28/layouts_8064.th",
+          22
+        ],
+        [
+          "worker_28/layouts_8064.th",
+          105
+        ],
+        [
+          "worker_28/layouts_8064.th",
+          47
+        ],
+        [
+          "worker_13/layouts_3360.th",
+          49
+        ],
+        [
+          "worker_10/layouts_8288.th",
+          0
+        ],
+        [
+          "worker_10/layouts_8288.th",
+          102
+        ],
+        [
+          "worker_10/layouts_8288.th",
+          15
+        ],
+        [
+          "worker_40/layouts_1232.th",
+          31
+        ],
+        [
+          "worker_40/layouts_1232.th",
+          106
+        ],
+        [
+          "worker_13/layouts_3360.th",
+          15
+        ],
+        [
+          "worker_28/layouts_8064.th",
+          43
+        ],
+        [
+          "worker_13/layouts_3360.th",
+          3
+        ],
+        [
+          "worker_13/layouts_3360.th",
+          107
+        ],
+        [
+          "worker_40/layouts_1232.th",
+          34
+        ],
+        [
+          "worker_28/layouts_8064.th",
+          37
+        ],
+        [
+          "worker_13/layouts_3360.th",
+          53
+        ],
+        [
+          "worker_28/layouts_8064.th",
+          24
+        ],
+        [
+          "worker_28/layouts_8064.th",
+          21
+        ],
+        [
+          "worker_28/layouts_8064.th",
+          64
+        ],
+        [
+          "worker_10/layouts_8288.th",
+          17
+        ],
+        [
+          "worker_40/layouts_1232.th",
+          29
+        ],
+        [
+          "worker_28/layouts_8064.th",
+          65
+        ],
+        [
+          "worker_40/layouts_1232.th",
+          33
+        ],
+        [
+          "worker_40/layouts_1232.th",
+          81
+        ],
+        [
+          "worker_10/layouts_8288.th",
+          107
+        ],
+        [
+          "worker_40/layouts_1232.th",
+          98
+        ],
+        [
+          "worker_40/layouts_1232.th",
+          59
+        ],
+        [
+          "worker_28/layouts_8064.th",
+          90
+        ],
+        [
+          "worker_13/layouts_3360.th",
+          61
+        ],
+        [
+          "worker_13/layouts_3360.th",
+          109
+        ],
+        [
+          "worker_28/layouts_8064.th",
+          1
+        ],
+        [
+          "worker_40/layouts_1232.th",
+          77
+        ],
+        [
+          "worker_40/layouts_1232.th",
+          69
+        ],
+        [
+          "worker_28/layouts_8064.th",
+          58
+        ],
+        [
+          "worker_10/layouts_8288.th",
+          26
+        ],
+        [
+          "worker_40/layouts_1232.th",
+          104
+        ],
+        [
+          "worker_10/layouts_8288.th",
+          43
+        ],
+        [
+          "worker_10/layouts_8288.th",
+          4
+        ],
+        [
+          "worker_13/layouts_3360.th",
+          35
+        ],
+        [
+          "worker_10/layouts_8288.th",
+          68
+        ],
+        [
+          "worker_40/layouts_1232.th",
+          99
+        ],
+        [
+          "worker_28/layouts_8064.th",
+          10
+        ],
+        [
+          "worker_13/layouts_3360.th",
+          74
+        ],
+        [
+          "worker_10/layouts_8288.th",
+          100
+        ],
+        [
+          "worker_28/layouts_8064.th",
+          102
+        ],
+        [
+          "worker_40/layouts_1232.th",
+          78
+        ],
+        [
+          "worker_13/layouts_3360.th",
+          39
+        ],
+        [
+          "worker_28/layouts_8064.th",
+          0
+        ],
+        [
+          "worker_10/layouts_8288.th",
+          95
+        ],
+        [
+          "worker_28/layouts_8064.th",
+          54
+        ],
+        [
+          "worker_13/layouts_3360.th",
+          33
+        ],
+        [
+          "worker_40/layouts_1232.th",
+          102
+        ],
+        [
+          "worker_10/layouts_8288.th",
+          77
+        ],
+        [
+          "worker_28/layouts_8064.th",
+          29
+        ],
+        [
+          "worker_61/layouts_9296.th",
+          57
+        ],
+        [
+          "worker_78/layouts_1680.th",
+          58
+        ],
+        [
+          "worker_61/layouts_9296.th",
+          24
+        ],
+        [
+          "worker_61/layouts_9296.th",
+          76
+        ],
+        [
+          "worker_53/layouts_8400.th",
+          87
+        ],
+        [
+          "worker_78/layouts_1680.th",
+          99
+        ],
+        [
+          "worker_4/layouts_2016.th",
+          29
+        ],
+        [
+          "worker_4/layouts_2016.th",
+          12
+        ],
+        [
+          "worker_61/layouts_9296.th",
+          73
+        ],
+        [
+          "worker_61/layouts_9296.th",
+          99
+        ],
+        [
+          "worker_4/layouts_2016.th",
+          65
+        ],
+        [
+          "worker_53/layouts_8400.th",
+          79
+        ],
+        [
+          "worker_78/layouts_1680.th",
+          49
+        ],
+        [
+          "worker_61/layouts_9296.th",
+          107
+        ],
+        [
+          "worker_53/layouts_8400.th",
+          52
+        ],
+        [
+          "worker_61/layouts_9296.th",
+          47
+        ],
+        [
+          "worker_4/layouts_2016.th",
+          33
+        ],
+        [
+          "worker_4/layouts_2016.th",
+          28
+        ],
+        [
+          "worker_4/layouts_2016.th",
+          95
+        ],
+        [
+          "worker_78/layouts_1680.th",
+          93
+        ],
+        [
+          "worker_53/layouts_8400.th",
+          102
+        ],
+        [
+          "worker_4/layouts_2016.th",
+          63
+        ],
+        [
+          "worker_78/layouts_1680.th",
+          68
+        ],
+        [
+          "worker_53/layouts_8400.th",
+          90
+        ],
+        [
+          "worker_78/layouts_1680.th",
+          62
+        ],
+        [
+          "worker_61/layouts_9296.th",
+          69
+        ],
+        [
+          "worker_2/layouts_7840.th",
+          0
+        ],
+        [
+          "worker_61/layouts_9296.th",
+          17
+        ],
+        [
+          "worker_61/layouts_9296.th",
+          82
+        ],
+        [
+          "worker_53/layouts_8400.th",
+          22
+        ],
+        [
+          "worker_61/layouts_9296.th",
+          1
+        ],
+        [
+          "worker_61/layouts_9296.th",
+          101
+        ],
+        [
+          "worker_78/layouts_1680.th",
+          98
+        ],
+        [
+          "worker_61/layouts_9296.th",
+          31
+        ],
+        [
+          "worker_61/layouts_9296.th",
+          15
+        ],
+        [
+          "worker_61/layouts_9296.th",
+          45
+        ],
+        [
+          "worker_61/layouts_9296.th",
+          104
+        ],
+        [
+          "worker_4/layouts_2016.th",
+          100
+        ],
+        [
+          "worker_61/layouts_9296.th",
+          52
+        ],
+        [
+          "worker_53/layouts_8400.th",
+          0
+        ],
+        [
+          "worker_4/layouts_2016.th",
+          72
+        ],
+        [
+          "worker_61/layouts_9296.th",
+          97
+        ],
+        [
+          "worker_4/layouts_2016.th",
+          51
+        ],
+        [
+          "worker_53/layouts_8400.th",
+          16
+        ],
+        [
+          "worker_61/layouts_9296.th",
+          66
+        ],
+        [
+          "worker_53/layouts_8400.th",
+          81
+        ],
+        [
+          "worker_78/layouts_1680.th",
+          100
+        ],
+        [
+          "worker_4/layouts_2016.th",
+          104
+        ],
+        [
+          "worker_78/layouts_1680.th",
+          87
+        ],
+        [
+          "worker_61/layouts_9296.th",
+          65
+        ],
+        [
+          "worker_61/layouts_9296.th",
+          85
+        ]
+      ],
+      "postprocess": {
+        "normal_total_target": 5.0,
+        "normal_fast_target": 1.3,
+        "extra_rescue_target": 16.0
+      },
+      "implementation_check": false,
+      "test_read": false,
+      "tail_test_read": false
+    },
+    "new_identity": {
+      "revision": "E15.cached_no_repair.v2",
+      "arm": "supervised_small",
+      "initialization": "random; preserved on explicit continuation",
+      "width": 96,
+      "layers": 4,
+      "parameters": 497299,
+      "sources": {
+        "datasets/__init__.py": "03c36f364366be6c8a5091d6bd3dbec0788d7871747acdeac5fa89d4974cec21",
+        "datasets/cases.py": "1fd51addaaae38164c22f1946712665beebac700054db4bb07ed4f9d44e0b168",
+        "datasets/paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+        "datasets/quality_layouts.py": "94f374fa9562770a9c7deadb645d73c3af1fc1a20251f98f1dce4ac575820191",
+        "datasets/worksets.py": "013087151ab8e1195d7d2757e777839f521486425eeaff4c45fed4e370df233c",
+        "experiments/E15_quality_curriculum/__init__.py": "9627c06c7604dbef1ac69d2e1546fb3087a94ed95af6baaff67c7b0d93e0a2c8",
+        "experiments/E15_quality_curriculum/archive_compat_check.py": "1e653da980d565e6fe3b5bbe20319b685a7a2c5f135d87e77b867d043daab01e",
+        "experiments/E15_quality_curriculum/assess.py": "d0a1ec92a9b27b69c35520da5929d9b686fadfa39baafff322044648eeefdc13",
+        "experiments/E15_quality_curriculum/backend/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "experiments/E15_quality_curriculum/backend/conic_geometry.py": "0b1a0295426c37a61f4abc13946b5dadf2c6f107375a02890e90ffe404be40e4",
+        "experiments/E15_quality_curriculum/backend/frozen/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "experiments/E15_quality_curriculum/backend/frozen/canonical_geometry.py": "04924bc4150f82862ed4da6cb67fc08779bbf98fcf24e24abd41b1c64d4e2521",
+        "experiments/E15_quality_curriculum/backend/frozen/feasible.py": "9cfe70894d80fbe54ccaa1c3de60ef4ab111ac9b4472286d1ae6a0c5a1fdc756",
+        "experiments/E15_quality_curriculum/backend/frozen/global_refine.py": "088021ede3290fcd6cf60726a054f7958309e4267d4353a699b80697078ab716",
+        "experiments/E15_quality_curriculum/backend/frozen/packing.py": "3c0500b7fee120807e6bd3fa8e9f115e476782af1a3e7620859c6651a089ef30",
+        "experiments/E15_quality_curriculum/backend/frozen/postprocess.py": "da0e1572a822a589968a19e67e2d36dd5133c7d17b7ea9443bd743ee4653a272",
+        "experiments/E15_quality_curriculum/backend/frozen/shape_lp.py": "2988df542aa80602f091963e1506da8085152ea0eca4846f6dc6c0a25ef13c94",
+        "experiments/E15_quality_curriculum/backend/frozen/solver.py": "cb5b0b6af3b8511d8a21b14178be188e31c61b58cba065c8c23847c2f9200325",
+        "experiments/E15_quality_curriculum/backend/frozen/topology_mip.py": "e392857196dbde4b3c1f3668862c9779e9c686f17ca89a820078421573b46df5",
+        "experiments/E15_quality_curriculum/backend/guard.py": "4e4adfb1dedede451a4d530103681f97ca6c05516e2dbe96b84d63c136faa87f",
+        "experiments/E15_quality_curriculum/backend/observe.py": "6fb401b9a7ebccec7063de8e9feeaf28bee310ac8a39b221b78d40e438432ec3",
+        "experiments/E15_quality_curriculum/backend/optimizer.py": "6373f5e7477f528e09e599c9a478b712bfbeb0ec29037bed1595d8c82af2ca36",
+        "experiments/E15_quality_curriculum/backend/reduction.py": "4587a5c9c486c59719e76ef64396398edb92e6011d8c0c0cd4f538cad52c4b50",
+        "experiments/E15_quality_curriculum/backend/rescue.py": "b928986f58fb3215140fe05acc36ddde92ce7aad99197fb2a975b7743a8c2e59",
+        "experiments/E15_quality_curriculum/backend/robust.py": "ceea8f18d0e2979279f4cf711b7702436912fbae77095d9559e603401176c99b",
+        "experiments/E15_quality_curriculum/backend/selection.py": "c21486a437531fed9a6717bcde6ce2ca062153ea717f9ae135b5b72e05500350",
+        "experiments/E15_quality_curriculum/backend/stable.py": "dc5a1e0afbec79e33f1ca6603a7d3186045a52ccc543ac756b508dbf8159bcce",
+        "experiments/E15_quality_curriculum/cache.py": "5dcb702d43f348898e3a8d0cf18ed9fdecc4508950b7515579326a796f762706",
+        "experiments/E15_quality_curriculum/data.py": "8fc01a9e053c64adb92c5c04f38de7541472542c6c1500f175e43878e4aa9bcf",
+        "experiments/E15_quality_curriculum/evaluation.py": "753011864c034a2f294aadadbd8ca53ca8cc4dbca374efabb89c820601db18ac",
+        "experiments/E15_quality_curriculum/features.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+        "experiments/E15_quality_curriculum/final_evaluate.py": "19d0eaddf553d683fe893e0bf44240c921afafa6a98b32bcd80efac2269fe52f",
+        "experiments/E15_quality_curriculum/io.py": "ee1f752f4a1391e2c957329bc80e54d15ce309d9b14ada037a6dda5de6cf5aaa",
+        "experiments/E15_quality_curriculum/loss.py": "96e87ccec2a27df8ac0106de955139e7aec64af1eca1991ac71d2e42e1e64904",
+        "experiments/E15_quality_curriculum/migrate.py": "665bca2f176cc1bc525b1d8550248c34f18f778436b5faf8a61d198cb3f6c30f",
+        "experiments/E15_quality_curriculum/model.py": "73a5c0bd5d2ef87e05a25dc0814befb36444669ece64830344512760d97db499",
+        "experiments/E15_quality_curriculum/smoke.py": "50d6486574d4361679f1617e852f39919fef467744c12623362f6234aa68e5b3",
+        "experiments/E15_quality_curriculum/smoke_cached.py": "6984d32ce079d6b123a62af82d947b04507fd16f9db1b8a9ef052d4af257493e",
+        "experiments/E15_quality_curriculum/train.py": "6090646803feba30cea6b3a24214c592d2f764f20b83a305a71e1b02da78ee26",
+        "scoring/__init__.py": "933bf2be947e20bae164511f26afaa84c2f331d0dbdebc417d235db8358a9247",
+        "scoring/checks.py": "738f6b57e20dce58516f3f10d83689f8df273a84a02b2dce99c6ccc1f904763a",
+        "scoring/evaluation.py": "356e0d1c788c6f25154b33fb1c2455388317d2cc0dd96ca50d7357c58612c611",
+        "scoring/official.py": "478fbc228a56ec4b336b5d8687a44b22b749f30aae09372f57c08e7124270e03",
+        "third_party/FloorSet/cost.py": "b60561556f79aa41c196c8fcaddea57840aab41059c76dbc3f80b4fdde6b48c3",
+        "third_party/FloorSet/iccad2026contest/iccad2026_evaluate.py": "64db37865b42baf11add62bdbf035690dca086cd4be7b5b4e58db756f20d8498",
+        "third_party/FloorSet/utils.py": "9299d9257f5bd932001896307f2296b51cc5567f44150db5514f357ed93c121e"
+      },
+      "registry_sha256": "4a30f802aa541b3da17d31bfeeead54f4425beb86c69231cfdd367ecc35c4860",
+      "paths_sha256": "7a28cd42de0f10809500c43c48836576361e67a72e723f7b32a404186df9b419",
+      "cache_identity": {
+        "format": "E15.packed_public_v1",
+        "registry": "4a30f802aa541b3da17d31bfeeead54f4425beb86c69231cfdd367ecc35c4860",
+        "paths": "7a28cd42de0f10809500c43c48836576361e67a72e723f7b32a404186df9b419",
+        "preparation_sources": {
+          "datasets/quality_layouts.py": "94f374fa9562770a9c7deadb645d73c3af1fc1a20251f98f1dce4ac575820191",
+          "experiments/E15_quality_curriculum/features.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+          "experiments/E15_quality_curriculum/data.py": "8fc01a9e053c64adb92c5c04f38de7541472542c6c1500f175e43878e4aa9bcf",
+          "experiments/E15_quality_curriculum/cache.py": "5dcb702d43f348898e3a8d0cf18ed9fdecc4508950b7515579326a796f762706"
+        }
+      },
+      "seed": 0,
+      "device": "cuda",
+      "torch": "2.7.1+cu128",
+      "numpy": "1.26.4",
+      "cuda": "12.8",
+      "device_name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+      "max_seconds": 14400.0,
+      "max_epochs": 200,
+      "batch_size": 16,
+      "lr": 0.0001,
+      "weight_decay": 0.0001,
+      "clip_norm": 1.0,
+      "monitor_interval_epochs": 1,
+      "schedule": "epochs1..5 sup1 quality.05 overlap10; linear epochs6..20 to sup.05 quality1 overlap10; supervised sup1 only",
+      "selection": "dev500: quality_proxy + 10*overlap + .05*supervision; fixed across arms/epochs",
+      "lr_patience_checks": 4,
+      "early_patience_checks": 12,
+      "scheduler_start_epoch": 20,
+      "training_postprocessing": false,
+      "validation_postprocessing": false,
+      "implementation_check": false,
+      "test_read": false,
+      "tail_test_read": false
+    },
+    "epoch": 5,
+    "step": 5000,
+    "cursor": 0,
+    "elapsed_seconds_carried": 4402.721033599984,
+    "model_optimizer_rng_order_seen_preserved": true,
+    "change": "Cached public inputs; no train-time repair; fixed proxy-based selection and scheduler reset",
+    "old_postprocessed_dev_examples": 290,
+    "old_partial_quality_not_reused": true,
+    "original_run_unchanged": true,
+    "test_read": false,
+    "verified_equal": [
+      "model",
+      "optimizer",
+      "rng",
+      "model_config",
+      "epoch",
+      "cursor",
+      "step",
+      "order",
+      "seen"
+    ],
+    "original_checkpoint_hash_rechecked": true,
+    "archive_compatibility_fix": "source_compatibility_update.json"
+  },
+  "command": "Prepared only. User must run launcher -Resume to continue.",
+  "archive_compatibility_fix": "source_compatibility_update.json"
+}

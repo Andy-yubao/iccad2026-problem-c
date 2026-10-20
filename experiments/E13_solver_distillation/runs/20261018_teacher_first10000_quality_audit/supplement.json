@@ -1,0 +1,31 @@
+{
+  "official_block_weighted_reference_Q": 1.2321454690923075,
+  "official_block_weighted_teacher_Q": 1.2685032061961505,
+  "official_block_weighted_Q_reduction_fraction": -0.029507666112368103,
+  "official_block_weighted_reduction_worker_bootstrap_95CI": [
+    -0.11866355395649894,
+    0.03085390532966672
+  ],
+  "block_count_min": 21,
+  "block_count_max": 120,
+  "normalized_geometry": {
+    "bbox_area": {
+      "mean_casewise_relative_change_teacher_minus_reference": 0.010246066531696652,
+      "median_casewise_relative_change_teacher_minus_reference": -0.008153340583681293,
+      "improved_count": 6766,
+      "worse_count": 3072
+    },
+    "hpwl_total": {
+      "mean_casewise_relative_change_teacher_minus_reference": 0.015135024606149948,
+      "median_casewise_relative_change_teacher_minus_reference": -0.002290350808341008,
+      "improved_count": 5748,
+      "worse_count": 4252
+    }
+  },
+  "both_hard_legal_count": 10000,
+  "both_legal_reference_Q_mean": 1.30187364787394,
+  "both_legal_teacher_Q_mean": 1.2548324031702656,
+  "elapsed_seconds": 6.807122400030494,
+  "source_sha256": "9a98715eec0b1364f5c205b7ccd9434240f06e57a685747cdc901944406ff8c2",
+  "scoring_scope": "Official exp(n/12) aggregation with neutral runtime; not official contest score."
+}

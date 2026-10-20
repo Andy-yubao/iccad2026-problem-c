@@ -1,0 +1,547 @@
+{
+  "command": [
+    "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+    "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E12_distillation_readiness\\probe.py",
+    "--phase",
+    "sweep",
+    "--joint",
+    "--certified",
+    "--prior-runs",
+    "experiments/E12_distillation_readiness/runs/20261018_projection_gate5_seed0",
+    "experiments/E12_distillation_readiness/runs/20261018_projection_gate5_seed0_r2",
+    "experiments/E12_distillation_readiness/runs/20261018_joint_projection_gate5_seed0",
+    "experiments/E12_distillation_readiness/runs/20261018_joint_projection_dev100_seed0",
+    "experiments/E12_distillation_readiness/runs/20261018_certified_gate5_seed0",
+    "--output",
+    "experiments/E12_distillation_readiness/runs/20261018_certified_dev100_seed0"
+  ],
+  "phase": "sweep",
+  "arms": [
+    [
+      "exact_geo0",
+      "exact",
+      0.0,
+      false,
+      "separated"
+    ],
+    [
+      "lower_geo0",
+      "lower",
+      0.0,
+      false,
+      "separated"
+    ],
+    [
+      "teacher_geo0",
+      "teacher",
+      0.0,
+      false,
+      "separated"
+    ],
+    [
+      "lower_teacher0",
+      "lower",
+      0.0,
+      true,
+      "separated"
+    ],
+    [
+      "lower_geo005",
+      "lower",
+      0.005,
+      false,
+      "separated"
+    ],
+    [
+      "lower_geo02",
+      "lower",
+      0.02,
+      false,
+      "separated"
+    ],
+    [
+      "lower_geo05",
+      "lower",
+      0.05,
+      false,
+      "separated"
+    ],
+    [
+      "lower_teacher02",
+      "lower",
+      0.02,
+      true,
+      "separated"
+    ],
+    [
+      "teacher_geo02",
+      "teacher",
+      0.02,
+      false,
+      "separated"
+    ]
+  ],
+  "seed": 0,
+  "threads": 2,
+  "source_commit": "b2c86a5e4c273c584c9ba0b7a0256bd546535fff",
+  "git_status": "M README.md\n M experiments/README.md\n?? experiments/E11_short_budget_diagnosis/\n?? experiments/E12_distillation_readiness/",
+  "members": [
+    [
+      "worker_0/layouts_1344.th",
+      82
+    ],
+    [
+      "worker_1/layouts_2128.th",
+      72
+    ],
+    [
+      "worker_2/layouts_8064.th",
+      61
+    ],
+    [
+      "worker_3/layouts_7280.th",
+      35
+    ],
+    [
+      "worker_4/layouts_2912.th",
+      28
+    ],
+    [
+      "worker_5/layouts_7056.th",
+      81
+    ],
+    [
+      "worker_6/layouts_3584.th",
+      54
+    ],
+    [
+      "worker_7/layouts_6832.th",
+      32
+    ],
+    [
+      "worker_8/layouts_1232.th",
+      102
+    ],
+    [
+      "worker_9/layouts_8400.th",
+      45
+    ],
+    [
+      "worker_10/layouts_896.th",
+      8
+    ],
+    [
+      "worker_11/layouts_9184.th",
+      88
+    ],
+    [
+      "worker_12/layouts_7616.th",
+      72
+    ],
+    [
+      "worker_13/layouts_4256.th",
+      79
+    ],
+    [
+      "worker_14/layouts_9072.th",
+      69
+    ],
+    [
+      "worker_15/layouts_2352.th",
+      83
+    ],
+    [
+      "worker_16/layouts_0.th",
+      62
+    ],
+    [
+      "worker_17/layouts_9184.th",
+      75
+    ],
+    [
+      "worker_18/layouts_8736.th",
+      106
+    ],
+    [
+      "worker_19/layouts_896.th",
+      52
+    ],
+    [
+      "worker_20/layouts_9296.th",
+      55
+    ],
+    [
+      "worker_21/layouts_4480.th",
+      21
+    ],
+    [
+      "worker_22/layouts_1344.th",
+      26
+    ],
+    [
+      "worker_23/layouts_7952.th",
+      17
+    ],
+    [
+      "worker_24/layouts_9632.th",
+      47
+    ],
+    [
+      "worker_25/layouts_7280.th",
+      6
+    ],
+    [
+      "worker_26/layouts_4928.th",
+      46
+    ],
+    [
+      "worker_27/layouts_8176.th",
+      98
+    ],
+    [
+      "worker_28/layouts_2016.th",
+      35
+    ],
+    [
+      "worker_29/layouts_3808.th",
+      79
+    ],
+    [
+      "worker_30/layouts_7168.th",
+      89
+    ],
+    [
+      "worker_31/layouts_0.th",
+      109
+    ],
+    [
+      "worker_32/layouts_1680.th",
+      78
+    ],
+    [
+      "worker_33/layouts_5712.th",
+      110
+    ],
+    [
+      "worker_34/layouts_5264.th",
+      100
+    ],
+    [
+      "worker_35/layouts_9184.th",
+      82
+    ],
+    [
+      "worker_36/layouts_2912.th",
+      39
+    ],
+    [
+      "worker_37/layouts_7616.th",
+      72
+    ],
+    [
+      "worker_38/layouts_3024.th",
+      96
+    ],
+    [
+      "worker_39/layouts_6048.th",
+      37
+    ],
+    [
+      "worker_40/layouts_4368.th",
+      89
+    ],
+    [
+      "worker_41/layouts_0.th",
+      24
+    ],
+    [
+      "worker_42/layouts_3136.th",
+      98
+    ],
+    [
+      "worker_43/layouts_4928.th",
+      69
+    ],
+    [
+      "worker_44/layouts_5600.th",
+      108
+    ],
+    [
+      "worker_45/layouts_0.th",
+      108
+    ],
+    [
+      "worker_46/layouts_7056.th",
+      101
+    ],
+    [
+      "worker_47/layouts_5712.th",
+      37
+    ],
+    [
+      "worker_48/layouts_0.th",
+      32
+    ],
+    [
+      "worker_49/layouts_3696.th",
+      85
+    ],
+    [
+      "worker_50/layouts_4032.th",
+      51
+    ],
+    [
+      "worker_51/layouts_3360.th",
+      102
+    ],
+    [
+      "worker_52/layouts_336.th",
+      74
+    ],
+    [
+      "worker_53/layouts_784.th",
+      111
+    ],
+    [
+      "worker_54/layouts_4144.th",
+      15
+    ],
+    [
+      "worker_55/layouts_5936.th",
+      47
+    ],
+    [
+      "worker_56/layouts_9856.th",
+      102
+    ],
+    [
+      "worker_57/layouts_8400.th",
+      18
+    ],
+    [
+      "worker_58/layouts_0.th",
+      111
+    ],
+    [
+      "worker_59/layouts_784.th",
+      6
+    ],
+    [
+      "worker_60/layouts_4256.th",
+      89
+    ],
+    [
+      "worker_61/layouts_4592.th",
+      14
+    ],
+    [
+      "worker_62/layouts_6496.th",
+      100
+    ],
+    [
+      "worker_63/layouts_7168.th",
+      11
+    ],
+    [
+      "worker_64/layouts_3808.th",
+      0
+    ],
+    [
+      "worker_65/layouts_6720.th",
+      8
+    ],
+    [
+      "worker_66/layouts_2016.th",
+      26
+    ],
+    [
+      "worker_67/layouts_6160.th",
+      53
+    ],
+    [
+      "worker_68/layouts_2352.th",
+      73
+    ],
+    [
+      "worker_69/layouts_6160.th",
+      57
+    ],
+    [
+      "worker_70/layouts_9632.th",
+      19
+    ],
+    [
+      "worker_71/layouts_1120.th",
+      103
+    ],
+    [
+      "worker_72/layouts_7616.th",
+      21
+    ],
+    [
+      "worker_73/layouts_5152.th",
+      2
+    ],
+    [
+      "worker_74/layouts_7168.th",
+      65
+    ],
+    [
+      "worker_75/layouts_4816.th",
+      58
+    ],
+    [
+      "worker_76/layouts_6496.th",
+      73
+    ],
+    [
+      "worker_77/layouts_0.th",
+      110
+    ],
+    [
+      "worker_78/layouts_6496.th",
+      77
+    ],
+    [
+      "worker_79/layouts_2688.th",
+      26
+    ],
+    [
+      "worker_80/layouts_2128.th",
+      37
+    ],
+    [
+      "worker_81/layouts_5040.th",
+      24
+    ],
+    [
+      "worker_82/layouts_3136.th",
+      40
+    ],
+    [
+      "worker_83/layouts_2128.th",
+      93
+    ],
+    [
+      "worker_84/layouts_7168.th",
+      2
+    ],
+    [
+      "worker_85/layouts_1008.th",
+      26
+    ],
+    [
+      "worker_86/layouts_3808.th",
+      109
+    ],
+    [
+      "worker_87/layouts_448.th",
+      19
+    ],
+    [
+      "worker_88/layouts_5600.th",
+      1
+    ],
+    [
+      "worker_89/layouts_224.th",
+      93
+    ],
+    [
+      "worker_90/layouts_8288.th",
+      59
+    ],
+    [
+      "worker_91/layouts_5712.th",
+      100
+    ],
+    [
+      "worker_92/layouts_0.th",
+      90
+    ],
+    [
+      "worker_93/layouts_0.th",
+      57
+    ],
+    [
+      "worker_94/layouts_7840.th",
+      48
+    ],
+    [
+      "worker_95/layouts_336.th",
+      36
+    ],
+    [
+      "worker_96/layouts_6496.th",
+      32
+    ],
+    [
+      "worker_97/layouts_7616.th",
+      35
+    ],
+    [
+      "worker_98/layouts_6608.th",
+      107
+    ],
+    [
+      "worker_99/layouts_5152.th",
+      26
+    ]
+  ],
+  "sources": {
+    "experiments/E12_distillation_readiness/certificate.py": "8e81476dc2aea1b207088fcd683977759b9c34bed6e6340638d568590fac7160",
+    "experiments/E12_distillation_readiness/io.py": "b7f5732abd49ad04421553031f57bfda1fa6bbb4cf2769e748f37882455058ec",
+    "experiments/E12_distillation_readiness/joint.py": "07f926c0eef7da3810b304b37e676becc6362f7132d80956714d203b82f6a4ed",
+    "experiments/E12_distillation_readiness/probe.py": "2a7d99a7a4a05f4e5ca40a11286f56cfb496305a893431587793ce0a1a21b306",
+    "experiments/E12_distillation_readiness/projector.py": "d9ca29c7b0fc2dcdbcafde3070e91cf6085a288715712d3d300b3e2ee630f223",
+    "experiments/E12_distillation_readiness/worker.py": "b8f29eacce3fa6bc4637b9aac1a6f777d5e73c7814c7360b58b6eb991d93e7a0",
+    "experiments/E12_distillation_readiness/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/E12_distillation_readiness/backend/conic_geometry.py": "0b1a0295426c37a61f4abc13946b5dadf2c6f107375a02890e90ffe404be40e4",
+    "experiments/E12_distillation_readiness/backend/guard.py": "4e4adfb1dedede451a4d530103681f97ca6c05516e2dbe96b84d63c136faa87f",
+    "experiments/E12_distillation_readiness/backend/observe.py": "6fb401b9a7ebccec7063de8e9feeaf28bee310ac8a39b221b78d40e438432ec3",
+    "experiments/E12_distillation_readiness/backend/optimizer.py": "6373f5e7477f528e09e599c9a478b712bfbeb0ec29037bed1595d8c82af2ca36",
+    "experiments/E12_distillation_readiness/backend/reduction.py": "4587a5c9c486c59719e76ef64396398edb92e6011d8c0c0cd4f538cad52c4b50",
+    "experiments/E12_distillation_readiness/backend/robust.py": "ceea8f18d0e2979279f4cf711b7702436912fbae77095d9559e603401176c99b",
+    "experiments/E12_distillation_readiness/backend/__init__.py": "e682c3a5178f24b1ac821c6778f5f159593f79d976491f59d1e7427ad3e2c0d5",
+    "experiments/E12_distillation_readiness/backend/frozen/batches.py": "8d3dd2afa0cba274d59b4bf3c594aca51fcbafc6974f3b09c67b7a1e37013a21",
+    "experiments/E12_distillation_readiness/backend/frozen/canonical_geometry.py": "04924bc4150f82862ed4da6cb67fc08779bbf98fcf24e24abd41b1c64d4e2521",
+    "experiments/E12_distillation_readiness/backend/frozen/data.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+    "experiments/E12_distillation_readiness/backend/frozen/feasible.py": "9cfe70894d80fbe54ccaa1c3de60ef4ab111ac9b4472286d1ae6a0c5a1fdc756",
+    "experiments/E12_distillation_readiness/backend/frozen/global_refine.py": "088021ede3290fcd6cf60726a054f7958309e4267d4353a699b80697078ab716",
+    "experiments/E12_distillation_readiness/backend/frozen/inference.py": "0f649ba37a7b7be9ab1f4236730a851d9ea51a5bebb953baca4fbae161e611a3",
+    "experiments/E12_distillation_readiness/backend/frozen/model.py": "7b0075d753930c69dd7823fd643a1dfc55ded5f78263576fbe888da5c994dc94",
+    "experiments/E12_distillation_readiness/backend/frozen/packing.py": "3c0500b7fee120807e6bd3fa8e9f115e476782af1a3e7620859c6651a089ef30",
+    "experiments/E12_distillation_readiness/backend/frozen/postprocess.py": "da0e1572a822a589968a19e67e2d36dd5133c7d17b7ea9443bd743ee4653a272",
+    "experiments/E12_distillation_readiness/backend/frozen/shape_lp.py": "2988df542aa80602f091963e1506da8085152ea0eca4846f6dc6c0a25ef13c94",
+    "experiments/E12_distillation_readiness/backend/frozen/solver.py": "cb5b0b6af3b8511d8a21b14178be188e31c61b58cba065c8c23847c2f9200325",
+    "experiments/E12_distillation_readiness/backend/frozen/topology_mip.py": "e392857196dbde4b3c1f3668862c9779e9c686f17ca89a820078421573b46df5",
+    "experiments/E12_distillation_readiness/backend/frozen/__init__.py": "e682c3a5178f24b1ac821c6778f5f159593f79d976491f59d1e7427ad3e2c0d5",
+    "experiments/E12_distillation_readiness/README.md": "0055f56205aad9c3f912a999ac876f42c9bd3660869fdccf66bc3ed3b7ae7e8c",
+    "experiments/E12_distillation_readiness/provenance.json": "a4b3e7f05539e9ae1149f9741d66add08fced08bc7ab507180af29a156fe504c"
+  },
+  "cache_sources": {
+    "E:\\project\\ICCAD\\2026\\problemC\\history\\20261018_E10_consolidation\\experiments\\E8_fast_robust_postprocess\\runs\\20261018_robust_dev100_seed0\\cases.jsonl": "c2d5762767e295a27b3838a029fd20780e9e94509bc4074c0fce1a6a026313e2",
+    "E:\\project\\ICCAD\\2026\\problemC\\history\\20261018_E10_consolidation\\experiments\\E8_fast_robust_postprocess\\runs\\20261018_stageA_dev100_seed0\\drafts.jsonl": "33046f8f76f1001ad8e20ffe4c1f2f51c60e5f0fe757126f82712984a94dcf4c"
+  },
+  "paths": {
+    "training_root": "E:\\project\\ICCAD\\2026\\problemC\\datasets\\floorset_lite",
+    "public_validation_root": "E:\\project\\ICCAD\\2026\\problemC\\datasets\\LiteTensorDataTest"
+  },
+  "split_sha256": "a1f23edae03194c1155d260415482d892e4cb5ad66170abc93af04aafc8cefbd",
+  "workset_sha256": "b520f75d67d12a00aa4f52953e1b9f3cf4ad1c55f1af67206b4c3bc75e9a5bb3",
+  "local_test_read": false,
+  "training": false,
+  "prior_runs": [
+    "experiments\\E12_distillation_readiness\\runs\\20261018_projection_gate5_seed0",
+    "experiments\\E12_distillation_readiness\\runs\\20261018_projection_gate5_seed0_r2",
+    "experiments\\E12_distillation_readiness\\runs\\20261018_joint_projection_gate5_seed0",
+    "experiments\\E12_distillation_readiness\\runs\\20261018_joint_projection_dev100_seed0",
+    "experiments\\E12_distillation_readiness\\runs\\20261018_certified_gate5_seed0"
+  ],
+  "prior_elapsed_seconds": 255.39552260003984,
+  "shared_compute_cap_seconds": 1100,
+  "joint": true,
+  "certified": true,
+  "single_case_diagnostic_charge_seconds": 20.0,
+  "timing_scope": "Live worker includes decoding inputs, projection and IPC; original inference charged separately, 0.10s future-network reserve explicit. Oracle construction/scoring outside worker.",
+  "warmup_wall_seconds": 0.17860189999919385
+}

@@ -1,0 +1,41 @@
+{
+  "started_at": "2026-10-20T14:24:20.0440374+08:00",
+  "launcher_pid": 32672,
+  "status": "training_running_verified",
+  "command": [
+    "powershell.exe",
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E17_e10_geometry_v5\\launch.ps1",
+    "-Resume"
+  ],
+  "stages": [
+    "prepare_v5_original_reference_cache",
+    "train_geometry_from_scratch",
+    "frozen_best_dev500"
+  ],
+  "train_hours": 4,
+  "max_epochs": 200,
+  "batch_size": 32,
+  "lr_levels": [
+    0.001,
+    0.00025,
+    0.0001,
+    5e-05
+  ],
+  "parameters": 497299,
+  "preparation": "4 processes, 1 thread each",
+  "final_evaluation": "2 processes, 2 threads each",
+  "stdout": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E17_e10_geometry_v5\\runs\\20261020_background\\stdout.log",
+  "stderr": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E17_e10_geometry_v5\\runs\\20261020_background\\stderr.log",
+  "user_authorization": "2026-10-20 explicit background training followed by dev500; user confirmed 4 hours / 200 epochs",
+  "test_read": false,
+  "verified_at_utc": "2026-10-20T06:32:48.570565+00:00",
+  "verified_step": 1000,
+  "verified_seen_count": 16000,
+  "cache_status": "train16000 and dev2000 complete",
+  "automatic_next_stage": "one frozen-best dev_monitor500 pass, CPU 2 processes x 2 threads",
+  "monitoring": "Startup verified only; no recurring monitoring scheduled"
+}

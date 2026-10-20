@@ -1,0 +1,35 @@
+{
+  "started_at": "2026-10-20T16:23:45.2418622+08:00",
+  "launcher_pid": 29940,
+  "status": "training_running_verified",
+  "command": [
+    "powershell.exe",
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E19_mib_consistent_geometry\\launch.ps1",
+    "-Resume"
+  ],
+  "train_hours": 4,
+  "max_epochs": 200,
+  "batch_size": 32,
+  "parameters": 497299,
+  "lr_levels": [
+    0.001,
+    0.00025,
+    0.0001,
+    5e-05
+  ],
+  "data": "frozen v5 / registered E17 prepared artifact",
+  "initialization": "random seed0",
+  "model_change": "MIB-consistent ratio and decode; same parameter count",
+  "evaluation": "frozen best, same primary dev500 and E17 postprocessor, 2x2 CPU threads",
+  "stdout": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E19_mib_consistent_geometry\\runs\\20261020_background\\stdout.log",
+  "stderr": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E19_mib_consistent_geometry\\runs\\20261020_background\\stderr.log",
+  "user_authorization": "2026-10-20 long autonomous goal; model changes and retraining permitted after extensive unsuccessful postprocessing research",
+  "test_read": false,
+  "verified_step": 3000,
+  "verified_epoch": 6,
+  "decoder": "shared MIB ratio; exact public locked WH propagated to free MIB peers; predicted centers retained"
+}

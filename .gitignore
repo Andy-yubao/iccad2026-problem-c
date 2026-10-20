@@ -10,6 +10,7 @@ datasets/LiteTensorDataTest/
 experiments/**/checkpoints/
 experiments/**/runs/**/*.pt
 experiments/**/runs/**/*.pth
+experiments/**/runs/**/labels/
 .env
 .env.*
 *.pem
@@ -28,3 +29,35 @@ experiments/E14_stable_teacher/runs/**/*.npz
 experiments/E14_stable_teacher/runs/teacher_*/
 experiments/E14_stable_teacher/runs/**/*.tmp
 experiments/E14_stable_teacher/runs/background_generation/
+
+# Shared E15 numeric training caches are rebuildable local data.
+experiments/E15_quality_curriculum/runs/prepared_v4_cache_v1/
+experiments/E15_quality_curriculum/runs/**/cache/
+experiments/E15_quality_curriculum/runs/**/*.tmp
+
+# E16 original-reference caches and per-shard candidate metadata are local.
+experiments/E16_reference_curriculum/runs/prepared_v5_cache_v1/
+experiments/E16_reference_curriculum/runs/**/cache/
+experiments/E16_reference_curriculum/runs/**/shards/
+experiments/E16_reference_curriculum/runs/**/*.tmp
+experiments/E16_reference_curriculum/runs/**/*.lock
+protocol/reference_workset_v5.lock
+
+# Generated teacher databases and prepared tensors are local artifacts.
+experiments/E12_distillation_readiness/runs/teacher_*/
+**/runs/**/prepared_*/
+**/runs/**/*.npz
+**/runs/**/*.sqlite3
+**/runs/**/*.sqlite3-*
+**/runs/**/*.tmp
+**/runs/**/*.lock
+# Preserve the same exclusions when retiring an experiment into history.
+history/**/experiments/E14_stable_teacher/runs/**/train.json
+history/**/experiments/E14_stable_teacher/runs/**/dev.json
+history/**/experiments/E14_stable_teacher/runs/**/results.json
+history/**/experiments/E14_stable_teacher/runs/teacher_*/
+history/**/experiments/E14_stable_teacher/runs/background_generation/
+history/**/experiments/E12_distillation_readiness/runs/teacher_*/
+history/**/experiments/E15_quality_curriculum/runs/**/cache/
+history/**/experiments/E16_reference_curriculum/runs/**/cache/
+history/**/experiments/E16_reference_curriculum/runs/**/shards/

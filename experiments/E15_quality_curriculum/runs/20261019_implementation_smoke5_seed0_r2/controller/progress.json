@@ -1,0 +1,158 @@
+{
+  "status": "max_epochs",
+  "finished": true,
+  "epoch": 1,
+  "cursor": 0,
+  "step": 2,
+  "seen_count": 3,
+  "elapsed_seconds": 7.573952700011432,
+  "best_rank": [
+    0,
+    1.5382143841131084
+  ],
+  "best_epoch": 1,
+  "bad_quality_checks": 0,
+  "history": [
+    {
+      "epoch": 0,
+      "step": 0,
+      "dev_monitor": {
+        "total": 71.89643859863281,
+        "supervision": 33.52781677246094,
+        "center_mse": 32.81085205078125,
+        "shape_mse": 0.7169625759124756,
+        "quality_proxy": 18.194692611694336,
+        "wire_ratio": 0.9288432598114014,
+        "bbox_ratio": 1.6086974143981934,
+        "boundary": 7.697144985198975,
+        "grouping": 0.763827919960022,
+        "mib": 0.001988720614463091,
+        "overlap": 3.7458882331848145,
+        "count": 2
+      },
+      "train_monitor": {
+        "total": 136.67656453450522,
+        "supervision": 72.54283396402995,
+        "center_mse": 71.55521392822266,
+        "shape_mse": 0.9876259366671244,
+        "quality_proxy": 32.82004419962565,
+        "wire_ratio": 1.0358433326085408,
+        "bbox_ratio": 0.9018736829360327,
+        "boundary": 15.13017233212789,
+        "grouping": 0.7947507997353872,
+        "mib": 0.0006696043031600615,
+        "overlap": 6.249272346496582,
+        "count": 3
+      },
+      "train_seen_count": 0,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.05,
+        "overlap": 10.0
+      },
+      "lr": 0.0001,
+      "train_unseen": {
+        "total": 136.67656453450522,
+        "supervision": 72.54283396402995,
+        "center_mse": 71.55521392822266,
+        "shape_mse": 0.9876259366671244,
+        "quality_proxy": 32.82004419962565,
+        "wire_ratio": 1.0358433326085408,
+        "bbox_ratio": 0.9018736829360327,
+        "boundary": 15.13017233212789,
+        "grouping": 0.7947507997353872,
+        "mib": 0.0006696043031600615,
+        "overlap": 6.249272346496582,
+        "count": 3
+      },
+      "elapsed_seconds": 0.9641620999900624
+    },
+    {
+      "epoch": 1,
+      "step": 2,
+      "dev_monitor": {
+        "total": 31.276330947875977,
+        "supervision": 16.041675567626953,
+        "center_mse": 15.44510269165039,
+        "shape_mse": 0.5965726375579834,
+        "quality_proxy": 19.154823303222656,
+        "wire_ratio": 1.309629201889038,
+        "bbox_ratio": 1.6584856510162354,
+        "boundary": 7.935427665710449,
+        "grouping": 0.8985121250152588,
+        "mib": 0.0014426332199946046,
+        "overlap": 1.4276914596557617,
+        "count": 2
+      },
+      "train_monitor": {
+        "total": 58.37884012858073,
+        "supervision": 35.173306147257485,
+        "center_mse": 34.33620643615723,
+        "shape_mse": 0.8370997707049052,
+        "quality_proxy": 33.437439600626625,
+        "wire_ratio": 1.4726041952768962,
+        "bbox_ratio": 1.0895490447680156,
+        "boundary": 15.273832003275553,
+        "grouping": 0.8036001225312551,
+        "mib": 0.0007478641346096992,
+        "overlap": 2.153365691502889,
+        "count": 3
+      },
+      "train_seen_count": 3,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.05,
+        "overlap": 10.0
+      },
+      "lr": 0.0001,
+      "train_seen": {
+        "total": 58.37884012858073,
+        "supervision": 35.173306147257485,
+        "center_mse": 34.33620643615723,
+        "shape_mse": 0.8370997707049052,
+        "quality_proxy": 33.437439600626625,
+        "wire_ratio": 1.4726041952768962,
+        "bbox_ratio": 1.0895490447680156,
+        "boundary": 15.273832003275553,
+        "grouping": 0.8036001225312551,
+        "mib": 0.0007478641346096992,
+        "overlap": 2.153365691502889,
+        "count": 3
+      },
+      "quality": {
+        "count": 2,
+        "hard_legal": 2,
+        "mean_Q": 1.57904270029543,
+        "weighted_Q": 1.5382143841131084,
+        "p95_Q": 1.7579654427603095,
+        "max_Q": 1.7778457474786296,
+        "Q_gt_1_8": 0,
+        "Q_gt_2": 0,
+        "inference_seconds_mean": 0.014488250017166138,
+        "solve_seconds_mean": 2.6571050499915145,
+        "fallback_count": 0,
+        "error_count": 0,
+        "raw_hard_legal": 0
+      },
+      "elapsed_seconds": 7.430631599971093
+    }
+  ],
+  "gradients": [
+    {
+      "epoch": 1,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.05,
+        "overlap": 10.0
+      },
+      "supervision_grad_norm": 1052.1297607421875,
+      "quality_grad_norm": 400.9532165527344,
+      "overlap_grad_norm": 68.95013427734375
+    }
+  ],
+  "batch_history": [],
+  "full_dev_complete": false,
+  "test_read": false,
+  "tail_test_read": false,
+  "implementation_check": true
+}

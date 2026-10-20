@@ -1,0 +1,217 @@
+{
+  "scope": "Descriptive development statistics; all100 and prespecified arms retained.",
+  "comparisons": {
+    "teacher_relations_minus_raw_fixed": {
+      "mean": -0.23217664479680028,
+      "median": -0.004468113771659787,
+      "wins": 63,
+      "ties": 20,
+      "losses": 17,
+      "descriptive_bootstrap_95": [
+        -0.5863765780128332,
+        0.07656771020425769
+      ]
+    },
+    "teacher_separation_minus_raw_fixed": {
+      "mean": -0.5488850101033304,
+      "median": -0.0008115255040516134,
+      "wins": 53,
+      "ties": 20,
+      "losses": 27,
+      "descriptive_bootstrap_95": [
+        -0.978420223375855,
+        -0.1829798510360033
+      ]
+    },
+    "teacher_contact_tree_minus_raw_fixed": {
+      "mean": 0.13142719639724962,
+      "median": 0.0,
+      "wins": 49,
+      "ties": 27,
+      "losses": 24,
+      "descriptive_bootstrap_95": [
+        -0.009087618589017576,
+        0.35676494883553506
+      ]
+    },
+    "teacher_relations_minus_teacher_separation": {
+      "mean": 0.3167083653065302,
+      "median": -6.492418186954119e-06,
+      "wins": 53,
+      "ties": 24,
+      "losses": 23,
+      "descriptive_bootstrap_95": [
+        0.05196997502889089,
+        0.635528274408288
+      ]
+    },
+    "teacher_relations_minus_teacher_contact_tree": {
+      "mean": -0.36360384119405,
+      "median": -0.0016347766138181674,
+      "wins": 57,
+      "ties": 22,
+      "losses": 21,
+      "descriptive_bootstrap_95": [
+        -0.7803062593322885,
+        0.0020048997350231097
+      ]
+    }
+  },
+  "factorial_interaction_mean_Q": 0.18528116890928054,
+  "previous_five_vs_remaining95": {
+    "previous_five": {
+      "count": 5,
+      "arms": {
+        "raw_full": {
+          "Q_mean": 1.1521890229505987,
+          "Q_delta_vs_full_mean": 0.0
+        },
+        "raw_short": {
+          "Q_mean": 2.996292820377953,
+          "Q_delta_vs_full_mean": 1.8441037974273542
+        },
+        "raw_fixed": {
+          "Q_mean": 1.2328720646800069,
+          "Q_delta_vs_full_mean": 0.08068304172940799
+        },
+        "teacher_separation": {
+          "Q_mean": 1.2336814640446199,
+          "Q_delta_vs_full_mean": 0.08149244109402129
+        },
+        "teacher_contact_tree": {
+          "Q_mean": 2.963166952219598,
+          "Q_delta_vs_full_mean": 1.8109779292689994
+        },
+        "teacher_relations": {
+          "Q_mean": 1.1906841037595517,
+          "Q_delta_vs_full_mean": 0.03849508080895303
+        },
+        "teacher_full_ceiling": {
+          "Q_mean": 1.151565198237236,
+          "Q_delta_vs_full_mean": -0.0006238247133627528
+        }
+      }
+    },
+    "remaining_95": {
+      "count": 95,
+      "arms": {
+        "raw_full": {
+          "Q_mean": 1.2171807786768054,
+          "Q_delta_vs_full_mean": 0.0
+        },
+        "raw_short": {
+          "Q_mean": 3.4376349511294877,
+          "Q_delta_vs_full_mean": 2.2204541724526816
+        },
+        "raw_fixed": {
+          "Q_mean": 2.6956003964546054,
+          "Q_delta_vs_full_mean": 1.4784196177778002
+        },
+        "teacher_separation": {
+          "Q_mean": 2.117784101642436,
+          "Q_delta_vs_full_mean": 0.9006033229656303
+        },
+        "teacher_contact_tree": {
+          "Q_mean": 2.7428766617391003,
+          "Q_delta_vs_full_mean": 1.5256958830622949
+        },
+        "teacher_relations": {
+          "Q_mean": 2.4534243472432604,
+          "Q_delta_vs_full_mean": 1.2362435685664552
+        },
+        "teacher_full_ceiling": {
+          "Q_mean": 1.2147133933681915,
+          "Q_delta_vs_full_mean": -0.002467385308613999
+        }
+      }
+    }
+  },
+  "block_count": {
+    "min": 22,
+    "median": 73.0,
+    "max": 120
+  },
+  "cached_teacher_vs_live_full_q_difference_max": 0.08313764571969706,
+  "worst_teacher_relation_cases": [
+    {
+      "case_id": "dev:worker_77/layouts_0.th:110",
+      "block_count": 73,
+      "baseline_q": 1.086904049521229,
+      "Q": 9.999999,
+      "delta_Q": 8.913094950478772,
+      "charged_seconds": 0.35840249998727813
+    },
+    {
+      "case_id": "dev:worker_62/layouts_6496.th:100",
+      "block_count": 108,
+      "baseline_q": 1.0901094314098347,
+      "Q": 9.999999,
+      "delta_Q": 8.909889568590167,
+      "charged_seconds": 0.3700589000072796
+    },
+    {
+      "case_id": "dev:worker_12/layouts_7616.th:72",
+      "block_count": 101,
+      "baseline_q": 1.1089884304110174,
+      "Q": 9.999999,
+      "delta_Q": 8.891010569588984,
+      "charged_seconds": 0.38030060002347454
+    },
+    {
+      "case_id": "dev:worker_36/layouts_2912.th:39",
+      "block_count": 116,
+      "baseline_q": 1.1272669372638953,
+      "Q": 9.999999,
+      "delta_Q": 8.872732062736105,
+      "charged_seconds": 0.37677769997389987
+    },
+    {
+      "case_id": "dev:worker_75/layouts_4816.th:58",
+      "block_count": 97,
+      "baseline_q": 1.1273039917326337,
+      "Q": 9.999999,
+      "delta_Q": 8.872695008267367,
+      "charged_seconds": 0.3769627000147011
+    },
+    {
+      "case_id": "dev:worker_66/layouts_2016.th:26",
+      "block_count": 104,
+      "baseline_q": 1.1359241531581286,
+      "Q": 9.999999,
+      "delta_Q": 8.864074846841872,
+      "charged_seconds": 0.4051381000317633
+    },
+    {
+      "case_id": "dev:worker_82/layouts_3136.th:40",
+      "block_count": 117,
+      "baseline_q": 1.148996426641145,
+      "Q": 9.999999,
+      "delta_Q": 8.851002573358855,
+      "charged_seconds": 0.4694842000317294
+    },
+    {
+      "case_id": "dev:worker_94/layouts_7840.th:48",
+      "block_count": 118,
+      "baseline_q": 1.149626535101224,
+      "Q": 9.999999,
+      "delta_Q": 8.850372464898777,
+      "charged_seconds": 0.4811923000088427
+    },
+    {
+      "case_id": "dev:worker_65/layouts_6720.th:8",
+      "block_count": 116,
+      "baseline_q": 1.166331844340636,
+      "Q": 9.999999,
+      "delta_Q": 8.833667155659365,
+      "charged_seconds": 0.4435547000321094
+    },
+    {
+      "case_id": "dev:worker_71/layouts_1120.th:103",
+      "block_count": 120,
+      "baseline_q": 1.2101399880021793,
+      "Q": 9.999999,
+      "delta_Q": 8.789859011997821,
+      "charged_seconds": 0.3924167000222951
+    }
+  ]
+}

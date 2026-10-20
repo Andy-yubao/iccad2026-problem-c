@@ -1,0 +1,10 @@
+{
+  "scope": "One existing gate member, worker20, targeted LP feasibility diagnosis; no additional member.",
+  "native_teacher_hard_valid": true,
+  "native_teacher_position_lp_status": "Optimal",
+  "decoded_teacher_area_floor_0_990002_lp_status": "Infeasible",
+  "decoded_lower_area_floor_0_990002_lp_status": "Infeasible",
+  "decoded_exact_area_lp_status": "Infeasible",
+  "interpretation": "The LP can accept the native teacher. Raising the teacher's near-lower-bound areas changes feasibility in anchored layouts. Correct label/decoder compatibility before assessing speed.",
+  "next_change": "Use float64 geometry decoding and legal lower margin 0.9900002 rather than 0.990002; all hard guards unchanged. New run, old results retained."
+}

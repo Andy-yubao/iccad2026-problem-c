@@ -1,0 +1,48 @@
+         6377193 function calls (6350821 primitive calls) in 6.466 seconds
+
+   Ordered by: cumulative time
+   List reduced from 643 to 40 due to restriction <40>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        5    0.000    0.000    6.477    1.295 pipeline.py:42(solve)
+        5    0.000    0.000    6.147    1.229 optimizer.py:10(optimize)
+        5    0.000    0.000    6.147    1.229 robust.py:18(optimize)
+        5    0.001    0.000    6.147    1.229 robust.py:13(fast)
+        5    0.036    0.007    6.146    1.229 conic_geometry.py:180(optimize)
+       54    0.565    0.010    3.341    0.062 conic_geometry.py:20(step)
+      121    1.365    0.011    1.780    0.015 global_refine.py:18(topology)
+       13    0.089    0.007    1.001    0.077 global_refine.py:40(solve_lp)
+       13    0.001    0.000    0.804    0.062 _linprog.py:178(linprog)
+       13    0.007    0.001    0.781    0.060 _linprog_highs.py:89(_linprog_highs)
+       13    0.754    0.058    0.763    0.059 _highs_wrapper.py:9(_highs_wrapper)
+       54    0.744    0.014    0.744    0.014 {method 'solve' of 'builtins.DefaultSolver' objects}
+    68096    0.436    0.000    0.609    0.000 conic_geometry.py:81(wire_term)
+       72    0.003    0.000    0.605    0.008 conic_geometry.py:184(accept)
+       70    0.377    0.005    0.554    0.008 canonical_geometry.py:5(canonicalize)
+   229567    0.150    0.000    0.370    0.000 fromnumeric.py:1140(argmax)
+   235749    0.104    0.000    0.239    0.000 fromnumeric.py:53(_wrapfunc)
+        5    0.000    0.000    0.232    0.046 stable.py:12(polish)
+        5    0.000    0.000    0.219    0.044 selection.py:13(public_metrics)
+        5    0.009    0.002    0.217    0.043 iccad2026_evaluate.py:345(evaluate_solution)
+       54    0.009    0.000    0.155    0.003 global_refine.py:103(contact_tree)
+       67    0.085    0.001    0.152    0.002 reduction.py:5(reduce_edges)
+  2247347    0.147    0.000    0.147    0.000 {method 'append' of 'list' objects}
+       54    0.139    0.003    0.139    0.003 global_refine.py:105(<dictcomp>)
+  253/240    0.003    0.000    0.125    0.001 _coo.py:30(__init__)
+    70245    0.038    0.000    0.106    0.000 {built-in method builtins.sum}
+   229567    0.093    0.000    0.093    0.000 {method 'argmax' of 'numpy.ndarray' objects}
+        5    0.001    0.000    0.093    0.019 pipeline.py:32(draft)
+     8470    0.083    0.000    0.083    0.000 {built-in method numpy.asarray}
+    425/5    0.001    0.000    0.073    0.015 module.py:1747(_wrapped_call_impl)
+    425/5    0.002    0.000    0.073    0.015 module.py:1755(_call_impl)
+        5    0.001    0.000    0.073    0.015 model.py:39(forward)
+       20    0.014    0.001    0.063    0.003 model.py:115(forward)
+        5    0.056    0.011    0.061    0.012 iccad2026_evaluate.py:153(calculate_hpwl_b2b)
+   339334    0.052    0.000    0.056    0.000 {built-in method builtins.max}
+     1329    0.004    0.000    0.056    0.000 _base.py:1356(_get_index_dtype)
+        5    0.048    0.010    0.054    0.011 iccad2026_evaluate.py:175(calculate_hpwl_p2b)
+     6727    0.054    0.000    0.054    0.000 {built-in method numpy.array}
+     1342    0.010    0.000    0.050    0.000 _sputils.py:264(get_index_dtype)
+     2804    0.027    0.000    0.047    0.000 conic_geometry.py:167(<listcomp>)
+
+

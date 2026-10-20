@@ -177,7 +177,7 @@ def plot_case(row, destination, *, stages=None):
         fig.text(left, table_top, detail_text(variant), fontsize=8.5,
                  family="monospace", linespacing=1.5, va="top", color="#334155")
     fig.suptitle(f"{row['panel']} | {row['case_id']} | {len(constraints)} blocks", fontsize=15 if columns == 3 else 11, y=.975)
-    caption = "Same module IDs and coordinate scale across columns; each column shows only its own layout." if columns > 1 else "Saved E14 output; module IDs and constraints follow the source task."
+    caption = row.get("caption", "Same module IDs and coordinate scale across columns; each column shows only its own layout." if columns > 1 else "Saved layout; module IDs and constraints follow the source task.")
     fig.text(.5, .935, caption, ha="center", fontsize=10 if columns > 1 else 9, color="#475569")
     legend = [Patch(facecolor=colors[group], edgecolor="#475569", label=f"Grouping G{group}") for group in groups]
     legend += [Patch(facecolor="white", edgecolor="#475569", hatch=patterns[group], label=f"MIB M{group}") for group in mibs]

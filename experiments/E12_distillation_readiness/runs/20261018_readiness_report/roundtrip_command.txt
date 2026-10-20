@@ -1,0 +1,44 @@
+import json,time
+from experiments.E12_distillation_readiness.io import HERE,np,save,sha,Worker
+from experiments.E12_distillation_readiness.targets import validate,decode_prediction
+from experiments.E12_distillation_readiness.backend.frozen.packing import prepare_problem
+from experiments.E12_distillation_readiness.backend.frozen.global_refine import topology
+from datasets.worksets import LayoutReader,workset_manifest
+from datasets.cases import _build_case
+from scoring.evaluation import evaluate_case
+begin=time.perf_counter()
+bank=HERE/'runs/20261018_teacher_trainpilot100_seed0'
+state=json.loads((bank/'results.json').read_text(encoding='utf-8'))
+assert state['status']=='completed' and state['label_count']==100 and state['error_count']==0
+reader=LayoutReader(workset_manifest(),'train_monitor')
+out=HERE/'runs/20261018_trainlabel_roundtrip5';out.mkdir(exist_ok=False)
+rows=[]
+with_worker=Worker(out/'worker.log')
+try:
+    for worker in (0,24,49,74,99):
+        r=next(r for r in state['records'] if r['member'][0].split('/')[0]==f'worker_{worker}')
+        raw=reader.case(r['index']);assert raw.case_id==r['case_id']
+        path=bank/r['label_file'];assert sha(path)==r['label_sha256']
+        with np.load(path,allow_pickle=False) as label:
+            p=prepare_problem(*raw.solver_inputs);validate(label,p)
+            seed=decode_prediction(label['geometry'],p,label['mib_labels'])
+            a,b=np.where((label['contact_forest']>=0)&(label['contact_forest']<2))
+            cert={'certified':True,'edges':topology(seed,p.constraints),
+                'contacts':[[int(i),int(j),int(label['contact_forest'][i,j])] for i,j in zip(a,b)],
+                'boundary':label['boundary_satisfied'].tolist(),'mib_labels':label['mib_labels'].tolist()}
+        inputs=[int(raw.solver_inputs[0]),*[np.asarray(v).tolist() for v in raw.solver_inputs[1:]]]
+        response=with_worker.call({'inputs':inputs,'draft':seed.tolist(),'guidance':cert,
+                                  'seconds':.35,'joint':True,'polished':True})
+        assert 'error' not in response
+        case=_build_case(raw.case_id,raw.source,raw.solver_inputs[1:6],raw.reference_positions,raw.stored_metrics)
+        evaluated=evaluate_case(case,response['positions'],response['solve_seconds'])
+        assert evaluated['metrics']['is_feasible'] and evaluated['independent_hard_checks']['is_feasible']
+        delta=evaluated['metrics']['cost']-r['evaluation']['metrics']['cost']
+        assert delta<=.002
+        rows.append({'case_id':raw.case_id,'label_sha256':r['label_sha256'],'Q_delta':delta,
+          'worker_wall_seconds':response['worker_wall_seconds'],'evaluation':evaluated,'stats':response['stats']})
+        print(raw.case_id,'Q delta',delta,flush=True)
+finally:
+    with_worker.close()
+save(out/'results.json',{'status':'passed','elapsed_seconds':time.perf_counter()-begin,'rows':rows,
+    'all_labels_hashed':True,'training':False,'scope':'Five fixed train label encode/decode/repair checks; not model evaluation'})

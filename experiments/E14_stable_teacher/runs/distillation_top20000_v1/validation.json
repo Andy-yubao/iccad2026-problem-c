@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "manifest_counts_verified": true,
+  "21000_unique_members": true,
+  "primary_shard_disjoint": true,
+  "both_test_loaders_denied_by_default": true,
+  "monitors_are_parent_subsets": true,
+  "five_train_dev_samples_loaded_with_valid_targets": [
+    {
+      "role": "train",
+      "index": 0,
+      "member": [
+        "worker_74/layouts_1904.th",
+        30
+      ],
+      "n": 61
+    },
+    {
+      "role": "train",
+      "index": 8000,
+      "member": [
+        "worker_52/layouts_6160.th",
+        109
+      ],
+      "n": 99
+    },
+    {
+      "role": "train",
+      "index": 15999,
+      "member": [
+        "worker_66/layouts_7056.th",
+        45
+      ],
+      "n": 55
+    },
+    {
+      "role": "dev",
+      "index": 0,
+      "member": [
+        "worker_13/layouts_3360.th",
+        7
+      ],
+      "n": 103
+    },
+    {
+      "role": "dev",
+      "index": 1999,
+      "member": [
+        "worker_63/layouts_6720.th",
+        74
+      ],
+      "n": 50
+    }
+  ],
+  "no_test_layouts_loaded": true,
+  "original_frozen_files_unchanged": true,
+  "training_started": false,
+  "windows_spawn_dataset_pickle_roundtrip": true
+}

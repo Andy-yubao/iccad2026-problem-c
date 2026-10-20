@@ -1,0 +1,100 @@
+{
+  "command": [
+    "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+    "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E11_short_budget_diagnosis\\run.py",
+    "--output",
+    "experiments/E11_short_budget_diagnosis/runs/20261018_budget_oracle_dev5_seed0_r2"
+  ],
+  "seed": 0,
+  "threads": 2,
+  "started_local": "2026-10-18 13:07:20 +0800",
+  "source_commit": "b2c86a5e4c273c584c9ba0b7a0256bd546535fff",
+  "git_status": "?? experiments/E11_short_budget_diagnosis/",
+  "python": "3.10.22 | packaged by conda-forge | (main, Oct  6 2026, 22:57:13) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 198 Stepping 2, GenuineIntel",
+  "torch": "2.7.1+cu128",
+  "numpy": "1.26.4",
+  "device": "CPU",
+  "scipy": "1.15.3",
+  "clarabel": "0.11.1",
+  "highs": "1.15.1",
+  "official_evaluator": {
+    "path": "E:\\project\\ICCAD\\2026\\problemC\\third_party\\FloorSet\\iccad2026contest\\iccad2026_evaluate.py",
+    "sha256": "64db37865b42baf11add62bdbf035690dca086cd4be7b5b4e58db756f20d8498"
+  },
+  "frozen_checkpoint_sha256": "47df667ed0b3994b60e554012255bcef1f7ec5cc76874b9e7493a30216f26c28",
+  "sources": {
+    "experiments/E11_short_budget_diagnosis/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/E11_short_budget_diagnosis/backend/__init__.py": "e682c3a5178f24b1ac821c6778f5f159593f79d976491f59d1e7427ad3e2c0d5",
+    "experiments/E11_short_budget_diagnosis/backend/conic_geometry.py": "0fc042ccd835fa3afaaf2c33da1913132573ca368a3be7292fa5edb3f8a970d0",
+    "experiments/E11_short_budget_diagnosis/backend/frozen/__init__.py": "e682c3a5178f24b1ac821c6778f5f159593f79d976491f59d1e7427ad3e2c0d5",
+    "experiments/E11_short_budget_diagnosis/backend/frozen/batches.py": "8d3dd2afa0cba274d59b4bf3c594aca51fcbafc6974f3b09c67b7a1e37013a21",
+    "experiments/E11_short_budget_diagnosis/backend/frozen/canonical_geometry.py": "04924bc4150f82862ed4da6cb67fc08779bbf98fcf24e24abd41b1c64d4e2521",
+    "experiments/E11_short_budget_diagnosis/backend/frozen/data.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+    "experiments/E11_short_budget_diagnosis/backend/frozen/feasible.py": "9cfe70894d80fbe54ccaa1c3de60ef4ab111ac9b4472286d1ae6a0c5a1fdc756",
+    "experiments/E11_short_budget_diagnosis/backend/frozen/global_refine.py": "088021ede3290fcd6cf60726a054f7958309e4267d4353a699b80697078ab716",
+    "experiments/E11_short_budget_diagnosis/backend/frozen/inference.py": "0f649ba37a7b7be9ab1f4236730a851d9ea51a5bebb953baca4fbae161e611a3",
+    "experiments/E11_short_budget_diagnosis/backend/frozen/model.py": "7b0075d753930c69dd7823fd643a1dfc55ded5f78263576fbe888da5c994dc94",
+    "experiments/E11_short_budget_diagnosis/backend/frozen/packing.py": "3c0500b7fee120807e6bd3fa8e9f115e476782af1a3e7620859c6651a089ef30",
+    "experiments/E11_short_budget_diagnosis/backend/frozen/postprocess.py": "da0e1572a822a589968a19e67e2d36dd5133c7d17b7ea9443bd743ee4653a272",
+    "experiments/E11_short_budget_diagnosis/backend/frozen/shape_lp.py": "2988df542aa80602f091963e1506da8085152ea0eca4846f6dc6c0a25ef13c94",
+    "experiments/E11_short_budget_diagnosis/backend/frozen/solver.py": "cb5b0b6af3b8511d8a21b14178be188e31c61b58cba065c8c23847c2f9200325",
+    "experiments/E11_short_budget_diagnosis/backend/frozen/topology_mip.py": "e392857196dbde4b3c1f3668862c9779e9c686f17ca89a820078421573b46df5",
+    "experiments/E11_short_budget_diagnosis/backend/guard.py": "4e4adfb1dedede451a4d530103681f97ca6c05516e2dbe96b84d63c136faa87f",
+    "experiments/E11_short_budget_diagnosis/backend/observe.py": "6fb401b9a7ebccec7063de8e9feeaf28bee310ac8a39b221b78d40e438432ec3",
+    "experiments/E11_short_budget_diagnosis/backend/optimizer.py": "6373f5e7477f528e09e599c9a478b712bfbeb0ec29037bed1595d8c82af2ca36",
+    "experiments/E11_short_budget_diagnosis/backend/reduction.py": "4587a5c9c486c59719e76ef64396398edb92e6011d8c0c0cd4f538cad52c4b50",
+    "experiments/E11_short_budget_diagnosis/backend/robust.py": "71c20fccaab58ef199f39db5dd7e9e468e74ba4b44cead8e8b9311e851cc3a60",
+    "experiments/E11_short_budget_diagnosis/run.py": "0868e20d9a16926cb4e3bb6f67fc897a59b32bf58193ee8e660a7eba5bb01cab",
+    "experiments/E11_short_budget_diagnosis/worker.py": "1a8a91334601ede2e874c45e7777a2ce2ef60366d48e9594d03bcf4c0e10470a",
+    "experiments/E11_short_budget_diagnosis/README.md": "60285bceaa6e4d0742eb5aa206d89400903e7b79b2d90c6fb911ee84db40c3fc",
+    "experiments/E11_short_budget_diagnosis/provenance.json": "f0142af8c795392d4b1791033078f2965f8058b319bc62a80ff1721a9294e1c4",
+    "datasets/__init__.py": "03c36f364366be6c8a5091d6bd3dbec0788d7871747acdeac5fa89d4974cec21",
+    "datasets/cases.py": "1fd51addaaae38164c22f1946712665beebac700054db4bb07ed4f9d44e0b168",
+    "datasets/paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+    "datasets/worksets.py": "2ff073391b7d3456b6a0da93bf9cc54794000e02f5bef78e487c7015cb2cd76a",
+    "scoring/__init__.py": "933bf2be947e20bae164511f26afaa84c2f331d0dbdebc417d235db8358a9247",
+    "scoring/checks.py": "738f6b57e20dce58516f3f10d83689f8df273a84a02b2dce99c6ccc1f904763a",
+    "scoring/evaluation.py": "356e0d1c788c6f25154b33fb1c2455388317d2cc0dd96ca50d7357c58612c611",
+    "scoring/official.py": "478fbc228a56ec4b336b5d8687a44b22b749f30aae09372f57c08e7124270e03"
+  },
+  "split_sha256": "a1f23edae03194c1155d260415482d892e4cb5ad66170abc93af04aafc8cefbd",
+  "workset_sha256": "b520f75d67d12a00aa4f52953e1b9f3cf4ad1c55f1af67206b4c3bc75e9a5bb3",
+  "data_paths": {
+    "training_root": "E:\\project\\ICCAD\\2026\\problemC\\datasets\\floorset_lite",
+    "public_validation_root": "E:\\project\\ICCAD\\2026\\problemC\\datasets\\LiteTensorDataTest"
+  },
+  "budgets_seconds": [
+    0.1,
+    0.25,
+    0.4,
+    5.0
+  ],
+  "variants": [
+    "raw",
+    "reference_center",
+    "teacher_center",
+    "teacher_relations",
+    "teacher_full"
+  ],
+  "workers": [
+    0,
+    24,
+    49,
+    74,
+    99
+  ],
+  "local_test_read": false,
+  "training": false,
+  "absolute_quality_tolerance": 0.002,
+  "wall_cap_seconds": 900.0,
+  "cached_sources": {
+    "history/20261018_E10_consolidation/experiments/E8_fast_robust_postprocess/runs/20261018_stageA_dev100_seed0/drafts.jsonl": "33046f8f76f1001ad8e20ffe4c1f2f51c60e5f0fe757126f82712984a94dcf4c",
+    "history/20261018_E10_consolidation/experiments/E8_fast_robust_postprocess/runs/20261018_robust_dev100_seed0/cases.jsonl": "c2d5762767e295a27b3838a029fd20780e9e94509bc4074c0fce1a6a026313e2"
+  },
+  "timing_scope": "Steady-state core/IPC measured live; original inference reused and charged uniformly. Oracle construction, loading, scoring, plotting excluded. No deployable oracle model.",
+  "reference_rule": "Only reference_center uses free-block reference centers, explicitly diagnostic; teacher variants use cached E10 solution; raw worker receives masked public inputs only.",
+  "warmup_wall_seconds": 0.02306879998650402,
+  "fatal_error": "OSError(22, 'Invalid argument')"
+}

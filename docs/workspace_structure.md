@@ -99,7 +99,7 @@ experiments/baseline/
 | `results.json` | 完成/异常/资源停止状态，实际时间和资源，样本数、指标与必要逐例证据；不可行例计入主指标 |
 | 日志与其他产物 | 只保留排错、恢复、归因和复现所需内容；短检查可把日志信息并入结果 |
 
-后续训练统一使用 [workset_v2.json](../protocol/workset_v2.json)：train 20,000、dev 2,500、封存 local_test 2,500，以及嵌套 train_monitor/dev_monitor 各 500 与 dev_quality 100。选择规格和训练策略以 [执行协议](protocol.md) 为准。运行 config 记录工作集哈希与监测参数，日志保存固定训练/验证曲线、学习率和停止原因；best 与 latest checkpoint 分别承担模型选择和完整恢复职责，不重复复制 checkpoint。时间上限停止与验证早停分开记录。
+后续训练显式登记工作集版本，旧[workset_v2.json](../protocol/workset_v2.json)保持历史原件，当前规格以[执行协议](protocol.md)为准。当前新训练目标train16,000/dev2,000/封存test2,000，固定train_monitor/dev_monitor各500；不得混用不同版本的成员、输入面积和标签。运行config记录工作集哈希与监测参数，日志保存固定训练/验证曲线、学习率和停止原因；best与latest checkpoint分别承担模型选择和完整恢复职责，不重复复制checkpoint。时间上限停止与验证早停分开记录。
 
 完整坐标只存一份，图片从该结果生成。不同时保存含相同 positions 的总结果、solutions 和逐例副本。不同实验可采用各自字段，不搭建统一实验框架。
 

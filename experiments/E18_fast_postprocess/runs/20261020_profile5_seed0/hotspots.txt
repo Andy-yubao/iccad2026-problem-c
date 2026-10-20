@@ -1,0 +1,36 @@
+         6988496 function calls (6949677 primitive calls) in 7.077 seconds
+
+   Ordered by: cumulative time
+   List reduced from 3000 to 28 due to restriction <28>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        5    0.000    0.000    5.687    1.137 E:\project\ICCAD\2026\problemC\experiments\E18_fast_postprocess\backend\optimizer.py:10(optimize)
+        5    0.000    0.000    5.687    1.137 E:\project\ICCAD\2026\problemC\experiments\E18_fast_postprocess\backend\robust.py:18(optimize)
+        5    0.001    0.000    5.687    1.137 E:\project\ICCAD\2026\problemC\experiments\E18_fast_postprocess\backend\robust.py:13(fast)
+        5    0.032    0.006    5.687    1.137 E:\project\ICCAD\2026\problemC\experiments\E18_fast_postprocess\backend\conic_geometry.py:180(optimize)
+       58    0.532    0.009    3.336    0.058 E:\project\ICCAD\2026\problemC\experiments\E18_fast_postprocess\backend\conic_geometry.py:20(step)
+      129    1.128    0.009    1.453    0.011 E:\project\ICCAD\2026\problemC\experiments\E18_fast_postprocess\backend\frozen\global_refine.py:18(topology)
+        5    0.000    0.000    1.399    0.280 E:\project\ICCAD\2026\problemC\experiments\E18_fast_postprocess\backend\stable.py:12(polish)
+        5    0.000    0.000    1.386    0.277 E:\project\ICCAD\2026\problemC\experiments\E18_fast_postprocess\backend\selection.py:13(public_metrics)
+        5    0.000    0.000    1.119    0.224 E:\project\ICCAD\2026\problemC\scoring\official.py:9(official_evaluator)
+    507/5    0.000    0.000    1.118    0.224 E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\importlib\__init__.py:108(import_module)
+    507/5    0.000    0.000    1.118    0.224 <frozen importlib._bootstrap>:1038(_gcd_import)
+    799/5    0.005    0.000    1.118    0.224 <frozen importlib._bootstrap>:1022(_find_and_load)
+    302/1    0.001    0.000    1.118    1.118 <frozen importlib._bootstrap>:987(_find_and_load_unlocked)
+    288/1    0.002    0.000    1.117    1.117 <frozen importlib._bootstrap>:664(_load_unlocked)
+    264/1    0.001    0.000    1.117    1.117 <frozen importlib._bootstrap_external>:877(exec_module)
+    383/2    0.000    0.000    1.116    0.558 <frozen importlib._bootstrap>:233(_call_with_frames_removed)
+    287/1    0.004    0.000    1.105    1.105 {built-in method builtins.exec}
+        1    0.000    0.000    1.105    1.105 E:\project\ICCAD\2026\problemC\third_party\FloorSet\iccad2026contest\iccad2026_evaluate.py:1(<module>)
+        1    0.000    0.000    1.087    1.087 E:\project\ICCAD\2026\problemC\third_party\FloorSet\litetestLoader.py:1(<module>)
+    87/20    0.000    0.000    0.939    0.047 {built-in method builtins.__import__}
+       13    0.071    0.005    0.909    0.070 E:\project\ICCAD\2026\problemC\experiments\E18_fast_postprocess\backend\frozen\global_refine.py:40(solve_lp)
+    70164    0.571    0.000    0.801    0.000 E:\project\ICCAD\2026\problemC\experiments\E18_fast_postprocess\backend\conic_geometry.py:81(wire_term)
+  272/114    0.001    0.000    0.759    0.007 <frozen importlib._bootstrap>:1053(_handle_fromlist)
+       13    0.000    0.000    0.757    0.058 E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\site-packages\scipy\optimize\_linprog.py:178(linprog)
+       13    0.007    0.001    0.737    0.057 E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\site-packages\scipy\optimize\_linprog_highs.py:89(_linprog_highs)
+       13    0.711    0.055    0.720    0.055 E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\site-packages\scipy\optimize\_highspy\_highs_wrapper.py:9(_highs_wrapper)
+       58    0.599    0.010    0.599    0.010 {method 'solve' of 'builtins.DefaultSolver' objects}
+        1    0.000    0.000    0.561    0.561 E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\site-packages\matplotlib\pyplot.py:1(<module>)
+
+

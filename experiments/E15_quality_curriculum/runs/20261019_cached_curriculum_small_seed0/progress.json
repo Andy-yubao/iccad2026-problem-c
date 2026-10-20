@@ -1,0 +1,173 @@
+{
+  "status": "user_stop",
+  "finished": false,
+  "epoch": 1,
+  "cursor": 9632,
+  "step": 1602,
+  "seen_count": 16000,
+  "elapsed_seconds": 763.798591800034,
+  "best_proxy": 6.497320767784118,
+  "best_epoch": 1,
+  "bad_checks": 0,
+  "history": [
+    {
+      "epoch": 0,
+      "step": 0,
+      "dev_monitor": {
+        "total": 168.46702807617189,
+        "supervision": 93.72519873046875,
+        "center_mse": 92.88222552490234,
+        "shape_mse": 0.8429737434387207,
+        "quality_proxy": 40.28066439819336,
+        "wire_ratio": 1.1694965057373048,
+        "bbox_ratio": 1.0362068061828613,
+        "boundary": 18.536418739318847,
+        "grouping": 1.0511649336814881,
+        "mib": 0.0013229479817673563,
+        "overlap": 7.272779651641846,
+        "count": 500,
+        "selection_proxy": 117.69472085113526
+      },
+      "train_monitor": {
+        "total": 169.79433764648437,
+        "supervision": 93.43703045654297,
+        "center_mse": 92.61451934814453,
+        "shape_mse": 0.8225107841491699,
+        "quality_proxy": 39.58659722900391,
+        "wire_ratio": 1.269019760131836,
+        "bbox_ratio": 1.024387276649475,
+        "boundary": 18.50423878479004,
+        "grouping": 0.7145863585472106,
+        "mib": 0.001121471444144845,
+        "overlap": 7.437797973632812,
+        "count": 500,
+        "selection_proxy": 118.6364284881592
+      },
+      "train_seen_count": 0,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.05,
+        "overlap": 10.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 19.105434200027958,
+      "postprocessing_calls": 0,
+      "train_unseen": {
+        "total": 169.79433764648437,
+        "supervision": 93.43703045654297,
+        "center_mse": 92.61451934814453,
+        "shape_mse": 0.8225107841491699,
+        "quality_proxy": 39.58659722900391,
+        "wire_ratio": 1.269019760131836,
+        "bbox_ratio": 1.024387276649475,
+        "boundary": 18.50423878479004,
+        "grouping": 0.7145863585472106,
+        "mib": 0.001121471444144845,
+        "overlap": 7.437797973632812,
+        "count": 500,
+        "selection_proxy": 118.6364284881592
+      },
+      "lr_next": 0.0001,
+      "lr_drops": 0,
+      "lr_bad_checks": 0,
+      "early_bad_checks": 0,
+      "meaningful_best": null
+    },
+    {
+      "epoch": 1,
+      "step": 1000,
+      "dev_monitor": {
+        "total": 5.230209671020508,
+        "supervision": 2.0987255363464357,
+        "center_mse": 1.5518369197845459,
+        "shape_mse": 0.5468886530399323,
+        "quality_proxy": 3.432526664733887,
+        "wire_ratio": 1.2750475406646729,
+        "bbox_ratio": 1.7919086170196534,
+        "boundary": 0.7338957324028015,
+        "grouping": 0.21539447271823883,
+        "mib": 0.00023408586939331144,
+        "overlap": 0.295985782623291,
+        "count": 500,
+        "selection_proxy": 6.497320767784118
+      },
+      "train_monitor": {
+        "total": 5.007297248840332,
+        "supervision": 1.953038272857666,
+        "center_mse": 1.428261489868164,
+        "shape_mse": 0.524776778459549,
+        "quality_proxy": 3.1450299072265624,
+        "wire_ratio": 1.26620210647583,
+        "bbox_ratio": 1.7692553930282593,
+        "boundary": 0.6156427826881409,
+        "grouping": 0.1978087373971939,
+        "mib": 0.00019906171766342594,
+        "overlap": 0.2897007510662079,
+        "count": 500,
+        "selection_proxy": 6.139689331531525
+      },
+      "train_seen_count": 500,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.05,
+        "overlap": 10.0
+      },
+      "lr": 0.0001,
+      "elapsed_seconds": 498.1970041000168,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 5.007297248840332,
+        "supervision": 1.953038272857666,
+        "center_mse": 1.428261489868164,
+        "shape_mse": 0.524776778459549,
+        "quality_proxy": 3.1450299072265624,
+        "wire_ratio": 1.26620210647583,
+        "bbox_ratio": 1.7692553930282593,
+        "boundary": 0.6156427826881409,
+        "grouping": 0.1978087373971939,
+        "mib": 0.00019906171766342594,
+        "overlap": 0.2897007510662079,
+        "count": 500,
+        "selection_proxy": 6.139689331531525
+      },
+      "lr_next": 0.0001,
+      "lr_drops": 0,
+      "lr_bad_checks": 0,
+      "early_bad_checks": 0,
+      "meaningful_best": null
+    }
+  ],
+  "gradients": [
+    {
+      "epoch": 1,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.05,
+        "overlap": 10.0
+      },
+      "supervision_grad_norm": 1801.88037109375,
+      "quality_proxy_grad_norm": 556.03662109375,
+      "overlap_grad_norm": 97.01997375488281
+    },
+    {
+      "epoch": 2,
+      "weights": {
+        "supervision": 1.0,
+        "quality": 0.05,
+        "overlap": 10.0
+      },
+      "supervision_grad_norm": 47.31393051147461,
+      "quality_proxy_grad_norm": 56.18836212158203,
+      "overlap_grad_norm": 3.904841899871826
+    }
+  ],
+  "lr_drops": 0,
+  "lr_tier": 1,
+  "lr_bad_checks": 0,
+  "lowest_lr_validated": false,
+  "full_dev_complete": false,
+  "postprocessing_calls": 0,
+  "implementation_check": false,
+  "test_read": false,
+  "tail_test_read": false
+}

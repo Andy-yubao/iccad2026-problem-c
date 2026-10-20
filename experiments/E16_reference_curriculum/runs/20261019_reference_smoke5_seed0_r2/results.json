@@ -1,0 +1,218 @@
+{
+  "passed": true,
+  "unique_members": [
+    [
+      "worker_0/layouts_2688.th",
+      3
+    ],
+    [
+      "worker_2/layouts_8512.th",
+      47
+    ],
+    [
+      "worker_8/layouts_3808.th",
+      67
+    ],
+    [
+      "worker_0/layouts_1344.th",
+      82
+    ],
+    [
+      "worker_1/layouts_2128.th",
+      72
+    ]
+  ],
+  "count": 5,
+  "module_counts": [
+    77,
+    81,
+    63,
+    97,
+    94
+  ],
+  "stratification_checks": {
+    "equal": {
+      "20": 666,
+      "40": 667,
+      "80": 667
+    },
+    "limited": {
+      "20": 990,
+      "40": 990,
+      "80": 20
+    },
+    "insufficient_rejected": true,
+    "same_seed_reproducible": true,
+    "different_seed_changes_selection": true
+  },
+  "candidate_scan_public_only": true,
+  "sealed_test_denied": true,
+  "synthetic_full_registry_counts_and_historical_test_exclusion": true,
+  "cache_values_and_scoring_identical": true,
+  "cache_pause_resume": true,
+  "arms": {
+    "supervised_small": {
+      "parameters": 497299,
+      "finite_backward": true,
+      "diagnostics": {
+        "1": {
+          "weights": {
+            "supervision": 1.0,
+            "quality": 0.0,
+            "overlap": 0.0
+          },
+          "losses": {
+            "total": 101.5788803100586,
+            "supervision": 101.5788803100586,
+            "center_mse": 100.87996673583984,
+            "shape_mse": 0.6989170908927917
+          },
+          "gradient_norms": {
+            "supervision": 1745.4876708984375
+          },
+          "weighted_gradient_norms": {
+            "supervision": 1745.4876708984375
+          }
+        }
+      }
+    },
+    "curriculum_small": {
+      "parameters": 497299,
+      "finite_backward": true,
+      "diagnostics": {
+        "1": {
+          "weights": {
+            "supervision": 1.0,
+            "quality": 0.05,
+            "overlap": 1.0
+          },
+          "losses": {
+            "total": 111.9970703125,
+            "supervision": 101.5788803100586,
+            "center_mse": 100.87996673583984,
+            "shape_mse": 0.6989170908927917,
+            "quality_proxy": 38.258453369140625,
+            "wire_ratio": 1.2210525274276733,
+            "bbox_ratio": 0.9893118739128113,
+            "boundary": 17.876869201660156,
+            "grouping": 0.6990949511528015,
+            "mib": 0.000670662266202271,
+            "overlap": 8.50526237487793
+          },
+          "gradient_norms": {
+            "supervision": 1745.4876708984375,
+            "quality_proxy": 698.8380737304688,
+            "overlap": 109.22713470458984
+          },
+          "weighted_gradient_norms": {
+            "supervision": 1745.4876708984375,
+            "quality_proxy": 34.94190368652344,
+            "overlap": 109.22713470458984
+          }
+        },
+        "20": {
+          "weights": {
+            "supervision": 0.050000000000000044,
+            "quality": 1.0,
+            "overlap": 10.0
+          },
+          "losses": {
+            "total": 128.3900146484375,
+            "supervision": 101.5788803100586,
+            "center_mse": 100.87996673583984,
+            "shape_mse": 0.6989170908927917,
+            "quality_proxy": 38.258453369140625,
+            "wire_ratio": 1.2210525274276733,
+            "bbox_ratio": 0.9893118739128113,
+            "boundary": 17.876869201660156,
+            "grouping": 0.6990949511528015,
+            "mib": 0.000670662266202271,
+            "overlap": 8.50526237487793
+          },
+          "gradient_norms": {
+            "supervision": 1745.4876708984375,
+            "quality_proxy": 698.8380737304688,
+            "overlap": 109.22713470458984
+          },
+          "weighted_gradient_norms": {
+            "supervision": 87.27438354492195,
+            "quality_proxy": 698.8380737304688,
+            "overlap": 1092.2713470458984
+          }
+        }
+      }
+    },
+    "curriculum_large": {
+      "parameters": 1970323,
+      "finite_backward": true,
+      "diagnostics": {
+        "1": {
+          "weights": {
+            "supervision": 1.0,
+            "quality": 0.05,
+            "overlap": 1.0
+          },
+          "losses": {
+            "total": 30.002288818359375,
+            "supervision": 25.466379165649414,
+            "center_mse": 25.040037155151367,
+            "shape_mse": 0.4263438284397125,
+            "quality_proxy": 22.034622192382812,
+            "wire_ratio": 1.1692631244659424,
+            "bbox_ratio": 0.748859703540802,
+            "boundary": 10.15246868133545,
+            "grouping": 0.38469839096069336,
+            "mib": 0.0006134630530141294,
+            "overlap": 3.434177875518799
+          },
+          "gradient_norms": {
+            "supervision": 796.966796875,
+            "quality_proxy": 648.593505859375,
+            "overlap": 103.66060638427734
+          },
+          "weighted_gradient_norms": {
+            "supervision": 796.966796875,
+            "quality_proxy": 32.42967529296875,
+            "overlap": 103.66060638427734
+          }
+        },
+        "20": {
+          "weights": {
+            "supervision": 0.050000000000000044,
+            "quality": 1.0,
+            "overlap": 10.0
+          },
+          "losses": {
+            "total": 57.64971923828125,
+            "supervision": 25.466379165649414,
+            "center_mse": 25.040037155151367,
+            "shape_mse": 0.4263438284397125,
+            "quality_proxy": 22.034622192382812,
+            "wire_ratio": 1.1692631244659424,
+            "bbox_ratio": 0.748859703540802,
+            "boundary": 10.15246868133545,
+            "grouping": 0.38469839096069336,
+            "mib": 0.0006134630530141294,
+            "overlap": 3.434177875518799
+          },
+          "gradient_norms": {
+            "supervision": 796.966796875,
+            "quality_proxy": 648.593505859375,
+            "overlap": 103.66060638427734
+          },
+          "weighted_gradient_norms": {
+            "supervision": 39.84833984375003,
+            "quality_proxy": 648.593505859375,
+            "overlap": 1036.6060638427734
+          }
+        }
+      }
+    }
+  },
+  "controller_stop_resume": true,
+  "lr_three_tiers_and_early_stop": true,
+  "postprocessing_calls": 0,
+  "test_read": false,
+  "formal_training_started": false,
+  "elapsed_seconds": 30.28828680003062
+}

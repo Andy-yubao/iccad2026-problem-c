@@ -1,0 +1,37 @@
+{
+  "status": "running_verified",
+  "launcher_pid": 9108,
+  "started_utc": "2026-10-18T16:58:14.6465632+00:00",
+  "commit": "89d476af6e8729aad38428e4fbf039e30ad31b04",
+  "command": [
+    "C:\\Users\\yuche\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+    "-NoLogo",
+    "-NoProfile",
+    "-File",
+    "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E14_stable_teacher\\generate.ps1"
+  ],
+  "stdout": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E14_stable_teacher\\runs\\background_generation\\stdout_persistent.log",
+  "stderr": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E14_stable_teacher\\runs\\background_generation\\stderr_persistent.log",
+  "train_output": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E14_stable_teacher\\runs\\teacher_train16000_v1",
+  "dev_monitor_output": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E14_stable_teacher\\runs\\teacher_devmonitor500_v1",
+  "acceptance100_passed": true,
+  "acceptance500_passed": true,
+  "old_teacher_labels_reused": false,
+  "student_training_started": false,
+  "local_test_read": false,
+  "prior_attempt": {
+    "launcher_pid": 17336,
+    "stdout": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E14_stable_teacher\\runs\\background_generation\\stdout.log",
+    "status": "launcher_exited_before_any_progress",
+    "started_utc": "2026-10-19T00:56:50.0704633+08:00",
+    "stderr": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E14_stable_teacher\\runs\\background_generation\\stderr.log",
+    "output_created": false
+  },
+  "teacher_pid": 54700,
+  "verified_completed": 57,
+  "verified_errors": 0,
+  "verified_updated_utc": "2026-10-18T17:00:02.551422+00:00",
+  "label_schema_verified": true,
+  "first_label_hash_verified": true,
+  "progress_increased_from": 21
+}

@@ -1,0 +1,977 @@
+{
+  "case_id": "dev:worker_86/layouts_3808.th:109",
+  "source": {
+    "split": "dev",
+    "workset": "dev_quality",
+    "shard": "worker_86/layouts_3808.th",
+    "sample_index": 109,
+    "paths": [
+      "datasets/floorset_lite/worker_86/layouts_3808.th"
+    ],
+    "workset_sha256": "6b19332acce3102792310df8ff124a764fb2f34a08e3f0ae24c44f8f3f9f9277"
+  },
+  "panel_index": 4,
+  "reader_index": 86,
+  "block_count": 99,
+  "teacher_q": 1.1643140849455522,
+  "teacher_metrics": {
+    "is_feasible": true,
+    "overlap_violations": 0,
+    "area_violations": 0,
+    "dimension_violations": 0,
+    "hpwl_b2b": 121.99634997331442,
+    "hpwl_p2b": 0.843683093743964,
+    "hpwl_total": 122.84003306705839,
+    "hpwl_baseline": 127.09362606704235,
+    "hpwl_gap": -0.03346818508223363,
+    "bbox_area": 31078.31479533244,
+    "bbox_area_baseline": 31040.0,
+    "area_gap": 0.0012343684063286261,
+    "fixed_violations": 0,
+    "preplaced_violations": 0,
+    "boundary_violations": 2,
+    "grouping_violations": 0,
+    "mib_violations": 3,
+    "total_soft_violations": 5,
+    "max_possible_violations": 66,
+    "violations_relative": 0.07575757575757576,
+    "runtime_seconds": 1.2668694000167307,
+    "cost": 1.1643140849455522,
+    "official_is_feasible_before_nonnegative_check": true,
+    "nonnegative_coordinate_violations": 0
+  },
+  "teacher_geometry": {
+    "overlap_excess_area_fraction": 2.334574499677659e-10,
+    "internal_whitespace_fraction": 0.035079701660395216,
+    "overlap_pairs": 0,
+    "bbox_area": 31078.31479533244
+  },
+  "layouts": {
+    "7ad7534e51739da11a2a": [
+      [
+        96.0,
+        0.0,
+        13.674794331177344,
+        13.674794331177344
+      ],
+      [
+        109.67479433117734,
+        0.0,
+        24.0,
+        14.0
+      ],
+      [
+        133.67479433117734,
+        0.0,
+        15.427248620541512,
+        15.427248620541512
+      ],
+      [
+        149.10204295171886,
+        0.0,
+        13.2664991614216,
+        13.2664991614216
+      ],
+      [
+        162.36854211314045,
+        0.0,
+        10.392304845413264,
+        10.392304845413264
+      ],
+      [
+        172.7608469585537,
+        0.0,
+        13.74772708486752,
+        13.74772708486752
+      ],
+      [
+        186.50857404342122,
+        0.0,
+        24.0,
+        24.0
+      ],
+      [
+        39.0,
+        255.0,
+        9.0,
+        13.0
+      ],
+      [
+        210.50857404342122,
+        0.0,
+        25.0,
+        20.0
+      ],
+      [
+        235.50857404342122,
+        0.0,
+        15.0,
+        7.0
+      ],
+      [
+        250.50857404342122,
+        0.0,
+        23.065125189341593,
+        23.065125189341593
+      ],
+      [
+        273.5736992327628,
+        0.0,
+        16.881943016134134,
+        16.881943016134134
+      ],
+      [
+        290.45564224889694,
+        0.0,
+        15.0,
+        15.0
+      ],
+      [
+        305.45564224889694,
+        0.0,
+        16.522711641858304,
+        16.522711641858304
+      ],
+      [
+        321.9783538907552,
+        0.0,
+        17.663521732655695,
+        17.663521732655695
+      ],
+      [
+        339.6418756234109,
+        0.0,
+        12.84523257866513,
+        12.84523257866513
+      ],
+      [
+        352.487108202076,
+        0.0,
+        15.198684153570664,
+        15.198684153570664
+      ],
+      [
+        367.68579235564664,
+        0.0,
+        13.74772708486752,
+        13.74772708486752
+      ],
+      [
+        381.43351944051415,
+        0.0,
+        16.431676725154983,
+        16.431676725154983
+      ],
+      [
+        397.86519616566915,
+        0.0,
+        9.539392014169456,
+        9.539392014169456
+      ],
+      [
+        407.4045881798386,
+        0.0,
+        16.431676725154983,
+        16.431676725154983
+      ],
+      [
+        423.8362649049936,
+        0.0,
+        19.79898987322333,
+        19.79898987322333
+      ],
+      [
+        443.6352547782169,
+        0.0,
+        16.73320053068151,
+        16.73320053068151
+      ],
+      [
+        460.36845530889843,
+        0.0,
+        4.47213595499958,
+        4.47213595499958
+      ],
+      [
+        464.84059126389803,
+        0.0,
+        21.633307652783937,
+        21.633307652783937
+      ],
+      [
+        486.47389891668195,
+        0.0,
+        18.0,
+        18.0
+      ],
+      [
+        504.47389891668195,
+        0.0,
+        12.0,
+        12.0
+      ],
+      [
+        516.473898916682,
+        0.0,
+        6.0,
+        6.0
+      ],
+      [
+        522.473898916682,
+        0.0,
+        24.49489742783178,
+        24.49489742783178
+      ],
+      [
+        546.9687963445137,
+        0.0,
+        25.826343140289914,
+        25.826343140289914
+      ],
+      [
+        572.7951394848037,
+        0.0,
+        13.490737563232042,
+        13.490737563232042
+      ],
+      [
+        586.2858770480358,
+        0.0,
+        25.0,
+        24.0
+      ],
+      [
+        611.2858770480358,
+        0.0,
+        13.784048752090222,
+        13.784048752090222
+      ],
+      [
+        625.069925800126,
+        0.0,
+        8.0,
+        8.0
+      ],
+      [
+        633.069925800126,
+        0.0,
+        20.784609690826528,
+        20.784609690826528
+      ],
+      [
+        653.8545354909526,
+        0.0,
+        13.076696830622021,
+        13.076696830622021
+      ],
+      [
+        666.9312323215746,
+        0.0,
+        13.784048752090222,
+        13.784048752090222
+      ],
+      [
+        680.7152810736649,
+        0.0,
+        25.98076211353316,
+        25.98076211353316
+      ],
+      [
+        706.696043187198,
+        0.0,
+        9.16515138991168,
+        9.16515138991168
+      ],
+      [
+        715.8611945771097,
+        0.0,
+        27.49545416973504,
+        27.49545416973504
+      ],
+      [
+        743.3566487468447,
+        0.0,
+        8.12403840463596,
+        8.12403840463596
+      ],
+      [
+        751.4806871514807,
+        0.0,
+        13.2664991614216,
+        13.2664991614216
+      ],
+      [
+        764.7471863129023,
+        0.0,
+        11.313708498984761,
+        11.313708498984761
+      ],
+      [
+        776.060894811887,
+        0.0,
+        25.0,
+        25.0
+      ],
+      [
+        801.060894811887,
+        0.0,
+        9.9498743710662,
+        9.9498743710662
+      ],
+      [
+        811.0107691829533,
+        0.0,
+        21.633307652783937,
+        21.633307652783937
+      ],
+      [
+        832.6440768357372,
+        0.0,
+        16.1245154965971,
+        16.1245154965971
+      ],
+      [
+        848.7685923323343,
+        0.0,
+        13.74772708486752,
+        13.74772708486752
+      ],
+      [
+        862.5163194172018,
+        0.0,
+        26.457513110645905,
+        26.457513110645905
+      ],
+      [
+        888.9738325278477,
+        0.0,
+        16.24807680927192,
+        16.24807680927192
+      ],
+      [
+        905.2219093371195,
+        0.0,
+        15.0,
+        15.0
+      ],
+      [
+        920.2219093371195,
+        0.0,
+        10.908712114635714,
+        10.908712114635714
+      ],
+      [
+        931.1306214517552,
+        0.0,
+        25.495097567963924,
+        25.495097567963924
+      ],
+      [
+        956.6257190197192,
+        0.0,
+        4.898979485566356,
+        4.898979485566356
+      ],
+      [
+        961.5246985052855,
+        0.0,
+        14.38749456993816,
+        14.38749456993816
+      ],
+      [
+        975.9121930752237,
+        0.0,
+        17.549928774784245,
+        17.549928774784245
+      ],
+      [
+        993.462121850008,
+        0.0,
+        12.0,
+        18.0
+      ],
+      [
+        1005.462121850008,
+        0.0,
+        13.416407864998739,
+        13.416407864998739
+      ],
+      [
+        1018.8785297150067,
+        0.0,
+        18.734993995195193,
+        18.734993995195193
+      ],
+      [
+        1037.613523710202,
+        0.0,
+        17.320508075688775,
+        17.320508075688775
+      ],
+      [
+        1054.9340317858907,
+        0.0,
+        17.86057109949175,
+        17.86057109949175
+      ],
+      [
+        1072.7946028853826,
+        0.0,
+        5.916079783099616,
+        5.916079783099616
+      ],
+      [
+        1078.7106826684821,
+        0.0,
+        26.0,
+        25.0
+      ],
+      [
+        1104.7106826684821,
+        0.0,
+        19.748417658131498,
+        19.748417658131498
+      ],
+      [
+        1124.4591003266137,
+        0.0,
+        14.696938456699069,
+        14.696938456699069
+      ],
+      [
+        1139.1560387833129,
+        0.0,
+        15.0,
+        15.0
+      ],
+      [
+        1154.1560387833129,
+        0.0,
+        20.12461179749811,
+        20.12461179749811
+      ],
+      [
+        1174.280650580811,
+        0.0,
+        25.514701644346147,
+        25.514701644346147
+      ],
+      [
+        1199.795352225157,
+        0.0,
+        18.65475810617763,
+        18.65475810617763
+      ],
+      [
+        1218.4501103313348,
+        0.0,
+        21.42428528562855,
+        21.42428528562855
+      ],
+      [
+        1239.8743956169633,
+        0.0,
+        9.9498743710662,
+        9.9498743710662
+      ],
+      [
+        1249.8242699880295,
+        0.0,
+        16.0,
+        16.0
+      ],
+      [
+        1265.8242699880295,
+        0.0,
+        14.2828568570857,
+        14.2828568570857
+      ],
+      [
+        1280.1071268451153,
+        0.0,
+        9.539392014169456,
+        9.539392014169456
+      ],
+      [
+        1289.6465188592847,
+        0.0,
+        19.44222209522358,
+        19.44222209522358
+      ],
+      [
+        1309.0887409545082,
+        0.0,
+        21.540659228538015,
+        21.540659228538015
+      ],
+      [
+        1330.6294001830463,
+        0.0,
+        12.24744871391589,
+        12.24744871391589
+      ],
+      [
+        1342.8768488969622,
+        0.0,
+        20.493901531919196,
+        20.493901531919196
+      ],
+      [
+        1363.3707504288814,
+        0.0,
+        10.583005244258363,
+        10.583005244258363
+      ],
+      [
+        69.0,
+        245.0,
+        27.0,
+        18.0
+      ],
+      [
+        1373.9537556731398,
+        0.0,
+        21.633307652783937,
+        21.633307652783937
+      ],
+      [
+        1395.5870633259237,
+        0.0,
+        20.12461179749811,
+        20.12461179749811
+      ],
+      [
+        1415.7116751234219,
+        0.0,
+        13.416407864998739,
+        13.416407864998739
+      ],
+      [
+        1429.1280829884206,
+        0.0,
+        21.633307652783937,
+        21.633307652783937
+      ],
+      [
+        1450.7613906412046,
+        0.0,
+        20.0,
+        20.0
+      ],
+      [
+        1470.7613906412046,
+        0.0,
+        7.483314773547883,
+        7.483314773547883
+      ],
+      [
+        1478.2447054147524,
+        0.0,
+        21.633307652783937,
+        21.633307652783937
+      ],
+      [
+        1499.8780130675364,
+        0.0,
+        19.4164878389476,
+        19.4164878389476
+      ],
+      [
+        1519.294500906484,
+        0.0,
+        16.583123951777,
+        16.583123951777
+      ],
+      [
+        1535.877624858261,
+        0.0,
+        17.86057109949175,
+        17.86057109949175
+      ],
+      [
+        1553.7381959577529,
+        0.0,
+        23.45207879911715,
+        23.45207879911715
+      ],
+      [
+        1577.19027475687,
+        0.0,
+        26.0,
+        18.0
+      ],
+      [
+        1603.19027475687,
+        0.0,
+        22.360679774997898,
+        22.360679774997898
+      ],
+      [
+        1625.5509545318678,
+        0.0,
+        18.0,
+        8.0
+      ],
+      [
+        1643.5509545318678,
+        0.0,
+        12.12435565298214,
+        12.12435565298214
+      ],
+      [
+        1655.6753101848499,
+        0.0,
+        25.099800796022265,
+        25.099800796022265
+      ],
+      [
+        1680.7751109808721,
+        0.0,
+        12.727922061357855,
+        12.727922061357855
+      ],
+      [
+        1693.50303304223,
+        0.0,
+        17.4928556845359,
+        17.4928556845359
+      ],
+      [
+        1710.995888726766,
+        0.0,
+        19.078784028338912,
+        19.078784028338912
+      ]
+    ]
+  },
+  "trials": [
+    {
+      "arm": "lower_geo0",
+      "family": "lower",
+      "noise": 0.0,
+      "teacher_relations": false,
+      "snap_mode": "separated",
+      "worker_wall_seconds": 0.05916310002794489,
+      "solve_seconds": 0.055190499988384545,
+      "charged_original_total_seconds": 0.07037110003875569,
+      "draft_geometry": {
+        "overlap_excess_area_fraction": 7.717168691568728e-07,
+        "internal_whitespace_fraction": 0.035219679892226026,
+        "overlap_pairs": 198,
+        "bbox_area": 31078.31854786066
+      },
+      "metrics": {
+        "is_feasible": true,
+        "overlap_violations": 0,
+        "area_violations": 0,
+        "dimension_violations": 0,
+        "hpwl_b2b": 1391.4471682005699,
+        "hpwl_p2b": 24.076340060361076,
+        "hpwl_total": 1415.523508260931,
+        "hpwl_baseline": 127.09362606704235,
+        "hpwl_gap": 10.137643578712888,
+        "bbox_area": 453208.01229836815,
+        "bbox_area_baseline": 31040.0,
+        "area_gap": 13.600773592086602,
+        "fixed_violations": 0,
+        "preplaced_violations": 0,
+        "boundary_violations": 32,
+        "grouping_violations": 24,
+        "mib_violations": 3,
+        "total_soft_violations": 59,
+        "max_possible_violations": 66,
+        "violations_relative": 0.8939393939393939,
+        "runtime_seconds": 0.055190499988384545,
+        "cost": 9.999999,
+        "official_is_feasible_before_nonnegative_check": true,
+        "nonnegative_coordinate_violations": 0
+      },
+      "independent_hard_checks": {
+        "overlap_pairs": [],
+        "area_violation_blocks": [],
+        "fixed_or_preplaced_shape_violations": [],
+        "preplaced_location_violations": [],
+        "invalid_geometry_blocks": [],
+        "dimension_or_location_violation_count": 0,
+        "is_feasible": true,
+        "negative_coordinate_blocks": []
+      },
+      "stats": {
+        "seconds": 0.054484000022057444,
+        "proxy": 4.213445670698137,
+        "trace": [
+          {
+            "phase": "position_lp",
+            "seconds": 0.010053900012280792,
+            "native_seconds": 0.003224099986255169,
+            "status": "Infeasible",
+            "variables": 465,
+            "rows": 5758,
+            "simplex_iterations": 0,
+            "active_contacts": 25,
+            "active_boundary": 40,
+            "total_seconds": 0.015491000027395785
+          }
+        ],
+        "accepted": [],
+        "row_retained": true,
+        "fixed_shape": true,
+        "snap_mode": "separated",
+        "hard_valid": true
+      },
+      "layout_key": "7ad7534e51739da11a2a",
+      "final_geometry": {
+        "overlap_excess_area_fraction": 1.2026376221790787e-16,
+        "internal_whitespace_fraction": 0.9332536072198013,
+        "overlap_pairs": 0,
+        "bbox_area": 453208.01229836815
+      }
+    },
+    {
+      "arm": "exact_geo0",
+      "family": "exact",
+      "noise": 0.0,
+      "teacher_relations": false,
+      "snap_mode": "separated",
+      "worker_wall_seconds": 0.056968399963807315,
+      "solve_seconds": 0.05361160001484677,
+      "charged_original_total_seconds": 0.06817639997461811,
+      "draft_geometry": {
+        "overlap_excess_area_fraction": 0.007355424790451936,
+        "internal_whitespace_fraction": 0.035059060362470196,
+        "overlap_pairs": 222,
+        "bbox_area": 31118.483180295316
+      },
+      "metrics": {
+        "is_feasible": true,
+        "overlap_violations": 0,
+        "area_violations": 0,
+        "dimension_violations": 0,
+        "hpwl_b2b": 1391.4471682005699,
+        "hpwl_p2b": 24.076340060361076,
+        "hpwl_total": 1415.523508260931,
+        "hpwl_baseline": 127.09362606704235,
+        "hpwl_gap": 10.137643578712888,
+        "bbox_area": 453208.01229836815,
+        "bbox_area_baseline": 31040.0,
+        "area_gap": 13.600773592086602,
+        "fixed_violations": 0,
+        "preplaced_violations": 0,
+        "boundary_violations": 32,
+        "grouping_violations": 24,
+        "mib_violations": 3,
+        "total_soft_violations": 59,
+        "max_possible_violations": 66,
+        "violations_relative": 0.8939393939393939,
+        "runtime_seconds": 0.05361160001484677,
+        "cost": 9.999999,
+        "official_is_feasible_before_nonnegative_check": true,
+        "nonnegative_coordinate_violations": 0
+      },
+      "independent_hard_checks": {
+        "overlap_pairs": [],
+        "area_violation_blocks": [],
+        "fixed_or_preplaced_shape_violations": [],
+        "preplaced_location_violations": [],
+        "invalid_geometry_blocks": [],
+        "dimension_or_location_violation_count": 0,
+        "is_feasible": true,
+        "negative_coordinate_blocks": []
+      },
+      "stats": {
+        "seconds": 0.05318530002841726,
+        "proxy": 4.213445670698137,
+        "trace": [
+          {
+            "phase": "position_lp",
+            "seconds": 0.00954009999986738,
+            "native_seconds": 0.0031159999780356884,
+            "status": "Infeasible",
+            "variables": 465,
+            "rows": 5758,
+            "simplex_iterations": 0,
+            "active_contacts": 25,
+            "active_boundary": 40,
+            "total_seconds": 0.014749699970707297
+          }
+        ],
+        "accepted": [],
+        "row_retained": true,
+        "fixed_shape": true,
+        "snap_mode": "separated",
+        "hard_valid": true
+      },
+      "layout_key": "7ad7534e51739da11a2a",
+      "final_geometry": {
+        "overlap_excess_area_fraction": 1.2026376221790787e-16,
+        "internal_whitespace_fraction": 0.9332536072198013,
+        "overlap_pairs": 0,
+        "bbox_area": 453208.01229836815
+      }
+    },
+    {
+      "arm": "teacher_geo0",
+      "family": "teacher",
+      "noise": 0.0,
+      "teacher_relations": false,
+      "snap_mode": "separated",
+      "worker_wall_seconds": 0.07040409999899566,
+      "solve_seconds": 0.06638519995613024,
+      "charged_original_total_seconds": 0.08161210000980645,
+      "draft_geometry": {
+        "overlap_excess_area_fraction": 7.716049372917681e-07,
+        "internal_whitespace_fraction": 0.03507975608912291,
+        "overlap_pairs": 198,
+        "bbox_area": 31078.319548149415
+      },
+      "metrics": {
+        "is_feasible": true,
+        "overlap_violations": 0,
+        "area_violations": 0,
+        "dimension_violations": 0,
+        "hpwl_b2b": 1391.4471682005699,
+        "hpwl_p2b": 24.076340060361076,
+        "hpwl_total": 1415.523508260931,
+        "hpwl_baseline": 127.09362606704235,
+        "hpwl_gap": 10.137643578712888,
+        "bbox_area": 453208.01229836815,
+        "bbox_area_baseline": 31040.0,
+        "area_gap": 13.600773592086602,
+        "fixed_violations": 0,
+        "preplaced_violations": 0,
+        "boundary_violations": 32,
+        "grouping_violations": 24,
+        "mib_violations": 3,
+        "total_soft_violations": 59,
+        "max_possible_violations": 66,
+        "violations_relative": 0.8939393939393939,
+        "runtime_seconds": 0.06638519995613024,
+        "cost": 9.999999,
+        "official_is_feasible_before_nonnegative_check": true,
+        "nonnegative_coordinate_violations": 0
+      },
+      "independent_hard_checks": {
+        "overlap_pairs": [],
+        "area_violation_blocks": [],
+        "fixed_or_preplaced_shape_violations": [],
+        "preplaced_location_violations": [],
+        "invalid_geometry_blocks": [],
+        "dimension_or_location_violation_count": 0,
+        "is_feasible": true,
+        "negative_coordinate_blocks": []
+      },
+      "stats": {
+        "seconds": 0.06594889995176345,
+        "proxy": 4.213445670698137,
+        "trace": [
+          {
+            "phase": "position_lp",
+            "seconds": 0.009810599964112043,
+            "native_seconds": 0.003184500033967197,
+            "status": "Infeasible",
+            "variables": 465,
+            "rows": 5758,
+            "simplex_iterations": 0,
+            "active_contacts": 25,
+            "active_boundary": 40,
+            "total_seconds": 0.015256800048518926
+          }
+        ],
+        "accepted": [],
+        "row_retained": true,
+        "fixed_shape": true,
+        "snap_mode": "separated",
+        "hard_valid": true
+      },
+      "layout_key": "7ad7534e51739da11a2a",
+      "final_geometry": {
+        "overlap_excess_area_fraction": 1.2026376221790787e-16,
+        "internal_whitespace_fraction": 0.9332536072198013,
+        "overlap_pairs": 0,
+        "bbox_area": 453208.01229836815
+      }
+    },
+    {
+      "arm": "lower_legacy",
+      "family": "lower",
+      "noise": 0.0,
+      "teacher_relations": false,
+      "snap_mode": "legacy",
+      "worker_wall_seconds": 0.05743839999195188,
+      "solve_seconds": 0.05365209997398779,
+      "charged_original_total_seconds": 0.06864640000276268,
+      "draft_geometry": {
+        "overlap_excess_area_fraction": 7.717168691568728e-07,
+        "internal_whitespace_fraction": 0.035219679892226026,
+        "overlap_pairs": 198,
+        "bbox_area": 31078.31854786066
+      },
+      "metrics": {
+        "is_feasible": true,
+        "overlap_violations": 0,
+        "area_violations": 0,
+        "dimension_violations": 0,
+        "hpwl_b2b": 1391.4471682005699,
+        "hpwl_p2b": 24.076340060361076,
+        "hpwl_total": 1415.523508260931,
+        "hpwl_baseline": 127.09362606704235,
+        "hpwl_gap": 10.137643578712888,
+        "bbox_area": 453208.01229836815,
+        "bbox_area_baseline": 31040.0,
+        "area_gap": 13.600773592086602,
+        "fixed_violations": 0,
+        "preplaced_violations": 0,
+        "boundary_violations": 32,
+        "grouping_violations": 24,
+        "mib_violations": 3,
+        "total_soft_violations": 59,
+        "max_possible_violations": 66,
+        "violations_relative": 0.8939393939393939,
+        "runtime_seconds": 0.05365209997398779,
+        "cost": 9.999999,
+        "official_is_feasible_before_nonnegative_check": true,
+        "nonnegative_coordinate_violations": 0
+      },
+      "independent_hard_checks": {
+        "overlap_pairs": [],
+        "area_violation_blocks": [],
+        "fixed_or_preplaced_shape_violations": [],
+        "preplaced_location_violations": [],
+        "invalid_geometry_blocks": [],
+        "dimension_or_location_violation_count": 0,
+        "is_feasible": true,
+        "negative_coordinate_blocks": []
+      },
+      "stats": {
+        "seconds": 0.05326920002698898,
+        "proxy": 4.213445670698137,
+        "trace": [
+          {
+            "phase": "position_lp",
+            "seconds": 0.009761599998455495,
+            "native_seconds": 0.0031454000272788107,
+            "status": "Infeasible",
+            "variables": 465,
+            "rows": 5758,
+            "simplex_iterations": 0,
+            "active_contacts": 25,
+            "active_boundary": 40,
+            "total_seconds": 0.01504570001270622
+          }
+        ],
+        "accepted": [],
+        "row_retained": true,
+        "fixed_shape": true,
+        "snap_mode": "legacy",
+        "hard_valid": true
+      },
+      "layout_key": "7ad7534e51739da11a2a",
+      "final_geometry": {
+        "overlap_excess_area_fraction": 1.2026376221790787e-16,
+        "internal_whitespace_fraction": 0.9332536072198013,
+        "overlap_pairs": 0,
+        "bbox_area": 453208.01229836815
+      }
+    }
+  ]
+}

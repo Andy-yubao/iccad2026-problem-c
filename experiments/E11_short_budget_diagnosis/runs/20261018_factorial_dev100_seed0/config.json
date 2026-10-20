@@ -1,0 +1,494 @@
+{
+  "command": [
+    "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+    "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E11_short_budget_diagnosis\\panel.py",
+    "--output",
+    "experiments/E11_short_budget_diagnosis/runs/20261018_factorial_dev100_seed0"
+  ],
+  "seed": 0,
+  "threads": 2,
+  "started_local": "2026-10-18 13:19:26 +0800",
+  "device": "CPU",
+  "source_commit": "b2c86a5e4c273c584c9ba0b7a0256bd546535fff",
+  "git_status": "M README.md\n M experiments/README.md\n?? experiments/E11_short_budget_diagnosis/",
+  "python": "3.10.22 | packaged by conda-forge | (main, Oct  6 2026, 22:57:13) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 198 Stepping 2, GenuineIntel",
+  "torch": "2.7.1+cu128",
+  "numpy": "1.26.4",
+  "scipy": "1.15.3",
+  "clarabel": "0.11.1",
+  "highs": "1.15.1",
+  "arms": {
+    "raw_full": 5.0,
+    "raw_short": 0.4,
+    "raw_fixed": 0.4,
+    "teacher_separation": 0.4,
+    "teacher_contact_tree": 0.4,
+    "teacher_relations": 0.4,
+    "teacher_full_ceiling": 0.1
+  },
+  "quality_tolerance": 0.002,
+  "wall_cap_seconds": 900,
+  "panel": "frozen workset_v2.dev_quality, all 100 members, worker0..99 one each",
+  "members": [
+    {
+      "shard": "worker_0/layouts_1344.th",
+      "sample_index": 82
+    },
+    {
+      "shard": "worker_1/layouts_2128.th",
+      "sample_index": 72
+    },
+    {
+      "shard": "worker_2/layouts_8064.th",
+      "sample_index": 61
+    },
+    {
+      "shard": "worker_3/layouts_7280.th",
+      "sample_index": 35
+    },
+    {
+      "shard": "worker_4/layouts_2912.th",
+      "sample_index": 28
+    },
+    {
+      "shard": "worker_5/layouts_7056.th",
+      "sample_index": 81
+    },
+    {
+      "shard": "worker_6/layouts_3584.th",
+      "sample_index": 54
+    },
+    {
+      "shard": "worker_7/layouts_6832.th",
+      "sample_index": 32
+    },
+    {
+      "shard": "worker_8/layouts_1232.th",
+      "sample_index": 102
+    },
+    {
+      "shard": "worker_9/layouts_8400.th",
+      "sample_index": 45
+    },
+    {
+      "shard": "worker_10/layouts_896.th",
+      "sample_index": 8
+    },
+    {
+      "shard": "worker_11/layouts_9184.th",
+      "sample_index": 88
+    },
+    {
+      "shard": "worker_12/layouts_7616.th",
+      "sample_index": 72
+    },
+    {
+      "shard": "worker_13/layouts_4256.th",
+      "sample_index": 79
+    },
+    {
+      "shard": "worker_14/layouts_9072.th",
+      "sample_index": 69
+    },
+    {
+      "shard": "worker_15/layouts_2352.th",
+      "sample_index": 83
+    },
+    {
+      "shard": "worker_16/layouts_0.th",
+      "sample_index": 62
+    },
+    {
+      "shard": "worker_17/layouts_9184.th",
+      "sample_index": 75
+    },
+    {
+      "shard": "worker_18/layouts_8736.th",
+      "sample_index": 106
+    },
+    {
+      "shard": "worker_19/layouts_896.th",
+      "sample_index": 52
+    },
+    {
+      "shard": "worker_20/layouts_9296.th",
+      "sample_index": 55
+    },
+    {
+      "shard": "worker_21/layouts_4480.th",
+      "sample_index": 21
+    },
+    {
+      "shard": "worker_22/layouts_1344.th",
+      "sample_index": 26
+    },
+    {
+      "shard": "worker_23/layouts_7952.th",
+      "sample_index": 17
+    },
+    {
+      "shard": "worker_24/layouts_9632.th",
+      "sample_index": 47
+    },
+    {
+      "shard": "worker_25/layouts_7280.th",
+      "sample_index": 6
+    },
+    {
+      "shard": "worker_26/layouts_4928.th",
+      "sample_index": 46
+    },
+    {
+      "shard": "worker_27/layouts_8176.th",
+      "sample_index": 98
+    },
+    {
+      "shard": "worker_28/layouts_2016.th",
+      "sample_index": 35
+    },
+    {
+      "shard": "worker_29/layouts_3808.th",
+      "sample_index": 79
+    },
+    {
+      "shard": "worker_30/layouts_7168.th",
+      "sample_index": 89
+    },
+    {
+      "shard": "worker_31/layouts_0.th",
+      "sample_index": 109
+    },
+    {
+      "shard": "worker_32/layouts_1680.th",
+      "sample_index": 78
+    },
+    {
+      "shard": "worker_33/layouts_5712.th",
+      "sample_index": 110
+    },
+    {
+      "shard": "worker_34/layouts_5264.th",
+      "sample_index": 100
+    },
+    {
+      "shard": "worker_35/layouts_9184.th",
+      "sample_index": 82
+    },
+    {
+      "shard": "worker_36/layouts_2912.th",
+      "sample_index": 39
+    },
+    {
+      "shard": "worker_37/layouts_7616.th",
+      "sample_index": 72
+    },
+    {
+      "shard": "worker_38/layouts_3024.th",
+      "sample_index": 96
+    },
+    {
+      "shard": "worker_39/layouts_6048.th",
+      "sample_index": 37
+    },
+    {
+      "shard": "worker_40/layouts_4368.th",
+      "sample_index": 89
+    },
+    {
+      "shard": "worker_41/layouts_0.th",
+      "sample_index": 24
+    },
+    {
+      "shard": "worker_42/layouts_3136.th",
+      "sample_index": 98
+    },
+    {
+      "shard": "worker_43/layouts_4928.th",
+      "sample_index": 69
+    },
+    {
+      "shard": "worker_44/layouts_5600.th",
+      "sample_index": 108
+    },
+    {
+      "shard": "worker_45/layouts_0.th",
+      "sample_index": 108
+    },
+    {
+      "shard": "worker_46/layouts_7056.th",
+      "sample_index": 101
+    },
+    {
+      "shard": "worker_47/layouts_5712.th",
+      "sample_index": 37
+    },
+    {
+      "shard": "worker_48/layouts_0.th",
+      "sample_index": 32
+    },
+    {
+      "shard": "worker_49/layouts_3696.th",
+      "sample_index": 85
+    },
+    {
+      "shard": "worker_50/layouts_4032.th",
+      "sample_index": 51
+    },
+    {
+      "shard": "worker_51/layouts_3360.th",
+      "sample_index": 102
+    },
+    {
+      "shard": "worker_52/layouts_336.th",
+      "sample_index": 74
+    },
+    {
+      "shard": "worker_53/layouts_784.th",
+      "sample_index": 111
+    },
+    {
+      "shard": "worker_54/layouts_4144.th",
+      "sample_index": 15
+    },
+    {
+      "shard": "worker_55/layouts_5936.th",
+      "sample_index": 47
+    },
+    {
+      "shard": "worker_56/layouts_9856.th",
+      "sample_index": 102
+    },
+    {
+      "shard": "worker_57/layouts_8400.th",
+      "sample_index": 18
+    },
+    {
+      "shard": "worker_58/layouts_0.th",
+      "sample_index": 111
+    },
+    {
+      "shard": "worker_59/layouts_784.th",
+      "sample_index": 6
+    },
+    {
+      "shard": "worker_60/layouts_4256.th",
+      "sample_index": 89
+    },
+    {
+      "shard": "worker_61/layouts_4592.th",
+      "sample_index": 14
+    },
+    {
+      "shard": "worker_62/layouts_6496.th",
+      "sample_index": 100
+    },
+    {
+      "shard": "worker_63/layouts_7168.th",
+      "sample_index": 11
+    },
+    {
+      "shard": "worker_64/layouts_3808.th",
+      "sample_index": 0
+    },
+    {
+      "shard": "worker_65/layouts_6720.th",
+      "sample_index": 8
+    },
+    {
+      "shard": "worker_66/layouts_2016.th",
+      "sample_index": 26
+    },
+    {
+      "shard": "worker_67/layouts_6160.th",
+      "sample_index": 53
+    },
+    {
+      "shard": "worker_68/layouts_2352.th",
+      "sample_index": 73
+    },
+    {
+      "shard": "worker_69/layouts_6160.th",
+      "sample_index": 57
+    },
+    {
+      "shard": "worker_70/layouts_9632.th",
+      "sample_index": 19
+    },
+    {
+      "shard": "worker_71/layouts_1120.th",
+      "sample_index": 103
+    },
+    {
+      "shard": "worker_72/layouts_7616.th",
+      "sample_index": 21
+    },
+    {
+      "shard": "worker_73/layouts_5152.th",
+      "sample_index": 2
+    },
+    {
+      "shard": "worker_74/layouts_7168.th",
+      "sample_index": 65
+    },
+    {
+      "shard": "worker_75/layouts_4816.th",
+      "sample_index": 58
+    },
+    {
+      "shard": "worker_76/layouts_6496.th",
+      "sample_index": 73
+    },
+    {
+      "shard": "worker_77/layouts_0.th",
+      "sample_index": 110
+    },
+    {
+      "shard": "worker_78/layouts_6496.th",
+      "sample_index": 77
+    },
+    {
+      "shard": "worker_79/layouts_2688.th",
+      "sample_index": 26
+    },
+    {
+      "shard": "worker_80/layouts_2128.th",
+      "sample_index": 37
+    },
+    {
+      "shard": "worker_81/layouts_5040.th",
+      "sample_index": 24
+    },
+    {
+      "shard": "worker_82/layouts_3136.th",
+      "sample_index": 40
+    },
+    {
+      "shard": "worker_83/layouts_2128.th",
+      "sample_index": 93
+    },
+    {
+      "shard": "worker_84/layouts_7168.th",
+      "sample_index": 2
+    },
+    {
+      "shard": "worker_85/layouts_1008.th",
+      "sample_index": 26
+    },
+    {
+      "shard": "worker_86/layouts_3808.th",
+      "sample_index": 109
+    },
+    {
+      "shard": "worker_87/layouts_448.th",
+      "sample_index": 19
+    },
+    {
+      "shard": "worker_88/layouts_5600.th",
+      "sample_index": 1
+    },
+    {
+      "shard": "worker_89/layouts_224.th",
+      "sample_index": 93
+    },
+    {
+      "shard": "worker_90/layouts_8288.th",
+      "sample_index": 59
+    },
+    {
+      "shard": "worker_91/layouts_5712.th",
+      "sample_index": 100
+    },
+    {
+      "shard": "worker_92/layouts_0.th",
+      "sample_index": 90
+    },
+    {
+      "shard": "worker_93/layouts_0.th",
+      "sample_index": 57
+    },
+    {
+      "shard": "worker_94/layouts_7840.th",
+      "sample_index": 48
+    },
+    {
+      "shard": "worker_95/layouts_336.th",
+      "sample_index": 36
+    },
+    {
+      "shard": "worker_96/layouts_6496.th",
+      "sample_index": 32
+    },
+    {
+      "shard": "worker_97/layouts_7616.th",
+      "sample_index": 35
+    },
+    {
+      "shard": "worker_98/layouts_6608.th",
+      "sample_index": 107
+    },
+    {
+      "shard": "worker_99/layouts_5152.th",
+      "sample_index": 26
+    }
+  ],
+  "local_test_read": false,
+  "training": false,
+  "data_paths": {
+    "training_root": "E:\\project\\ICCAD\\2026\\problemC\\datasets\\floorset_lite",
+    "public_validation_root": "E:\\project\\ICCAD\\2026\\problemC\\datasets\\LiteTensorDataTest"
+  },
+  "split_sha256": "a1f23edae03194c1155d260415482d892e4cb5ad66170abc93af04aafc8cefbd",
+  "workset_sha256": "b520f75d67d12a00aa4f52953e1b9f3cf4ad1c55f1af67206b4c3bc75e9a5bb3",
+  "sources": {
+    "experiments/E11_short_budget_diagnosis/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/E11_short_budget_diagnosis/backend/__init__.py": "e682c3a5178f24b1ac821c6778f5f159593f79d976491f59d1e7427ad3e2c0d5",
+    "experiments/E11_short_budget_diagnosis/backend/conic_geometry.py": "0fc042ccd835fa3afaaf2c33da1913132573ca368a3be7292fa5edb3f8a970d0",
+    "experiments/E11_short_budget_diagnosis/backend/frozen/__init__.py": "e682c3a5178f24b1ac821c6778f5f159593f79d976491f59d1e7427ad3e2c0d5",
+    "experiments/E11_short_budget_diagnosis/backend/frozen/batches.py": "8d3dd2afa0cba274d59b4bf3c594aca51fcbafc6974f3b09c67b7a1e37013a21",
+    "experiments/E11_short_budget_diagnosis/backend/frozen/canonical_geometry.py": "04924bc4150f82862ed4da6cb67fc08779bbf98fcf24e24abd41b1c64d4e2521",
+    "experiments/E11_short_budget_diagnosis/backend/frozen/data.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+    "experiments/E11_short_budget_diagnosis/backend/frozen/feasible.py": "9cfe70894d80fbe54ccaa1c3de60ef4ab111ac9b4472286d1ae6a0c5a1fdc756",
+    "experiments/E11_short_budget_diagnosis/backend/frozen/global_refine.py": "088021ede3290fcd6cf60726a054f7958309e4267d4353a699b80697078ab716",
+    "experiments/E11_short_budget_diagnosis/backend/frozen/inference.py": "0f649ba37a7b7be9ab1f4236730a851d9ea51a5bebb953baca4fbae161e611a3",
+    "experiments/E11_short_budget_diagnosis/backend/frozen/model.py": "7b0075d753930c69dd7823fd643a1dfc55ded5f78263576fbe888da5c994dc94",
+    "experiments/E11_short_budget_diagnosis/backend/frozen/packing.py": "3c0500b7fee120807e6bd3fa8e9f115e476782af1a3e7620859c6651a089ef30",
+    "experiments/E11_short_budget_diagnosis/backend/frozen/postprocess.py": "da0e1572a822a589968a19e67e2d36dd5133c7d17b7ea9443bd743ee4653a272",
+    "experiments/E11_short_budget_diagnosis/backend/frozen/shape_lp.py": "2988df542aa80602f091963e1506da8085152ea0eca4846f6dc6c0a25ef13c94",
+    "experiments/E11_short_budget_diagnosis/backend/frozen/solver.py": "cb5b0b6af3b8511d8a21b14178be188e31c61b58cba065c8c23847c2f9200325",
+    "experiments/E11_short_budget_diagnosis/backend/frozen/topology_mip.py": "e392857196dbde4b3c1f3668862c9779e9c686f17ca89a820078421573b46df5",
+    "experiments/E11_short_budget_diagnosis/backend/guard.py": "4e4adfb1dedede451a4d530103681f97ca6c05516e2dbe96b84d63c136faa87f",
+    "experiments/E11_short_budget_diagnosis/backend/observe.py": "6fb401b9a7ebccec7063de8e9feeaf28bee310ac8a39b221b78d40e438432ec3",
+    "experiments/E11_short_budget_diagnosis/backend/optimizer.py": "6373f5e7477f528e09e599c9a478b712bfbeb0ec29037bed1595d8c82af2ca36",
+    "experiments/E11_short_budget_diagnosis/backend/reduction.py": "4587a5c9c486c59719e76ef64396398edb92e6011d8c0c0cd4f538cad52c4b50",
+    "experiments/E11_short_budget_diagnosis/backend/robust.py": "71c20fccaab58ef199f39db5dd7e9e468e74ba4b44cead8e8b9311e851cc3a60",
+    "experiments/E11_short_budget_diagnosis/control.py": "f1979e6cf44ca1ebff319c535627b3071aec102dcc7aefc25ed3854b309f2bd3",
+    "experiments/E11_short_budget_diagnosis/panel.py": "301546ff0a3dc2bd9875ff456a09fa9262b05ff71dc18a06c66f2acb8860778d",
+    "experiments/E11_short_budget_diagnosis/report.py": "f79ea520d4210bcff1e2fd0498ecb43576586e1fbcd01367af2d98e79d3cea42",
+    "experiments/E11_short_budget_diagnosis/run.py": "a4804b0cf976b57c80be2d0fb9da798cf755bf627da5c64faebf9658630eaa4b",
+    "experiments/E11_short_budget_diagnosis/worker.py": "1a8a91334601ede2e874c45e7777a2ce2ef60366d48e9594d03bcf4c0e10470a",
+    "experiments/E11_short_budget_diagnosis/README.md": "65a4350d3743456d0ff3ba201de6eaa680e9edc1222c3dc22328ed80dc845244",
+    "experiments/E11_short_budget_diagnosis/provenance.json": "f0142af8c795392d4b1791033078f2965f8058b319bc62a80ff1721a9294e1c4",
+    "datasets/__init__.py": "03c36f364366be6c8a5091d6bd3dbec0788d7871747acdeac5fa89d4974cec21",
+    "datasets/cases.py": "1fd51addaaae38164c22f1946712665beebac700054db4bb07ed4f9d44e0b168",
+    "datasets/paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+    "datasets/worksets.py": "2ff073391b7d3456b6a0da93bf9cc54794000e02f5bef78e487c7015cb2cd76a",
+    "scoring/__init__.py": "933bf2be947e20bae164511f26afaa84c2f331d0dbdebc417d235db8358a9247",
+    "scoring/checks.py": "738f6b57e20dce58516f3f10d83689f8df273a84a02b2dce99c6ccc1f904763a",
+    "scoring/evaluation.py": "356e0d1c788c6f25154b33fb1c2455388317d2cc0dd96ca50d7357c58612c611",
+    "scoring/official.py": "478fbc228a56ec4b336b5d8687a44b22b749f30aae09372f57c08e7124270e03"
+  },
+  "cached_sources": {
+    "history/20261018_E10_consolidation/experiments/E8_fast_robust_postprocess/runs/20261018_stageA_dev100_seed0/drafts.jsonl": "33046f8f76f1001ad8e20ffe4c1f2f51c60e5f0fe757126f82712984a94dcf4c",
+    "history/20261018_E10_consolidation/experiments/E8_fast_robust_postprocess/runs/20261018_robust_dev100_seed0/cases.jsonl": "c2d5762767e295a27b3838a029fd20780e9e94509bc4074c0fce1a6a026313e2"
+  },
+  "official_evaluator": {
+    "path": "E:\\project\\ICCAD\\2026\\problemC\\third_party\\FloorSet\\iccad2026contest\\iccad2026_evaluate.py",
+    "sha256": "64db37865b42baf11add62bdbf035690dca086cd4be7b5b4e58db756f20d8498"
+  },
+  "factorial": "Fixed separation edges from raw/teacher; contact_tree seed from raw/teacher using the chosen separation edges. Only relation triples reach worker, except explicitly marked full-layout ceiling.",
+  "timing_scope": "Live core+IPC; cached original inference charged uniformly. Oracle construction, loading, warmup, scoring and plotting excluded. No oracle network or new inference speed claim.",
+  "selection_scope": "All100 cases and all7 arms fixed before expanded results; no outcome-dependent subset. Existing five included; this is development, not independent test.",
+  "warmup_wall_seconds": 0.02356319996761158
+}

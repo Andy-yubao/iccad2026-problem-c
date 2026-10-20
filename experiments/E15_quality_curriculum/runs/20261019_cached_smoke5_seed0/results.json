@@ -1,0 +1,56 @@
+{
+  "unique_members": [
+    [
+      "worker_74/layouts_1904.th",
+      30
+    ],
+    [
+      "worker_77/layouts_4256.th",
+      8
+    ],
+    [
+      "worker_87/layouts_8848.th",
+      12
+    ],
+    [
+      "worker_27/layouts_7504.th",
+      111
+    ],
+    [
+      "worker_5/layouts_7952.th",
+      68
+    ]
+  ],
+  "legacy_prepare_five_seconds": 1.27079209999647,
+  "archive_prepare_five_seconds": 0.15606569999363273,
+  "formal_training_started": false,
+  "test_read": false,
+  "tail_test_read": false,
+  "postprocessing_calls": 0,
+  "mmap_open_five_seconds": 0.3407582999789156,
+  "arms": {
+    "supervised_small": {
+      "finite_backward": true,
+      "parameters": 497299
+    },
+    "curriculum_small": {
+      "finite_backward": true,
+      "parameters": 497299
+    },
+    "curriculum_large": {
+      "finite_backward": true,
+      "parameters": 1970323
+    }
+  },
+  "pure_supervision_gradient_and_update_identical": true,
+  "cache_values_identical": true,
+  "archive_values_identical": true,
+  "public_spec_scoring_identical": true,
+  "controller_stop_resume_passed": true,
+  "passed": true,
+  "final_once_guard_passed": true,
+  "training_has_no_repair_import": true,
+  "pilot_cache_rejected_for_formal_training": true,
+  "final_source_controller_checked": true,
+  "current_controller": "controller_current"
+}

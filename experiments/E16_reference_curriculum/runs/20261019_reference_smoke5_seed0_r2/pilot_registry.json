@@ -1,0 +1,117 @@
+{
+  "dataset_version": "E16.reference_balanced.v1",
+  "task_version": "E14.mean_area.v1",
+  "pilot": true,
+  "frozen_original_hashes": {
+    "protocol/split_v1.json": "a1f23edae03194c1155d260415482d892e4cb5ad66170abc93af04aafc8cefbd",
+    "protocol/workset_v2.json": "b520f75d67d12a00aa4f52953e1b9f3cf4ad1c55f1af67206b4c3bc75e9a5bb3",
+    "protocol/derived_workset_v3.json": "dfa55dab012040ef50ec12ce7376e03e8ae8c015d6e9177fa9392ba06e7e1896"
+  },
+  "sets": {
+    "train": {
+      "count": 3,
+      "records": [
+        {
+          "member": [
+            "worker_0/layouts_2688.th",
+            3
+          ],
+          "n": 77,
+          "case_id": "train:worker_0/layouts_2688.th:3"
+        },
+        {
+          "member": [
+            "worker_2/layouts_8512.th",
+            47
+          ],
+          "n": 81,
+          "case_id": "train:worker_2/layouts_8512.th:47"
+        },
+        {
+          "member": [
+            "worker_8/layouts_3808.th",
+            67
+          ],
+          "n": 63,
+          "case_id": "train:worker_8/layouts_3808.th:67"
+        }
+      ]
+    },
+    "dev": {
+      "count": 2,
+      "records": [
+        {
+          "member": [
+            "worker_0/layouts_1344.th",
+            82
+          ],
+          "n": 97,
+          "case_id": "dev:worker_0/layouts_1344.th:82"
+        },
+        {
+          "member": [
+            "worker_1/layouts_2128.th",
+            72
+          ],
+          "n": 94,
+          "case_id": "dev:worker_1/layouts_2128.th:72"
+        }
+      ]
+    },
+    "local_test": {
+      "count": 0,
+      "records": []
+    },
+    "train_monitor500": {
+      "count": 3,
+      "records": [
+        {
+          "member": [
+            "worker_0/layouts_2688.th",
+            3
+          ],
+          "n": 77,
+          "case_id": "train:worker_0/layouts_2688.th:3"
+        },
+        {
+          "member": [
+            "worker_2/layouts_8512.th",
+            47
+          ],
+          "n": 81,
+          "case_id": "train:worker_2/layouts_8512.th:47"
+        },
+        {
+          "member": [
+            "worker_8/layouts_3808.th",
+            67
+          ],
+          "n": 63,
+          "case_id": "train:worker_8/layouts_3808.th:67"
+        }
+      ]
+    },
+    "dev_monitor500": {
+      "count": 2,
+      "records": [
+        {
+          "member": [
+            "worker_0/layouts_1344.th",
+            82
+          ],
+          "n": 97,
+          "case_id": "dev:worker_0/layouts_1344.th:82"
+        },
+        {
+          "member": [
+            "worker_1/layouts_2128.th",
+            72
+          ],
+          "n": 94,
+          "case_id": "dev:worker_1/layouts_2128.th:72"
+        }
+      ]
+    }
+  },
+  "manifest_sha256": "e5f47aa0988ec99b3da5a2d3fa5aadc332d759b4464092b1320b8c2c2564db9d"
+}

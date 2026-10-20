@@ -1,0 +1,200 @@
+{
+  "version": "E14.distillation_top20000.v1",
+  "status": "prepared",
+  "selection": "globally best 20000 by unrounded Q, deterministic hash tie-break",
+  "top20000": {
+    "count": 20000,
+    "shards": 456,
+    "workers": 100,
+    "Q_mean": 1.0203821663710475,
+    "Q_min": 1.0,
+    "Q_max": 1.0702406346629565,
+    "Q_median": 1.0130053658364737,
+    "module_min": 21,
+    "module_max": 120,
+    "module_bins": [
+      2746,
+      4290,
+      4484,
+      4131,
+      2298,
+      2051
+    ]
+  },
+  "tail1000": {
+    "count": 1000,
+    "shards": 261,
+    "workers": 100,
+    "Q_mean": 1.2590656689276638,
+    "Q_min": 1.1598948306918206,
+    "Q_max": 2.8635068088425593,
+    "Q_median": 1.2129093879054544,
+    "module_min": 21,
+    "module_max": 120,
+    "module_bins": [
+      211,
+      145,
+      140,
+      174,
+      155,
+      175
+    ]
+  },
+  "sets": {
+    "train": {
+      "path": "experiments/E14_stable_teacher/runs/distillation_top20000_v1/train.json",
+      "sha256": "dd50a92a8ceb05311d9736da1fb0938c5fde2f71945ba258d9040be4f940efad",
+      "count": 16000,
+      "shards": 250,
+      "workers": 100,
+      "Q_mean": 1.0203553375978074,
+      "Q_min": 1.0,
+      "Q_max": 1.0702406346629565,
+      "Q_median": 1.0130159214097834,
+      "module_min": 21,
+      "module_max": 120,
+      "module_bins": [
+        2182,
+        3454,
+        3588,
+        3298,
+        1835,
+        1643
+      ]
+    },
+    "dev": {
+      "path": "experiments/E14_stable_teacher/runs/distillation_top20000_v1/dev.json",
+      "sha256": "8777a0bfa56f1e3d034d591ebf2d4c9d7525be4f6f54f6893f9b8a3fdedf55aa",
+      "count": 2000,
+      "shards": 79,
+      "workers": 65,
+      "Q_mean": 1.0204244072376398,
+      "Q_min": 1.0,
+      "Q_max": 1.0702346836538865,
+      "Q_median": 1.0127287722658682,
+      "module_min": 22,
+      "module_max": 119,
+      "module_bins": [
+        273,
+        418,
+        448,
+        423,
+        233,
+        205
+      ]
+    },
+    "test": {
+      "path": "experiments/E14_stable_teacher/runs/distillation_top20000_v1/test.json",
+      "sha256": "6f2deeb2bd92a90ac1e47c34a34f446c396ce77b1d448ac3dfaa399fe58fc031",
+      "count": 2000,
+      "shards": 127,
+      "workers": 86,
+      "Q_mean": 1.0205545556903772,
+      "Q_min": 1.0,
+      "Q_max": 1.0697951394834613,
+      "Q_median": 1.0130674825022765,
+      "module_min": 21,
+      "module_max": 119,
+      "module_bins": [
+        291,
+        418,
+        448,
+        410,
+        230,
+        203
+      ]
+    },
+    "tail_test": {
+      "path": "experiments/E14_stable_teacher/runs/distillation_top20000_v1/tail_test.json",
+      "sha256": "f00a97cd8ac8ce1bfe80cf03ad2d196901f8485a6d19a769b87f1e3adc630c96",
+      "count": 1000,
+      "shards": 261,
+      "workers": 100,
+      "Q_mean": 1.2590656689276638,
+      "Q_min": 1.1598948306918206,
+      "Q_max": 2.8635068088425593,
+      "Q_median": 1.2129093879054544,
+      "module_min": 21,
+      "module_max": 120,
+      "module_bins": [
+        211,
+        145,
+        140,
+        174,
+        155,
+        175
+      ]
+    },
+    "train_monitor500": {
+      "path": "experiments/E14_stable_teacher/runs/distillation_top20000_v1/train_monitor500.json",
+      "sha256": "361e18e6fb8cdab34a4d1a929acdd0477dffd2b2db067c583b4fb65f4ac2ca4d",
+      "count": 500,
+      "shards": 200,
+      "workers": 100,
+      "Q_mean": 1.0205033474155472,
+      "Q_min": 1.0,
+      "Q_max": 1.0699989507158214,
+      "Q_median": 1.0136164370984286,
+      "module_min": 22,
+      "module_max": 120,
+      "module_bins": [
+        68,
+        108,
+        112,
+        103,
+        58,
+        51
+      ]
+    },
+    "dev_monitor500": {
+      "path": "experiments/E14_stable_teacher/runs/distillation_top20000_v1/dev_monitor500.json",
+      "sha256": "9d09ba43c21af9d28ef23a72d684b6607e548ba4f4a4950a5fdd9fc692219ea9",
+      "count": 500,
+      "shards": 51,
+      "workers": 50,
+      "Q_mean": 1.0208214394546549,
+      "Q_min": 1.0,
+      "Q_max": 1.0695494455018502,
+      "Q_median": 1.0113395611826173,
+      "module_min": 22,
+      "module_max": 117,
+      "module_bins": [
+        68,
+        105,
+        112,
+        106,
+        58,
+        51
+      ]
+    }
+  },
+  "allocation": {
+    "solver": "scipy.optimize.milp/HiGHS",
+    "time_limit_seconds": 45,
+    "status": 1,
+    "message": "Time limit reached. (HiGHS Status 13: Time limit reached)",
+    "objective": 31.548960647539392,
+    "mip_gap": 0.04678321247302904,
+    "features": "6 module bins + 5 teacher-Q bins + 100 worker counts; at least one training shard per represented worker",
+    "note": "Membership frozen from this feasible solution; re-use manifests rather than re-optimize."
+  },
+  "source_archive_records_sha256": "418e97e31790c5bcdd03216392068afdd2c5e941ba800a595b000ae2e0d5d4cb",
+  "primary_member_and_shard_disjoint": true,
+  "tail_member_disjoint_from_all_primary_sets": true,
+  "tail_shared_shards_by_primary_role": {
+    "train": 192,
+    "dev": 28,
+    "test": 38
+  },
+  "tail_shared_shards_with_top20000": 258,
+  "tail_scope": "Preselected teacher-quality tail stress test; shares source shards with primary splits, not independent generalization test",
+  "teacher_exposure": "All candidates from original split_v1 train; pretrained teacher may have seen them. Holdout separation is for the new student.",
+  "original_local_test_read": false,
+  "training_started": false,
+  "frozen_original_hashes": {
+    "protocol/split_v1.json": "a1f23edae03194c1155d260415482d892e4cb5ad66170abc93af04aafc8cefbd",
+    "protocol/workset_v2.json": "b520f75d67d12a00aa4f52953e1b9f3cf4ad1c55f1af67206b4c3bc75e9a5bb3",
+    "protocol/derived_workset_v3.json": "dfa55dab012040ef50ec12ce7376e03e8ae8c015d6e9177fa9392ba06e7e1896"
+  },
+  "file_integrity_basis": "Archive full 25000-file SHA/schema audit already passed; per-file SHA rechecked lazily by loader; preparation checks member/file coverage without repeat full hashing"
+}
