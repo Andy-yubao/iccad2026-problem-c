@@ -3,7 +3,7 @@ import json
 from datasets.reference_layouts import ReferenceLayouts,REGISTRY
 from .io import ROOT,HERE,sha
 
-CACHE=ROOT/'experiments/E17_e10_geometry_v5/runs/prepared_v5_e10_cache_v1'
+CACHE=ROOT/'experiments/E25_integrated_baseline/runs/prepared_v5_e10_cache_v1'
 
 
 def identity():

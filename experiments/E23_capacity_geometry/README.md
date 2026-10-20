@@ -1,6 +1,6 @@
 # E23：持续参考监督下的容量对照
 
-最终状态：用户要求停止研究。仅完成五例实现检查，正式训练从未启动；以下命令作为准备记录保留，不自动执行。不存在正式容量模型训练结果。
+当前状态：用户要求保留本实验并交付启动命令，正式训练从未启动。清理后缓存迁至E25；仅调整cache.py的资源路径和启动脚本的错误提示，不改变模型、Loss或训练规则，不自动启动。
 
 长期自主目标在E18大量后处理对照、E19新MIB解码、E20直接500例和E21原保留模型对照后，仍未同时达到加权Q<1.04/平均单例<0.25秒。E19一致性改动被同版评价否定；本实验回到E17几何模型，仅把attention宽度96提高到160，深度仍4层，参数从497,299增至1,370,771。假设是改善初始几何可减少昂贵修复；若原始代理/最终Q不改善或额外推理抵消修复收益，则否定本候选，不能把增加参数本身当进步。
 
@@ -12,4 +12,16 @@
 & .\experiments\E23_capacity_geometry\launch.ps1 -Resume
 ```
 
-当前五例检查已通过，尚未启动正式训练，先等待E24固定E17新后处理完整对照。检查覆盖batch32有限梯度、E10目标一致、四档LR、断点恢复、输入隔离及2例评价硬合法，见[runs/20261020_smoke5_seed0/results.json](runs/20261020_smoke5_seed0/results.json)。启动后日志为runs/20261020_background/stdout.log与stderr.log，模型目录为runs/20261020_capacity160_v5_seed0。STOP/原子保存与身份核对沿用独立复制入口；原权重与数据不覆盖，测试继续封存。
+当前五例实现检查已通过，正式训练未启动。E24最终候选已整合为E25，本实验仍保持原定E17后处理对照，避免同时改变容量和后处理。检查覆盖batch32有限梯度、E10目标一致、四档LR、断点恢复、输入隔离及2例评价硬合法，见[runs/20261020_smoke5_seed0/results.json](runs/20261020_smoke5_seed0/results.json)。模型目录为runs/20261020_capacity160_v5_seed0。STOP/原子保存与身份核对沿用独立复制入口；原权重与数据不覆盖，测试继续封存。
+
+## 清理后的启动与日志
+
+在工作区根目录运行上述`launch.ps1 -Resume`：无正式断点时从头训练，存在兼容断点时恢复，随后自动执行一次冻结best的500例开发评价。预算4小时/200轮，batch32，四档学习率不变；终末评价2进程×2线程。正式输出为`runs/20261020_capacity160_v5_seed0`。
+
+如需同时显示并保存输出：
+
+```powershell
+& .\experiments\E23_capacity_geometry\launch.ps1 -Resume 2>&1 | Tee-Object -FilePath .\experiments\E23_capacity_geometry\runs\training_console.log -Append
+```
+
+日志为`runs/training_console.log`，分阶段状态为`runs/20261020_background/pipeline.json`。原来文中stdout/stderr仅指手动后台重定向时的位置，当前命令统一以上述日志为准。训练中请求安全停止可创建正式运行目录下的`STOP`文件；恢复前删除该STOP并重用`-Resume`，不重置累计预算。迁移校验在[E25迁移检查](../E25_integrated_baseline/runs/20261020_migration_check/results.json)，原smoke断点是实现检查，不是正式权重，不用于正式续训。

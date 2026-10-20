@@ -7,6 +7,6 @@ try {
     $arguments = @('-u','-B','-m','experiments.E23_capacity_geometry.pipeline')
     if ($Resume) { $arguments += '--resume' }
     & $python @arguments
-    if ($LASTEXITCODE -ne 0) { throw 'E17 pipeline failed; later stages were not started' }
+    if ($LASTEXITCODE -ne 0) { throw 'E23 pipeline failed; later stages were not started' }
 }
 finally { Pop-Location }
