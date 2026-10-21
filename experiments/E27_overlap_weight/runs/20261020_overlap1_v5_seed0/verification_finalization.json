@@ -1,0 +1,18 @@
+{
+  "reason": "User requested direct verification after changing early-stop rule",
+  "original_training_status": "user_stop",
+  "original_finished_flag": false,
+  "completed_epochs": 75,
+  "best_epoch": 69,
+  "early_bad": 6,
+  "lr_drops": 3,
+  "last_drop_epoch": 43,
+  "new_rule": {
+    "early_bad_min": 3,
+    "lr_drops_required": 3,
+    "lowest_completed_epochs_min": 2
+  },
+  "training_checkpoint_modified": false,
+  "full_dev_complete": false,
+  "checkpoint_sha256": "3de530a0c4dd56387ba249c5229d7c15e3a3698c77303e7afbf7456e9fddd7d0"
+}

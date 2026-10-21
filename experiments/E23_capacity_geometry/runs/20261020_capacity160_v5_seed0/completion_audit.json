@@ -1,0 +1,225 @@
+{
+  "status": "passed",
+  "pipeline_complete": true,
+  "checkpoint_sha256": "80512f1da85c8fd15a4ba88c61a6fff09c5a7f5b686572bb353c10a517c3b20e",
+  "source_identity_current": true,
+  "paired_panel_identical": true,
+  "same_postprocess_backend": true,
+  "same_loss_features_data_scoring": true,
+  "cache_identity_identical": true,
+  "training_result": {
+    "status": "early_stop",
+    "elapsed_seconds": 2384.170668399951,
+    "steps": 23500,
+    "epochs": 47,
+    "best_epoch": 39,
+    "best_proxy": 0.5786315903663636,
+    "full_dev_complete": true,
+    "postprocessing_calls": 0,
+    "test_read": false,
+    "tail_test_read": false,
+    "implementation_check": false,
+    "final_postprocessed_Q": "not run; one frozen best assessment is a separate stage"
+  },
+  "lr_transitions": [
+    {
+      "epoch": 20,
+      "used_lr": 0.001,
+      "next_lr": 0.00025
+    },
+    {
+      "epoch": 31,
+      "used_lr": 0.00025,
+      "next_lr": 0.0001
+    },
+    {
+      "epoch": 38,
+      "used_lr": 0.0001,
+      "next_lr": 5e-05
+    }
+  ],
+  "lowest_lr_validated": true,
+  "train_monitor_best": {
+    "repair": {
+      "E17": 0.530259515285492,
+      "E23": 0.491937433719635,
+      "relative_change": -0.07227042695353492
+    },
+    "geometry": {
+      "E17": 0.3828324036598206,
+      "E23": 0.3499272677898407,
+      "relative_change": -0.08595180438074657
+    },
+    "center_mse": {
+      "E17": 0.0016596280671656131,
+      "E23": 0.001466484789736569,
+      "relative_change": -0.11637744700166641
+    },
+    "center_local": {
+      "E17": 0.18779001224040986,
+      "E23": 0.17269115459918977,
+      "relative_change": -0.08040287905136534
+    },
+    "overlap": {
+      "E17": 0.09253389549255371,
+      "E23": 0.08725269329547881,
+      "relative_change": -0.057073164043978664
+    },
+    "overlap_area": {
+      "E17": 0.10486692851781845,
+      "E23": 0.1008583322763443,
+      "relative_change": -0.03822555211763479
+    },
+    "crowding": {
+      "E17": 0.013681230857968331,
+      "E23": 0.012330655291676521,
+      "relative_change": -0.09871740198764334
+    }
+  },
+  "full_dev2000": {
+    "repair": {
+      "E17": 0.5741041674613953,
+      "E23": 0.571575662612915,
+      "relative_change": -0.00440426144206707
+    },
+    "geometry": {
+      "E17": 0.4223387327194214,
+      "E23": 0.41983541345596315,
+      "relative_change": -0.005927278436764438
+    },
+    "center_mse": {
+      "E17": 0.0021713267471641304,
+      "E23": 0.0021498426869511604,
+      "relative_change": -0.009894439075569528
+    },
+    "center_local": {
+      "E17": 0.20440669476985932,
+      "E23": 0.2015240466594696,
+      "relative_change": -0.014102513196230015
+    },
+    "overlap": {
+      "E17": 0.10126113951206207,
+      "E23": 0.10435356724262237,
+      "relative_change": 0.030539136192437644
+    },
+    "overlap_area": {
+      "E17": 0.10749902355670929,
+      "E23": 0.10720377743244171,
+      "relative_change": -0.002746500521577544
+    },
+    "crowding": {
+      "E17": 0.01775983162969351,
+      "E23": 0.01950832453370094,
+      "relative_change": 0.09845211038397705
+    }
+  },
+  "dev_monitor_best": {
+    "E17": {
+      "total": 0.42415821719169616,
+      "mse": 0.06232207018136978,
+      "center_mse": 0.0021594496183097362,
+      "shape_mse": 0.1955716713666916,
+      "center_local": 0.2037040797472,
+      "shape": 0.1955716713666916,
+      "relative_local": 0.2602557153701782,
+      "overlap": 0.1014650439620018,
+      "contact": 0.10474868911504745,
+      "boundary": 0.008724971495568752,
+      "mib": 0.011871064610779285,
+      "bbox": 0.00022063857119064778,
+      "local": 0.31766092920303346,
+      "geometry": 0.42415821719169616,
+      "overlap_area": 0.10874034690856933,
+      "crowding": 0.017281166091561318,
+      "void": 0.15935745561122894,
+      "compactness": 0.0015758864907547832,
+      "occupancy": 0.1531363831758499,
+      "repair": 0.5772945914268494,
+      "supervision": 0.31766092920303346,
+      "quality_proxy": 0.42415821719169616,
+      "count": 500,
+      "selection_proxy": 0.5772945914268494,
+      "raw_hard_legal": 0,
+      "raw_hard_legal_rate": 0.0,
+      "batched_inference_seconds_per_case": 0.0006543108003679663
+    },
+    "E23": {
+      "total": 0.4246520667076111,
+      "mse": 0.06086257180571556,
+      "center_mse": 0.0022070057820528744,
+      "shape_mse": 0.1907370548248291,
+      "center_local": 0.2032132180929184,
+      "shape": 0.1907370548248291,
+      "relative_local": 0.25973679280281065,
+      "overlap": 0.10586775487661362,
+      "contact": 0.10467450827360153,
+      "boundary": 0.009432039469480515,
+      "mib": 0.011666379176080226,
+      "bbox": 0.0002461436660960317,
+      "local": 0.31583167624473574,
+      "geometry": 0.4246520712375641,
+      "overlap_area": 0.10895600473880768,
+      "crowding": 0.0203407841026783,
+      "void": 0.15879492032527923,
+      "compactness": 0.0015971841914579272,
+      "occupancy": 0.15397950768470764,
+      "repair": 0.5786315903663636,
+      "supervision": 0.31583167624473574,
+      "quality_proxy": 0.4246520712375641,
+      "count": 500,
+      "selection_proxy": 0.5786315903663636,
+      "raw_hard_legal": 0,
+      "raw_hard_legal_rate": 0.0,
+      "batched_inference_seconds_per_case": 0.0006694808003958315
+    }
+  },
+  "paired_final": {
+    "paired_count": 500,
+    "weighted_Q_delta_E23_minus_E17": 0.00043905890353875595,
+    "weighted_delta_case_bootstrap_95CI": [
+      -0.014295774989289883,
+      0.015260597573273482
+    ],
+    "mean_Q_delta": 0.0012361060812217084,
+    "improved": 248,
+    "tied": 21,
+    "regressed": 231,
+    "timing_relative_change": -0.02293368706802701,
+    "inference_relative_change": 0.043728672193610096
+  },
+  "E17_final": {
+    "count": 500,
+    "hard_legal": 500,
+    "mean_Q": 1.049971148908956,
+    "weighted_Q": 1.0605178383042815,
+    "p95_Q": 1.176618079684197,
+    "max_Q": 1.6165396160432626,
+    "Q_gt_1_8": 0,
+    "Q_gt_2": 0,
+    "inference_seconds_mean": 0.01337328960141167,
+    "solve_seconds_mean": 1.9153333027983317,
+    "fallback_count": 19,
+    "error_count": 0,
+    "raw_hard_legal": 0
+  },
+  "E23_final": {
+    "count": 500,
+    "hard_legal": 500,
+    "mean_Q": 1.0512072549901779,
+    "weighted_Q": 1.06095689720782,
+    "p95_Q": 1.183213032200558,
+    "max_Q": 1.610431636380972,
+    "Q_gt_1_8": 0,
+    "Q_gt_2": 0,
+    "inference_seconds_mean": 0.013958085798542016,
+    "solve_seconds_mean": 1.871407648200984,
+    "fallback_count": 18,
+    "error_count": 0,
+    "raw_hard_legal": 0
+  },
+  "uncertainty_scope": "Paired case bootstrap on the adaptive development panel; does not cover training seed or optimizer randomness",
+  "new_training_or_inference": false,
+  "test_read": false,
+  "tail_test_read": false,
+  "conclusion": "Width increase improves training fit, but offers almost no development or final-quality gain. Capacity alone is not supported as the dominant development bottleneck; absolute representational sufficiency is not proven."
+}

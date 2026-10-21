@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "unique_real_cases": 5,
+  "parameters": 497299,
+  "batch_size": 32,
+  "loss_and_gradient_single_factor_verified": true,
+  "selection_weights_unchanged": true,
+  "epoch_checks": [
+    {
+      "epoch": 0.0,
+      "training_overlap_weight": 0.0,
+      "total": 7.143309593200684,
+      "base_total": 7.143309593200684
+    },
+    {
+      "epoch": 1.0,
+      "training_overlap_weight": 0.5,
+      "total": 12.81313419342041,
+      "base_total": 11.413213729858398
+    },
+    {
+      "epoch": 2.0,
+      "training_overlap_weight": 1.0,
+      "total": 18.48295783996582,
+      "base_total": 15.683117866516113
+    }
+  ],
+  "crowding_graph_counterexample": {
+    "star": {
+      "overlap_pairs": 3,
+      "max_conflict_degree": 3,
+      "largest_conflict_component": 4
+    },
+    "separate": {
+      "overlap_pairs": 3,
+      "max_conflict_degree": 1,
+      "largest_conflict_component": 2
+    }
+  },
+  "LR4_early_stop_verified": true,
+  "resume_steps": 2,
+  "evaluation_hard_legal": 2,
+  "cache_members_verified": {
+    "train": 16000,
+    "dev": 2000
+  },
+  "formal_training_started": false,
+  "test_read": false
+}

@@ -1,0 +1,50 @@
+{
+  "experiment": "E28_iterative_draft",
+  "created_local": "2026-10-21",
+  "copied_files": {
+    "base_model.py": {
+      "source": "experiments/E25_integrated_baseline/model.py",
+      "source_sha256": "b8a85ffdc181f67c89b30ac7a8b79e26170803e4c5ddb18fa8d47e33ac3be5ab",
+      "initial_copy_sha256": "b8a85ffdc181f67c89b30ac7a8b79e26170803e4c5ddb18fa8d47e33ac3be5ab"
+    },
+    "features.py": {
+      "source": "experiments/E25_integrated_baseline/features.py",
+      "source_sha256": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+      "initial_copy_sha256": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73"
+    },
+    "batches.py": {
+      "source": "experiments/E23_capacity_geometry/batches.py",
+      "source_sha256": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92",
+      "initial_copy_sha256": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92"
+    },
+    "io.py": {
+      "source": "experiments/E23_capacity_geometry/io.py",
+      "source_sha256": "b58e7acb782dc4c3595c55245c6164f2841fc15b0e04f8d7cc6caf7dc432e668",
+      "initial_copy_sha256": "b58e7acb782dc4c3595c55245c6164f2841fc15b0e04f8d7cc6caf7dc432e668"
+    }
+  },
+  "base_checkpoint": "experiments/E25_integrated_baseline/runs/20261020_e10_geometry_v5_seed0/checkpoints/best.pt",
+  "base_checkpoint_sha256": "3de22809e831edf11b56a85647a0bd9fe625e8b7617abb6eb1f4b27969cfe00a",
+  "registry_sha256": "1409ccf825b9c7cae1097a22e8dc4068e1283d79541c85ce54c5627d0c2b4208",
+  "source_cache_identity": {
+    "format": "E17.original_reference_tensors.v1",
+    "registry": "1409ccf825b9c7cae1097a22e8dc4068e1283d79541c85ce54c5627d0c2b4208",
+    "paths": "7a28cd42de0f10809500c43c48836576361e67a72e723f7b32a404186df9b419",
+    "sources": {
+      "cache.py": "f5b21cffa52563e68b2d5a5e7886f4b4b44e4a9e904ce2941e84ae2f972e2180",
+      "data.py": "12b1ef62dc4930065a42f1c042c6bbedc0948a41cd8d68274f33eb4f56a5d4ce",
+      "features.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+      "batches.py": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92"
+    },
+    "datasets_sources": {
+      "__init__.py": "03c36f364366be6c8a5091d6bd3dbec0788d7871747acdeac5fa89d4974cec21",
+      "cases.py": "1fd51addaaae38164c22f1946712665beebac700054db4bb07ed4f9d44e0b168",
+      "paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+      "quality_layouts.py": "94f374fa9562770a9c7deadb645d73c3af1fc1a20251f98f1dce4ac575820191",
+      "reference_layouts.py": "f6aeeba298a163b7d506c67e3fba024cd3a191c3aae1116fc6b5d294431db9b5",
+      "worksets.py": "013087151ab8e1195d7d2757e777839f521486425eeaff4c45fed4e370df233c"
+    }
+  },
+  "private_cross_experiment_imports": false,
+  "test_read": false
+}

@@ -1,0 +1,150 @@
+{
+  "status": "passed",
+  "unique_real_cases": 3,
+  "synthetic_cases": 2,
+  "members": [
+    [
+      "worker_0/layouts_112.th",
+      33
+    ],
+    [
+      "worker_0/layouts_112.th",
+      46
+    ],
+    [
+      "worker_0/layouts_0.th",
+      36
+    ]
+  ],
+  "device": "cuda",
+  "elapsed_seconds": 28.49795810005162,
+  "checks": {
+    "matched_trainable_parameters": {
+      "single_pooled": 265163,
+      "single_full": 265163,
+      "recurrent_pooled": 265163,
+      "recurrent_full": 265163
+    },
+    "zero_head_preserves_draft_all_arms": true,
+    "input_isolation_and_test_rejection": true,
+    "sparse_terminal_matches_dense": {
+      "max_difference": 4.470348358154297e-08,
+      "terminal_slots": 219,
+      "max_connected_slots": 12
+    },
+    "supplement_serialization_roundtrip": true,
+    "terminal_counterexample": {
+      "pooled_message_max_difference": 0.0,
+      "full_message_max_difference": 0.25063055753707886,
+      "wire_costs": [
+        5.0,
+        3.0
+      ],
+      "scope": "Representation can distinguish a lost-information counterexample; not learned quality evidence"
+    },
+    "batch32_update": {
+      "unique_training_rows": 2,
+      "repeated_rows": 32,
+      "gradient_norm": 0.5797378420829773,
+      "seconds": 1.0831016999436542,
+      "loss_before_update": 1.1254358291625977,
+      "peak_cuda_allocated_bytes": 905671168,
+      "frozen_base_has_no_gradients": true,
+      "additional_warm_step_seconds": [
+        0.4754959999118,
+        0.4724020999856293
+      ]
+    },
+    "online_raw_official_score": {
+      "metrics": {
+        "is_feasible": false,
+        "overlap_violations": 91,
+        "area_violations": 0,
+        "dimension_violations": 0,
+        "hpwl_b2b": 79.03809914987824,
+        "hpwl_p2b": 0.14250735021396999,
+        "hpwl_total": 79.18060650009221,
+        "hpwl_baseline": 83.03991709649563,
+        "hpwl_gap": -0.046475366683215114,
+        "bbox_area": 22912.700483607652,
+        "bbox_area_baseline": 22672.0,
+        "area_gap": 0.01061664094952594,
+        "fixed_violations": 0,
+        "preplaced_violations": 0,
+        "boundary_violations": 14,
+        "grouping_violations": 2,
+        "mib_violations": 6,
+        "total_soft_violations": 22,
+        "max_possible_violations": 46,
+        "violations_relative": 0.4782608695652174,
+        "runtime_seconds": 0.060509700095281005,
+        "cost": 10.0,
+        "official_is_feasible_before_nonnegative_check": false,
+        "nonnegative_coordinate_violations": 0
+      },
+      "seconds": 0.060509700095281005,
+      "note": "One implementation row after one repeated batch; no quality claim"
+    },
+    "infeasible_Q10_retained_in_summary": true,
+    "lr_protection_and_lowest_two_epochs": {
+      "transitions": [
+        [
+          18,
+          0.00025
+        ],
+        [
+          21,
+          0.0001
+        ],
+        [
+          24,
+          5e-05
+        ]
+      ],
+      "first_stop_epoch": 26
+    },
+    "checkpoint_resume": {
+      "parameter_identical": true,
+      "scheduler_identical": true,
+      "steps": 2,
+      "budget_preserved": true
+    },
+    "frozen_final_rejects_changed_candidate": true
+  },
+  "sources": {
+    "datasets/__init__.py": "03c36f364366be6c8a5091d6bd3dbec0788d7871747acdeac5fa89d4974cec21",
+    "datasets/cases.py": "1fd51addaaae38164c22f1946712665beebac700054db4bb07ed4f9d44e0b168",
+    "datasets/paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+    "datasets/quality_layouts.py": "94f374fa9562770a9c7deadb645d73c3af1fc1a20251f98f1dce4ac575820191",
+    "datasets/reference_layouts.py": "f6aeeba298a163b7d506c67e3fba024cd3a191c3aae1116fc6b5d294431db9b5",
+    "datasets/worksets.py": "013087151ab8e1195d7d2757e777839f521486425eeaff4c45fed4e370df233c",
+    "docs/protocol.md": "213850af9ebcbfe3e7532186c44ea6860380878efb7d40d5d46a14023bf86ce3",
+    "experiments/E28_iterative_draft/__init__.py": "f6d3a82c2bda7103d8798f1a908c076434bdc6752a3c58c62331c789cff0f4fa",
+    "experiments/E28_iterative_draft/base_model.py": "b8a85ffdc181f67c89b30ac7a8b79e26170803e4c5ddb18fa8d47e33ac3be5ab",
+    "experiments/E28_iterative_draft/batches.py": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92",
+    "experiments/E28_iterative_draft/check.py": "efdaf731d59364085ed538cc7a0b96f0e1d0bc6011405f3a8c776ebe88ab4520",
+    "experiments/E28_iterative_draft/data.py": "508f3434b0db5c6b8202f91f54b357a9d3effbd3abdf3708a4ba0f3365fdb0c2",
+    "experiments/E28_iterative_draft/features.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+    "experiments/E28_iterative_draft/final_evaluate.py": "4b70a2df6b32645129b62befa9ab718ac6f890208b491c7806613870e10b79a6",
+    "experiments/E28_iterative_draft/io.py": "b58e7acb782dc4c3595c55245c6164f2841fc15b0e04f8d7cc6caf7dc432e668",
+    "experiments/E28_iterative_draft/launch.ps1": "df6627e6f9044129cdfa41313c8dd87566209ff0cfce584ed22a72aee8cbe238",
+    "experiments/E28_iterative_draft/loss.py": "356fe6471ed7ba988b7d666c539c0744894526bc559f362eb86bb395962f69a9",
+    "experiments/E28_iterative_draft/model.py": "ead664bfc85e47209520e2d264675659c5652b7eb95f2e14fa3e6a1e3b1d9b66",
+    "experiments/E28_iterative_draft/pipeline.py": "041c0a2ccba2c1e698d4c7fe5ee59b90f1a93b138da3c6b6aa2e77b6782f47b5",
+    "experiments/E28_iterative_draft/policy.py": "92a728d608c0c849762a1c6a3ba50c8e598ba621329c9653397f98f936d42337",
+    "experiments/E28_iterative_draft/prepare.py": "7e8f4d7566600bc3057106111052374a00e758443daaee0d792aa7565e03effe",
+    "experiments/E28_iterative_draft/provenance.json": "1ae351185a8f42382079cecfb4781435062ccb01cf81bd2dd3bde889d44e2afd",
+    "experiments/E28_iterative_draft/train.py": "27fba5ffd2a5b5297ff0741ed6eae2ce95478835d4cf23ff0553239229d6aae9",
+    "scoring/__init__.py": "933bf2be947e20bae164511f26afaa84c2f331d0dbdebc417d235db8358a9247",
+    "scoring/checks.py": "738f6b57e20dce58516f3f10d83689f8df273a84a02b2dce99c6ccc1f904763a",
+    "scoring/evaluation.py": "356e0d1c788c6f25154b33fb1c2455388317d2cc0dd96ca50d7357c58612c611",
+    "scoring/official.py": "478fbc228a56ec4b336b5d8687a44b22b749f30aae09372f57c08e7124270e03",
+    "third_party/FloorSet/cost.py": "b60561556f79aa41c196c8fcaddea57840aab41059c76dbc3f80b4fdde6b48c3",
+    "third_party/FloorSet/iccad2026contest/iccad2026_evaluate.py": "64db37865b42baf11add62bdbf035690dca086cd4be7b5b4e58db756f20d8498",
+    "third_party/FloorSet/utils.py": "9299d9257f5bd932001896307f2296b51cc5567f44150db5514f357ed93c121e"
+  },
+  "formal_training_started": false,
+  "test_read": false,
+  "postprocessing_calls": 0,
+  "quality_claim": "Implementation and counterexample only; no validation improvement established"
+}

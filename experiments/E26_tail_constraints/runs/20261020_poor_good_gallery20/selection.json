@@ -1,0 +1,68 @@
+{
+  "poor": "10 highest saved final Q, descending; ties by index",
+  "good": "Q <= 1.01, one-to-one matching: module count first, then public constraint densities",
+  "matching_cost": "100*abs(delta_n) + 10*sum(abs(delta_constraint_fraction)) + 1e-7*good_index",
+  "good_pool_count": 130,
+  "source_sha256": "335b0dc1c85714608c41f8a703b78d6857dda60a2ceaab8b23eddcaeeaadd42d",
+  "registry_sha256": "1409ccf825b9c7cae1097a22e8dc4068e1283d79541c85ce54c5627d0c2b4208",
+  "pairs": [
+    {
+      "rank": 1,
+      "poor": 164,
+      "good": 460
+    },
+    {
+      "rank": 2,
+      "poor": 496,
+      "good": 359
+    },
+    {
+      "rank": 3,
+      "poor": 329,
+      "good": 254
+    },
+    {
+      "rank": 4,
+      "poor": 368,
+      "good": 181
+    },
+    {
+      "rank": 5,
+      "poor": 115,
+      "good": 110
+    },
+    {
+      "rank": 6,
+      "poor": 131,
+      "good": 441
+    },
+    {
+      "rank": 7,
+      "poor": 245,
+      "good": 292
+    },
+    {
+      "rank": 8,
+      "poor": 99,
+      "good": 348
+    },
+    {
+      "rank": 9,
+      "poor": 247,
+      "good": 258
+    },
+    {
+      "rank": 10,
+      "poor": 202,
+      "good": 299
+    }
+  ],
+  "test_read": false,
+  "inference_calls": 0,
+  "postprocess_calls": 0,
+  "render_processes": 2,
+  "threads_per_process": 1,
+  "gallery_script_sha256": "30241744927cc1d9ae72f6e6f87c83cf54a1369a1b0a44d70484f080863c38c8",
+  "renderer_sha256": "f6a6cd53647d81e3eb44b1eabcb5e9d8a211c94476d9b54fce5f5738b1e986f0",
+  "visual_validation": "Viewed poor164, matched good460, and geometry-only failure368; checked dimensions of all20 originals"
+}
