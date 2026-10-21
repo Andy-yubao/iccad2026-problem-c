@@ -21,7 +21,6 @@ problemC/
 ├── experiments/
 │   ├── README.md              # 实验索引
 │   ├── E25_integrated_baseline/ # 当前最佳模型＋后处理联合基线
-│   ├── E29_minimal_repair_draft/ # 仅目标定义，尚未运行
 │   └── baseline/              # 无训练硬约束参照
 ├── datasets/                  # 可复用的数据处理代码与唯一数据副本
 │   ├── paths.py               # 路径解析、冻结训练索引

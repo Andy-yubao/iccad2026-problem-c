@@ -1,8 +1,10 @@
 # 当前最佳E25与未运行E29整理
 
+2026-10-22后续变更：用户已要求删除原E29方案，其实验目录、专属目标与计划已移除，编号29可供后续新实验复用。本归档目录名及迁移清单保留发生时身份，不代表仍有待运行E29，也不保留其方案副本。以下描述2026-10-21的历史整理事实。
+
 2026-10-21，按用户要求保存两版：整理前的完整实验记录已提交为`97ba1eed70d4027e121a95466037661e2aa7bcc3`，并核验GitHub origin/main后才迁移；第二版保留当前最佳组合和未运行E29。
 
-日常实验区为[E25](../../experiments/E25_integrated_baseline/README.md)、[E29](../../experiments/E29_minimal_repair_draft/README.md)及按核心约定保留的[无训练baseline](../../experiments/baseline/README.md)。E25最佳模型、数值求解代码、共享缓存及既有结果保持不变；E29仅目标定义，无模型实现、训练或新机制检查。
+整理发生时，日常实验区为[E25](../../experiments/E25_integrated_baseline/README.md)、当时未运行的E29及按核心约定保留的[无训练baseline](../../experiments/baseline/README.md)。E25最佳模型、数值求解代码、共享缓存及既有结果保持不变；当时E29仅目标定义，无模型实现、训练或新机制检查。
 
 本次归档的实验：
 
