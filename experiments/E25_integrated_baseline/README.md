@@ -12,4 +12,6 @@
 & .\.conda\envs\iccad2026\python.exe -u -B -m experiments.E25_integrated_baseline.run --tag YYYYMMDD_frozen --configs steady --count 500 --direct
 ```
 
-E23只读复用本目录`runs/prepared_v5_e10_cache_v1`，绑定原缓存身份；不跨实验导入私有算法。缓存仅train/dev，无测试张量。[迁移缓存登记](runs/cache_migration.json)注明公开草稿缓存仅更新资源路径对应的源码身份，原始几何不重算。[迁移检查](runs/20261020_migration_check/results.json)记录最多五例功能检查，不作为新的性能结果。
+本目录保留唯一共享缓存`runs/prepared_v5_e10_cache_v1`，仅train/dev，无测试张量；退役E23/E27/E28的历史复用关系保持原记录。[迁移缓存登记](runs/cache_migration.json)注明原整合时公开草稿缓存仅更新资源路径对应的源码身份，原始几何不重算。[原迁移检查](runs/20261020_migration_check/results.json)记录最多五例功能检查，不作为新的性能结果。
+
+2026-10-21按用户要求保留本最佳组合及未运行E29，其他已结束实验归入[本次归档](../../history/20261021_E29_consolidation/README.md)。本模型、数值求解代码、缓存和最佳结果均未改变；依赖“E23尚未训练”这一历史前提的旧迁移检查脚本移为[历史辅助脚本](../../history/20261021_E29_consolidation/legacy_E25_migration_check.py)，不作为当前运行入口。不启动训练、推理或重评分。
