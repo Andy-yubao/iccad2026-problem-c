@@ -1,0 +1,22 @@
+{
+  "seconds": 3.2062378999544308,
+  "resource": {
+    "pid": 6440,
+    "affinity": [
+      0,
+      2
+    ],
+    "torch_intraop": 2,
+    "torch_interop": 1,
+    "workers": 1,
+    "max_cpu_execution_slots": 2,
+    "environment": {
+      "OMP_NUM_THREADS": "2",
+      "MKL_NUM_THREADS": "2",
+      "OPENBLAS_NUM_THREADS": "2",
+      "NUMEXPR_NUM_THREADS": "2",
+      "NUMBA_NUM_THREADS": "2"
+    }
+  },
+  "test_read": false
+}

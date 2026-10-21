@@ -2,6 +2,8 @@
 
 | 实验 | 状态 |
 |---|---|
+| [E31_conic_workspace_reuse](E31_conic_workspace_reuse/README.md) | 已结束：SDK复用有效，但五例实际主几何0/33命中缓存；未扩大评价 |
+| [E30_stable_fast_geometry](E30_stable_fast_geometry/README.md) | 已结束，保留E25：四次微调、后处理对照、一次额外配对确认；平均指标改善但尾部稳定性未通过，两线程，测试封存 |
 | [E25_integrated_baseline](E25_integrated_baseline/README.md) | 当前最佳：E17 best51＋E24 steady，500/500硬合法、加权Q1.039578、平均0.259487秒；冻结保留 |
 | [baseline](baseline/README.md) | 无训练硬约束参照 |
 

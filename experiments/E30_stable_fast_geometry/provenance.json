@@ -1,0 +1,10 @@
+{
+  "experiment": "E30_stable_fast_geometry",
+  "source": "experiments/E25_integrated_baseline",
+  "date": "2026-10-22",
+  "authorization": "New eight-hour research task, user permits long training and model/postprocessor changes; CPU at most two threads total",
+  "model": "Frozen E25 E17 best51, source checkpoint referenced in place; new arms will use separate checkpoints",
+  "data": "Frozen reference_workset_v5; existing train/dev prepared tensors reused read-only; tests sealed",
+  "baseline_change": "Sequential single process, numerical libraries at most two threads; CPU affinity limited to two logical CPUs",
+  "algorithms": "Local independent copy; no cross-experiment private algorithm imports"
+}

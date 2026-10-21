@@ -61,3 +61,13 @@ history/**/experiments/E12_distillation_readiness/runs/teacher_*/
 history/**/experiments/E15_quality_curriculum/runs/**/cache/
 history/**/experiments/E16_reference_curriculum/runs/**/cache/
 history/**/experiments/E16_reference_curriculum/runs/**/shards/
+
+# E30/E31 retain full layouts, checkpoints and source snapshots locally.
+# Compact summaries, source identities, reports and figures remain versioned.
+experiments/E30_stable_fast_geometry/runs/**/results.json
+!experiments/E30_stable_fast_geometry/runs/20261022_training_seed*/**/results.json
+experiments/E30_stable_fast_geometry/runs/**/partial.json
+experiments/E30_stable_fast_geometry/runs/**/source_snapshot.zip
+experiments/E31_conic_workspace_reuse/runs/20261022_real_case_check/results.json
+experiments/E31_conic_workspace_reuse/runs/**/partial.json
+experiments/E31_conic_workspace_reuse/runs/**/source_snapshot.zip

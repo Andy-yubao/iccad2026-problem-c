@@ -1,0 +1,179 @@
+{
+  "records": [
+    {
+      "seed": 0,
+      "result": "runs\\20261022_geometry_control_seed0_terminal_tail_monitor500\\results.json",
+      "result_sha256": "601b4d34723e85e2d1756884eb8120337b453d1a854a99a941a5b06fac4c8452",
+      "training": "runs\\20261022_training_seed0\\geometry_control\\results.json",
+      "training_sha256": "decd92a1e87f056dec33128303eb11c36c9c91c13d472fac835432b8442f1055",
+      "summary": {
+        "count": 500,
+        "hard_legal": 500,
+        "mean_Q": 1.0491158400487028,
+        "weighted_Q": 1.0339940834505732,
+        "p95_Q": 1.1505501999076417,
+        "cvar95_Q": 1.2576119463627715,
+        "max_Q": 1.9387486515726908,
+        "Q_gt_1_8": 1,
+        "Q_gt_2": 0,
+        "seconds_mean": 0.24396660559764133,
+        "seconds_p95": 0.5630708800861604,
+        "seconds_max": 3.493691899930127,
+        "inference_seconds_mean": 0.01439802399929613,
+        "row_fallbacks": 0,
+        "errors": 0,
+        "hpwl_gap_mean": 0.022009538712290593,
+        "area_gap_mean": 0.022913673888757365,
+        "boundary_violations_mean": 0.258,
+        "grouping_violations_mean": 0.238,
+        "mib_violations_mean": 0.002
+      },
+      "training_result": {
+        "status": "early_stop",
+        "elapsed_seconds": 1667.2659448999912,
+        "steps": 21500,
+        "epochs": 43,
+        "best_epoch": 40,
+        "best_proxy": 0.5416305828094482,
+        "full_dev_complete": true,
+        "postprocessing_calls": 0,
+        "test_read": false,
+        "tail_test_read": false,
+        "implementation_check": false,
+        "final_postprocessed_Q": "not run; one frozen best assessment is a separate stage"
+      },
+      "updated_weights": true,
+      "dual_decrease": true,
+      "target_pass": true
+    },
+    {
+      "seed": 1,
+      "result": "runs\\20261022_geometry_control_seed1_terminal_tail_monitor500\\results.json",
+      "result_sha256": "a1b3c9f3abc97047c7a2a0412f10feceb7bd2d439ac88874672911a1b65fb79d",
+      "training": "runs\\20261022_training_seed1\\geometry_control\\results.json",
+      "training_sha256": "fc7a99f07ddcecb06ba3ec8a9cabdc6e1efa91737f9bd6eb9055421ac0b9c35b",
+      "summary": {
+        "count": 500,
+        "hard_legal": 500,
+        "mean_Q": 1.0532998056326377,
+        "weighted_Q": 1.0360571943409904,
+        "p95_Q": 1.1662404163543945,
+        "cvar95_Q": 1.3184061889285628,
+        "max_Q": 2.5285965376482142,
+        "Q_gt_1_8": 2,
+        "Q_gt_2": 1,
+        "seconds_mean": 0.24801694999821483,
+        "seconds_p95": 0.5733385750092562,
+        "seconds_max": 3.5483651000540704,
+        "inference_seconds_mean": 0.014475480400258676,
+        "row_fallbacks": 0,
+        "errors": 0,
+        "hpwl_gap_mean": 0.022998361460245673,
+        "area_gap_mean": 0.026927300536287873,
+        "boundary_violations_mean": 0.286,
+        "grouping_violations_mean": 0.238,
+        "mib_violations_mean": 0.0
+      },
+      "training_result": {
+        "status": "early_stop",
+        "elapsed_seconds": 1745.7508710999973,
+        "steps": 22500,
+        "epochs": 45,
+        "best_epoch": 42,
+        "best_proxy": 0.5415442912578583,
+        "full_dev_complete": true,
+        "postprocessing_calls": 0,
+        "test_read": false,
+        "tail_test_read": false,
+        "implementation_check": false,
+        "final_postprocessed_Q": "not run; one frozen best assessment is a separate stage"
+      },
+      "updated_weights": true,
+      "dual_decrease": true,
+      "target_pass": true
+    },
+    {
+      "seed": 2,
+      "result": "runs\\20261022_geometry_control_seed2_terminal_tail_monitor500\\results.json",
+      "result_sha256": "44a135ba3803b95db0f9ae65d8ee3e8cdd50157e91483df592880b4278d30483",
+      "training": "runs\\20261022_training_seed2\\geometry_control\\results.json",
+      "training_sha256": "83c5816ccea2e50f8de1f6f60715462a12ef64c055f65107f091a520adc29f72",
+      "summary": {
+        "count": 500,
+        "hard_legal": 500,
+        "mean_Q": 1.0535562649296872,
+        "weighted_Q": 1.0380900298214555,
+        "p95_Q": 1.1731078470386809,
+        "cvar95_Q": 1.310119996568887,
+        "max_Q": 2.0316975438994973,
+        "Q_gt_1_8": 1,
+        "Q_gt_2": 1,
+        "seconds_mean": 0.25249765860056506,
+        "seconds_p95": 0.5857840199430938,
+        "seconds_max": 4.437299500103109,
+        "inference_seconds_mean": 0.014468876001890748,
+        "row_fallbacks": 0,
+        "errors": 0,
+        "hpwl_gap_mean": 0.025083551157889083,
+        "area_gap_mean": 0.026207656104094056,
+        "boundary_violations_mean": 0.276,
+        "grouping_violations_mean": 0.25,
+        "mib_violations_mean": 0.0
+      },
+      "training_result": {
+        "status": "early_stop",
+        "elapsed_seconds": 1557.9093130000401,
+        "steps": 20000,
+        "epochs": 40,
+        "best_epoch": 37,
+        "best_proxy": 0.539709941625595,
+        "full_dev_complete": true,
+        "postprocessing_calls": 0,
+        "test_read": false,
+        "tail_test_read": false,
+        "implementation_check": false,
+        "final_postprocessed_Q": "not run; one frozen best assessment is a separate stage"
+      },
+      "updated_weights": true,
+      "dual_decrease": false,
+      "target_pass": false
+    }
+  ],
+  "descriptive_across_seeds": {
+    "weighted_Q": {
+      "mean": 1.036047102537673,
+      "sample_sd": 0.002047991833884254
+    },
+    "seconds_mean": {
+      "mean": 0.2481604047321404,
+      "sample_sd": 0.00426733532549151
+    },
+    "p95_Q": {
+      "mean": 1.1632994877669056,
+      "sample_sd": 0.011562813530436747
+    },
+    "cvar95_Q": {
+      "mean": 1.2953793772867404,
+      "sample_sd": 0.032968915282474184
+    },
+    "max_Q": {
+      "mean": 2.166347577706801,
+      "sample_sd": 0.31714051440989355
+    },
+    "seconds_p95": {
+      "mean": 0.5740644916795034,
+      "sample_sd": 0.011373956954343636
+    },
+    "seconds_max": {
+      "mean": 3.8264521666957685,
+      "sample_sd": 0.5297151482175034
+    }
+  },
+  "same_training_sources": true,
+  "dual_decrease_count": 2,
+  "target_pass_count": 2,
+  "frozen_confirmation_seed": 0,
+  "same_cases_repeated_not_independent_samples": true,
+  "scope": "Fine-tuning order sensitivity conditional on one E25 parent; timed solver variation is also present; not independent full pretraining runs",
+  "test_read": false
+}

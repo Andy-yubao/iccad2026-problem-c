@@ -1,0 +1,42 @@
+{
+  "clarabel": "0.11.1",
+  "resource": {
+    "pid": 74676,
+    "affinity": [
+      0,
+      2
+    ],
+    "torch_intraop": 2,
+    "torch_interop": 1,
+    "workers": 1,
+    "max_cpu_execution_slots": 2,
+    "environment": {
+      "OMP_NUM_THREADS": "2",
+      "MKL_NUM_THREADS": "2",
+      "OPENBLAS_NUM_THREADS": "2",
+      "NUMEXPR_NUM_THREADS": "2",
+      "NUMBA_NUM_THREADS": "2"
+    }
+  },
+  "toy_only": true,
+  "dataset_cases": 0,
+  "test_read": false,
+  "first_status": "Solved",
+  "first_x": [
+    1.0000000000210179,
+    1.0000000000210179
+  ],
+  "available_methods": [
+    "get_settings",
+    "is_data_update_allowed",
+    "update"
+  ],
+  "data_update_status": "Solved",
+  "updated_x": [
+    2.0000000000018034,
+    1.0000000000048146
+  ],
+  "time_limit_after_update": 0.125,
+  "settings_update_verified": true,
+  "continue_to_real_cases": true
+}

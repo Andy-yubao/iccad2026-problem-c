@@ -1,0 +1,99 @@
+{
+  "stages": [
+    {
+      "kind": "train_geometry_control",
+      "output": "experiments\\E30_stable_fast_geometry\\runs\\20261022_training_seed0\\geometry_control",
+      "command": [
+        "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+        "-u",
+        "-B",
+        "-m",
+        "experiments.E30_stable_fast_geometry.train",
+        "--arm",
+        "geometry_control",
+        "--output",
+        "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E30_stable_fast_geometry\\runs\\20261022_training_seed0\\geometry_control",
+        "--seed",
+        "0",
+        "--max-hours",
+        "2.0",
+        "--max-epochs",
+        "200",
+        "--batch-size",
+        "32"
+      ],
+      "returncode": 0,
+      "wall_seconds": 1678.5498442649841
+    },
+    {
+      "kind": "terminal_geometry_control",
+      "output": "experiments\\E30_stable_fast_geometry\\runs\\20261022_geometry_control_seed0_terminal_tail_monitor500",
+      "command": [
+        "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+        "-u",
+        "-B",
+        "-m",
+        "experiments.E30_stable_fast_geometry.run",
+        "--tag",
+        "20261022_geometry_control_seed0_terminal",
+        "--configs",
+        "tail",
+        "--count",
+        "500",
+        "--checkpoint",
+        "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E30_stable_fast_geometry\\runs\\20261022_training_seed0\\geometry_control\\checkpoints\\best.pt",
+        "--jit"
+      ],
+      "returncode": 0,
+      "wall_seconds": 244.20033431053162
+    },
+    {
+      "kind": "train_relation_risk",
+      "output": "experiments\\E30_stable_fast_geometry\\runs\\20261022_training_seed0\\relation_risk",
+      "command": [
+        "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+        "-u",
+        "-B",
+        "-m",
+        "experiments.E30_stable_fast_geometry.train",
+        "--arm",
+        "relation_risk",
+        "--output",
+        "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E30_stable_fast_geometry\\runs\\20261022_training_seed0\\relation_risk",
+        "--seed",
+        "0",
+        "--max-hours",
+        "2.0",
+        "--max-epochs",
+        "200",
+        "--batch-size",
+        "32"
+      ],
+      "returncode": 0,
+      "wall_seconds": 1418.6706829071045
+    },
+    {
+      "kind": "terminal_relation_risk",
+      "output": "experiments\\E30_stable_fast_geometry\\runs\\20261022_relation_risk_seed0_terminal_tail_monitor500",
+      "command": [
+        "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+        "-u",
+        "-B",
+        "-m",
+        "experiments.E30_stable_fast_geometry.run",
+        "--tag",
+        "20261022_relation_risk_seed0_terminal",
+        "--configs",
+        "tail",
+        "--count",
+        "500",
+        "--checkpoint",
+        "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E30_stable_fast_geometry\\runs\\20261022_training_seed0\\relation_risk\\checkpoints\\best.pt",
+        "--jit"
+      ],
+      "returncode": 0,
+      "wall_seconds": 253.92181396484375
+    }
+  ],
+  "test_read": false
+}

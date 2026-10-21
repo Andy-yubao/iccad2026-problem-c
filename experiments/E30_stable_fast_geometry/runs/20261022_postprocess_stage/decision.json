@@ -1,0 +1,15 @@
+{
+  "status": "frozen_before_training",
+  "date_local": "2026-10-22",
+  "selected_training_terminal_policy": "tail",
+  "jit": true,
+  "models": ["geometry_control", "relation_risk"],
+  "checkpoint_selection": "Same fixed module-weighted raw repair proxy; no solver in training",
+  "evaluation_rule": "One frozen best and one terminal monitor500 evaluation per group; no reselection using terminal Q",
+  "promotion_rule": "All hard legal; lower weighted Q and complete mean solve time than matched E25; inspect P95, CVaR95, max, regression and paired uncertainty",
+  "reason": "Tail policy improves P95 in development but costs time; test whether improved drafts recover time while improving quality and tail",
+  "baseline": "../20261022_matched_steady_monitor500/results.json",
+  "same_postprocessor_model_control": "../20261022_full_tail_monitor500/results.json",
+  "test_read": false,
+  "confirmation_read": false
+}
