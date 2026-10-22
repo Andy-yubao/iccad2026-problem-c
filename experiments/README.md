@@ -2,6 +2,7 @@
 
 | 实验 | 状态 |
 |---|---|
+| [E35_optimizer_attribution](E35_optimizer_attribution/README.md) | 已完成：原500频次盘点＋固定100例14臂归因，两线程；低频救援/数值修正很重要，未修改E25或训练RL |
 | [E34_sparse_contact_feedback](E34_sparse_contact_feedback/README.md) | 已结束：五例回调加速2.87倍，终末500全部硬合法；Q/时间/尾部联合要求未通过，不扩确认 |
 | [E33_learned_solver_portfolio](E33_learned_solver_portfolio/README.md) | 已按用户要求暂停：先导通过，保存8353个完整实例/33413条输出；门控未训练，外层未评价，STOP已设置、生成器锁已释放 |
 | [E32_learned_relation_feedback](E32_learned_relation_feedback/README.md) | 两组训练及各自终末500已结束：结构代理改善，但无学习策略通过联合要求；不扩种子/确认，保留E25 |

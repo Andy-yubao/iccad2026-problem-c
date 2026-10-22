@@ -1,0 +1,492 @@
+{
+  "switches": {
+    "projection": {
+      "value": true,
+      "source": "frozen default"
+    },
+    "reweighted": {
+      "value": true,
+      "source": "frozen default"
+    },
+    "relaxed": {
+      "value": false,
+      "source": "steady override"
+    },
+    "hard": {
+      "value": false,
+      "source": "frozen default"
+    },
+    "group_order": {
+      "value": false,
+      "source": "frozen default"
+    },
+    "adaptive": {
+      "value": true,
+      "source": "steady override"
+    },
+    "draft_proxy": {
+      "value": false,
+      "source": "frozen default"
+    },
+    "rescue": {
+      "value": false,
+      "source": "frozen default"
+    },
+    "repair_edges": {
+      "value": false,
+      "source": "frozen default"
+    },
+    "hybrid": {
+      "value": false,
+      "source": "frozen default"
+    },
+    "near_seed": {
+      "value": false,
+      "source": "frozen default"
+    },
+    "safe_mode": {
+      "value": false,
+      "source": "frozen default"
+    },
+    "plateau": {
+      "value": true,
+      "source": "steady override"
+    },
+    "preserve_centers": {
+      "value": false,
+      "source": "frozen default"
+    },
+    "anchor_route": {
+      "value": false,
+      "source": "frozen default"
+    },
+    "shape_square": {
+      "value": false,
+      "source": "frozen default"
+    },
+    "fast_budget": {
+      "value": false,
+      "source": "steady override"
+    },
+    "late_extension": {
+      "value": true,
+      "source": "steady override"
+    },
+    "robust_seeds": {
+      "value": true,
+      "source": "steady override"
+    },
+    "periodic_project": {
+      "value": false,
+      "source": "frozen default"
+    },
+    "hard_tangent": {
+      "value": false,
+      "source": "frozen default"
+    },
+    "certified": {
+      "value": true,
+      "source": "steady override"
+    },
+    "quick_project": {
+      "value": true,
+      "source": "steady override"
+    },
+    "wire_exact": {
+      "value": false,
+      "source": "frozen default"
+    },
+    "quadratic_project": {
+      "value": true,
+      "source": "steady override"
+    },
+    "incumbent_project": {
+      "value": true,
+      "source": "steady override"
+    },
+    "warm_project": {
+      "value": false,
+      "source": "frozen default"
+    },
+    "early_public": {
+      "value": false,
+      "source": "frozen default"
+    },
+    "selection_draft": {
+      "value": false,
+      "source": "frozen default"
+    }
+  },
+  "enabled_boolean_count": 10,
+  "disabled_boolean_count": 19,
+  "note": "Dormant switches were not active in E25 steady; absence is not an importance ranking. Fixed/preplaced/area/nonnegative/no-overlap invariants remain enforced.",
+  "penalty_term_opportunities_all_recursive_calls": {
+    "shape_solve": {
+      "calls": 689,
+      "boundary_nonempty_calls": 689,
+      "contact_nonempty_calls": 689,
+      "boundary_cases": 100,
+      "contact_cases": 100,
+      "reweighted_calls": 630
+    },
+    "fixed_shape_projection": {
+      "calls": 121,
+      "boundary_nonempty_calls": 121,
+      "contact_nonempty_calls": 116,
+      "boundary_cases": 100,
+      "contact_cases": 100,
+      "reweighted_calls": 0
+    }
+  },
+  "proxy_improved_Q_worsened_updates": [
+    {
+      "index": 280,
+      "member": [
+        "worker_87/layouts_5936.th",
+        16
+      ],
+      "n": 69,
+      "module": "shape",
+      "proxy_gain": 0.002513060946274459,
+      "Q_regression": 0.0021837211311548366,
+      "before_Q": 1.0256959001422947,
+      "after_Q": 1.0278796212734496,
+      "before_soft": 0,
+      "after_soft": 0
+    },
+    {
+      "index": 298,
+      "member": [
+        "worker_61/layouts_5488.th",
+        91
+      ],
+      "n": 101,
+      "module": "shape",
+      "proxy_gain": 0.0026169874559410222,
+      "Q_regression": 0.0017768846003740624,
+      "before_Q": 1.0129318863911936,
+      "after_Q": 1.0147087709915676,
+      "before_soft": 0,
+      "after_soft": 0
+    },
+    {
+      "index": 457,
+      "member": [
+        "worker_45/layouts_8512.th",
+        86
+      ],
+      "n": 36,
+      "module": "shape",
+      "proxy_gain": 0.00015620672007460312,
+      "Q_regression": 0.0010361808063514832,
+      "before_Q": 1.037571723849002,
+      "after_Q": 1.0386079046553536,
+      "before_soft": 0,
+      "after_soft": 0
+    },
+    {
+      "index": 437,
+      "member": [
+        "worker_12/layouts_8512.th",
+        45
+      ],
+      "n": 103,
+      "module": "shape",
+      "proxy_gain": 0.002535793429539135,
+      "Q_regression": 0.0010012904594154381,
+      "before_Q": 1.0014218269644097,
+      "after_Q": 1.0024231174238252,
+      "before_soft": 0,
+      "after_soft": 0
+    },
+    {
+      "index": 147,
+      "member": [
+        "worker_8/layouts_8960.th",
+        0
+      ],
+      "n": 91,
+      "module": "shape",
+      "proxy_gain": 4.3950628183825335e-05,
+      "Q_regression": 0.000844262211578739,
+      "before_Q": 1.002524891042243,
+      "after_Q": 1.0033691532538218,
+      "before_soft": 0,
+      "after_soft": 0
+    },
+    {
+      "index": 56,
+      "member": [
+        "worker_99/layouts_5152.th",
+        41
+      ],
+      "n": 94,
+      "module": "shape",
+      "proxy_gain": 0.000475862530070037,
+      "Q_regression": 0.0008245509624775771,
+      "before_Q": 1.0023249482188201,
+      "after_Q": 1.0031494991812977,
+      "before_soft": 0,
+      "after_soft": 0
+    },
+    {
+      "index": 139,
+      "member": [
+        "worker_18/layouts_8624.th",
+        8
+      ],
+      "n": 100,
+      "module": "shape",
+      "proxy_gain": 0.00014672576075125399,
+      "Q_regression": 0.0007506275326114586,
+      "before_Q": 1.0081549623164903,
+      "after_Q": 1.0089055898491017,
+      "before_soft": 0,
+      "after_soft": 0
+    },
+    {
+      "index": 292,
+      "member": [
+        "worker_43/layouts_4928.th",
+        83
+      ],
+      "n": 60,
+      "module": "shape",
+      "proxy_gain": 0.0009015172857065601,
+      "Q_regression": 0.0007094915035510407,
+      "before_Q": 1.002878340540187,
+      "after_Q": 1.0035878320437381,
+      "before_soft": 0,
+      "after_soft": 0
+    },
+    {
+      "index": 231,
+      "member": [
+        "worker_20/layouts_6944.th",
+        108
+      ],
+      "n": 25,
+      "module": "shape",
+      "proxy_gain": 0.0003793675336499214,
+      "Q_regression": 0.0006562829741074694,
+      "before_Q": 1.1062572776771487,
+      "after_Q": 1.1069135606512561,
+      "before_soft": 0,
+      "after_soft": 0
+    },
+    {
+      "index": 186,
+      "member": [
+        "worker_99/layouts_1120.th",
+        33
+      ],
+      "n": 113,
+      "module": "shape",
+      "proxy_gain": 3.914650899825012e-05,
+      "Q_regression": 0.0004414062602706714,
+      "before_Q": 1.0155291161138962,
+      "after_Q": 1.0159705223741669,
+      "before_soft": 0,
+      "after_soft": 0
+    },
+    {
+      "index": 206,
+      "member": [
+        "worker_98/layouts_6608.th",
+        107
+      ],
+      "n": 95,
+      "module": "shape",
+      "proxy_gain": 0.00018163414293631552,
+      "Q_regression": 0.0004361971791271291,
+      "before_Q": 1.0728212824010088,
+      "after_Q": 1.073257479580136,
+      "before_soft": 2,
+      "after_soft": 2
+    },
+    {
+      "index": 292,
+      "member": [
+        "worker_43/layouts_4928.th",
+        83
+      ],
+      "n": 60,
+      "module": "shape",
+      "proxy_gain": 0.0001522522155570638,
+      "Q_regression": 0.0004277358164477274,
+      "before_Q": 1.0035878320437381,
+      "after_Q": 1.0040155678601859,
+      "before_soft": 0,
+      "after_soft": 0
+    },
+    {
+      "index": 147,
+      "member": [
+        "worker_8/layouts_8960.th",
+        0
+      ],
+      "n": 91,
+      "module": "shape",
+      "proxy_gain": 0.000693134400036266,
+      "Q_regression": 0.00039756111390976123,
+      "before_Q": 1.0021273299283333,
+      "after_Q": 1.002524891042243,
+      "before_soft": 0,
+      "after_soft": 0
+    },
+    {
+      "index": 437,
+      "member": [
+        "worker_12/layouts_8512.th",
+        45
+      ],
+      "n": 103,
+      "module": "shape",
+      "proxy_gain": 0.0008581858703115564,
+      "Q_regression": 0.00030112092763423526,
+      "before_Q": 1.0024231174238252,
+      "after_Q": 1.0027242383514594,
+      "before_soft": 0,
+      "after_soft": 0
+    },
+    {
+      "index": 147,
+      "member": [
+        "worker_8/layouts_8960.th",
+        0
+      ],
+      "n": 91,
+      "module": "shape",
+      "proxy_gain": 0.0007384191500585668,
+      "Q_regression": 0.0002941790493948826,
+      "before_Q": 1.0018331508789384,
+      "after_Q": 1.0021273299283333,
+      "before_soft": 0,
+      "after_soft": 0
+    },
+    {
+      "index": 139,
+      "member": [
+        "worker_18/layouts_8624.th",
+        8
+      ],
+      "n": 100,
+      "module": "shape",
+      "proxy_gain": 0.0008252475150508087,
+      "Q_regression": 0.00021424064743236215,
+      "before_Q": 1.007940721669058,
+      "after_Q": 1.0081549623164903,
+      "before_soft": 0,
+      "after_soft": 0
+    },
+    {
+      "index": 392,
+      "member": [
+        "worker_71/layouts_5600.th",
+        49
+      ],
+      "n": 117,
+      "module": "shape",
+      "proxy_gain": 0.0001845817126203686,
+      "Q_regression": 0.00010536536867644664,
+      "before_Q": 1.0032348655278167,
+      "after_Q": 1.0033402308964932,
+      "before_soft": 0,
+      "after_soft": 0
+    },
+    {
+      "index": 310,
+      "member": [
+        "worker_99/layouts_0.th",
+        89
+      ],
+      "n": 85,
+      "module": "shape",
+      "proxy_gain": 1.4777104315855105e-05,
+      "Q_regression": 8.717369465505165e-05,
+      "before_Q": 1.0922784496997824,
+      "after_Q": 1.0923656233944374,
+      "before_soft": 2,
+      "after_soft": 2
+    },
+    {
+      "index": 147,
+      "member": [
+        "worker_8/layouts_8960.th",
+        0
+      ],
+      "n": 91,
+      "module": "shape",
+      "proxy_gain": 0.0008602355725386701,
+      "Q_regression": 8.62805623642604e-05,
+      "before_Q": 1.0017468703165742,
+      "after_Q": 1.0018331508789384,
+      "before_soft": 0,
+      "after_soft": 0
+    },
+    {
+      "index": 437,
+      "member": [
+        "worker_12/layouts_8512.th",
+        45
+      ],
+      "n": 103,
+      "module": "shape",
+      "proxy_gain": 5.4536462079368686e-05,
+      "Q_regression": 5.625956442800728e-05,
+      "before_Q": 1.0027521718442889,
+      "after_Q": 1.002808431408717,
+      "before_soft": 0,
+      "after_soft": 0
+    },
+    {
+      "index": 310,
+      "member": [
+        "worker_99/layouts_0.th",
+        89
+      ],
+      "n": 85,
+      "module": "shape",
+      "proxy_gain": 3.959947231124694e-05,
+      "Q_regression": 5.356602456685344e-05,
+      "before_Q": 1.0922248836752155,
+      "after_Q": 1.0922784496997824,
+      "before_soft": 2,
+      "after_soft": 2
+    },
+    {
+      "index": 437,
+      "member": [
+        "worker_12/layouts_8512.th",
+        45
+      ],
+      "n": 103,
+      "module": "shape",
+      "proxy_gain": 0.0002901172758636439,
+      "Q_regression": 2.7933492829479434e-05,
+      "before_Q": 1.0027242383514594,
+      "after_Q": 1.0027521718442889,
+      "before_soft": 0,
+      "after_soft": 0
+    },
+    {
+      "index": 484,
+      "member": [
+        "worker_26/layouts_9856.th",
+        9
+      ],
+      "n": 62,
+      "module": "shape",
+      "proxy_gain": 0.0002480462752583179,
+      "Q_regression": 1.5309490007719972e-05,
+      "before_Q": 1.0103995650703874,
+      "after_Q": 1.0104148745603951,
+      "before_soft": 0,
+      "after_soft": 0
+    }
+  ],
+  "regression_gt_1e_4": 17,
+  "regression_gt_1e_3": 4,
+  "script_sha256": "d680687964ad9867cf39fcae5dd46a31aef9da24542cc1c7daa493768107b94f",
+  "test_read": false
+}

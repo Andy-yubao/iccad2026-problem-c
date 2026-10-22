@@ -1,0 +1,139 @@
+{
+  "source_sha256": "335b0dc1c85714608c41f8a703b78d6857dda60a2ceaab8b23eddcaeeaadd42d",
+  "source": "experiments\\E25_integrated_baseline\\runs\\20261020_controls_steady_monitor500\\results.json",
+  "summary": {
+    "count": 500,
+    "hard_legal": 500,
+    "mean_Q": 1.0626346594415055,
+    "weighted_Q": 1.0395776766405664,
+    "p95_Q": 1.2174806677928292,
+    "max_Q": 2.525082328162355,
+    "seconds_mean": 0.2594868894009851,
+    "seconds_p95": 0.6681921950337707,
+    "row_fallbacks": 0,
+    "errors": 0
+  },
+  "phases": {
+    "shape": {
+      "cases": 500,
+      "calls": 3188,
+      "legal_candidates": 2338,
+      "legal_field_present": 3188,
+      "accepted_moves": 0,
+      "accepted_cases": 0,
+      "tested_moves": 0,
+      "seconds_inclusive": 83.16336000122828,
+      "statuses": {
+        "Solved": 2234,
+        "AlmostSolved": 906,
+        "MaxTime": 48
+      },
+      "keys": [
+        "assembly_seconds",
+        "constraints",
+        "iterations",
+        "legal",
+        "native_seconds",
+        "phase",
+        "seconds",
+        "setup_seconds",
+        "status",
+        "variables"
+      ],
+      "case_rate": 1.0
+    },
+    "project": {
+      "cases": 499,
+      "calls": 499,
+      "legal_candidates": 430,
+      "legal_field_present": 499,
+      "accepted_moves": 0,
+      "accepted_cases": 0,
+      "tested_moves": 0,
+      "seconds_inclusive": 4.092625799996313,
+      "statuses": {
+        "Solved": 489,
+        "PrimalInfeasible": 10
+      },
+      "keys": [
+        "legal",
+        "native_seconds",
+        "phase",
+        "seconds",
+        "status"
+      ],
+      "case_rate": 0.998
+    },
+    "certified_rigid_moves": {
+      "cases": 500,
+      "calls": 500,
+      "legal_candidates": 0,
+      "legal_field_present": 0,
+      "accepted_moves": 15,
+      "accepted_cases": 14,
+      "tested_moves": 498,
+      "seconds_inclusive": 0.6063214005553164,
+      "statuses": {
+        "not_recorded": 500
+      },
+      "keys": [
+        "accepted",
+        "phase",
+        "seconds",
+        "tested"
+      ],
+      "case_rate": 1.0
+    },
+    "early_projection": {
+      "cases": 41,
+      "calls": 41,
+      "legal_candidates": 3,
+      "legal_field_present": 41,
+      "accepted_moves": 0,
+      "accepted_cases": 0,
+      "tested_moves": 0,
+      "seconds_inclusive": 0.3917597999679856,
+      "statuses": {
+        "PrimalInfeasible": 38,
+        "Solved": 3
+      },
+      "keys": [
+        "legal",
+        "native_seconds",
+        "phase",
+        "seconds",
+        "status"
+      ],
+      "case_rate": 0.082
+    },
+    "full_packed_refine": {
+      "cases": 10,
+      "calls": 12,
+      "legal_candidates": 0,
+      "legal_field_present": 0,
+      "accepted_moves": 0,
+      "accepted_cases": 0,
+      "tested_moves": 0,
+      "seconds_inclusive": 9.126127899973653,
+      "statuses": {
+        "not_recorded": 12
+      },
+      "keys": [
+        "mode",
+        "phase",
+        "seconds"
+      ],
+      "case_rate": 0.02
+    }
+  },
+  "original_resources": "two worker processes times two library threads; new E35 uses one times two",
+  "missing": [
+    "incumbent update source",
+    "intermediate layouts/Q",
+    "gate skip reasons",
+    "recursive internal trace",
+    "packing seed construction time",
+    "canonicalization movement and effect"
+  ],
+  "test_read": false
+}

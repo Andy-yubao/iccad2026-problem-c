@@ -1,0 +1,22 @@
+{
+  "native_warmup_seconds": 0.6504408000037074,
+  "seconds_to_initialized": 5.279556600027718,
+  "resource": {
+    "pid": 60988,
+    "affinity": [
+      0,
+      2
+    ],
+    "torch_intraop": 2,
+    "torch_interop": 1,
+    "workers": 1,
+    "max_cpu_execution_slots": 2,
+    "environment": {
+      "OMP_NUM_THREADS": "2",
+      "MKL_NUM_THREADS": "2",
+      "OPENBLAS_NUM_THREADS": "2",
+      "NUMEXPR_NUM_THREADS": "2",
+      "NUMBA_NUM_THREADS": "2"
+    }
+  }
+}
