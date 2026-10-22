@@ -2,6 +2,7 @@
 
 | 实验 | 状态 |
 |---|---|
+| [E36_persistent_conflict_repair](E36_persistent_conflict_repair/README.md) | 首轮完成：模型冻结，四进程方向修正在额外500开发例改善Q/均时/总体尾部，但区间跨零且有严重单例回归；不替换E25，下一步为进展门控与可回滚干预 |
 | [E35_optimizer_attribution](E35_optimizer_attribution/README.md) | 已完成：原500频次盘点＋固定100例14臂归因，两线程；低频救援/数值修正很重要，未修改E25或训练RL |
 | [E34_sparse_contact_feedback](E34_sparse_contact_feedback/README.md) | 已结束：五例回调加速2.87倍，终末500全部硬合法；Q/时间/尾部联合要求未通过，不扩确认 |
 | [E33_learned_solver_portfolio](E33_learned_solver_portfolio/README.md) | 已按用户要求暂停：先导通过，保存8353个完整实例/33413条输出；门控未训练，外层未评价，STOP已设置、生成器锁已释放 |

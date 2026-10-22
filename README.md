@@ -1,5 +1,7 @@
 # ICCAD 2026 Problem C
 
+2026-10-22按用户要求挂起模型调整，完成[E36持续冲突首轮研究](experiments/E36_persistent_conflict_repair/runs/20261022_conclusions.md)：四进程、每进程一线程，额外500开发例中方向修正改善加权Q、均时及总体尾部，但区间跨零且暴露严重单例回归。E25保持冻结基线，下一步聚焦进展门控与可回滚干预，测试封存。
+
 2026-10-22已完成[E35优化器功能归因](experiments/E35_optimizer_attribution/runs/20261022_attribution_report/conclusions.md)：保留原500轨迹，并按用户授权补做固定100例、14种设置的两线程诊断。形状/边界/接触/重加权是主要质量机制，低频打包救援对尾部关键，微小数值修正也影响精确接触；E25保持原样，未训练RL，未扩大到测试。
 
 2026-10-22本轮研究已按用户要求暂停：[E32学习关系与求解反馈](experiments/E32_learned_relation_feedback/README.md)及E34已结束且未通过联合要求；[E33学习求解器选择](experiments/E33_learned_solver_portfolio/README.md)保存8353个完整训练实例、33413条策略输出，门控尚未训练。流水线与准备阶段均设置STOP，无活跃生成器；恢复须用户重新发起。CPU总计最多两线程，测试封存，E25保留为接受基线。
