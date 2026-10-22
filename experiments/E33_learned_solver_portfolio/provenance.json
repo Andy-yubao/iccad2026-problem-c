@@ -1,0 +1,9 @@
+{
+  "experiment": "E33_learned_solver_portfolio",
+  "date": "2026-10-22",
+  "copied_from": "Independent E30 base/feature copy and frozen E32 optional relation-feedback solver, policy and exact scheduler copy",
+  "mechanism": "Train-only counterfactual algorithm selection, distinct from coordinate-label distillation",
+  "experts": "Read-only E25 best51, E30 seed0 best40, and frozen E32 replay seed0 raw-proxy best; no expert retraining",
+  "authorization": "Same user-authorized twelve-hour research from 07:39 to 19:39 UTC+8; CPU total at most two threads",
+  "data": "Frozen v5; inner train-shard calibration only; outer dev terminal; tests sealed"
+}

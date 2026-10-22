@@ -71,3 +71,21 @@ experiments/E30_stable_fast_geometry/runs/**/source_snapshot.zip
 experiments/E31_conic_workspace_reuse/runs/20261022_real_case_check/results.json
 experiments/E31_conic_workspace_reuse/runs/**/partial.json
 experiments/E31_conic_workspace_reuse/runs/**/source_snapshot.zip
+
+# New research: full coordinate traces and snapshots stay local.
+experiments/E32_learned_relation_feedback/runs/**/results.json
+!experiments/E32_learned_relation_feedback/runs/20261022_replay_seed[0-2]/results.json
+!experiments/E32_learned_relation_feedback/runs/20261022_draft_only_seed[0-2]/results.json
+!experiments/E32_learned_relation_feedback/runs/20261022_training_check5/results.json
+!experiments/E32_learned_relation_feedback/runs/20261022_pipeline_seed[0-2]/results.json
+experiments/E32_learned_relation_feedback/runs/**/partial.json
+experiments/E32_learned_relation_feedback/runs/**/diagnostics.json
+experiments/E32_learned_relation_feedback/runs/**/source_snapshot.zip
+experiments/E33_learned_solver_portfolio/runs/**/results.json
+!experiments/E33_learned_solver_portfolio/runs/20261022_gate_seed[0-2]/results.json
+!experiments/E33_learned_solver_portfolio/runs/20261022_pipeline_seed[0-2]/results.json
+experiments/E33_learned_solver_portfolio/runs/**/partial.json
+experiments/E33_learned_solver_portfolio/runs/**/source_snapshot.zip
+experiments/E34_sparse_contact_feedback/runs/**/results.json
+experiments/E34_sparse_contact_feedback/runs/**/partial.json
+experiments/E34_sparse_contact_feedback/runs/**/source_snapshot.zip
