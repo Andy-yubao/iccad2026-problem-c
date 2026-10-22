@@ -1,0 +1,256 @@
+{
+  "figures": [
+    {
+      "file": "case_139_radial5_literal_regression.png",
+      "index": 139,
+      "arm": "radial5_literal",
+      "kind": "regression",
+      "n": 100,
+      "reference_Q": 1.0088929388397008,
+      "variant_Q": 2.805491282082999,
+      "reference_seconds": 0.29508790001273155,
+      "variant_seconds": 3.0401676999172196
+    },
+    {
+      "file": "case_329_radial5_restore_regression.png",
+      "index": 329,
+      "arm": "radial5_restore",
+      "kind": "regression",
+      "n": 64,
+      "reference_Q": 1.3859069108304327,
+      "variant_Q": 1.496147271517346,
+      "reference_seconds": 1.4307063000742346,
+      "variant_seconds": 1.4046669999370351
+    },
+    {
+      "file": "case_261_radial5_rebase_restore_regression.png",
+      "index": 261,
+      "arm": "radial5_rebase_restore",
+      "kind": "regression",
+      "n": 70,
+      "reference_Q": 1.0335393742835712,
+      "variant_Q": 1.4213121594163753,
+      "reference_seconds": 0.13653820008039474,
+      "variant_seconds": 1.5238879999378696
+    },
+    {
+      "file": "case_496_radial5_rebase_restore_improvement.png",
+      "index": 496,
+      "arm": "radial5_rebase_restore",
+      "kind": "improvement",
+      "n": 46,
+      "reference_Q": 1.5404929550664606,
+      "variant_Q": 1.1220215081403904,
+      "reference_seconds": 1.3947723000310361,
+      "variant_seconds": 0.05944040010217577
+    }
+  ],
+  "final_components": {
+    "reference": {
+      "hpwl_gap": {
+        "mean": 0.03204547452310896,
+        "weighted_mean": 0.003692175734486274
+      },
+      "area_gap": {
+        "mean": 0.02556620003339559,
+        "weighted_mean": -0.000898084771820113
+      },
+      "boundary_violations": {
+        "mean": 0.27,
+        "weighted_mean": 0.25090446980398734
+      },
+      "grouping_violations": {
+        "mean": 0.21,
+        "weighted_mean": 0.268942494797177
+      },
+      "mib_violations": {
+        "mean": 0.0,
+        "weighted_mean": 0.0
+      }
+    },
+    "radial5_literal": {
+      "hpwl_gap": {
+        "mean": 0.15363710161538913,
+        "weighted_mean": 0.19141616589762978
+      },
+      "area_gap": {
+        "mean": 0.05039051790868458,
+        "weighted_mean": 0.04460028838414175
+      },
+      "boundary_violations": {
+        "mean": 0.31,
+        "weighted_mean": 0.4558408060047284
+      },
+      "grouping_violations": {
+        "mean": 1.38,
+        "weighted_mean": 2.0646858137294064
+      },
+      "mib_violations": {
+        "mean": 0.0,
+        "weighted_mean": 0.0
+      }
+    },
+    "radial5_restore": {
+      "hpwl_gap": {
+        "mean": 0.030793418974862874,
+        "weighted_mean": 0.0029538456626141472
+      },
+      "area_gap": {
+        "mean": 0.02544418687924748,
+        "weighted_mean": -0.0017877638509540244
+      },
+      "boundary_violations": {
+        "mean": 0.27,
+        "weighted_mean": 0.27798684631271475
+      },
+      "grouping_violations": {
+        "mean": 0.25,
+        "weighted_mean": 0.44206121404137777
+      },
+      "mib_violations": {
+        "mean": 0.0,
+        "weighted_mean": 0.0
+      }
+    },
+    "radial5_rebase_restore": {
+      "hpwl_gap": {
+        "mean": 0.029488641625018627,
+        "weighted_mean": 0.008429506709437392
+      },
+      "area_gap": {
+        "mean": 0.0336042413993296,
+        "weighted_mean": 0.017493354875802593
+      },
+      "boundary_violations": {
+        "mean": 0.27,
+        "weighted_mean": 0.293620462582574
+      },
+      "grouping_violations": {
+        "mean": 0.21,
+        "weighted_mean": 0.402538517887456
+      },
+      "mib_violations": {
+        "mean": 0.0,
+        "weighted_mean": 0.0
+      }
+    }
+  },
+  "descriptive_module_strata": {
+    "radial5_literal": [
+      {
+        "n_range": [
+          0,
+          60
+        ],
+        "count": 40,
+        "mean_delta_Q": 0.09487510148661314
+      },
+      {
+        "n_range": [
+          60,
+          90
+        ],
+        "count": 29,
+        "mean_delta_Q": 0.10867783328227704
+      },
+      {
+        "n_range": [
+          90,
+          110
+        ],
+        "count": 20,
+        "mean_delta_Q": 0.24822971376352654
+      },
+      {
+        "n_range": [
+          110,
+          10000
+        ],
+        "count": 11,
+        "mean_delta_Q": 0.17695328655927983
+      }
+    ],
+    "radial5_restore": [
+      {
+        "n_range": [
+          0,
+          60
+        ],
+        "count": 40,
+        "mean_delta_Q": -0.003363272702936132
+      },
+      {
+        "n_range": [
+          60,
+          90
+        ],
+        "count": 29,
+        "mean_delta_Q": 0.0032711178093906574
+      },
+      {
+        "n_range": [
+          90,
+          110
+        ],
+        "count": 20,
+        "mean_delta_Q": 0.0009116804519482491
+      },
+      {
+        "n_range": [
+          110,
+          10000
+        ],
+        "count": 11,
+        "mean_delta_Q": 0.007525562621465239
+      }
+    ],
+    "radial5_rebase_restore": [
+      {
+        "n_range": [
+          0,
+          60
+        ],
+        "count": 40,
+        "mean_delta_Q": -0.0166789763062594
+      },
+      {
+        "n_range": [
+          60,
+          90
+        ],
+        "count": 29,
+        "mean_delta_Q": 0.0022302831373215886
+      },
+      {
+        "n_range": [
+          90,
+          110
+        ],
+        "count": 20,
+        "mean_delta_Q": 0.026669447629004705
+      },
+      {
+        "n_range": [
+          110,
+          10000
+        ],
+        "count": 11,
+        "mean_delta_Q": 0.008808738004043016
+      }
+    ]
+  },
+  "checks": {
+    "records": 400,
+    "members": 100,
+    "hard_legal": 400,
+    "source_snapshot_and_live_sources_match": true,
+    "dimensions_unchanged": true,
+    "radial_factor_exact": true,
+    "weights_unchanged": true,
+    "original_E25_results_unchanged": "experiments/E25_integrated_baseline/runs/20261020_controls_steady_monitor500/results.json"
+  },
+  "source_database_sha256": "125fd9d6dc9d9c8241e149bbe82d1c214178ce1abd5704a84f5ba716c7ab5c97",
+  "script_sha256": "fde2e4842a120156b5bef8d786fb5a55b56a365e9c10010fe9a1009d2d915c64",
+  "no_new_solves": true,
+  "test_read": false
+}

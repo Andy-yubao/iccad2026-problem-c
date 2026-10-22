@@ -1,5 +1,7 @@
 # ICCAD 2026 Problem C
 
+2026-10-22已完成[E37草稿位置5%扩展](experiments/E37_radial_draft_expansion/README.md)：模型冻结，固定100例四臂全部硬合法；输入重叠降低26.4%，但入口对齐后仍未同时改善加权Q、耗时与尾部，按事前规则不扩500，E25保持冻结基线。CPU采用四进程各一线程，测试继续封存。
+
 2026-10-22按用户要求挂起模型调整，完成[E36持续冲突首轮研究](experiments/E36_persistent_conflict_repair/runs/20261022_conclusions.md)：四进程、每进程一线程，额外500开发例中方向修正改善加权Q、均时及总体尾部，但区间跨零且暴露严重单例回归。E25保持冻结基线，下一步聚焦进展门控与可回滚干预，测试封存。
 
 2026-10-22已完成[E35优化器功能归因](experiments/E35_optimizer_attribution/runs/20261022_attribution_report/conclusions.md)：保留原500轨迹，并按用户授权补做固定100例、14种设置的两线程诊断。形状/边界/接触/重加权是主要质量机制，低频打包救援对尾部关键，微小数值修正也影响精确接触；E25保持原样，未训练RL，未扩大到测试。
