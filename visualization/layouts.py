@@ -93,7 +93,7 @@ def draw_boundary_badges(ax, rect, code, failures):
                     zorder=8, clip_on=True)
 
 
-def plot_case(row, destination, *, stages=None):
+def plot_case(row, destination, *, stages=None, show_metrics=True):
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
@@ -127,6 +127,8 @@ def plot_case(row, destination, *, stages=None):
     table_bottom = .065 + legend_height + .025
     table_top = table_bottom + table_height
     axes_bottom = table_top + .135
+    if not show_metrics:
+        axes_bottom = table_bottom + .05
     plt.rcParams.update({"font.size": 10, "hatch.linewidth": .45, "axes.spines.top": False,
                          "axes.spines.right": False, "savefig.facecolor": "white"})
     fig = plt.figure(figsize=(19.5 if columns == 3 else (13.0 if columns == 2 else 8.8), 11.7))
@@ -173,9 +175,10 @@ def plot_case(row, destination, *, stages=None):
         ax.tick_params(labelsize=8)
         ax.set_title(title, fontsize=13, pad=12)
         left = lefts[index]
-        fig.text(left, axes_bottom - .04, status_text(variant), fontsize=10, linespacing=1.7, va="top")
-        fig.text(left, table_top, detail_text(variant), fontsize=8.5,
-                 family="monospace", linespacing=1.5, va="top", color="#334155")
+        if show_metrics:
+            fig.text(left, axes_bottom - .04, status_text(variant), fontsize=10, linespacing=1.7, va="top")
+            fig.text(left, table_top, detail_text(variant), fontsize=8.5,
+                     family="monospace", linespacing=1.5, va="top", color="#334155")
     fig.suptitle(f"{row['panel']} | {row['case_id']} | {len(constraints)} blocks", fontsize=15 if columns == 3 else 11, y=.975)
     caption = row.get("caption", "Same module IDs and coordinate scale across columns; each column shows only its own layout." if columns > 1 else "Saved layout; module IDs and constraints follow the source task.")
     fig.text(.5, .935, caption, ha="center", fontsize=10 if columns > 1 else 9, color="#475569")
@@ -191,6 +194,7 @@ def plot_case(row, destination, *, stages=None):
     fig.legend(handles=legend, loc="lower center", bbox_to_anchor=(.5, .065), ncol=legend_columns,
                fontsize=8, frameon=True, edgecolor="#e2e8f0", title="Constraint identities are unchanged across all three stages" if columns == 3 else "Constraint key for the saved layout", title_fontsize=9)
     fig.text(.035, .024,
+             "Raw model draft only. No postprocessing or scoring. Red outlines indicate geometric overlaps." if not show_metrics else
              ("B/G/M = official boundary / grouping / MIB violation counts. Q uses neutral runtime; illegal proposals are not feasible-quality results.\n"
               "Boundary badges show status against each layout's own bbox. Group components=1 and MIB distinct shapes=1 indicate consistency. "
               "Overlap outlines are visual only (1e-9 span tolerance).") if columns == 3 else

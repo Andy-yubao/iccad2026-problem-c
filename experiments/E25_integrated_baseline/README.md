@@ -15,3 +15,13 @@
 本目录保留唯一共享缓存`runs/prepared_v5_e10_cache_v1`，仅train/dev，无测试张量；退役E23/E27/E28的历史复用关系保持原记录。[迁移缓存登记](runs/cache_migration.json)注明原整合时公开草稿缓存仅更新资源路径对应的源码身份，原始几何不重算。[原迁移检查](runs/20261020_migration_check/results.json)记录最多五例功能检查，不作为新的性能结果。
 
 2026-10-21按用户要求保留本最佳组合，其他已结束实验归入[本次归档](../../history/20261021_E29_consolidation/README.md)。原E29后续已于2026-10-22按用户要求删除，编号29可复用。本模型、数值求解代码、缓存和最佳结果均未改变；依赖“E23尚未训练”这一历史前提的旧迁移检查脚本移为[历史辅助脚本](../../history/20261021_E29_consolidation/legacy_E25_migration_check.py)，不作为当前运行入口。不启动训练、推理或重评分。
+
+## 2026-10-22：用户授权的测试draft图集
+
+按用户明确要求，仅对v5 local_test冻结顺序前100例运行best51模型，生成[独立图片文件夹](runs/20261022_test100_draft_gallery/images/)中的100张PNG。只展示draft，无扩展、后处理、参考布局或Q评分；4进程各1线程。图中颜色表示分组，纹理表示MIB，F/P为固定形状/预放置，红框表示几何重叠。模型、特征及原后处理未修改；共享绘图仅增加不显示评分的选项。
+
+[配置及明确暴露成员](runs/20261022_test100_draft_gallery/config.json)、[100张图片完整性验收](runs/20261022_test100_draft_gallery/summary.json)、[离线验收入口](runs/20261022_test100_draft_gallery/verify_images.py)。图片和部分已保存draft坐标只留本机。**这100例已因可视检查模型输出而暴露；今后使用它们指导研究时须披露，不能再称作未见测试。其余测试保持封存。** 原始划分文件不变。
+
+运行命令为`python -u -B -m experiments.E25_integrated_baseline.export_test_drafts`，该入口固定只取上述100例；公开输入由`datasets/public_member_inputs.py`读取，仅索引固定宽高和预放置坐标，不索引自由块参考几何及参考分数。容器反序列化会载入原始文件的打包内容，但算法不使用其中自由标签。
+
+100张图已全部渲染；主进程汇总到38例时Windows文件锁阻止JSON原子替换，最终通过离线逐张解码、命名/成员及源码核验确认100图齐全，未重复推理。38例坐标记录恢复，其他只保存图片；详细记录见summary。不要为补齐坐标重复运行模型。复查图片仅运行`runs/20261022_test100_draft_gallery/verify_images.py`。
