@@ -4,7 +4,7 @@
 
 当前候选[E74](experiments/E74_collision_32k_posttrain/runs/completion/inspection.md)：完整dev2000草稿交面积6.302%→5.086%，1871/2000例改善；同100例外框与精确空白均下降。flash500加权Q1.022511、尾部改善，但配对worker重抽样区间仍微跨零，不宣布稳固Q升级，测试封存。[100例reference／候选／E42无评分图](experiments/E74_collision_32k_posttrain/runs/20261029_e42_topology_seed0/draft_comparison100/index.html)。
 
-当前训练[E75](experiments/E75_collision_box_finetune/README.md)：从E74 own-Loss best42后训练，固定`G+2真实交面积比例+5正向log外框扩大平方`，保持192宽与冻结32k、图聚合参数固定和实际步长限制。线性外框原型因五例反例在长训练前放弃。每30分钟跟进，[实时阶段](experiments/E75_collision_box_finetune/state.json)，[长期总账](experiments/E72_topology_posttrain/study.json)。没有恢复旧控制器或按Q重选checkpoint。
+当前训练[E76](experiments/E76_bounded_refinement/README.md)：E75在3374步触发保护，同批次源E74健康而继续修改主干的E75已失稳。E76冻结E74整个192宽主干，只训练零初始化、有界的公开几何局部修正器；中心逐轴修正≤0.15个等效边长、log长宽比修正≤0.15，仍用固定`G+2I+5E`。五例初始函数、完整主干不变、修正界、CUDA与精确恢复均通过。每30分钟跟进，[当前阶段](experiments/E76_bounded_refinement/state.json)，[总账](experiments/E72_topology_posttrain/study.json)。E74候选和冻结基线保留。
 
 ## 冻结基线
 
@@ -24,7 +24,8 @@
 | [E72](experiments/E72_topology_posttrain/README.md) | 首轮扩大模型的数值失败证据，5575步安全保存；长期研究总账 |
 | [E73](experiments/E73_wide_robust_posttrain/runs/inspection.md) | 稳定宽模型完成；泛化差距和Loss/Q错位诊断 |
 | [E74](experiments/E74_collision_32k_posttrain/runs/completion/inspection.md) | 当前草稿与flash均值更好的候选，预算停止、非收敛 |
-| [E75](experiments/E75_collision_box_finetune/README.md) | 当前真实交面积/外框组合后训练 |
+| [E75](experiments/E75_collision_box_finetune/README.md) | 3374步数值保护失败，主干其他路径漂移证据 |
+| [E76](experiments/E76_bounded_refinement/README.md) | 当前完整冻结E74主干＋有界局部修正 |
 
 归档E61/E65/E68/E70等对照与恢复方法见[迁移说明](history/20261029_model_research_consolidation/README.md)。[朱老师交付材料](output/2026-10-24_朱老师交付报告/README.md)保持原位。
 

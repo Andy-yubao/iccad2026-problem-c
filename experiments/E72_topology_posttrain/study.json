@@ -10,12 +10,12 @@
   "test_read": false,
   "baseline_promoted": false,
   "required_scale_experiment": "E72 width192 vs source E42width96; function-preserving warm start",
-  "current_experiment": "E75_collision_box_finetune",
+  "current_experiment": "E76_bounded_refinement",
   "next_decision": "Finish fixed-Loss wide model with graph-local frozen and .5% per-module step guard; inspect actual train/dev improvements before32k or Loss redesign",
   "stopped_old_controllers_not_resumed": true,
   "runs": [],
   "current_stage": "train",
-  "controller_exec_session": 58044,
+  "controller_exec_session": 72628,
   "preflight": "passed; maximum normalized widening output difference9.30e-6",
   "run_ledger": [
     {
@@ -80,12 +80,32 @@
     {
       "experiment": "E75_collision_box_finetune",
       "output": "runs/20261029_e74_collision_box_seed0",
-      "status": "running",
+      "status": "error",
       "dataset_size": 32000,
       "max_training_seconds": 7200,
       "controller_exec_session": 58044,
       "source_checkpoint": "E74 own-Loss best42",
-      "loss": "G+2true_intersection+5positive_log_box_squared"
+      "loss": "G+2true_intersection+5positive_log_box_squared",
+      "last_verified_step": 2400,
+      "last_verified_epoch": 2,
+      "elapsed_seconds": 666.332832700049,
+      "verified_live_exec_session": 58044,
+      "best_epoch": 0,
+      "steps": 3374,
+      "epochs": 3,
+      "terminal_runs": 0
+    },
+    {
+      "experiment": "E76_bounded_refinement",
+      "output": "runs/20261029_frozen_e74_corrector_seed0",
+      "status": "running",
+      "dataset_size": 32000,
+      "max_training_seconds": 7200,
+      "source_checkpoint": "frozen E74 best42",
+      "loss": "same G+2I+5E",
+      "controller_pid": 22992,
+      "child_pid": 48860,
+      "controller_exec_session": 72628
     }
   ],
   "pause": {
@@ -144,14 +164,14 @@
     "new_data_expansion": "not justified by this failure: train and dev both worse",
     "full_dev_and_terminal": "not run for failed E72"
   },
-  "cumulative_training_seconds": 10405.120596600056,
+  "cumulative_training_seconds": 11071.453429300105,
   "last_check": {
-    "utc": "2026-10-28T20:59:54.167594+00:00",
+    "utc": "2026-10-28T22:15:03.268173+00:00",
     "state": "healthy_live_training",
-    "experiment": "E74_collision_32k_posttrain",
-    "step": 38400,
-    "epoch": 38,
-    "note": "Two LR drops completed; cumulative2h budget and fixed stopping policy unchanged. Final raw/flash analysis still pending."
+    "experiment": "E75_collision_box_finetune",
+    "step": 2400,
+    "epoch": 2,
+    "note": "Early fixed high-LR stage. Own-Loss best is still initialization; no interim reselection or Q evaluation."
   },
   "E73_decision": {
     "best_train_dev": [
@@ -202,5 +222,16 @@
       "E74_collision_32k_posttrain",
       "E75_collision_box_finetune"
     ]
+  },
+  "E75_failure_decision": {
+    "source_E74_rejected_batch_eval_mean": 0.3806767463684082,
+    "failed_E75_eval_mean": 16.974428176879883,
+    "hidden_source_student": [
+      99.84600067138672,
+      352.3247375488281
+    ],
+    "mechanism": "Graph frozen alone insufficient; other tensors drifted. Freeze complete source and bound corrective output.",
+    "best_epoch": 0,
+    "no_Q_run": true
   }
 }
