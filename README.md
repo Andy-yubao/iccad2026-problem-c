@@ -1,23 +1,31 @@
 # ICCAD 2026 Problem C
 
-2026-10-22已完成[E37草稿位置5%扩展](experiments/E37_radial_draft_expansion/README.md)：模型冻结，固定100例四臂全部硬合法；输入重叠降低26.4%，但入口对齐后仍未同时改善加权Q、耗时与尾部，按事前规则不扩500，E25保持冻结基线。CPU采用四进程各一线程，测试继续封存。
+2026-10-29：按用户授权整理工作区并启动新一轮自主模型研究。11个历史实验（4,528个文件）移入[本次归档](history/20261029_model_research_consolidation/README.md)，逐文件核对迁移，权重和唯一证据保留。旧实验控制器不恢复。
 
-2026-10-22按用户要求挂起模型调整，完成[E36持续冲突首轮研究](experiments/E36_persistent_conflict_repair/runs/20261022_conclusions.md)：四进程、每进程一线程，额外500开发例中方向修正改善加权Q、均时及总体尾部，但区间跨零且暴露严重单例回归。E25保持冻结基线，下一步聚焦进展门控与可回滚干预，测试封存。
+当前研究[E72：扩大模型＋近邻拓扑监督后训练](experiments/E72_topology_posttrain/README.md)：从E42 best51函数保持扩宽96→192，以固定G＋近邻方向分离项进行后训练，并保留图层实际步长保护。兼容思路优先组合；至少完成一次扩大模型，检查train/dev固定Loss，泛化受限再考虑32k，Loss降而Q升则优先检查目标错位。先完成五例实现检查再启动。每30分钟自动跟进，实际状态见[state.json](experiments/E72_topology_posttrain/state.json)和[研究记录](experiments/E72_topology_posttrain/study.json)。尚无升级结论，封存测试不参与本轮自适应优化。
 
-2026-10-22已完成[E35优化器功能归因](experiments/E35_optimizer_attribution/runs/20261022_attribution_report/conclusions.md)：保留原500轨迹，并按用户授权补做固定100例、14种设置的两线程诊断。形状/边界/接触/重加权是主要质量机制，低频打包救援对尾部关键，微小数值修正也影响精确接触；E25保持原样，未训练RL，未扩大到测试。
+## 冻结基线
 
-2026-10-22本轮研究已按用户要求暂停：[E32学习关系与求解反馈](experiments/E32_learned_relation_feedback/README.md)及E34已结束且未通过联合要求；[E33学习求解器选择](experiments/E33_learned_solver_portfolio/README.md)保存8353个完整训练实例、33413条策略输出，门控尚未训练。流水线与准备阶段均设置STOP，无活跃生成器；恢复须用户重新发起。CPU总计最多两线程，测试封存，E25保留为接受基线。
+| 基线 | 实现与证据 | 同dev500结果 |
+|---|---|---|
+| draft＋flash | [E42](experiments/E42_joint_regularization/README.md)，96×12 best51、原steady后处理 | 加权Q 1.025860 |
+| pro | [E50](experiments/E50_anytime_quality/README.md)，共用E42 draft、质量优先5秒后处理 | 加权Q 1.012043，12例较flash回退 |
 
-2026-10-22已完成[E30两线程研究](experiments/E30_stable_fast_geometry/runs/20261022_research_summary/analysis.md)：普通几何微调在固定监测面板改善Q与均时，但三种子及一次额外500例确认没有支持尾部稳定升级，**保留E25**。额外确认Q1.051866→1.046393、均时0.247792→0.241181秒，最差5%均值与最大Q恶化。独立[E31工作区复用检查](experiments/E31_conic_workspace_reuse/README.md)真实流程零命中，五例后停止。该轮数值任务已结束，未耗尽8小时上限；CPU总计最多两线程，测试封存。
+两者属于不同时间预算。Q是MIB派生任务的本地中性时间开发指标，不是正式比赛成绩；开发与已暴露历史测试不能合称独立盲测。共用E42权重SHA256 `12878108e9a58b8c195b314ba6586686c2a6e2796c1f4b6443e102b4db4224a6`，原运行路径和v5共享train/dev缓存保持原位。
 
-FloorSet研究工作区。先读[执行协议](docs/protocol.md)、[结构规范](docs/workspace_structure.md)与[AGENTS.md](AGENTS.md)。
+## 保留的研究参照
 
-当前最佳整合为[E25基线](experiments/E25_integrated_baseline/README.md)：冻结E17 best51模型，采用E24 steady原生快速后处理。固定v5开发500例全部硬合法，加权Q **1.039578**、平均求解 **0.259487秒**；两项目标尚未同时达成。模型、数值求解代码及最佳结果保持冻结。
+| 实验 | 为什么保留 | 状态 |
+|---|---|---|
+| [E61](experiments/E61_explosion_replay/README.md) | 数值稳定大模型、故障复现与步长保护 | dev G0.338659、flash Q1.024106；草稿重叠未胜E42，未升级 |
+| [E65](experiments/E65_geometry_messages/runs/review.md) | 几何消息及匹配容量对照 | 小幅单seed收益；已结束 |
+| [E68](experiments/E68_port_tokens/runs/inspection.md) | 完整端口表示及输入审计 | G0.390001、交面积8.426%，组合未胜出 |
+| [E69](experiments/E69_case_loss_statistics/README.md) | 逐案例难度、弱端口/稀疏子群与局部位置错配诊断 | 保存的诊断证据 |
+| [E70](experiments/E70_reference_task_loss/runs/20261028_bbox_void_audit/report.md) | 避碰与外框取舍反例 | 交面积3.820%，但外框广泛扩大，用户不接受 |
+| [E71](experiments/E71_density_reference_curriculum/runs/inspection.md) | 最近紧凑草稿候选 | 交面积4.972%；同100图较E42紧凑/交面积改善，flash Q1.038751和尾部未胜出 |
 
-日常实验区保留E25及[无训练baseline](experiments/baseline/README.md)，当前E32/E33/E34方向见[实验索引](experiments/README.md)，E30/E31保留上一轮必要证据。原E29方案已按用户要求删除，编号29可供后续新实验复用；测试继续封存。已结束的E23/E26/E27/E28源码、权重与必要证据归入[20261021归档](history/20261021_E29_consolidation/README.md)，早期整合见[20261020归档](history/20261020_E25_consolidation/README.md)。历史记录保持原样，迁移路径由清单恢复；数据、缓存与权重只保留本机。
+所有候选与正式基线分开，原权重及证据冻结。旧长任务已停止，不因保留目录自动恢复。历史实验及E58冻结扩展数据缓存的迁移/严格复现方法见[归档说明](history/20261029_model_research_consolidation/README.md)。[朱老师交付材料](output/2026-10-24_朱老师交付报告/README.md)保持原位。
 
-独立环境`.conda/envs/iccad2026`；实际数据位置由[paths.json](protocol/paths.json)解析。原始划分与各版工作集均冻结，当前训练使用[reference_workset_v5.json](protocol/reference_workset_v5.json)，测试继续封存。数据、环境、缓存及权重留本机，不入Git。
+先读[执行协议](docs/protocol.md)、[结构规范](docs/workspace_structure.md)和[AGENTS.md](AGENTS.md)。独立环境 `.conda/envs/iccad2026`；数据由[paths.json](protocol/paths.json)解析，冻结划分保持原件。数据、环境、缓存、checkpoint不入Git，布局图统一使用visualization，不自动打开评分界面。
 
-数据处理复用[datasets](docs/datasets.md)，评分复用[scoring](scoring/README.md)，布局图统一使用[visualization](visualization/README.md)。上述Q是MIB派生任务的开发中性时间指标，不是正式比赛分数。
-
-[实验索引](experiments/README.md) · [Git约定](docs/git.md) · [质量目标](docs/aim.md) · [题目全文](references/official/problem_statement.md)
+[实验索引](experiments/README.md) · [Git约定](docs/git.md) · [研究目标](docs/aim.md) · [官方题目](references/official/problem_statement.md)

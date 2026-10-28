@@ -1,0 +1,29 @@
+{
+  "status": "running",
+  "goal": "Surpass accepted E42 draft/flash baseline without sacrificing compactness or topology",
+  "automation_id": "problem-c",
+  "wake_minutes": 30,
+  "max_formal_candidates": 6,
+  "max_cumulative_training_hours": 18,
+  "max_hours_per_candidate": 2,
+  "seed": 0,
+  "test_read": false,
+  "baseline_promoted": false,
+  "required_scale_experiment": "E72 width192 vs source E42width96; function-preserving warm start",
+  "current_experiment": "E72_topology_posttrain",
+  "next_decision": "Read train/dev fixed-Loss trajectory and terminal paired geometry/Q; prioritize compatible combinations,32k if evidence of generalization limitation; objective mismatch when Loss improves butQ worsens",
+  "stopped_old_controllers_not_resumed": true,
+  "runs": [],
+  "current_stage": "train",
+  "controller_exec_session": 34523,
+  "preflight": "passed; maximum normalized widening output difference9.30e-6",
+  "run_ledger": [
+    {
+      "experiment": "E72_topology_posttrain",
+      "output": "runs/20261029_e42_topology_seed0",
+      "status": "running",
+      "parameters": 5829939,
+      "max_training_seconds": 7200.0
+    }
+  ]
+}

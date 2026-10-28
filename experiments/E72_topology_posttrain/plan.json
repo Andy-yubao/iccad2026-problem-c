@@ -1,0 +1,32 @@
+{
+  "experiment": "E72_topology_posttrain",
+  "status": "ready_for_five_case_preflight",
+  "seed": 0,
+  "train": 16000,
+  "dev_monitor": 500,
+  "test_read": false,
+  "max_hours": 2,
+  "max_epochs": 200,
+  "batch_size": 32,
+  "loss": "G+.5 topology separation; fixed all phases",
+  "primary_selection": "same dev500 total",
+  "control": "Saved E63 original-G96 posttrain, plus frozen E42/E61; composite development comparisons, not a controlled causal width estimate",
+  "no_baseline_promotion_without_draft_review": true,
+  "model": {
+    "width": 192,
+    "layers": 12,
+    "source_width": 96,
+    "initialization": "Uniform 2x Net2Wider; replicate LayerNorm/FFN/graph channels, per-head Q/K scaling 2^(-1/4), eval functional-equivalence check before launch"
+  },
+  "combined_changes": [
+    "2x width",
+    "fixed oriented near-pair separation supervision",
+    "E61 graph-local AdamW displacement guard .01"
+  ],
+  "user_steering": "2026-10-29: prioritize compatible combination proposals; require at least one larger-model run; examine train/dev Loss; expand to32k if generalization limits appear; investigate Loss when Loss falls but Q rises",
+  "capacity_decision": {
+    "compare": "same fixed train/dev500 Loss from epoch0 to own best; train/dev gap and full dev representativeness",
+    "if_train_only_improves": "Inspect difficulty/seen split and consider frozen nested32k; do not call small gap proof of generalization",
+    "if_both_improve_but_Q_worse": "Prioritize objective alignment and tail counterexamples, not automatic data scaling"
+  }
+}
