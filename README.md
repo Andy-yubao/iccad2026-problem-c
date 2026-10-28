@@ -4,7 +4,7 @@
 
 首轮研究[E72：扩大模型＋近邻拓扑监督后训练](experiments/E72_topology_posttrain/README.md)：从E42 best51函数保持扩宽96→192，以固定G＋近邻方向分离项进行后训练，并保留图层实际步长保护。兼容思路优先组合；至少完成一次扩大模型，检查train/dev固定Loss，泛化受限再考虑32k，Loss降而Q升则优先检查目标错位。先完成五例实现检查再启动。每30分钟自动跟进，首轮状态见[state.json](experiments/E72_topology_posttrain/state.json)，当前E73见[运行状态](experiments/E73_wide_robust_posttrain/state.json)和[研究记录](experiments/E72_topology_posttrain/study.json)。尚无升级结论，封存测试不参与本轮自适应优化。
 
-当前继续[E73：保留图聚合映射的宽模型后训练](experiments/E73_wide_robust_posttrain/README.md)。E72第5575步触发数值保护；同批次隐藏上限31→403，图矩阵累计漂移约99%～130%。五例恢复图参数可显著缓解主要失败，直接关闭图分支损害其他例。E73保留192宽和同一Loss，固定预训练图聚合参数，约束其余模块实际Adam步长。尚无升级结论，先检验稳定拟合，不把失败解释为泛化不足。
+当前继续[E74：真实碰撞门控Loss＋冻结32k后训练](experiments/E74_collision_32k_posttrain/README.md)。E73稳定完成28轮/best20，train/dev Loss下降13.75%/2.04%，差距46.15%；raw交面积7.888%、flash Q1.033736未胜出。[完成复核](experiments/E73_wide_robust_posttrain/runs/inspection.md)发现，T的下降主要来自当前非碰撞模块对，旧G和实际交面积却退化。E74把新增方向项连续门控到真实碰撞，同时扩冻结32k，保留宽192和图参数固定/实际步长限制，从原E42暖启。五例含新增数据、缓存身份、无碰撞零惩罚与接触连续性均通过；单组2小时上限，尚无升级结论。当前[状态](experiments/E74_collision_32k_posttrain/state.json)。
 
 ## 冻结基线
 

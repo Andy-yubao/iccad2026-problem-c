@@ -10,12 +10,12 @@
   "test_read": false,
   "baseline_promoted": false,
   "required_scale_experiment": "E72 width192 vs source E42width96; function-preserving warm start",
-  "current_experiment": "E73_wide_robust_posttrain",
+  "current_experiment": "E74_collision_32k_posttrain",
   "next_decision": "Finish fixed-Loss wide model with graph-local frozen and .5% per-module step guard; inspect actual train/dev improvements before32k or Loss redesign",
   "stopped_old_controllers_not_resumed": true,
   "runs": [],
   "current_stage": "train",
-  "controller_exec_session": 52557,
+  "controller_exec_session": 71711,
   "preflight": "passed; maximum normalized widening output difference9.30e-6",
   "run_ledger": [
     {
@@ -31,13 +31,37 @@
     {
       "experiment": "E73_wide_robust_posttrain",
       "output": "runs/20261029_e42_topology_seed0",
-      "status": "running",
+      "status": "early_stop_complete",
       "max_training_seconds": 7200,
       "controller_pid": 5088,
       "child_pid": 18504,
       "source_checkpoint": "E42 best51; not E72 unhealthy latest",
       "loss": "unchanged G+.5 topology",
-      "controller_exec_session": 52557
+      "controller_exec_session": 52557,
+      "parameters": 5829939,
+      "trainable_parameters": 4500531,
+      "frozen_graph_parameters": 1329408,
+      "last_verified_step": 6500,
+      "elapsed_seconds": 2464.793820400024,
+      "last_verified_epoch": 13,
+      "verified_live_exec_session": 52557,
+      "steps": 14000,
+      "epochs": 28,
+      "best_epoch": 20,
+      "weighted_Q": 1.0337363498305052,
+      "baseline_promoted": false
+    },
+    {
+      "experiment": "E74_collision_32k_posttrain",
+      "output": "runs/20261029_e42_topology_seed0",
+      "status": "running",
+      "dataset_size": 32000,
+      "max_training_seconds": 7200,
+      "controller_exec_session": 71711,
+      "controller_pid": 7552,
+      "child_pid": 14904,
+      "loss": "G+.5 collision-gated direction",
+      "source_checkpoint": "E42 best51, function-preserving width192"
     }
   ],
   "pause": {
@@ -96,5 +120,30 @@
     "new_data_expansion": "not justified by this failure: train and dev both worse",
     "full_dev_and_terminal": "not run for failed E72"
   },
-  "cumulative_training_seconds": 740.007183800044
+  "cumulative_training_seconds": 3204.801004200068,
+  "last_check": {
+    "utc": "2026-10-28T18:29:41.418174+00:00",
+    "state": "healthy_live_training",
+    "epoch": 13,
+    "step": 6500,
+    "best_epoch": 0,
+    "note": "Passed the previous failure step, but current train/dev Loss are still above epoch0. No early causal or generalization conclusion; retain fixed schedule."
+  },
+  "E73_decision": {
+    "best_train_dev": [
+      0.5034744472503662,
+      0.7358058314323426
+    ],
+    "relative_gap": 0.46145615820388075,
+    "train_loss_improvement": 0.1375181108340935,
+    "dev_loss_improvement": 0.020432793962888662,
+    "loss_Q_misalignment": true,
+    "dev_G_delta": 0.022989516735076876,
+    "dev_T_delta": -0.07667537069320673,
+    "saved100_T_noncollision_share_E42_E73": [
+      0.6238693548129369,
+      0.5518948186417051
+    ],
+    "decision": "Do not promote. Prioritize compatible combination: continuous collision-gated Loss and frozen nested32k for observed overfit gap. Fresh post-training from E42, retain healthy width192/frozen graph/step cap."
+  }
 }
