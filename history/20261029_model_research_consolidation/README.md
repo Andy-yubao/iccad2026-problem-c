@@ -1,8 +1,8 @@
 # 2026-10-29历史实验归档
 
-用户授权整理工作区并继续自主模型研究。11个已结束或已停止的实验移入本目录，共4,528个文件。未删除checkpoint、缓存、源码或唯一运行证据；同盘目录迁移后逐文件核对存在、字节数和UTC修改时间，见[migration.json](migration.json)。历史JSON、日志、命令、冻结索引和源码均不因迁移改写。
+用户授权整理工作区并继续自主模型研究。分两阶段共15个已结束或已停止的实验移入本目录，原迁移清单合计5,746个文件。未删除checkpoint、训练张量缓存、源码或唯一运行证据；首次迁移11个实验见[migration.json](migration.json)，E74阶段结束后迁移E61/E65/E68/E70见[migration_after_E74.json](migration_after_E74.json)。随后仅清除72个可重建CPython/Numba编译缓存，见[compiled_cache_cleanup.json](compiled_cache_cleanup.json)；保留的5,674个文件逐一核对大小和UTC时间不变，缺失项严格等于已登记的72个缓存，见[final_integrity.json](final_integrity.json)。历史JSON、日志、命令、冻结索引和源码均不因迁移改写。
 
-日常工作区保留E42 draft/flash、E50 pro、E61稳定大模型、E65几何消息候选及E68/E69/E70/E71最近四项研究。新研究E72是独立复制实现，不恢复旧控制器、旧自动唤醒或未完成的退役路线。
+日常工作区保留E42 draft/flash、E50 pro、E69通用诊断、E71紧凑草稿对照和E72至E75近期研究，其中E74为当前候选、E75为进行中的后训练。E61/E65/E68/E70已结束且无活跃控制器，随第二阶段归档；后续新实验独立复制实现，不恢复旧控制器、旧自动唤醒或未完成的退役路线。
 
 | 历史实验 | 保留原因 |
 |---|---|
@@ -18,3 +18,5 @@
 E58扩展缓存随生产者归档；其manifest内原路径保持冻结。E61已结束的旧复现入口依赖该原路径，因此未来需要扩展数据时，必须为新实验实现明确的只读路径映射并验证原manifest，或按上段恢复生产者。E72当前仅使用E42原位的v5共享缓存，不受此迁移影响。保留候选的旧源码与配置仍冻结，不将维护性迁移伪称原始运行。
 
 当前用户新授权见[E72方案](../../experiments/E72_topology_posttrain/README.md)。封存测试未读取。
+
+第二阶段新增：[E61稳定性与大模型](experiments/E61_explosion_replay/README.md)、[E65几何消息](experiments/E65_geometry_messages/README.md)、[E68完整端口](experiments/E68_port_tokens/README.md)、[E70避碰与外框反例](experiments/E70_reference_task_loss/README.md)。其旧运行和源码字节保持原样；如需旧入口严格复现，仍须按原路径恢复。

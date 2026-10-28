@@ -1,0 +1,21 @@
+{
+  "experiment": "E75_collision_box_finetune",
+  "source": "E74 best42 (already own-Loss selected); no Q checkpoint selection",
+  "seed": 0,
+  "train": 32000,
+  "dev_monitor": 500,
+  "max_hours": 2,
+  "max_epochs": 200,
+  "batch_size": 32,
+  "test_read": false,
+  "fixed_loss": "G + 2 Ccollision + .5 relu(log(B/B_reference))",
+  "hypothesis": "Stronger real-collision guidance can further reduce conflicts; one-sided box expansion penalty supplies opposing pressure to avoid the E70 expansion failure. Original G supervision and all architecture/data/stability choices retained.",
+  "compatible_combination": [
+    "4x collision coefficient relative toE74",
+    "positive reference bbox expansion penalty"
+  ],
+  "counterexamples": "The box term acts directly only on extrema, not all holes; tighter bounds can increase collisions. Neither is a hard guarantee.",
+  "initialization": "Weights-only E74 best42. Fresh Adam/scheduler for this new objective, inherited pretraining and prior budgets recorded separately. No continuation or second terminal evaluation of E74.",
+  "selection": "Same fixed own dev500 mean from epoch0; Q auxiliary; no phase weights",
+  "interpretation": "Adaptive development, fixed single seed, combined Loss change; no independent generalization claim"
+}

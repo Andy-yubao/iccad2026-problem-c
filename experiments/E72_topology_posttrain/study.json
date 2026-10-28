@@ -10,12 +10,12 @@
   "test_read": false,
   "baseline_promoted": false,
   "required_scale_experiment": "E72 width192 vs source E42width96; function-preserving warm start",
-  "current_experiment": "E74_collision_32k_posttrain",
+  "current_experiment": "E75_collision_box_finetune",
   "next_decision": "Finish fixed-Loss wide model with graph-local frozen and .5% per-module step guard; inspect actual train/dev improvements before32k or Loss redesign",
   "stopped_old_controllers_not_resumed": true,
   "runs": [],
   "current_stage": "train",
-  "controller_exec_session": 71711,
+  "controller_exec_session": 58044,
   "preflight": "passed; maximum normalized widening output difference9.30e-6",
   "run_ledger": [
     {
@@ -54,14 +54,38 @@
     {
       "experiment": "E74_collision_32k_posttrain",
       "output": "runs/20261029_e42_topology_seed0",
-      "status": "running",
+      "status": "budget_complete",
       "dataset_size": 32000,
       "max_training_seconds": 7200,
       "controller_exec_session": 71711,
       "controller_pid": 7552,
       "child_pid": 14904,
       "loss": "G+.5 collision-gated direction",
-      "source_checkpoint": "E42 best51, function-preserving width192"
+      "source_checkpoint": "E42 best51, function-preserving width192",
+      "actual_train_count": 32000,
+      "actual_dev_monitor_count": 500,
+      "gpu_resident_inputs_GiB": 5.888,
+      "initial_train_loss": 0.3097187654972076,
+      "initial_dev_loss": 0.38571748733520506,
+      "last_verified_step": 38400,
+      "last_verified_epoch": 38,
+      "elapsed_seconds": 7200.319592399988,
+      "verified_live_exec_session": 71711,
+      "best_epoch": 42,
+      "steps": 42338,
+      "epochs": 42,
+      "weighted_Q": 1.0225108721124265,
+      "baseline_promoted": false
+    },
+    {
+      "experiment": "E75_collision_box_finetune",
+      "output": "runs/20261029_e74_collision_box_seed0",
+      "status": "running",
+      "dataset_size": 32000,
+      "max_training_seconds": 7200,
+      "controller_exec_session": 58044,
+      "source_checkpoint": "E74 own-Loss best42",
+      "loss": "G+2true_intersection+5positive_log_box_squared"
     }
   ],
   "pause": {
@@ -120,14 +144,14 @@
     "new_data_expansion": "not justified by this failure: train and dev both worse",
     "full_dev_and_terminal": "not run for failed E72"
   },
-  "cumulative_training_seconds": 3204.801004200068,
+  "cumulative_training_seconds": 10405.120596600056,
   "last_check": {
-    "utc": "2026-10-28T18:29:41.418174+00:00",
+    "utc": "2026-10-28T20:59:54.167594+00:00",
     "state": "healthy_live_training",
-    "epoch": 13,
-    "step": 6500,
-    "best_epoch": 0,
-    "note": "Passed the previous failure step, but current train/dev Loss are still above epoch0. No early causal or generalization conclusion; retain fixed schedule."
+    "experiment": "E74_collision_32k_posttrain",
+    "step": 38400,
+    "epoch": 38,
+    "note": "Two LR drops completed; cumulative2h budget and fixed stopping policy unchanged. Final raw/flash analysis still pending."
   },
   "E73_decision": {
     "best_train_dev": [
@@ -145,5 +169,38 @@
       0.5518948186417051
     ],
     "decision": "Do not promote. Prioritize compatible combination: continuous collision-gated Loss and frozen nested32k for observed overfit gap. Fresh post-training from E42, retain healthy width192/frozen graph/step cap."
+  },
+  "E74_decision": {
+    "status": "strong_draft_candidate_Q_mean_positive_but_not_robustly_promoted",
+    "weighted_Q": 1.0225108721124265,
+    "weighted_Q_delta_vs_E42": -0.003348761902808748,
+    "worker_resampling95": [
+      -0.0069161745035617095,
+      1.7341793187906373e-05
+    ],
+    "overlap_improved_2000": 1871,
+    "overlap_mean": 0.050861597802509546,
+    "next": "E75 new objective warm-started fromE74; retainE74 and frozenE42/E50"
+  },
+  "workspace_archive": {
+    "status": "passed",
+    "moved_experiments": 15,
+    "moved_file_records": 5746,
+    "retained_verified_files": 5674,
+    "rebuildable_compiled_files_removed": 72,
+    "unexplained_missing": [],
+    "changed_files": [],
+    "checkpoint_deletions": 0,
+    "tensor_cache_deletions": 0,
+    "active_directories": [
+      "E42_joint_regularization",
+      "E50_anytime_quality",
+      "E69_case_loss_statistics",
+      "E71_density_reference_curriculum",
+      "E72_topology_posttrain",
+      "E73_wide_robust_posttrain",
+      "E74_collision_32k_posttrain",
+      "E75_collision_box_finetune"
+    ]
   }
 }

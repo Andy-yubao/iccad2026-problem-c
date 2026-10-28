@@ -1,19 +1,16 @@
-# 当前基线与研究实验
+# 当前基线与近期研究
 
-2026-10-29整理后保留以下目录；历史材料移入[归档](../history/20261029_model_research_consolidation/README.md)，其中E63的后训练control、E58冻结扩展数据等仍可只读复用，不恢复旧控制器。
+2026-10-29整理后保留以下八个目录；其余15个实验见[归档](../history/20261029_model_research_consolidation/README.md)。旧源码/日志不因迁移改写，旧入口复现先恢复原路径，不恢复旧控制器。
 
 | 实验 | 用途 |
 |---|---|
-| [E42_joint_regularization](E42_joint_regularization/README.md) | 冻结draft best51＋flash基线；唯一共用权重与v5缓存 |
-| [E50_anytime_quality](E50_anytime_quality/README.md) | 冻结pro基线，复用E42 |
-| [E61_explosion_replay](E61_explosion_replay/README.md) | 稳定大模型候选、数值故障与实际步长保护证据 |
-| [E65_geometry_messages](E65_geometry_messages/runs/review.md) | 几何消息候选和容量对照 |
-| [E68_port_tokens](E68_port_tokens/runs/inspection.md) | 完整端口组合失败与输入审计 |
-| [E69_case_loss_statistics](E69_case_loss_statistics/README.md) | 同例Loss、弱端口及位置错配诊断 |
-| [E70_reference_task_loss](E70_reference_task_loss/runs/inspection.md) | 更强避碰与外框扩大取舍 |
-| [E71_density_reference_curriculum](E71_density_reference_curriculum/runs/inspection.md) | 最近紧凑草稿候选、尾部失败反例 |
-| [E72_topology_posttrain](E72_topology_posttrain/README.md) | 首轮扩大模型；5575步安全保护，保留失稳证据 |
-| [E73_wide_robust_posttrain](E73_wide_robust_posttrain/runs/inspection.md) | 健康完成28轮/best20；泛化差距与Loss/Q错位，未升级 |
-| [E74_collision_32k_posttrain](E74_collision_32k_posttrain/README.md) | 当前组合：真实碰撞门控方向Loss＋冻结32k，保留稳定宽模型 |
+| [E42](E42_joint_regularization/README.md) | 冻结draft best51＋flash，Q1.025860 |
+| [E50](E50_anytime_quality/README.md) | 冻结pro，共用E42权重，独立预算 |
+| [E69](E69_case_loss_statistics/README.md) | 逐例Loss、弱端口与稀疏子群诊断 |
+| [E71](E71_density_reference_curriculum/runs/inspection.md) | 最近紧凑草稿对照 |
+| [E72](E72_topology_posttrain/README.md) | 宽模型数值失败及本轮长期总账 |
+| [E73](E73_wide_robust_posttrain/runs/inspection.md) | 稳定宽模型完成、Loss/Q错位与泛化不足证据 |
+| [E74](E74_collision_32k_posttrain/runs/completion/inspection.md) | 草稿明确改善、Q均值优于E42的候选，配对区间微跨零 |
+| [E75](E75_collision_box_finetune/README.md) | 当前E74权重上的真实交面积/平方外框组合后训练 |
 
-E72每30分钟自动跟进，读取[state.json](E72_topology_posttrain/state.json)和[study.json](E72_topology_posttrain/study.json)。用户要求优先兼容组合，至少尝试扩大模型，基于train/dev Loss考虑32k或Loss对齐。训练选唯一固定Loss best，Q仅辅助；默认展示同100例reference/current/E42无评分图。基线未升级，封存测试未读。
+[长期总账](E72_topology_posttrain/study.json) · [当前阶段](E75_collision_box_finetune/state.json) · [E74同100图](E74_collision_32k_posttrain/runs/20261029_e42_topology_seed0/draft_comparison100/index.html)。30分钟自动跟进；固定Loss选唯一best，Q辅助，测试封存，不自动更换E42/E50或开启评分流程。

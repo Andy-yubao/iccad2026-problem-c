@@ -1,0 +1,36 @@
+{
+  "experiment": "E75_collision_box_finetune",
+  "source_experiment": "experiments/E74_collision_32k_posttrain",
+  "copy_note": "Same32k and stable width192. Warm start completed E74 own-Loss best42. New fixed collision/box objective, fresh optimizer/scheduler; E74 run is not resumed or re-evaluated.",
+  "initialization_checkpoint": "experiments/E74_collision_32k_posttrain/runs/20261029_e42_topology_seed0/checkpoints/best.pt",
+  "initialization_sha256": "5a26012c7e7f2f46f0f042040598a965b6037cc458a3991b8f1ba2db5cd63576",
+  "pretraining_elapsed_seconds": 13525.721483699977,
+  "source_best_epoch": 42,
+  "source_best_step": 42000,
+  "source_completed_epochs": 42,
+  "source_completed_elapsed_seconds": 7200.319592399988,
+  "protected_checkpoints_sha256": {
+    "experiments/E42_joint_regularization/runs/20261023_rectangle_w96d12_ab_seed0/checkpoints/best.pt": "12878108e9a58b8c195b314ba6586686c2a6e2796c1f4b6443e102b4db4224a6",
+    "experiments/E42_joint_regularization/runs/20261023_rectangle_w96d12_ab_seed0/checkpoints/latest.pt": "94abb24266e61c681ed33a44bc2a8f5a819a7678bb23963145af0ec8baf41fcb",
+    "experiments/E72_topology_posttrain/runs/20261029_e42_topology_seed0/checkpoints/best.pt": "d3b18d9d452d6203d333e36ee271c801e6a35947e9e521ac82f2ab26c2ac5724",
+    "experiments/E72_topology_posttrain/runs/20261029_e42_topology_seed0/checkpoints/latest.pt": "3423b99a47f395edfc13d10c3b1d5ce53842bffcf7351ffe3e837f6584c2e583",
+    "experiments/E73_wide_robust_posttrain/runs/20261029_e42_topology_seed0/checkpoints/best.pt": "3d6f052c6bd6b87a3ce8ae15d6c33748d50703441a992927a5c605ecece83b6f",
+    "experiments/E73_wide_robust_posttrain/runs/20261029_e42_topology_seed0/checkpoints/latest.pt": "7d26d69b6a87650a2c9d0b8f39c991ca6c7309918b1555a7c94585c023df2e7b",
+    "experiments/E74_collision_32k_posttrain/runs/20261029_e42_topology_seed0/checkpoints/best.pt": "5a26012c7e7f2f46f0f042040598a965b6037cc458a3991b8f1ba2db5cd63576",
+    "experiments/E74_collision_32k_posttrain/runs/20261029_e42_topology_seed0/checkpoints/latest.pt": "1bf9a87b4f00c715efabc0468dc5a463d24320013035afffca75167998fb68b3"
+  },
+  "optimizer_transition": "Weights-only new post-training stage for all arms, including control. Fresh AdamW and fresh four-tier scheduler. Source elapsed and moments preserved separately, not claimed exact continuation.",
+  "test_read": false,
+  "pretraining_history": [
+    {
+      "experiment": "E42",
+      "selected_checkpoint_seconds": 6380.712784399977
+    },
+    {
+      "experiment": "E74",
+      "selected_checkpoint_seconds": 7145.0086993,
+      "epoch": 42,
+      "step": 42000
+    }
+  ]
+}
