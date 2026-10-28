@@ -10,20 +10,91 @@
   "test_read": false,
   "baseline_promoted": false,
   "required_scale_experiment": "E72 width192 vs source E42width96; function-preserving warm start",
-  "current_experiment": "E72_topology_posttrain",
-  "next_decision": "Read train/dev fixed-Loss trajectory and terminal paired geometry/Q; prioritize compatible combinations,32k if evidence of generalization limitation; objective mismatch when Loss improves butQ worsens",
+  "current_experiment": "E73_wide_robust_posttrain",
+  "next_decision": "Finish fixed-Loss wide model with graph-local frozen and .5% per-module step guard; inspect actual train/dev improvements before32k or Loss redesign",
   "stopped_old_controllers_not_resumed": true,
   "runs": [],
   "current_stage": "train",
-  "controller_exec_session": 34523,
+  "controller_exec_session": 52557,
   "preflight": "passed; maximum normalized widening output difference9.30e-6",
   "run_ledger": [
     {
       "experiment": "E72_topology_posttrain",
       "output": "runs/20261029_e42_topology_seed0",
-      "status": "running",
+      "status": "error",
       "parameters": 5829939,
-      "max_training_seconds": 7200.0
+      "max_training_seconds": 7200.0,
+      "steps": 5575,
+      "elapsed_seconds": 740.007183800044,
+      "resume_from_step": 2000
+    },
+    {
+      "experiment": "E73_wide_robust_posttrain",
+      "output": "runs/20261029_e42_topology_seed0",
+      "status": "running",
+      "max_training_seconds": 7200,
+      "controller_pid": 5088,
+      "child_pid": 18504,
+      "source_checkpoint": "E42 best51; not E72 unhealthy latest",
+      "loss": "unchanged G+.5 topology",
+      "controller_exec_session": 52557
     }
-  ]
+  ],
+  "pause": {
+    "requested_utc": "2026-10-28T16:25:15Z",
+    "resume_not_before_utc": "2026-10-28T17:25:15Z",
+    "scheduled_resume_beijing": "2026-10-29 01:26",
+    "resume_authorized": true,
+    "reason": "User: 先终止训练，1h后再开始",
+    "stop_file": "experiments/E72_topology_posttrain/runs/STOP",
+    "checkpoint": "experiments\\E72_topology_posttrain\\runs\\20261029_e42_topology_seed0\\checkpoints\\latest.pt",
+    "saved_step": 2000,
+    "saved_epoch": 4,
+    "pending_monitor": true,
+    "cumulative_training_seconds": 283.0223824000568,
+    "controller_exited": true,
+    "resume_command": ".conda/envs/iccad2026/python.exe -u -B -m experiments.E72_topology_posttrain.pipeline --resume",
+    "automation_id": "problem-c",
+    "resumed_utc": "2026-10-28T17:28:48.423322+00:00",
+    "resume_consumed": true,
+    "resumed_from_step": 2000,
+    "resumed_controller_pid": 51460,
+    "resumed_child_pid": 4276,
+    "resume_verified_utc": "2026-10-28T17:29:43.764146+00:00",
+    "resume_verified_step": 2100,
+    "checkpoint_state_preserved": true,
+    "heartbeat_minutes_after_resume": 30
+  },
+  "current_failure": {
+    "step": 5575,
+    "message": "Finite explosion guard rejected an update before AdamW; diagnose actual batch scale before deciding whether instability or false threshold",
+    "new_diagnosis_experiment": "E73_wide_robust_posttrain",
+    "train_dev_both_above_initial": true,
+    "generalization_expansion_not_yet_justified": true
+  },
+  "E72_failure_diagnosis": {
+    "one_batch_mean_total_initial_latest": [
+      0.4041772186756134,
+      4.733777046203613
+    ],
+    "one_batch_gradient_norm_initial_latest": [
+      5.2866644859313965,
+      1247.466796875
+    ],
+    "hidden_initial_latest": [
+      31.391063690185547,
+      403.1453552246094
+    ],
+    "case9065_total_latest_restore_graph": [
+      118.88674926757812,
+      0.42787331342697144
+    ],
+    "graph_weight_relative_drift_range": [
+      0.9920913577079773,
+      1.2974616289138794
+    ],
+    "new_data_expansion": "not justified by this failure: train and dev both worse",
+    "full_dev_and_terminal": "not run for failed E72"
+  },
+  "cumulative_training_seconds": 740.007183800044
 }

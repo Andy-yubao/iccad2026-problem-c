@@ -1,0 +1,26 @@
+{
+  "experiment": "E73_wide_robust_posttrain",
+  "seed": 0,
+  "train": 16000,
+  "dev_monitor": 500,
+  "test_read": false,
+  "max_hours": 2,
+  "max_epochs": 200,
+  "batch_size": 32,
+  "architecture": {
+    "width": 192,
+    "layers": 12,
+    "source_width": 96,
+    "mode": "same function-preserving E42 widening"
+  },
+  "fixed_loss": "G+.5 topology, unchanged from E72",
+  "combined_changes": [
+    "retain width192 and topology supervision",
+    "freeze pretrained graph-local Linear weights and biases for entire run",
+    "cap actual Adam update per trainable Linear/LayerNorm group to .005 times pre-step joint parameter norm"
+  ],
+  "selection": "same fixed dev500 mean; epoch0 included",
+  "optimizer": "fresh AdamW1e-3 with original four-tier schedule; filtered trainable parameters; step projection after original proposal; source moments untouched",
+  "diagnosis": "Failed-case Loss118.89 -> .428 by restoring only graph-local tensors; graph-local weight drift99-130% from warm start. Zero graph harms other cases, so retain pretrained values rather than delete the branch. Both train/dev worse than initial;32k not first response.",
+  "control": "Frozen E42 and saved E63 control; E72 failed optimizer trajectory. Composite evidence, not a clean isolated width effect."
+}
