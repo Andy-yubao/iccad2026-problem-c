@@ -1,12 +1,14 @@
 # ICCAD 2026 Problem C
 
-2026-10-29本轮六个候选的研究与复核已结束，自动跟进已按用户要求删除。已将15个历史实验归入[历史区](history/20261029_model_research_consolidation/README.md)，迁移5,746个文件并逐文件核对；只清理72个可重建编译缓存，唯一权重、数据缓存和运行证据完整保留。
+2026-10-29一期六个候选已完成并保留账本；用户新授权“长任务继续”，第二阶段研究进行中，已恢复30分钟跟进。二期先限3个新候选/6小时、每组2小时，旧预算继续计入18小时总上限。已归档15个历史实验并核对5,746个文件，只清理72个可重建编译缓存，保护全部权重与张量缓存。
 
 当前开发候选[E77](experiments/E77_compact_refinement/runs/completion/inspection.md)：完整dev2000草稿交面积6.302%→2.205%，1999/2000例改善；500例均满足E74公开预测外框限制，精确空白继续下降。flash500加权Q1.017483，相对E42的worker配对区间[-0.013842,-0.003141]。最差单例Q2.163867劣于E42的1.927279，不能声称全指标占优或正式未见成绩，不自动替换冻结E42/E50。[100例reference／E77／E42图](experiments/E77_compact_refinement/runs/20261029_e76_compact_corrector_seed0/draft_comparison100/index.html)。
 
 [E76已完成复核](experiments/E76_bounded_refinement/runs/completion/inspection.md)：30轮早停/best29，flash500加权Q1.017693，相对E42的worker配对区间[-0.012021,-0.004259]，完整dev2000交面积降至2.733%。但相对E74有499/500外框扩大、均值约增加1.31%；保留其收益证据，不按Q直接升级基线。
 
 [E77](experiments/E77_compact_refinement/README.md)已完成40轮、own-Loss best38；固定E76与E74预测外框，只学新增局部修正器。原预算保留；恢复训练阶段实测35.94分钟，另保守计入首次未知中断77.16分钟。训练、完整dev、一次flash500和100图已完成；最后报告的整数序列化错误仅通过保存结果汇总修复，冻结源码与终末评价不变。[完成状态](experiments/E77_compact_refinement/state.json)，[总账](experiments/E72_topology_posttrain/study.json)。自动跟进已删除，不自动启动第七组；测试封存。
+
+新授权的[E78](experiments/E78_connectivity_posttrain/README.md)从E77优秀权重继续训练既有最后修正器，源E76和E74预测框不变。保存结果否定了简单压低原始分组/线长代理的充分性；新组合提前协调相容等面积MIB组形状，并加入固定模块间通道过填压力。五例初始形状协调增加4例重叠，负面证据保留；固定Loss/CUDA/公开规格/框/真实Dropout Adam恢复预检已通过，进入正式训练。[二期账本](experiments/E78_connectivity_posttrain/study.json)。一期结束记录不追溯改写，E77终末不重跑，测试封存。
 
 ## 冻结基线
 
@@ -29,6 +31,7 @@
 | [E75](experiments/E75_collision_box_finetune/README.md) | 3374步数值保护失败，主干其他路径漂移证据 |
 | [E76](experiments/E76_bounded_refinement/runs/completion/inspection.md) | Q/重叠改善，但外框扩大；完成并保留 |
 | [E77](experiments/E77_compact_refinement/runs/completion/inspection.md) | 已完成复核：紧凑、重叠和Q均值改善，仍有尾部反例 |
+| [E78](experiments/E78_connectivity_posttrain/README.md) | 二期：同形组协调＋锚点通道后训练，五例预检通过 |
 
 归档E61/E65/E68/E70等对照与恢复方法见[迁移说明](history/20261029_model_research_consolidation/README.md)。[朱老师交付材料](output/2026-10-24_朱老师交付报告/README.md)保持原位。
 

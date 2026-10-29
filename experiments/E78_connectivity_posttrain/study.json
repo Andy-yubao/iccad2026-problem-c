@@ -1,0 +1,35 @@
+{
+  "status": "ready",
+  "authorization_utc": "2026-10-29T05:23:54.048098+00:00",
+  "authorization": "User: 长任务继续。你可以自行设计和运行实验",
+  "phase": 2,
+  "previous_phase": "experiments/E72_topology_posttrain/study.json",
+  "previous_phase_closed": true,
+  "previous_charged_seconds": 19426.817579200084,
+  "max_new_formal_candidates": 3,
+  "max_phase_training_seconds": 21600,
+  "max_seconds_per_candidate": 7200,
+  "global_training_cap_seconds": 64800,
+  "current_experiment": "E78_connectivity_posttrain",
+  "current_stage": "preflight_passed",
+  "run_ledger": [
+    {
+      "experiment": "E78_connectivity_posttrain",
+      "output": "runs/20261029_e77_connectivity_seed0",
+      "status": "preflight_passed_ready",
+      "max_training_seconds": 7200,
+      "phase_candidate": 1,
+      "parameters": 5873659,
+      "trainable_parameters": 21860,
+      "frozen_parameters": 5851799,
+      "source_checkpoint": "E77 own-Loss best38",
+      "loss": "G+2I+5E+.25 anchored corridor",
+      "elapsed_seconds": 0,
+      "test_read": false
+    }
+  ],
+  "test_read": false,
+  "baseline_promoted": false,
+  "wake_minutes": 30,
+  "automation_id": "problem-c"
+}
