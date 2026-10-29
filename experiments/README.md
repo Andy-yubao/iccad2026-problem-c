@@ -1,6 +1,6 @@
 # 当前基线与近期研究
 
-2026-10-29整理后保留以下九个目录；其余15个实验见[归档](../history/20261029_model_research_consolidation/README.md)。旧源码/日志不因迁移改写，旧入口复现先恢复原路径，不恢复旧控制器。
+2026-10-29整理后保留以下十个目录；其余15个实验见[归档](../history/20261029_model_research_consolidation/README.md)。旧源码/日志不因迁移改写，旧入口复现先恢复原路径，不恢复旧控制器。
 
 | 实验 | 用途 |
 |---|---|
@@ -12,6 +12,7 @@
 | [E73](E73_wide_robust_posttrain/runs/inspection.md) | 稳定宽模型完成、Loss/Q错位与泛化不足证据 |
 | [E74](E74_collision_32k_posttrain/runs/completion/inspection.md) | 草稿明确改善、Q均值优于E42的候选，配对区间微跨零 |
 | [E75](E75_collision_box_finetune/README.md) | 3374步数值保护失败，保留漂移证据 |
-| [E76](E76_bounded_refinement/README.md) | 当前完整冻结E74主干、学习有界几何局部修正 |
+| [E76](E76_bounded_refinement/runs/completion/inspection.md) | 完成：Q1.017693/重叠改善，但499/500外框扩大 |
+| [E77](E77_compact_refinement/README.md) | 当前冻结E76、固定E74公开预测框、学习内部修正 |
 
-[长期总账](E72_topology_posttrain/study.json) · [当前阶段](E76_bounded_refinement/state.json) · [E74同100图](E74_collision_32k_posttrain/runs/20261029_e42_topology_seed0/draft_comparison100/index.html)。30分钟自动跟进；固定Loss选唯一best，Q辅助，测试封存，不自动更换E42/E50或开启评分流程。
+[长期总账](E72_topology_posttrain/study.json) · [当前阶段](E77_compact_refinement/state.json) · [E74同100图](E74_collision_32k_posttrain/runs/20261029_e42_topology_seed0/draft_comparison100/index.html)。30分钟自动跟进；固定Loss选唯一best，Q辅助，测试封存，不自动更换E42/E50或开启评分流程。

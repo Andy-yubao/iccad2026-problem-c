@@ -10,12 +10,12 @@
   "test_read": false,
   "baseline_promoted": false,
   "required_scale_experiment": "E72 width192 vs source E42width96; function-preserving warm start",
-  "current_experiment": "E76_bounded_refinement",
-  "next_decision": "Finish fixed-Loss wide model with graph-local frozen and .5% per-module step guard; inspect actual train/dev improvements before32k or Loss redesign",
+  "current_experiment": "E77_compact_refinement",
+  "next_decision": "Validate projected source, hard frame, frozen source and exact resume on same five train cases; only then start final sixth candidate",
   "stopped_old_controllers_not_resumed": true,
   "runs": [],
-  "current_stage": "train",
-  "controller_exec_session": 72628,
+  "current_stage": "implementation_preflight",
+  "controller_exec_session": null,
   "preflight": "passed; maximum normalized widening output difference9.30e-6",
   "run_ledger": [
     {
@@ -98,14 +98,29 @@
     {
       "experiment": "E76_bounded_refinement",
       "output": "runs/20261029_frozen_e74_corrector_seed0",
-      "status": "running",
+      "status": "early_stop_complete_audited",
       "dataset_size": 32000,
       "max_training_seconds": 7200,
       "source_checkpoint": "frozen E74 best42",
       "loss": "same G+2I+5E",
       "controller_pid": 22992,
       "child_pid": 48860,
-      "controller_exec_session": 72628
+      "controller_exec_session": 72628,
+      "parameters": 5851799,
+      "trainable_parameters": 21860,
+      "frozen_parameters": 5829939,
+      "last_verified_step": 16000,
+      "last_verified_epoch": 16,
+      "elapsed_seconds": 1569.3399876999902,
+      "verified_live_exec_session": 72628,
+      "best_epoch": 29,
+      "steps": 30000,
+      "epochs": 30,
+      "weighted_Q": 1.017693062733588,
+      "baseline_promoted": false,
+      "sources_unchanged": true,
+      "box_expands_vs_E74": 499,
+      "box_comparison_count": 500
     }
   ],
   "pause": {
@@ -164,14 +179,11 @@
     "new_data_expansion": "not justified by this failure: train and dev both worse",
     "full_dev_and_terminal": "not run for failed E72"
   },
-  "cumulative_training_seconds": 11071.453429300105,
+  "cumulative_training_seconds": 12640.793417000095,
   "last_check": {
-    "utc": "2026-10-28T22:15:03.268173+00:00",
-    "state": "healthy_live_training",
-    "experiment": "E75_collision_box_finetune",
-    "step": 2400,
-    "epoch": 2,
-    "note": "Early fixed high-LR stage. Own-Loss best is still initialization; no interim reselection or Q evaluation."
+    "utc": "2026-10-29T00:08:18.733140+00:00",
+    "state": "E76_audited_E77_preparing",
+    "experiment": "E77_compact_refinement"
   },
   "E73_decision": {
     "best_train_dev": [
@@ -233,5 +245,22 @@
     "mechanism": "Graph frozen alone insufficient; other tensors drifted. Freeze complete source and bound corrective output.",
     "best_epoch": 0,
     "no_Q_run": true
+  },
+  "E76_decision": {
+    "weighted_Q": 1.017693062733588,
+    "weighted_Q_delta_vs_E42": -0.008166571281647307,
+    "worker_resampling95": [
+      -0.01202106094521793,
+      -0.004259477123389307
+    ],
+    "intersection_dev2000": 0.027333868680964348,
+    "intersection_improved_vs_E42": 1999,
+    "bbox500_E76_E74": [
+      1.0504034293500337,
+      1.0367825401622788
+    ],
+    "box_expands_vs_E74": 499,
+    "decision": "Retain but do not promote: human compactness objection. E77 frozen source + E74 public-predicted frame + learned internal correction.",
+    "audit": "experiments/E76_bounded_refinement/runs/completion/inspection.json"
   }
 }

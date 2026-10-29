@@ -1,0 +1,21 @@
+{
+  "experiment": "E77_compact_refinement",
+  "seed": 0,
+  "train": 32000,
+  "dev_monitor": 500,
+  "batch_size": 32,
+  "max_hours": 2,
+  "max_epochs": 200,
+  "fixed_loss": "Unchanged E76 G+2I+5E, same backward/monitors/full-dev/selection",
+  "source": "E76 own-Loss best29, source and its E74 backbone permanently frozen/eval",
+  "architecture": "Project E76 into E74 predicted frame; new width96/message32 zero-init local corrector then ordinary differentiable projection into same frame",
+  "frame": "Frozen E74 predictions from public inputs only, NOT reference coordinates or labels. Applies to raw draft only; flash unchanged.",
+  "fresh_residual_bound": ".15*sqrt(public area) per center axis and .15 log-aspect BEFORE final shape/center projection",
+  "initial_function": "Independent projection of decoded E76 into E74 frame; raw canonical state need not equal E76. No claim of exact unprojected warm start.",
+  "hypothesis": "E76 overlap gain accompanies expansion in499/500. Geometric frame prevents this shortcut; added local stage tries internal rearrangement.",
+  "limits": "Frame can be infeasible for legal packing; clipped directions have ordinary zero gradients; no hard-legal guarantee. Same architecture/data source exposure as E76; combined change, not isolated causal attribution.",
+  "optimizer": "Fresh AdamW only new corrector, clip1, decay.0003, original four LR tiers/early-stop; inherited training recorded separately",
+  "selection": "own fixed dev500 Loss only; epoch0 eligible; terminal Q once, no checkpoint reselection",
+  "budget_role": "Sixth and final formal candidate under initial6-candidate cap; total training remains below18h",
+  "test_read": false
+}

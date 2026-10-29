@@ -1,0 +1,46 @@
+{
+  "experiment": "E77_compact_refinement",
+  "source_experiment": "experiments/E76_bounded_refinement",
+  "copy_note": "Independent copy. Freeze complete E76, project into frozen E74 public-predicted frame, add zero-init local corrector and project again. Same fixed physical Loss. No cross-experiment private imports.",
+  "initialization_checkpoint": "experiments/E76_bounded_refinement/runs/20261029_frozen_e74_corrector_seed0/checkpoints/best.pt",
+  "initialization_sha256": "1a5651a1e2bf8e9c5f556b4e836548731bd7fbe147a22bc00377c83f61528ba9",
+  "pretraining_elapsed_seconds": 15045.348290399997,
+  "source_best_epoch": 29,
+  "source_best_step": 29000,
+  "source_completed_epochs": 30,
+  "source_completed_elapsed_seconds": 1569.3399876999902,
+  "protected_checkpoints_sha256": {
+    "experiments/E42_joint_regularization/runs/20261023_rectangle_w96d12_ab_seed0/checkpoints/best.pt": "12878108e9a58b8c195b314ba6586686c2a6e2796c1f4b6443e102b4db4224a6",
+    "experiments/E42_joint_regularization/runs/20261023_rectangle_w96d12_ab_seed0/checkpoints/latest.pt": "94abb24266e61c681ed33a44bc2a8f5a819a7678bb23963145af0ec8baf41fcb",
+    "experiments/E72_topology_posttrain/runs/20261029_e42_topology_seed0/checkpoints/best.pt": "d3b18d9d452d6203d333e36ee271c801e6a35947e9e521ac82f2ab26c2ac5724",
+    "experiments/E72_topology_posttrain/runs/20261029_e42_topology_seed0/checkpoints/latest.pt": "3423b99a47f395edfc13d10c3b1d5ce53842bffcf7351ffe3e837f6584c2e583",
+    "experiments/E73_wide_robust_posttrain/runs/20261029_e42_topology_seed0/checkpoints/best.pt": "3d6f052c6bd6b87a3ce8ae15d6c33748d50703441a992927a5c605ecece83b6f",
+    "experiments/E73_wide_robust_posttrain/runs/20261029_e42_topology_seed0/checkpoints/latest.pt": "7d26d69b6a87650a2c9d0b8f39c991ca6c7309918b1555a7c94585c023df2e7b",
+    "experiments/E74_collision_32k_posttrain/runs/20261029_e42_topology_seed0/checkpoints/best.pt": "5a26012c7e7f2f46f0f042040598a965b6037cc458a3991b8f1ba2db5cd63576",
+    "experiments/E74_collision_32k_posttrain/runs/20261029_e42_topology_seed0/checkpoints/latest.pt": "1bf9a87b4f00c715efabc0468dc5a463d24320013035afffca75167998fb68b3",
+    "experiments/E75_collision_box_finetune/runs/20261029_e74_collision_box_seed0/checkpoints/best.pt": "3ef5df72dcde26d4a7dfb43bd9583a733a5f4fa6b4e1de4b00c0a17a327f642b",
+    "experiments/E75_collision_box_finetune/runs/20261029_e74_collision_box_seed0/checkpoints/latest.pt": "04d03a3fabd0cdff82e5f488db37801b2e838c2685894acf464d877525206e92",
+    "experiments/E76_bounded_refinement/runs/20261029_frozen_e74_corrector_seed0/checkpoints/best.pt": "1a5651a1e2bf8e9c5f556b4e836548731bd7fbe147a22bc00377c83f61528ba9",
+    "experiments/E76_bounded_refinement/runs/20261029_frozen_e74_corrector_seed0/checkpoints/latest.pt": "e810b04e45c8b861b0f28f7cccc0bb77b9176423708bae5c6119a47b775198b3"
+  },
+  "optimizer_transition": "Weights-only new post-training stage for all arms, including control. Fresh AdamW and fresh four-tier scheduler. Source elapsed and moments preserved separately, not claimed exact continuation.",
+  "test_read": false,
+  "pretraining_history": [
+    {
+      "experiment": "E42",
+      "selected_checkpoint_seconds": 6380.712784399977
+    },
+    {
+      "experiment": "E74",
+      "selected_checkpoint_seconds": 7145.0086993,
+      "epoch": 42,
+      "step": 42000
+    },
+    {
+      "experiment": "E76",
+      "selected_checkpoint_seconds": 1519.62680670002,
+      "epoch": 29,
+      "step": 29000
+    }
+  ]
+}
