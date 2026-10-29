@@ -1,0 +1,1623 @@
+{
+  "status": "complete_audited",
+  "best_sha256": "041c29c73ed1fa0a6dc9b365afc9634a0782c8a9a67bd395abff5aebca63928d",
+  "best_epoch": 26,
+  "latest_steps": 27000,
+  "training_seconds": 3886.089079700003,
+  "frozen_placer_tensors_bit_exact_best_and_latest": 452,
+  "sources_unchanged": true,
+  "exports_bit_exact_to_unique_best": true,
+  "F_only_and_deployment_forward_equal_five_cases": true,
+  "viewed_images": [
+    {
+      "index": 217,
+      "sha256": "3aefd77ce096611fdb2bceb61e6682451cebfdcd1952b128313f023bffd9f822"
+    },
+    {
+      "index": 399,
+      "sha256": "f4a665d54a90b8d6802f4b7a7aa439ebb04ac795692c6cf08a2735d704935835"
+    },
+    {
+      "index": 194,
+      "sha256": "5704250397bc3996b39c51aa46928b2a23dee42ece6186f307bbc75904260b87"
+    }
+  ],
+  "loss_improvement": {
+    "train_monitor": {
+      "initial": 0.4291138787269592,
+      "best": 0.4211325240135193,
+      "fraction": 0.01859961914333319
+    },
+    "dev_monitor": {
+      "initial": 0.49592964148521423,
+      "best": 0.4820767314434051,
+      "fraction": 0.027933216494828383
+    }
+  },
+  "source_components": {
+    "train_monitor": {
+      "P42_total": {
+        "initial": 0.42470422172546385,
+        "best": 0.4157994122505188
+      },
+      "P74_total": {
+        "initial": 0.4181061329841614,
+        "best": 0.41133551812171937
+      },
+      "true_intersection": {
+        "initial": 0.02591316905617714,
+        "best": 0.023441997438669204
+      },
+      "anchored_corridor": {
+        "initial": 0.1462485774755478,
+        "best": 0.1344414870738983
+      },
+      "P74_true_intersection": {
+        "initial": 0.02292272174358368,
+        "best": 0.021052132725715638
+      },
+      "P74_anchored_corridor": {
+        "initial": 0.08964316803216935,
+        "best": 0.07495624893903732
+      },
+      "common_original_G": {
+        "initial": 0.28339805722236633,
+        "best": 0.28733438467979433
+      }
+    },
+    "dev_monitor": {
+      "P42_total": {
+        "initial": 0.5100083377361297,
+        "best": 0.49102478432655333
+      },
+      "P74_total": {
+        "initial": 0.4620159819126129,
+        "best": 0.45435484528541564
+      },
+      "true_intersection": {
+        "initial": 0.02838411299884319,
+        "best": 0.02529467849433422
+      },
+      "anchored_corridor": {
+        "initial": 0.14877995324134827,
+        "best": 0.10892947286367416
+      },
+      "P74_true_intersection": {
+        "initial": 0.024199125826358796,
+        "best": 0.021848577544093133
+      },
+      "P74_anchored_corridor": {
+        "initial": 0.11621329480409623,
+        "best": 0.10517784279584885
+      },
+      "common_original_G": {
+        "initial": 0.35801415085792543,
+        "best": 0.3613539264202118
+      }
+    }
+  },
+  "train_dev_relative_gap": 0.14471503375960904,
+  "paired_overlap2000_vs_E42": {
+    "count": 2000,
+    "current_mean": 0.024910366620204585,
+    "baseline_mean": 0.06302022655951652,
+    "mean_delta": -0.03810985993931192,
+    "worker_resampling95": [
+      -0.03921948224753691,
+      -0.03703372733587237
+    ],
+    "better_equal_worse": [
+      2000,
+      0,
+      0
+    ]
+  },
+  "paired_overlap2000_vs_E80": {
+    "count": 2000,
+    "current_mean": 0.024910366620204585,
+    "baseline_mean": 0.02784877391673398,
+    "mean_delta": -0.002938407296529392,
+    "worker_resampling95": [
+      -0.0031164932333250777,
+      -0.0027675205597727202
+    ],
+    "better_equal_worse": [
+      1831,
+      0,
+      169
+    ]
+  },
+  "paired_raw_loss_vs_E80": {
+    "loss_common_original_G": {
+      "count": 2000,
+      "current_mean": 0.3601462666336447,
+      "baseline_mean": 0.3568181163538247,
+      "mean_delta": 0.003328150279819965,
+      "worker_resampling95": [
+        0.0028419722159982374,
+        0.0037941286928291113
+      ],
+      "better_equal_worse": [
+        802,
+        0,
+        1198
+      ]
+    },
+    "loss_center_local": {
+      "count": 2000,
+      "current_mean": 0.1921888905931264,
+      "baseline_mean": 0.19049088341742754,
+      "mean_delta": 0.0016980071756988763,
+      "worker_resampling95": [
+        0.0014808231625127403,
+        0.0019208417083418812
+      ],
+      "better_equal_worse": [
+        762,
+        0,
+        1238
+      ]
+    },
+    "loss_relative_local": {
+      "count": 2000,
+      "current_mean": 0.24470079702790826,
+      "baseline_mean": 0.2415813880590722,
+      "mean_delta": 0.0031194089688360693,
+      "worker_resampling95": [
+        0.002824490584252325,
+        0.0034176634666054596
+      ],
+      "better_equal_worse": [
+        653,
+        0,
+        1347
+      ]
+    },
+    "loss_shape": {
+      "count": 2000,
+      "current_mean": 0.1953626912739128,
+      "baseline_mean": 0.19166058057919144,
+      "mean_delta": 0.003702110694721341,
+      "worker_resampling95": [
+        0.003021649942335831,
+        0.0043404851334169735
+      ],
+      "better_equal_worse": [
+        808,
+        0,
+        1192
+      ]
+    }
+  },
+  "paired_overlap_subgroups": {
+    "low_pin": {
+      "vs_E42": {
+        "count": 324,
+        "current_mean": 0.03566636355222238,
+        "baseline_mean": 0.08723864000032601,
+        "mean_delta": -0.05157227644810364,
+        "worker_resampling95": [
+          -0.055304987712318614,
+          -0.04775978892745046
+        ],
+        "better_equal_worse": [
+          324,
+          0,
+          0
+        ]
+      },
+      "vs_E80": {
+        "count": 324,
+        "current_mean": 0.03566636355222238,
+        "baseline_mean": 0.039903872354580046,
+        "mean_delta": -0.004237508802357674,
+        "worker_resampling95": [
+          -0.004778792284699028,
+          -0.003736360695442159
+        ],
+        "better_equal_worse": [
+          299,
+          0,
+          25
+        ]
+      }
+    },
+    "low_pin_sparse": {
+      "vs_E42": {
+        "count": 157,
+        "current_mean": 0.04275844163172791,
+        "baseline_mean": 0.10237427580520408,
+        "mean_delta": -0.05961583417347617,
+        "worker_resampling95": [
+          -0.06252238809844946,
+          -0.05645835945053692
+        ],
+        "better_equal_worse": [
+          157,
+          0,
+          0
+        ]
+      },
+      "vs_E80": {
+        "count": 157,
+        "current_mean": 0.04275844163172791,
+        "baseline_mean": 0.04793126453467183,
+        "mean_delta": -0.00517282290294393,
+        "worker_resampling95": [
+          -0.005788315292238353,
+          -0.004527773236826434
+        ],
+        "better_equal_worse": [
+          148,
+          0,
+          9
+        ]
+      }
+    }
+  },
+  "subgroup_definition": "E69 pin_connected_fraction<=.3; sparse connection_density<=median at same n in dev2000",
+  "paired_geometry500_vs_E80": {
+    "bbox_over_A": {
+      "count": 500,
+      "current_mean": 1.0406676094506477,
+      "baseline_mean": 1.0407184082969625,
+      "mean_delta": -5.0798846314694666e-05,
+      "worker_resampling95": [
+        -0.0001092641616281549,
+        -1.1485403079299514e-06
+      ],
+      "better_equal_worse": [
+        239,
+        51,
+        210
+      ]
+    },
+    "void_over_bbox": {
+      "count": 500,
+      "current_mean": 0.06324715677393761,
+      "baseline_mean": 0.0662098182242163,
+      "mean_delta": -0.002962661450278686,
+      "worker_resampling95": [
+        -0.003270469937040043,
+        -0.002666396415993286
+      ],
+      "better_equal_worse": [
+        458,
+        0,
+        42
+      ]
+    }
+  },
+  "frame_containment500": {
+    "source": "own public E42 prediction",
+    "max_normalized_excess": 9.490226971885838e-07,
+    "tolerance": 3e-06,
+    "violations": 0
+  },
+  "lr_drops": [
+    {
+      "epoch": 19,
+      "lr_next": 0.00025
+    },
+    {
+      "epoch": 22,
+      "lr_next": 0.0001
+    },
+    {
+      "epoch": 25,
+      "lr_next": 5e-05
+    }
+  ],
+  "lowest_lr_completed_epochs": 2,
+  "flash": {
+    "count": 500,
+    "hard_legal": 500,
+    "mean_Q": 1.03197386684636,
+    "weighted_Q": 1.016242023201916,
+    "p95_Q": 1.1230209926319334,
+    "max_Q": 1.8257730769575755,
+    "worst5pct_mean_Q": 1.2362971403377698,
+    "seconds_mean": 0.27899087860062716,
+    "seconds_p95": 0.6394108949578367,
+    "row_fallbacks": 0,
+    "rescue_cases": 6,
+    "errors": 0,
+    "hpwl_gap_mean_returned": 0.009598535549689478,
+    "area_gap_mean_returned": 0.00704677594951211,
+    "boundary_violations_mean_returned": 0.176,
+    "grouping_violations_mean_returned": 0.192,
+    "mib_violations_mean_returned": 0.0,
+    "inference_seconds_mean_returned": 0.08303121720044873,
+    "postprocess_seconds_mean_returned": 0.19580544820043724,
+    "mean_center_move_local_mean_returned": 0.33071153908381107,
+    "max_center_move_local_mean_returned": 1.4172208468244785
+  },
+  "paired_Q": {
+    "E42": {
+      "count": 500,
+      "weighted_delta": -0.009617610813319383,
+      "worker_resampling95": [
+        -0.014245255788770735,
+        -0.005643852834716816
+      ],
+      "better_equal_worse": [
+        327,
+        71,
+        102
+      ]
+    },
+    "E79": {
+      "count": 500,
+      "weighted_delta": -0.0001411319576233845,
+      "worker_resampling95": [
+        -0.004263808418520189,
+        0.003588831906370696
+      ],
+      "better_equal_worse": [
+        177,
+        101,
+        222
+      ]
+    },
+    "E80": {
+      "count": 500,
+      "weighted_delta": -0.001087225920633457,
+      "worker_resampling95": [
+        -0.0030614435700755593,
+        0.0008092189118805514
+      ],
+      "better_equal_worse": [
+        214,
+        113,
+        173
+      ]
+    }
+  },
+  "raw_hard_legal": 0,
+  "test_read": false,
+  "baseline_promoted": false,
+  "limits": "Combined change; adaptive exposed dev, same source family, no isolated width attribution. Existing500 terminal outputs reused; no new scoring or checkpoint selection.",
+  "route_summary": {
+    "fixed_shape_anchor_failures": 432,
+    "loose_shape_anchor_failures": 4,
+    "MIB_jump_over1percent": 5,
+    "rescue_cases": 6
+  },
+  "route_selected_cases": {
+    "164": {
+      "E74": {
+        "index": 164,
+        "member": [
+          "worker_79/layouts_5040.th",
+          16
+        ],
+        "n": 57,
+        "Q": 1.6686386204374093,
+        "raw_intersection": 0.03256504980970247,
+        "fixed_shape_certificate": {
+          "violated_anchor_bounds": 4,
+          "worst": {
+            "overfill_local": 0.4332830229130781,
+            "absolute_excess": 4.110483671664753,
+            "axis": 0,
+            "path": [
+              14,
+              41,
+              50,
+              20
+            ],
+            "target": 20
+          }
+        },
+        "relaxed_shape_certificate": {
+          "violated_anchor_bounds": 0,
+          "worst": {
+            "overfill_local": 0.0,
+            "axis": null,
+            "path": [],
+            "target": null
+          }
+        },
+        "MIB_max_abs_log_size_jump": 0.3039766384717726,
+        "rescue": true,
+        "phases": {
+          "shape": 29,
+          "early_projection": 1,
+          "project": 1,
+          "full_packed_refine": 3,
+          "certified_rigid_moves": 1
+        },
+        "shape_status": {
+          "Solved": 7,
+          "AlmostSolved": 22
+        },
+        "shape_candidates": 29,
+        "failed_shape_candidates": 29,
+        "repair_bbox_ratio": 1.0256044672752915,
+        "final": {
+          "hpwl_gap": 0.6791744226473283,
+          "area_gap": 0.030482266400244564,
+          "grouping_violations": 5,
+          "boundary_violations": 0,
+          "cost": 1.6686386204374093
+        }
+      },
+      "E79": {
+        "index": 164,
+        "member": [
+          "worker_79/layouts_5040.th",
+          16
+        ],
+        "n": 57,
+        "Q": 1.738220275469867,
+        "raw_intersection": 0.014557986748454566,
+        "fixed_shape_certificate": {
+          "violated_anchor_bounds": 5,
+          "worst": {
+            "overfill_local": 0.5554940139315343,
+            "absolute_excess": 5.269878931838861,
+            "axis": 0,
+            "path": [
+              14,
+              41,
+              50,
+              20
+            ],
+            "target": 20
+          }
+        },
+        "relaxed_shape_certificate": {
+          "violated_anchor_bounds": 0,
+          "worst": {
+            "overfill_local": 0.0,
+            "axis": null,
+            "path": [],
+            "target": null
+          }
+        },
+        "MIB_max_abs_log_size_jump": 1.0497447337742287e-07,
+        "rescue": true,
+        "phases": {
+          "shape": 29,
+          "early_projection": 1,
+          "project": 1,
+          "full_packed_refine": 3,
+          "certified_rigid_moves": 1
+        },
+        "shape_status": {
+          "Solved": 5,
+          "AlmostSolved": 24
+        },
+        "shape_candidates": 29,
+        "failed_shape_candidates": 29,
+        "repair_bbox_ratio": 1.0569413965956604,
+        "final": {
+          "hpwl_gap": 0.6454862093190491,
+          "area_gap": 0.0619684140540022,
+          "grouping_violations": 6,
+          "boundary_violations": 0,
+          "cost": 1.738220275469867
+        }
+      },
+      "E80": {
+        "index": 164,
+        "member": [
+          "worker_79/layouts_5040.th",
+          16
+        ],
+        "n": 57,
+        "Q": 2.2009462942210782,
+        "raw_intersection": 0.01585192136729549,
+        "fixed_shape_certificate": {
+          "violated_anchor_bounds": 5,
+          "worst": {
+            "overfill_local": 0.5674453624767487,
+            "absolute_excess": 5.383259379379112,
+            "axis": 0,
+            "path": [
+              14,
+              41,
+              50,
+              20
+            ],
+            "target": 20
+          }
+        },
+        "relaxed_shape_certificate": {
+          "violated_anchor_bounds": 0,
+          "worst": {
+            "overfill_local": 0.0,
+            "axis": null,
+            "path": [],
+            "target": null
+          }
+        },
+        "MIB_max_abs_log_size_jump": 9.005331385898545e-08,
+        "rescue": true,
+        "phases": {
+          "shape": 29,
+          "early_projection": 1,
+          "project": 1,
+          "full_packed_refine": 3,
+          "certified_rigid_moves": 1
+        },
+        "shape_status": {
+          "AlmostSolved": 24,
+          "Solved": 5
+        },
+        "shape_candidates": 29,
+        "failed_shape_candidates": 29,
+        "repair_bbox_ratio": 1.4908111265422015,
+        "final": {
+          "hpwl_gap": 0.2728753938000225,
+          "area_gap": 0.510602672877882,
+          "grouping_violations": 1,
+          "boundary_violations": 10,
+          "cost": 2.2009462942210782
+        }
+      },
+      "E81": {
+        "index": 164,
+        "member": [
+          "worker_79/layouts_5040.th",
+          16
+        ],
+        "n": 57,
+        "Q": 1.8257730769575755,
+        "raw_intersection": 0.013661791000129755,
+        "fixed_shape_certificate": {
+          "violated_anchor_bounds": 5,
+          "worst": {
+            "overfill_local": 0.4938264777241157,
+            "absolute_excess": 4.684849315519827,
+            "axis": 0,
+            "path": [
+              14,
+              41,
+              50,
+              20
+            ],
+            "target": 20
+          }
+        },
+        "relaxed_shape_certificate": {
+          "violated_anchor_bounds": 0,
+          "worst": {
+            "overfill_local": 0.0,
+            "axis": null,
+            "path": [],
+            "target": null
+          }
+        },
+        "MIB_max_abs_log_size_jump": 1.1514554157810343e-07,
+        "rescue": true,
+        "phases": {
+          "shape": 29,
+          "early_projection": 1,
+          "project": 1,
+          "full_packed_refine": 3,
+          "certified_rigid_moves": 1
+        },
+        "shape_status": {
+          "AlmostSolved": 25,
+          "Solved": 4
+        },
+        "shape_candidates": 29,
+        "failed_shape_candidates": 29,
+        "repair_bbox_ratio": 1.0716345051511567,
+        "final": {
+          "hpwl_gap": 0.6419076761848734,
+          "area_gap": 0.08586120398099698,
+          "grouping_violations": 6,
+          "boundary_violations": 1,
+          "cost": 1.8257730769575755
+        }
+      }
+    },
+    "443": {
+      "E74": {
+        "index": 443,
+        "member": [
+          "worker_29/layouts_5040.th",
+          1
+        ],
+        "n": 36,
+        "Q": 1.451778856561229,
+        "raw_intersection": 0.08837460164361367,
+        "fixed_shape_certificate": {
+          "violated_anchor_bounds": 1,
+          "worst": {
+            "overfill_local": 0.2840360665006397,
+            "absolute_excess": 7.241527228254498,
+            "axis": 1,
+            "path": [
+              18,
+              10,
+              14,
+              33,
+              22,
+              9
+            ],
+            "target": 9
+          }
+        },
+        "relaxed_shape_certificate": {
+          "violated_anchor_bounds": 1,
+          "worst": {
+            "overfill_local": 0.07978785930233821,
+            "absolute_excess": 2.034199257652091,
+            "axis": 1,
+            "path": [
+              27,
+              4,
+              9
+            ],
+            "target": 9
+          }
+        },
+        "MIB_max_abs_log_size_jump": 0.1539129058595991,
+        "rescue": false,
+        "phases": {
+          "shape": 52,
+          "early_projection": 1,
+          "project": 1,
+          "certified_rigid_moves": 1
+        },
+        "shape_status": {
+          "Solved": 25,
+          "AlmostSolved": 27
+        },
+        "shape_candidates": 52,
+        "failed_shape_candidates": 15,
+        "repair_bbox_ratio": 1.392651413754003,
+        "final": {
+          "hpwl_gap": 0.4750014398913306,
+          "area_gap": 0.42855627323112727,
+          "grouping_violations": 0,
+          "boundary_violations": 0,
+          "cost": 1.451778856561229
+        }
+      },
+      "E79": {
+        "index": 443,
+        "member": [
+          "worker_29/layouts_5040.th",
+          1
+        ],
+        "n": 36,
+        "Q": 1.7321198080960822,
+        "raw_intersection": 0.05597173551633165,
+        "fixed_shape_certificate": {
+          "violated_anchor_bounds": 1,
+          "worst": {
+            "overfill_local": 0.24652031801010477,
+            "absolute_excess": 6.285059560153115,
+            "axis": 1,
+            "path": [
+              27,
+              4,
+              9
+            ],
+            "target": 9
+          }
+        },
+        "relaxed_shape_certificate": {
+          "violated_anchor_bounds": 1,
+          "worst": {
+            "overfill_local": 0.07507419098745982,
+            "absolute_excess": 1.9140238240612462,
+            "axis": 1,
+            "path": [
+              27,
+              4,
+              9
+            ],
+            "target": 9
+          }
+        },
+        "MIB_max_abs_log_size_jump": 9.223042000235332e-08,
+        "rescue": false,
+        "phases": {
+          "shape": 64,
+          "early_projection": 1,
+          "project": 1,
+          "certified_rigid_moves": 1
+        },
+        "shape_status": {
+          "Solved": 21,
+          "AlmostSolved": 43
+        },
+        "shape_candidates": 64,
+        "failed_shape_candidates": 13,
+        "repair_bbox_ratio": 1.4049854033056097,
+        "final": {
+          "hpwl_gap": 0.8065889863715263,
+          "area_gap": 0.44120837801501966,
+          "grouping_violations": 1,
+          "boundary_violations": 0,
+          "cost": 1.7321198080960822
+        }
+      },
+      "E80": {
+        "index": 443,
+        "member": [
+          "worker_29/layouts_5040.th",
+          1
+        ],
+        "n": 36,
+        "Q": 1.6042617888275932,
+        "raw_intersection": 0.06979552167794593,
+        "fixed_shape_certificate": {
+          "violated_anchor_bounds": 1,
+          "worst": {
+            "overfill_local": 0.38543249277727876,
+            "absolute_excess": 9.826639009220273,
+            "axis": 1,
+            "path": [
+              18,
+              1,
+              2,
+              33,
+              4,
+              9
+            ],
+            "target": 9
+          }
+        },
+        "relaxed_shape_certificate": {
+          "violated_anchor_bounds": 1,
+          "worst": {
+            "overfill_local": 0.09992296252914018,
+            "absolute_excess": 2.5475456789604323,
+            "axis": 1,
+            "path": [
+              27,
+              22,
+              9
+            ],
+            "target": 9
+          }
+        },
+        "MIB_max_abs_log_size_jump": 5.962581672720802e-08,
+        "rescue": false,
+        "phases": {
+          "shape": 52,
+          "early_projection": 1,
+          "project": 1,
+          "certified_rigid_moves": 1
+        },
+        "shape_status": {
+          "Solved": 25,
+          "AlmostSolved": 27
+        },
+        "shape_candidates": 52,
+        "failed_shape_candidates": 16,
+        "repair_bbox_ratio": 1.5166974758941307,
+        "final": {
+          "hpwl_gap": 0.6567070508855077,
+          "area_gap": 0.5518165267696785,
+          "grouping_violations": 0,
+          "boundary_violations": 0,
+          "cost": 1.6042617888275932
+        }
+      },
+      "E81": {
+        "index": 443,
+        "member": [
+          "worker_29/layouts_5040.th",
+          1
+        ],
+        "n": 36,
+        "Q": 1.551091753008305,
+        "raw_intersection": 0.057229560667333125,
+        "fixed_shape_certificate": {
+          "violated_anchor_bounds": 2,
+          "worst": {
+            "overfill_local": 0.3071235475255673,
+            "absolute_excess": 7.830144809583544,
+            "axis": 1,
+            "path": [
+              18,
+              1,
+              2,
+              33,
+              4,
+              9
+            ],
+            "target": 9
+          }
+        },
+        "relaxed_shape_certificate": {
+          "violated_anchor_bounds": 1,
+          "worst": {
+            "overfill_local": 0.0903511416799617,
+            "absolute_excess": 2.303511172507555,
+            "axis": 1,
+            "path": [
+              27,
+              22,
+              9
+            ],
+            "target": 9
+          }
+        },
+        "MIB_max_abs_log_size_jump": 5.016835683934714e-08,
+        "rescue": false,
+        "phases": {
+          "shape": 53,
+          "early_projection": 1,
+          "project": 1,
+          "certified_rigid_moves": 1
+        },
+        "shape_status": {
+          "Solved": 18,
+          "AlmostSolved": 35
+        },
+        "shape_candidates": 53,
+        "failed_shape_candidates": 16,
+        "repair_bbox_ratio": 1.4237545936362406,
+        "final": {
+          "hpwl_gap": 0.6454618453616116,
+          "area_gap": 0.4567216606549988,
+          "grouping_violations": 0,
+          "boundary_violations": 0,
+          "cost": 1.551091753008305
+        }
+      }
+    },
+    "329": {
+      "E74": {
+        "index": 329,
+        "member": [
+          "worker_85/layouts_2688.th",
+          105
+        ],
+        "n": 64,
+        "Q": 1.2411205935341094,
+        "raw_intersection": 0.06271010900115426,
+        "fixed_shape_certificate": {
+          "violated_anchor_bounds": 3,
+          "worst": {
+            "overfill_local": 0.7592607894538941,
+            "absolute_excess": 11.464586507139728,
+            "axis": 1,
+            "path": [
+              21,
+              39,
+              30,
+              35,
+              4,
+              16
+            ],
+            "target": 16
+          }
+        },
+        "relaxed_shape_certificate": {
+          "violated_anchor_bounds": 0,
+          "worst": {
+            "overfill_local": 0.0,
+            "axis": null,
+            "path": [],
+            "target": null
+          }
+        },
+        "MIB_max_abs_log_size_jump": 0.15301894588857273,
+        "rescue": true,
+        "phases": {
+          "shape": 28,
+          "early_projection": 1,
+          "project": 1,
+          "full_packed_refine": 2,
+          "certified_rigid_moves": 1
+        },
+        "shape_status": {
+          "AlmostSolved": 9,
+          "Solved": 19
+        },
+        "shape_candidates": 28,
+        "failed_shape_candidates": 28,
+        "repair_bbox_ratio": 1.0872674247128202,
+        "final": {
+          "hpwl_gap": 0.16904311142045983,
+          "area_gap": 0.10207658372714921,
+          "grouping_violations": 2,
+          "boundary_violations": 0,
+          "cost": 1.2411205935341094
+        }
+      },
+      "E79": {
+        "index": 329,
+        "member": [
+          "worker_85/layouts_2688.th",
+          105
+        ],
+        "n": 64,
+        "Q": 1.4701962942191367,
+        "raw_intersection": 0.03259522002890915,
+        "fixed_shape_certificate": {
+          "violated_anchor_bounds": 3,
+          "worst": {
+            "overfill_local": 0.5645050646533576,
+            "absolute_excess": 8.52383955200932,
+            "axis": 1,
+            "path": [
+              21,
+              39,
+              30,
+              35,
+              4,
+              16
+            ],
+            "target": 16
+          }
+        },
+        "relaxed_shape_certificate": {
+          "violated_anchor_bounds": 0,
+          "worst": {
+            "overfill_local": 0.0,
+            "axis": null,
+            "path": [],
+            "target": null
+          }
+        },
+        "MIB_max_abs_log_size_jump": 7.195363741681089e-08,
+        "rescue": true,
+        "phases": {
+          "shape": 27,
+          "early_projection": 1,
+          "project": 1,
+          "full_packed_refine": 2,
+          "certified_rigid_moves": 1
+        },
+        "shape_status": {
+          "Solved": 20,
+          "AlmostSolved": 6,
+          "MaxTime": 1
+        },
+        "shape_candidates": 27,
+        "failed_shape_candidates": 27,
+        "repair_bbox_ratio": 1.3190139789709678,
+        "final": {
+          "hpwl_gap": 0.3533243311260408,
+          "area_gap": 0.3369797190438796,
+          "grouping_violations": 2,
+          "boundary_violations": 0,
+          "cost": 1.4701962942191367
+        }
+      },
+      "E80": {
+        "index": 329,
+        "member": [
+          "worker_85/layouts_2688.th",
+          105
+        ],
+        "n": 64,
+        "Q": 1.3971740388318197,
+        "raw_intersection": 0.038833561607821074,
+        "fixed_shape_certificate": {
+          "violated_anchor_bounds": 4,
+          "worst": {
+            "overfill_local": 0.501146621254514,
+            "absolute_excess": 7.567148036533837,
+            "axis": 1,
+            "path": [
+              21,
+              39,
+              30,
+              35,
+              4,
+              16
+            ],
+            "target": 16
+          }
+        },
+        "relaxed_shape_certificate": {
+          "violated_anchor_bounds": 0,
+          "worst": {
+            "overfill_local": 0.0,
+            "axis": null,
+            "path": [],
+            "target": null
+          }
+        },
+        "MIB_max_abs_log_size_jump": 6.95124615911131e-08,
+        "rescue": false,
+        "phases": {
+          "shape": 27,
+          "early_projection": 1,
+          "project": 1,
+          "certified_rigid_moves": 1
+        },
+        "shape_status": {
+          "Solved": 23,
+          "AlmostSolved": 4
+        },
+        "shape_candidates": 27,
+        "failed_shape_candidates": 13,
+        "repair_bbox_ratio": 1.4288565900229078,
+        "final": {
+          "hpwl_gap": 0.3477296574290184,
+          "area_gap": 0.44661842023462095,
+          "grouping_violations": 0,
+          "boundary_violations": 0,
+          "cost": 1.3971740388318197
+        }
+      },
+      "E81": {
+        "index": 329,
+        "member": [
+          "worker_85/layouts_2688.th",
+          105
+        ],
+        "n": 64,
+        "Q": 1.4269384684395252,
+        "raw_intersection": 0.03816784631951905,
+        "fixed_shape_certificate": {
+          "violated_anchor_bounds": 4,
+          "worst": {
+            "overfill_local": 0.44499393650083474,
+            "absolute_excess": 6.719261090561375,
+            "axis": 1,
+            "path": [
+              21,
+              39,
+              30,
+              35,
+              4,
+              16
+            ],
+            "target": 16
+          }
+        },
+        "relaxed_shape_certificate": {
+          "violated_anchor_bounds": 0,
+          "worst": {
+            "overfill_local": 0.0,
+            "axis": null,
+            "path": [],
+            "target": null
+          }
+        },
+        "MIB_max_abs_log_size_jump": 5.8366388462114196e-08,
+        "rescue": true,
+        "phases": {
+          "shape": 27,
+          "early_projection": 1,
+          "project": 1,
+          "full_packed_refine": 1,
+          "certified_rigid_moves": 1
+        },
+        "shape_status": {
+          "Solved": 22,
+          "AlmostSolved": 5
+        },
+        "shape_candidates": 27,
+        "failed_shape_candidates": 27,
+        "repair_bbox_ratio": 1.1274206997202696,
+        "final": {
+          "hpwl_gap": 0.46900200846894446,
+          "area_gap": 0.1421447860650923,
+          "grouping_violations": 2,
+          "boundary_violations": 0,
+          "cost": 1.4269384684395252
+        }
+      }
+    },
+    "219": {
+      "E74": {
+        "index": 219,
+        "member": [
+          "worker_51/layouts_1792.th",
+          63
+        ],
+        "n": 30,
+        "Q": 1.125266495773263,
+        "raw_intersection": 0.08667392531027036,
+        "fixed_shape_certificate": {
+          "violated_anchor_bounds": 1,
+          "worst": {
+            "overfill_local": 0.8663719790789395,
+            "absolute_excess": 17.131396872352965,
+            "axis": 1,
+            "path": [
+              1,
+              22,
+              2,
+              24,
+              5
+            ],
+            "target": 5
+          }
+        },
+        "relaxed_shape_certificate": {
+          "violated_anchor_bounds": 0,
+          "worst": {
+            "overfill_local": 0.0,
+            "axis": null,
+            "path": [],
+            "target": null
+          }
+        },
+        "MIB_max_abs_log_size_jump": 0.200997292502005,
+        "rescue": false,
+        "phases": {
+          "shape": 5,
+          "project": 1,
+          "certified_rigid_moves": 1
+        },
+        "shape_status": {
+          "Solved": 4,
+          "AlmostSolved": 1
+        },
+        "shape_candidates": 5,
+        "failed_shape_candidates": 2,
+        "repair_bbox_ratio": 1.160899804736576,
+        "final": {
+          "hpwl_gap": 0.09366842847418116,
+          "area_gap": 0.1568645630723449,
+          "grouping_violations": 0,
+          "boundary_violations": 0,
+          "cost": 1.125266495773263
+        }
+      },
+      "E79": {
+        "index": 219,
+        "member": [
+          "worker_51/layouts_1792.th",
+          63
+        ],
+        "n": 30,
+        "Q": 1.2367086435910044,
+        "raw_intersection": 0.0774311999641547,
+        "fixed_shape_certificate": {
+          "violated_anchor_bounds": 1,
+          "worst": {
+            "overfill_local": 0.2112599056667169,
+            "absolute_excess": 4.177394207785909,
+            "axis": 1,
+            "path": [
+              1,
+              22,
+              10,
+              24,
+              5
+            ],
+            "target": 5
+          }
+        },
+        "relaxed_shape_certificate": {
+          "violated_anchor_bounds": 0,
+          "worst": {
+            "overfill_local": 0.0,
+            "axis": null,
+            "path": [],
+            "target": null
+          }
+        },
+        "MIB_max_abs_log_size_jump": 5.8877193164015745e-08,
+        "rescue": false,
+        "phases": {
+          "shape": 5,
+          "project": 1,
+          "certified_rigid_moves": 1
+        },
+        "shape_status": {
+          "Solved": 2,
+          "AlmostSolved": 3
+        },
+        "shape_candidates": 5,
+        "failed_shape_candidates": 1,
+        "repair_bbox_ratio": 1.1235505131710737,
+        "final": {
+          "hpwl_gap": 0.03509388841803021,
+          "area_gap": 0.11964527216427626,
+          "grouping_violations": 0,
+          "boundary_violations": 2,
+          "cost": 1.2367086435910044
+        }
+      },
+      "E80": {
+        "index": 219,
+        "member": [
+          "worker_51/layouts_1792.th",
+          63
+        ],
+        "n": 30,
+        "Q": 1.0357026677550927,
+        "raw_intersection": 0.05273988078832702,
+        "fixed_shape_certificate": {
+          "violated_anchor_bounds": 1,
+          "worst": {
+            "overfill_local": 0.5248199593113386,
+            "absolute_excess": 10.377642890820539,
+            "axis": 1,
+            "path": [
+              1,
+              22,
+              10,
+              6,
+              24,
+              5
+            ],
+            "target": 5
+          }
+        },
+        "relaxed_shape_certificate": {
+          "violated_anchor_bounds": 0,
+          "worst": {
+            "overfill_local": 0.0,
+            "axis": null,
+            "path": [],
+            "target": null
+          }
+        },
+        "MIB_max_abs_log_size_jump": 7.344284199775662e-08,
+        "rescue": false,
+        "phases": {
+          "shape": 5,
+          "project": 1,
+          "certified_rigid_moves": 1
+        },
+        "shape_status": {
+          "AlmostSolved": 3,
+          "Solved": 2
+        },
+        "shape_candidates": 5,
+        "failed_shape_candidates": 1,
+        "repair_bbox_ratio": 1.040724697645873,
+        "final": {
+          "hpwl_gap": 0.024892841718098753,
+          "area_gap": 0.04651249379208678,
+          "grouping_violations": 0,
+          "boundary_violations": 0,
+          "cost": 1.0357026677550927
+        }
+      },
+      "E81": {
+        "index": 219,
+        "member": [
+          "worker_51/layouts_1792.th",
+          63
+        ],
+        "n": 30,
+        "Q": 1.035200712106556,
+        "raw_intersection": 0.047807281587028905,
+        "fixed_shape_certificate": {
+          "violated_anchor_bounds": 1,
+          "worst": {
+            "overfill_local": 0.5391770615285812,
+            "absolute_excess": 10.661536209117841,
+            "axis": 1,
+            "path": [
+              1,
+              22,
+              10,
+              6,
+              24,
+              5
+            ],
+            "target": 5
+          }
+        },
+        "relaxed_shape_certificate": {
+          "violated_anchor_bounds": 0,
+          "worst": {
+            "overfill_local": 0.0,
+            "axis": null,
+            "path": [],
+            "target": null
+          }
+        },
+        "MIB_max_abs_log_size_jump": 7.59595138993911e-08,
+        "rescue": false,
+        "phases": {
+          "shape": 5,
+          "project": 1,
+          "certified_rigid_moves": 1
+        },
+        "shape_status": {
+          "Solved": 3,
+          "AlmostSolved": 2
+        },
+        "shape_candidates": 5,
+        "failed_shape_candidates": 1,
+        "repair_bbox_ratio": 1.0439231489792953,
+        "final": {
+          "hpwl_gap": 0.02580425360017756,
+          "area_gap": 0.04459717061293437,
+          "grouping_violations": 0,
+          "boundary_violations": 0,
+          "cost": 1.035200712106556
+        }
+      }
+    },
+    "21": {
+      "E74": {
+        "index": 21,
+        "member": [
+          "worker_17/layouts_6608.th",
+          68
+        ],
+        "n": 120,
+        "Q": 1.1610417667822686,
+        "raw_intersection": 0.06801614309574674,
+        "fixed_shape_certificate": {
+          "violated_anchor_bounds": 11,
+          "worst": {
+            "overfill_local": 1.806344038587428,
+            "absolute_excess": 18.772077904695493,
+            "axis": 1,
+            "path": [
+              55,
+              51,
+              100,
+              24,
+              38,
+              39,
+              46,
+              44,
+              69,
+              70,
+              73,
+              65,
+              107,
+              90,
+              68,
+              101,
+              9,
+              118,
+              20
+            ],
+            "target": 20
+          }
+        },
+        "relaxed_shape_certificate": {
+          "violated_anchor_bounds": 0,
+          "worst": {
+            "overfill_local": 0.0,
+            "axis": null,
+            "path": [],
+            "target": null
+          }
+        },
+        "MIB_max_abs_log_size_jump": 0.3010798586509546,
+        "rescue": false,
+        "phases": {
+          "shape": 8,
+          "project": 1,
+          "certified_rigid_moves": 1
+        },
+        "shape_status": {
+          "Solved": 7,
+          "AlmostSolved": 1
+        },
+        "shape_candidates": 8,
+        "failed_shape_candidates": 5,
+        "repair_bbox_ratio": 1.23587298724004,
+        "final": {
+          "hpwl_gap": 0.08869758438578623,
+          "area_gap": 0.23338594917875072,
+          "grouping_violations": 0,
+          "boundary_violations": 0,
+          "cost": 1.1610417667822686
+        }
+      },
+      "E79": {
+        "index": 21,
+        "member": [
+          "worker_17/layouts_6608.th",
+          68
+        ],
+        "n": 120,
+        "Q": 1.1106669379508027,
+        "raw_intersection": 0.035407506712381805,
+        "fixed_shape_certificate": {
+          "violated_anchor_bounds": 9,
+          "worst": {
+            "overfill_local": 1.080500174517141,
+            "absolute_excess": 9.724501570654269,
+            "axis": 1,
+            "path": [
+              33,
+              87,
+              61,
+              104,
+              60,
+              39,
+              13,
+              41,
+              6
+            ],
+            "target": 6
+          }
+        },
+        "relaxed_shape_certificate": {
+          "violated_anchor_bounds": 0,
+          "worst": {
+            "overfill_local": 0.0,
+            "axis": null,
+            "path": [],
+            "target": null
+          }
+        },
+        "MIB_max_abs_log_size_jump": 8.838297173908619e-08,
+        "rescue": false,
+        "phases": {
+          "shape": 8,
+          "project": 1,
+          "certified_rigid_moves": 1
+        },
+        "shape_status": {
+          "Solved": 7,
+          "AlmostSolved": 1
+        },
+        "shape_candidates": 8,
+        "failed_shape_candidates": 5,
+        "repair_bbox_ratio": 1.1646662135180332,
+        "final": {
+          "hpwl_gap": 0.0590112818423012,
+          "area_gap": 0.1623225940593042,
+          "grouping_violations": 0,
+          "boundary_violations": 0,
+          "cost": 1.1106669379508027
+        }
+      },
+      "E80": {
+        "index": 21,
+        "member": [
+          "worker_17/layouts_6608.th",
+          68
+        ],
+        "n": 120,
+        "Q": 1.0536928246984352,
+        "raw_intersection": 0.04483033682270848,
+        "fixed_shape_certificate": {
+          "violated_anchor_bounds": 12,
+          "worst": {
+            "overfill_local": 1.82283181721114,
+            "absolute_excess": 18.943423926376795,
+            "axis": 1,
+            "path": [
+              33,
+              87,
+              37,
+              72,
+              26,
+              95,
+              46,
+              44,
+              69,
+              73,
+              81,
+              10,
+              89,
+              48,
+              115,
+              110,
+              57,
+              22,
+              9,
+              118,
+              20
+            ],
+            "target": 20
+          }
+        },
+        "relaxed_shape_certificate": {
+          "violated_anchor_bounds": 1,
+          "worst": {
+            "overfill_local": 0.3288554277233228,
+            "absolute_excess": 2.9596988495099055,
+            "axis": 1,
+            "path": [
+              0,
+              13,
+              6
+            ],
+            "target": 6
+          }
+        },
+        "MIB_max_abs_log_size_jump": 1.0649772564694452e-07,
+        "rescue": false,
+        "phases": {
+          "shape": 8,
+          "project": 1,
+          "certified_rigid_moves": 1
+        },
+        "shape_status": {
+          "Solved": 8
+        },
+        "shape_candidates": 8,
+        "failed_shape_candidates": 5,
+        "repair_bbox_ratio": 1.0729440753136248,
+        "final": {
+          "hpwl_gap": 0.035263948349426685,
+          "area_gap": 0.07212170104744353,
+          "grouping_violations": 0,
+          "boundary_violations": 0,
+          "cost": 1.0536928246984352
+        }
+      },
+      "E81": {
+        "index": 21,
+        "member": [
+          "worker_17/layouts_6608.th",
+          68
+        ],
+        "n": 120,
+        "Q": 1.044729481103576,
+        "raw_intersection": 0.045265975433802785,
+        "fixed_shape_certificate": {
+          "violated_anchor_bounds": 11,
+          "worst": {
+            "overfill_local": 2.225890173733974,
+            "absolute_excess": 23.13212923785335,
+            "axis": 1,
+            "path": [
+              33,
+              87,
+              37,
+              72,
+              26,
+              95,
+              46,
+              44,
+              69,
+              73,
+              81,
+              10,
+              89,
+              48,
+              115,
+              110,
+              43,
+              22,
+              9,
+              118,
+              20
+            ],
+            "target": 20
+          }
+        },
+        "relaxed_shape_certificate": {
+          "violated_anchor_bounds": 1,
+          "worst": {
+            "overfill_local": 0.31654977800561646,
+            "absolute_excess": 2.848948002050548,
+            "axis": 1,
+            "path": [
+              0,
+              13,
+              6
+            ],
+            "target": 6
+          }
+        },
+        "MIB_max_abs_log_size_jump": 9.430748893530512e-08,
+        "rescue": false,
+        "phases": {
+          "shape": 22,
+          "early_projection": 1,
+          "project": 1,
+          "certified_rigid_moves": 1
+        },
+        "shape_status": {
+          "Solved": 20,
+          "AlmostSolved": 2
+        },
+        "shape_candidates": 22,
+        "failed_shape_candidates": 12,
+        "repair_bbox_ratio": 1.0537806471679045,
+        "final": {
+          "hpwl_gap": 0.03648599494217343,
+          "area_gap": 0.052972967264978923,
+          "grouping_violations": 0,
+          "boundary_violations": 0,
+          "cost": 1.044729481103576
+        }
+      }
+    }
+  },
+  "decision": "Retain compact modular development candidate; mean and worstQ both better than E42 on exposed500, raw overlap2000 all better. E80 incremental Q interval crosses0; no isolated capacity claim, no automatic frozen-baseline promotion.",
+  "next_hypothesis": "Fixed learned F still sees only public local pair messages; add public global lower/upper anchor/frame path pressure as node context, warm zero embeddings, freeze all E81 F weights. Test information limitation, not another blind width increase. Same fixed two-source Loss."
+}
