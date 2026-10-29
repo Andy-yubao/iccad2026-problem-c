@@ -1,0 +1,78 @@
+{
+  "experiment": "E83_strategy_attribution",
+  "authorization": "User explicitly permits autonomous experiments and turns automatic wakeup on after requesting minimal useful attribution experiments",
+  "authorization_utc": "2026-10-29T15:14:13.967380+00:00",
+  "arms": [
+    {
+      "name": "P42_ops_only",
+      "placer": "P42",
+      "learned_residuals": false,
+      "question": "What do deterministic MIB and containment operators contribute without any learned F residual?"
+    },
+    {
+      "name": "P74_frozen_F81",
+      "placer": "P74",
+      "learned_residuals": true,
+      "question": "Does stronger placer improve terminal quality under the same frozen F81?"
+    }
+  ],
+  "reuse_only": [
+    "E42 alone",
+    "E74 alone",
+    "E81 P42+F81"
+  ],
+  "training_updates": 0,
+  "test_read": false,
+  "seed": 0,
+  "dtype": "float32",
+  "dev_count": 2000,
+  "terminal_count": 500,
+  "batch_size": 32,
+  "workers": 2,
+  "threads_per_worker": 2,
+  "preflight_train_ids": [
+    1683,
+    10027,
+    5474,
+    18140,
+    25001
+  ],
+  "max_seconds_per_arm": 1800,
+  "max_total_seconds": 3600,
+  "primary_comparisons": [
+    {
+      "current": "P42_ops_only",
+      "baseline": "E42"
+    },
+    {
+      "current": "E81",
+      "baseline": "P42_ops_only"
+    },
+    {
+      "current": "P74_frozen_F81",
+      "baseline": "E81"
+    }
+  ],
+  "statistics": {
+    "resampling_unit": "source worker",
+    "bootstrap_seed": 20261029,
+    "resamples": 4000,
+    "family_size": 3,
+    "intervals": [
+      "95% descriptive",
+      "98.333333% Bonferroni familywise approximation"
+    ],
+    "practical_Q_margin": 0.001,
+    "strong_Q_gain": "upper family interval below -0.001, with no material hard-legality/frame/tail regression; not a formal baseline upgrade",
+    "no_posthoc_arm_additions": true
+  },
+  "fixed_loss": "Diagnostic single-source E81 G+4I+5E+.25A; no optimization/checkpoint selection",
+  "future_training": "At most one remaining original modular training slot, registered only after outcome/limitations analysis; retain charged30409.9365978s and global18h cap",
+  "limits": [
+    "Deployment bypass, not a trained no-F control",
+    "Cannot isolate only MIB from frame projection",
+    "Source swap also changes source frame; not capacity-only causality",
+    "Single-seed adaptive development, no independent unseen claim",
+    "Do not repeat completed terminal evaluation or choose weights by Q"
+  ]
+}

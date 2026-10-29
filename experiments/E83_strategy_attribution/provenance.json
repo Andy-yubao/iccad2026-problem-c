@@ -1,0 +1,19 @@
+{
+  "experiment": "E83_strategy_attribution",
+  "source_experiment": "experiments/E81_multisource_refinement",
+  "parents": {
+    "P42": {
+      "checkpoint": "experiments/E42_joint_regularization/runs/20261023_rectangle_w96d12_ab_seed0/checkpoints/best.pt",
+      "sha256": "12878108e9a58b8c195b314ba6586686c2a6e2796c1f4b6443e102b4db4224a6"
+    },
+    "P74": {
+      "checkpoint": "experiments/E74_collision_32k_posttrain/runs/20261029_e42_topology_seed0/checkpoints/best.pt",
+      "sha256": "5a26012c7e7f2f46f0f042040598a965b6037cc458a3991b8f1ba2db5cd63576"
+    },
+    "F81": {
+      "checkpoint": "experiments/E81_multisource_refinement/runs/20261029_e42_multisource_seed0/checkpoints/best.pt",
+      "sha256": "041c29c73ed1fa0a6dc9b365afc9634a0782c8a9a67bd395abff5aebca63928d"
+    }
+  },
+  "copy_note": "Independent copied model/Loss/solver. Inference-only deployment interventions, not training ablations. Prior production sources unchanged."
+}

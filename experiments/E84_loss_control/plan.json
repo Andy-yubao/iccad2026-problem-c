@@ -1,0 +1,71 @@
+{
+  "experiment": "E84_loss_control",
+  "role": "One preregistered objective-package training control, not a new architecture search",
+  "authorization": "User explicitly authorizes autonomous experiments/automatic wakeup; avoid repetitive experiments; E83 confirms learned F contributes, stronger source alone has no reliable terminal benefit",
+  "registered_utc": "2026-10-29T15:50:58.075829+00:00",
+  "phase_candidate": 3,
+  "remaining_training_slots_after_start": 0,
+  "max_hours": 2,
+  "max_epochs": 200,
+  "formal_training_initialization": "Same parents and uniform Net2Wider recipe as E81 epoch0: F79 widened192/64, frozen P42 and P74. NOT starting from E81 best or E83 composition.",
+  "changed_factor": "Fixed objective and matching selection package: per-source L=G instead of G+4I+5E+.25A; all eight G coefficients and two-source robust mean unchanged",
+  "unchanged": [
+    "Exact model architecture",
+    "P42/P74 frozen/eval",
+    "F79 warm-widening parents and recipe",
+    "v6 frozen nested32k/dev2000/train-dev500",
+    "seed0 FP32 batch32",
+    "AdamW decay.0003 clip1",
+    "Original four LR levels and early stopping rules",
+    "2h/200-epoch caps",
+    "MIB coordination/source predicted frame operators",
+    "CPU steady repair and fixed100 four-stage presentation"
+  ],
+  "aggregation": "mean_source(G)+.25*(max_source(G)-mean_source(G))",
+  "backward_monitor_selection_same_fixed_Loss": true,
+  "diagnostics": [
+    "Original G",
+    "True intersection I",
+    "Reference expansion E",
+    "Anchor corridor A",
+    "Weak-pin/same-N sparse subgroup",
+    "Raw bbox/union/empty and hard legality",
+    "Paired flash500 Q/tails/rescue/runtime"
+  ],
+  "baseline_reuse_only": "Existing E81 full-objective best26/full-dev/terminal; do not retrain or re-evaluate",
+  "primary_estimand": "Effect of original G-only versus full objective package in the SAME warm-started two-source correction-training procedure, including own-Loss checkpoint/learning-rate selection",
+  "statistics": {
+    "pairing": "Same members/source worker",
+    "bootstrap_seed": 20261029,
+    "resamples": 4000,
+    "primary_Q_margin": 0.001,
+    "no_Q_checkpoint_selection": true,
+    "primary_comparison": "E84 vs existing E81",
+    "confidence": "95% worker-paired bootstrap, single training seed adaptive development only"
+  },
+  "preflight_train_ids": [
+    1683,
+    10027,
+    5474,
+    18140,
+    25001
+  ],
+  "test_read": false,
+  "cost_accounting": {
+    "prior_training_seconds": 30409.936597800057,
+    "global_max_seconds": 64800,
+    "max_new_training_seconds": 7200,
+    "original_modular_phase_prior_seconds": 7729.403699099959,
+    "phase_max_seconds": 21600
+  },
+  "limits": [
+    "Does not isolate I/E/A individually",
+    "Warm F79 already learned earlier geometry objectives; G-only is not a never-geometry-trained model",
+    "Selection and LR trajectories follow the chosen fixed Loss, so this is the full training/selection-policy effect, not only a one-step gradient effect",
+    "G includes reference and geometric terms; this is not a reference-free control",
+    "No direct causal estimate of MIB area repair or label sanitization",
+    "Cross-Loss total values are not comparable",
+    "One seed cannot establish scaling law or seed-robust advantage"
+  ],
+  "decision_rule": "Compare raw draft quality and retained geometry first, Q auxiliary; report tradeoffs rather than rank only scalar Q. Stop after this remaining candidate, audit and close followup; no fourth modular training candidate."
+}
