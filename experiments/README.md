@@ -13,6 +13,6 @@
 | [E74](E74_collision_32k_posttrain/runs/completion/inspection.md) | 草稿明确改善、Q均值优于E42的候选，配对区间微跨零 |
 | [E75](E75_collision_box_finetune/README.md) | 3374步数值保护失败，保留漂移证据 |
 | [E76](E76_bounded_refinement/runs/completion/inspection.md) | 完成：Q1.017693/重叠改善，但499/500外框扩大 |
-| [E77](E77_compact_refinement/README.md) | 当前冻结E76、固定E74公开预测框、学习内部修正 |
+| [E77](E77_compact_refinement/runs/completion/inspection.md) | 完成40轮/best38，Q1.017483，紧凑且交面积降至2.205%；尾部仍退化 |
 
-[长期总账](E72_topology_posttrain/study.json) · [当前阶段](E77_compact_refinement/state.json) · [E74同100图](E74_collision_32k_posttrain/runs/20261029_e42_topology_seed0/draft_comparison100/index.html)。30分钟自动跟进；固定Loss选唯一best，Q辅助，测试封存，不自动更换E42/E50或开启评分流程。
+[长期总账](E72_topology_posttrain/study.json) · [完成状态](E77_compact_refinement/state.json) · [E77同100图](E77_compact_refinement/runs/20261029_e76_compact_corrector_seed0/draft_comparison100/index.html)。自动跟进已按用户要求删除，不启动第七组；固定Loss选唯一best，Q辅助，测试封存，不自动更换E42/E50或开启评分流程。

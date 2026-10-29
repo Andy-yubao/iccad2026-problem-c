@@ -1,0 +1,71 @@
+{
+  "status": "complete_after_saved_report_recovery",
+  "stage": "audited",
+  "controller_pid": null,
+  "child_pid": null,
+  "updated_utc": "2026-10-29T02:54:31.747971+00:00",
+  "output": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E77_compact_refinement\\runs\\20261029_e76_compact_corrector_seed0",
+  "events": [
+    {
+      "utc": "2026-10-29T00:13:50.658770+00:00",
+      "status": "running",
+      "stage": "train"
+    },
+    {
+      "utc": "2026-10-29T01:42:31.483710+00:00",
+      "status": "paused_by_user",
+      "stage": "user_pause"
+    },
+    {
+      "utc": "2026-10-29T02:08:34.030804+00:00",
+      "status": "running",
+      "stage": "train"
+    },
+    {
+      "utc": "2026-10-29T02:44:47.622926+00:00",
+      "status": "stage_complete",
+      "stage": "train"
+    },
+    {
+      "utc": "2026-10-29T02:44:47.637819+00:00",
+      "status": "running",
+      "stage": "final"
+    },
+    {
+      "utc": "2026-10-29T02:49:09.811078+00:00",
+      "status": "stage_complete",
+      "stage": "final"
+    },
+    {
+      "utc": "2026-10-29T02:49:09.828698+00:00",
+      "status": "running",
+      "stage": "draft100"
+    },
+    {
+      "utc": "2026-10-29T02:49:49.936447+00:00",
+      "status": "stage_complete",
+      "stage": "draft100"
+    },
+    {
+      "utc": "2026-10-29T02:49:49.947353+00:00",
+      "status": "running",
+      "stage": "report"
+    },
+    {
+      "utc": "2026-10-29T02:50:03.211648+00:00",
+      "status": "failed",
+      "stage": "report"
+    },
+    {
+      "utc": "2026-10-29T02:54:31.747971+00:00",
+      "status": "complete_after_saved_report_recovery",
+      "stage": "audited"
+    }
+  ],
+  "test_read": false,
+  "original_report_error": "RuntimeError('report failed (1); see runs/report.log')",
+  "actual_train_and_controller_processes_absent_verified": true,
+  "report": "runs/completion/inspection.md",
+  "automation_status": "DELETED",
+  "baseline_promoted": false
+}

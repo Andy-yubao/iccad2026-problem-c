@@ -1,5 +1,5 @@
 {
-  "status": "running",
+  "status": "closed_by_user_after_initial_six_candidates",
   "goal": "Surpass accepted E42 draft/flash baseline without sacrificing compactness or topology",
   "automation_id": "problem-c",
   "wake_minutes": 30,
@@ -11,12 +11,12 @@
   "baseline_promoted": false,
   "required_scale_experiment": "E72 width192 vs source E42width96; function-preserving warm start",
   "current_experiment": "E77_compact_refinement",
-  "next_decision": "Validate projected source, hard frame, frozen source and exact resume on same five train cases; only then start final sixth candidate",
+  "next_decision": "No automatic follow-up or seventh candidate. E77 retained for human draft review; E42/E50 not automatically replaced.",
   "stopped_old_controllers_not_resumed": true,
   "runs": [],
-  "current_stage": "implementation_preflight",
+  "current_stage": "complete_audited",
   "controller_exec_session": null,
-  "preflight": "passed; maximum normalized widening output difference9.30e-6",
+  "preflight": "E77 five-case physical frame, frozen source, unified Loss, CUDA and exact Adam resume passed; same sources",
   "run_ledger": [
     {
       "experiment": "E72_topology_posttrain",
@@ -121,6 +121,42 @@
       "sources_unchanged": true,
       "box_expands_vs_E74": 499,
       "box_comparison_count": 500
+    },
+    {
+      "experiment": "E77_compact_refinement",
+      "output": "runs/20261029_e76_compact_corrector_seed0",
+      "status": "early_stop_complete_audited",
+      "dataset_size": 32000,
+      "max_training_seconds": 7200,
+      "parameters": 5873659,
+      "trainable_parameters": 21860,
+      "frozen_parameters": 5851799,
+      "steps": 40000,
+      "epochs": 40,
+      "source_checkpoint": "E76 own-Loss best29, permanently frozen",
+      "loss": "unchanged G+2I+5E",
+      "controller_exec_session": null,
+      "controller_pid": null,
+      "original_tool_session": 53415,
+      "detached_launch_pid": 41012,
+      "actual_processes_absent_verified": true,
+      "elapsed_seconds": 6786.0241621999885,
+      "budget_note": "Conservatively charged unknown startup interruption; not measured active training time",
+      "recovery": "runs/recovery/startup_interruption.json",
+      "best_epoch": 38,
+      "terminal_runs": 1,
+      "child_pid": null,
+      "launch_mode": "Detached hidden Windows process; live OS PID, no unified exec session",
+      "launched_utc": "2026-10-29T02:08:30.3868391Z",
+      "controller_stdout": "runs/controller_resume_20261029_020830.stdout.log",
+      "controller_stderr": "runs/controller_resume_20261029_020830.stderr.log",
+      "user_resume_authorization": "runs/recovery/resume_authorization_20261029.json",
+      "last_verified_step": 40000,
+      "last_verified_epoch": 40,
+      "durable_checkpoint_step": 40000,
+      "weighted_Q": 1.0174833884747547,
+      "baseline_promoted": false,
+      "measured_resumed_training_stage_seconds": 2156.384739199989
     }
   ],
   "pause": {
@@ -179,11 +215,12 @@
     "new_data_expansion": "not justified by this failure: train and dev both worse",
     "full_dev_and_terminal": "not run for failed E72"
   },
-  "cumulative_training_seconds": 12640.793417000095,
+  "cumulative_training_seconds": 19426.817579200084,
   "last_check": {
-    "utc": "2026-10-29T00:08:18.733140+00:00",
-    "state": "E76_audited_E77_preparing",
-    "experiment": "E77_compact_refinement"
+    "utc": "2026-10-29T02:54:31.747971+00:00",
+    "state": "E77_audited_automation_deleted_by_user",
+    "experiment": "E77_compact_refinement",
+    "step": 40000
   },
   "E73_decision": {
     "best_train_dev": [
@@ -232,7 +269,9 @@
       "E72_topology_posttrain",
       "E73_wide_robust_posttrain",
       "E74_collision_32k_posttrain",
-      "E75_collision_box_finetune"
+      "E75_collision_box_finetune",
+      "E76_bounded_refinement",
+      "E77_compact_refinement"
     ]
   },
   "E75_failure_decision": {
@@ -262,5 +301,36 @@
     "box_expands_vs_E74": 499,
     "decision": "Retain but do not promote: human compactness objection. E77 frozen source + E74 public-predicted frame + learned internal correction.",
     "audit": "experiments/E76_bounded_refinement/runs/completion/inspection.json"
+  },
+  "current_user_pause": {
+    "utc": "2026-10-29T01:42:31.483710+00:00",
+    "message": "现在没有训练条件",
+    "stop_file": "experiments/E77_compact_refinement/runs/STOP",
+    "automation_status": "ACTIVE",
+    "actual_E77_processes_absent_verified": true,
+    "resume_requires_new_user_authorization": false,
+    "resume_authorized_utc": "2026-10-29T02:08:12.563975+00:00",
+    "resume_user_message": "请你先启动E77的训练",
+    "resume_consumed": true
+  },
+  "cumulative_budget_note": "Includes conservatively charged E77 startup interruption; not all active computation.",
+  "automation_status": "DELETED",
+  "automation_deleted_utc": "2026-10-29T02:54:31.747971+00:00",
+  "outcome": "E77 improves dev mean Q, raw overlap and compactness versus E42; worst-case Q regresses; no formal baseline promotion or sealed test.",
+  "E77_decision": {
+    "report": "experiments/E77_compact_refinement/runs/completion/inspection.md",
+    "weighted_Q": 1.0174833884747547,
+    "weighted_Q_delta_vs_E42": -0.008376245540480661,
+    "worker_resampling95": [
+      -0.013841736945990219,
+      -0.003140555607590534
+    ],
+    "intersection_dev2000": 0.02205451170828802,
+    "raw_hard_legal": 0,
+    "flash_hard_legal": 500,
+    "frame_violations_500": 0,
+    "max_Q": 2.163867242796562,
+    "test_read": false,
+    "baseline_promoted": false
   }
 }

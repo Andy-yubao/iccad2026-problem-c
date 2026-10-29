@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "E:\project\ICCAD\2026\problemC\experiments\E77_compact_refinement\report.py", line 105, in <module>
+    if __name__=='__main__':main()
+  File "E:\project\ICCAD\2026\problemC\experiments\E77_compact_refinement\report.py", line 91, in main
+    save(HERE/'runs/review.json',study);save(HERE/'runs/geometry500.json',{'current':current,'control':control,'E42':e42})
+  File "E:\project\ICCAD\2026\problemC\experiments\E77_compact_refinement\io.py", line 35, in save
+    temp.write_text(json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False) + '\n', encoding='utf-8')
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\json\encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\json\encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\json\encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\json\encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\json\encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type int32 is not JSON serializable
