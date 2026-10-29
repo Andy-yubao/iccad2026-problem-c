@@ -1,6 +1,6 @@
 # 当前基线与近期研究
 
-2026-10-29日常区保留以下十一个目录；其余15个实验见[归档](../history/20261029_model_research_consolidation/README.md)。旧源码/日志不因迁移改写，旧入口复现先恢复原路径，不恢复旧控制器。用户新授权的二期另记账，不覆盖一期六候选的结题证据。
+2026-10-29日常区保留以下十二个目录；其余15个实验见[归档](../history/20261029_model_research_consolidation/README.md)。旧源码/日志不因迁移改写，旧入口复现先恢复原路径，不恢复旧控制器。用户新授权的二期另记账，不覆盖一期六候选的结题证据。
 
 | 实验 | 用途 |
 |---|---|
@@ -14,6 +14,7 @@
 | [E75](E75_collision_box_finetune/README.md) | 3374步数值保护失败，保留漂移证据 |
 | [E76](E76_bounded_refinement/runs/completion/inspection.md) | 完成：Q1.017693/重叠改善，但499/500外框扩大 |
 | [E77](E77_compact_refinement/runs/completion/inspection.md) | 完成40轮/best38，Q1.017483，紧凑且交面积降至2.205%；尾部仍退化 |
-| [E78](E78_connectivity_posttrain/README.md) | 二期预检通过：从E77后训练，MIB协调与锚点通道压力 |
+| [E78](E78_connectivity_posttrain/runs/completion/inspection.md) | 完成：准备形状跳变显著减少、Q均值更好，草稿重叠退化 |
+| [E79](E79_center_refinement/README.md) | 当前：固定E78同形尺寸、只学中心修正＋源次序软保护 |
 
 [一期总账](E72_topology_posttrain/study.json) · [二期当前账本](E78_connectivity_posttrain/study.json) · [E77同100图](E77_compact_refinement/runs/20261029_e76_compact_corrector_seed0/draft_comparison100/index.html)。用户已重新授权长任务，30分钟跟进恢复；固定Loss选唯一best，Q辅助，测试封存，不自动更换E42/E50或开启评分流程。

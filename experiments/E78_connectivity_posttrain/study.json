@@ -10,13 +10,13 @@
   "max_phase_training_seconds": 21600,
   "max_seconds_per_candidate": 7200,
   "global_training_cap_seconds": 64800,
-  "current_experiment": "E78_connectivity_posttrain",
+  "current_experiment": "E79_center_refinement",
   "current_stage": "preflight_passed",
   "run_ledger": [
     {
       "experiment": "E78_connectivity_posttrain",
       "output": "runs/20261029_e77_connectivity_seed0",
-      "status": "preflight_passed_ready",
+      "status": "early_stop_complete_audited",
       "max_training_seconds": 7200,
       "phase_candidate": 1,
       "parameters": 5873659,
@@ -24,6 +24,36 @@
       "frozen_parameters": 5851799,
       "source_checkpoint": "E77 own-Loss best38",
       "loss": "G+2I+5E+.25 anchored corridor",
+      "elapsed_seconds": 1677.2296909000142,
+      "test_read": false,
+      "controller_pid": null,
+      "child_pid": null,
+      "controller_exec_session": null,
+      "launch_mode": "Detached hidden Windows process",
+      "launched_utc": "2026-10-29T05:47:15.7978474Z",
+      "stdout": "runs/controller_20261029_054715.stdout.log",
+      "stderr": "runs/controller_20261029_054715.stderr.log",
+      "last_verified_step": 24000,
+      "steps": 29000,
+      "epochs": 29,
+      "best_epoch": 21,
+      "durable_checkpoint_step": 24000,
+      "weighted_Q": 1.0154008412158966,
+      "baseline_promoted": false,
+      "terminal_runs": 1,
+      "report": "runs/completion/inspection.md"
+    },
+    {
+      "experiment": "E79_center_refinement",
+      "output": "runs/20261029_e78_center_seed0",
+      "status": "preflight_passed_ready",
+      "phase_candidate": 2,
+      "parameters": 5895422,
+      "trainable_parameters": 21763,
+      "frozen_parameters": 5873659,
+      "source_checkpoint": "E78 own-Loss best21",
+      "loss": "G+4I+5E+.1 one-sided source regression",
+      "max_training_seconds": 7200,
       "elapsed_seconds": 0,
       "test_read": false
     }
@@ -31,5 +61,29 @@
   "test_read": false,
   "baseline_promoted": false,
   "wake_minutes": 30,
-  "automation_id": "problem-c"
+  "automation_id": "problem-c",
+  "controller_pid": null,
+  "child_pid": null,
+  "automation_status": "ACTIVE",
+  "phase_training_seconds": 1677.2296909000142,
+  "global_charged_seconds": 21104.047270100098,
+  "last_check": {
+    "utc": "2026-10-29T06:46:16.636043+00:00",
+    "state": "E78_completion_audited",
+    "step": 29000
+  },
+  "E78_decision": {
+    "source_preserved": true,
+    "MIB_snap_gt1pct_cases_E77_E78": [
+      499,
+      5
+    ],
+    "overlap_worse_vs_E77": 1964,
+    "weighted_Q": 1.0154008412158966,
+    "Q_delta_vs_E77_interval": [
+      -0.009286525051302163,
+      0.002896670079368895
+    ],
+    "decision": "Retain repair-stability evidence, no promotion; frozen coherent dimensions plus center-only correction next"
+  }
 }

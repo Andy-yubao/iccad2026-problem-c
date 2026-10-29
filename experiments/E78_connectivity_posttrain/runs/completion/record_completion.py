@@ -1,0 +1,40 @@
+"""Record E78's real tradeoff without promoting by terminal Q."""
+import json
+from pathlib import Path
+from datetime import datetime,timezone
+HERE=Path(__file__).resolve().parents[2]
+def read(p):return json.loads(p.read_text(encoding='utf-8'))
+def write(p,v):p.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+a=read(HERE/'runs/completion/inspection.json');r=read(HERE/'runs/review.json');o=read(HERE/'runs/completion/order_certificates.json')
+assert a['sources_unchanged'] and a['public_frame_containment500']['violations']==0
+text='''# E78完成复核：修复前形状协调有效，草稿重叠仍退化
+
+29轮正常早停，唯一own-Loss best21；训练阶段1677.23秒。固定train/dev500 Loss由0.385473/0.429724降至0.378389/0.419912，改善1.84%/2.28%，相对差距10.97%。源E76的241个张量在best/latest逐字不变，源码/数据与终末身份通过，四档LR与最低档两轮均满足。测试未读。
+
+完整dev2000交面积2.723%，仍好于E42的6.302%，但相对E77的2.205%有1964/2000例变差。固定500例493例交面积与精确空白变差；交面积均值2.244%→2.789%，空白/B5.692%→6.212%。500例均留在E74预测框内，最大外伸3.05e-7低于3e-6事前容差，bbox/A均值基本不变。因此这次退化是框内形状/位置取舍，没有靠外框扩大掩盖。
+
+flash500全部硬合法，weighted Q1.015401，E77为1.017483，E42为1.025860。对E42差值-0.010459、worker配对95%区间[-0.015004,-0.006486]；对E77差值-0.002083、区间[-0.009287,+0.002897]跨零，不能宣布稳固的进一步Q提升。最差Q2.163867→1.751561，最差5%1.246971→1.234880；P95却1.112974→1.122310。保留为修复稳定性方向的候选，不因均值自动替换E77或冻结E42/E50。原始草稿仍0/2000硬合法。
+
+机制核验：solver准备时MIB最大维度跳变>1%的案例由499/500降至5/500，说明公开同形组协调确实减少了准备突变。固定形状锚点证书从436例降至431例，改善有限；极宽松自由形状必要条件仍1例失败，不能说此项已解决整体可行性。救援案例6→5。最差164仍有30个主形状候选全部不合法且走3次packed救援，通道证书反而0.502→0.555；Q从2.164降至1.738，主要表现为最终软违规减少。不能把组合收益单独归因于通道惩罚，也不能宣称救援机制已消除。
+
+已实际查看217、399、194三张原100例图并核对哈希。宏观顺序基本保留，MIB矩形形状协调更一致，但部分MIB与旁边模块的重叠更明显，尤其194上方和中部；小模块、分组交界仍有空隙。这与数值显示的493/500草稿退化一致，没有把Q改善当成用户视觉认可。
+
+下一组合E79：冻结整个E78，固定其尺寸/同形组一致性，只增加零初始化的中心位置修正器；保持公开预测框，强化真实交面积项，并加入仅对相对源模型分离次序退化起作用的一侧惩罚。该项初始为零、不会奖励把健康的非碰撞模块越推越远，区别于已失败的普遍参考方向拟合。先做五例预检，验证尺寸保持和真实恢复，再启动二期第二候选。源拓扑自身有错，惩罚只能是软保护，不能声称合法保证。
+
+[机器审计](inspection.json) · [几何和Q汇总](../review.json) · [准备与锚点诊断](order_certificates.json) · [同100例图](../20261029_e77_connectivity_seed0/draft_comparison100/index.html)。所有分析只复用既有终末结果，无重新推理或评分。
+'''
+(HERE/'runs/completion/inspection.md').write_text(text,encoding='utf-8')
+study=read(HERE/'study.json');entry=study['run_ledger'][0]
+entry.update(status='early_stop_complete_audited',elapsed_seconds=1677.2296909000142,steps=29000,epochs=29,best_epoch=21,
+    weighted_Q=1.0154008412158966,controller_pid=None,child_pid=None,baseline_promoted=False,terminal_runs=1,
+    report='runs/completion/inspection.md')
+study.update(status='designing_next',current_stage='E78_audited_E79_design',controller_pid=None,child_pid=None,
+    phase_training_seconds=sum(v.get('elapsed_seconds',0) for v in study['run_ledger']))
+study['global_charged_seconds']=study['previous_charged_seconds']+study['phase_training_seconds']
+study['E78_decision']={'source_preserved':True,'MIB_snap_gt1pct_cases_E77_E78':[499,5],
+    'overlap_worse_vs_E77':1964,'weighted_Q':1.0154008412158966,
+    'Q_delta_vs_E77_interval':a['paired_weighted_Q_vs_E77']['worker_resampling95'],
+    'decision':'Retain repair-stability evidence, no promotion; frozen coherent dimensions plus center-only correction next'}
+study['last_check']={'utc':datetime.now(timezone.utc).isoformat(),'state':'E78_completion_audited','step':29000}
+write(HERE/'study.json',study)
+print('E78 completion tradeoff recorded')

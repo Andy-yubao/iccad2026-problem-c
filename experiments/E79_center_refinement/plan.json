@@ -1,0 +1,23 @@
+{
+  "experiment": "E79_center_refinement",
+  "phase": 2,
+  "phase_candidate": 2,
+  "seed": 0,
+  "train": 32000,
+  "dev_monitor": 500,
+  "batch_size": 32,
+  "max_hours": 2,
+  "max_epochs": 200,
+  "test_read": false,
+  "source": "Unique own-Loss E78 best21; entire source frozen/eval",
+  "architecture": "New96-node/32-message center-only corrector21763 parameters, zero output initialization. Source5873659 parameters fixed; all widths/heights and MIB coherence kept. Centers clipped into same E74 public predicted frame.",
+  "initial_function": "Physical output exactly E78 within FP32 tolerance; no shape projection change",
+  "output_contract": "6 channels: predicted canonical state3, detached public source canonical state3. Decoder reads first3, Loss uses latter3 only as public source-regression anchor. No label enters model inputs.",
+  "fixed_loss": "G+4I+5E+.1R, R=mean+.25max squared one-sided source native-axis/order margin shortfall, margin capped.1. A fromE78 removed: dimensions fixed so its selected-path derivative cannot train center motion.",
+  "R_goal": "Zero at source. Penalize deterioration only; do not reward moving already healthy nonintersecting pairs farther apart or matching arbitrary reference topology.",
+  "hypothesis": "E78 nearly eliminates MIB preparation jumps but worsens1964/2000 raw overlaps vsE77. Preserve coherent shape/repair behavior, add positional capacity and stronger real intersection signal with soft source-order guard.",
+  "limits": "Source topology may be wrong; soft guard can hinder needed rearrangement. Local center motion may not suffice. Frozen shape removes adaptation. No hard legality guarantee; combined experiment not isolated attribution.",
+  "optimizer": "Fresh new-head AdamW, clip1, decay.0003, original4 LR/early-stop; source optimizer/budgets untouched",
+  "selection": "Same fixed own Loss train/dev500/full-dev; epoch0 eligible; one unique best terminal500, no Q selection",
+  "data": "Same nested32k and v5 dev/monitor members; train500 remains old16k only; FP32"
+}
