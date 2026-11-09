@@ -1,0 +1,39 @@
+{
+  "count": 500,
+  "phase_counts": {
+    "shape": 2575,
+    "project": 500,
+    "certified_rigid_moves": 500,
+    "early_projection": 11,
+    "full_packed_refine": 8
+  },
+  "statistics": {
+    "shape_candidate_count": {
+      "mean": 5.15,
+      "p95": 8.0,
+      "max": 49.0
+    },
+    "failed_shape_candidate_count": {
+      "mean": 0.712,
+      "p95": 2.0499999999999545,
+      "max": 29.0
+    },
+    "inference_seconds": {
+      "mean": 0.10883856400102376,
+      "p95": 0.1789139400061685,
+      "max": 0.2758627000148408
+    },
+    "postprocess_seconds": {
+      "mean": 0.18708010740042663,
+      "p95": 0.49208277499419634,
+      "max": 3.030532700009644
+    },
+    "seconds": {
+      "mean": 0.29608599160064475,
+      "p95": 0.6673685700137862,
+      "max": 3.1059612999670208
+    }
+  },
+  "note": "read-only historical measurements; no new solve; different panel/hardware load from five-case microbenchmark",
+  "test_read": false
+}

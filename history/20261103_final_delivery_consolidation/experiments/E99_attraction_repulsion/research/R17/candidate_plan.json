@@ -1,0 +1,19 @@
+{
+  "revision": "E99.R17.active_rectangle_face_shape.v1",
+  "status": "registered_after_saved_operation_audit_before_candidate_numerical_runs",
+  "single_hypothesis": "Replace only radial_i*(ux^2-uy^2) strain coefficient with the frozen-direction derivative of the active joint rectangle contact face; keep every center force, mass, damping and allowance unchanged from R15 attraction_equal_slope, the best completed train500 AR control.",
+  "evidence": "R17 read-only audit of all train500 saved operations reconstructs old stresses to4.3e-14;20.096% strong-attraction free-module net stress operations have opposite sign to active-face derivative. No contact-face numerical ties observed. This does not establish finalQ benefit.",
+  "equation": "x-face dr/dqi=wi/(2|ux|); y-face=-hi/(2|uy|). Numerical tie within1e-11 relative joint radii uses mean of both. This is a conditional strain law, not a conservative center force or global stability claim.",
+  "configuration": {"iterations":20,"step_size":0.5,"step_fraction":0.05,"total_fraction":0.4,"attraction_range":0.5,"attraction_strength":1.0,"repulsion_strength":1.0,"shape_step_size":0.5,"shape_step_fraction":0.03,"shape_total_fraction":0.5,"exclude_exhausted":true,"area_attraction":false,"rectangle_faces":true},
+  "control": "R15 attraction_equal_slope saved same500; weightedQ1.010848448528. Historical noAR control also retained. No repeated control solves.",
+  "panel": "v5.train_monitor500 same frozen C3 drafts and public inputs, original order; no dev exposure or test access",
+  "pipeline": "area-preserving pureAR -> byte-identical original planner/config -> original hard checks; official neutral-time evaluation after timer",
+  "preflight": {"indices":[0,4,43,95,135],"checks":"unchanged branch vs R15 full histories bit-exact; candidate capture/production bit-exact; area, path/shape budgets, locks; original full integration official and independent legality. Five candidate final records reused in500."},
+  "trajectory_logging": "Every case every module every round forces/mass-scaled response/limits/stress/shape/coordinates; diagnostic capture and serialization outside production AR+planner+hard timer. Production prefix exact against saved trajectory.",
+  "timing": "Cached-draft CPU preprocessing+unchanged planner+hard only; no fresh C3 or complete latency acceptance. Historical controls unpaired for timing; do not claim measured speedup.",
+  "execution": "Single worker1 math thread, sharedOS lock, source and member binding, atomic case records, STOP at case boundaries. Source-bound explicit resume only; failures saved and diagnosed, no automatic retry or automatic dev launch.",
+  "preflight_output": "runs/research/20261103_R17_rectangle_face_preflight5",
+  "output": "runs/research/20261103_R17_rectangle_face_train500",
+  "after": "Review complete train500 before choosing one frozen candidate for fresh complete dev500 and original fixed100 four-stage gallery. No planner changes or coefficient sweep.",
+  "test_read": false,"new_training": false
+}

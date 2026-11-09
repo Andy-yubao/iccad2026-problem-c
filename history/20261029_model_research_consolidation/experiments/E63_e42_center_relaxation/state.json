@@ -1,0 +1,145 @@
+{
+  "status": "complete",
+  "arm": "all",
+  "stage": "complete",
+  "updated_utc": "2026-10-27T11:35:38.000790+00:00",
+  "controller_pid": 40912,
+  "child_pid": null,
+  "outputs": {
+    "control": "runs\\20261027_control_seed0",
+    "weight075": "runs\\20261027_weight075_seed0",
+    "softband005": "runs\\20261027_softband005_seed0"
+  },
+  "max_training_hours": 6,
+  "events": [
+    {
+      "status": "running",
+      "arm": "control",
+      "stage": "train",
+      "utc": "2026-10-27T09:49:45.810504+00:00"
+    },
+    {
+      "status": "stage_complete",
+      "arm": "control",
+      "stage": "train",
+      "utc": "2026-10-27T10:19:04.573081+00:00"
+    },
+    {
+      "status": "running",
+      "arm": "weight075",
+      "stage": "train",
+      "utc": "2026-10-27T10:19:04.584078+00:00"
+    },
+    {
+      "status": "stage_complete",
+      "arm": "weight075",
+      "stage": "train",
+      "utc": "2026-10-27T10:50:34.432511+00:00"
+    },
+    {
+      "status": "running",
+      "arm": "softband005",
+      "stage": "train",
+      "utc": "2026-10-27T10:50:34.445040+00:00"
+    },
+    {
+      "status": "stage_complete",
+      "arm": "softband005",
+      "stage": "train",
+      "utc": "2026-10-27T11:20:40.461932+00:00"
+    },
+    {
+      "status": "running",
+      "arm": "control",
+      "stage": "final",
+      "utc": "2026-10-27T11:20:40.472991+00:00"
+    },
+    {
+      "status": "stage_complete",
+      "arm": "control",
+      "stage": "final",
+      "utc": "2026-10-27T11:25:02.532447+00:00"
+    },
+    {
+      "status": "running",
+      "arm": "control",
+      "stage": "draft100",
+      "utc": "2026-10-27T11:25:02.546447+00:00"
+    },
+    {
+      "status": "stage_complete",
+      "arm": "control",
+      "stage": "draft100",
+      "utc": "2026-10-27T11:25:42.194722+00:00"
+    },
+    {
+      "status": "running",
+      "arm": "weight075",
+      "stage": "final",
+      "utc": "2026-10-27T11:25:42.206178+00:00"
+    },
+    {
+      "status": "stage_complete",
+      "arm": "weight075",
+      "stage": "final",
+      "utc": "2026-10-27T11:29:57.598825+00:00"
+    },
+    {
+      "status": "running",
+      "arm": "weight075",
+      "stage": "draft100",
+      "utc": "2026-10-27T11:29:57.609825+00:00"
+    },
+    {
+      "status": "stage_complete",
+      "arm": "weight075",
+      "stage": "draft100",
+      "utc": "2026-10-27T11:30:37.414224+00:00"
+    },
+    {
+      "status": "running",
+      "arm": "softband005",
+      "stage": "final",
+      "utc": "2026-10-27T11:30:37.454710+00:00"
+    },
+    {
+      "status": "stage_complete",
+      "arm": "softband005",
+      "stage": "final",
+      "utc": "2026-10-27T11:34:49.971395+00:00"
+    },
+    {
+      "status": "running",
+      "arm": "softband005",
+      "stage": "draft100",
+      "utc": "2026-10-27T11:34:49.983417+00:00"
+    },
+    {
+      "status": "stage_complete",
+      "arm": "softband005",
+      "stage": "draft100",
+      "utc": "2026-10-27T11:35:29.500784+00:00"
+    },
+    {
+      "status": "running",
+      "arm": "all",
+      "stage": "report",
+      "utc": "2026-10-27T11:35:29.512807+00:00"
+    },
+    {
+      "status": "stage_complete",
+      "arm": "all",
+      "stage": "report",
+      "utc": "2026-10-27T11:35:37.998655+00:00"
+    },
+    {
+      "status": "complete",
+      "arm": "all",
+      "stage": "complete",
+      "utc": "2026-10-27T11:35:38.000790+00:00"
+    }
+  ],
+  "test_read": false,
+  "report": "runs/review.md",
+  "baseline_promoted": false
+}

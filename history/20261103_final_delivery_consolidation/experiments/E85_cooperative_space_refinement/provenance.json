@@ -1,0 +1,19 @@
+{
+  "parents": {
+    "placer": {
+      "checkpoint": "experiments/E74_collision_32k_posttrain/runs/20261029_e42_topology_seed0/checkpoints/best.pt",
+      "sha256": "5a26012c7e7f2f46f0f042040598a965b6037cc458a3991b8f1ba2db5cd63576"
+    },
+    "correction": {
+      "checkpoint": "experiments/E81_multisource_refinement/runs/20261029_e42_multisource_seed0/checkpoints/best.pt",
+      "sha256": "041c29c73ed1fa0a6dc9b365afc9634a0782c8a9a67bd395abff5aebca63928d"
+    }
+  },
+  "protected_checkpoints_sha256": {
+    "experiments/E74_collision_32k_posttrain/runs/20261029_e42_topology_seed0/checkpoints/best.pt": "5a26012c7e7f2f46f0f042040598a965b6037cc458a3991b8f1ba2db5cd63576",
+    "experiments/E81_multisource_refinement/runs/20261029_e42_multisource_seed0/checkpoints/best.pt": "041c29c73ed1fa0a6dc9b365afc9634a0782c8a9a67bd395abff5aebca63928d"
+  },
+  "previous_global_charged_seconds": 34604.39659300004,
+  "test_read": false,
+  "copied_source": "Independent copy of E81 training/inference/repair infrastructure; no cross-experiment private imports"
+}

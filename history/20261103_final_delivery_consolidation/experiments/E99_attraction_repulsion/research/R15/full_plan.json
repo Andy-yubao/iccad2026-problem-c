@@ -1,0 +1,17 @@
+{
+  "revision":"E99.R15.original_full_planner_mechanism_controls.v1",
+  "registration_basis":"Completed fixed train500 trajectory audit: baseline212 cases harmful global freeze, budget_gate2; stronger attraction decreases void but worsens worst-module coverage. Less than1.6% modules use all40% center path and only1 free module of30520 hits50% shape budget. Final full planner must decide quality; no additional budget/shape coefficient chosen from these proxy metrics.",
+  "arms":["baseline20","budget_gate","attraction_equal_slope","bounded_area_source"],
+  "configs":"Exactly frozen R15 operator.variants/replay_plan; no new coefficients. All four original-planner arms run once on train500, rotate arm order by fixed case index; do not select by dev.",
+  "panel":"v5.train_monitor500 frozen order and original members; cached identical C3/public inputs",
+  "pipeline":"fresh native pure AR capture=False -> unchanged original planner.optimize with byte-identical planner_config.json -> unchanged public hard checks -> official scoring after timer",
+  "timing":"CPU cached-draft-to-final processing including AR/planner/required hard checks; no C3 inference or public neural features. Cold native/warmup separately. Original no-AR control quality reused from completed frozen train500; original control timing historical and not paired. No complete250ms claim from this stage.",
+  "preflight":{"indices":[0,4,43,95,135],"checks":"same5 cases, each4 arms original full backend integration, official and independent hard checks, exact prefix equality to saved trajectory, immutable planner hashes"},
+  "preflight_reuse":"The20 completed same-identity integration records/coordinates are reused read-only in full train panel, no repeated solves. All500 members retained per arm, fresh/reused counts explicit.",
+  "source_boundary":"Only original public tuple and C3 draft enter AR/planner; reference geometry/denominators used only for scoring after timer. No grouping/boundary/MIB force added in AR; original planner retains its original handling.",
+  "output":"runs/research/20261103_R15_AR_original_planner_train500",
+  "preflight_output":"runs/research/20261103_R15_original_planner_preflight5",
+  "execution":"single CPU numerical worker/math thread, shared OS lock, atomic case saves, STOP at case/arm boundary; explicit resume same identity only; no automatic retry or new candidates",
+  "freeze_after":"Review all500 quality/hard/timing outcomes and diagnostics, freeze a justified whole operator configuration before any fresh complete C3 dev500 acceptance. Original full planner remains unchanged. Produce four-stage saved-coordinate same100 gallery after timing if candidate is reviewed.",
+  "test_read":false,"new_training":false,"automatic_dev_launch":false
+}

@@ -1,0 +1,13 @@
+Verified archived cache loaded: train 5 cases
+Traceback (most recent call last):
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "E:\project\ICCAD\2026\problemC\experiments\E96_port_compression\preflight.py", line 151, in <module>
+    if __name__=='__main__':main()
+  File "E:\project\ICCAD\2026\problemC\experiments\E96_port_compression\preflight.py", line 144, in main
+    gc.collect();torch.cuda.empty_cache();result['graph']=graph_check(arm,rows,eager_first)
+  File "E:\project\ICCAD\2026\problemC\experiments\E96_port_compression\preflight.py", line 116, in graph_check
+    assert parameter_error<3e-5 and loss_error<2e-5
+AssertionError

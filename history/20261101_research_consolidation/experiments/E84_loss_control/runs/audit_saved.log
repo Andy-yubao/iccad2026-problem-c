@@ -1,0 +1,145 @@
+Verified archived cache loaded: train 5 cases
+{
+  "loss_improvement": {
+    "train_monitor": {
+      "initial": 0.2983167769908905,
+      "best": 0.2805134174823761,
+      "fraction": 0.05967937736555129
+    },
+    "dev_monitor": {
+      "initial": 0.35212722611427305,
+      "best": 0.3290966031551361,
+      "fraction": 0.06540426655808484
+    }
+  },
+  "source_components": {
+    "train_monitor": {
+      "P42_total": {
+        "initial": 0.28339805722236633,
+        "best": 0.2660833773612976
+      },
+      "P74_total": {
+        "initial": 0.3032554805278778,
+        "best": 0.2860672767162323
+      },
+      "true_intersection": {
+        "initial": 0.02591316905617714,
+        "best": 0.046485374599695206
+      },
+      "anchored_corridor": {
+        "initial": 0.1462485774755478,
+        "best": 0.37815531086921694
+      },
+      "P74_true_intersection": {
+        "initial": 0.02292272174358368,
+        "best": 0.04309934318065643
+      },
+      "P74_anchored_corridor": {
+        "initial": 0.08964316803216935,
+        "best": 0.257306764125824
+      },
+      "common_original_G": {
+        "initial": 0.28339805722236633,
+        "best": 0.2660833773612976
+      }
+    },
+    "dev_monitor": {
+      "P42_total": {
+        "initial": 0.35801415085792543,
+        "best": 0.3339130256175995
+      },
+      "P74_total": {
+        "initial": 0.3352459287643433,
+        "best": 0.3147074649333954
+      },
+      "true_intersection": {
+        "initial": 0.02838411299884319,
+        "best": 0.04887221631407738
+      },
+      "anchored_corridor": {
+        "initial": 0.14877995324134827,
+        "best": 0.41161259734630584
+      },
+      "P74_true_intersection": {
+        "initial": 0.024199125826358796,
+        "best": 0.04416702216863632
+      },
+      "P74_anchored_corridor": {
+        "initial": 0.11621329480409623,
+        "best": 0.2687815157175064
+      },
+      "common_original_G": {
+        "initial": 0.35801415085792543,
+        "best": 0.3339130256175995
+      }
+    }
+  },
+  "paired_overlap2000_vs_E42": {
+    "count": 2000,
+    "current_mean": 0.04815822535490369,
+    "baseline_mean": 0.06302022655951652,
+    "mean_delta": -0.014862001204612825,
+    "worker_resampling95": [
+      -0.015423617180720354,
+      -0.014307440855616237
+    ],
+    "better_equal_worse": [
+      1935,
+      0,
+      65
+    ]
+  },
+  "paired_overlap2000_vs_E81": {
+    "count": 2000,
+    "current_mean": 0.04815822535490369,
+    "baseline_mean": 0.024910366620204585,
+    "mean_delta": 0.0232478587346991,
+    "worker_resampling95": [
+      0.0222374258522203,
+      0.024319547260399227
+    ],
+    "better_equal_worse": [
+      0,
+      0,
+      2000
+    ]
+  },
+  "paired_geometry500_vs_E81": {
+    "bbox_over_A": {
+      "count": 500,
+      "current_mean": 1.0318127388373837,
+      "baseline_mean": 1.0406676094506477,
+      "mean_delta": -0.008854870613263672,
+      "worker_resampling95": [
+        -0.009234911351003969,
+        -0.00849304750492473
+      ],
+      "better_equal_worse": [
+        500,
+        0,
+        0
+      ]
+    },
+    "void_over_bbox": {
+      "count": 500,
+      "current_mean": 0.07776410025239698,
+      "baseline_mean": 0.06324715677393761,
+      "mean_delta": 0.01451694347845937,
+      "worker_resampling95": [
+        0.01344775325965396,
+        0.015666413039092855
+      ],
+      "better_equal_worse": [
+        7,
+        0,
+        493
+      ]
+    }
+  },
+  "frame_containment500": {
+    "source": "authenticated saved own public E42 prediction; source weights unchanged, FP32 tolerance applies",
+    "max_normalized_excess": 2.8361393894608564e-07,
+    "tolerance": 3e-06,
+    "violations": 0
+  }
+}

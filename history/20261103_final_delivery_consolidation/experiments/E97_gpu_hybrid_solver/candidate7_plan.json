@@ -1,0 +1,72 @@
+{
+  "candidate": 7,
+  "status": "registered_before_preflight",
+  "name": "normalized_geometry_adapter",
+  "hypothesis": "C6 same-five activation/gradient audit found trained readout all negative with RMS79..548 and trunk gradients around1e-7 while output-bias gradient~.3. Test post-block LayerNorm and fresh normalized readout to avoid copied head saturation; same4-block geometry task/Loss and same3 CPU shape steps.",
+  "model": "Frozen C1 E74+F; same4 width192 RectangleBlocks, new post-block LayerNorm and head LayerNorm+fresh Linear192/SiLU/zero final Linear3; local .25 residual masks as C6. No CPU postprocessor/port representation change.",
+  "source_checkpoint": "experiments/E97_gpu_hybrid_solver/runs/20261102_candidate1_distill_seed0/checkpoints/best.pt",
+  "source_sha256": "5590e672cbb05a862f739452fe6432846287ea906c83782f84a0dfdb5d486b50",
+  "initialization": "Original C1 frozen source and E74 last4 blocks/input/state_embed as C6; fresh normalized readout hidden instead of pretrained E74 readout, final output0, post norms gamma1/beta0; initial function exactly C1. Fresh AdamW/seed0; do not load C6 saturated adapter.",
+  "data": "v5 frozen first16000 train and same dev_monitor500; train_monitor500 reuse train labels; source has inherited32k exposure",
+  "teacher": {
+    "method": "Read-only reuse completed16500 public-solver teacher, no generation",
+    "inputs": "public specs/connectivity/current frozen NN draft only, no free reference geometry or official score denominators",
+    "labels": "center/log-aspect of final public-solver geometry; stored only as supervision, never network input",
+    "usable": "strict public hard-legal, finite, not row_control fallback; all members retained, fallback labels carry zero imitation weight",
+    "panel": "train16000+dev_monitor500 only; no full dev2000 or test teacher generation",
+    "workers": 4,
+    "worker_torch_threads": 1,
+    "solver_threads": 2,
+    "wall_cap_seconds": 5400
+  },
+  "loss": {
+    "total": "teacher_usable*(center_local + 0.25*shape_logratio_mse + 0.25*teacher_near_pair_relative_local)",
+    "center": "SmoothL1(beta0.1), center errors normalized by sqrt(public area), public free-variable mask",
+    "shape": "squared log(w/h) difference on free shapes",
+    "relative": "SmoothL1(beta0.1) normalized pair center difference; teacher near pairs within0.25 mean local scale, at least one free center",
+    "scope": "Exactly C1 teacher center1 + shape.25 + near-relative.25, same definitions and coefficients; a global-capacity test, no C2-C5 relation Loss or C3 clearance term.",
+    "monitoring": "same per-case total for backward/train500/dev500/best/LR/early-stop, mean over all frozen panel members; zero-weight cases included and counted"
+  },
+  "optimization": {
+    "batch_size": 32,
+    "precision": "FP32 no AMP/TF32",
+    "optimizer": "AdamW",
+    "weight_decay": 0.0003,
+    "clip_norm": 1.0,
+    "seed": 0,
+    "lr_levels": [
+      0.001,
+      0.00025,
+      0.0001,
+      5e-05
+    ],
+    "protection_epochs": 0,
+    "baseline_epoch0": true,
+    "lr_bad_rounds": 3,
+    "min_delta": "max(1e-5,abs(best)*.001)",
+    "lowest_wait_epochs": 2,
+    "max_epochs": 100,
+    "max_training_seconds": 3600,
+    "no_old9872step_cap": true
+  },
+  "engine": "Same CUDA graph/guarded Adam batch32 FP32; new normalization numerical path registered. Preflight actual updates/resume/finite/frozen-C1 and activation/hidden-gradient conditioning on original5; per-epoch original5 eval-only activation diagnostic added, no optimizer/RNG/model mutation, does not select best or drive LR/early-stop.",
+  "terminal": "Own-Loss unique best once full dynamic-native slim3 dev500 complete single-case latency and rawdev2000 new geometry diagnostics + same100 fourstage gallery. No teacher input at inference; C1 same-budget control reused. If selected initial zero adapter, prune it/reuse old C1 terminal and raw evidence, create only missing new gallery from saved coordinates.",
+  "caveats": [
+    "Original-five C6 saturation audit is a mechanism diagnostic, not proof of identical behavior on all training members. C6 is an optimization failure, not evidence against capacity.",
+    "Postnorm/readout reset is a new model and numerical path; no claim of ordinary continuation or equivalent C6 training.",
+    "Same teacher imitation task can still fail quality target even if optimization improves. Final Q/hard legality/latency remain required.",
+    "Nominal-area/teacher tolerance mismatch,9train target aspect>5 and possible MIB drift remain."
+  ],
+  "preflight_ids": [
+    1683,
+    10027,
+    5474,
+    10140,
+    15001
+  ],
+  "training_start_gate": "C6 complete and bounded original5 forward/backward activation diagnostic complete; C7 actual graph/update/resume/finite/frozen-source/initial-C1 equality, post-two-update hidden gradients and readout scale, new architecture batch1 path checks pass",
+  "formal_training_started": false,
+  "test_read": false,
+  "revision": "v1",
+  "control": "Initial adapter readout0 means exact C1 geometry/old dynamic-native slim3 quality; reuse completed C1 dev500 control. If own-Loss best remains initial, prune identically-zero adapter and reuse completed C1 solve, no duplicate Q evaluation. New adapter latency checked on original5 before training and actual complete dev500 terminal if improved."
+}

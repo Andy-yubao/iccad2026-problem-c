@@ -1,0 +1,24 @@
+{
+  "revision": "E70.full_ports_public_task_loss.v1",
+  "authorization": "Prepare new Loss plus complete ports; give command, do not launch formal training. No multi-seed.",
+  "arms": [
+    "full_ports"
+  ],
+  "initialization": "Scratch seed0; exact same architecture/initialization/order as E68 v2, fresh optimizer and scheduler. Existing E68 is the saved architecture control; no warm-start.",
+  "data": "Frozen v5 train16000 and fixed train/dev500; raw dev2000 and sole selected-best flash500; tests sealed.",
+  "loss": "Exact ten-term proposal.json weights. Only position and shape read target. All task terms strictly reject target/reference input.",
+  "selection": "The same new total for backward, monitor, best, LR and early stop. Old G diagnostics never select weights.",
+  "engine": "FP32 CUDA graph including GPU Prim forest; no CPU MST, AMP or batch changes.",
+  "budget": {
+    "formal_runs": 1,
+    "max_hours": 3,
+    "max_epochs": 200,
+    "batch_size": 32,
+    "seed": 0
+  },
+  "evaluation": "New total and common old G reported separately; raw overlap/feasibility and low-pin sparse subsets, fixed sole best flash500 and same100 no-rating pictures. Historical E42/E64/E65/E68 evidence reused; no new baseline run.",
+  "preflight": "Same5 train members; component/gradient scale sanity, label independence, scalar and gradient consistency, padding, normalized official wirelength, GPU/eager Adam, nonfinite protection and exact Dropout resume; five analytic geometry fixtures.",
+  "continuation": "One candidate only; no automatic next experiment or heartbeat.",
+  "training_started": false,
+  "test_read": false
+}

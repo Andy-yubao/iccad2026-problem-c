@@ -1,0 +1,208 @@
+{
+  "geometry_pairs": {
+    "E87": {
+      "max_covered_fraction": {
+        "count": 500,
+        "current": 0.42437996339147555,
+        "baseline": 0.555477736629766,
+        "difference": -0.1310977732382904,
+        "worker_bootstrap95": [
+          -0.14558408474977466,
+          -0.11691298508987005
+        ],
+        "better": 422,
+        "worse": 78,
+        "equal": 0,
+        "weighted_by_module_count": false
+      },
+      "module_pass10_fraction": {
+        "count": 500,
+        "current": 0.5993158494868871,
+        "baseline": 0.5935005701254276,
+        "difference": 0.0058152793614595225,
+        "worker_bootstrap95": [
+          0.0005619103226143447,
+          0.011118922563638655
+        ],
+        "better": 239,
+        "worse": 215,
+        "equal": 46,
+        "weighted_by_module_count": true
+      },
+      "pair_intersection_fraction": {
+        "count": 500,
+        "current": 0.05474890987771181,
+        "baseline": 0.057044080986749165,
+        "difference": -0.0022951711090373507,
+        "worker_bootstrap95": [
+          -0.0032146220323967527,
+          -0.0014092526245837655
+        ],
+        "better": 259,
+        "worse": 241,
+        "equal": 0,
+        "weighted_by_module_count": false
+      },
+      "bbox_over_A": {
+        "count": 500,
+        "current": 1.0296640892191757,
+        "baseline": 1.032816949515829,
+        "difference": -0.0031528602966530536,
+        "worker_bootstrap95": [
+          -0.0036081104482568616,
+          -0.002687773079901668
+        ],
+        "better": 363,
+        "worse": 137,
+        "equal": 0,
+        "weighted_by_module_count": false
+      },
+      "empty_fraction_of_bbox": {
+        "count": 500,
+        "current": 0.08160846273903304,
+        "baseline": 0.08646843181869886,
+        "difference": -0.004859969079665811,
+        "worker_bootstrap95": [
+          -0.005733873276341285,
+          -0.0039965110736094175
+        ],
+        "better": 342,
+        "worse": 158,
+        "equal": 0,
+        "weighted_by_module_count": false
+      }
+    },
+    "E74": {
+      "max_covered_fraction": {
+        "count": 500,
+        "current": 0.42437996339147555,
+        "baseline": 0.5550558907803661,
+        "difference": -0.1306759273888905,
+        "worker_bootstrap95": [
+          -0.14535732849742783,
+          -0.11596485967765792
+        ],
+        "better": 417,
+        "worse": 83,
+        "equal": 0,
+        "weighted_by_module_count": false
+      },
+      "module_pass10_fraction": {
+        "count": 500,
+        "current": 0.5993158494868871,
+        "baseline": 0.6259977194982896,
+        "difference": -0.026681870011402507,
+        "worker_bootstrap95": [
+          -0.03233404833618931,
+          -0.02145426713996471
+        ],
+        "better": 151,
+        "worse": 305,
+        "equal": 44,
+        "weighted_by_module_count": true
+      },
+      "pair_intersection_fraction": {
+        "count": 500,
+        "current": 0.05474890987771181,
+        "baseline": 0.05161241437299858,
+        "difference": 0.0031364955047132356,
+        "worker_bootstrap95": [
+          0.0025677422758975943,
+          0.003682368839097224
+        ],
+        "better": 150,
+        "worse": 350,
+        "equal": 0,
+        "weighted_by_module_count": false
+      },
+      "bbox_over_A": {
+        "count": 500,
+        "current": 1.0296640892191757,
+        "baseline": 1.0367825401622788,
+        "difference": -0.007118450943102794,
+        "worker_bootstrap95": [
+          -0.007916454650159494,
+          -0.006327791770627446
+        ],
+        "better": 422,
+        "worse": 78,
+        "equal": 0,
+        "weighted_by_module_count": false
+      },
+      "empty_fraction_of_bbox": {
+        "count": 500,
+        "current": 0.08160846273903304,
+        "baseline": 0.08474395689159274,
+        "difference": -0.003135494152559709,
+        "worker_bootstrap95": [
+          -0.003899644958528067,
+          -0.0023854721977545888
+        ],
+        "better": 293,
+        "worse": 207,
+        "equal": 0,
+        "weighted_by_module_count": false
+      }
+    }
+  },
+  "raw_pairs": {
+    "all2000": {
+      "count": 2000,
+      "current": 0.05442034250162526,
+      "baseline": 0.050861597802509546,
+      "difference": 0.0035587446991157197,
+      "worker_bootstrap95": [
+        0.0032290405731465422,
+        0.0038899415301136813
+      ],
+      "better": 505,
+      "worse": 1495,
+      "equal": 0,
+      "weighted_by_module_count": false
+    },
+    "weak_port_sparse157": {
+      "count": 157,
+      "current": 0.08457203108081567,
+      "baseline": 0.07936994357898469,
+      "difference": 0.00520208750183098,
+      "worker_bootstrap95": [
+        0.00293600137728853,
+        0.007588350601370384
+      ],
+      "better": 47,
+      "worse": 110,
+      "equal": 0,
+      "weighted_by_module_count": false
+    }
+  },
+  "coverage2000": {
+    "module_count": 140609,
+    "module_pass10_pooled": 0.5984752042899103,
+    "layout_all_modules_pass10": 0,
+    "worst_module_coverage_mean": 0.4320735669233443,
+    "worst_module_coverage_p95": 0.7804729478460714,
+    "worst_module_coverage_max": 1.0
+  },
+  "worst_Q_regressions": [
+    {
+      "index": 245,
+      "member": [
+        "worker_56/layouts_2576.th",
+        95
+      ],
+      "E90_Q": 1.2920684533981324,
+      "E87_Q": 1.0295326438513406,
+      "difference": 0.2625358095467918
+    },
+    {
+      "index": 324,
+      "member": [
+        "worker_69/layouts_3696.th",
+        25
+      ],
+      "E90_Q": 1.3500142834293227,
+      "E87_Q": 1.166809343311875,
+      "difference": 0.1832049401174478
+    }
+  ]
+}

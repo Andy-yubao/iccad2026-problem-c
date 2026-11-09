@@ -1,0 +1,38 @@
+{
+  "status": "complete_audited",
+  "viewed_images": [
+    {
+      "arm": "P42_ops_only",
+      "index": 217,
+      "sha256": "d9501e65e2e7dc6786350dfc23db05b1964d00993616f673594216ca07394a06"
+    },
+    {
+      "arm": "P74_frozen_F81",
+      "index": 217,
+      "sha256": "deca930275806f16ce85273512601b6a48c953efa114b0050eb865bd36a03bac"
+    },
+    {
+      "arm": "P74_frozen_F81",
+      "index": 450,
+      "sha256": "51b85dbbe35b4c6b982c426196eda956766bfbafb7425fa1686b58ba505f8cc3"
+    },
+    {
+      "arm": "P74_frozen_F81",
+      "index": 194,
+      "sha256": "53b820be6748725878f24609dca6f2360aca108ad45e98e181be6183913f51bf"
+    }
+  ],
+  "production_sources_unchanged": true,
+  "new_terminal_runs": 2,
+  "old_terminal_reruns": 0,
+  "training_updates": 0,
+  "test_read": false,
+  "findings": [
+    "Learned F81 materially improves over deterministic-only deployment control",
+    "Stronger P74 improves raw geometry but not terminal Q reliably; tail450 failed",
+    "Next informative training control is same-initialization G-only vs existing full-objective E81"
+  ],
+  "next_experiment": "E84_loss_control",
+  "next_training_not_yet_started": true,
+  "utc": "2026-10-29T15:49:07.618895+00:00"
+}

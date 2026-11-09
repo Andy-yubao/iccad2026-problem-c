@@ -1,0 +1,23 @@
+{
+  "revision": "E95.engine_migration.v4",
+  "authorization": "用户：如果工程差距问题是可修复的，停止当前训练，修复，并续训。实验预算恢复2h",
+  "source_run": "experiments/E95_single_pass_corrector/runs/20261101_direct_bbox846_seed0",
+  "latest_sha256": "e7e6d44c15467d7cbca55ec886c8cca0151828da4e9b6f332b00ae412b30721c",
+  "best_sha256": "94ad8883fb59f2d1961b7a413af2a10e0bef5878a7893de9b6fcb22f6ad84cf9",
+  "source_config_sha256": "10231586ed8fca92ffd442bfa2a3f5274a4cb2f3f57e03b63aa82499d322c5ca",
+  "starting_step": 4481,
+  "starting_cursor": 15392,
+  "starting_epoch": 8,
+  "prior_family_training_seconds": 9759.187861100025,
+  "new_training_window_seconds": 7200,
+  "restore": "model/Adam/RNG/order/cursor/seen/LR/scheduler/early-stop/history/best; warmup has no Adam update",
+  "engine": "FP32 efficient SDPA plus fixed32x120x480 CUDA graph, guarded original AdamW",
+  "numerical_boundary": "same mathematical network/task/batch32/FP32; kernel reduction and padding change floating order and Dropout stream consumption; no claim of old-path bitwise continuation",
+  "old_max9872_steps": "superseded by explicit fresh2h authorization; total max200epochs/100000steps and original early-stop remain",
+  "checks": "runs/20261101_engine_repair/check.json",
+  "check_sha256": "4eb2d9056122f5fb34b2f394dd1e2adb452188539861045e5a47f85db419d2f0",
+  "best_monitor": "revalidate inherited own-Loss best on same dev500, within2e-5, preserve scheduler state",
+  "test_read": false,
+  "progress_preserved": true,
+  "Adam_and_scheduler_preserved": true
+}

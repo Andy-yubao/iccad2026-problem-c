@@ -1,0 +1,179 @@
+{
+  "experiment": "E57_capacity_data_diagnosis",
+  "status": "predeclared immutable plan; runtime status is under runs/20261026_study_control",
+  "questions": [
+    "Can the current architecture empirically fit a small reference set? Does increasing capacity help under matched input/loss/update budget?",
+    "Does development quality still improve with nested training-set size up to 16000?"
+  ],
+  "max_hours": 12,
+  "tasks": [
+    {
+      "name": "20261026_fit32_reference96_seed0",
+      "kind": "memory",
+      "arm": "reference96",
+      "seed": 0,
+      "dataset_size": 32,
+      "block_steps": 64,
+      "max_hours": 0.5
+    },
+    {
+      "name": "20261026_fit32_reference96_noreg_seed0",
+      "kind": "memory",
+      "arm": "reference96_noreg",
+      "seed": 0,
+      "dataset_size": 32,
+      "block_steps": 64,
+      "max_hours": 0.5
+    },
+    {
+      "name": "20261026_fit32_reference160_noreg_seed0",
+      "kind": "memory",
+      "arm": "reference160_noreg",
+      "seed": 0,
+      "dataset_size": 32,
+      "block_steps": 64,
+      "max_hours": 0.5
+    },
+    {
+      "name": "20261026_data16000_geometry96_seed0",
+      "kind": "data",
+      "arm": "geometry96",
+      "seed": 0,
+      "dataset_size": 16000,
+      "block_steps": 500,
+      "max_hours": 2.0
+    },
+    {
+      "name": "20261026_data8192_geometry96_seed0",
+      "kind": "data",
+      "arm": "geometry96",
+      "seed": 0,
+      "dataset_size": 8192,
+      "block_steps": 500,
+      "max_hours": 2.0
+    },
+    {
+      "name": "20261026_data4096_geometry96_seed0",
+      "kind": "data",
+      "arm": "geometry96",
+      "seed": 0,
+      "dataset_size": 4096,
+      "block_steps": 500,
+      "max_hours": 2.0
+    },
+    {
+      "name": "20261026_data2048_geometry96_seed0",
+      "kind": "data",
+      "arm": "geometry96",
+      "seed": 0,
+      "dataset_size": 2048,
+      "block_steps": 500,
+      "max_hours": 2.0
+    },
+    {
+      "name": "20261026_capacity16000_geometry160_seed0",
+      "kind": "capacity",
+      "arm": "geometry160",
+      "seed": 0,
+      "dataset_size": 16000,
+      "block_steps": 500,
+      "max_hours": 2.0
+    },
+    {
+      "name": "20261026_fit32_reference96_seed1",
+      "kind": "memory",
+      "arm": "reference96",
+      "seed": 1,
+      "dataset_size": 32,
+      "block_steps": 64,
+      "max_hours": 0.5
+    },
+    {
+      "name": "20261026_fit32_reference96_noreg_seed1",
+      "kind": "memory",
+      "arm": "reference96_noreg",
+      "seed": 1,
+      "dataset_size": 32,
+      "block_steps": 64,
+      "max_hours": 0.5
+    },
+    {
+      "name": "20261026_fit32_reference160_noreg_seed1",
+      "kind": "memory",
+      "arm": "reference160_noreg",
+      "seed": 1,
+      "dataset_size": 32,
+      "block_steps": 64,
+      "max_hours": 0.5
+    },
+    {
+      "name": "20261026_data16000_geometry96_seed1",
+      "kind": "data",
+      "arm": "geometry96",
+      "seed": 1,
+      "dataset_size": 16000,
+      "block_steps": 500,
+      "max_hours": 2.0
+    },
+    {
+      "name": "20261026_data8192_geometry96_seed1",
+      "kind": "data",
+      "arm": "geometry96",
+      "seed": 1,
+      "dataset_size": 8192,
+      "block_steps": 500,
+      "max_hours": 2.0
+    },
+    {
+      "name": "20261026_data4096_geometry96_seed1",
+      "kind": "data",
+      "arm": "geometry96",
+      "seed": 1,
+      "dataset_size": 4096,
+      "block_steps": 500,
+      "max_hours": 2.0
+    },
+    {
+      "name": "20261026_data2048_geometry96_seed1",
+      "kind": "data",
+      "arm": "geometry96",
+      "seed": 1,
+      "dataset_size": 2048,
+      "block_steps": 500,
+      "max_hours": 2.0
+    },
+    {
+      "name": "20261026_capacity16000_geometry160_seed1",
+      "kind": "capacity",
+      "arm": "geometry160",
+      "seed": 1,
+      "dataset_size": 16000,
+      "block_steps": 500,
+      "max_hours": 2.0
+    }
+  ],
+  "seeds": [
+    0,
+    1
+  ],
+  "batch_size": 32,
+  "max_monitor_blocks": 200,
+  "memory_diagnostic_near_fit_mean_loss": 0.001,
+  "main_monitor_updates": 500,
+  "data_membership": "two public-n-stratified nested families; fixed train_monitor500 included in all main subsets; memory32 selected across public n quantiles from train_monitor500",
+  "memory_selection": "best/LR/early stop use unchanged external dev_monitor500 same reference Loss; minimum fitting32 loss is observational, not another checkpoint selector",
+  "architecture_control": "geometry160 vs geometry96 at full16000 with same fixed G, regularization, seeds and update-block schedule",
+  "initialization": "scratch for all; no original checkpoint overwritten",
+  "interpretation_limits": [
+    "Small-set fitting success does not establish full-distribution capacity sufficiency. Failure is not a proof of insufficient representation; optimization and budget remain alternatives.",
+    "Removing dropout and decay is a declared diagnostic, not a deployment change. Compare capacity with regularization held constant within each pair.",
+    "Each main monitor block has 500 optimizer updates and 16000 sample draws, even when training set is smaller. Record unique layouts, actual data passes and optimizer steps separately.",
+    "Report both matched-update curves and each run selected by its own fixed dev500 objective. Different early-stop times are not silently equal compute.",
+    "Two seeds/families provide preliminary variability, not a reliable universal confidence bound. Data-size gains indicate benefits within observed range; a plateau up to16k does not prove more or targeted data cannot help.",
+    "Synthetic automorphism counterexample establishes a possible universal expression limitation, not its frequency among actual layouts.",
+    "Reference objective and G are distinct; their totals cannot be compared across objectives. Full dev2000 is adaptive development evidence, tests remain sealed.",
+    "Do not infer two-stage pretraining superiority; this study is all scratch initialized."
+  ],
+  "posttraining": "Main data/capacity runs: one best full dev2000 raw diagnostics, then flash500, same random100 no-rating gallery; memory runs: no postprocessor or model promotion",
+  "test_read": false
+}

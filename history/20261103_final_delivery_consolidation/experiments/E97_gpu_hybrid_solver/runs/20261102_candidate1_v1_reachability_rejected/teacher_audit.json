@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "identity_and_coverage_verified": true,
+  "panels": {
+    "train": {
+      "count": 16000,
+      "usable": 16000,
+      "outside_frame_cases": 11372,
+      "outside_normalized_p95": 0.08010190803296044,
+      "outside_normalized_max": 2.1418368058699535,
+      "shape_delta_over_two_stage_0_30_cases": 15999,
+      "max_logratio_delta": 6.444212436676025
+    },
+    "dev_monitor500": {
+      "count": 500,
+      "usable": 500,
+      "outside_frame_cases": 364,
+      "outside_normalized_p95": 0.08302481793411105,
+      "outside_normalized_max": 0.8159569144216572,
+      "shape_delta_over_two_stage_0_30_cases": 500,
+      "max_logratio_delta": 4.042427062988281
+    }
+  },
+  "teacher_results_sha256": "d7a3018242d9b68f35e74e12a6493ce2c494e4c238b6201b06dc5358342537c3",
+  "note": "targets may exceed source frame/per-stage action bounds; count is diagnostic, not deletion or filtered validation",
+  "test_read": false
+}

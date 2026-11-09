@@ -1,0 +1,48 @@
+{
+  "observed_utc": "2026-10-26T18:55:54.425995+00:00",
+  "repair_health": {
+    "status": "passed",
+    "latest_hidden_max": 188.8861083984375,
+    "final_silu_zero_fraction": 0.0001402243651682511,
+    "unique_train_cases": 5,
+    "same_probe_members": [
+      9983,
+      11950,
+      15124,
+      3668,
+      1248
+    ],
+    "test_read": false,
+    "limit": "Five-case activation audit plus full training guards; not proof of universal stability"
+  },
+  "full_dev_fixed_G": 0.35713479137420656,
+  "old_wide_full_dev_fixed_G": 0.5068656649589539,
+  "same_seed": true,
+  "same_train_members": true,
+  "same_training_member_order": false,
+  "old_prefix_indices": [
+    9505,
+    13751,
+    3395,
+    7456,
+    2428,
+    4781,
+    12793,
+    8571
+  ],
+  "repair_prefix_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "same_lr_levels": true,
+  "same_weights": true,
+  "formal_runs_added_this_wake": 0,
+  "test_read": false,
+  "interpretation": "The normalized model trained successfully on this complete single-seed trajectory. Same members and seed but different member ordering mean its Loss improvement is not a strict single-change causal estimate. Prior fixed-weight/same-case graph-branch interventions support the amplification mechanism; no second formal training is started merely to erase this limitation."
+}

@@ -1,0 +1,354 @@
+{
+  "date": "2026-10-24",
+  "revision": "v2: E42 and official results",
+  "facts": [
+    {
+      "id": "F01",
+      "topic": "最终1000例结果",
+      "fact": {
+        "status": "complete",
+        "count": 1000,
+        "hard_legal": 1000,
+        "weighted_Q": 1.0283850300343096,
+        "mean_Q": 1.041447997330943,
+        "median_Q": 1.0149392460109161,
+        "p95_Q": 1.1456415025355786,
+        "CVaR95_Q": 1.3042599264419084,
+        "max_Q": 3.2522510530643385,
+        "seconds_mean": 0.22252202850277536,
+        "seconds_median": 0.1585428500548005,
+        "seconds_p95": 0.5513493399892468,
+        "seconds_max": 3.969368900055997,
+        "over_2s": 9,
+        "sum_solve_seconds": 222.52202850277536,
+        "evaluation_wall_seconds": 109.14000000001397,
+        "row_fallbacks": 0,
+        "execution_errors": 0,
+        "scoring_errors": 0,
+        "workers": 4,
+        "threads_per_worker": 1,
+        "worker_pids": [
+          10772,
+          24988,
+          29144,
+          68888
+        ],
+        "checkpoint_sha256": "12878108e9a58b8c195b314ba6586686c2a6e2796c1f4b6443e102b4db4224a6",
+        "test_read": true,
+        "scope": "v5 MIB mean-area derived task with original-reference denominators",
+        "time_scope": "public graph features + CPU model + decode + full steady optimization/rescue; exclude file/model loading, fixed task transformation, JIT initialization, scoring and evidence IO",
+        "official_contest_score": false,
+        "previously_exposed_100_excluded": true,
+        "by_n": {
+          "21-40": {
+            "count": 211,
+            "hard_legal": 211,
+            "weighted_Q": 1.0529243745595016,
+            "mean_Q": 1.0617997637420662,
+            "seconds_mean": 0.086715227015034
+          },
+          "41-60": {
+            "count": 206,
+            "hard_legal": 206,
+            "weighted_Q": 1.0344408829949443,
+            "mean_Q": 1.035824380679138,
+            "seconds_mean": 0.0906058980612021
+          },
+          "61-80": {
+            "count": 185,
+            "hard_legal": 185,
+            "weighted_Q": 1.0344046787837406,
+            "mean_Q": 1.03405533463078,
+            "seconds_mean": 0.1797232286532636
+          },
+          "81-100": {
+            "count": 199,
+            "hard_legal": 199,
+            "weighted_Q": 1.0504861909860672,
+            "mean_Q": 1.0510726104693835,
+            "seconds_mean": 0.32365840804136015
+          },
+          "101-120": {
+            "count": 199,
+            "hard_legal": 199,
+            "weighted_Q": 1.0239499717228426,
+            "mean_Q": 1.0229383837756936,
+            "seconds_mean": 0.44172603065784477
+          }
+        }
+      },
+      "evidence": [
+        "evidence/E42_final_summary.json"
+      ],
+      "claim_boundary": "本地MIB平均面积任务；不是官方隐藏集成绩。"
+    },
+    {
+      "id": "F02",
+      "topic": "官方比较对象",
+      "fact": "Beta为100例隐藏测试；Alpha为100例公开验证集的接口演练。Beta归档包含raw_score和total_score，Alpha仅包含total_score。",
+      "evidence": [
+        "evidence/C_beta_evaluation_report_hidden_final.txt",
+        "evidence/C_beta_leaderboard_20260823.csv",
+        "evidence/C_Alpha_Top5_20260720.csv"
+      ],
+      "claim_boundary": "用Beta作主要历史参照，不将Alpha带时间总分与本地Q直接相减。"
+    },
+    {
+      "id": "F03",
+      "topic": "官方质量与速度",
+      "fact": [
+        {
+          "rank": 1,
+          "total_score": 0.8586322662042342,
+          "raw_score": 1.0844879596970114,
+          "n_feasible": 100,
+          "total_runtime": 110.90536594390869,
+          "reported_mean_seconds": 1.109053659439087
+        },
+        {
+          "rank": 2,
+          "total_score": 0.888187391,
+          "raw_score": 1.2077155868119098,
+          "n_feasible": 100,
+          "total_runtime": 110.70212531089783,
+          "reported_mean_seconds": 1.1070212531089783
+        },
+        {
+          "rank": 3,
+          "total_score": 0.8993286931994098,
+          "raw_score": 1.284755275999157,
+          "n_feasible": 100,
+          "total_runtime": 24.538896560668945,
+          "reported_mean_seconds": 0.24538896560668946
+        },
+        {
+          "rank": 4,
+          "total_score": 0.9265861161320369,
+          "raw_score": 1.3206649447461247,
+          "n_feasible": 100,
+          "total_runtime": 52.07122778892517,
+          "reported_mean_seconds": 0.5207122778892517
+        },
+        {
+          "rank": 5,
+          "total_score": 0.9507093062865333,
+          "raw_score": 1.170464100597935,
+          "n_feasible": 100,
+          "total_runtime": 133.14852476119995,
+          "reported_mean_seconds": 1.3314852476119996
+        },
+        {
+          "rank": 6,
+          "total_score": 0.9552271810705998,
+          "raw_score": 1.221143796248259,
+          "n_feasible": 100,
+          "total_runtime": 95.25941276550293,
+          "reported_mean_seconds": 0.9525941276550293
+        },
+        {
+          "rank": 7,
+          "total_score": 0.9638548902636931,
+          "raw_score": 1.2555586565077927,
+          "n_feasible": 100,
+          "total_runtime": 60.31833243370056,
+          "reported_mean_seconds": 0.6031833243370056
+        },
+        {
+          "rank": 8,
+          "total_score": 0.9795094024339005,
+          "raw_score": 1.3140876841617384,
+          "n_feasible": 100,
+          "total_runtime": 38.152265548706055,
+          "reported_mean_seconds": 0.38152265548706055
+        },
+        {
+          "rank": 9,
+          "total_score": 1.0006127694878413,
+          "raw_score": 1.1242359754842797,
+          "n_feasible": 100,
+          "total_runtime": 83.09650111198425,
+          "reported_mean_seconds": 0.8309650111198426
+        },
+        {
+          "rank": 10,
+          "total_score": 1.0598302507627029,
+          "raw_score": 1.5140432153752899,
+          "n_feasible": 100,
+          "total_runtime": 14.098054647445679,
+          "reported_mean_seconds": 0.1409805464744568
+        }
+      ],
+      "evidence": [
+        "materials/official_beta_reference.json",
+        "evidence/C_beta_leaderboard_20260823.csv"
+      ],
+      "claim_boundary": "total_runtime/100仅为归档平均时间描述。数据和硬件不同，不可据本地数值推断比赛名次或同预算领先。"
+    },
+    {
+      "id": "F04",
+      "topic": "raw_score解释",
+      "fact": "本材料按无时间质量分理解raw_score；官方综合第3与第10名的total_score/raw_score均约0.7，与运行时间奖励下限吻合。",
+      "evidence": [
+        "materials/official_beta_reference.json",
+        "evidence/C_beta_evaluation_report_hidden_final.txt"
+      ],
+      "claim_boundary": "归档没有对raw_score列单独下定义；这是有数值支持的工作解释，不冒充额外官方声明。"
+    },
+    {
+      "id": "F05",
+      "topic": "官方硬件",
+      "fact": "Beta报告记载赛方为每次提交提供专用48核CPU和NVIDIA A100 80GB。",
+      "evidence": [
+        "evidence/C_beta_evaluation_report_hidden_final.txt"
+      ],
+      "claim_boundary": "不知道各队实际用了多少资源；本地最终评价使用4个单线程CPU进程。"
+    },
+    {
+      "id": "F06",
+      "topic": "数据变换",
+      "fact": "MIB组内取算术平均面积，保留组总面积和固定/预放置规格；仍不兼容者排除。原参考几何和评分分母保留。",
+      "evidence": [
+        "evidence/protocol.md",
+        "evidence/mean_area_and_registry.py"
+      ],
+      "claim_boundary": "改变了面积输入及样本分布。参考列是原任务答案，不保证对变换后面积仍然硬合法。"
+    },
+    {
+      "id": "F07",
+      "topic": "训练与测试规模",
+      "fact": "v5为训练16000、开发2000、本地测试2000例，训练/开发各固定500例监测；原始分片80/10/10不变。最终1000从余下1900中按实际模块数分层选取，排除曾看过草稿的100例。",
+      "evidence": [
+        "evidence/protocol.md",
+        "evidence/E42_final_config.json"
+      ],
+      "claim_boundary": "开发集用于研究；本次模型评价是在同面板前序结果已知后追加，不能称新的独立盲测；剩余900例封存。"
+    },
+    {
+      "id": "F08",
+      "topic": "输入长什么样",
+      "fact": "每块17个输入数值，包括面积、公开尺寸/位置、固定和预放置标记、边界要求、同组/同MIB数量、连接总强度及外部引脚加权平均位置；另外保留模块两两连接、同组和同MIB关系矩阵。",
+      "evidence": [
+        "evidence/E42_features.py",
+        "evidence/E42_inference.py"
+      ],
+      "claim_boundary": "外部引脚在输入特征中被聚合，不声称网络逐一读取了全部引脚节点。自由块参考位置不进入输入。"
+    },
+    {
+      "id": "F09",
+      "topic": "网络信息流",
+      "fact": "每块17个数映射为96个内部数值，先预测中心x/y及对数长宽比；经过12个独立参数的更新单元，每个单元按内容和当前矩形关系加权汇总其他模块，并另汇总连接/分组/MIB邻居，随后更新位置形状猜测。",
+      "evidence": [
+        "evidence/E42_model.py"
+      ],
+      "claim_boundary": "注意力权重通过训练学习，不是保证强连接必然权重大；12层是一次前向内部的12轮，不是对新样例训练12次。"
+    },
+    {
+      "id": "F10",
+      "topic": "矩形信息与输出",
+      "fact": "两两关系由原7维增至19维，新增当前宽高、边缘空隙、穿透及固定/预放置标记。自由块宽高由面积与长宽比恢复；固定/预放置按公开规格覆盖。模型共1471539参数。",
+      "evidence": [
+        "evidence/E42_model.py"
+      ],
+      "claim_boundary": "参数量与隐藏宽度用于说明规模，本身不能解释方法。草稿仍可能重叠。"
+    },
+    {
+      "id": "F11",
+      "topic": "训练事实",
+      "fact": {
+        "status": "early_stop",
+        "elapsed_seconds": 6763.252213000087,
+        "steps": 27000,
+        "epochs": 54,
+        "best_epoch": 51,
+        "best_proxy": 0.45440869164466857,
+        "full_dev_complete": false,
+        "postprocessing_calls": 0,
+        "test_read": false,
+        "tail_test_read": false,
+        "implementation_check": false,
+        "final_postprocessed_Q": "not run; one frozen best assessment is a separate stage"
+      },
+      "evidence": [
+        "evidence/E42_training_results.json",
+        "evidence/E42_training_config.json"
+      ],
+      "claim_boundary": "54轮、27000步、best51、正常早停，约112.72分钟；训练记录postprocessing_calls=0不代表后续评价未执行。"
+    },
+    {
+      "id": "F12",
+      "topic": "训练目标和模型选择",
+      "fact": "训练使用位置、形状与几何约束误差；选模综合geometry和occupancy（冲突、拥挤、空洞、松散程度），训练与监测不运行求解器。Dropout0.05、AdamW decay0.0003，单seed0、batch32。",
+      "evidence": [
+        "evidence/E42_losses.py",
+        "evidence/E42_train.py",
+        "evidence/E42_training_config.json"
+      ],
+      "claim_boundary": "occupancy参与选模，不在本次E42反向目标中；联合正则化不能拆开归因两项的独立效应。"
+    },
+    {
+      "id": "F13",
+      "topic": "泛化证据",
+      "fact": "相对未正则化的同结构12层，完整开发代理0.468025→0.453814，降低约3.04%；训练—开发差距缩小约34.39%。",
+      "evidence": [
+        "evidence/E42_completed_analysis.json",
+        "evidence/E42_full_dev.json"
+      ],
+      "claim_boundary": "代理不是比赛Q；仅联合配置、单种子证据，不能用它代替最终1000例评价。"
+    },
+    {
+      "id": "F14",
+      "topic": "几何优化器",
+      "fact": "根据当前草稿选择左右/上下分离关系，数值优化位置与形状；必要时固定宽高调整坐标、另造可行起点，再保留硬合法候选并做数值修正。",
+      "evidence": [
+        "evidence/E42_solver.py"
+      ],
+      "claim_boundary": "算法只用公开输入目标，不用真实参考Q逐例选布局；限时优化的路径会受运行速度影响。"
+    },
+    {
+      "id": "F15",
+      "topic": "网络和优化器各自作用",
+      "fact": {
+        "dev500_raw_hard_legal": 0,
+        "dev500_final_hard_legal": 500,
+        "test1000_zero_soft_violation_cases": 703,
+        "test1000_total_MIB_violations": 0,
+        "mean_inference_seconds": 0.03233124420023523,
+        "mean_postprocess_seconds": 0.19007071160059422
+      },
+      "evidence": [
+        "materials/derived_metrics.json"
+      ],
+      "claim_boundary": "开发500例草稿0例硬合法，经后处理500例硬合法；最终100%合法属于整个流程，不归因于网络单独输出。"
+    },
+    {
+      "id": "F16",
+      "topic": "速度口径",
+      "fact": "public graph features + CPU model + decode + full steady optimization/rescue; exclude file/model loading, fixed task transformation, JIT initialization, scoring and evidence IO",
+      "evidence": [
+        "evidence/E42_final_config.json",
+        "evidence/E42_environment.json"
+      ],
+      "claim_boundary": "平均单例0.222522秒；批量墙钟109.14秒含初始化、IO、评分，不能除以1000替代单例延迟。原代码未更改，运行库线程钳制为1。"
+    },
+    {
+      "id": "F17",
+      "topic": "Q解释",
+      "fact": "Q越低越好；硬非法记10；先算每例的线长/面积正向差和软违反惩罚，再按exp(模块数/12)加权。中性时间Q取消了速度奖励。",
+      "evidence": [
+        "evidence/official_problem_statement.md",
+        "evidence/scoring_evaluation.py"
+      ],
+      "claim_boundary": "Q=1表示此评分下无正几何差和软违反，不是数学全局最优证明；Q1.028不能解释成比最优只差2.8%。"
+    },
+    {
+      "id": "F18",
+      "topic": "三相图来源",
+      "fact": "选择最终Q排序第500例、最终Q最大例、完整耗时最大例；参考来自对应原始样本；草稿仅补生成这3例并缓存；最终布局、最终Q和耗时沿用原1000例记录。",
+      "evidence": [
+        "materials/layout_examples.json",
+        "materials/E42_draft_examples.json"
+      ],
+      "claim_boundary": "草稿是报告阶段重建，不是原计时运行保存的草稿；参考/草稿未重新评分，图中指标n/a；没有重跑最终求解。"
+    }
+  ]
+}

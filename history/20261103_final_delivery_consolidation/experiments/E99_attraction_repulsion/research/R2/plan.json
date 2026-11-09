@@ -1,0 +1,16 @@
+{
+  "revision": "E99.R2.feasible_start_hard_conic.v1",
+  "registered_utc": "2026-11-02T16:24:00Z",
+  "evidence": "R1 five-case implementation: shape proposals frequently solved but remained hard-invalid; seedless bounded planning retained row fallback at case0 and training partial rows. Field cost is material. This is a feasibility and engineering correction, not a dev-selected coefficient change.",
+  "hypothesis": "Construct a near-C3 legal incumbent before shape optimization. Hard separation constraints and physical DAG ordering then make each shallow solve useful, avoiding elastic near-overlap rounds and expensive recovery. Compile the synchronous field without changing its equations.",
+  "arms": ["seeded_control", "organized_seeded"],
+  "backend": {"geometry_budget_seconds": 0.18, "maximum_shape_solves": 4, "shape_call_cap_seconds": 0.045, "project_reserve_seconds": 0.025, "polish_reserve_seconds": 0.008, "topology": "physical mode0 from each current snapshot", "elastic": 0, "conservative_area": true, "projection": "quadratic", "certificate_push": true, "deep_recovery": false},
+  "seed": "Existing experiment-local legal_seed.seed order0/preserve_centers; a constructive geometry operation before the synchronous conic stages, explicitly sequential obstacle insertion. Public constraints only; raw and legal incumbent retained by public objective.",
+  "field": {"iterations": 12, "step_fraction": 0.04, "total_fraction": 0.35, "shape_step_log": 0.025, "shape_total_factor": 1.3, "mass": "initial area/median area", "group_strength": 0.35, "boundary_strength": 0.5, "repulsion_strength": 1.0, "attraction_strength": 0.25, "attraction_range": 0.5},
+  "implementation_panel": [0,4,43,95,135],
+  "checks": "Same5 training cases; Python vs compiled field coordinate and mass/budget/locked/MIB/area equivalence; official/independent legality; JIT cold cost separate. No dev coefficient scans.",
+  "calibration_panel": "v5.train_monitor500 matched arms, only after R1 finishes and preflight passes; one CPU numerical worker; cached frozen C3, CPU times diagnostic only",
+  "promotion": "Inspect quality/feasible incumbent and latency against R1/full-control. No automatic dev launch or formal acceptance from CPU timing.",
+  "test_read": false,
+  "new_training": false
+}

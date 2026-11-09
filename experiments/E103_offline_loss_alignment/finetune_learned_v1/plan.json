@@ -1,0 +1,77 @@
+{
+  "revision": "E103.learned_v1.generalization_best71.lr1e3.no_protection.unlimited.v1",
+  "authorization": "User explicitly requested using first fitted new Loss to continue training the E98 augmented baseline, initialLR1e-3, no LR protection and no15-epoch limit; prior background authorization remains.",
+  "source_checkpoint": "experiments/E103_offline_loss_alignment/assets/e98_generalization/best.pt",
+  "source_sha256": "3f7ca0086af8a13bd52eedf0635117312e5c0a72e80e423e9cee3db5ca9b87ea",
+  "parent_best_epoch": 71,
+  "coefficient_source": "experiments/E103_offline_loss_alignment/runs/20261104_bank1000x5_seed0/analysis/proposal.json",
+  "coefficient_source_sha256": "f26cdc7596ff65e84229b64ba4c05972321ab0599d4b4c123e1295a5b83d352a",
+  "coefficients": {
+    "position": 0.6635742095117481,
+    "shape": 0.14678150047973748,
+    "penetration": 0.20175720946322662,
+    "module_load_mean": 0.08060221885152805,
+    "module_max_excess10": 0.06275008399971584,
+    "wirelength": 1.717430989723426e-16,
+    "compactness": 0.03897289214696773,
+    "boundary_contribution": 0.7392811545028284,
+    "grouping_contribution": 1.502357909467406,
+    "mib_contribution": 0.4189601832672195
+  },
+  "coefficient_policy": "Exact first-v1 fitted physical coefficients; no rounding, no changing near-zero wire coefficient, no canonical or quadratic objective; sum3.8550373616903784",
+  "model": {
+    "width": 96,
+    "layers": 12,
+    "rectangle": true,
+    "ffn_dropout": 0.1,
+    "residual_dropout": 0.05
+  },
+  "data": "Original v5 train16000; fixed train/dev monitoring500 each; public MIB mean-area task; test sealed",
+  "batch_size": 32,
+  "precision": "FP32 deterministic CUDA, no AMP or TF32",
+  "augmentation": "Original .5 probability stateless XY transposition; fixed/preplaced positions, fixed shapes, boundary bits, pins, masks and reference targets transformed together; unchanged copied implementation",
+  "optimizer": {
+    "name": "AdamW",
+    "fresh_momentum": true,
+    "fresh_age": true,
+    "weight_decay": 0.0003,
+    "clip_norm": 1.0,
+    "max_module_relative_update": 0.005
+  },
+  "rng": "Inherit frozen parent RNG; independent new phase, continue parent epoch71 sample/augmentation seed stream; within-phase complete state restoration",
+  "phase": {
+    "phase": 1,
+    "sampler_seed": 0,
+    "epoch_offset": 71
+  },
+  "lr_tiers": [
+    0.001,
+    0.00025,
+    0.0001,
+    5e-05
+  ],
+  "protection_epochs": 0,
+  "scheduler_baseline_epoch": 0,
+  "plateau_patience": 3,
+  "minimum_meaningful_absolute": 1e-05,
+  "minimum_meaningful_relative": 0.001,
+  "best_minimum_absolute": 1e-05,
+  "early_stop": "After reaching5e-5, three consecutive validation-Loss stalls stop. No protected epochs or extra minimum hold. On each drop reset per-tier plateau reference to current validation Loss.",
+  "maximum_epochs": null,
+  "maximum_seconds": null,
+  "objective": "Exact ten unweighted E98 components at original network state, multiplied by the registered learned-v1 coefficients; arithmetic mean per sample; identical for backprop/train/dev/best/LR/earlystop",
+  "selection": "Only own fixed dev500 Loss; epoch0 eligible; Q never selects epochs or changes weights",
+  "preservation": "New run only; parent and all historical best/latest/STOPs intact; own best/latest retain optimizer, RNG, sampler order/cursor, projection and scheduler",
+  "terminal": "Freeze own-Loss best and report; no automatic postprocessor Q, test or extra training branches",
+  "numerical_guards": "Original finite/Loss<1000/gradient norm<10000 before AdamW; no batch skipping, guard relaxation or automatic retry",
+  "evidence_boundary": "Prior offline descent gate failed; user expressly authorized this direct training trial. High startingLR does not guarantee escaping local optima. No claim of pure coefficient causal benefit without a trained control.",
+  "stop": "Create this package STOP or newrun STOP; accepted batch boundary saves latest and stops; no E98 STOP removal",
+  "implementation_indices": [
+    1683,
+    5474,
+    10027,
+    10140,
+    15001
+  ],
+  "test_read": false
+}

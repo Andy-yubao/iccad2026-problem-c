@@ -1,0 +1,10 @@
+{
+  "revision": "E97.round2.saved_source_selection_diagnostic.v1",
+  "registered_before_analysis": true,
+  "sources": ["old full E85", "current full C3 control", "round2 candidate2 unique own-Loss best full"],
+  "panel": "existing fixed dev500 final geometry and public inputs only; no new network, solver, scorer, optimizer or checkpoint selection",
+  "selection": "C3 is default. For each already solved alternative compute rho=max(1,A_alt/A_C3,W_alt/W_C3)*exp(2*(soft_alt-soft_C3)/public_Nsoft). Retain only rho<1-1e-10 and choose minimum rho, fixed source ID breaks ties. This is a saved-final-geometry oracle, impossible to deploy before solving all sources; not a final score or a mathematical class bound.",
+  "purpose": "Decide whether learning to select among existing frozen neural drafts is worth new offline training labels, preserving one downstream full solve. No coefficients scanned, no reference geometry or scoring denominators enter source selection.",
+  "metrics": "Public certificate/choices; aggregate selected already saved neutral Q solely to diagnose attainable quality and compare C3. Full inference latency cannot be inferred from this oracle.",
+  "test_read": false
+}

@@ -1,0 +1,42 @@
+Verified archived cache loaded: train 5 cases
+{
+  "status": "passed",
+  "ids": [
+    1683,
+    10027,
+    5474,
+    10140,
+    15001
+  ],
+  "model_config": {
+    "width": 192,
+    "layers": 12,
+    "rectangle": true,
+    "ffn_dropout": 0.05,
+    "corrector_width": 192,
+    "message_width": 64,
+    "max_correction": 0.15,
+    "cooperative": true
+  },
+  "loss": {
+    "revision": "E97.candidate1.public_solver_imitation.v1",
+    "center": 1.0,
+    "shape": 0.25,
+    "relative": 0.25,
+    "beta": 0.1,
+    "near": 0.25,
+    "weighting": "teacher usable; all frozen members retained in mean",
+    "reference": false,
+    "selection": "same dev500 arithmetic mean for best/LR/early-stop"
+  },
+  "initial_loss": 0.23401688039302826,
+  "eager_graph_update_max_abs": 0.0,
+  "eager_graph_Adam_moment_max_abs": 0.0,
+  "capture_no_Adam_or_parameter_update": true,
+  "restored_next_model_Adam_RNG_bit_exact": true,
+  "nonfinite_rejected_before_Adam": true,
+  "frozen_L_unchanged": true,
+  "formal_training_started": false,
+  "seconds": 33.3631349999996,
+  "test_read": false
+}

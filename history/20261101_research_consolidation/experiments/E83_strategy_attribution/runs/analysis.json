@@ -1,0 +1,251 @@
+{
+  "status": "complete_pending_visual_audit",
+  "training_updates": 0,
+  "test_read": false,
+  "baseline_promoted": false,
+  "comparisons": {
+    "P42_ops_only_vs_E42": {
+      "count": 500,
+      "weighted_Q_delta": 0.001601667946325789,
+      "worker95": [
+        -0.0002353234271886746,
+        0.004019888826537625
+      ],
+      "worker_Bonferroni_98p333": [
+        -0.000431232197604878,
+        0.004748702065226779
+      ],
+      "strong_Q_margin_pass": false,
+      "better_equal_worse": [
+        209,
+        91,
+        200
+      ]
+    },
+    "E81_vs_P42_ops_only": {
+      "count": 500,
+      "weighted_Q_delta": -0.011219278759645172,
+      "worker95": [
+        -0.01730412638494558,
+        -0.0060952173230856225
+      ],
+      "worker_Bonferroni_98p333": [
+        -0.019211598384229683,
+        -0.005149299104550546
+      ],
+      "strong_Q_margin_pass": true,
+      "better_equal_worse": [
+        336,
+        72,
+        92
+      ]
+    },
+    "P74_frozen_F81_vs_E81": {
+      "count": 500,
+      "weighted_Q_delta": 0.002284769863267665,
+      "worker95": [
+        -0.00404904060093519,
+        0.010191398262031599
+      ],
+      "worker_Bonferroni_98p333": [
+        -0.004966581607237334,
+        0.012122359753510125
+      ],
+      "strong_Q_margin_pass": false,
+      "better_equal_worse": [
+        223,
+        105,
+        172
+      ]
+    }
+  },
+  "models": {
+    "P42_ops_only": {
+      "summary": {
+        "count": 500,
+        "hard_legal": 500,
+        "weighted_Q": 1.0274613019615613,
+        "mean_Q": 1.0451148337013674,
+        "p95_Q": 1.183749055245526,
+        "max_Q": 1.9272793423555585,
+        "worst5pct_mean_Q": 1.297665719102728,
+        "seconds_mean": 0.26375720820005516,
+        "rescue_cases": 5,
+        "errors": 0,
+        "hpwl_gap_mean": 0.016176201725544962,
+        "area_gap_mean": 0.02119510982243215,
+        "grouping_violations_mean": 0.22,
+        "boundary_violations_mean": 0.244,
+        "mib_violations_mean": 0.0
+      },
+      "raw_overlap": 0.06483892529568226,
+      "raw_hard_legal": 0,
+      "groups": {
+        "all": {
+          "raw_count": 2000,
+          "raw_overlap": 0.06483892529568226,
+          "panel_count": 500,
+          "panel_weighted_Q": 1.0274613019615613
+        },
+        "low_pin": {
+          "raw_count": 324,
+          "raw_overlap": 0.0886985576307098,
+          "panel_count": 80,
+          "panel_weighted_Q": 1.0385166263022325
+        },
+        "low_pin_sparse": {
+          "raw_count": 157,
+          "raw_overlap": 0.10369879470343805,
+          "panel_count": 37,
+          "panel_weighted_Q": 1.069368607996377
+        }
+      },
+      "frame_containment": {
+        "count": 500,
+        "maximum_normalized_excursion": 8.150430231745679e-07,
+        "tolerance": 3e-06
+      },
+      "draft_mean_empty_over_bbox": 0.10145963696410479,
+      "worst5_Q": [
+        {
+          "index": 164,
+          "n": 57,
+          "Q": 1.9272793423555585,
+          "rescue": true
+        },
+        {
+          "index": 443,
+          "n": 36,
+          "Q": 1.7643672586590502,
+          "rescue": false
+        },
+        {
+          "index": 450,
+          "n": 97,
+          "Q": 1.6344305959829584,
+          "rescue": true
+        },
+        {
+          "index": 329,
+          "n": 64,
+          "Q": 1.4106892530885795,
+          "rescue": false
+        },
+        {
+          "index": 239,
+          "n": 21,
+          "Q": 1.339215078855121,
+          "rescue": false
+        }
+      ]
+    },
+    "P74_frozen_F81": {
+      "summary": {
+        "count": 500,
+        "hard_legal": 500,
+        "weighted_Q": 1.0185267930651838,
+        "mean_Q": 1.031546867866139,
+        "p95_Q": 1.1117827889723617,
+        "max_Q": 2.142038654667881,
+        "worst5pct_mean_Q": 1.2682053091300471,
+        "seconds_mean": 0.278677266400191,
+        "rescue_cases": 6,
+        "errors": 0,
+        "hpwl_gap_mean": 0.009485370118254295,
+        "area_gap_mean": 0.006770038951104988,
+        "grouping_violations_mean": 0.21,
+        "boundary_violations_mean": 0.128,
+        "mib_violations_mean": 0.0
+      },
+      "raw_overlap": 0.021445636455613284,
+      "raw_hard_legal": 0,
+      "groups": {
+        "all": {
+          "raw_count": 2000,
+          "raw_overlap": 0.021445636455613284,
+          "panel_count": 500,
+          "panel_weighted_Q": 1.0185267930651838
+        },
+        "low_pin": {
+          "raw_count": 324,
+          "raw_overlap": 0.028279853292097153,
+          "panel_count": 80,
+          "panel_weighted_Q": 1.0201305278506743
+        },
+        "low_pin_sparse": {
+          "raw_count": 157,
+          "raw_overlap": 0.03341429142138254,
+          "panel_count": 37,
+          "panel_weighted_Q": 1.0365725809167934
+        }
+      },
+      "frame_containment": {
+        "count": 500,
+        "maximum_normalized_excursion": 6.999017744994624e-07,
+        "tolerance": 3e-06
+      },
+      "draft_mean_empty_over_bbox": 0.056355744804466236,
+      "worst5_Q": [
+        {
+          "index": 450,
+          "n": 97,
+          "Q": 2.142038654667881,
+          "rescue": true
+        },
+        {
+          "index": 164,
+          "n": 57,
+          "Q": 1.883950518590397,
+          "rescue": true
+        },
+        {
+          "index": 443,
+          "n": 36,
+          "Q": 1.6458369566554392,
+          "rescue": false
+        },
+        {
+          "index": 246,
+          "n": 94,
+          "Q": 1.460247582829846,
+          "rescue": true
+        },
+        {
+          "index": 329,
+          "n": 64,
+          "Q": 1.367524699944055,
+          "rescue": true
+        }
+      ]
+    }
+  },
+  "limits": [
+    "Deployment bypass, not a trained no-F control",
+    "Cannot isolate only MIB from frame projection",
+    "Source swap also changes source frame; not capacity-only causality",
+    "Single-seed adaptive development, no independent unseen claim",
+    "Do not repeat completed terminal evaluation or choose weights by Q"
+  ],
+  "method": {
+    "resampling_unit": "source worker",
+    "bootstrap_seed": 20261029,
+    "resamples": 4000,
+    "family_size": 3,
+    "intervals": [
+      "95% descriptive",
+      "98.333333% Bonferroni familywise approximation"
+    ],
+    "practical_Q_margin": 0.001,
+    "strong_Q_gain": "upper family interval below -0.001, with no material hard-legality/frame/tail regression; not a formal baseline upgrade",
+    "no_posthoc_arm_additions": true
+  },
+  "evidence_sha256": {
+    "experiments/E42_joint_regularization/runs/20261023_rectangle_w96d12_ab_seed0/terminal/results.json": "a8b13cad56de8520e2a14e3ed72ab9f35eb9df79c294c32d21f7c9c8606a129a",
+    "experiments/E74_collision_32k_posttrain/runs/20261029_e42_topology_seed0/terminal/results.json": "8b1a2875f149f4b88774298762cedf5dfbade9b1518f0806e45e36a640ae9367",
+    "experiments/E81_multisource_refinement/runs/20261029_e42_multisource_seed0/terminal/results.json": "395c0971bff000d788ea5827bc7a8a0085a999aed92778ed46d349c6bf9083b1",
+    "experiments/E83_strategy_attribution/runs/P42_ops_only/terminal/results.json": "d30a22d4a2e5bb67f5ddd8e19b5c93766b953d734a865e5a8fb514f14b679bfd",
+    "experiments/E83_strategy_attribution/runs/P74_frozen_F81/terminal/results.json": "e8620b68ef7de9cf0e7334e699917e1332aa67ad5a043cea1b69ce6c3fafc384",
+    "experiments/E81_multisource_refinement/runs/20261029_placer_corrector_audit/source_drafts.npz": "7b1c6ba46d50d26cf8fc3fb5d907d32be65e98253e660ab0b2710b60e2d000a6",
+    "experiments/E81_multisource_refinement/runs/20261029_placer_corrector_audit/source_metrics.json": "4beaf971c1c5f159d6106e55bce2c0d86ad219d0648e047149b464576a61df0e"
+  }
+}

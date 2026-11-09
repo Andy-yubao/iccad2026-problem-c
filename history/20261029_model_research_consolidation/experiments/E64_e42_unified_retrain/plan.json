@@ -1,0 +1,18 @@
+{
+  "revision": "E64.predeclared.v1",
+  "authorization": "2026-10-27 user requests preparing an E42 retrain with one fixed training/selection Loss, then starting training in background. Stage-two capacity research is not launched.",
+  "hypothesis": "A reproducible E42 scratch baseline with aligned optimization and selection is needed before changing architecture. Improvement over historical E42 is an empirical question.",
+  "arm": "rectangle_ab",
+  "seed": 0,
+  "initialization": "scratch; seeded original E42 default parameter initialization; no checkpoint loaded",
+  "data": "reference_workset_v5 train16000 in original logical order; frozen train_monitor500 and dev_monitor500; no v6 training members",
+  "architecture": "byte-identical E42 96x12 rectangle model and features/batches; FFN dropout .05; no graph prenorm or graph-step projection",
+  "loss": "E64.frozen_E42_G.v1: original eight full-weight E42 terms from first batch; no ramp, no occupancy selector, no late reference relaxation",
+  "training": {"batch_size":32,"precision":"FP32","engine":"cuda_graph","weight_decay":0.0003,"clip_norm":1.0,"lr_levels":[0.001,0.00025,0.0001,0.00005],"scheduler_start_epoch":15,"plateau_patience":3,"lowest_lr_completed_epochs":2,"max_hours":4,"max_epochs":200},
+  "selection": "same fixed G on dev_monitor500; best improves by >1e-5; LR/early-stop significant improvement threshold max(1e-5,0.001*baseline); no Q or image reselection",
+  "evaluation": "one frozen selected best: full raw dev2000, unchanged flash dev500, fixed same100 unscored reference/current/E42 gallery, saved learning curves",
+  "comparisons": "historical E42 best51 is preserved. E57 has related scratch fixed-G controls, with subset/order/execution differences; E64 is a baseline protocol rebuild, not first evidence that unified G is trainable",
+  "interpretation": "user draft feedback primary; fixed G main numerical reference; flash Q auxiliary. Single seed on adaptively exposed development data, no independent generalization claim and no automatic promotion",
+  "failure_policy": "Nonfinite objective/gradient blocks Adam update and saves latest; no automatic architecture repair, seed sweep or stage-two launch; STOP and cumulative training budget retained",
+  "test_read": false
+}

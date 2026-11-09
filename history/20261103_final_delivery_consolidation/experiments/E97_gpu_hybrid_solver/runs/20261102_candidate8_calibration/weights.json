@@ -1,0 +1,47 @@
+{
+  "status": "complete",
+  "weights": {
+    "physics": 0.5392561010352398,
+    "corridor": 0.1320398351856648,
+    "quality": 0.12665827536621818
+  },
+  "count_normalizer": 0.12578465955104443,
+  "count_weight": "exp((n-120)/12)/fixed first16k arithmetic mean",
+  "details": {
+    "physics": {
+      "active_count": 500,
+      "weighted_median_teacher_gradient": 0.0647464245557785,
+      "weighted_median_component_gradient": 0.12006618827581406,
+      "registered_share": 1.0
+    },
+    "corridor": {
+      "active_count": 396,
+      "weighted_median_teacher_gradient": 0.06487564742565155,
+      "weighted_median_component_gradient": 0.24566695094108582,
+      "registered_share": 0.5
+    },
+    "quality": {
+      "active_count": 500,
+      "weighted_median_teacher_gradient": 0.0647464245557785,
+      "weighted_median_component_gradient": 0.05111898481845856,
+      "registered_share": 0.1
+    }
+  },
+  "binding": {
+    "source_checkpoint": "runs/20261102_candidate7_normalized_geometry_seed0/checkpoints/best.pt",
+    "source_checkpoint_sha256": "ac003467665ac78dab540f03117c77c86627b5340854e2cfafba642be8504a51",
+    "calibration_plan_sha256": "c087a90305e2a8e426c21fcffae8e8d42613ff2865203e6c5943213649127dd5",
+    "sources": {
+      "experiments/E97_gpu_hybrid_solver/candidate8_calibration.py": "e2fd2805588955b2ed7d05e0c83e703a2733a93857caa47df046cd1eeb766abf",
+      "experiments/E97_gpu_hybrid_solver/candidate8_io.py": "9ef0866323382f31a14874cbf243b347f3a8b076dd309dbb32d3130caa0ffd70",
+      "experiments/E97_gpu_hybrid_solver/candidate8_objective.py": "b9c490eef6561417e7ff849484c201ab2db8a6af0af473c162b02bde45081c46",
+      "experiments/E97_gpu_hybrid_solver/candidate7.py": "f575a44fb97021e033fca502c8eba49464c3c0a3dd0c85698180e799a67b8e65",
+      "experiments/E97_gpu_hybrid_solver/normalized_geometry.py": "6c9c7da625d22d3b945801e130c07a79a49c6185212789cf77740cc3984c9649"
+    },
+    "member_sha256": "26f4b9bdbc605f0656d1a22f130f8ad63f984e01d41cd3f866e75a57c99dcf9e"
+  },
+  "no_optimizer_updates": true,
+  "no_dev_or_Q_calls": true,
+  "formal_slots_consumed": 0,
+  "test_read": false
+}

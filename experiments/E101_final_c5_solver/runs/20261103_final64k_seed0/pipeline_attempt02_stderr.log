@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "E:\project\ICCAD\2026\problemC\experiments\E101_final_c5_solver\pipeline.py", line 44, in <module>
+    try:main(a.resume)
+  File "E:\project\ICCAD\2026\problemC\experiments\E101_final_c5_solver\pipeline.py", line 35, in main
+    child(module,*args,*extra)
+  File "E:\project\ICCAD\2026\problemC\experiments\E101_final_c5_solver\pipeline.py", line 12, in child
+    if result.returncode:raise RuntimeError(f'{name} failed with exit {result.returncode}; see {name}.log; no automatic retry')
+RuntimeError: train_L failed with exit 2; see train_L.log; no automatic retry

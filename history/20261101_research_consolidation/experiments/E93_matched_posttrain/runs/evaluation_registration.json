@@ -1,0 +1,56 @@
+{
+  "authorization": "用户2026-11-01：运行验证",
+  "selection": "unique own-arm fixed Loss best; frozen before new inference/Q",
+  "candidates": {
+    "C": {
+      "path": "experiments/E93_matched_posttrain/runs/20261101_c_seed0/checkpoints/C_best.pt",
+      "sha256": "5ef4ecc30622e08b7cc2288ae88c8e389a0adc76067044de6d601836b9d29257",
+      "best_epoch": 10,
+      "selected_loss": 0.32977558180689814
+    },
+    "G": {
+      "path": "experiments/E93_matched_posttrain/runs/20261101_g_seed0/checkpoints/G_best.pt",
+      "sha256": "8330d287a2e7669339735890fda81471c5ca6d58b41ec8bc018d5a29bfb7dce0",
+      "best_epoch": 16,
+      "selected_loss": 0.3679320532679558
+    }
+  },
+  "baseline": {
+    "experiment": "E90",
+    "checkpoint_sha256": "00e75ab87cbc2cc461a89198c5931ae54e1495736320fd621a3f875ff344c58b",
+    "dev500_F_loss": 0.32910041260719297,
+    "weighted_Q": 1.0223475171670156,
+    "max_Q": 1.8419663187374198,
+    "p95_Q": 1.145570827221716,
+    "worst5pct_mean_Q": 1.274665676966712,
+    "module_pass10_pooled": 0.5993158494868871,
+    "worst_module_coverage_p95": 0.7504313615478709,
+    "source_files": {
+      "experiments\\E90_auxiliary_weight_placer\\runs\\20261031_aux3_seed0\\results.json": "404f573b56f145afed10144997475c981a48611a97374abc03467719be4c185d",
+      "experiments\\E90_auxiliary_weight_placer\\runs\\20261031_aux3_seed0\\terminal\\summary.json": "1a9ac3e24933988df79ca29a08d77f37f9b1b8151ac197a7afd788e41aea29fd",
+      "experiments\\E90_auxiliary_weight_placer\\runs\\20261031_aux3_seed0\\terminal\\results.json": "1c7f3c961930b53f5a2bbc2f950de45e337769ddd1aacb849dafebeef54aa931",
+      "experiments\\E90_auxiliary_weight_placer\\runs\\20261031_aux3_seed0\\inspection500.json": "91de3d0af552c0a52dce0922dc0f29845f88d5cd1f596243ab3b0cfe84f99a83"
+    }
+  },
+  "previous_results": {
+    "E90": "experiments/E90_auxiliary_weight_placer/runs/20261031_aux3_seed0/terminal/results.json",
+    "E92": "experiments/E92_two_stage_placer/runs/20261031_two_stage32k_seed0/qualification/terminal/results.json"
+  },
+  "evidence_files": {
+    "experiments\\E90_auxiliary_weight_placer\\runs\\20261031_aux3_seed0\\results.json": "404f573b56f145afed10144997475c981a48611a97374abc03467719be4c185d",
+    "experiments\\E90_auxiliary_weight_placer\\runs\\20261031_aux3_seed0\\terminal\\summary.json": "1a9ac3e24933988df79ca29a08d77f37f9b1b8151ac197a7afd788e41aea29fd",
+    "experiments\\E90_auxiliary_weight_placer\\runs\\20261031_aux3_seed0\\terminal\\results.json": "1c7f3c961930b53f5a2bbc2f950de45e337769ddd1aacb849dafebeef54aa931",
+    "experiments\\E90_auxiliary_weight_placer\\runs\\20261031_aux3_seed0\\inspection500.json": "91de3d0af552c0a52dce0922dc0f29845f88d5cd1f596243ab3b0cfe84f99a83",
+    "experiments/E90_auxiliary_weight_placer/runs/20261031_aux3_seed0/terminal/results.json": "1c7f3c961930b53f5a2bbc2f950de45e337769ddd1aacb849dafebeef54aa931",
+    "experiments/E92_two_stage_placer/runs/20261031_two_stage32k_seed0/qualification/terminal/results.json": "150d068c2fd2b67b61b274c75ea43cd48c0c0806fecdbff6b97d28de0837c204"
+  },
+  "workers": 4,
+  "threads_per_worker": 2,
+  "raw_count": 2000,
+  "terminal_count": 500,
+  "terminal_runs_per_candidate": 1,
+  "evaluation_budget_seconds": 7200,
+  "preparation_seconds_separate": true,
+  "test_read": false,
+  "next_action": "evaluation/report only; no Q selection, training, corrector or automation"
+}

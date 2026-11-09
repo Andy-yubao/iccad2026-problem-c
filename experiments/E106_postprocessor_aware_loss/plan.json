@@ -1,0 +1,109 @@
+{
+  "revision": "E106.postprocessor_aware_loss.v2",
+  "status": "implementation_and_data_preparation_only",
+  "authorization": "New independent experiment; Scheme A; latest5000problems x5drafts=25000; about2Mparameters; implement but DO NOT START TRAINING",
+  "training_authorized": false,
+  "layout_training_authorized": false,
+  "automatic_training": false,
+  "data": {
+    "problems": 5000,
+    "drafts_per_problem": 5,
+    "total_drafts": 25000,
+    "original_drafts": 15000,
+    "perturbed_drafts": 10000,
+    "pairs_per_problem": 1,
+    "split_problems": {
+      "fit": 3000,
+      "validation": 1000,
+      "check": 1000
+    },
+    "split_drafts": {
+      "fit": 15000,
+      "validation": 5000,
+      "check": 5000
+    },
+    "all_related_drafts_same_partition": true,
+    "network_unseen_claim": false,
+    "source_panel_sha256": "d38df7578bf9164b030de60d7944183b37bd1fb22d4c41c2c851cf1a2137b351",
+    "old_Q_or_drafts_reused": false
+  },
+  "perturbations": {
+    "centers": [
+      "enhanced71",
+      "learned29",
+      "reference075_8"
+    ],
+    "pairs": [
+      "one symmetric pair per problem; roots rotate across3 models; half Gaussian half structural; radii.005/.010/.020/.030 balanced deterministically"
+    ],
+    "hard_masks": "fixed shape only locks aspect; preplaced locks all3 state channels",
+    "step_unit": "sqrt(public module area) for centers,1 for log-aspect; direction active RMS1",
+    "derivatives": "finite-radius symmetric secants, NOT unbiased black-box gradient claims"
+  },
+  "model": {
+    "width": 128,
+    "layers": 8,
+    "heads": 4,
+    "hidden": 320,
+    "pooling_queries": 2,
+    "readout_width": 256,
+    "ffn_dropout": 0.1,
+    "residual_dropout": 0.05,
+    "design": "Full graph+decoded geometry, pair attention bias, separately pre-normalized wire/MIB/group branches, gated residuals, SwiGLU, mean/max/attention pooling",
+    "input": "public features, legal locked specs, complete current draft; no reference, targets, denominator, sourceID or problemID",
+    "parameters": 2105420
+  },
+  "objective": {
+    "value": "raw Q standardized squared error",
+    "directions": "one symmetric Q slope standardized squared error; related drafts share dropout",
+    "auxiliary": "signed HPWLgap, signed area gap, soft-violation ratio",
+    "coefficients": {
+      "value": 1.0,
+      "directions": 1.0,
+      "auxiliary": 0.1
+    },
+    "normalization": "fit3000 labels only; saved once after bank complete",
+    "case_weight": ".5+.5*exp((N-120)/12)/role_mean_exp; role mean fixed over whole panel, never batch-renormalized",
+    "same_function_for_train_monitor_best_lr_earlystop": true
+  },
+  "augmentation": {
+    "xy_swap": false,
+    "reason": "Fixed E98 heuristic is not proven XY-equivariant; transformed graph requires new true Q labels. No copying labels across XY swaps."
+  },
+  "proposed_training": {
+    "seed": 0,
+    "problems_per_batch": 6,
+    "drafts_per_batch": 30,
+    "precision": "FP32",
+    "optimizer": "AdamW",
+    "lr_tiers": [
+      0.0003,
+      0.0001,
+      3e-05
+    ],
+    "weight_decay": 0.001,
+    "clip_norm": 1.0,
+    "plateau_patience": 5,
+    "lowest_tier_patience": 8,
+    "meaningful_absolute": 1e-05,
+    "meaningful_relative": 0.001,
+    "maximum_epochs": null,
+    "maximum_seconds": null,
+    "best_selection": "fixed internal validation1000 composite fitting Loss only; no dev500 or Q re-selection"
+  },
+  "bank": {
+    "workers": 4,
+    "cpu_threads_per_worker": 1,
+    "gpu": false,
+    "maximum_solver_calls": 25000,
+    "postprocessor": "Unmodified copied E98.depth_budget.v1",
+    "test_read": false,
+    "terminal": "Save data, numerical summaries and stop. NEVER invoke training."
+  },
+  "preflight": {
+    "maximum_unique_cases": 5,
+    "optimizer_updates": 0,
+    "original_check_partition_untouched": true
+  },
+  "old_experiments": "No old sources, weights, results, STOPs or active runs modified"
+}

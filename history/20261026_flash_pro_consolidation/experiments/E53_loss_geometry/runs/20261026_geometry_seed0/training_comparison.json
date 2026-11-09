@@ -1,0 +1,74 @@
+{
+  "scope": "Shared descriptive dev500 components only; totalLoss differs and is not compared. Epoch median is observed wall, includes monitoring/save; different Loss, not engine-only causal speedup.",
+  "models": {
+    "E42": {
+      "best_epoch": 51,
+      "common_loss_terms": {
+        "center_local": 0.18854493355751037,
+        "shape": 0.1712163017988205,
+        "relative_local": 0.23710788762569426,
+        "overlap": 0.041381653875112535,
+        "contact": 0.08454376882314682,
+        "boundary": 0.00912103819847107,
+        "mib": 0.013054231308400631,
+        "bbox": 0.0002557105141459033,
+        "geometry": 0.3571999340057373,
+        "module_overlap_counted": null
+      },
+      "draft": {
+        "overlap_area_fraction": 0.06384552316597669,
+        "max_local_penetration": 0.45375819195241396,
+        "largest_conflict_cluster_fraction": 0.7737524950248658
+      },
+      "epoch_wall_median_seconds": 131.48446205002256
+    },
+    "E51": {
+      "best_epoch": 52,
+      "common_loss_terms": {
+        "center_local": 0.19063245141506194,
+        "shape": 0.16893205440044404,
+        "relative_local": 0.23925297772884369,
+        "overlap": 0.031213575184345244,
+        "contact": 0.08747441929578781,
+        "boundary": 0.008940562397241593,
+        "mib": 0.015913514755666255,
+        "bbox": 0.0004389344195369631,
+        "geometry": 0.3558930947780609,
+        "module_overlap_counted": 0.0862402772307396
+      },
+      "draft": {
+        "overlap_area_fraction": 0.050286876363674966,
+        "max_local_penetration": 0.42657571508690617,
+        "largest_conflict_cluster_fraction": 0.734875818201224,
+        "module_load_mean": 0.12328311118886509,
+        "module_load_middle_mean": 0.11603782765683487,
+        "module_load_gt05_fraction": 0.5606428220021494
+      },
+      "epoch_wall_median_seconds": 114.69524219998857
+    },
+    "E53": {
+      "best_epoch": 62,
+      "common_loss_terms": {
+        "center_local": 0.2361513236761093,
+        "shape": 0.21397131621837617,
+        "relative_local": 0.2806977469921112,
+        "overlap": 0.01671198259294033,
+        "contact": 0.07728898334503174,
+        "boundary": 0.007521375834941864,
+        "mib": 0.0037550574373453856,
+        "bbox": 0.004283518448472023,
+        "geometry": 0.40950326919555663,
+        "module_overlap_counted": 0.05120670840144157
+      },
+      "draft": {
+        "overlap_area_fraction": 0.031452437037121014,
+        "max_local_penetration": 0.3254207890182669,
+        "largest_conflict_cluster_fraction": 0.5759152495847447,
+        "module_load_mean": 0.07331165482342909,
+        "module_load_middle_mean": 0.0706541943732996,
+        "module_load_gt05_fraction": 0.40188150571200937
+      },
+      "epoch_wall_median_seconds": 44.608558100000664
+    }
+  }
+}

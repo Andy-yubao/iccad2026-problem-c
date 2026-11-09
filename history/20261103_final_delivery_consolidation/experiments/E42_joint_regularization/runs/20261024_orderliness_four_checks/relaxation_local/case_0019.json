@@ -1,0 +1,86 @@
+{
+  "id": "case_0019",
+  "score": 1,
+  "trials": [
+    {
+      "arm": "bbox_only",
+      "solver": {
+        "status": 2,
+        "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+        "objective": null,
+        "dual_bound": null,
+        "gap": null,
+        "binary_variables": 411,
+        "threads": 1,
+        "flexible": true,
+        "max_move": 0.5,
+        "span_gain": 0.1,
+        "wire_gain": 0.01,
+        "protect_boundary": true,
+        "choice_pairs": 203,
+        "forced_pairs": 28,
+        "certificate_scope": "fixed shapes; movement cap, per-axis bbox span caps, HPWL cap, preserved successful boundary blocks"
+      }
+    },
+    {
+      "arm": "wire_only",
+      "solver": {
+        "status": 2,
+        "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+        "objective": null,
+        "dual_bound": null,
+        "gap": null,
+        "binary_variables": 411,
+        "threads": 1,
+        "flexible": true,
+        "max_move": 0.5,
+        "span_gain": 0.01,
+        "wire_gain": 0.1,
+        "protect_boundary": true,
+        "choice_pairs": 203,
+        "forced_pairs": 28,
+        "certificate_scope": "fixed shapes; movement cap, per-axis bbox span caps, HPWL cap, preserved successful boundary blocks"
+      }
+    },
+    {
+      "arm": "boundary_only",
+      "solver": {
+        "status": 2,
+        "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+        "objective": null,
+        "dual_bound": null,
+        "gap": null,
+        "binary_variables": 411,
+        "threads": 1,
+        "flexible": true,
+        "max_move": 0.5,
+        "span_gain": 0.01,
+        "wire_gain": 0.01,
+        "protect_boundary": false,
+        "choice_pairs": 203,
+        "forced_pairs": 28,
+        "certificate_scope": "fixed shapes; movement cap, per-axis bbox span caps, HPWL cap, preserved successful boundary blocks"
+      }
+    },
+    {
+      "arm": "larger_move_control",
+      "solver": {
+        "status": 2,
+        "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+        "objective": null,
+        "dual_bound": null,
+        "gap": null,
+        "binary_variables": 836,
+        "threads": 1,
+        "flexible": true,
+        "max_move": 2.0,
+        "span_gain": 0.01,
+        "wire_gain": 0.01,
+        "protect_boundary": true,
+        "choice_pairs": 231,
+        "forced_pairs": 0,
+        "certificate_scope": "fixed shapes; movement cap, per-axis bbox span caps, HPWL cap, preserved successful boundary blocks"
+      }
+    }
+  ]
+}

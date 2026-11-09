@@ -1,0 +1,30 @@
+{
+  "stages": [
+    {
+      "kind": "train rectangle_no_gap",
+      "command": [
+        "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+        "-u",
+        "-B",
+        "-m",
+        "experiments.E39_rectangular_attention.train",
+        "--arm",
+        "rectangle_no_gap",
+        "--output",
+        "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E39_rectangular_attention\\runs\\20261023_rectangle_no_gap_w96d12_rectangle_no_gap_seed0",
+        "--seed",
+        "0",
+        "--max-hours",
+        "4.0",
+        "--max-epochs",
+        "200",
+        "--batch-size",
+        "32"
+      ],
+      "returncode": 0,
+      "seconds": 5194.736134800012,
+      "output": "experiments/E39_rectangular_attention/runs/20261023_rectangle_no_gap_w96d12_rectangle_no_gap_seed0"
+    }
+  ],
+  "test_read": false
+}

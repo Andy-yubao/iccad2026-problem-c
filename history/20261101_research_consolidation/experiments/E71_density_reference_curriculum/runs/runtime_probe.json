@@ -1,0 +1,44 @@
+{
+  "unique_train_cases": 5,
+  "indices": [
+    1683,
+    10027,
+    5474,
+    9793,
+    1814
+  ],
+  "batch_size": 32,
+  "mode": "same E71 model/current final Loss; disable only density computation for timing, no formal training",
+  "results": {
+    "density": {
+      "wall_seconds_per_step": 1.528826649999246,
+      "GPU_seconds_per_step": 1.5288321533203124
+    },
+    "density_disabled": {
+      "wall_seconds_per_step": 1.5216536500010989,
+      "GPU_seconds_per_step": 1.52165576171875
+    }
+  },
+  "test_read": false,
+  "observed_concurrently": {
+    "ac_connected": false,
+    "battery_fraction": 0.68,
+    "GPU": "NVIDIA GeForce RTX 5080 Laptop GPU",
+    "GPU_utilization_percent": 100,
+    "GPU_SM_MHz": 180,
+    "GPU_memory_MHz": 405,
+    "performance_state": "P8",
+    "SW_power_cap": "Active",
+    "instantaneous_power_W": 15.51,
+    "current_power_limit_W": 30,
+    "default_power_limit_W": 100,
+    "HW_thermal_slowdown": "Not Active",
+    "source_commands": [
+      "System.Windows.Forms.SystemInformation.PowerStatus",
+      "nvidia-smi --query-gpu=utilization.gpu,memory.used,temperature.gpu,power.draw,clocks.sm,pstate --format=csv",
+      "nvidia-smi -q -d PERFORMANCE,POWER,CLOCK"
+    ]
+  },
+  "relative_density_overhead": 0.004713950509133147,
+  "interpretation": "Paired short timing under battery power and capped clocks. Density adds ~0.47% in this probe; absolute step time is not a normal-power full-training estimate. No power setting changed."
+}

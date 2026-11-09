@@ -1,0 +1,20 @@
+{
+  "status": "registered_before_execution",
+  "stage": "C6 optimization and feature-scale diagnosis",
+  "ids": [
+    1683,
+    10027,
+    5474,
+    10140,
+    15001
+  ],
+  "checkpoints": [
+    "C6 untrained",
+    "C6 preflight first Adam step",
+    "C6 own-Loss best",
+    "C6 latest"
+  ],
+  "operations": "one eval-mode forward/backward at fixed original-five repeated batch32 per checkpoint; inspect hidden/readout activations, gradients and parameter deltas; no optimizer steps, no solve/Q/checkpoint selection",
+  "formal_slots_consumed": 0,
+  "test_read": false
+}

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "E:\project\ICCAD\2026\problemC\experiments\E101_final_c5_solver\runs\20261104_chain64k_seed0\run.py", line 83, in <module>
+    try:main(args.resume)
+  File "E:\project\ICCAD\2026\problemC\experiments\E101_final_c5_solver\runs\20261104_chain64k_seed0\run.py", line 56, in main
+    stage('E42',BUNDLE/'s42',['-m',f'experiments.{E42}.train','--arm','rectangle_ab','--output',str(R42),'--device','cuda','--seed','0','--batch-size','32','--scheduler-start-epoch','15',*extra],[R42/'STOP'])
+  File "E:\project\ICCAD\2026\problemC\experiments\E101_final_c5_solver\runs\20261104_chain64k_seed0\run.py", line 26, in stage
+    if stopped():raise InterruptedError('User STOP; current stage saved, subsequent stages blocked')
+InterruptedError: User STOP; current stage saved, subsequent stages blocked

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "E:\project\ICCAD\2026\problemC\experiments\E90_auxiliary_weight_placer\runs\repair_raw_validation_20261031.py", line 124, in <module>
+    if __name__=='__main__':main()
+  File "E:\project\ICCAD\2026\problemC\experiments\E90_auxiliary_weight_placer\runs\repair_raw_validation_20261031.py", line 99, in main
+    value=monitor_losses(model,rows[start:start+32],device,'simple',0.,32,return_records=True)
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\site-packages\torch\utils\_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "E:\project\ICCAD\2026\problemC\experiments\E90_auxiliary_weight_placer\runs\repair_raw_validation_20261031.py", line 43, in monitor_losses
+    from .metrics import module_overlap
+ImportError: attempted relative import with no known parent package

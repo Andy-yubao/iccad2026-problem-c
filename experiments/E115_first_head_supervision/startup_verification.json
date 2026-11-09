@@ -1,0 +1,62 @@
+{
+  "status": "background_pair_dispatched",
+  "queue": {
+    "status": "running",
+    "pid": 14464,
+    "started_at": "2026-11-07T15:53:42.151963+00:00",
+    "jobs": [
+      {
+        "experiment": "E114_supervision_placement",
+        "arm": "staged",
+        "resume": true,
+        "log": "staged_resume"
+      },
+      {
+        "experiment": "E115_first_head_supervision",
+        "arm": "first9",
+        "resume": false,
+        "log": "first9"
+      }
+    ],
+    "completed": [],
+    "active": {
+      "experiment": "E114_supervision_placement",
+      "arm": "staged",
+      "resume": true,
+      "log": "staged_resume",
+      "pid": 33192,
+      "started_at": "2026-11-07T15:53:42.194565+00:00"
+    },
+    "data": "Same parent train36000 and original train/dev500 as E114 completed two arms",
+    "test_read": false,
+    "automatic_Q_evaluation": false,
+    "scope": "Only E114 staged resume -> E115 first9 scratch",
+    "updated_at": "2026-11-07T15:55:32.448282+00:00"
+  },
+  "observed_E114_heartbeat": {
+    "status": "data_preparation",
+    "activity": "preparing raw CPU tensors",
+    "pid": 33192,
+    "loaded": 9001,
+    "count": 36000,
+    "epoch": 0,
+    "step": 0,
+    "cursor": 0,
+    "elapsed_seconds": 624.2715889999527,
+    "utc": "2026-11-07T15:55:35Z",
+    "test_read": false,
+    "postprocessing_calls": 0
+  },
+  "E114_prior_budget_preserved": true,
+  "E115_first9_queued": true,
+  "E115_formal_run_started": false,
+  "E115_five_case_guarded_update_passed": true,
+  "source_gate_matches": true,
+  "protected_checkpoints_and_old_STOPs_unchanged": true,
+  "future16k_policy_and_subset_unchanged": true,
+  "train_count_per_model": 36000,
+  "test_read": false,
+  "error_logs_empty": true,
+  "waiting_for_training_updates": false,
+  "note": "User requested background queue; dispatch/initialization verified without waiting for formal updates"
+}

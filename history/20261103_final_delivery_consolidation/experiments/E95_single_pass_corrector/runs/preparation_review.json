@@ -1,0 +1,26 @@
+{
+  "status": "ready",
+  "sources_match_preflight": true,
+  "source_snapshot_sha256": "40ddf2efb8714509e97ec7e2025720c634c41e9fd6fa255b569cc2826a1ae10d",
+  "primary_calls": 1,
+  "auxiliary_calls": [
+    2,
+    4,
+    8
+  ],
+  "training_cap_seconds": 7200,
+  "evaluation_cap_seconds": 3600,
+  "historical_budget_snapshot": {
+    "prior_E94_snapshot_seconds": 76304.65496430013,
+    "E94_additional_snapshot_seconds": 2885.2612761000637,
+    "total_snapshot_seconds": 79189.9162404002,
+    "artifacts": {
+      "experiments\\E94_posttrain_lr_reset\\runs\\preparation_budget.json": 50.141909900004975,
+      "experiments\\E94_posttrain_lr_reset\\runs\\20261101_lr1e3_seed0\\budget.json": 2835.1193662000587
+    },
+    "policy": "read only; E95 bounded separate window, no historical reset; E94 may still accrue"
+  },
+  "test_read": false,
+  "scope": "five train members only; no full dataset generation, training, dev evaluation or test read",
+  "verification_limits": "full-run throughput, convergence, all-dev quality and worker scheduling are not yet measured"
+}

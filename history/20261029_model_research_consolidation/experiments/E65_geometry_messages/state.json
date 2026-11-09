@@ -1,0 +1,115 @@
+{
+  "status": "complete",
+  "arm": "all",
+  "stage": "complete",
+  "updated_utc": "2026-10-27T19:05:05.950335+00:00",
+  "controller_pid": 30228,
+  "child_pid": null,
+  "outputs": {
+    "geometry_message": "runs\\20261027_geometry_message_seed0",
+    "feature_message": "runs\\20261027_feature_message_seed0"
+  },
+  "events": [
+    {
+      "status": "running",
+      "arm": "geometry_message",
+      "stage": "train",
+      "utc": "2026-10-27T15:46:48.273809+00:00"
+    },
+    {
+      "status": "stopped",
+      "arm": "geometry_message",
+      "stage": "train",
+      "utc": "2026-10-27T16:25:43.548512+00:00"
+    },
+    {
+      "status": "running",
+      "arm": "geometry_message",
+      "stage": "train",
+      "utc": "2026-10-27T17:26:27.032614+00:00"
+    },
+    {
+      "status": "stage_complete",
+      "arm": "geometry_message",
+      "stage": "train",
+      "utc": "2026-10-27T17:53:29.210908+00:00"
+    },
+    {
+      "status": "running",
+      "arm": "geometry_message",
+      "stage": "final",
+      "utc": "2026-10-27T17:53:29.224958+00:00"
+    },
+    {
+      "status": "stage_complete",
+      "arm": "geometry_message",
+      "stage": "final",
+      "utc": "2026-10-27T17:58:15.296669+00:00"
+    },
+    {
+      "status": "running",
+      "arm": "geometry_message",
+      "stage": "draft100",
+      "utc": "2026-10-27T17:58:15.307678+00:00"
+    },
+    {
+      "status": "stage_complete",
+      "arm": "geometry_message",
+      "stage": "draft100",
+      "utc": "2026-10-27T17:59:06.340529+00:00"
+    },
+    {
+      "status": "running",
+      "arm": "feature_message",
+      "stage": "train",
+      "utc": "2026-10-27T17:59:06.357211+00:00"
+    },
+    {
+      "status": "stage_complete",
+      "arm": "feature_message",
+      "stage": "train",
+      "utc": "2026-10-27T18:59:29.291284+00:00"
+    },
+    {
+      "status": "running",
+      "arm": "feature_message",
+      "stage": "final",
+      "utc": "2026-10-27T18:59:29.304318+00:00"
+    },
+    {
+      "status": "stage_complete",
+      "arm": "feature_message",
+      "stage": "final",
+      "utc": "2026-10-27T19:04:10.576787+00:00"
+    },
+    {
+      "status": "running",
+      "arm": "feature_message",
+      "stage": "draft100",
+      "utc": "2026-10-27T19:04:10.591283+00:00"
+    },
+    {
+      "status": "stage_complete",
+      "arm": "feature_message",
+      "stage": "draft100",
+      "utc": "2026-10-27T19:05:00.646816+00:00"
+    },
+    {
+      "status": "running",
+      "arm": "all",
+      "stage": "report",
+      "utc": "2026-10-27T19:05:00.661714+00:00"
+    },
+    {
+      "status": "complete",
+      "arm": "all",
+      "stage": "complete",
+      "utc": "2026-10-27T19:05:05.950335+00:00"
+    }
+  ],
+  "failures": {},
+  "test_read": false,
+  "report": "runs/review.md",
+  "baseline_promoted": false,
+  "next_action": "Hourly continuation: review E65, then implement E66 under long_task.md; all seed0"
+}

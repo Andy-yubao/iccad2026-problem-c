@@ -1,0 +1,744 @@
+[
+  {
+    "name": "E101_final_c5_solver",
+    "title": "E101：原C5交付与重训证据",
+    "path": "experiments/E101_final_c5_solver",
+    "readme": "experiments/E101_final_c5_solver/README.md",
+    "area": "current"
+  },
+  {
+    "name": "E102_reference_image_generation",
+    "title": "E102：题目输入到 reference 风格图片",
+    "path": "experiments/E102_reference_image_generation",
+    "readme": "experiments/E102_reference_image_generation/README.md",
+    "area": "current"
+  },
+  {
+    "name": "E103_offline_loss_alignment",
+    "title": "E103：Loss对齐的离线与真实训练研究",
+    "path": "experiments/E103_offline_loss_alignment",
+    "readme": "experiments/E103_offline_loss_alignment/README.md",
+    "area": "current"
+  },
+  {
+    "name": "E104_scaling32k",
+    "title": "E104：32k、128×16 泛化增强版扩容实验",
+    "path": "experiments/E104_scaling32k",
+    "readme": "experiments/E104_scaling32k/README.md",
+    "area": "current"
+  },
+  {
+    "name": "E105_gated_prenorm_placer",
+    "title": "E105：方案一，完整前置归一化＋残差门控＋SwiGLU",
+    "path": "experiments/E105_gated_prenorm_placer",
+    "readme": "experiments/E105_gated_prenorm_placer/README.md",
+    "area": "current"
+  },
+  {
+    "name": "E106_postprocessor_aware_loss",
+    "title": "E106：后处理感知的可微Loss",
+    "path": "experiments/E106_postprocessor_aware_loss",
+    "readme": "experiments/E106_postprocessor_aware_loss/README.md",
+    "area": "current"
+  },
+  {
+    "name": "E107_geometry_posttrain",
+    "title": "E107：E105局部几何后训练，reference10%",
+    "path": "experiments/E107_geometry_posttrain",
+    "readme": "experiments/E107_geometry_posttrain/README.md",
+    "area": "current"
+  },
+  {
+    "name": "E98_loss_weight_learning",
+    "title": "E98：已停止的调权方向与受保护基线",
+    "path": "experiments/E98_loss_weight_learning",
+    "readme": "experiments/E98_loss_weight_learning/README.md",
+    "area": "current"
+  },
+  {
+    "name": "conflict_local_repair",
+    "title": "E5：冲突驱动局部重构探针",
+    "path": "history/20261018_E10_consolidation/experiments/conflict_local_repair",
+    "readme": "history/20261018_E10_consolidation/experiments/conflict_local_repair/README.md",
+    "area": "20261018_E10_consolidation"
+  },
+  {
+    "name": "E8_fast_robust_postprocess",
+    "title": "E8：快速、稳定的高质量后处理与模型联调",
+    "path": "history/20261018_E10_consolidation/experiments/E8_fast_robust_postprocess",
+    "readme": "history/20261018_E10_consolidation/experiments/E8_fast_robust_postprocess/README.md",
+    "area": "20261018_E10_consolidation"
+  },
+  {
+    "name": "E9_model_postprocess_alignment",
+    "title": "E9：面向 E8 后处理的模型改进",
+    "path": "history/20261018_E10_consolidation/experiments/E9_model_postprocess_alignment",
+    "readme": "history/20261018_E10_consolidation/experiments/E9_model_postprocess_alignment/README.md",
+    "area": "20261018_E10_consolidation"
+  },
+  {
+    "name": "graph_proposal",
+    "title": "E1：图条件布局提议",
+    "path": "history/20261018_E10_consolidation/experiments/graph_proposal",
+    "readme": "history/20261018_E10_consolidation/experiments/graph_proposal/README.md",
+    "area": "20261018_E10_consolidation"
+  },
+  {
+    "name": "intent_aware_repair",
+    "title": "E6：面向可修复布局的生成与意图感知修复",
+    "path": "history/20261018_E10_consolidation/experiments/intent_aware_repair",
+    "readme": "history/20261018_E10_consolidation/experiments/intent_aware_repair/README.md",
+    "area": "20261018_E10_consolidation"
+  },
+  {
+    "name": "masked_construction",
+    "title": "E3：带规则候选的逐步构造",
+    "path": "history/20261018_E10_consolidation/experiments/masked_construction",
+    "readme": "history/20261018_E10_consolidation/experiments/masked_construction/README.md",
+    "area": "20261018_E10_consolidation"
+  },
+  {
+    "name": "repair_friendly_draft",
+    "title": "E7：降低修复难度的布局草稿（已终止）",
+    "path": "history/20261018_E10_consolidation/experiments/repair_friendly_draft",
+    "readme": "history/20261018_E10_consolidation/experiments/repair_friendly_draft/README.md",
+    "area": "20261018_E10_consolidation"
+  },
+  {
+    "name": "topology_geometry",
+    "title": "E2：分离关系 → 固定形状几何",
+    "path": "history/20261018_E10_consolidation/experiments/topology_geometry",
+    "readme": "history/20261018_E10_consolidation/experiments/topology_geometry/README.md",
+    "area": "20261018_E10_consolidation"
+  },
+  {
+    "name": "E10_integrated_baseline",
+    "title": "E10：E7 模型与 E8 后处理联合基线",
+    "path": "history/20261020_E25_consolidation/experiments/E10_integrated_baseline",
+    "readme": "history/20261020_E25_consolidation/experiments/E10_integrated_baseline/README.md",
+    "area": "20261020_E25_consolidation"
+  },
+  {
+    "name": "E11_short_budget_diagnosis",
+    "title": "E11：短预算下草图与结构的作用诊断",
+    "path": "history/20261020_E25_consolidation/experiments/E11_short_budget_diagnosis",
+    "readme": "history/20261020_E25_consolidation/experiments/E11_short_budget_diagnosis/README.md",
+    "area": "20261020_E25_consolidation"
+  },
+  {
+    "name": "E12_distillation_readiness",
+    "title": "E12：教师—学生表示—轻量投影的蒸馏准备",
+    "path": "history/20261020_E25_consolidation/experiments/E12_distillation_readiness",
+    "readme": "history/20261020_E25_consolidation/experiments/E12_distillation_readiness/README.md",
+    "area": "20261020_E25_consolidation"
+  },
+  {
+    "name": "E13_solver_distillation",
+    "title": "E13：几何与结构蒸馏",
+    "path": "history/20261020_E25_consolidation/experiments/E13_solver_distillation",
+    "readme": "history/20261020_E25_consolidation/experiments/E13_solver_distillation/README.md",
+    "area": "20261020_E25_consolidation"
+  },
+  {
+    "name": "E14_stable_teacher",
+    "title": "E14：MIB 修正与尾部稳定性",
+    "path": "history/20261020_E25_consolidation/experiments/E14_stable_teacher",
+    "readme": "history/20261020_E25_consolidation/experiments/E14_stable_teacher/README.md",
+    "area": "20261020_E25_consolidation"
+  },
+  {
+    "name": "E15_quality_curriculum",
+    "title": "E15：从头训练与质量目标渐进对照",
+    "path": "history/20261020_E25_consolidation/experiments/E15_quality_curriculum",
+    "readme": "history/20261020_E25_consolidation/experiments/E15_quality_curriculum/README.md",
+    "area": "20261020_E25_consolidation"
+  },
+  {
+    "name": "E16_reference_curriculum",
+    "title": "E16：原参考监督与质量目标渐进对照",
+    "path": "history/20261020_E25_consolidation/experiments/E16_reference_curriculum",
+    "readme": "history/20261020_E25_consolidation/experiments/E16_reference_curriculum/README.md",
+    "area": "20261020_E25_consolidation"
+  },
+  {
+    "name": "E17_e10_geometry_v5",
+    "title": "E17：E10几何训练方法在当前v5数据上的对照",
+    "path": "history/20261020_E25_consolidation/experiments/E17_e10_geometry_v5",
+    "readme": "history/20261020_E25_consolidation/experiments/E17_e10_geometry_v5/README.md",
+    "area": "20261020_E25_consolidation"
+  },
+  {
+    "name": "E18_fast_postprocess",
+    "title": "E18：固定E17模型的快速后处理",
+    "path": "history/20261020_E25_consolidation/experiments/E18_fast_postprocess",
+    "readme": "history/20261020_E25_consolidation/experiments/E18_fast_postprocess/README.md",
+    "area": "20261020_E25_consolidation"
+  },
+  {
+    "name": "E19_mib_consistent_geometry",
+    "title": "E19：训练与部署一致的MIB形状解码",
+    "path": "history/20261020_E25_consolidation/experiments/E19_mib_consistent_geometry",
+    "readme": "history/20261020_E25_consolidation/experiments/E19_mib_consistent_geometry/README.md",
+    "area": "20261020_E25_consolidation"
+  },
+  {
+    "name": "E20_mib_fast_pipeline",
+    "title": "E20：MIB一致性模型与快速后处理联合流程",
+    "path": "history/20261020_E25_consolidation/experiments/E20_mib_fast_pipeline",
+    "readme": "history/20261020_E25_consolidation/experiments/E20_mib_fast_pipeline/README.md",
+    "area": "20261020_E25_consolidation"
+  },
+  {
+    "name": "E21_original_model_fast",
+    "title": "E21：保留原E10模型的同版快速后处理对照",
+    "path": "history/20261020_E25_consolidation/experiments/E21_original_model_fast",
+    "readme": "history/20261020_E25_consolidation/experiments/E21_original_model_fast/README.md",
+    "area": "20261020_E25_consolidation"
+  },
+  {
+    "name": "E22_native_geometry",
+    "title": "E22：剩余Python接触运算的原生实现",
+    "path": "history/20261020_E25_consolidation/experiments/E22_native_geometry",
+    "readme": "history/20261020_E25_consolidation/experiments/E22_native_geometry/README.md",
+    "area": "20261020_E25_consolidation"
+  },
+  {
+    "name": "E24_reference_fast",
+    "title": "E24：冻结E17与原生快速路径的直接对照",
+    "path": "history/20261020_E25_consolidation/experiments/E24_reference_fast",
+    "readme": "history/20261020_E25_consolidation/experiments/E24_reference_fast/README.md",
+    "area": "20261020_E25_consolidation"
+  },
+  {
+    "name": "E23_capacity_geometry",
+    "title": "E23：持续参考监督下的容量对照",
+    "path": "history/20261021_E29_consolidation/experiments/E23_capacity_geometry",
+    "readme": "history/20261021_E29_consolidation/experiments/E23_capacity_geometry/README.md",
+    "area": "20261021_E29_consolidation"
+  },
+  {
+    "name": "E26_tail_constraints",
+    "title": "E26：尾部软约束的协调修复",
+    "path": "history/20261021_E29_consolidation/experiments/E26_tail_constraints",
+    "readme": "history/20261021_E29_consolidation/experiments/E26_tail_constraints/README.md",
+    "area": "20261021_E29_consolidation"
+  },
+  {
+    "name": "E27_overlap_weight",
+    "title": "E27：单独提高重叠穿透惩罚",
+    "path": "history/20261021_E29_consolidation/experiments/E27_overlap_weight",
+    "readme": "history/20261021_E29_consolidation/experiments/E27_overlap_weight/README.md",
+    "area": "20261021_E29_consolidation"
+  },
+  {
+    "name": "E28_iterative_draft",
+    "title": "E28：保留端点信息的学习式迭代草稿",
+    "path": "history/20261021_E29_consolidation/experiments/E28_iterative_draft",
+    "readme": "history/20261021_E29_consolidation/experiments/E28_iterative_draft/README.md",
+    "area": "20261021_E29_consolidation"
+  },
+  {
+    "name": "baseline",
+    "title": "无训练硬约束基线",
+    "path": "history/20261026_flash_pro_consolidation/experiments/baseline",
+    "readme": "history/20261026_flash_pro_consolidation/experiments/baseline/README.md",
+    "area": "20261026_flash_pro_consolidation"
+  },
+  {
+    "name": "E25_integrated_baseline",
+    "title": "E25：冻结整合参照",
+    "path": "history/20261026_flash_pro_consolidation/experiments/E25_integrated_baseline",
+    "readme": "history/20261026_flash_pro_consolidation/experiments/E25_integrated_baseline/README.md",
+    "area": "20261026_flash_pro_consolidation"
+  },
+  {
+    "name": "E30_stable_fast_geometry",
+    "title": "E30：两线程下的质量、速度与尾部稳定性",
+    "path": "history/20261026_flash_pro_consolidation/experiments/E30_stable_fast_geometry",
+    "readme": "history/20261026_flash_pro_consolidation/experiments/E30_stable_fast_geometry/README.md",
+    "area": "20261026_flash_pro_consolidation"
+  },
+  {
+    "name": "E31_conic_workspace_reuse",
+    "title": "E31：锥求解器工作区复用的可行性",
+    "path": "history/20261026_flash_pro_consolidation/experiments/E31_conic_workspace_reuse",
+    "readme": "history/20261026_flash_pro_consolidation/experiments/E31_conic_workspace_reuse/README.md",
+    "area": "20261026_flash_pro_consolidation"
+  },
+  {
+    "name": "E32_learned_relation_feedback",
+    "title": "E32：学习关系决策与锥求解器反馈",
+    "path": "history/20261026_flash_pro_consolidation/experiments/E32_learned_relation_feedback",
+    "readme": "history/20261026_flash_pro_consolidation/experiments/E32_learned_relation_feedback/README.md",
+    "area": "20261026_flash_pro_consolidation"
+  },
+  {
+    "name": "E33_learned_solver_portfolio",
+    "title": "E33：从训练反事实中学习求解策略选择",
+    "path": "history/20261026_flash_pro_consolidation/experiments/E33_learned_solver_portfolio",
+    "readme": "history/20261026_flash_pro_consolidation/experiments/E33_learned_solver_portfolio/README.md",
+    "area": "20261026_flash_pro_consolidation"
+  },
+  {
+    "name": "E34_sparse_contact_feedback",
+    "title": "E34：相同关系权重的稀疏接触推理",
+    "path": "history/20261026_flash_pro_consolidation/experiments/E34_sparse_contact_feedback",
+    "readme": "history/20261026_flash_pro_consolidation/experiments/E34_sparse_contact_feedback/README.md",
+    "area": "20261026_flash_pro_consolidation"
+  },
+  {
+    "name": "E35_optimizer_attribution",
+    "title": "E35：E25优化器的触发与贡献归因",
+    "path": "history/20261026_flash_pro_consolidation/experiments/E35_optimizer_attribution",
+    "readme": "history/20261026_flash_pro_consolidation/experiments/E35_optimizer_attribution/README.md",
+    "area": "20261026_flash_pro_consolidation"
+  },
+  {
+    "name": "E36_persistent_conflict_repair",
+    "title": "E36：持续冲突的局部修复与阶段控制",
+    "path": "history/20261026_flash_pro_consolidation/experiments/E36_persistent_conflict_repair",
+    "readme": "history/20261026_flash_pro_consolidation/experiments/E36_persistent_conflict_repair/README.md",
+    "area": "20261026_flash_pro_consolidation"
+  },
+  {
+    "name": "E37_radial_draft_expansion",
+    "title": "E37：draft位置径向扩展5%的受控研究",
+    "path": "history/20261026_flash_pro_consolidation/experiments/E37_radial_draft_expansion",
+    "readme": "history/20261026_flash_pro_consolidation/experiments/E37_radial_draft_expansion/README.md",
+    "area": "20261026_flash_pro_consolidation"
+  },
+  {
+    "name": "E38_model_architecture",
+    "title": "E38：面向高质量draft的模型容量与结构研究",
+    "path": "history/20261026_flash_pro_consolidation/experiments/E38_model_architecture",
+    "readme": "history/20261026_flash_pro_consolidation/experiments/E38_model_architecture/README.md",
+    "area": "20261026_flash_pro_consolidation"
+  },
+  {
+    "name": "E39_rectangular_attention",
+    "title": "E39：矩形感知注意力",
+    "path": "history/20261026_flash_pro_consolidation/experiments/E39_rectangular_attention",
+    "readme": "history/20261026_flash_pro_consolidation/experiments/E39_rectangular_attention/README.md",
+    "area": "20261026_flash_pro_consolidation"
+  },
+  {
+    "name": "E40_endpoint_constraint_tokens",
+    "title": "E40：外部端点与约束对象的分层交互",
+    "path": "history/20261026_flash_pro_consolidation/experiments/E40_endpoint_constraint_tokens",
+    "readme": "history/20261026_flash_pro_consolidation/experiments/E40_endpoint_constraint_tokens/README.md",
+    "area": "20261026_flash_pro_consolidation"
+  },
+  {
+    "name": "E41_rectangular_depth",
+    "title": "E41：E39矩形注意力继续扩深",
+    "path": "history/20261026_flash_pro_consolidation/experiments/E41_rectangular_depth",
+    "readme": "history/20261026_flash_pro_consolidation/experiments/E41_rectangular_depth/README.md",
+    "area": "20261026_flash_pro_consolidation"
+  },
+  {
+    "name": "E43_overlap_area_loss",
+    "title": "E43：联合正则化矩形96×12，新增重叠面积训练损失",
+    "path": "history/20261026_flash_pro_consolidation/experiments/E43_overlap_area_loss",
+    "readme": "history/20261026_flash_pro_consolidation/experiments/E43_overlap_area_loss/README.md",
+    "area": "20261026_flash_pro_consolidation"
+  },
+  {
+    "name": "E44_near_limit_proposals",
+    "title": "接近加权 Q=1.01 的结构生成研究（当前单例预算 2 秒）",
+    "path": "history/20261026_flash_pro_consolidation/experiments/E44_near_limit_proposals",
+    "readme": "history/20261026_flash_pro_consolidation/experiments/E44_near_limit_proposals/README.md",
+    "area": "20261026_flash_pro_consolidation"
+  },
+  {
+    "name": "E45_draft_fidelity",
+    "title": "E45：持续尊重原始 draft 的后处理",
+    "path": "history/20261026_flash_pro_consolidation/experiments/E45_draft_fidelity",
+    "readme": "history/20261026_flash_pro_consolidation/experiments/E45_draft_fidelity/README.md",
+    "area": "20261026_flash_pro_consolidation"
+  },
+  {
+    "name": "E46_global_draft_refinement",
+    "title": "E46：全局布局保持与质量/速度联合优化",
+    "path": "history/20261026_flash_pro_consolidation/experiments/E46_global_draft_refinement",
+    "readme": "history/20261026_flash_pro_consolidation/experiments/E46_global_draft_refinement/README.md",
+    "area": "20261026_flash_pro_consolidation"
+  },
+  {
+    "name": "E47_draft_topology_confidence",
+    "title": "E47：保留完整draft的全局关系与置信度研究",
+    "path": "history/20261026_flash_pro_consolidation/experiments/E47_draft_topology_confidence",
+    "readme": "history/20261026_flash_pro_consolidation/experiments/E47_draft_topology_confidence/README.md",
+    "area": "20261026_flash_pro_consolidation"
+  },
+  {
+    "name": "E48_quality_potential",
+    "title": "E48：5秒质量优先的draft潜力评估求解器",
+    "path": "history/20261026_flash_pro_consolidation/experiments/E48_quality_potential",
+    "readme": "history/20261026_flash_pro_consolidation/experiments/E48_quality_potential/README.md",
+    "area": "20261026_flash_pro_consolidation"
+  },
+  {
+    "name": "E49_monotone_quality",
+    "title": "E49：逐例质量保护与5秒后处理优化",
+    "path": "history/20261026_flash_pro_consolidation/experiments/E49_monotone_quality",
+    "readme": "history/20261026_flash_pro_consolidation/experiments/E49_monotone_quality/README.md",
+    "area": "20261026_flash_pro_consolidation"
+  },
+  {
+    "name": "E51_module_overlap",
+    "title": "E51：逐模块相对重叠、面积重要性与连续个数因子",
+    "path": "history/20261026_flash_pro_consolidation/experiments/E51_module_overlap",
+    "readme": "history/20261026_flash_pro_consolidation/experiments/E51_module_overlap/README.md",
+    "area": "20261026_flash_pro_consolidation"
+  },
+  {
+    "name": "E52_training_throughput",
+    "title": "E52：相同模型与统一Loss的训练吞吐优化",
+    "path": "history/20261026_flash_pro_consolidation/experiments/E52_training_throughput",
+    "readme": "history/20261026_flash_pro_consolidation/experiments/E52_training_throughput/README.md",
+    "area": "20261026_flash_pro_consolidation"
+  },
+  {
+    "name": "E53_loss_geometry",
+    "title": "E53：冻结模型与flash，只研究固定Loss",
+    "path": "history/20261026_flash_pro_consolidation/experiments/E53_loss_geometry",
+    "readme": "history/20261026_flash_pro_consolidation/experiments/E53_loss_geometry/README.md",
+    "area": "20261026_flash_pro_consolidation"
+  },
+  {
+    "name": "E54_reference_extremes",
+    "title": "E54：不参考reference／只参考reference",
+    "path": "history/20261026_flash_pro_consolidation/experiments/E54_reference_extremes",
+    "readme": "history/20261026_flash_pro_consolidation/experiments/E54_reference_extremes/README.md",
+    "area": "20261026_flash_pro_consolidation"
+  },
+  {
+    "name": "E55_reference_position_shape",
+    "title": "E55：只拟合 reference 的位置与形状",
+    "path": "history/20261029_model_research_consolidation/experiments/E55_reference_position_shape",
+    "readme": "history/20261029_model_research_consolidation/experiments/E55_reference_position_shape/README.md",
+    "area": "20261029_model_research_consolidation"
+  },
+  {
+    "name": "E56_e55_geometry_finetune",
+    "title": "E56：E55 best40 的 E42 Loss 后训练",
+    "path": "history/20261029_model_research_consolidation/experiments/E56_e55_geometry_finetune",
+    "readme": "history/20261029_model_research_consolidation/experiments/E56_e55_geometry_finetune/README.md",
+    "area": "20261029_model_research_consolidation"
+  },
+  {
+    "name": "E57_capacity_data_diagnosis",
+    "title": "E57：当前架构表达能力与训练规模诊断",
+    "path": "history/20261029_model_research_consolidation/experiments/E57_capacity_data_diagnosis",
+    "readme": "history/20261029_model_research_consolidation/experiments/E57_capacity_data_diagnosis/README.md",
+    "area": "20261029_model_research_consolidation"
+  },
+  {
+    "name": "E58_training_data_v6",
+    "title": "E58：v6训练数据扩展至64k与缓存准备",
+    "path": "history/20261029_model_research_consolidation/experiments/E58_training_data_v6",
+    "readme": "history/20261029_model_research_consolidation/experiments/E58_training_data_v6/README.md",
+    "area": "20261029_model_research_consolidation"
+  },
+  {
+    "name": "E59_centerline_overlap",
+    "title": "E59：中心连线分离损失与扩大训练",
+    "path": "history/20261029_model_research_consolidation/experiments/E59_centerline_overlap",
+    "readme": "history/20261029_model_research_consolidation/experiments/E59_centerline_overlap/README.md",
+    "area": "20261029_model_research_consolidation"
+  },
+  {
+    "name": "E60_scaling_diagnosis",
+    "title": "E60：扩大训练规模与归一化的诊断",
+    "path": "history/20261029_model_research_consolidation/experiments/E60_scaling_diagnosis",
+    "readme": "history/20261029_model_research_consolidation/experiments/E60_scaling_diagnosis/README.md",
+    "area": "20261029_model_research_consolidation"
+  },
+  {
+    "name": "E61_explosion_replay",
+    "title": "E61：爆炸首次更新复现与无图聚合前归一化重训",
+    "path": "history/20261029_model_research_consolidation/experiments/E61_explosion_replay",
+    "readme": "history/20261029_model_research_consolidation/experiments/E61_explosion_replay/README.md",
+    "area": "20261029_model_research_consolidation"
+  },
+  {
+    "name": "E62_e42_loss_update_audit",
+    "title": "E62：E42实际Adam更新与Loss阻力检查",
+    "path": "history/20261029_model_research_consolidation/experiments/E62_e42_loss_update_audit",
+    "readme": "history/20261029_model_research_consolidation/experiments/E62_e42_loss_update_audit/README.md",
+    "area": "20261029_model_research_consolidation"
+  },
+  {
+    "name": "E63_e42_center_relaxation",
+    "title": "E63：E42 温和放宽中心约束后训练",
+    "path": "history/20261029_model_research_consolidation/experiments/E63_e42_center_relaxation",
+    "readme": "history/20261029_model_research_consolidation/experiments/E63_e42_center_relaxation/README.md",
+    "area": "20261029_model_research_consolidation"
+  },
+  {
+    "name": "E64_e42_unified_retrain",
+    "title": "E64：E42统一固定Loss从头重训",
+    "path": "history/20261029_model_research_consolidation/experiments/E64_e42_unified_retrain",
+    "readme": "history/20261029_model_research_consolidation/experiments/E64_e42_unified_retrain/README.md",
+    "area": "20261029_model_research_consolidation"
+  },
+  {
+    "name": "E65_geometry_messages",
+    "title": "E65：冻结G下的几何消息与匹配容量对照",
+    "path": "history/20261029_model_research_consolidation/experiments/E65_geometry_messages",
+    "readme": "history/20261029_model_research_consolidation/experiments/E65_geometry_messages/README.md",
+    "area": "20261029_model_research_consolidation"
+  },
+  {
+    "name": "E66_shared_refinement",
+    "title": "E66：冻结G下的增量输出与共享迭代修正",
+    "path": "history/20261029_model_research_consolidation/experiments/E66_shared_refinement",
+    "readme": "history/20261029_model_research_consolidation/experiments/E66_shared_refinement/README.md",
+    "area": "20261029_model_research_consolidation"
+  },
+  {
+    "name": "E67_multiscale_tokens",
+    "title": "E67：冻结G下的多尺度分组与全局对照",
+    "path": "history/20261029_model_research_consolidation/experiments/E67_multiscale_tokens",
+    "readme": "history/20261029_model_research_consolidation/experiments/E67_multiscale_tokens/README.md",
+    "area": "20261029_model_research_consolidation"
+  },
+  {
+    "name": "E68_port_tokens",
+    "title": "E68 v2：完整端口组合方案",
+    "path": "history/20261029_model_research_consolidation/experiments/E68_port_tokens",
+    "readme": "history/20261029_model_research_consolidation/experiments/E68_port_tokens/README.md",
+    "area": "20261029_model_research_consolidation"
+  },
+  {
+    "name": "E70_reference_task_loss",
+    "title": "E70：新任务Loss＋完整端口",
+    "path": "history/20261029_model_research_consolidation/experiments/E70_reference_task_loss",
+    "readme": "history/20261029_model_research_consolidation/experiments/E70_reference_task_loss/README.md",
+    "area": "20261029_model_research_consolidation"
+  },
+  {
+    "name": "E69_case_loss_statistics",
+    "title": "E69：不同案例的Loss差异与草稿质量统计",
+    "path": "history/20261101_research_consolidation/experiments/E69_case_loss_statistics",
+    "readme": "history/20261101_research_consolidation/experiments/E69_case_loss_statistics/README.md",
+    "area": "20261101_research_consolidation"
+  },
+  {
+    "name": "E71_density_reference_curriculum",
+    "title": "E71：温和reference日程＋内部密度＋紧凑约束",
+    "path": "history/20261101_research_consolidation/experiments/E71_density_reference_curriculum",
+    "readme": "history/20261101_research_consolidation/experiments/E71_density_reference_curriculum/README.md",
+    "area": "20261101_research_consolidation"
+  },
+  {
+    "name": "E72_topology_posttrain",
+    "title": "E72：扩大模型＋近邻拓扑监督后训练",
+    "path": "history/20261101_research_consolidation/experiments/E72_topology_posttrain",
+    "readme": "history/20261101_research_consolidation/experiments/E72_topology_posttrain/README.md",
+    "area": "20261101_research_consolidation"
+  },
+  {
+    "name": "E73_wide_robust_posttrain",
+    "title": "E73：保留图聚合映射的宽模型后训练",
+    "path": "history/20261101_research_consolidation/experiments/E73_wide_robust_posttrain",
+    "readme": "history/20261101_research_consolidation/experiments/E73_wide_robust_posttrain/README.md",
+    "area": "20261101_research_consolidation"
+  },
+  {
+    "name": "E75_collision_box_finetune",
+    "title": "E75：E74候选上的真实交面积与外框后训练",
+    "path": "history/20261101_research_consolidation/experiments/E75_collision_box_finetune",
+    "readme": "history/20261101_research_consolidation/experiments/E75_collision_box_finetune/README.md",
+    "area": "20261101_research_consolidation"
+  },
+  {
+    "name": "E76_bounded_refinement",
+    "title": "E76：冻结E74主干，只学习有界局部修正",
+    "path": "history/20261101_research_consolidation/experiments/E76_bounded_refinement",
+    "readme": "history/20261101_research_consolidation/experiments/E76_bounded_refinement/README.md",
+    "area": "20261101_research_consolidation"
+  },
+  {
+    "name": "E77_compact_refinement",
+    "title": "E77：固定E74预测外框，学习内部重排",
+    "path": "history/20261101_research_consolidation/experiments/E77_compact_refinement",
+    "readme": "history/20261101_research_consolidation/experiments/E77_compact_refinement/README.md",
+    "area": "20261101_research_consolidation"
+  },
+  {
+    "name": "E78_connectivity_posttrain",
+    "title": "E78：同形组协调输出与固定模块通道后训练",
+    "path": "history/20261101_research_consolidation/experiments/E78_connectivity_posttrain",
+    "readme": "history/20261101_research_consolidation/experiments/E78_connectivity_posttrain/README.md",
+    "area": "20261101_research_consolidation"
+  },
+  {
+    "name": "E79_center_refinement",
+    "title": "E79：保留E78同形尺寸，单独学习中心修正",
+    "path": "history/20261101_research_consolidation/experiments/E79_center_refinement",
+    "readme": "history/20261101_research_consolidation/experiments/E79_center_refinement/README.md",
+    "area": "20261101_research_consolidation"
+  },
+  {
+    "name": "E80_modular_transfer",
+    "title": "E80：冻结修正模型，替换布局模型",
+    "path": "history/20261101_research_consolidation/experiments/E80_modular_transfer",
+    "readme": "history/20261101_research_consolidation/experiments/E80_modular_transfer/README.md",
+    "area": "20261101_research_consolidation"
+  },
+  {
+    "name": "E82_global_pressure_refinement",
+    "title": "E82：冻结修正模型，补充全局公共通道信息",
+    "path": "history/20261101_research_consolidation/experiments/E82_global_pressure_refinement",
+    "readme": "history/20261101_research_consolidation/experiments/E82_global_pressure_refinement/README.md",
+    "area": "20261101_research_consolidation"
+  },
+  {
+    "name": "E83_strategy_attribution",
+    "title": "E83：先用两个零训练对照拆解策略贡献",
+    "path": "history/20261101_research_consolidation/experiments/E83_strategy_attribution",
+    "readme": "history/20261101_research_consolidation/experiments/E83_strategy_attribution/README.md",
+    "area": "20261101_research_consolidation"
+  },
+  {
+    "name": "E84_loss_control",
+    "title": "E84：同一初始化、同一模型，单独检验新增Loss目标包",
+    "path": "history/20261101_research_consolidation/experiments/E84_loss_control",
+    "readme": "history/20261101_research_consolidation/experiments/E84_loss_control/README.md",
+    "area": "20261101_research_consolidation"
+  },
+  {
+    "name": "E86_independent_global_corrector",
+    "title": "E86：独立全局神经修正网络",
+    "path": "history/20261101_research_consolidation/experiments/E86_independent_global_corrector",
+    "readme": "history/20261101_research_consolidation/experiments/E86_independent_global_corrector/README.md",
+    "area": "20261101_research_consolidation"
+  },
+  {
+    "name": "E87_simple_supervised_placer",
+    "title": "E87：监督布局器的简化Loss与稀疏数据研究方案",
+    "path": "history/20261101_research_consolidation/experiments/E87_simple_supervised_placer",
+    "readme": "history/20261101_research_consolidation/experiments/E87_simple_supervised_placer/README.md",
+    "area": "20261101_research_consolidation"
+  },
+  {
+    "name": "E88_sparse_training",
+    "title": "E88：第二优先级，真实稀疏样本覆盖",
+    "path": "history/20261101_research_consolidation/experiments/E88_sparse_training",
+    "readme": "history/20261101_research_consolidation/experiments/E88_sparse_training/README.md",
+    "area": "20261101_research_consolidation"
+  },
+  {
+    "name": "E89_spatial_neural_refinement",
+    "title": "E89：第三优先级，二维神经空间模块",
+    "path": "history/20261101_research_consolidation/experiments/E89_spatial_neural_refinement",
+    "readme": "history/20261101_research_consolidation/experiments/E89_spatial_neural_refinement/README.md",
+    "area": "20261101_research_consolidation"
+  },
+  {
+    "name": "E91_e74_32k_scratch",
+    "title": "E91：E74的32k数据和192×12结构，使用新Loss从头训练",
+    "path": "history/20261101_research_consolidation/experiments/E91_e74_32k_scratch",
+    "readme": "history/20261101_research_consolidation/experiments/E91_e74_32k_scratch/README.md",
+    "area": "20261101_research_consolidation"
+  },
+  {
+    "name": "E92_two_stage_placer",
+    "title": "E92：布局网络前训练／后训练规范 v1",
+    "path": "history/20261101_research_consolidation/experiments/E92_two_stage_placer",
+    "readme": "history/20261101_research_consolidation/experiments/E92_two_stage_placer/README.md",
+    "area": "20261101_research_consolidation"
+  },
+  {
+    "name": "E93_matched_posttrain",
+    "title": "E93：P best36共同起点的匹配后训练",
+    "path": "history/20261101_research_consolidation/experiments/E93_matched_posttrain",
+    "readme": "history/20261101_research_consolidation/experiments/E93_matched_posttrain/README.md",
+    "area": "20261101_research_consolidation"
+  },
+  {
+    "name": "E94_posttrain_lr_reset",
+    "title": "E94：后训练学习率重置到1e-3",
+    "path": "history/20261101_research_consolidation/experiments/E94_posttrain_lr_reset",
+    "readme": "history/20261101_research_consolidation/experiments/E94_posttrain_lr_reset/README.md",
+    "area": "20261101_research_consolidation"
+  },
+  {
+    "name": "E100_relation_guided_placer",
+    "title": "E100：关系引导的同时布局网络",
+    "path": "history/20261103_final_delivery_consolidation/experiments/E100_relation_guided_placer",
+    "readme": "history/20261103_final_delivery_consolidation/experiments/E100_relation_guided_placer/README.md",
+    "area": "20261103_final_delivery_consolidation"
+  },
+  {
+    "name": "E42_joint_regularization",
+    "title": "E42：12层矩形注意力的联合正则化AB",
+    "path": "history/20261103_final_delivery_consolidation/experiments/E42_joint_regularization",
+    "readme": "history/20261103_final_delivery_consolidation/experiments/E42_joint_regularization/README.md",
+    "area": "20261103_final_delivery_consolidation"
+  },
+  {
+    "name": "E50_anytime_quality",
+    "title": "E50：并行保护轨迹与约束反馈驱动的随时可用求解器",
+    "path": "history/20261103_final_delivery_consolidation/experiments/E50_anytime_quality",
+    "readme": "history/20261103_final_delivery_consolidation/experiments/E50_anytime_quality/README.md",
+    "area": "20261103_final_delivery_consolidation"
+  },
+  {
+    "name": "E74_collision_32k_posttrain",
+    "title": "E74：真实碰撞门控Loss＋冻结嵌套32k后训练",
+    "path": "history/20261103_final_delivery_consolidation/experiments/E74_collision_32k_posttrain",
+    "readme": "history/20261103_final_delivery_consolidation/experiments/E74_collision_32k_posttrain/README.md",
+    "area": "20261103_final_delivery_consolidation"
+  },
+  {
+    "name": "E81_multisource_refinement",
+    "title": "E81：小布局模型＋暖启动加宽的独立修正模型",
+    "path": "history/20261103_final_delivery_consolidation/experiments/E81_multisource_refinement",
+    "readme": "history/20261103_final_delivery_consolidation/experiments/E81_multisource_refinement/README.md",
+    "area": "20261103_final_delivery_consolidation"
+  },
+  {
+    "name": "E85_cooperative_space_refinement",
+    "title": "E85：E74上的协同空间修正",
+    "path": "history/20261103_final_delivery_consolidation/experiments/E85_cooperative_space_refinement",
+    "readme": "history/20261103_final_delivery_consolidation/experiments/E85_cooperative_space_refinement/README.md",
+    "area": "20261103_final_delivery_consolidation"
+  },
+  {
+    "name": "E90_auxiliary_weight_placer",
+    "title": "E90：提高E87辅助权重的固定Loss对照",
+    "path": "history/20261103_final_delivery_consolidation/experiments/E90_auxiliary_weight_placer",
+    "readme": "history/20261103_final_delivery_consolidation/experiments/E90_auxiliary_weight_placer/README.md",
+    "area": "20261103_final_delivery_consolidation"
+  },
+  {
+    "name": "E95_single_pass_corrector",
+    "title": "E95：独立全局修正器",
+    "path": "history/20261103_final_delivery_consolidation/experiments/E95_single_pass_corrector",
+    "readme": "history/20261103_final_delivery_consolidation/experiments/E95_single_pass_corrector/README.md",
+    "area": "20261103_final_delivery_consolidation"
+  },
+  {
+    "name": "E96_port_compression",
+    "title": "E96：完全压缩的独立全局修正器",
+    "path": "history/20261103_final_delivery_consolidation/experiments/E96_port_compression",
+    "readme": "history/20261103_final_delivery_consolidation/experiments/E96_port_compression/README.md",
+    "area": "20261103_final_delivery_consolidation"
+  },
+  {
+    "name": "E97_gpu_hybrid_solver",
+    "title": "E97：GPU混合神经网络与几何求解",
+    "path": "history/20261103_final_delivery_consolidation/experiments/E97_gpu_hybrid_solver",
+    "readme": "history/20261103_final_delivery_consolidation/experiments/E97_gpu_hybrid_solver/README.md",
+    "area": "20261103_final_delivery_consolidation"
+  },
+  {
+    "name": "E99_attraction_repulsion",
+    "title": "E99：有界矩形中心吸引—排斥",
+    "path": "history/20261103_final_delivery_consolidation/experiments/E99_attraction_repulsion",
+    "readme": "history/20261103_final_delivery_consolidation/experiments/E99_attraction_repulsion/README.md",
+    "area": "20261103_final_delivery_consolidation"
+  }
+]

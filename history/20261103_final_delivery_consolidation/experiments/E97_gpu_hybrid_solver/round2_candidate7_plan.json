@@ -1,0 +1,54 @@
+{
+  "revision": "E97.round2.candidate7.C5_full_teacher_exactWH.v1",
+  "candidate": 7,
+  "status": "registered_before_label_generation",
+  "source_checkpoint": "experiments/E97_gpu_hybrid_solver/runs/20261102_round2_candidate5_countweighted_seed0/checkpoints/best.pt",
+  "source_sha256": "028ea3aa124c8cd9e7c3cc7bf8587c699ab9b4932f256899e3780d4d8c8816e0",
+  "teacher": {
+    "new_source": "C5 unique own-Loss best + unchanged full E85 singlethread solver; distinct from old E85 teacher16500, which remains read-only and is not regenerated",
+    "train": "4000 deterministic original train16k members: force fixed train_monitor500 + original five implementation IDs, fill without replacement with NumPy default_rng(730), sorted global IDs; no split changes",
+    "dev": "same exposed dev_monitor500: reuse existing C5 saved full final positions/hard validity; zero duplicate dev solver/scorer calls. Recompute public-only NN base states for label input alignment, not a quality evaluation.",
+    "metadata": "Store exact normalized teacher WH and full float64 final positions, center/logaspect targets, actual deployment-L base/source states, member/source/hash/solver settings and hard checks. Nominal-area reconstruction difference and aspect>5 counted, not hidden.",
+    "cpu_threads": 1,
+    "workers": 1,
+    "wall_cap_seconds": 1200,
+    "deadline_utc": "2026-11-02T09:45:00+00:00"
+  },
+  "training": {
+    "model": "student.DeploymentModel; strict C5 warm start all heads retained, only F241547 trainable, E74 frozen. No new inference layer/CPU operation.",
+    "data": "new4000 subset includes exact fixed train500; dev500 same existing members. Source model already exposed to original16k/inherited larger training; not new independent generalization.",
+    "loss": "exact C5 public-count-weighted group-aware objective and coefficients, except teacher near-gap/axis selection uses stored actual teacher WH and stored target centers, instead of reconstructing nominal area dimensions. Exact WH supervision never enters NN. Other public contact/geometry terms unchanged.",
+    "count_normalizer": 0.12578465955104443,
+    "public_soft_coefficient": 3.6876450434943204,
+    "seed": 0,
+    "batch": 32,
+    "precision": "FP32 noAMP/TF32",
+    "optimizer": "fresh AdamW",
+    "lr_levels": [
+      0.0001,
+      5e-05,
+      2e-05,
+      1e-05
+    ],
+    "max_seconds": 600,
+    "max_epochs": 100,
+    "same_loss_for": [
+      "backward",
+      "train500",
+      "dev500",
+      "best",
+      "LR",
+      "early_stop"
+    ],
+    "checkpoints": "best/latest full Adam/RNG/order/cursor/seen/scheduler/elapsed budget; no Q checkpoint reselection"
+  },
+  "terminal": "Unique own-Loss best once original full CPU1 dev500/new raw2000/same100. Epoch0 whole model equal C5 reuses complete C5 terminal/raw/gallery.",
+  "preflight": "Original five train actual Dropout/Adam eager/graph update/moments, next-step rebuild restore exact model/Adam/RNG; nonfinite target and exactWH rejected before Adam; E74 frozen, strict C5 initial state, exactWH excluded from NN. Complete subset/source/manifests verified before formal count.",
+  "caveats": [
+    "New label source +4000 subset+lower LR and teacher-WH numerical objective are a registered migration, not a single-factor attribution or ordinary continuation.",
+    "Actual teacher dimensions may use public area tolerance and source network nominal-area decode still cannot imitate every exact WH; keep diagnostics and9historical aspect>5 caveat.",
+    "C5 full teacher labels are not guaranteed globally optimal; final Q and complete timing decide.",
+    "All offline label time counts in unchanged original-start extended deadline; stop on cap/STOP/failure, no automatic retries or silently missing members."
+  ],
+  "test_read": false
+}

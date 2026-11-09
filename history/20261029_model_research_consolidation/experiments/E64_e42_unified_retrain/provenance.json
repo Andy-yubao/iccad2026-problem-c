@@ -1,0 +1,17 @@
+{
+  "experiment": "E64_e42_unified_retrain",
+  "source_experiment": "experiments/E63_e42_center_relaxation",
+  "copy_note": "Independently copied E63 runtime and frozen E42 flash solver; no private cross-experiment imports. Scratch initialization and original eight-term G.",
+  "comparison_checkpoint": "experiments/E42_joint_regularization/runs/20261023_rectangle_w96d12_ab_seed0/checkpoints/best.pt",
+  "comparison_sha256": "12878108e9a58b8c195b314ba6586686c2a6e2796c1f4b6443e102b4db4224a6",
+  "E42_identical_sources": {
+    "model.py": "0d71c96c75976dc57d589d5709639291d1a30addffa8a5f0f2c53e2cb88a9089",
+    "features.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+    "batches.py": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92"
+  },
+  "protected_checkpoints_sha256": {
+    "experiments/E42_joint_regularization/runs/20261023_rectangle_w96d12_ab_seed0/checkpoints/best.pt": "12878108e9a58b8c195b314ba6586686c2a6e2796c1f4b6443e102b4db4224a6",
+    "experiments/E42_joint_regularization/runs/20261023_rectangle_w96d12_ab_seed0/checkpoints/latest.pt": "94abb24266e61c681ed33a44bc2a8f5a819a7678bb23963145af0ec8baf41fcb"
+  },
+  "test_read": false
+}

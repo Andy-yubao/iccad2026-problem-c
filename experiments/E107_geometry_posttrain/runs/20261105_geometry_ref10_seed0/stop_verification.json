@@ -1,0 +1,23 @@
+{
+  "status": "stopped_on_relative_case_loss_spike",
+  "verified_utc": "2026-11-05T04:17:40.458465+00:00",
+  "training_and_controller_exited": true,
+  "gpu_memory_released": true,
+  "stop_present": true,
+  "evaluation_started": false,
+  "test_read": false,
+  "rejected_update": 23,
+  "accepted_updates": 22,
+  "offender": {
+    "batch_index": 0,
+    "member": [
+      "worker_40/layouts_9296.th",
+      69
+    ],
+    "loss": 49.702369689941406,
+    "parent_loss": 3.766752004623413,
+    "case_limit": 37.667518615722656
+  },
+  "all_losses_finite": true,
+  "no_automatic_restart": true
+}

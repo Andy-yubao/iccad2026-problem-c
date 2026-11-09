@@ -1,0 +1,22 @@
+{
+  "revision":"E99.R15.train500_trajectory_mechanisms.v1",
+  "stage":"diagnostic trajectories only, no downstream numerical planner solves or candidate selection by dev",
+  "panel":"v5.train_monitor500 in original frozen order; cached identical C3/public inputs from completed full control",
+  "controls":[
+    {"name":"baseline20","purpose":"Frozen original20-round force/shape equations and budgets; compare native implementation to original Python on5 cases"},
+    {"name":"budget_gate","purpose":"Same parameters; zero mobility only for modules whose own path budget is numerically exhausted, excluding them from common scale calculation; prevents one completed module from freezing all others"},
+    {"name":"attraction_equal_slope","purpose":"Budget gate plus attraction strength1 vs original0.25; equals repulsion slope magnitude at infinitesimal contact gap, one justified change rather than coefficient scan"},
+    {"name":"bounded_area_source","purpose":"Previous control plus symmetric attraction multiplier2*m_i*m_j/(m_i+m_j). Inertial mass unchanged, pair forces equal/opposite. For fixed target i, attraction increases monotonically with source j area while attraction mobility contribution multiplier C/m_i<2; avoid unbounded product-area force"}
+  ],
+  "unchanged_budgets":{"iterations":20,"center_step_initial_short_side_fraction":0.05,"center_total_path_fraction":0.4,"shape_step_factor":1.03,"shape_total_factor":1.5},
+  "amplitude_decision":"Do not blindly relax shape allowance: saved20 logs0/100 hit it. Decide any later budget change from this training replay's actual per-module saturation after budget-gate repair, register separately before solve/evaluation.",
+  "logs":"For every case/arm/round/module save forces, pair-magnitude sums, degree, raw mass-scaled step, own remaining bound, common scale, actual movement/path, attraction/repulsion shape stress, raw/actual log-shape update, shape path and excluded-budget flag. Save all trajectories once; per-round exact pair-intersection proxy/bbox and final exact union/coverage diagnostics. Serialization and diagnostics outside pure operator timing.",
+  "preflight":{"indices":[0,4,43,95,135],"checks":"native baseline vs original Python all trajectory coordinates; capture true vs false coordinates identical; locks, area, movement and shape budgets for each of4 arms; cold native initialization separate"},
+  "execution":"Single sequential CPU numerical worker,1 math thread, shared research OS lock, STOP at case/arm boundaries, atomic source-bound records, explicit resume missing arms only",
+  "output":"runs/research/20261103_R15_train500_trajectory_audit",
+  "preflight_output":"runs/research/20261103_R15_operator_preflight5_v2",
+  "preflight_migration":"First preflight stopped during native compilation before any case operation: installed Numba rejects float(bool). Replace diagnostic boolean cast by1/0; numerical force equations/configurations unchanged. Preserve initial source snapshot and error; use a new preflight output.",
+  "planner":"Original planner Python files and planner_config.json frozen and identity-checked against original train500 registration; no planner solve in this diagnostic stage",
+  "source_only":"Reference labels/denominators never enter operator, diagnostics or selection. Historicaldev100 read-only audit supports mechanism questions only; all new controls on training sources.",
+  "test_read":false,"new_training":false,"automatic_later_full_solve_launch":false
+}

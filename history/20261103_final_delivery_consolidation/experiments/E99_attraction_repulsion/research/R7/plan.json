@@ -1,0 +1,13 @@
+{
+  "revision":"E99.R7.conditional_snapshot_preconditioner.v1",
+  "evidence":"R6 implementation: native greedy geometry matches original bit-exact on5 cases, improves recovery time but batch8 ray corrections still cannot repair95/135/335 within4 calls. Flipping individual reduced edges may leave alternate overconstrained paths in the complete pair graph. A physical synchronous update changes many pair order choices coherently.",
+  "hypothesis":"After the first shape call reports PrimalInfeasible, apply exactly one registered12-round native simultaneous public field to the current draft, discard stale dual overrides, and rebuild topology. Subsequent failures use R6 batch8 repair. Do not alter the path for requests whose first solve is not proven infeasible.",
+  "arms":["R6_control","field_on_infeasible"],
+  "backend":{"seconds":0.18,"maximum_shape_solves":4,"shape_cap_seconds":0.045,"projection_and_polish_reserve_seconds":0.033,"maximum_edge_flips_per_failure":8,"field_settings":{"iterations":12,"step_fraction":0.04,"total_fraction":0.35,"shape_step_log":0.025,"shape_total_factor":1.3,"group_strength":0.35,"boundary_strength":0.5}},
+  "implementation_panel":[0,43,95,135,335],
+  "control_reuse":"Completed R6 batch_dual_native full500 read-only; historical timing explicitly labeled. New arm's mathematically unchanged no-trigger branches may reuse their R6 complete records/coordinates with explicit provenance; include all500 in statistics and list fresh/reused counts. This is conditional-branch development evidence, never fresh complete latency acceptance.",
+  "calibration_panel":"fixed v5 train_monitor500 after R6 completion; only changed triggered branches newly solved; C3/public inputs frozen",
+  "checks":"max5 implementation cases, locks/area/MIB plus original hard checks; cold native initialization separate, timeout/fallback included",
+  "promotion":"Fresh C3 plus all geometry and hard checks on all dev500 only after candidate freeze; no dev coefficient sweep",
+  "test_read":false,"new_training":false
+}

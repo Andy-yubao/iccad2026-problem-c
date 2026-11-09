@@ -1,0 +1,196 @@
+{
+  "stage1": {
+    "fixed_relation": {
+      "hard_witness": 0,
+      "guarded_witness": 0,
+      "infeasible_within_stated_subproblem": 22,
+      "unknown": 1
+    },
+    "flexible_relation": {
+      "hard_witness": 0,
+      "guarded_witness": 0,
+      "infeasible_within_stated_subproblem": 22,
+      "unknown": 1
+    },
+    "joint_small_shape": {
+      "hard_witness": 0,
+      "guarded_witness": 0,
+      "infeasible_within_stated_subproblem": 19,
+      "unknown": 4
+    }
+  },
+  "stage2_eligible_pairs": 7,
+  "stage2_disjoint_pairs": 4,
+  "stage3": {
+    "count": 5,
+    "gradient_comparisons": [
+      {
+        "dev_index": 23,
+        "n": 25,
+        "output": {
+          "overlap_vs_total_cosine": 0.04748899568489908,
+          "overlap_vs_center_supervision_cosine": -0.5105994343757629,
+          "overlap_vs_bbox_cosine": -0.03918419033288956,
+          "gradient_sum_norm_ratio": 0.44091348615052844
+        },
+        "parameters": {
+          "overlap_vs_total_cosine": 0.016019544963504315,
+          "overlap_vs_center_supervision_cosine": -0.2808878719806671,
+          "overlap_vs_bbox_cosine": -0.43646320700645447,
+          "gradient_sum_norm_ratio": 0.5449502568414821
+        }
+      },
+      {
+        "dev_index": 341,
+        "n": 45,
+        "output": {
+          "overlap_vs_total_cosine": 0.372055152965768,
+          "overlap_vs_center_supervision_cosine": -0.05781560018658638,
+          "overlap_vs_bbox_cosine": -0.1266561597585678,
+          "gradient_sum_norm_ratio": 0.6370840170031914
+        },
+        "parameters": {
+          "overlap_vs_total_cosine": -0.05787753790508668,
+          "overlap_vs_center_supervision_cosine": -0.4925260543823242,
+          "overlap_vs_bbox_cosine": -0.5582982301712036,
+          "gradient_sum_norm_ratio": 0.6747318211576079
+        }
+      },
+      {
+        "dev_index": 88,
+        "n": 70,
+        "output": {
+          "overlap_vs_total_cosine": -0.092373468223217,
+          "overlap_vs_center_supervision_cosine": -0.25351211428642273,
+          "overlap_vs_bbox_cosine": -0.47408637404441833,
+          "gradient_sum_norm_ratio": 0.5513214612736205
+        },
+        "parameters": {
+          "overlap_vs_total_cosine": -0.47981718075465607,
+          "overlap_vs_center_supervision_cosine": -0.48452746868133545,
+          "overlap_vs_bbox_cosine": -0.3744111955165863,
+          "gradient_sum_norm_ratio": 0.6030064419549973
+        }
+      },
+      {
+        "dev_index": 76,
+        "n": 95,
+        "output": {
+          "overlap_vs_total_cosine": 0.336612619830266,
+          "overlap_vs_center_supervision_cosine": 0.15418557822704315,
+          "overlap_vs_bbox_cosine": -0.22134757041931152,
+          "gradient_sum_norm_ratio": 0.6060143992231178
+        },
+        "parameters": {
+          "overlap_vs_total_cosine": -0.3511347539290225,
+          "overlap_vs_center_supervision_cosine": -0.46388643980026245,
+          "overlap_vs_bbox_cosine": -0.7290154099464417,
+          "gradient_sum_norm_ratio": 0.7499457107071931
+        }
+      },
+      {
+        "dev_index": 37,
+        "n": 115,
+        "output": {
+          "overlap_vs_total_cosine": 0.29244552566857984,
+          "overlap_vs_center_supervision_cosine": 0.07492394000291824,
+          "overlap_vs_bbox_cosine": -0.010159523226320744,
+          "gradient_sum_norm_ratio": 0.6455131933530193
+        },
+        "parameters": {
+          "overlap_vs_total_cosine": 0.5321245095786415,
+          "overlap_vs_center_supervision_cosine": 0.3975875973701477,
+          "overlap_vs_bbox_cosine": 0.39890551567077637,
+          "gradient_sum_norm_ratio": 0.6988015574205678
+        }
+      }
+    ],
+    "layer_comparisons": [
+      {
+        "index": 23,
+        "n": 25,
+        "layer10_overlap_increases_vs9": true,
+        "last_layer_overlap_decreases": true,
+        "layer11_overlap": 0.07833563995710616,
+        "layer12_overlap": 0.051069817059903336,
+        "ideal_target_overlap": 0.019536408140738034,
+        "ideal_target_mib_loss": 0.13133414089679718
+      },
+      {
+        "index": 341,
+        "n": 45,
+        "layer10_overlap_increases_vs9": true,
+        "last_layer_overlap_decreases": true,
+        "layer11_overlap": 0.07529005074616298,
+        "layer12_overlap": 0.05929222199338185,
+        "ideal_target_overlap": 0.028783511110205627,
+        "ideal_target_mib_loss": 0.014864254742860794
+      },
+      {
+        "index": 88,
+        "n": 70,
+        "layer10_overlap_increases_vs9": true,
+        "last_layer_overlap_decreases": true,
+        "layer11_overlap": 0.07429055288156422,
+        "layer12_overlap": 0.04136494434584189,
+        "ideal_target_overlap": 0.016463069996066355,
+        "ideal_target_mib_loss": 0.032272640615701675
+      },
+      {
+        "index": 76,
+        "n": 95,
+        "layer10_overlap_increases_vs9": true,
+        "last_layer_overlap_decreases": true,
+        "layer11_overlap": 0.06786363942228925,
+        "layer12_overlap": 0.035044035093932835,
+        "ideal_target_overlap": 0.011114893416984331,
+        "ideal_target_mib_loss": 0.024370979517698288
+      },
+      {
+        "index": 37,
+        "n": 115,
+        "layer10_overlap_increases_vs9": true,
+        "last_layer_overlap_decreases": true,
+        "layer11_overlap": 0.08104677273946963,
+        "layer12_overlap": 0.04139041027291669,
+        "ideal_target_overlap": 0.004418114301480308,
+        "ideal_target_mib_loss": 0.06099243834614754
+      }
+    ],
+    "parameter_total_gradient_opposes_overlap_count": 3,
+    "parameter_overlap_center_conflict_count": 4,
+    "state_total_gradient_opposes_overlap_count": 1
+  },
+  "stage4": {
+    "status": "rejected_comparison_design",
+    "pairs": 5,
+    "rubric_version": 2,
+    "interpretation": "用户认为展示布局均不理想且变化不够明显。本轮A/B设计未取得有效比较信息；不要求继续打分，不作为模型策略或可修复性假设的否定证据。原始图片、清单、评分及准备记录保留。"
+  },
+  "overall": "three diagnostic angles executed with inconclusive feasibility outcomes retained; fifth-pair perturbation matching misses declared0.001 overlap-fraction tolerance and remains exploratory",
+  "training_steps": 0,
+  "checkpoint_unchanged": true,
+  "source_sha256": "1df8dac42e6e7d52134362edfde12426c027e8ceb64f6bada31ebbc0385af115",
+  "stage1_sensitivity": {
+    "bbox_only": {
+      "hard_witnesses": 0,
+      "infeasible": 5,
+      "unknown": 0
+    },
+    "wire_only": {
+      "hard_witnesses": 0,
+      "infeasible": 5,
+      "unknown": 0
+    },
+    "boundary_only": {
+      "hard_witnesses": 0,
+      "infeasible": 5,
+      "unknown": 0
+    },
+    "larger_move_control": {
+      "hard_witnesses": 0,
+      "infeasible": 2,
+      "unknown": 3
+    }
+  }
+}

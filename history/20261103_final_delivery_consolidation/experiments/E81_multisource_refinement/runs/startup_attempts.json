@@ -1,0 +1,31 @@
+{
+  "recorded_utc": "2026-10-29T10:32:41.351987+00:00",
+  "attempts": [
+    {
+      "stdout": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E81_multisource_refinement\\runs\\controller_20261029_102748.stdout.log",
+      "controller_pid": 23444,
+      "stderr": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E81_multisource_refinement\\runs\\controller_20261029_102748.stderr.log",
+      "training_authorized": true,
+      "started_utc": "2026-10-29T10:27:48.3756930Z",
+      "command": "python -u -B -m experiments.E81_multisource_refinement.pipeline",
+      "reason": "Detached startup returned a PID but created no pipeline state or formal output; both OS locks independently acquired. Exact process exit cause unknown.",
+      "formal_updates": 0
+    },
+    {
+      "stdout": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E81_multisource_refinement\\runs\\controller_20261029_103005.stdout.log",
+      "stderr": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E81_multisource_refinement\\runs\\controller_20261029_103005.stderr.log",
+      "controller_pid": 26676,
+      "command": "python -u -B -m experiments.E81_multisource_refinement.pipeline",
+      "training_authorized": true,
+      "started_utc": "2026-10-29T10:30:05.7650467Z",
+      "reason": "Controller executed; child failed before importing training because copied module namespace E81_center_refinement did not exist. Pipeline module names fixed before formal initialization.",
+      "formal_updates": 0
+    }
+  ],
+  "formal_output_absent_before_repair": true,
+  "checkpoint_or_optimizer_reset": false,
+  "training_budget_reset": false,
+  "source_status": "Pipeline namespace and preflight CLI resolution check corrected before any formal config/checkpoint/update. Full five-case model/Loss/CUDA/resume check rerun on final sources.",
+  "separate_startup_cost": "Startup attempts recorded separately; no training initialization occurred. The new formal run retains original2h/200epoch cap and all historical global costs.",
+  "test_read": false
+}

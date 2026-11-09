@@ -1,0 +1,75 @@
+{
+  "date": "2026-11-08",
+  "status": "withdrawn_after_E65_history_review",
+  "decision": "Do not implement or train this pair-state candidate. Core pair-vector message mechanism overlaps completed E65; persistent edge state and deferred coordinate readout are real differences but do not justify prioritizing a retry. Keep the first-draft-only research objective independently.",
+  "history_review_sources": [
+    "history/20261029_model_research_consolidation/experiments/E65_geometry_messages/model.py",
+    "history/20261029_model_research_consolidation/experiments/E65_geometry_messages/runs/review.md",
+    "history/20261101_research_consolidation/experiments/E69_case_loss_statistics/README.md"
+  ],
+  "verification": "Original model parameter objects counted on CPU; proposal counted from complete Linear and LayerNorm definitions. No new model implementation, forward, backward, optimizer, dataset payload or checkpoint read.",
+  "original_e114_first_four": {
+    "input_encoder": 1216,
+    "four_rectangle_blocks": 202160,
+    "state_embed": 256,
+    "shared_head": 4355,
+    "total": 207987
+  },
+  "original_e115_first_draft": {
+    "input_encoder": 1216,
+    "first_rectangle_block": 50540,
+    "state_embed": 256,
+    "bootstrap_small_head": 4355,
+    "large_first_head": 148995,
+    "total": 205362
+  },
+  "proposal": {
+    "node_width": 64,
+    "edge_width": 16,
+    "heads": 4,
+    "independent_blocks": 4,
+    "node_input_dimensions": 16,
+    "public_pair_dimensions": 8,
+    "node_ffn_hidden": 216,
+    "edge_mlp_hidden": 32,
+    "intermediate_draft_outputs": 0,
+    "final_draft_outputs": 1,
+    "components": {
+      "input_encoder_16_64_silu_layernorm": 1216,
+      "public_pair_encoder_8_16": 144,
+      "four_blocks": 196656,
+      "global_context_readout_128_64_3": 8451
+    },
+    "single_block": {
+      "two_node_layernorms": 256,
+      "qkv_64_192": 12480,
+      "attention_output_64_64": 4160,
+      "edge_source_and_target_64_16_each": 2080,
+      "edge_layernorm": 32,
+      "edge_mlp_16_32_16": 1072,
+      "edge_attention_bias_16_4": 68,
+      "edge_message_output_16_64": 1088,
+      "node_ffn_64_216_64": 27928,
+      "total": 49164
+    },
+    "total": 206467,
+    "difference_from_e114_four": -1520,
+    "difference_from_e114_four_percent": -0.7308149067009051,
+    "difference_from_e115_first": 1105,
+    "edge_state_example": {
+      "batch": 32,
+      "nodes": 120,
+      "dimensions": 16,
+      "dtype": "float32",
+      "single_tensor_bytes": 29491200,
+      "excludes": "all other forward and backward activations, parameters, gradients, optimizer and workspaces"
+    }
+  },
+  "training_started": false,
+  "new_architecture_implemented": false,
+  "inference_run": false,
+  "dataset_payloads_read": 0,
+  "checkpoints_read": 0,
+  "q_evaluation": false,
+  "test_read": false
+}

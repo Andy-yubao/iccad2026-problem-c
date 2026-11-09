@@ -1,0 +1,23 @@
+{
+  "status": "registered_sparse_continuation",
+  "authorization": "用E88的数据在E90的参数上用新的Loss续训；后台启动，训练完后自动进行测试",
+  "starting_checkpoint": "experiments/E90_auxiliary_weight_placer/runs/20261031_aux3_seed0/checkpoints/best.pt",
+  "sparse_manifest": "experiments/E88_sparse_training/runs/20261031_sparse_pool/sparse_members.json",
+  "sparse_count": 2268,
+  "base_count": 16000,
+  "mixture": [
+    0.8,
+    0.2
+  ],
+  "samples_per_epoch": 16000,
+  "updates_per_epoch": 500,
+  "max_hours": 1,
+  "max_epochs": 200,
+  "batch_size": 32,
+  "loss_baseline": "E90 fixed three-group Loss, reference1, overlap0.08975162861857286, task0.3336832108335229",
+  "recalibration": false,
+  "scheduler": "inherit E90 best12 LR1e-4 and two drops; no protection; absolute scheduler epoch=12+stage epoch; epoch0 does not increment stagnation",
+  "controls": "Only new-data arm now. Repeat-old matched control deferred; cannot isolate data novelty from oversampling/extra training.",
+  "automatic_evaluation": "complete dev2000 raw and one fixed own-best dev500 flash4 processes x2 threads; tests sealed; no later training",
+  "test_read": false
+}

@@ -1,0 +1,1319 @@
+{
+  "control": {
+    "results": {
+      "status": "early_stop",
+      "elapsed_seconds": 5178.284639400081,
+      "steps": 25000,
+      "epochs": 50,
+      "best_epoch": 49,
+      "best_proxy": 0.47199684524536134,
+      "full_dev_complete": false,
+      "postprocessing_calls": 0,
+      "test_read": false,
+      "tail_test_read": false,
+      "implementation_check": false,
+      "final_postprocessed_Q": "not run; one frozen best assessment is a separate stage"
+    },
+    "identity": {
+      "revision": "E39.rectangular_attention.v2",
+      "arm": "rectangle",
+      "initialization": "random; preserved on explicit continuation",
+      "width": 96,
+      "layers": 12,
+      "rectangle": true,
+      "parameters": 1471539,
+      "sources": {
+        "datasets/__init__.py": "03c36f364366be6c8a5091d6bd3dbec0788d7871747acdeac5fa89d4974cec21",
+        "datasets/cases.py": "1fd51addaaae38164c22f1946712665beebac700054db4bb07ed4f9d44e0b168",
+        "datasets/paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+        "datasets/public_member_inputs.py": "6d525fa963d098051648b01d6bc75fb8a032dd5746529fb3c750afe2b5e8bb09",
+        "datasets/quality_layouts.py": "94f374fa9562770a9c7deadb645d73c3af1fc1a20251f98f1dce4ac575820191",
+        "datasets/reference_layouts.py": "f6aeeba298a163b7d506c67e3fba024cd3a191c3aae1116fc6b5d294431db9b5",
+        "datasets/worksets.py": "013087151ab8e1195d7d2757e777839f521486425eeaff4c45fed4e370df233c",
+        "docs/protocol.md": "f31a4e394df17e816b108e8cff21e7459c79dc50098c22fdf032688a85e106ec",
+        "experiments/E39_rectangular_attention/__init__.py": "2b10da0e1112a8d801600afaa2d1bf78d3faff96e298cd1ce5fb2c767f039c51",
+        "experiments/E39_rectangular_attention/analyze.py": "4e00b6877feb90b2252b30bea4832f654bea82d80bc5bcb352347cd5815bc68d",
+        "experiments/E39_rectangular_attention/arms.py": "e6f54beac936b61bfe4e3d76b89b22e613ae37836cb7f5466d324377010b5b13",
+        "experiments/E39_rectangular_attention/backend/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "experiments/E39_rectangular_attention/backend/conic_geometry.py": "0b1a0295426c37a61f4abc13946b5dadf2c6f107375a02890e90ffe404be40e4",
+        "experiments/E39_rectangular_attention/backend/frozen/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "experiments/E39_rectangular_attention/backend/frozen/canonical_geometry.py": "04924bc4150f82862ed4da6cb67fc08779bbf98fcf24e24abd41b1c64d4e2521",
+        "experiments/E39_rectangular_attention/backend/frozen/feasible.py": "9cfe70894d80fbe54ccaa1c3de60ef4ab111ac9b4472286d1ae6a0c5a1fdc756",
+        "experiments/E39_rectangular_attention/backend/frozen/global_refine.py": "088021ede3290fcd6cf60726a054f7958309e4267d4353a699b80697078ab716",
+        "experiments/E39_rectangular_attention/backend/frozen/packing.py": "3c0500b7fee120807e6bd3fa8e9f115e476782af1a3e7620859c6651a089ef30",
+        "experiments/E39_rectangular_attention/backend/frozen/postprocess.py": "da0e1572a822a589968a19e67e2d36dd5133c7d17b7ea9443bd743ee4653a272",
+        "experiments/E39_rectangular_attention/backend/frozen/shape_lp.py": "2988df542aa80602f091963e1506da8085152ea0eca4846f6dc6c0a25ef13c94",
+        "experiments/E39_rectangular_attention/backend/frozen/solver.py": "cb5b0b6af3b8511d8a21b14178be188e31c61b58cba065c8c23847c2f9200325",
+        "experiments/E39_rectangular_attention/backend/frozen/topology_mip.py": "e392857196dbde4b3c1f3668862c9779e9c686f17ca89a820078421573b46df5",
+        "experiments/E39_rectangular_attention/backend/guard.py": "4e4adfb1dedede451a4d530103681f97ca6c05516e2dbe96b84d63c136faa87f",
+        "experiments/E39_rectangular_attention/backend/observe.py": "6fb401b9a7ebccec7063de8e9feeaf28bee310ac8a39b221b78d40e438432ec3",
+        "experiments/E39_rectangular_attention/backend/optimizer.py": "6373f5e7477f528e09e599c9a478b712bfbeb0ec29037bed1595d8c82af2ca36",
+        "experiments/E39_rectangular_attention/backend/reduction.py": "4587a5c9c486c59719e76ef64396398edb92e6011d8c0c0cd4f538cad52c4b50",
+        "experiments/E39_rectangular_attention/backend/rescue.py": "b928986f58fb3215140fe05acc36ddde92ce7aad99197fb2a975b7743a8c2e59",
+        "experiments/E39_rectangular_attention/backend/robust.py": "ceea8f18d0e2979279f4cf711b7702436912fbae77095d9559e603401176c99b",
+        "experiments/E39_rectangular_attention/backend/selection.py": "c21486a437531fed9a6717bcde6ce2ca062153ea717f9ae135b5b72e05500350",
+        "experiments/E39_rectangular_attention/backend/stable.py": "dc5a1e0afbec79e33f1ca6603a7d3186045a52ccc543ac756b508dbf8159bcce",
+        "experiments/E39_rectangular_attention/batches.py": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92",
+        "experiments/E39_rectangular_attention/cache.py": "a527b8f098383b24ce20e7f1b09b740a4524ba731ac04ed3342b4a1e127936d0",
+        "experiments/E39_rectangular_attention/canonical.py": "57a3738b35d16a091a250f4bac36bdcef5f7edeec6e084e103ecb6e9967eac2d",
+        "experiments/E39_rectangular_attention/canonical_native.py": "469ed606532daa9750bb9dd6c98e0f79c27e246bf79ca4e89d483f0b6920e5eb",
+        "experiments/E39_rectangular_attention/canonical_py.py": "b5b99c1f77756aa318fe5cb0e7fa82935844752b4fa815ab80367adb34e00195",
+        "experiments/E39_rectangular_attention/certify_polish.py": "7148ff8dd958d5b8ecd2adbcd29ead999904b185ad12c77ffcdc0e7ec1f31462",
+        "experiments/E39_rectangular_attention/check.py": "4f345947b8bfaaddb92f35298dfbf75a732cce5aa44f0138931679f8f1353e51",
+        "experiments/E39_rectangular_attention/data.py": "f42fed522beb7e3c69c43ec991d257245eafc48faeb7800316dd4e4fbd5b28cb",
+        "experiments/E39_rectangular_attention/diagnostics.py": "095bd88919541c7247d1f105a1f371be63d9287b755b3d3972e2b1fa55f6d4e0",
+        "experiments/E39_rectangular_attention/fast_geometry.py": "3c15f72702b0581d8ee1a68fa321543837c1e1322ead00eb4d259c90125b1377",
+        "experiments/E39_rectangular_attention/features.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+        "experiments/E39_rectangular_attention/final.py": "8851be2c38d15b466349ee42585b9cad8eeca117257d07e8dee4a8d33540e6d5",
+        "experiments/E39_rectangular_attention/freeze.py": "9f86639dfe154010643e9254326f089faf936cf45da05bea5852a8a9786fa9a1",
+        "experiments/E39_rectangular_attention/inference.py": "b202f111d9b5feeb5f3ccbc473fb29e732d8088c5fb43472ab7d49f445378838",
+        "experiments/E39_rectangular_attention/io.py": "2291a69c6306f5629a2f03dd314fc699d02ea58355f0967a37a9c888e62ec038",
+        "experiments/E39_rectangular_attention/launch.ps1": "58197f546fded850c938dbd38e7bbf7e123b72b8304681f8a96bf15d4b25adfd",
+        "experiments/E39_rectangular_attention/legal_seed.py": "c5adf19f570678ba721dd1bc7ca888d2af41cf8148b68a3320903ca82083bfc9",
+        "experiments/E39_rectangular_attention/loss.py": "14b18ef89e62f731c23ebf0efa9ca98829fecc7ecf9b0b721782df8c37f62771",
+        "experiments/E39_rectangular_attention/losses.py": "f6503136dc719f6742c66b31da7ebe1076726fac38edb64fa9ae6106ab9d6557",
+        "experiments/E39_rectangular_attention/model.py": "5b50efdd453df2e30f73f16037f9fe4afe54eed8dc617d7af37980d1f42d1ca8",
+        "experiments/E39_rectangular_attention/occupancy.py": "ca5c7fa041d427d88594afac3fbaa5eaf71641367cf42128ba2a1b47a043bdc0",
+        "experiments/E39_rectangular_attention/pipeline.py": "2b10fc7e46000869150d566da5c834a288888d4cab41be39c25eac4459bede2e",
+        "experiments/E39_rectangular_attention/projection.py": "591f9bfbdf099b12dd9cd36f936e7c1f267b86456c67958c3957aa0ddc9d9028",
+        "experiments/E39_rectangular_attention/provenance.json": "6e3cbd1e7f349ba1879829d4afae653d4ffbe9a493e009e1178f120fc3b5e84f",
+        "experiments/E39_rectangular_attention/reference_model.py": "b8a85ffdc181f67c89b30ac7a8b79e26170803e4c5ddb18fa8d47e33ac3be5ab",
+        "experiments/E39_rectangular_attention/requirements-native.txt": "eddfdc929bf37a85b9b17d7c68af80a8ec5138dd8585c1afe0efc312435473b6",
+        "experiments/E39_rectangular_attention/solver.py": "13efe19cdb44ebd13e36d4d8d5ce44b0f9801f469e070981bc8be3354e9ecef6",
+        "experiments/E39_rectangular_attention/train.py": "de0a9f901d344762dd147a5ad543740b9a0d8938405e0a9ccd150d7299dbf159",
+        "experiments/E39_rectangular_attention/training_entry_check.py": "96dff1fc3845925968d36136847e1719e45e8c34684f8c0bbd8e8f8ba7451cc9",
+        "scoring/__init__.py": "933bf2be947e20bae164511f26afaa84c2f331d0dbdebc417d235db8358a9247",
+        "scoring/checks.py": "738f6b57e20dce58516f3f10d83689f8df273a84a02b2dce99c6ccc1f904763a",
+        "scoring/evaluation.py": "356e0d1c788c6f25154b33fb1c2455388317d2cc0dd96ca50d7357c58612c611",
+        "scoring/official.py": "478fbc228a56ec4b336b5d8687a44b22b749f30aae09372f57c08e7124270e03",
+        "third_party/FloorSet/cost.py": "b60561556f79aa41c196c8fcaddea57840aab41059c76dbc3f80b4fdde6b48c3",
+        "third_party/FloorSet/iccad2026contest/iccad2026_evaluate.py": "64db37865b42baf11add62bdbf035690dca086cd4be7b5b4e58db756f20d8498",
+        "third_party/FloorSet/utils.py": "9299d9257f5bd932001896307f2296b51cc5567f44150db5514f357ed93c121e"
+      },
+      "registry_sha256": "1409ccf825b9c7cae1097a22e8dc4068e1283d79541c85ce54c5627d0c2b4208",
+      "paths_sha256": "7a28cd42de0f10809500c43c48836576361e67a72e723f7b32a404186df9b419",
+      "cache_identity": {
+        "format": "E17.original_reference_tensors.v1",
+        "registry": "1409ccf825b9c7cae1097a22e8dc4068e1283d79541c85ce54c5627d0c2b4208",
+        "paths": "7a28cd42de0f10809500c43c48836576361e67a72e723f7b32a404186df9b419",
+        "sources": {
+          "cache.py": "f5b21cffa52563e68b2d5a5e7886f4b4b44e4a9e904ce2941e84ae2f972e2180",
+          "data.py": "12b1ef62dc4930065a42f1c042c6bbedc0948a41cd8d68274f33eb4f56a5d4ce",
+          "features.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+          "batches.py": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92"
+        },
+        "datasets_sources": {
+          "__init__.py": "03c36f364366be6c8a5091d6bd3dbec0788d7871747acdeac5fa89d4974cec21",
+          "cases.py": "1fd51addaaae38164c22f1946712665beebac700054db4bb07ed4f9d44e0b168",
+          "paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+          "quality_layouts.py": "94f374fa9562770a9c7deadb645d73c3af1fc1a20251f98f1dce4ac575820191",
+          "reference_layouts.py": "f6aeeba298a163b7d506c67e3fba024cd3a191c3aae1116fc6b5d294431db9b5",
+          "worksets.py": "013087151ab8e1195d7d2757e777839f521486425eeaff4c45fed4e370df233c"
+        }
+      },
+      "seed": 0,
+      "device": "cuda",
+      "torch": "2.7.1+cu128",
+      "numpy": "1.26.4",
+      "cuda": "12.8",
+      "device_name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+      "max_seconds": 14400.0,
+      "max_epochs": 200,
+      "batch_size": 32,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "clip_norm": 1.0,
+      "monitor_interval_epochs": 1,
+      "schedule": "E10 geometry: persistent center1 shape.25 relative.25; geometry terms ramp over first2 epochs; no anchor decay",
+      "selection": "dev500 arithmetic mean of E17 geometry + occupancy; fixed full weights for every epoch; no solver calls",
+      "lr_patience_checks": 3,
+      "early_patience_checks": 3,
+      "scheduler_start_epoch": 15,
+      "lr_levels": [
+        0.001,
+        0.00025,
+        0.0001,
+        5e-05
+      ],
+      "required_lr_drops": 3,
+      "meaningful_relative_delta": 0.001,
+      "meaningful_absolute_delta": 1e-05,
+      "cpu_threads": 4,
+      "lowest_lr_requires_completed_epochs": 2,
+      "training_postprocessing": false,
+      "validation_postprocessing": false,
+      "implementation_check": false,
+      "test_read": false,
+      "tail_test_read": false
+    },
+    "best_epoch": 49,
+    "best_train": {
+      "total": 0.2607787506580353,
+      "mse": 0.04505315712094307,
+      "center_mse": 0.001049795008264482,
+      "shape_mse": 0.14245064759254455,
+      "center_local": 0.13970486664772033,
+      "shape": 0.14245064759254455,
+      "relative_local": 0.17870636308193208,
+      "overlap": 0.03653306695818901,
+      "contact": 0.03832821696996689,
+      "boundary": 0.007886045183986425,
+      "mib": 0.013737001784145832,
+      "bbox": 8.779552247142419e-05,
+      "local": 0.21999411630630494,
+      "geometry": 0.26077875089645386,
+      "overlap_area": 0.06280404353141784,
+      "crowding": 0.0020493866223841905,
+      "void": 0.12110406017303467,
+      "compactness": 0.0010455185105092823,
+      "occupancy": 0.09374923390150071,
+      "repair": 0.35452798080444337,
+      "supervision": 0.21999411630630494,
+      "quality_proxy": 0.26077875089645386,
+      "count": 500,
+      "selection_proxy": 0.35452798080444337,
+      "raw_hard_legal": 0,
+      "raw_hard_legal_rate": 0.0,
+      "batched_inference_seconds_per_case": 0.0020023512006737292,
+      "draft_diagnostics": {
+        "overlap_pairs": {
+          "mean": 78.862,
+          "p95": 132.04999999999995,
+          "max": 150.0
+        },
+        "overlap_area_fraction": {
+          "mean": 0.06280404701847675,
+          "p95": 0.098180327446227,
+          "max": 0.13427739932690916
+        },
+        "penetration_squared_per_block": {
+          "mean": 0.018094934466913355,
+          "p95": 0.037740245175035776,
+          "max": 0.057789666864246546
+        },
+        "max_local_penetration": {
+          "mean": 0.4217391800774651,
+          "p95": 0.6875738631778299,
+          "max": 0.8667989377220426
+        },
+        "largest_conflict_cluster": {
+          "mean": 56.684,
+          "p95": 99.0,
+          "max": 112.0
+        },
+        "largest_conflict_cluster_fraction": {
+          "mean": 0.80276428327669,
+          "p95": 0.9523809523809523,
+          "max": 1.0
+        }
+      }
+    },
+    "best_dev": {
+      "total": 0.36880547070503233,
+      "mse": 0.056048753708601,
+      "center_mse": 0.002173418380320072,
+      "shape_mse": 0.1752597657442093,
+      "center_local": 0.19183905935287476,
+      "shape": 0.1752597657442093,
+      "relative_local": 0.24090511739253997,
+      "overlap": 0.04689742821455002,
+      "contact": 0.09091321283578872,
+      "boundary": 0.01044243098050356,
+      "mib": 0.013956950657069683,
+      "bbox": 0.0001356212960090488,
+      "local": 0.29588027691841123,
+      "geometry": 0.368805468082428,
+      "overlap_area": 0.06990287160873412,
+      "crowding": 0.0043224658668041226,
+      "void": 0.12810773503780365,
+      "compactness": 0.0012063824301585555,
+      "occupancy": 0.1031913766860962,
+      "repair": 0.47199684524536134,
+      "supervision": 0.29588027691841123,
+      "quality_proxy": 0.368805468082428,
+      "count": 500,
+      "selection_proxy": 0.47199684524536134,
+      "raw_hard_legal": 0,
+      "raw_hard_legal_rate": 0.0,
+      "batched_inference_seconds_per_case": 0.0020237265999894587,
+      "draft_diagnostics": {
+        "overlap_pairs": {
+          "mean": 78.458,
+          "p95": 129.04999999999995,
+          "max": 149.0
+        },
+        "overlap_area_fraction": {
+          "mean": 0.06990285065283317,
+          "p95": 0.11813397335675169,
+          "max": 0.16587613636622894
+        },
+        "penetration_squared_per_block": {
+          "mean": 0.023014970727400757,
+          "p95": 0.0488067796648362,
+          "max": 0.08643066428710623
+        },
+        "max_local_penetration": {
+          "mean": 0.47604392824161135,
+          "p95": 0.7346944821374396,
+          "max": 0.9187570810317993
+        },
+        "largest_conflict_cluster": {
+          "mean": 55.804,
+          "p95": 98.0,
+          "max": 109.0
+        },
+        "largest_conflict_cluster_fraction": {
+          "mean": 0.8034569350613286,
+          "p95": 0.9557667995721093,
+          "max": 1.0
+        }
+      }
+    },
+    "full_dev": {
+      "total": 0.36591307282447816,
+      "mse": 0.05555684149265289,
+      "center_mse": 0.0021342460196465255,
+      "shape_mse": 0.17385036718845367,
+      "center_local": 0.19039774692058564,
+      "shape": 0.17385036718845367,
+      "relative_local": 0.24022697210311889,
+      "overlap": 0.046943709552288056,
+      "contact": 0.0892960780262947,
+      "boundary": 0.010157571356743575,
+      "mib": 0.01323480649292469,
+      "bbox": 0.00013228054688079282,
+      "local": 0.2939170842170715,
+      "geometry": 0.36591308236122133,
+      "overlap_area": 0.06903897428512573,
+      "crowding": 0.004311483455821872,
+      "void": 0.1272739816904068,
+      "compactness": 0.0011785507830791176,
+      "occupancy": 0.10211212396621704,
+      "repair": 0.46802520084381105,
+      "supervision": 0.2939170842170715,
+      "quality_proxy": 0.36591308236122133,
+      "selection_proxy": 0.46802520084381105,
+      "batched_inference_seconds_per_case": 0.009646026349975727,
+      "count": 2000,
+      "raw_hard_legal": 0,
+      "raw_hard_legal_rate": 0.0,
+      "draft_diagnostics": {
+        "overlap_pairs": {
+          "mean": 78.5525,
+          "p95": 131.0,
+          "max": 149.0
+        },
+        "overlap_area_fraction": {
+          "mean": 0.06903898900251128,
+          "p95": 0.11396777271898992,
+          "max": 0.17003803017641267
+        },
+        "penetration_squared_per_block": {
+          "mean": 0.02301076965679385,
+          "p95": 0.04790243580015412,
+          "max": 0.08643066428710623
+        },
+        "max_local_penetration": {
+          "mean": 0.4756453980947994,
+          "p95": 0.7523629587937272,
+          "max": 0.9254365192199383
+        },
+        "largest_conflict_cluster": {
+          "mean": 55.724,
+          "p95": 99.0,
+          "max": 116.0
+        },
+        "largest_conflict_cluster_fraction": {
+          "mean": 0.8006904518053777,
+          "p95": 0.9545454545454546,
+          "max": 1.0
+        }
+      }
+    },
+    "terminal": {
+      "count": 500,
+      "hard_legal": 500,
+      "mean_Q": 1.044692629324002,
+      "weighted_Q": 1.0268674718601194,
+      "p95_Q": 1.156330566477975,
+      "max_Q": 1.8832671620903663,
+      "worst5pct_mean_Q": 1.2929404535861229,
+      "seconds_mean": 0.2805875881973188,
+      "seconds_p95": 0.6233382949896622,
+      "row_fallbacks": 0,
+      "rescue_cases": 6,
+      "errors": 0,
+      "hpwl_gap_mean_returned": 0.017553391843085273,
+      "area_gap_mean_returned": 0.020481207659656425,
+      "boundary_violations_mean_returned": 0.214,
+      "grouping_violations_mean_returned": 0.24,
+      "mib_violations_mean_returned": 0.0,
+      "inference_seconds_mean_returned": 0.06821777900331653,
+      "postprocess_seconds_mean_returned": 0.21223715579602867,
+      "mean_center_move_local_mean_returned": 0.4222628945623096,
+      "max_center_move_local_mean_returned": 1.707636257213648
+    },
+    "gap": 0.11746886444091797,
+    "lr_changes": [
+      {
+        "epoch": 21,
+        "from": 0.001,
+        "to": 0.00025
+      },
+      {
+        "epoch": 41,
+        "from": 0.00025,
+        "to": 0.0001
+      },
+      {
+        "epoch": 48,
+        "from": 0.0001,
+        "to": 5e-05
+      }
+    ],
+    "common_epochs": {
+      "45": {
+        "train": 0.3698087193965912,
+        "dev": 0.4721951148509979
+      },
+      "49": {
+        "train": 0.35452798080444337,
+        "dev": 0.47199684524536134
+      },
+      "50": {
+        "train": 0.3515360772609711,
+        "dev": 0.47232772040367127
+      }
+    }
+  },
+  "joint_AB": {
+    "results": {
+      "status": "early_stop",
+      "elapsed_seconds": 6763.252213000087,
+      "steps": 27000,
+      "epochs": 54,
+      "best_epoch": 51,
+      "best_proxy": 0.45440869164466857,
+      "full_dev_complete": false,
+      "postprocessing_calls": 0,
+      "test_read": false,
+      "tail_test_read": false,
+      "implementation_check": false,
+      "final_postprocessed_Q": "not run; one frozen best assessment is a separate stage"
+    },
+    "identity": {
+      "revision": "E42.joint_regularization.v1",
+      "arm": "rectangle_ab",
+      "initialization": "random; preserved on explicit continuation",
+      "width": 96,
+      "layers": 12,
+      "rectangle": true,
+      "ffn_dropout": 0.05,
+      "parameters": 1471539,
+      "sources": {
+        "datasets/__init__.py": "03c36f364366be6c8a5091d6bd3dbec0788d7871747acdeac5fa89d4974cec21",
+        "datasets/cases.py": "1fd51addaaae38164c22f1946712665beebac700054db4bb07ed4f9d44e0b168",
+        "datasets/paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+        "datasets/public_member_inputs.py": "6d525fa963d098051648b01d6bc75fb8a032dd5746529fb3c750afe2b5e8bb09",
+        "datasets/quality_layouts.py": "94f374fa9562770a9c7deadb645d73c3af1fc1a20251f98f1dce4ac575820191",
+        "datasets/reference_layouts.py": "f6aeeba298a163b7d506c67e3fba024cd3a191c3aae1116fc6b5d294431db9b5",
+        "datasets/worksets.py": "013087151ab8e1195d7d2757e777839f521486425eeaff4c45fed4e370df233c",
+        "docs/protocol.md": "f31a4e394df17e816b108e8cff21e7459c79dc50098c22fdf032688a85e106ec",
+        "experiments/E42_joint_regularization/__init__.py": "2c984437bd1c5362b712271d8ea405f791e16c428346b602a3a37bb8bc5a8eed",
+        "experiments/E42_joint_regularization/arms.py": "b8cd8ff12d6b8bc97740a02efc47c2af15c348a804ab2181994326648d57fea0",
+        "experiments/E42_joint_regularization/backend/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "experiments/E42_joint_regularization/backend/conic_geometry.py": "0b1a0295426c37a61f4abc13946b5dadf2c6f107375a02890e90ffe404be40e4",
+        "experiments/E42_joint_regularization/backend/frozen/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "experiments/E42_joint_regularization/backend/frozen/canonical_geometry.py": "04924bc4150f82862ed4da6cb67fc08779bbf98fcf24e24abd41b1c64d4e2521",
+        "experiments/E42_joint_regularization/backend/frozen/feasible.py": "9cfe70894d80fbe54ccaa1c3de60ef4ab111ac9b4472286d1ae6a0c5a1fdc756",
+        "experiments/E42_joint_regularization/backend/frozen/global_refine.py": "088021ede3290fcd6cf60726a054f7958309e4267d4353a699b80697078ab716",
+        "experiments/E42_joint_regularization/backend/frozen/packing.py": "3c0500b7fee120807e6bd3fa8e9f115e476782af1a3e7620859c6651a089ef30",
+        "experiments/E42_joint_regularization/backend/frozen/postprocess.py": "da0e1572a822a589968a19e67e2d36dd5133c7d17b7ea9443bd743ee4653a272",
+        "experiments/E42_joint_regularization/backend/frozen/shape_lp.py": "2988df542aa80602f091963e1506da8085152ea0eca4846f6dc6c0a25ef13c94",
+        "experiments/E42_joint_regularization/backend/frozen/solver.py": "cb5b0b6af3b8511d8a21b14178be188e31c61b58cba065c8c23847c2f9200325",
+        "experiments/E42_joint_regularization/backend/frozen/topology_mip.py": "e392857196dbde4b3c1f3668862c9779e9c686f17ca89a820078421573b46df5",
+        "experiments/E42_joint_regularization/backend/guard.py": "4e4adfb1dedede451a4d530103681f97ca6c05516e2dbe96b84d63c136faa87f",
+        "experiments/E42_joint_regularization/backend/observe.py": "6fb401b9a7ebccec7063de8e9feeaf28bee310ac8a39b221b78d40e438432ec3",
+        "experiments/E42_joint_regularization/backend/optimizer.py": "6373f5e7477f528e09e599c9a478b712bfbeb0ec29037bed1595d8c82af2ca36",
+        "experiments/E42_joint_regularization/backend/reduction.py": "4587a5c9c486c59719e76ef64396398edb92e6011d8c0c0cd4f538cad52c4b50",
+        "experiments/E42_joint_regularization/backend/rescue.py": "b928986f58fb3215140fe05acc36ddde92ce7aad99197fb2a975b7743a8c2e59",
+        "experiments/E42_joint_regularization/backend/robust.py": "ceea8f18d0e2979279f4cf711b7702436912fbae77095d9559e603401176c99b",
+        "experiments/E42_joint_regularization/backend/selection.py": "c21486a437531fed9a6717bcde6ce2ca062153ea717f9ae135b5b72e05500350",
+        "experiments/E42_joint_regularization/backend/stable.py": "dc5a1e0afbec79e33f1ca6603a7d3186045a52ccc543ac756b508dbf8159bcce",
+        "experiments/E42_joint_regularization/batches.py": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92",
+        "experiments/E42_joint_regularization/cache.py": "a527b8f098383b24ce20e7f1b09b740a4524ba731ac04ed3342b4a1e127936d0",
+        "experiments/E42_joint_regularization/canonical.py": "57a3738b35d16a091a250f4bac36bdcef5f7edeec6e084e103ecb6e9967eac2d",
+        "experiments/E42_joint_regularization/canonical_native.py": "469ed606532daa9750bb9dd6c98e0f79c27e246bf79ca4e89d483f0b6920e5eb",
+        "experiments/E42_joint_regularization/canonical_py.py": "b5b99c1f77756aa318fe5cb0e7fa82935844752b4fa815ab80367adb34e00195",
+        "experiments/E42_joint_regularization/certify_polish.py": "7148ff8dd958d5b8ecd2adbcd29ead999904b185ad12c77ffcdc0e7ec1f31462",
+        "experiments/E42_joint_regularization/data.py": "f42fed522beb7e3c69c43ec991d257245eafc48faeb7800316dd4e4fbd5b28cb",
+        "experiments/E42_joint_regularization/diagnostics.py": "095bd88919541c7247d1f105a1f371be63d9287b755b3d3972e2b1fa55f6d4e0",
+        "experiments/E42_joint_regularization/fast_geometry.py": "3c15f72702b0581d8ee1a68fa321543837c1e1322ead00eb4d259c90125b1377",
+        "experiments/E42_joint_regularization/features.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+        "experiments/E42_joint_regularization/final.py": "7ee68260c59e4c32f49035c28954075a0dc4b94701f4790d2d1a46609b59391d",
+        "experiments/E42_joint_regularization/freeze.py": "0c25ff6ef8f132e8b939d2040b5a617097ee98964819012ab7d43c0f44b3fc6d",
+        "experiments/E42_joint_regularization/inference.py": "b202f111d9b5feeb5f3ccbc473fb29e732d8088c5fb43472ab7d49f445378838",
+        "experiments/E42_joint_regularization/io.py": "2291a69c6306f5629a2f03dd314fc699d02ea58355f0967a37a9c888e62ec038",
+        "experiments/E42_joint_regularization/launch.ps1": "b38fe4ab6a9459971fe09ca411cadfe9bdb7e0ddebb8feb5a6ba3f3a85239492",
+        "experiments/E42_joint_regularization/legal_seed.py": "c5adf19f570678ba721dd1bc7ca888d2af41cf8148b68a3320903ca82083bfc9",
+        "experiments/E42_joint_regularization/loss.py": "14b18ef89e62f731c23ebf0efa9ca98829fecc7ecf9b0b721782df8c37f62771",
+        "experiments/E42_joint_regularization/losses.py": "f6503136dc719f6742c66b31da7ebe1076726fac38edb64fa9ae6106ab9d6557",
+        "experiments/E42_joint_regularization/model.py": "0d71c96c75976dc57d589d5709639291d1a30addffa8a5f0f2c53e2cb88a9089",
+        "experiments/E42_joint_regularization/occupancy.py": "ca5c7fa041d427d88594afac3fbaa5eaf71641367cf42128ba2a1b47a043bdc0",
+        "experiments/E42_joint_regularization/pipeline.py": "039e2d61d841f21094ee3b011461ee8e0955960754ce9b14952e098dccebc444",
+        "experiments/E42_joint_regularization/projection.py": "591f9bfbdf099b12dd9cd36f936e7c1f267b86456c67958c3957aa0ddc9d9028",
+        "experiments/E42_joint_regularization/provenance.json": "e0774eb6d979ec88ba8c81a5be5f321b23b32ff93e29e1080def0859456b56c9",
+        "experiments/E42_joint_regularization/reference_model.py": "b8a85ffdc181f67c89b30ac7a8b79e26170803e4c5ddb18fa8d47e33ac3be5ab",
+        "experiments/E42_joint_regularization/report.py": "4bfa5ac228d79c4bdc84d4d4c74e89e9e03411632ee813df184c8c1343c4c6f9",
+        "experiments/E42_joint_regularization/requirements-native.txt": "eddfdc929bf37a85b9b17d7c68af80a8ec5138dd8585c1afe0efc312435473b6",
+        "experiments/E42_joint_regularization/solver.py": "13efe19cdb44ebd13e36d4d8d5ce44b0f9801f469e070981bc8be3354e9ecef6",
+        "experiments/E42_joint_regularization/train.py": "c99b3277f9a3a916e574711b8b4653e4d3152956462d5eb9e4cc624ab052984e",
+        "scoring/__init__.py": "933bf2be947e20bae164511f26afaa84c2f331d0dbdebc417d235db8358a9247",
+        "scoring/checks.py": "738f6b57e20dce58516f3f10d83689f8df273a84a02b2dce99c6ccc1f904763a",
+        "scoring/evaluation.py": "356e0d1c788c6f25154b33fb1c2455388317d2cc0dd96ca50d7357c58612c611",
+        "scoring/official.py": "478fbc228a56ec4b336b5d8687a44b22b749f30aae09372f57c08e7124270e03",
+        "third_party/FloorSet/cost.py": "b60561556f79aa41c196c8fcaddea57840aab41059c76dbc3f80b4fdde6b48c3",
+        "third_party/FloorSet/iccad2026contest/iccad2026_evaluate.py": "64db37865b42baf11add62bdbf035690dca086cd4be7b5b4e58db756f20d8498",
+        "third_party/FloorSet/utils.py": "9299d9257f5bd932001896307f2296b51cc5567f44150db5514f357ed93c121e"
+      },
+      "registry_sha256": "1409ccf825b9c7cae1097a22e8dc4068e1283d79541c85ce54c5627d0c2b4208",
+      "paths_sha256": "7a28cd42de0f10809500c43c48836576361e67a72e723f7b32a404186df9b419",
+      "cache_identity": {
+        "format": "E17.original_reference_tensors.v1",
+        "registry": "1409ccf825b9c7cae1097a22e8dc4068e1283d79541c85ce54c5627d0c2b4208",
+        "paths": "7a28cd42de0f10809500c43c48836576361e67a72e723f7b32a404186df9b419",
+        "sources": {
+          "cache.py": "f5b21cffa52563e68b2d5a5e7886f4b4b44e4a9e904ce2941e84ae2f972e2180",
+          "data.py": "12b1ef62dc4930065a42f1c042c6bbedc0948a41cd8d68274f33eb4f56a5d4ce",
+          "features.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+          "batches.py": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92"
+        },
+        "datasets_sources": {
+          "__init__.py": "03c36f364366be6c8a5091d6bd3dbec0788d7871747acdeac5fa89d4974cec21",
+          "cases.py": "1fd51addaaae38164c22f1946712665beebac700054db4bb07ed4f9d44e0b168",
+          "paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+          "quality_layouts.py": "94f374fa9562770a9c7deadb645d73c3af1fc1a20251f98f1dce4ac575820191",
+          "reference_layouts.py": "f6aeeba298a163b7d506c67e3fba024cd3a191c3aae1116fc6b5d294431db9b5",
+          "worksets.py": "013087151ab8e1195d7d2757e777839f521486425eeaff4c45fed4e370df233c"
+        }
+      },
+      "seed": 0,
+      "device": "cuda",
+      "torch": "2.7.1+cu128",
+      "numpy": "1.26.4",
+      "cuda": "12.8",
+      "device_name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+      "max_seconds": 14400.0,
+      "max_epochs": 200,
+      "batch_size": 32,
+      "lr": 0.001,
+      "weight_decay": 0.0003,
+      "clip_norm": 1.0,
+      "monitor_interval_epochs": 1,
+      "data_augmentation": false,
+      "regularization": "joint AB: FFN hidden dropout .05 + AdamW weight decay .0003; same parameter groups",
+      "schedule": "E10 geometry: persistent center1 shape.25 relative.25; geometry terms ramp over first2 epochs; no anchor decay",
+      "selection": "dev500 arithmetic mean of E17 geometry + occupancy; fixed full weights for every epoch; no solver calls",
+      "lr_patience_checks": 3,
+      "early_patience_checks": 3,
+      "scheduler_start_epoch": 15,
+      "lr_levels": [
+        0.001,
+        0.00025,
+        0.0001,
+        5e-05
+      ],
+      "required_lr_drops": 3,
+      "meaningful_relative_delta": 0.001,
+      "meaningful_absolute_delta": 1e-05,
+      "cpu_threads": 4,
+      "lowest_lr_requires_completed_epochs": 2,
+      "training_postprocessing": false,
+      "validation_postprocessing": false,
+      "implementation_check": false,
+      "test_read": false,
+      "tail_test_read": false
+    },
+    "best_epoch": 51,
+    "best_train": {
+      "total": 0.28560421776771544,
+      "mse": 0.04734931600093842,
+      "center_mse": 0.0012193623716011644,
+      "shape_mse": 0.14945352780818938,
+      "center_local": 0.15387846517562867,
+      "shape": 0.14945352780818938,
+      "relative_local": 0.19660973262786866,
+      "overlap": 0.035784725815057754,
+      "contact": 0.04809642028808594,
+      "boundary": 0.008197188768535852,
+      "mib": 0.011980976365506648,
+      "bbox": 0.00021968534938059746,
+      "local": 0.24039428305625915,
+      "geometry": 0.28560421586036683,
+      "overlap_area": 0.059710354447364805,
+      "crowding": 0.0022844854202121495,
+      "void": 0.12489622843265534,
+      "compactness": 0.0015432280767709017,
+      "occupancy": 0.09173701655864716,
+      "repair": 0.37734123039245604,
+      "supervision": 0.24039428305625915,
+      "quality_proxy": 0.28560421586036683,
+      "count": 500,
+      "selection_proxy": 0.37734123039245604,
+      "raw_hard_legal": 0,
+      "raw_hard_legal_rate": 0.0,
+      "batched_inference_seconds_per_case": 0.0018994819996878505,
+      "draft_diagnostics": {
+        "overlap_pairs": {
+          "mean": 75.806,
+          "p95": 128.0,
+          "max": 143.0
+        },
+        "overlap_area_fraction": {
+          "mean": 0.05971036006608851,
+          "p95": 0.09773612966509145,
+          "max": 0.13474154289528717
+        },
+        "penetration_squared_per_block": {
+          "mean": 0.017718517965326946,
+          "p95": 0.03643293871410714,
+          "max": 0.06425826449931629
+        },
+        "max_local_penetration": {
+          "mean": 0.42234998669021245,
+          "p95": 0.7196659436383102,
+          "max": 0.9043455331079335
+        },
+        "largest_conflict_cluster": {
+          "mean": 54.584,
+          "p95": 95.04999999999995,
+          "max": 106.0
+        },
+        "largest_conflict_cluster_fraction": {
+          "mean": 0.77885129898479,
+          "p95": 0.9230769230769231,
+          "max": 0.9545454545454546
+        }
+      }
+    },
+    "best_dev": {
+      "total": 0.3571999523639679,
+      "mse": 0.05472498971223831,
+      "center_mse": 0.0020819108206778765,
+      "shape_mse": 0.1712163017988205,
+      "center_local": 0.18854493355751037,
+      "shape": 0.1712163017988205,
+      "relative_local": 0.23710788762569426,
+      "overlap": 0.041381653875112535,
+      "contact": 0.08454376882314682,
+      "boundary": 0.00912103819847107,
+      "mib": 0.013054231308400631,
+      "bbox": 0.0002557105141459033,
+      "local": 0.29062597918510436,
+      "geometry": 0.3571999340057373,
+      "overlap_area": 0.06384553855657578,
+      "crowding": 0.0036372172273695467,
+      "void": 0.1288187299966812,
+      "compactness": 0.0016614689184352755,
+      "occupancy": 0.09720874643325805,
+      "repair": 0.45440869164466857,
+      "supervision": 0.29062597918510436,
+      "quality_proxy": 0.3571999340057373,
+      "count": 500,
+      "selection_proxy": 0.45440869164466857,
+      "raw_hard_legal": 0,
+      "raw_hard_legal_rate": 0.0,
+      "batched_inference_seconds_per_case": 0.0019005315999966114,
+      "draft_diagnostics": {
+        "overlap_pairs": {
+          "mean": 75.736,
+          "p95": 129.0,
+          "max": 147.0
+        },
+        "overlap_area_fraction": {
+          "mean": 0.06384552316597669,
+          "p95": 0.10924192953455686,
+          "max": 0.1593697439054613
+        },
+        "penetration_squared_per_block": {
+          "mean": 0.020401754673294446,
+          "p95": 0.04394471714240267,
+          "max": 0.0670538398901307
+        },
+        "max_local_penetration": {
+          "mean": 0.45375819195241396,
+          "p95": 0.7490731241380193,
+          "max": 0.8511794648079983
+        },
+        "largest_conflict_cluster": {
+          "mean": 53.662,
+          "p95": 94.04999999999995,
+          "max": 109.0
+        },
+        "largest_conflict_cluster_fraction": {
+          "mean": 0.7737524950248658,
+          "p95": 0.92984496124031,
+          "max": 1.0
+        }
+      }
+    },
+    "full_dev": {
+      "total": 0.3575172619819641,
+      "mse": 0.05422357857227325,
+      "center_mse": 0.0021072444934397937,
+      "shape_mse": 0.16962164855003356,
+      "center_local": 0.18914555644989015,
+      "shape": 0.16962164855003356,
+      "relative_local": 0.2390873908996582,
+      "overlap": 0.04140220791101456,
+      "contact": 0.08376102435588836,
+      "boundary": 0.009532972730696202,
+      "mib": 0.012016764499247073,
+      "bbox": 0.00027906136983074246,
+      "local": 0.29132281732559206,
+      "geometry": 0.35751725554466246,
+      "overlap_area": 0.06302021634578704,
+      "crowding": 0.003537696873769164,
+      "void": 0.12855536496639253,
+      "compactness": 0.0016904152520000936,
+      "occupancy": 0.09629704350233079,
+      "repair": 0.45381430387496946,
+      "supervision": 0.29132281732559206,
+      "quality_proxy": 0.35751725554466246,
+      "selection_proxy": 0.45381430387496946,
+      "batched_inference_seconds_per_case": 0.00291817845008336,
+      "count": 2000,
+      "raw_hard_legal": 0,
+      "raw_hard_legal_rate": 0.0,
+      "draft_diagnostics": {
+        "overlap_pairs": {
+          "mean": 75.7345,
+          "p95": 127.0,
+          "max": 147.0
+        },
+        "overlap_area_fraction": {
+          "mean": 0.06302022659001225,
+          "p95": 0.10604861364648896,
+          "max": 0.17004460212093728
+        },
+        "penetration_squared_per_block": {
+          "mean": 0.020358474585031212,
+          "p95": 0.04408996427539026,
+          "max": 0.07682359882529759
+        },
+        "max_local_penetration": {
+          "mean": 0.45486058721218414,
+          "p95": 0.7465371813282716,
+          "max": 0.9120445536313285
+        },
+        "largest_conflict_cluster": {
+          "mean": 54.1235,
+          "p95": 95.0,
+          "max": 112.0
+        },
+        "largest_conflict_cluster_fraction": {
+          "mean": 0.7761537745484799,
+          "p95": 0.9304942400594574,
+          "max": 1.0
+        }
+      }
+    },
+    "terminal": {
+      "count": 500,
+      "hard_legal": 500,
+      "mean_Q": 1.046002032139471,
+      "weighted_Q": 1.0258596340152353,
+      "p95_Q": 1.1855348291463157,
+      "max_Q": 1.9272793619183735,
+      "worst5pct_mean_Q": 1.2910234844798438,
+      "seconds_mean": 0.2513339672009461,
+      "seconds_p95": 0.6047782399749848,
+      "row_fallbacks": 0,
+      "rescue_cases": 4,
+      "errors": 0,
+      "hpwl_gap_mean_returned": 0.01639382999105817,
+      "area_gap_mean_returned": 0.02343593875123373,
+      "boundary_violations_mean_returned": 0.248,
+      "grouping_violations_mean_returned": 0.206,
+      "mib_violations_mean_returned": 0.0,
+      "inference_seconds_mean_returned": 0.054436860000249,
+      "postprocess_seconds_mean_returned": 0.19677916579926386,
+      "mean_center_move_local_mean_returned": 0.4165130575052978,
+      "max_center_move_local_mean_returned": 1.74285574430289
+    },
+    "gap": 0.07706746125221253,
+    "lr_changes": [
+      {
+        "epoch": 21,
+        "from": 0.001,
+        "to": 0.00025
+      },
+      {
+        "epoch": 39,
+        "from": 0.00025,
+        "to": 0.0001
+      },
+      {
+        "epoch": 50,
+        "from": 0.0001,
+        "to": 5e-05
+      }
+    ],
+    "common_epochs": {
+      "45": {
+        "train": 0.3940034391880035,
+        "dev": 0.462200474023819
+      },
+      "49": {
+        "train": 0.38751272988319396,
+        "dev": 0.4612442898750305
+      },
+      "50": {
+        "train": 0.385050110578537,
+        "dev": 0.46035734581947324
+      }
+    }
+  },
+  "shared_identity_equal": {
+    "registry_sha256": true,
+    "paths_sha256": true,
+    "cache_identity": true,
+    "seed": true,
+    "device": true,
+    "torch": true,
+    "numpy": true,
+    "cuda": true,
+    "device_name": true,
+    "batch_size": true,
+    "lr": true,
+    "clip_norm": true,
+    "lr_levels": true,
+    "meaningful_relative_delta": true,
+    "meaningful_absolute_delta": true,
+    "scheduler_start_epoch": true,
+    "schedule": true,
+    "selection": true,
+    "parameters": true
+  },
+  "proxy_delta_components": {
+    "center_local": -0.0012521904706954967,
+    "shape": -0.0010571796596050287,
+    "relative_local": -0.00028489530086517334,
+    "overlap": -0.0027707508206367484,
+    "contact": -0.00276752683520317,
+    "boundary": -0.0001561496565118431,
+    "mib": -0.00012180419936776172,
+    "bbox": 1.4678082294994965e-05,
+    "occupancy": -0.005815080463886249
+  },
+  "paired": {
+    "Q_delta": -0.0010078378448841558,
+    "Q_better_same_worse": [
+      238,
+      49,
+      213
+    ],
+    "raw_overlap_better_same_worse": [
+      400,
+      0,
+      100
+    ],
+    "case": {
+      "Q_bootstrap95": [
+        -0.00746163337656089,
+        0.004718073804275434
+      ],
+      "seconds_delta": -0.029253620996372773,
+      "seconds_bootstrap95": [
+        -0.046219678222201764,
+        -0.014715372815122826
+      ],
+      "postprocess_seconds_delta": -0.01545798999676481,
+      "postprocess_seconds_bootstrap95": [
+        -0.03242476416336722,
+        -0.0011801324558211367
+      ]
+    },
+    "shard": {
+      "Q_bootstrap95": [
+        -0.007090256899445875,
+        0.004849968517773664
+      ],
+      "seconds_delta": -0.029253620996372773,
+      "seconds_bootstrap95": [
+        -0.04619729404536209,
+        -0.01489963864027544
+      ],
+      "postprocess_seconds_delta": -0.01545798999676481,
+      "postprocess_seconds_bootstrap95": [
+        -0.032129758486543744,
+        -0.0013820238517958218
+      ]
+    },
+    "worker": {
+      "Q_bootstrap95": [
+        -0.007783478567936706,
+        0.005587189150680909
+      ],
+      "seconds_delta": -0.029253620996372773,
+      "seconds_bootstrap95": [
+        -0.046476180529729925,
+        -0.014740788182171541
+      ],
+      "postprocess_seconds_delta": -0.01545798999676481,
+      "postprocess_seconds_bootstrap95": [
+        -0.031884390783092055,
+        -0.0014039646544727125
+      ]
+    }
+  },
+  "event_transitions": {
+    "rescue_used": {
+      "old": [
+        99,
+        130,
+        164,
+        246,
+        283,
+        366
+      ],
+      "new": [
+        164,
+        246,
+        276,
+        366
+      ],
+      "resolved": [
+        99,
+        130,
+        283
+      ],
+      "newly_triggered": [
+        276
+      ],
+      "retained": [
+        164,
+        246,
+        366
+      ]
+    },
+    "early_projection": {
+      "old": [
+        1,
+        8,
+        69,
+        91,
+        95,
+        99,
+        130,
+        160,
+        164,
+        189,
+        202,
+        246,
+        276,
+        283,
+        291,
+        309,
+        324,
+        363,
+        366,
+        380,
+        398,
+        443,
+        450,
+        475,
+        496
+      ],
+      "new": [
+        1,
+        21,
+        99,
+        103,
+        115,
+        164,
+        179,
+        202,
+        246,
+        247,
+        255,
+        276,
+        304,
+        324,
+        329,
+        366,
+        380,
+        398,
+        443,
+        450,
+        475,
+        495
+      ],
+      "resolved": [
+        8,
+        69,
+        91,
+        95,
+        130,
+        160,
+        189,
+        283,
+        291,
+        309,
+        363,
+        496
+      ],
+      "newly_triggered": [
+        21,
+        103,
+        115,
+        179,
+        247,
+        255,
+        304,
+        329,
+        495
+      ],
+      "retained": [
+        1,
+        99,
+        164,
+        202,
+        246,
+        276,
+        324,
+        366,
+        380,
+        398,
+        443,
+        450,
+        475
+      ]
+    }
+  },
+  "largest_weighted_regressions": [
+    {
+      "index": 21,
+      "member": "['worker_17/layouts_6608.th', 68]",
+      "n": 120,
+      "Q_control": 1.0772869578679043,
+      "Q_AB": 1.1477014965565053,
+      "Q_delta": 0.07041453868860104,
+      "weighted_Q_contribution": 0.0011284094232472505,
+      "raw_overlap_delta": -0.003997248241655371,
+      "seconds_control": 0.6052928999997675,
+      "seconds_AB": 1.3924102999735624
+    },
+    {
+      "index": 127,
+      "member": "['worker_95/layouts_6832.th', 67]",
+      "n": 116,
+      "Q_control": 1.0,
+      "Q_AB": 1.0689391057472464,
+      "Q_delta": 0.06893910574724638,
+      "weighted_Q_contribution": 0.0007915989038302907,
+      "raw_overlap_delta": 0.003708269522354618,
+      "seconds_control": 0.6008785999147221,
+      "seconds_AB": 0.6005913999397308
+    },
+    {
+      "index": 191,
+      "member": "['worker_38/layouts_5936.th', 86]",
+      "n": 105,
+      "Q_control": 1.0383107163638674,
+      "Q_AB": 1.1933268356748734,
+      "Q_delta": 0.155016119311006,
+      "weighted_Q_contribution": 0.0007117264796684838,
+      "raw_overlap_delta": -0.0051764814884830285,
+      "seconds_control": 0.39749480003956705,
+      "seconds_AB": 0.39005350007209927
+    },
+    {
+      "index": 398,
+      "member": "['worker_63/layouts_8624.th', 63]",
+      "n": 114,
+      "Q_control": 1.0557448612177849,
+      "Q_AB": 1.1042827580575938,
+      "Q_delta": 0.048537896839808914,
+      "weighted_Q_contribution": 0.00047177842826939364,
+      "raw_overlap_delta": -0.005931784238910144,
+      "seconds_control": 0.6559859999688342,
+      "seconds_AB": 1.4501897000009194
+    },
+    {
+      "index": 63,
+      "member": "['worker_94/layouts_6496.th', 8]",
+      "n": 107,
+      "Q_control": 1.1100617601074476,
+      "Q_AB": 1.1888019909006966,
+      "Q_delta": 0.07874023079324899,
+      "weighted_Q_contribution": 0.00042708602473898486,
+      "raw_overlap_delta": 0.004978781465745999,
+      "seconds_control": 0.4100528999697417,
+      "seconds_AB": 0.3558999999659136
+    },
+    {
+      "index": 450,
+      "member": "['worker_92/layouts_3584.th', 33]",
+      "n": 97,
+      "Q_control": 1.1066442133834,
+      "Q_AB": 1.2746768413610639,
+      "Q_delta": 0.16803262797766383,
+      "weighted_Q_contribution": 0.00039609579192443364,
+      "raw_overlap_delta": -0.008204078253786544,
+      "seconds_control": 1.4176893000258133,
+      "seconds_AB": 1.4176343999570236
+    },
+    {
+      "index": 241,
+      "member": "['worker_32/layouts_0.th', 29]",
+      "n": 89,
+      "Q_control": 1.0420543577475634,
+      "Q_AB": 1.2842043558826264,
+      "Q_delta": 0.242149998135063,
+      "weighted_Q_contribution": 0.00029306329236383945,
+      "raw_overlap_delta": -0.005234928152518414,
+      "seconds_control": 0.22101109998766333,
+      "seconds_AB": 0.2532194999512285
+    },
+    {
+      "index": 275,
+      "member": "['worker_71/layouts_5600.th', 5]",
+      "n": 117,
+      "Q_control": 1.032829277293448,
+      "Q_AB": 1.0541851187903193,
+      "Q_delta": 0.02135584149687131,
+      "weighted_Q_contribution": 0.0002665308192621825,
+      "raw_overlap_delta": -0.0041599594570213005,
+      "seconds_control": 0.6135778999887407,
+      "seconds_AB": 0.5472531999694183
+    },
+    {
+      "index": 273,
+      "member": "['worker_2/layouts_9744.th', 98]",
+      "n": 110,
+      "Q_control": 1.0030616826894825,
+      "Q_AB": 1.035011422701953,
+      "Q_delta": 0.03194974001247042,
+      "weighted_Q_contribution": 0.000222515170855198,
+      "raw_overlap_delta": -0.005907869234410654,
+      "seconds_control": 0.6197310000425205,
+      "seconds_AB": 0.6047231999691576
+    },
+    {
+      "index": 448,
+      "member": "['worker_19/layouts_3696.th', 111]",
+      "n": 109,
+      "Q_control": 1.0007588631441113,
+      "Q_AB": 1.0327839958199136,
+      "Q_delta": 0.032025132675802315,
+      "weighted_Q_contribution": 0.00020520693248343426,
+      "raw_overlap_delta": -0.012888189678533751,
+      "seconds_control": 0.4029368000337854,
+      "seconds_AB": 0.3703923000721261
+    }
+  ],
+  "largest_weighted_improvements": [
+    {
+      "index": 283,
+      "member": "['worker_65/layouts_4256.th', 70]",
+      "n": 110,
+      "Q_control": 1.3123539189465678,
+      "Q_AB": 1.0426841228576025,
+      "Q_delta": -0.26966979608896535,
+      "weighted_Q_contribution": -0.001878125478573582,
+      "raw_overlap_delta": 0.0014223823695207194,
+      "seconds_control": 2.4685929999686778,
+      "seconds_AB": 0.5876330999890342
+    },
+    {
+      "index": 165,
+      "member": "['worker_4/layouts_5264.th', 87]",
+      "n": 119,
+      "Q_control": 1.0737178297013668,
+      "Q_AB": 1.0299401157707535,
+      "Q_delta": -0.04377771393061325,
+      "weighted_Q_contribution": -0.0006454553992152939,
+      "raw_overlap_delta": 0.004181998132419304,
+      "seconds_control": 0.6127466999460012,
+      "seconds_AB": 0.5534128999570385
+    },
+    {
+      "index": 456,
+      "member": "['worker_65/layouts_6720.th', 90]",
+      "n": 116,
+      "Q_control": 1.059204020807866,
+      "Q_AB": 1.010450964481913,
+      "Q_delta": -0.04875305632595284,
+      "weighted_Q_contribution": -0.000559810945147663,
+      "raw_overlap_delta": -0.0021712425384485742,
+      "seconds_control": 0.6488195999991149,
+      "seconds_AB": 0.5868519999785349
+    },
+    {
+      "index": 335,
+      "member": "['worker_3/layouts_2352.th', 33]",
+      "n": 111,
+      "Q_control": 1.0726963570904307,
+      "Q_AB": 1.0,
+      "Q_delta": -0.07269635709043065,
+      "weighted_Q_contribution": -0.0005502957424496119,
+      "raw_overlap_delta": -0.011067296147328556,
+      "seconds_control": 0.6046603000722826,
+      "seconds_AB": 0.5932728999760002
+    },
+    {
+      "index": 228,
+      "member": "['worker_88/layouts_0.th', 90]",
+      "n": 120,
+      "Q_control": 1.1012986631820394,
+      "Q_AB": 1.0681640472195773,
+      "Q_delta": -0.033134615962462144,
+      "weighted_Q_contribution": -0.0005309899572454883,
+      "raw_overlap_delta": -0.0007015318822923833,
+      "seconds_control": 0.5817734999582171,
+      "seconds_AB": 0.5629559999797493
+    },
+    {
+      "index": 497,
+      "member": "['worker_80/layouts_3024.th', 81]",
+      "n": 120,
+      "Q_control": 1.0316450278206917,
+      "Q_AB": 1.0010658001006898,
+      "Q_delta": -0.030579227720001878,
+      "weighted_Q_contribution": -0.0004900392640143731,
+      "raw_overlap_delta": -0.01608591974057537,
+      "seconds_control": 0.6233017999911681,
+      "seconds_AB": 0.5488801000174135
+    },
+    {
+      "index": 201,
+      "member": "['worker_62/layouts_5152.th', 16]",
+      "n": 120,
+      "Q_control": 1.06245936833534,
+      "Q_AB": 1.032602702355855,
+      "Q_delta": -0.029856665979484998,
+      "weighted_Q_contribution": -0.0004784600434150174,
+      "raw_overlap_delta": -0.00039762096242304534,
+      "seconds_control": 0.6067441999912262,
+      "seconds_AB": 0.6287075000582263
+    },
+    {
+      "index": 259,
+      "member": "['worker_28/layouts_6160.th', 57]",
+      "n": 112,
+      "Q_control": 1.0753432814177037,
+      "Q_AB": 1.0320381993475871,
+      "Q_delta": -0.04330508207011663,
+      "weighted_Q_contribution": -0.0003562981580891798,
+      "raw_overlap_delta": 0.003886891027890596,
+      "seconds_control": 0.6228349999291822,
+      "seconds_AB": 0.5488937000045553
+    },
+    {
+      "index": 362,
+      "member": "['worker_80/layouts_4704.th', 23]",
+      "n": 112,
+      "Q_control": 1.0378588155329547,
+      "Q_AB": 1.0,
+      "Q_delta": -0.03785881553295467,
+      "weighted_Q_contribution": -0.00031148829645419605,
+      "raw_overlap_delta": -0.0020230980375773727,
+      "seconds_control": 0.5854867999441922,
+      "seconds_AB": 0.596561299986206
+    },
+    {
+      "index": 3,
+      "member": "['worker_19/layouts_3696.th', 76]",
+      "n": 109,
+      "Q_control": 1.037721764220943,
+      "Q_AB": 1.0,
+      "Q_delta": -0.03772176422094309,
+      "weighted_Q_contribution": -0.0002417091476873692,
+      "raw_overlap_delta": -0.009055630463581543,
+      "seconds_control": 0.417359699960798,
+      "seconds_AB": 0.3395267999731004
+    }
+  ],
+  "worst_AB_cases": [
+    {
+      "index": 164,
+      "member": "['worker_79/layouts_5040.th', 16]",
+      "n": 57,
+      "Q_control": 1.7141021732995005,
+      "Q_AB": 1.9272793619183735,
+      "Q_delta": 0.21317718861887291,
+      "weighted_Q_contribution": 1.792664698216077e-05,
+      "raw_overlap_delta": -0.005148343200766695,
+      "seconds_control": 3.1127970999805257,
+      "seconds_AB": 3.163158899988048
+    },
+    {
+      "index": 443,
+      "member": "['worker_29/layouts_5040.th', 1]",
+      "n": 36,
+      "Q_control": 1.8832671620903663,
+      "Q_AB": 1.7643778487540673,
+      "Q_delta": -0.11888931333629893,
+      "weighted_Q_contribution": -1.73734397002558e-06,
+      "raw_overlap_delta": -0.004916546408261294,
+      "seconds_control": 0.6933143000351265,
+      "seconds_AB": 0.44784419995266944
+    },
+    {
+      "index": 329,
+      "member": "['worker_85/layouts_2688.th', 105]",
+      "n": 64,
+      "Q_control": 1.2797828992427818,
+      "Q_AB": 1.4107030501308535,
+      "Q_delta": 0.13092015088807174,
+      "weighted_Q_contribution": 1.972891859323413e-05,
+      "raw_overlap_delta": 0.001336581549323007,
+      "seconds_control": 0.20291190000716597,
+      "seconds_AB": 0.7238977999659255
+    },
+    {
+      "index": 239,
+      "member": "['worker_47/layouts_7056.th', 30]",
+      "n": 21,
+      "Q_control": 1.0235030583072942,
+      "Q_AB": 1.3392155258993648,
+      "Q_delta": 0.3157124675920706,
+      "weighted_Q_contribution": 1.3218026639532138e-06,
+      "raw_overlap_delta": 0.003976678690165908,
+      "seconds_control": 0.09789039997849613,
+      "seconds_AB": 0.08079049992375076
+    },
+    {
+      "index": 324,
+      "member": "['worker_69/layouts_3696.th', 25]",
+      "n": 55,
+      "Q_control": 1.2394835990613353,
+      "Q_AB": 1.3257162469941342,
+      "Q_delta": 0.08623264793279883,
+      "weighted_Q_contribution": 6.138293416842e-06,
+      "raw_overlap_delta": 0.0006936755717640297,
+      "seconds_control": 0.7239920999854803,
+      "seconds_AB": 0.14839230000507087
+    }
+  ],
+  "source_hashes": {
+    "experiments/E42_joint_regularization/runs/20261023_rectangle_w96d12_ab_seed0/analyze_results.py": "2a7738abdd84b76c4efd52873b54ec6f8403f5cb5996c7991b62dd865a55f576",
+    "experiments/E39_rectangular_attention/runs/20261023_rectangle_w96d12_r2_rectangle_seed0/results.json": "95fb73c4a721b35c03493a868996a97f9e5e5fd03ea60af5b18be97b956b7c8e",
+    "experiments/E39_rectangular_attention/runs/20261023_rectangle_w96d12_r2_rectangle_seed0/progress.json": "c56fe3419a1b32f42aabb8d1bf3b7ab8b8874330f6d24d222bcda301548ba21e",
+    "experiments/E39_rectangular_attention/runs/20261023_rectangle_w96d12_r2_rectangle_seed0/config.json": "582436c467043b3f7705007dafabc06aca8041757972ca991688634c420615d6",
+    "experiments/E39_rectangular_attention/runs/20261023_rectangle_w96d12_r2_rectangle_seed0/frozen.json": "17feb2ee3ee9b024f13a2941b4d7d830ed41b4b92ed1122159f2e1ff108015c0",
+    "experiments/E39_rectangular_attention/runs/20261023_rectangle_w96d12_r2_rectangle_seed0/full_dev.json": "d2a4b0da6e35148337e10a96ad9671f9fca3191c82fb1adde197959973b8b598",
+    "experiments/E39_rectangular_attention/runs/20261023_rectangle_w96d12_r2_rectangle_seed0/terminal/results.json": "1ba753b7db70d573535724877ea306392c4ec1a84cb901d8821e68b4b5c510ed",
+    "experiments/E42_joint_regularization/runs/20261023_rectangle_w96d12_ab_seed0/results.json": "4df4d8b740f774a5cafa30d41662a497a8231e2461111bd0ddf56272a76f5d6b",
+    "experiments/E42_joint_regularization/runs/20261023_rectangle_w96d12_ab_seed0/progress.json": "3534ae8c7a9284cefc046d2d33f19e7da0d0d282d7084d98d3e5398570f41dcf",
+    "experiments/E42_joint_regularization/runs/20261023_rectangle_w96d12_ab_seed0/config.json": "b6d264c1a73815af7d95297ee0021e79ee8b4e358a1d9937fe5c532cc907719e",
+    "experiments/E42_joint_regularization/runs/20261023_rectangle_w96d12_ab_seed0/frozen.json": "34f1258f4f8d80198a895c0c0cf76c2b9b5a84b8c13343b869031c04c4287d1a",
+    "experiments/E42_joint_regularization/runs/20261023_rectangle_w96d12_ab_seed0/full_dev.json": "2df40113e1966424405f052016f12ed375b94e7ced2fc84d122818b922d33ef0",
+    "experiments/E42_joint_regularization/runs/20261023_rectangle_w96d12_ab_seed0/terminal/results.json": "a8b13cad56de8520e2a14e3ed72ab9f35eb9df79c294c32d21f7c9c8606a129a"
+  },
+  "training_started": false,
+  "inference_calls": 0,
+  "solver_calls": 0,
+  "test_read": false
+}

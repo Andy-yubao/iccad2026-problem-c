@@ -1,0 +1,15 @@
+{
+  "policy_version": "research.predict_all_modules.v1",
+  "effective_date": "2026-11-07",
+  "scope": "future layout-model designs; historical registered models retain their original inference behavior",
+  "user_decision": "Fixed-shape and preplaced modules must also have their positions and shapes predicted by the model. Constraint satisfaction belongs to postprocessing.",
+  "draft_prediction": "predict position and shape for every module, including fixed-shape and preplaced modules",
+  "fixed_preplaced_channel_freezing": false,
+  "override_draft_with_fixed_preplaced_specifications": false,
+  "public_fixed_preplaced_specifications_as_conditioning": "allowed; preserve existing information boundaries",
+  "constraint_enforcement_owner": "postprocessor",
+  "final_hard_checks": "unchanged; check original public specifications",
+  "display": "show actual model draft separately from constraint-enforced postprocessing output",
+  "existing_models_changed": false,
+  "training_authorized_by_this_file": false
+}

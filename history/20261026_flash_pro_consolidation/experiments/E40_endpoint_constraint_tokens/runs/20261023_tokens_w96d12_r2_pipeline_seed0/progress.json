@@ -1,0 +1,30 @@
+{
+  "stages": [
+    {
+      "kind": "train full_tokens",
+      "command": [
+        "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+        "-u",
+        "-B",
+        "-m",
+        "experiments.E40_endpoint_constraint_tokens.train",
+        "--arm",
+        "full_tokens",
+        "--output",
+        "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E40_endpoint_constraint_tokens\\runs\\20261023_tokens_w96d12_r2_full_tokens_seed0",
+        "--seed",
+        "0",
+        "--max-hours",
+        "4.0",
+        "--max-epochs",
+        "200",
+        "--batch-size",
+        "32"
+      ],
+      "returncode": 0,
+      "seconds": 7697.213575800066,
+      "output": "experiments/E40_endpoint_constraint_tokens/runs/20261023_tokens_w96d12_r2_full_tokens_seed0"
+    }
+  ],
+  "test_read": false
+}

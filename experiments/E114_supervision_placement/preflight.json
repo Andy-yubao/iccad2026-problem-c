@@ -1,0 +1,182 @@
+{
+  "status": "passed",
+  "unique_train_cases": 5,
+  "dev_payloads": 0,
+  "test_read": false,
+  "optimizer_updates": 0,
+  "training_started": false,
+  "sources": {
+    "datasets/paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+    "datasets/random_reference.py": "a42742bec678b4b7d0f9642541a11d05849cf4b2bd1db1be3e92a03c898fc214",
+    "experiments/E114_supervision_placement/__init__.py": "e88603c7289d0636a073fae6a35658f4829f4459cad9a1e7d1d91874c3e78960",
+    "experiments/E114_supervision_placement/augmentation.py": "dba0658829115b08184fadec488ef0b56fe0adf0e8452cb240029d5c5c4de87c",
+    "experiments/E114_supervision_placement/batches.py": "7d8aaccb6b27ee4ea261d7a9c9bebfedfe484181ee00e5d7f6ccb27d0639be54",
+    "experiments/E114_supervision_placement/captured_projection.py": "7f19baba25bc52a686e08a1af32236bffa8b47300cac96c52914b3b81d88131a",
+    "experiments/E114_supervision_placement/cuda_step.py": "cd5eddd01dc44b33da1c57c13261b27e1f7ef232b81c425e57080501a25ce7f1",
+    "experiments/E114_supervision_placement/data.py": "5055f1a6f97b1ea6cfe77952fccbb56ac3a57d63e7c24e391d0ba29160ec6ce5",
+    "experiments/E114_supervision_placement/features.py": "097a04bd1259a76b9fce23e5e533f7a22beece7a2f7af0435c3f560696c32dd1",
+    "experiments/E114_supervision_placement/group_tree.py": "867ca3b84848ae78da25dd2a2db16018d722102c7bb5a34644492451efef65fd",
+    "experiments/E114_supervision_placement/inspect.py": "3f40c625b361712222d06b9d08ea124d9d6128adc2bb37b5112baf79eef883b8",
+    "experiments/E114_supervision_placement/io.py": "d4aef673463486cf495aeb2947ba2b51089fdbe4b6930ea0157a3a738f2ac708",
+    "experiments/E114_supervision_placement/loss.py": "e814051b85d63379eebe9b5fbe259d80b371a38a44d275429ccc58b41f4a7d9c",
+    "experiments/E114_supervision_placement/loss_config.py": "70130eb80100b0aed6ce7de9bbe1c005c48014189ac26fb8610985b0c16daa50",
+    "experiments/E114_supervision_placement/model.py": "0d5f7a0f897653155d5405e07aab9357b46b52bca4ddedd4b2cb11f05151dc82",
+    "experiments/E114_supervision_placement/plan.json": "547a1c56e96ed2cd04a2643d16b4bdb45930c33d082960de42e0f5187081008f",
+    "experiments/E114_supervision_placement/ports.py": "431b54476e7de8a94c12cf935a30a3b49b911e208305fbe6bb7b23d72e37dbef",
+    "experiments/E114_supervision_placement/provenance.json": "c42c5c1bd9a770d5cefea7c2811d17ea629151409d4cc9d3a354a10ac97bf914",
+    "experiments/E114_supervision_placement/README.md": "e4866d87b6f5150793b8ff86da461c12f7792d9f79f93996fc20c4f94dbe4a2d",
+    "experiments/E114_supervision_placement/resident.py": "f76073f5756a59187ecfc1b90752f4db063e81555bad51835712a731d529cd27",
+    "experiments/E114_supervision_placement/run_queue.py": "918caf31fc95480bfcacd406c15acd6e8bd8578c5f0de8ef5b84d513b4b2dd4e",
+    "experiments/E114_supervision_placement/schedule.py": "8d5dfd1a04a0b02965f91ed3be47c94371a28147705f02fa52e144c9d57c597a",
+    "experiments/E114_supervision_placement/simple_loss.py": "fcd0827c829ee2466298eb61c1213b1fb12ae7f54afaef0f8e53a86033478238",
+    "experiments/E114_supervision_placement/step_control.py": "795ddb45dd257e123f1880eea28b58502711807ee643bfcb51a7e72d484952da",
+    "experiments/E114_supervision_placement/train.py": "fcde062f1a3cf66001eb4b4f9e47b5c1cd59db16b09a506484857f5fb0b0eb0f",
+    "protocol/model_prediction_boundary_v1.json": "d975980890f717590aafb6bceb34aa8052f0d895e8940e41e6a65e9426c9705a",
+    "protocol/paths.json": "11dc5f19c3da22f9d37db341b0606bcc4b514bfe39264fc7ffed27c13b098270",
+    "protocol/random_reference40k_v1.json": "f899e114b91bc05a0688898dd9b6f251acba2c95e35fb5baca8fd5cf17979540",
+    "protocol/research_no_mib_v1.json": "a62e8eb2fcfc629d21f4e7d58f49be29daae07efa5b5bdf93c82dd1b98ed1043"
+  },
+  "arms": {
+    "terminal": {
+      "total": 25.227876663208008,
+      "final_total": 25.227876663208008,
+      "gradient_norm": 489.8563232421875,
+      "supervised_layers": [
+        12
+      ],
+      "peak_allocated_bytes": 2188507136,
+      "initial_parameters_sha256": "47459d32f609afe7b553d569fff1e8f7b8d2c8b162f235e5e05fcdfa8d755576",
+      "parameters_unchanged": true,
+      "first_last_blocks_receive_gradients": true,
+      "cuda_graph_replayed_without_Adam": true,
+      "optimizer_updates": 0
+    },
+    "dense": {
+      "total": 22.6342716217041,
+      "final_total": 25.227876663208008,
+      "gradient_norm": 405.2098083496094,
+      "supervised_layers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "peak_allocated_bytes": 2911565312,
+      "initial_parameters_sha256": "47459d32f609afe7b553d569fff1e8f7b8d2c8b162f235e5e05fcdfa8d755576",
+      "parameters_unchanged": true,
+      "first_last_blocks_receive_gradients": true,
+      "cuda_graph_replayed_without_Adam": true,
+      "optimizer_updates": 0
+    },
+    "staged": {
+      "total": 22.372650146484375,
+      "final_total": 25.227876663208008,
+      "gradient_norm": 399.4388732910156,
+      "supervised_layers": [
+        4,
+        12
+      ],
+      "peak_allocated_bytes": 2381534720,
+      "initial_parameters_sha256": "47459d32f609afe7b553d569fff1e8f7b8d2c8b162f235e5e05fcdfa8d755576",
+      "parameters_unchanged": true,
+      "first_last_blocks_receive_gradients": true,
+      "cuda_graph_replayed_without_Adam": true,
+      "optimizer_updates": 0
+    }
+  },
+  "parameters": 612307,
+  "actual_nodes": [
+    70,
+    101,
+    103,
+    45,
+    67
+  ],
+  "members": [
+    [
+      "worker_31/layouts_3136.th",
+      43
+    ],
+    [
+      "worker_60/layouts_9184.th",
+      21
+    ],
+    [
+      "worker_85/layouts_6160.th",
+      10
+    ],
+    [
+      "worker_43/layouts_6496.th",
+      1
+    ],
+    [
+      "worker_24/layouts_9072.th",
+      53
+    ]
+  ],
+  "max_loss_ports_in_check": 90,
+  "all_module_prediction": true,
+  "no_MIB_input_or_loss": true,
+  "hard_specifications_not_overwriting_draft": true,
+  "batch32_FP32": true,
+  "same_initial_state_and_eval_output": true,
+  "real_optimizer_update_tested": false,
+  "resume_tested": false,
+  "check_scope": "Only five train members; no epoch, optimizer step, checkpoint or evaluation run",
+  "elapsed_seconds": 46.04718659998616,
+  "implementation_check_sources": {
+    "datasets/paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+    "datasets/random_reference.py": "a42742bec678b4b7d0f9642541a11d05849cf4b2bd1db1be3e92a03c898fc214",
+    "experiments/E114_supervision_placement/__init__.py": "e88603c7289d0636a073fae6a35658f4829f4459cad9a1e7d1d91874c3e78960",
+    "experiments/E114_supervision_placement/augmentation.py": "dba0658829115b08184fadec488ef0b56fe0adf0e8452cb240029d5c5c4de87c",
+    "experiments/E114_supervision_placement/batches.py": "7d8aaccb6b27ee4ea261d7a9c9bebfedfe484181ee00e5d7f6ccb27d0639be54",
+    "experiments/E114_supervision_placement/captured_projection.py": "7f19baba25bc52a686e08a1af32236bffa8b47300cac96c52914b3b81d88131a",
+    "experiments/E114_supervision_placement/cuda_step.py": "cd5eddd01dc44b33da1c57c13261b27e1f7ef232b81c425e57080501a25ce7f1",
+    "experiments/E114_supervision_placement/data.py": "5055f1a6f97b1ea6cfe77952fccbb56ac3a57d63e7c24e391d0ba29160ec6ce5",
+    "experiments/E114_supervision_placement/features.py": "097a04bd1259a76b9fce23e5e533f7a22beece7a2f7af0435c3f560696c32dd1",
+    "experiments/E114_supervision_placement/group_tree.py": "867ca3b84848ae78da25dd2a2db16018d722102c7bb5a34644492451efef65fd",
+    "experiments/E114_supervision_placement/inspect.py": "3f40c625b361712222d06b9d08ea124d9d6128adc2bb37b5112baf79eef883b8",
+    "experiments/E114_supervision_placement/io.py": "d4aef673463486cf495aeb2947ba2b51089fdbe4b6930ea0157a3a738f2ac708",
+    "experiments/E114_supervision_placement/loss.py": "e814051b85d63379eebe9b5fbe259d80b371a38a44d275429ccc58b41f4a7d9c",
+    "experiments/E114_supervision_placement/loss_config.py": "70130eb80100b0aed6ce7de9bbe1c005c48014189ac26fb8610985b0c16daa50",
+    "experiments/E114_supervision_placement/model.py": "0d5f7a0f897653155d5405e07aab9357b46b52bca4ddedd4b2cb11f05151dc82",
+    "experiments/E114_supervision_placement/plan.json": "02d970c3423deb9c782ff45ef49c0f90fa047733f8856c8123269b2ece82bd16",
+    "experiments/E114_supervision_placement/ports.py": "431b54476e7de8a94c12cf935a30a3b49b911e208305fbe6bb7b23d72e37dbef",
+    "experiments/E114_supervision_placement/provenance.json": "c42c5c1bd9a770d5cefea7c2811d17ea629151409d4cc9d3a354a10ac97bf914",
+    "experiments/E114_supervision_placement/README.md": "1745cb8bdfa87671a32897ad3785197e8921fd0d67d96d28aac5f92421ebbc97",
+    "experiments/E114_supervision_placement/resident.py": "f76073f5756a59187ecfc1b90752f4db063e81555bad51835712a731d529cd27",
+    "experiments/E114_supervision_placement/schedule.py": "8d5dfd1a04a0b02965f91ed3be47c94371a28147705f02fa52e144c9d57c597a",
+    "experiments/E114_supervision_placement/simple_loss.py": "fcd0827c829ee2466298eb61c1213b1fb12ae7f54afaef0f8e53a86033478238",
+    "experiments/E114_supervision_placement/step_control.py": "795ddb45dd257e123f1880eea28b58502711807ee643bfcb51a7e72d484952da",
+    "experiments/E114_supervision_placement/train.py": "fcde062f1a3cf66001eb4b4f9e47b5c1cd59db16b09a506484857f5fb0b0eb0f",
+    "protocol/model_prediction_boundary_v1.json": "d975980890f717590aafb6bceb34aa8052f0d895e8940e41e6a65e9426c9705a",
+    "protocol/paths.json": "11dc5f19c3da22f9d37db341b0606bcc4b514bfe39264fc7ffed27c13b098270",
+    "protocol/random_reference40k_v1.json": "f899e114b91bc05a0688898dd9b6f251acba2c95e35fb5baca8fd5cf17979540",
+    "protocol/research_no_mib_v1.json": "a62e8eb2fcfc629d21f4e7d58f49be29daae07efa5b5bdf93c82dd1b98ed1043"
+  },
+  "source_identity_rebind": {
+    "reason": "Launch registration and controller only; original five-case numerical check reused without rerun",
+    "changed_files": [
+      "experiments/E114_supervision_placement/README.md",
+      "experiments/E114_supervision_placement/plan.json",
+      "experiments/E114_supervision_placement/run_queue.py"
+    ],
+    "plan_changed_keys": [
+      "queue",
+      "authorization",
+      "automatic_queue",
+      "status"
+    ],
+    "training_math_sources_unchanged": true,
+    "original_check": "launch_registration_20261107/preflight.json",
+    "extra_validation": "Controller syntax parsed; fixed arm/status/STOP routing reviewed; no training update performed during registration"
+  }
+}

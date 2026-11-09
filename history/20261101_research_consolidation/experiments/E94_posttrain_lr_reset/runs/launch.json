@@ -1,0 +1,31 @@
+{
+  "status": "launched",
+  "controller_pid": 10876,
+  "utc": "2026-11-01T03:50:23.9154687Z",
+  "command": [
+    "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+    "-u",
+    "-B",
+    "-m",
+    "experiments.E94_posttrain_lr_reset.pipeline"
+  ],
+  "parent": "E92 P best36 model and matching Adam; P terminal39 RNG",
+  "initial_lr": 0.001,
+  "lr_levels": [
+    0.001,
+    0.00025,
+    0.0001,
+    5E-05
+  ],
+  "protection_epochs": 0,
+  "train_cap_seconds": 7200,
+  "max_new_epochs": 64,
+  "automatic_validation": {
+    "selection": "unique F own-Loss best",
+    "workers": 4,
+    "terminal_runs": 1,
+    "threads_per_worker": 2,
+    "count": 500
+  },
+  "test_read": false
+}

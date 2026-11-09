@@ -1,0 +1,130 @@
+{
+  "identity": {
+    "revision": "E92.two_stage.v1",
+    "plan": {
+      "status": "authorized_preparation_then_background_train",
+      "architecture": {
+        "width": 192,
+        "layers": 12,
+        "rectangle": true,
+        "ffn_dropout": 0.05
+      },
+      "parameters": 5829939,
+      "training_data_size": 32000,
+      "epoch_draws": 32000,
+      "batch_size": 32,
+      "updates_per_epoch": 1000,
+      "seed": 0,
+      "maximum_hours": 2,
+      "maximum_epochs": 200,
+      "global_cap_seconds": 83007.25936599995,
+      "global_prior_seconds": 38831.07569789997,
+      "initialization": "random; all parameters trainable; no E91 or other checkpoint load",
+      "phases": {
+        "P": {
+          "reference": 1.0,
+          "overlap": 0.029917209539524287,
+          "task": 0.11122773694450763,
+          "lr_levels": [
+            0.001,
+            0.00025
+          ],
+          "baseline_epoch": 15,
+          "switch": "second plateau event; first event drops LR"
+        },
+        "F": {
+          "reference": 1.0,
+          "overlap": 0.08975162861857286,
+          "task": 0.3336832108335229,
+          "lr_levels": [
+            0.00025,
+            0.0001,
+            5e-05
+          ],
+          "baseline_epoch": 0
+        }
+      },
+      "patience": 3,
+      "meaningful_relative_delta": 0.001,
+      "meaningful_absolute_delta": 1e-05,
+      "lowest_lr_full_epochs": 2,
+      "transition": "P own-best model only; fresh AdamW; retain end-of-P RNG, completed epoch count, seen flags and all charges; new full permutation",
+      "numerical_guards": {
+        "per_case_total_lt": 1000.0,
+        "batch_total_lt": 1000.0,
+        "preclip_norm_lt": 10000.0
+      },
+      "train_only": true,
+      "test_read": false,
+      "authorization": "用户：好的。请准备训练，并在后台启动",
+      "budget_policy": "User explicitly grants a full cumulative2h E92 layout window; old18h cannot truncate it; all historical charges retained. Conditional corrector2h plus preparation/evaluation2h under this study6h new-task ceiling; no authorization to revive old runs.",
+      "sentinel_selection": "train1032 plus four public-only structural extremes; frozen before new model inference",
+      "budget_extension_authorization": "用户：总预算至少2h；每隔1h唤醒一次；布局达E90后研究复用修正网络，最终Q<1.01"
+    },
+    "sources": {
+      "datasets/__init__.py": "03c36f364366be6c8a5091d6bd3dbec0788d7871747acdeac5fa89d4974cec21",
+      "datasets/cases.py": "1fd51addaaae38164c22f1946712665beebac700054db4bb07ed4f9d44e0b168",
+      "datasets/expanded_reference/__init__.py": "b54991bdcbd4f194f31b9bcdf1bc9bc49da39f90089d9fa044668779a4b6a7af",
+      "datasets/paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+      "datasets/public_member_inputs.py": "6d525fa963d098051648b01d6bc75fb8a032dd5746529fb3c750afe2b5e8bb09",
+      "datasets/quality_layouts.py": "94f374fa9562770a9c7deadb645d73c3af1fc1a20251f98f1dce4ac575820191",
+      "datasets/reference_layouts.py": "f6aeeba298a163b7d506c67e3fba024cd3a191c3aae1116fc6b5d294431db9b5",
+      "datasets/worksets.py": "013087151ab8e1195d7d2757e777839f521486425eeaff4c45fed4e370df233c",
+      "docs/protocol.md": "6994533395bf20107ad77cae12b1cbb657cdea45150d27a3353905699cb08dfd",
+      "experiments/E92_two_stage_placer/__init__.py": "2fa68381a985db9d05b86e2a03b74373584b2d5f24e3b69191b8eabe6583828a",
+      "experiments/E92_two_stage_placer/arms.py": "c55d6b1af8acea0bc3c9a2d3a95e62db2993639b1a8bd75016ca5bed788dac0f",
+      "experiments/E92_two_stage_placer/batches.py": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92",
+      "experiments/E92_two_stage_placer/budget.py": "96ad1f11761b27a872d0898141220c7186d979d343f48f27177c6d14f01b3adc",
+      "experiments/E92_two_stage_placer/cache.py": "bb929f7ea9c20cfd03436cf1de12bc3ff11805caeaaa198e9004604f1caa6d6a",
+      "experiments/E92_two_stage_placer/captured_projection.py": "dd031332127edd706c0e09f49a07f5e6133f5a9cd0f7fcd69d2246644cbb74c9",
+      "experiments/E92_two_stage_placer/cuda_step.py": "6ff0ad8fcaf3cb4815d810d314c18b48f2acf2b4c9831d3b1e0cb7745c4a2abf",
+      "experiments/E92_two_stage_placer/data.py": "1e43fe61a6d4dde4007295f817db927d75cd61439239423621ef65bf826e0d66",
+      "experiments/E92_two_stage_placer/dataset_view.py": "f0c2274ce4c02c85869d6223a2d80db560ed057750cb6227f2afcbb2317e4cd0",
+      "experiments/E92_two_stage_placer/features.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+      "experiments/E92_two_stage_placer/group_tree.py": "867ca3b84848ae78da25dd2a2db16018d722102c7bb5a34644492451efef65fd",
+      "experiments/E92_two_stage_placer/initialization.py": "52589c019790553177fbd19adf2c675e0a16a9895b166b37560b98c7c7d94557",
+      "experiments/E92_two_stage_placer/io.py": "ea5696c246e8b252183a628e58ae9860812d34f37b226852c2cf54ff038a7b18",
+      "experiments/E92_two_stage_placer/loss.py": "c7f222d479ccd9dda40a01c5d0819b8db7e78e55dde31373487589b2dd0b754d",
+      "experiments/E92_two_stage_placer/loss_config.py": "78cf559ace74e71590ebdccfc7b13643dc645bf9ea585ceff715fa9d2980291b",
+      "experiments/E92_two_stage_placer/model.py": "0d71c96c75976dc57d589d5709639291d1a30addffa8a5f0f2c53e2cb88a9089",
+      "experiments/E92_two_stage_placer/ops.py": "a3882e8637040c4161ec82eca7a2386c70b40317d319b974244831c26d02fd43",
+      "experiments/E92_two_stage_placer/pipeline.py": "3824a65aadf291508a095c305deba2d4a41efb26c99119d1aba9745efec28c5b",
+      "experiments/E92_two_stage_placer/plan.json": "ab5a51ac8b32294fb3e31d7fdd9796c55d4862f566bd03b3e873363cdae4843f",
+      "experiments/E92_two_stage_placer/ports.py": "431b54476e7de8a94c12cf935a30a3b49b911e208305fbe6bb7b23d72e37dbef",
+      "experiments/E92_two_stage_placer/preflight.py": "5096c7a553cf8bcf3ba10a8c1c80b451864856523882dcb1ad4c2b49f3dd74fa",
+      "experiments/E92_two_stage_placer/provenance.json": "638a8bc9460a4b2b92a7832280e43625a5f98e7cb275d993d2eb4491f7299632",
+      "experiments/E92_two_stage_placer/README.md": "728c4151f554624791d338b3a152d3afbd8c83119c12c872447007fe74b1e74a",
+      "experiments/E92_two_stage_placer/requirements-native.txt": "eddfdc929bf37a85b9b17d7c68af80a8ec5138dd8585c1afe0efc312435473b6",
+      "experiments/E92_two_stage_placer/resident.py": "a70da9f834fd05091ab011459e34fcff214bd41cb753f98ee9c088975c0a3c81",
+      "experiments/E92_two_stage_placer/runs/sentinels.json": "d924f71de14006ac36bc2a8f3b65a5f13b375274bc93f12419ff284ca13942e7",
+      "experiments/E92_two_stage_placer/schedule.py": "495ff62c89b82db1c12a10eab591824b8a5ca6659c9222a2f74caca2c0dfe9a2",
+      "experiments/E92_two_stage_placer/sentinels.py": "a2b033e723c9e74d255051d2ef808274b9911574cbdba90e0970139c9ab96a1d",
+      "experiments/E92_two_stage_placer/simple_loss.py": "a6de1f749edc3c74a56f1b38e354c2dfc5e7110031a148b3e63c7284ea47e3ca",
+      "experiments/E92_two_stage_placer/step_control.py": "795ddb45dd257e123f1880eea28b58502711807ee643bfcb51a7e72d484952da",
+      "experiments/E92_two_stage_placer/train.py": "636d8b82cbe9e840554ad6b49f5be0973f484ed1906f7255df37f17f7fe4247e",
+      "scoring/__init__.py": "933bf2be947e20bae164511f26afaa84c2f331d0dbdebc417d235db8358a9247",
+      "scoring/checks.py": "738f6b57e20dce58516f3f10d83689f8df273a84a02b2dce99c6ccc1f904763a",
+      "scoring/evaluation.py": "356e0d1c788c6f25154b33fb1c2455388317d2cc0dd96ca50d7357c58612c611",
+      "scoring/official.py": "478fbc228a56ec4b336b5d8687a44b22b749f30aae09372f57c08e7124270e03",
+      "third_party/FloorSet/cost.py": "b60561556f79aa41c196c8fcaddea57840aab41059c76dbc3f80b4fdde6b48c3",
+      "third_party/FloorSet/iccad2026contest/iccad2026_evaluate.py": "64db37865b42baf11add62bdbf035690dca086cd4be7b5b4e58db756f20d8498",
+      "third_party/FloorSet/utils.py": "9299d9257f5bd932001896307f2296b51cc5567f44150db5514f357ed93c121e"
+    },
+    "registry_sha256": "2fe459b0a785ffb6995dd3e5966cd47337b948b15ec4bb4d4c19ffe169e404ae",
+    "paths_sha256": "7a28cd42de0f10809500c43c48836576361e67a72e723f7b32a404186df9b419",
+    "torch": "2.7.1+cu128",
+    "cuda": "12.8",
+    "device": "NVIDIA GeForce RTX 5080 Laptop GPU",
+    "numpy": "1.26.4"
+  },
+  "command": [
+    "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+    "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E92_two_stage_placer\\pipeline.py"
+  ],
+  "commit": "ccfbd6f78254a5e774d7298946c7de15b3a285d8",
+  "precision": "FP32; no AMP; unchanged TF32 defaults",
+  "threads": 4,
+  "train_size": 32000,
+  "test_read": false,
+  "budget_only_migration": "runs/budget2h_extension/migration.json"
+}

@@ -1,0 +1,13 @@
+{
+  "revision":"E99.R9.conditional_static_obstacle_projection.v1",
+  "evidence":"R7 force and R8 elastic guidance failed to beat R6. Training failures95/135/335 have publicly preplaced rectangles; axis flips retain current center signs and can leave modules in an impossible anchored interval. Existing experiment-local legal_seed preplaced_only projects each free module independently around the same fixed obstacles without adding free modules as obstacles.",
+  "hypothesis":"After first hard conic PrimalInfeasible, project all movable modules independently against only preplaced obstacles, then rebuild complete physical topology. All module updates see the same frozen obstacle set and original target frame, so order does not create interactions. Keep R6 batch8 repairs for later failures and same maximum4 calls/180ms budget.",
+  "arms":["R6_control","obstacle_on_infeasible"],
+  "backend":{"seconds":0.18,"maximum_shape_solves":4,"shape_cap_seconds":0.045,"projection_and_polish_reserve_seconds":0.033,"maximum_edge_flips_per_failure":8,"field":false},
+  "implementation_panel":[0,43,95,135,335],
+  "checks":"Native static-obstacle implementation equals existing Python preplaced_only operator on5 cases. Public lock/area/final nonoverlap checks unchanged; cold JIT separate. Static-obstacle stage may overlap other movable modules and is never accepted unchecked.",
+  "control_reuse":"R6 all500 and new unchanged no-trigger branches read-only with source hashes; all500 quality statistics retained; conditional changed branches freshly solved and counted; historical timing not full acceptance",
+  "calibration_panel":"fixed v5 train_monitor500; frozen C3/public inputs; no test or training",
+  "promotion":"Freeze before fresh whole dev500 complete latency and quality acceptance; no dev coefficient sweep",
+  "test_read":false,"new_training":false
+}

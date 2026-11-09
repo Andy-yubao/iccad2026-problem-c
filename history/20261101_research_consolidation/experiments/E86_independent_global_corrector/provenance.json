@@ -1,0 +1,10 @@
+{
+  "placer": {
+    "checkpoint": "experiments/E74_collision_32k_posttrain/runs/20261029_e42_topology_seed0/checkpoints/best.pt",
+    "sha256": "5a26012c7e7f2f46f0f042040598a965b6037cc458a3991b8f1ba2db5cd63576"
+  },
+  "independent_corrector_initialization": "Copy compatible E74 Transformer blocks into separate trainable tensors; new zero output head gives exact identity on draft; no F81/F85 weights or geometric repair operator",
+  "copied_helpers": "Independent copies from E85; feature/batches preserve cache producer bytes; only datasets/scoring/visualization may be imported as shared code",
+  "source_placer_training_exposure": "E74 pretrained on v6 train32k; new corrector uses original v5 train16k prefix and same dev/monitor members",
+  "test_read": false
+}

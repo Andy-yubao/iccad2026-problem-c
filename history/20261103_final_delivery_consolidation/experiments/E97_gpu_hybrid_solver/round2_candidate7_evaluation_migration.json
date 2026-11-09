@@ -1,0 +1,14 @@
+{
+  "revision": "E97.round2.candidate7.display_device_fix.v2",
+  "timestamp_utc": "2026-11-02T09:19:58.381320+00:00",
+  "source_run": "runs/20261102_round2_candidate7_exactteacher_seed0",
+  "old_evaluation": "evaluation",
+  "new_evaluation": "evaluation_v2",
+  "error": "Untimed display: GPU L state decoded against CPU host public tensors",
+  "change": "Only display returned(base,host,...) -> returned(base,cap.g,...), all tensors same device. Independent source/evidence folder; old trainer/eval/plan/dependencies and failure evidence retained.",
+  "timed_NN_solver_hard_checks_unchanged": true,
+  "old_case0": "First solve had reached scoring then display failed before any terminal record was persisted. One missing case must be recomputed once; no completed500 panel repeated and no best-of-time selection.",
+  "checkpoint_selection_unchanged": "unique own-Loss best epoch3",
+  "new_training_slots": 0,
+  "test_read": false
+}

@@ -1,0 +1,227 @@
+{
+  "revision": "E97.round2.current_condition_control.v1",
+  "registered_utc": "2026-11-02T01:38:32.882545+00:00",
+  "authorization": "New4h window: one current-condition C3 full singlethread baseline using decode-captured deployment after original5 bit-exact phase diagnostic; no new training or raw2000 repetition",
+  "panel": "same frozen dev_monitor500, original order; exactly one complete request per arm/member; all existing own-Loss best fixed, no checkpoint selection or coefficient sweep",
+  "arms": [
+    {
+      "name": "C3",
+      "checkpoint": "experiments/E97_gpu_hybrid_solver/runs/20261102_candidate3_clearance_seed0/checkpoints/best.pt",
+      "sha256": "d784e96f46decf7a487c25bde2ab16db8cf6ebae1bc0632434cc5e2f78173fce",
+      "model_kind": "student",
+      "fixed_relations": false,
+      "previous_terminal": "runs/20261102_fullrepair_singlethread_dev500/C3/terminal"
+    }
+  ],
+  "full_repair": {
+    "relaxed": false,
+    "mode": 0,
+    "adaptive": true,
+    "fast_budget": false,
+    "late_extension": true,
+    "plateau": true,
+    "robust_seeds": true,
+    "certified": true,
+    "quick_project": true,
+    "quadratic_project": true,
+    "incumbent_project": true,
+    "snap": 0.0001
+  },
+  "relations": "C4/C5 retain existing fixed learned relation interface at full budget, with required untrained fixed-native control. Under the original dynamic-native interface their physical drafts equal C1 and C1 result applies; no duplicate geometry solve claimed as a test of the discarded relation head.",
+  "threading": "One sequential process, no pool/workers, torch intra/inter-op1, BLAS/OpenMP/Numba1, Clarabel/HiGHS explicit1, CUDA GPU inference allowed. All arms sequential, no overlapping timed requests.",
+  "measurement": "Resident GPU batch1 complete public feature/padding/H2D/NN/internal geometry/decode/D2H, optional relation transfer/build, all old full CPU repair/rescue/polish and returned hard checks. Official scoring and gallery outside timer. Cold prepare/warmup/capture separately.",
+  "preflight": "Original five train IDs only, E85 full repair with one-thread enforcement and graph/natural consistency; no dev probe or parameter changes",
+  "reuse": "Previous raw2000 and source/reference/L/F geometry reused, no repeat raw2000. Same100 final galleries generated from new saved terminal results. Prior slim3 two-thread results are historical comparisons, not matched one-factor timing control.",
+  "stopping": "STOP files or user stop at case boundaries; numeric/legality error preserves failure and stops, no automatic retry; resume only missing members with identical binding. No new training, no test, no automation.",
+  "output": "runs/20261102_round2_current_control",
+  "copy_manifest": [
+    {
+      "original": "experiments/E97_gpu_hybrid_solver/repair85/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy": "experiments/E97_gpu_hybrid_solver/repair85_one_thread/__init__.py",
+      "copy_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "thread_replacements": {}
+    },
+    {
+      "original": "experiments/E97_gpu_hybrid_solver/repair85/backend/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy": "experiments/E97_gpu_hybrid_solver/repair85_one_thread/backend/__init__.py",
+      "copy_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "thread_replacements": {}
+    },
+    {
+      "original": "experiments/E97_gpu_hybrid_solver/repair85/backend/conic_geometry.py",
+      "original_sha256": "4f327cfb0f57fdd235853f2352604394910cf2279cd9a8e58ebc11b1fadbb04e",
+      "copy": "experiments/E97_gpu_hybrid_solver/repair85_one_thread/backend/conic_geometry.py",
+      "copy_sha256": "8d611db3bee47499c77b64039eee09718607f356cd251df5792314a53bcdcd63",
+      "thread_replacements": {
+        "max_threads=2": 1
+      }
+    },
+    {
+      "original": "experiments/E97_gpu_hybrid_solver/repair85/backend/frozen/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copy": "experiments/E97_gpu_hybrid_solver/repair85_one_thread/backend/frozen/__init__.py",
+      "copy_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "thread_replacements": {}
+    },
+    {
+      "original": "experiments/E97_gpu_hybrid_solver/repair85/backend/frozen/canonical_geometry.py",
+      "original_sha256": "c1dcfd377ad33cdb85954c01917e762f87360deb43b1d5cce9b92c1b003fa2e4",
+      "copy": "experiments/E97_gpu_hybrid_solver/repair85_one_thread/backend/frozen/canonical_geometry.py",
+      "copy_sha256": "c1dcfd377ad33cdb85954c01917e762f87360deb43b1d5cce9b92c1b003fa2e4",
+      "thread_replacements": {}
+    },
+    {
+      "original": "experiments/E97_gpu_hybrid_solver/repair85/backend/frozen/feasible.py",
+      "original_sha256": "9cfe70894d80fbe54ccaa1c3de60ef4ab111ac9b4472286d1ae6a0c5a1fdc756",
+      "copy": "experiments/E97_gpu_hybrid_solver/repair85_one_thread/backend/frozen/feasible.py",
+      "copy_sha256": "9cfe70894d80fbe54ccaa1c3de60ef4ab111ac9b4472286d1ae6a0c5a1fdc756",
+      "thread_replacements": {}
+    },
+    {
+      "original": "experiments/E97_gpu_hybrid_solver/repair85/backend/frozen/global_refine.py",
+      "original_sha256": "cd43991827597dfc4c5635cddb26f597774c680a24658237e5f443e9fbbca60c",
+      "copy": "experiments/E97_gpu_hybrid_solver/repair85_one_thread/backend/frozen/global_refine.py",
+      "copy_sha256": "cd43991827597dfc4c5635cddb26f597774c680a24658237e5f443e9fbbca60c",
+      "thread_replacements": {}
+    },
+    {
+      "original": "experiments/E97_gpu_hybrid_solver/repair85/backend/frozen/packing.py",
+      "original_sha256": "3c0500b7fee120807e6bd3fa8e9f115e476782af1a3e7620859c6651a089ef30",
+      "copy": "experiments/E97_gpu_hybrid_solver/repair85_one_thread/backend/frozen/packing.py",
+      "copy_sha256": "3c0500b7fee120807e6bd3fa8e9f115e476782af1a3e7620859c6651a089ef30",
+      "thread_replacements": {}
+    },
+    {
+      "original": "experiments/E97_gpu_hybrid_solver/repair85/backend/frozen/postprocess.py",
+      "original_sha256": "da0e1572a822a589968a19e67e2d36dd5133c7d17b7ea9443bd743ee4653a272",
+      "copy": "experiments/E97_gpu_hybrid_solver/repair85_one_thread/backend/frozen/postprocess.py",
+      "copy_sha256": "da0e1572a822a589968a19e67e2d36dd5133c7d17b7ea9443bd743ee4653a272",
+      "thread_replacements": {}
+    },
+    {
+      "original": "experiments/E97_gpu_hybrid_solver/repair85/backend/frozen/shape_lp.py",
+      "original_sha256": "f512d90bb9520a56606cd2e4a2697c86211da153fc63876f6d0ab9462f7647b1",
+      "copy": "experiments/E97_gpu_hybrid_solver/repair85_one_thread/backend/frozen/shape_lp.py",
+      "copy_sha256": "6de2773cfd981723e55a1d317ad9422e8fee76b393d740acaf70007594bc8a9f",
+      "thread_replacements": {
+        "setOptionValue('threads',2)": 1
+      }
+    },
+    {
+      "original": "experiments/E97_gpu_hybrid_solver/repair85/backend/frozen/solver.py",
+      "original_sha256": "ed874db1bac7205d5e1d80350b1d4e82d3c56eb2bb44b9f08ceb256244d24ea0",
+      "copy": "experiments/E97_gpu_hybrid_solver/repair85_one_thread/backend/frozen/solver.py",
+      "copy_sha256": "ed874db1bac7205d5e1d80350b1d4e82d3c56eb2bb44b9f08ceb256244d24ea0",
+      "thread_replacements": {}
+    },
+    {
+      "original": "experiments/E97_gpu_hybrid_solver/repair85/backend/frozen/topology_mip.py",
+      "original_sha256": "ddae70814e7e862ebc5162b2a831fc28f5ca01e52f61245d27e5f0043b4e868f",
+      "copy": "experiments/E97_gpu_hybrid_solver/repair85_one_thread/backend/frozen/topology_mip.py",
+      "copy_sha256": "2ba0f2612f598f5e8d6e80a3ee1f74ad4941b78a3e9163f2d4acd7db5588da1a",
+      "thread_replacements": {
+        "setOptionValue('threads',2)": 1
+      }
+    },
+    {
+      "original": "experiments/E97_gpu_hybrid_solver/repair85/backend/guard.py",
+      "original_sha256": "eb36fbbcea1b694c7fb40fa0b36e3ed659ac66563be583f177fb6bb9e3c35bd7",
+      "copy": "experiments/E97_gpu_hybrid_solver/repair85_one_thread/backend/guard.py",
+      "copy_sha256": "eb36fbbcea1b694c7fb40fa0b36e3ed659ac66563be583f177fb6bb9e3c35bd7",
+      "thread_replacements": {}
+    },
+    {
+      "original": "experiments/E97_gpu_hybrid_solver/repair85/backend/observe.py",
+      "original_sha256": "b924be6a40f157e2d2204e358990797192e10a6320e3e3c3399d044918b25dd8",
+      "copy": "experiments/E97_gpu_hybrid_solver/repair85_one_thread/backend/observe.py",
+      "copy_sha256": "b924be6a40f157e2d2204e358990797192e10a6320e3e3c3399d044918b25dd8",
+      "thread_replacements": {}
+    },
+    {
+      "original": "experiments/E97_gpu_hybrid_solver/repair85/backend/reduction.py",
+      "original_sha256": "d8ba6af127d9b08469b198f7ed38849e14ac566db58bfab855797920c92012ed",
+      "copy": "experiments/E97_gpu_hybrid_solver/repair85_one_thread/backend/reduction.py",
+      "copy_sha256": "d8ba6af127d9b08469b198f7ed38849e14ac566db58bfab855797920c92012ed",
+      "thread_replacements": {}
+    },
+    {
+      "original": "experiments/E97_gpu_hybrid_solver/repair85/backend/rescue.py",
+      "original_sha256": "ada10eea489e0f7d65a2f6dd0a20358d33d08808f3dfef6a19c0583139f206e0",
+      "copy": "experiments/E97_gpu_hybrid_solver/repair85_one_thread/backend/rescue.py",
+      "copy_sha256": "ada10eea489e0f7d65a2f6dd0a20358d33d08808f3dfef6a19c0583139f206e0",
+      "thread_replacements": {}
+    },
+    {
+      "original": "experiments/E97_gpu_hybrid_solver/repair85/canonical.py",
+      "original_sha256": "9f7da6983541a3c8b0d57c8f869c6905c24f2bc4eb3643e0ed9e0a718d2abf2c",
+      "copy": "experiments/E97_gpu_hybrid_solver/repair85_one_thread/canonical.py",
+      "copy_sha256": "9f7da6983541a3c8b0d57c8f869c6905c24f2bc4eb3643e0ed9e0a718d2abf2c",
+      "thread_replacements": {}
+    },
+    {
+      "original": "experiments/E97_gpu_hybrid_solver/repair85/canonical_native.py",
+      "original_sha256": "e350394ce13f8bb20e53d03494912f9367d29c9f68809ad16c4314a45709718b",
+      "copy": "experiments/E97_gpu_hybrid_solver/repair85_one_thread/canonical_native.py",
+      "copy_sha256": "e350394ce13f8bb20e53d03494912f9367d29c9f68809ad16c4314a45709718b",
+      "thread_replacements": {}
+    },
+    {
+      "original": "experiments/E97_gpu_hybrid_solver/repair85/canonical_py.py",
+      "original_sha256": "b5b99c1f77756aa318fe5cb0e7fa82935844752b4fa815ab80367adb34e00195",
+      "copy": "experiments/E97_gpu_hybrid_solver/repair85_one_thread/canonical_py.py",
+      "copy_sha256": "b5b99c1f77756aa318fe5cb0e7fa82935844752b4fa815ab80367adb34e00195",
+      "thread_replacements": {}
+    },
+    {
+      "original": "experiments/E97_gpu_hybrid_solver/repair85/certify_polish.py",
+      "original_sha256": "4cdc5c8e368f2ade78d6adcd046d3eb8163b33bda04cfb819e38418671f36094",
+      "copy": "experiments/E97_gpu_hybrid_solver/repair85_one_thread/certify_polish.py",
+      "copy_sha256": "4cdc5c8e368f2ade78d6adcd046d3eb8163b33bda04cfb819e38418671f36094",
+      "thread_replacements": {}
+    },
+    {
+      "original": "experiments/E97_gpu_hybrid_solver/repair85/fast_geometry.py",
+      "original_sha256": "c41911aa3baa1ccead11fce465cc2abdb34112b002239d5993308c68e93e0a36",
+      "copy": "experiments/E97_gpu_hybrid_solver/repair85_one_thread/fast_geometry.py",
+      "copy_sha256": "5440a4deaa85397ff47f4323b4106d559e508c3f7af8f37953fea37cdfcdbf02",
+      "thread_replacements": {
+        "max_threads=2": 1
+      }
+    },
+    {
+      "original": "experiments/E97_gpu_hybrid_solver/repair85/legal_seed.py",
+      "original_sha256": "45a6d0ee77c7cceafd05f41f9317f72ebdbf56dd45fc566da04952810e3a7588",
+      "copy": "experiments/E97_gpu_hybrid_solver/repair85_one_thread/legal_seed.py",
+      "copy_sha256": "45a6d0ee77c7cceafd05f41f9317f72ebdbf56dd45fc566da04952810e3a7588",
+      "thread_replacements": {}
+    },
+    {
+      "original": "experiments/E97_gpu_hybrid_solver/repair85/projection.py",
+      "original_sha256": "3be1fbcdac70be7f16b21d630743491a0fa9930c2fd23fec035f437c09c56a59",
+      "copy": "experiments/E97_gpu_hybrid_solver/repair85_one_thread/projection.py",
+      "copy_sha256": "7f43f22c1ded622268a4c73a26e0103d4e30edfd027089b80845a7195ee4cbff",
+      "thread_replacements": {
+        "max_threads=2": 1,
+        "'threads':2": 1
+      }
+    },
+    {
+      "original": "experiments/E97_gpu_hybrid_solver/repair85/solver.py",
+      "original_sha256": "6c4310ac9ae58ea5fa85732548e14e44f33ccb331f3bc69071a3582cd4fb8f2e",
+      "copy": "experiments/E97_gpu_hybrid_solver/repair85_one_thread/solver.py",
+      "copy_sha256": "6c4310ac9ae58ea5fa85732548e14e44f33ccb331f3bc69071a3582cd4fb8f2e",
+      "thread_replacements": {}
+    },
+    {
+      "original": "experiments/E97_gpu_hybrid_solver/solver_relations.py",
+      "original_sha256": "8c407e01ee8f57d252af42378723ed1b99f25c23512a30c0fb1509a4c4f9bd9b",
+      "copy": "experiments/E97_gpu_hybrid_solver/solver_relations_one_thread.py",
+      "copy_sha256": "1886b64f042db67f16d25e267610ecead3014bce594bb48f41b85f7953b116b9",
+      "changes": "imports only: .repair85. to .repair85_one_thread."
+    }
+  ],
+  "test_read": false,
+  "deadline_utc": "2026-11-02T09:04:02+00:00"
+}

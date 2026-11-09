@@ -1,0 +1,255 @@
+Verified archived cache loaded: train 5 cases
+Eager/graph parity centroid parameter 0.0 Loss 0.0
+{
+  "status": "passed",
+  "arm": "centroid",
+  "device": "cuda",
+  "unique_train_cases": 5,
+  "indices": [
+    1683,
+    10027,
+    5474,
+    10140,
+    15001
+  ],
+  "initial_model_sha256": "72f0de888a86475be99c001a7a058dbdaded1ada7231958533264a1d1567adc1",
+  "token_slots": 0,
+  "natural_module_slots": 75,
+  "legacy_module_summary_exact": true,
+  "port_order_invariant": true,
+  "empty_connectivity_finite": true,
+  "labels_and_test_rejected": true,
+  "zero_head_identity_exact": true,
+  "original_full_port_Loss_preserved": true,
+  "one_simultaneous_output_head": true,
+  "public_hard_geometry_preserved": true,
+  "real_Adam_Dropout_next_update_restore_bit_exact": true,
+  "serialized_cursor_order_preserved": true,
+  "frozen_L_has_no_gradients": true,
+  "objective_probes": {
+    "weights": {
+      "overlap": 1.0,
+      "bbox": 0.5,
+      "wirelength": 0.05,
+      "soft": 0.2,
+      "intent": 0.1
+    },
+    "probes": [
+      {
+        "probe": "contract_5pct",
+        "per_case": [
+          {
+            "train_id": 1683,
+            "delta": {
+              "overlap_total": 0.3038228154182434,
+              "bbox_over_A": -0.07829403877258301,
+              "wirelength": -0.006371647119522095,
+              "soft": 0.0006468645296990871,
+              "intent": 0.00036304074455983937,
+              "intent_neighbour": 0.0,
+              "total": 0.264522910118103
+            }
+          },
+          {
+            "train_id": 10027,
+            "delta": {
+              "overlap_total": 0.27390068769454956,
+              "bbox_over_A": -0.06713342666625977,
+              "wirelength": -0.00959882140159607,
+              "soft": 0.006730914115905762,
+              "intent": 0.0006481072632595897,
+              "intent_neighbour": 4.914341843686998e-05,
+              "total": 0.24126505851745605
+            }
+          },
+          {
+            "train_id": 5474,
+            "delta": {
+              "overlap_total": 0.2663584053516388,
+              "bbox_over_A": -0.07373321056365967,
+              "wirelength": -0.012663811445236206,
+              "soft": 0.008728797547519207,
+              "intent": 0.0009457789128646255,
+              "intent_neighbour": 0.00010779654985526577,
+              "total": 0.23069870471954346
+            }
+          },
+          {
+            "train_id": 10140,
+            "delta": {
+              "overlap_total": 0.3030434548854828,
+              "bbox_over_A": -0.06645786762237549,
+              "wirelength": -0.013635724782943726,
+              "soft": 0.016380898654460907,
+              "intent": 0.001708331285044551,
+              "intent_neighbour": 0.0008616338600404561,
+              "total": 0.2725796699523926
+            }
+          },
+          {
+            "train_id": 15001,
+            "delta": {
+              "overlap_total": 0.2195436954498291,
+              "bbox_over_A": -0.04631602764129639,
+              "wirelength": -0.012277871370315552,
+              "soft": 0.025362050160765648,
+              "intent": 0.0007983004325069487,
+              "intent_neighbour": 3.860624201479368e-05,
+              "total": 0.20092403888702393
+            }
+          }
+        ]
+      },
+      {
+        "probe": "expand_5pct",
+        "per_case": [
+          {
+            "train_id": 1683,
+            "delta": {
+              "overlap_total": 0.060994744300842285,
+              "bbox_over_A": 0.03831648826599121,
+              "wirelength": 0.006716787815093994,
+              "soft": 0.0012992089614272118,
+              "intent": 0.005274091847240925,
+              "intent_neighbour": 0.00504403468221426,
+              "total": 0.0812760591506958
+            }
+          },
+          {
+            "train_id": 10027,
+            "delta": {
+              "overlap_total": 0.11366760730743408,
+              "bbox_over_A": 0.04810023307800293,
+              "wirelength": 0.006656080484390259,
+              "soft": 0.0011357036419212818,
+              "intent": 0.005330410785973072,
+              "intent_neighbour": 0.004844286013394594,
+              "total": 0.13881069421768188
+            }
+          },
+          {
+            "train_id": 5474,
+            "delta": {
+              "overlap_total": -0.0016389787197113037,
+              "bbox_over_A": 0.04630637168884277,
+              "wirelength": 0.009852468967437744,
+              "soft": 0.005873740650713444,
+              "intent": 0.006232854910194874,
+              "intent_neighbour": 0.0055253091268241405,
+              "total": 0.023804664611816406
+            }
+          },
+          {
+            "train_id": 10140,
+            "delta": {
+              "overlap_total": 0.627182126045227,
+              "bbox_over_A": 0.050669074058532715,
+              "wirelength": 0.009553879499435425,
+              "soft": 0.0034623192623257637,
+              "intent": 0.005509989336133003,
+              "intent_neighbour": 0.00479499576613307,
+              "total": 0.6542377471923828
+            }
+          },
+          {
+            "train_id": 15001,
+            "delta": {
+              "overlap_total": -0.038435935974121094,
+              "bbox_over_A": 0.04795539379119873,
+              "wirelength": 0.006807297468185425,
+              "soft": 0.000399827491492033,
+              "intent": 0.005008637439459562,
+              "intent_neighbour": 0.004346256144344807,
+              "total": -0.013537049293518066
+            }
+          }
+        ]
+      },
+      {
+        "probe": "local_overlap_gradient_probe",
+        "per_case": [
+          {
+            "train_id": 1683,
+            "delta": {
+              "overlap_total": -0.023111969232559204,
+              "bbox_over_A": 0.0018742084503173828,
+              "wirelength": 0.00034373998641967773,
+              "soft": -0.00046587688848376274,
+              "intent": 0.00024016242241486907,
+              "intent_neighbour": 0.00023365410743281245,
+              "total": -0.022226810455322266
+            }
+          },
+          {
+            "train_id": 10027,
+            "delta": {
+              "overlap_total": -0.04421141743659973,
+              "bbox_over_A": 0.003992795944213867,
+              "wirelength": 0.0004101097583770752,
+              "soft": -5.304720252752304e-05,
+              "intent": 0.0001884146622614935,
+              "intent_neighbour": 0.00017966497398447245,
+              "total": -0.042186200618743896
+            }
+          },
+          {
+            "train_id": 5474,
+            "delta": {
+              "overlap_total": -0.07630321383476257,
+              "bbox_over_A": 0.005968809127807617,
+              "wirelength": 0.0004221498966217041,
+              "soft": 0.0011710580438375473,
+              "intent": 0.00019870736286975443,
+              "intent_neighbour": 0.0001905901008285582,
+              "total": -0.07304370403289795
+            }
+          },
+          {
+            "train_id": 10140,
+            "delta": {
+              "overlap_total": -0.022233247756958008,
+              "bbox_over_A": 0.002754688262939453,
+              "wirelength": 0.00035959482192993164,
+              "soft": 0.00022114813327789307,
+              "intent": 0.0002125059108948335,
+              "intent_neighbour": 0.00020385537936817855,
+              "total": -0.02077239751815796
+            }
+          },
+          {
+            "train_id": 15001,
+            "delta": {
+              "overlap_total": -0.06189382076263428,
+              "bbox_over_A": 0.002197861671447754,
+              "wirelength": 0.0007096529006958008,
+              "soft": -0.0006564483046531677,
+              "intent": 0.00016237236559391022,
+              "intent_neighbour": 0.00015545632049907,
+              "total": -0.0608745813369751
+            }
+          }
+        ]
+      }
+    ],
+    "optimizer_updates": 0,
+    "note": "five-train geometry diagnostics only; gradient probe is not part of F or training, no coefficient selection"
+  },
+  "implementation_updates_only": true,
+  "formal_training_started": false,
+  "test_read": false,
+  "graph": {
+    "graph_reconstruction_resume_model_Adam_RNG_bit_exact": true,
+    "warmup_no_Adam_updates": true,
+    "same_shape_eager_graph_update_max_abs": 0.0,
+    "same_shape_eager_graph_loss_max_abs": 0.0,
+    "nonfinite_rejected_before_Adam": true,
+    "peak_allocated_MiB": 2129.77490234375,
+    "raw_public_shape": [
+      32,
+      120,
+      480
+    ],
+    "network_tokens": 120
+  },
+  "seconds": 34.94272270000147
+}

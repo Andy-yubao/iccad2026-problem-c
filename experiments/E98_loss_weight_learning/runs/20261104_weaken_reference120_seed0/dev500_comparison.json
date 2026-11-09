@@ -1,0 +1,41 @@
+{
+  "baseline": {
+    "weighted_Q": 1.0435600181008373,
+    "mean_Q": 1.0507141132280862,
+    "mixed_Q": 1.0471370656644616,
+    "hard_legal": 500,
+    "mean_complete_seconds": 0.20348829099960858,
+    "p95_complete_seconds": 0.48832214000722163,
+    "max_complete_seconds": 1.4378727999865077,
+    "over250ms": 157
+  },
+  "candidate": {
+    "count": 500,
+    "weighted_Q": 1.0420469269108963,
+    "mean_Q": 1.0528161427195182,
+    "mixed_Q": 1.0474315348152072,
+    "hard_legal": 500,
+    "mean_complete_seconds": 0.20274919760250487,
+    "p95_complete_seconds": 0.4857277250033803,
+    "max_complete_seconds": 1.4405729999998584,
+    "over250ms": 158,
+    "p95_Q": 1.151816908948116,
+    "max_Q": 3.980494666412385,
+    "fallbacks": 0,
+    "model_hash": "7edcd4a05656a0c20f1e8cc89e4966126135e1a941197185c9f5838ab00530e2",
+    "cache_hits": 0,
+    "actual_solver_calls": 500,
+    "raw_hard_legal": 0,
+    "latency_scope": "Fresh rows include input/transfer/network/repair/independent hard check; cache hits retain original timing, not a new latency measurement"
+  },
+  "weighted_Q_delta": -0.0015130911899410293,
+  "mean_Q_delta": 0.0021020294914320115,
+  "mixed_Q_delta": 0.0002944691507456021,
+  "improved_cases": 239,
+  "worsened_cases": 220,
+  "unchanged_cases": 41,
+  "same_depth_evaluator": true,
+  "baseline_reused": true,
+  "checkpoint_not_reselected_by_Q": true,
+  "test_read": false
+}

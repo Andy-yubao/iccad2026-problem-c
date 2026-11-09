@@ -1,0 +1,44 @@
+"""Record completed E79 audit and leave the final candidate evidence-driven."""
+import json
+from pathlib import Path
+from datetime import datetime,timezone
+ROOT=Path(__file__).resolve().parents[4];HERE=ROOT/'experiments/E79_center_refinement'
+def read(p):return json.loads(p.read_text(encoding='utf-8'))
+def write(p,v):p.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+a=read(HERE/'runs/completion/inspection.json');m=read(HERE/'runs/completion/motion.json')
+assert a['sources_unchanged'] and a['source_shape_deltas500']['max_absolute']==0
+text='''# E79完成复核：尺寸保持，重叠追回一部分，Q仍有取舍
+
+27轮正常早停，own-Loss best26，训练阶段1576.49秒（26.27分钟）。训练/最终dev2000/一次flash500/固定100图均完成，没有重训或终末重复。源E78全部256个张量在best/latest逐字不变，源码、best SHA和终末身份核对通过。四档LR/最低档两轮满足，测试封存。
+
+固定train/dev500 Loss从0.408339/0.446277降至0.395917/0.433197，改善3.04%/2.93%，相对差距9.42%。不能跨Loss与E78总值直接比较；训练监测500仍仅旧16k来源。
+
+完整dev2000交面积2.723%→2.358%，相对E78为2000/2000改善，worker配对差值区间[-0.003774,-0.003527]。相对E42的6.302%有1998/2000改善。但仍未追回E77的2.205%。同500例交面积2.789%→2.420%，精确空白/B6.212%→5.862%，两项500例全部改善；相对E77仍有290例交面积、288例空白变差。
+
+500例宽高与E78来源逐字相同，最大绝对差0；500例均满足E74预测框，最大外伸3.05e-7低于3e-6容差。源次序翻转在完整dev均值约0.2445%，R均值0.002223；没有声称次序完全不变或硬合法。原始草稿仍0/2000硬合法，flash500/500合法。
+
+flash weighted Q1.016383，相对E78的1.015401数值略差；差值+0.000982、worker区间[-0.001479,+0.004342]跨零。算术均值1.031073→1.030625、P95 1.122310→1.120896、最差5%1.234880→1.232182、最大1.751561→1.738220又略好，故不能只按一个均值判全面胜负。对E42 weighted差值-0.009476、区间[-0.012808,-0.006576]。保留E77/E78/E79取舍，不自动升级冻结基线。
+
+已实际查看217/399/194三张原图并核对哈希。MIB形状保持一致，局部重叠相比E78减少，但中下部、小模块和分组交界仍有明显局部冲突，宏观结构未改变；没有替用户打视觉分。
+
+保存500例位移诊断：全部有效节点轴（含预放置零位移）的平均绝对位移0.01080个等效边长，P95为0.04056，最大0.14780；接近0.15上限的轴仅0.00428%，只有3例有此现象。这不支持简单把位移范围不够当作主要原因，也不能直接证明容量不足。新最差回退例219、21在无packed救援情况下也出现Q退化，且交面积同时下降，需继续分析原始次序、分组接触树和连续修复先验的敏感性，不能把所有退化归咎救援。
+
+下一步先分析这些保存反例，再决定二期最后一个候选；不因还有预算而凑训练次数，不擅自扩大幅度或直接加强重叠项。所有现有best/latest、源快照及预算保留，自动跟进继续。
+
+[机器审计](inspection.json) · [位移与回退反例](motion.json) · [完整汇总](../review.json) · [100例图](../20261029_e78_center_seed0/draft_comparison100/index.html)。
+'''
+(HERE/'runs/completion/inspection.md').write_text(text,encoding='utf-8')
+p=ROOT/'experiments/E78_connectivity_posttrain/study.json';s=read(p)
+entry=next(v for v in s['run_ledger'] if v['experiment']==HERE.name)
+entry.update(status='early_stop_complete_audited',controller_pid=None,child_pid=None,elapsed_seconds=1576.4856285999995,
+    steps=27000,epochs=27,best_epoch=26,weighted_Q=1.0163831551595395,terminal_runs=1,baseline_promoted=False,
+    report='runs/completion/inspection.md')
+s.update(status='analyzing_last_candidate',current_experiment=HERE.name,current_stage='complete_audited',controller_pid=None,child_pid=None,
+    phase_training_seconds=sum(v.get('elapsed_seconds',0) for v in s['run_ledger']))
+s['global_charged_seconds']=s['previous_charged_seconds']+s['phase_training_seconds']
+s['E79_decision']={'overlap_vs_E78_all2000_improved':True,'all500_shapes_bit_exact':True,
+    'weighted_Q':1.0163831551595395,'Q_vs_E78_interval':a['paired_weighted_Q_vs_E78']['worker_resampling95'],
+    'near_cap_axis_fraction':m['near_cap_axis_fraction'],'decision':'Keep tradeoff; analyze saved regressions219/21/99 before final candidate; amplitude bottleneck unsupported'}
+s['last_check']={'utc':datetime.now(timezone.utc).isoformat(),'state':'E79_completion_audited','step':27000}
+write(p,s)
+print('E79 completion audited and recorded')

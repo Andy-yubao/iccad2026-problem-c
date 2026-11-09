@@ -1,0 +1,383 @@
+{
+  "id": "case_0076",
+  "member": [
+    "worker_36/layouts_448.th",
+    1
+  ],
+  "n": 28,
+  "annotation": {
+    "score": 2,
+    "note": "",
+    "tags": [
+      "局部复杂重叠"
+    ],
+    "rubric_version": 1
+  },
+  "source_draft": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0076.json",
+  "source_draft_sha256": "5b05f8cb6703d787e46a9f86d93c18b0e4ae57fe45b9050e546e8cbf63c2d4eb",
+  "constraints": [
+    [
+      0.0,
+      0.0,
+      0.0,
+      3.0,
+      8.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      2.0,
+      4.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      3.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      3.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      2.0,
+      2.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      10.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      2.0,
+      6.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      8.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      2.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      4.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      9.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      5.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      3.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      2.0
+    ]
+  ],
+  "input_features": {
+    "preplaced_fraction": 0.03571428571428571,
+    "fixed_fraction": 0.03571428571428571,
+    "group_fraction": 0.35714285714285715,
+    "mib_fraction": 0.17857142857142858
+  },
+  "pileup": {
+    "n": 28,
+    "empty_fraction": 0.13013880886969054,
+    "pair_overlap_fraction": 0.0907717649214598,
+    "overlap_excess_fraction": 0.08984234972336572,
+    "overlap_pair_count": 27,
+    "largest_any_component_fraction": 0.75,
+    "coverage_load_mean": 0.1865284836755811,
+    "coverage_load_p90": 0.5155061315621577,
+    "coverage_load_top10_mean": 0.7491211509608693,
+    "coverage_energy": 0.09079585698250238,
+    "complex_energy_10pct": 0.07009066631942139,
+    "strong_component_fraction_10pct": 0.25,
+    "threshold_curve": [
+      {
+        "threshold": 0.02,
+        "worst": {
+          "ids": [
+            0,
+            21,
+            24,
+            9,
+            12,
+            8,
+            19,
+            23,
+            3,
+            10,
+            13,
+            5,
+            25,
+            17,
+            14,
+            1
+          ],
+          "blocks": 16,
+          "block_fraction": 0.5714285714285714,
+          "area_fraction": 0.6827229185221383,
+          "mean_coverage_load": 0.3140914436686035,
+          "max_coverage_load": 0.799403222776959,
+          "energy": 0.0898020993395898,
+          "strong_edges": 16
+        },
+        "complex_energy": 0.0898020993395898,
+        "largest_strong_component": 16,
+        "all_complex_energy": 0.0898020993395898
+      },
+      {
+        "threshold": 0.05,
+        "worst": {
+          "ids": [
+            1,
+            14,
+            8,
+            19,
+            23,
+            3,
+            5,
+            25,
+            17
+          ],
+          "blocks": 9,
+          "block_fraction": 0.32142857142857145,
+          "area_fraction": 0.34978644820355104,
+          "mean_coverage_load": 0.41733667199847146,
+          "max_coverage_load": 0.7994032227769589,
+          "energy": 0.0744925431018723,
+          "strong_edges": 9
+        },
+        "complex_energy": 0.0744925431018723,
+        "largest_strong_component": 9,
+        "all_complex_energy": 0.0744925431018723
+      },
+      {
+        "threshold": 0.1,
+        "worst": {
+          "ids": [
+            1,
+            14,
+            8,
+            19,
+            23,
+            3,
+            5
+          ],
+          "blocks": 7,
+          "block_fraction": 0.25,
+          "area_fraction": 0.26010093340070617,
+          "mean_coverage_load": 0.48285060786933975,
+          "max_coverage_load": 0.799403222776959,
+          "energy": 0.07009066631942139,
+          "strong_edges": 6
+        },
+        "complex_energy": 0.07009066631942139,
+        "largest_strong_component": 7,
+        "all_complex_energy": 0.07009066631942139
+      },
+      {
+        "threshold": 0.2,
+        "worst": {
+          "ids": [
+            5,
+            19,
+            8
+          ],
+          "blocks": 3,
+          "block_fraction": 0.10714285714285714,
+          "area_fraction": 0.09281738728554552,
+          "mean_coverage_load": 0.517742999941113,
+          "max_coverage_load": 0.6801111561121269,
+          "energy": 0.03170925389286817,
+          "strong_edges": 2
+        },
+        "complex_energy": 0.03170925389286817,
+        "largest_strong_component": 3,
+        "all_complex_energy": 0.03170925389286817
+      }
+    ]
+  },
+  "trials": [
+    {
+      "name": "fixed_relation",
+      "solver": {
+        "status": 2,
+        "message": "No separating axis is reachable for at least one pair within movement cap",
+        "pair": [
+          7,
+          20
+        ],
+        "certificate_scope": "fixed shapes, maximum L1 movement cap; independent of solver quality limits",
+        "binary_variables": 0,
+        "threads": 1
+      }
+    },
+    {
+      "name": "flexible_relation",
+      "solver": {
+        "status": 2,
+        "message": "No separating axis is reachable for at least one pair within movement cap",
+        "pair": [
+          7,
+          20
+        ],
+        "certificate_scope": "fixed shapes, maximum L1 movement cap; independent of solver quality limits",
+        "binary_variables": 0,
+        "threads": 1
+      }
+    },
+    {
+      "name": "joint_small_shape",
+      "solver": {
+        "status": "PrimalInfeasible",
+        "seconds": 0.0120878,
+        "primal_residual": 0.03256266920520677,
+        "threads": 1,
+        "max_log_shape": 0.05,
+        "certificate_scope": "original nearest-separation directions only"
+      }
+    }
+  ],
+  "seconds": 1.0110427000327036
+}

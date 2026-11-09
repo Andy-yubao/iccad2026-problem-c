@@ -1,0 +1,37 @@
+{
+  "independent_algorithm_copy": {
+    "E57": [
+      "model.py",
+      "features.py",
+      "batches.py",
+      "losses.py",
+      "ops.py",
+      "cuda_step.py",
+      "resident.py"
+    ],
+    "E59": [
+      "train.py",
+      "data.py",
+      "diagnostics.py",
+      "final.py",
+      "freeze.py",
+      "inference.py",
+      "render_drafts.py",
+      "canonical.py",
+      "canonical_native.py",
+      "canonical_py.py",
+      "certify_polish.py",
+      "fast_geometry.py",
+      "legal_seed.py",
+      "projection.py",
+      "solver.py",
+      "backend",
+      "cache.py",
+      "io.py"
+    ]
+  },
+  "changes": "No graph input normalization. Original architecture and fixed G retained; only graph-local joint AdamW displacement projected to at most1% of previous parameter norm. Added observations and strict guards. E59 staged training/finalization copied independently.",
+  "source_parameters_preserved": true,
+  "checkpoints": "read-only original paths and hashes in replay config; new model starts from scratch seed0",
+  "test_read": false
+}

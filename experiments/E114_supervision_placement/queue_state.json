@@ -1,0 +1,37 @@
+{
+  "status": "user_stop",
+  "pid": 46380,
+  "started_at": "2026-11-07T09:15:27.842208+00:00",
+  "arms": [
+    "terminal",
+    "dense",
+    "staged"
+  ],
+  "completed": [
+    {
+      "arm": "terminal",
+      "status": "early_stop",
+      "steps": 68625,
+      "epochs": 61,
+      "completed_at": "2026-11-07T11:09:36.489141+00:00"
+    },
+    {
+      "arm": "dense",
+      "status": "early_stop",
+      "steps": 59625,
+      "epochs": 53,
+      "completed_at": "2026-11-07T14:49:43.794010+00:00"
+    }
+  ],
+  "active": {
+    "arm": "staged",
+    "pid": 46092,
+    "started_at": "2026-11-07T14:49:43.811389+00:00"
+  },
+  "test_read": false,
+  "postprocessing_calls": 0,
+  "automatic_evaluation": false,
+  "updated_at": "2026-11-07T14:58:24.872356+00:00",
+  "error": "InterruptedError('Training stopped; no next arm')",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E114_supervision_placement\\run_queue.py\", line 63, in main\n    raise InterruptedError('Training stopped; no next arm')\nInterruptedError: Training stopped; no next arm\n"
+}

@@ -1,0 +1,31 @@
+{
+  "revision": "E71.combined_fast_development.v1",
+  "authorization": "2026-10-28 user: combine early reference and spatial coordination directly; faster development, no separate arms. Prepare user-run command, no automatic long execution.",
+  "arms": [
+    "full_ports"
+  ],
+  "initialization": "Scratch seed0, same E70/E68 full-port architecture and ordering; no old optimizer or checkpoint load in formal training.",
+  "data": "v5 train16000; same train/dev_monitor500, dev2000, tests sealed.",
+  "loss": "Eleven terms; compactness .5, new density .5; only position schedule .375 to .25 by epoch15, all other weights fixed. Reference only position/shape.",
+  "selection": "Best/LR/early stop eligible from epoch16 on stable final objective. Training and both monitors share epoch and Loss.",
+  "budget": {
+    "formal_runs": 1,
+    "max_hours": 3,
+    "max_epochs": 200,
+    "batch_size": 32,
+    "seed": 0
+  },
+  "engine": "FP32 CUDA graph; position scalar updated in-place from saved epoch, RNG and optimizer not reset.",
+  "evaluation": "Unique selected best: raw dev2000, sole flash500, saved-draft exact bbox/union/void at four threads, same100 reference/current/E42 pictures without ratings. Compare E70 and E42; no Q re-selection.",
+  "capacity_decision": {
+    "model": "Keep1532883 parameters, width96/layers12/ports24",
+    "data": "Keep16k",
+    "basis": "Research judgment, not a new scaling result. Prioritize missing spatial objective over scaling.",
+    "next_model_if_needed": "Width128 at12 layers before deeper model; not implemented or queued.",
+    "next_data_if_needed": "Nested32k training only, unchanged dev/test; not prepared or queued."
+  },
+  "preflight": "At most five unique train members reused from E70, analytic density gradient/dilution fixtures, scheduled eager/CUDA equality, finite checks and exact Dropout Adam resume.",
+  "continuation": "Ends after this one candidate; no automated followup, extra seeds or restored old directions.",
+  "training_started": false,
+  "test_read": false
+}

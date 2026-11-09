@@ -1,0 +1,341 @@
+{
+  "schema_version": 1,
+  "session_id": "E42_orderliness_pairwise_v2",
+  "title": "整齐程度 · 五组前后对照",
+  "display_note": "每组输入和模块编号一致，A/B顺序已随机固定。前三组比较小幅联合调整，后两组比较相近重叠量的协同/独立微扰。无需补完上一轮100张。",
+  "view_stages": [
+    {
+      "key": "left",
+      "label": "放大 A"
+    },
+    {
+      "key": "right",
+      "label": "放大 B"
+    }
+  ],
+  "image_description": "同一输入的A和B两幅布局对照",
+  "rubric": {
+    "version": 2,
+    "target": "pairwise_orderliness",
+    "target_label": "先判断哪幅整体更整齐",
+    "prompt": "A 和 B，哪幅更整齐？",
+    "instructions": "1 A更整齐 · 2 差不多 · 3 B更整齐。下方两个观察维度可选填；选完后打主分会一起保存。",
+    "scale": {
+      "1": "A 更整齐",
+      "2": "差不多",
+      "3": "B 更整齐"
+    },
+    "questions": {
+      "repairability": {
+        "prompt": "哪边更容易小幅调整到合法？",
+        "scale": {
+          "1": "A",
+          "2": "相近",
+          "3": "B"
+        }
+      },
+      "whitespace": {
+        "prompt": "哪边的留白更合理？",
+        "scale": {
+          "1": "A",
+          "2": "相近",
+          "3": "B"
+        }
+      }
+    }
+  },
+  "selection": {
+    "seed": 20261024,
+    "count": 5,
+    "criterion": "fixed three joint-witness cases and two high-rated same-input perturbation cases; exploratory, not score validation"
+  },
+  "cases": [
+    {
+      "id": "pair_01",
+      "n": 26,
+      "member": null,
+      "image": "images/pair_01.png",
+      "image_sha256": "74a3b2d968e1a9f6790c4e046b6b8db5b305ebd8637f473aaa7fa7dc241a5a45",
+      "axes_bounds": [
+        [
+          0.08247276796805335,
+          0.243,
+          0.3700544640638933,
+          0.637
+        ],
+        [
+          0.5424727679680534,
+          0.243,
+          0.3700544640638933,
+          0.637
+        ]
+      ],
+      "auxiliary": {
+        "来源类型": "original_vs_bounded_joint_adjustment",
+        "原例": "case_0063",
+        "A来源": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0063.json#raw_positions",
+        "B来源": "experiments/E42_joint_regularization/runs/20261024_feedback_geometry23/cases_local/case_0063.json#probe_curve/7/positions",
+        "数值核对": {
+          "accepted": true,
+          "geometric_accepted": true,
+          "reasons": [],
+          "soft_regressions": [],
+          "empty_reduction_over_bbox": 0.009397477881470785,
+          "empty_reduction_over_old_empty": 0.08871484926148197,
+          "bbox_reduction_fraction": 0.009066841915264523,
+          "removable_whitespace_over_old_empty": 0.08559355222068207,
+          "union_change_over_bbox": 0.00033063596620631046,
+          "max_center_move_local": 0.050000000989957924,
+          "mean_center_move_local": 0.011034160444065319,
+          "max_center_move_chip_diagonal": 0.005547596039470324,
+          "max_abs_log_width_change": 0.04999999975723843,
+          "HPWL_relative_change": -0.002030558181772335,
+          "metrics": {
+            "hpwl_total": 13.787607832319505,
+            "boundary_violations": 6,
+            "grouping_violations": 1,
+            "mib_violations": 6,
+            "area_violations": 0,
+            "dimension_violations": 0
+          }
+        },
+        "说明": "辅助资料会暴露变体身份；建议先完成观察再展开"
+      },
+      "provenance": {
+        "case": "case_0063",
+        "kind": "original_vs_bounded_joint_adjustment",
+        "swapped": false,
+        "coordinate_sources": [
+          "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0063.json#raw_positions",
+          "experiments/E42_joint_regularization/runs/20261024_feedback_geometry23/cases_local/case_0063.json#probe_curve/7/positions"
+        ]
+      }
+    },
+    {
+      "id": "pair_02",
+      "n": 28,
+      "member": null,
+      "image": "images/pair_02.png",
+      "image_sha256": "f8ccb3999c2fc71808cc71111f5c2a10b6ee650738dae1695806f2718b099f34",
+      "axes_bounds": [
+        [
+          0.05,
+          0.24824119042853493,
+          0.435,
+          0.6265176191429302
+        ],
+        [
+          0.51,
+          0.24824119042853487,
+          0.43500000000000005,
+          0.6265176191429302
+        ]
+      ],
+      "auxiliary": {
+        "来源类型": "original_vs_bounded_joint_adjustment",
+        "原例": "case_0076",
+        "A来源": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0076.json#raw_positions",
+        "B来源": "experiments/E42_joint_regularization/runs/20261024_feedback_geometry23/cases_local/case_0076.json#probe_curve/7/positions",
+        "数值核对": {
+          "accepted": true,
+          "geometric_accepted": true,
+          "reasons": [],
+          "soft_regressions": [],
+          "empty_reduction_over_bbox": 0.01441066549470477,
+          "empty_reduction_over_old_empty": 0.1107330366695943,
+          "bbox_reduction_fraction": 0.013522978214349557,
+          "removable_whitespace_over_old_empty": 0.10391195625503395,
+          "union_change_over_bbox": 0.0008876872803552599,
+          "max_center_move_local": 0.050000000290282724,
+          "mean_center_move_local": 0.012248268606414538,
+          "max_center_move_chip_diagonal": 0.007137939470753625,
+          "max_abs_log_width_change": 0.049999999218823525,
+          "HPWL_relative_change": 0.0002692010598126515,
+          "metrics": {
+            "hpwl_total": 5.361318540439776,
+            "boundary_violations": 7,
+            "grouping_violations": 3,
+            "mib_violations": 4,
+            "area_violations": 0,
+            "dimension_violations": 0
+          }
+        },
+        "说明": "辅助资料会暴露变体身份；建议先完成观察再展开"
+      },
+      "provenance": {
+        "case": "case_0076",
+        "kind": "original_vs_bounded_joint_adjustment",
+        "swapped": false,
+        "coordinate_sources": [
+          "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0076.json#raw_positions",
+          "experiments/E42_joint_regularization/runs/20261024_feedback_geometry23/cases_local/case_0076.json#probe_curve/7/positions"
+        ]
+      }
+    },
+    {
+      "id": "pair_03",
+      "n": 81,
+      "member": null,
+      "image": "images/pair_03.png",
+      "image_sha256": "ffe70390eb5956690b9608b74941c82eab85fbc38e210d1e7c84cd043cbb9ea9",
+      "axes_bounds": [
+        [
+          0.10055116689066364,
+          0.243,
+          0.33389766621867273,
+          0.637
+        ],
+        [
+          0.5605511668906636,
+          0.243,
+          0.3338976662186728,
+          0.637
+        ]
+      ],
+      "auxiliary": {
+        "来源类型": "original_vs_bounded_joint_adjustment",
+        "原例": "case_0602",
+        "A来源": "experiments/E42_joint_regularization/runs/20261024_feedback_geometry23/cases_local/case_0602.json#probe_curve/7/positions",
+        "B来源": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0602.json#raw_positions",
+        "数值核对": {
+          "accepted": true,
+          "geometric_accepted": true,
+          "reasons": [],
+          "soft_regressions": [],
+          "empty_reduction_over_bbox": 0.005263774490858708,
+          "empty_reduction_over_old_empty": 0.04042257803054929,
+          "bbox_reduction_fraction": 0.0035074144498689064,
+          "removable_whitespace_over_old_empty": 0.026934804014024507,
+          "union_change_over_bbox": 0.0017563600409898274,
+          "max_center_move_local": 0.05000000019885071,
+          "mean_center_move_local": 0.010226396280790265,
+          "max_center_move_chip_diagonal": 0.004611652602535305,
+          "max_abs_log_width_change": 0.04860070220243261,
+          "HPWL_relative_change": -0.0016646747326445333,
+          "metrics": {
+            "hpwl_total": 59.60257870284103,
+            "boundary_violations": 19,
+            "grouping_violations": 4,
+            "mib_violations": 3,
+            "area_violations": 0,
+            "dimension_violations": 0
+          }
+        },
+        "说明": "辅助资料会暴露变体身份；建议先完成观察再展开"
+      },
+      "provenance": {
+        "case": "case_0602",
+        "kind": "original_vs_bounded_joint_adjustment",
+        "swapped": true,
+        "coordinate_sources": [
+          "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0602.json#raw_positions",
+          "experiments/E42_joint_regularization/runs/20261024_feedback_geometry23/cases_local/case_0602.json#probe_curve/7/positions"
+        ]
+      }
+    },
+    {
+      "id": "pair_04",
+      "n": 29,
+      "member": null,
+      "image": "images/pair_04.png",
+      "image_sha256": "44757beced28178872690c3103fda0914789955a61ef8236c0a9825747fb5215",
+      "axes_bounds": [
+        [
+          0.07831576592003255,
+          0.243,
+          0.3783684681599349,
+          0.637
+        ],
+        [
+          0.5383157659200326,
+          0.243,
+          0.37836846815993486,
+          0.637
+        ]
+      ],
+      "auxiliary": {
+        "来源类型": "coherent_vs_independent_small_motion",
+        "原例": "case_0088",
+        "A来源": "experiments/E42_joint_regularization/runs/20261024_orderliness_four_checks/counterfactual_local/case_0088_coherent.json#positions",
+        "B来源": "experiments/E42_joint_regularization/runs/20261024_orderliness_four_checks/counterfactual_local/case_0088_independent.json#positions",
+        "数值核对": {
+          "seed": 101,
+          "candidate_count": 128,
+          "selected_by": "closest total overlap fraction and free-module mean movement only; no visual-score selection",
+          "coherent_overlap_fraction": 0.05453777699197454,
+          "independent_overlap_fraction": 0.05465232095729095,
+          "absolute_overlap_fraction_difference": 0.00011454396531641181,
+          "matched_within_0_001": true,
+          "coherent_mean_move_free": 0.03920068753608964,
+          "independent_mean_move_free": 0.039144673339740886,
+          "selected_trial": 18,
+          "max_move_cap_local": 0.05,
+          "areas_and_shapes_unchanged": true,
+          "preplaced_unchanged": true
+        },
+        "说明": "辅助资料会暴露变体身份；建议先完成观察再展开"
+      },
+      "provenance": {
+        "case": "case_0088",
+        "kind": "coherent_vs_independent_small_motion",
+        "swapped": false,
+        "coordinate_sources": [
+          "experiments/E42_joint_regularization/runs/20261024_orderliness_four_checks/counterfactual_local/case_0088_coherent.json#positions",
+          "experiments/E42_joint_regularization/runs/20261024_orderliness_four_checks/counterfactual_local/case_0088_independent.json#positions"
+        ]
+      }
+    },
+    {
+      "id": "pair_05",
+      "n": 73,
+      "member": null,
+      "image": "images/pair_05.png",
+      "image_sha256": "efc14d46feb01f347deb07006622500e0a685297cd2e4102bbe11b00b87629a6",
+      "axes_bounds": [
+        [
+          0.07401684522666434,
+          0.243,
+          0.38696630954667127,
+          0.637
+        ],
+        [
+          0.5340168452266644,
+          0.243,
+          0.3869663095466713,
+          0.637
+        ]
+      ],
+      "auxiliary": {
+        "来源类型": "coherent_vs_independent_small_motion",
+        "原例": "case_0538",
+        "A来源": "experiments/E42_joint_regularization/runs/20261024_orderliness_four_checks/counterfactual_local/case_0538_coherent.json#positions",
+        "B来源": "experiments/E42_joint_regularization/runs/20261024_orderliness_four_checks/counterfactual_local/case_0538_independent.json#positions",
+        "数值核对": {
+          "seed": 202,
+          "candidate_count": 128,
+          "selected_by": "closest total overlap fraction and free-module mean movement only; no visual-score selection",
+          "coherent_overlap_fraction": 0.04769093103326085,
+          "independent_overlap_fraction": 0.04881502193907595,
+          "absolute_overlap_fraction_difference": 0.0011240909058150977,
+          "matched_within_0_001": false,
+          "coherent_mean_move_free": 0.024141316344836992,
+          "independent_mean_move_free": 0.024141316344836967,
+          "selected_trial": 70,
+          "max_move_cap_local": 0.05,
+          "areas_and_shapes_unchanged": true,
+          "preplaced_unchanged": true
+        },
+        "说明": "辅助资料会暴露变体身份；建议先完成观察再展开"
+      },
+      "provenance": {
+        "case": "case_0538",
+        "kind": "coherent_vs_independent_small_motion",
+        "swapped": false,
+        "coordinate_sources": [
+          "experiments/E42_joint_regularization/runs/20261024_orderliness_four_checks/counterfactual_local/case_0538_coherent.json#positions",
+          "experiments/E42_joint_regularization/runs/20261024_orderliness_four_checks/counterfactual_local/case_0538_independent.json#positions"
+        ]
+      }
+    }
+  ]
+}

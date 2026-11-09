@@ -1,0 +1,29 @@
+{
+  "phase": "20261030 cooperative space",
+  "prior_training_seconds": 34604.39659300004,
+  "max_new_training_seconds": 14400,
+  "global_cap_seconds": 64800,
+  "phase_charged_seconds": 4226.679104899929,
+  "global_charged_seconds": 38831.07569789997,
+  "preflight_seconds": 57.16231320000952,
+  "scheduler_policy_change": "runs/lr_policy_change/migration.json",
+  "comparison_limit": "Completed control used original protection; cooperative resumed without protection; not a pure operator-only training-policy comparison",
+  "runs": [
+    {
+      "arm": "control",
+      "status": "early_stop",
+      "charged_seconds": 2325.939782499976,
+      "output": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E85_cooperative_space_refinement\\runs\\20261030_P74_F81_control_seed0"
+    },
+    {
+      "arm": "cooperative",
+      "status": "early_stop",
+      "charged_seconds": 1900.7393223999534,
+      "output": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E85_cooperative_space_refinement\\runs\\20261030_P74_F81_cooperative_seed0"
+    }
+  ],
+  "status": "complete_audited",
+  "stage": "complete_audited",
+  "test_read": false,
+  "completion_audit": "runs/completion/inspection.md"
+}

@@ -1,0 +1,150 @@
+{
+  "case_feature_CV_ablations": {
+    "N_plus_pin_summaries": {
+      "target": "log G",
+      "features": [
+        "log_n",
+        "log_n_squared",
+        "pin_edges_per_node",
+        "pin_count_per_node",
+        "pin_connected_fraction",
+        "pin_weight_cv"
+      ],
+      "folds": 5,
+      "group": "source worker",
+      "ridge_lambda": 10.0,
+      "out_of_fold_R2": 0.5064999742673746,
+      "out_of_fold_rank_correlation": 0.7086177790337116,
+      "scope": "Internal explanatory worker-held-out CV on exposed dev; no independent test or causal claim."
+    },
+    "public_without_pin_summaries": {
+      "target": "log G",
+      "features": [
+        "log_n",
+        "log_n_squared",
+        "area_cv",
+        "area_gini",
+        "log_area_ratio",
+        "max_area_share",
+        "effective_module_fraction",
+        "fixed_fraction",
+        "preplaced_fraction",
+        "fixed_area_share",
+        "preplaced_area_share",
+        "boundary_fraction",
+        "boundary_edges_per_node",
+        "connection_density",
+        "mean_degree",
+        "degree_cv",
+        "weighted_degree_cv",
+        "isolated_fraction",
+        "graph_components_fraction",
+        "cross_group_edge_fraction",
+        "mib_fraction",
+        "mib_groups_per_node",
+        "mib_max_size_fraction",
+        "group_fraction",
+        "group_groups_per_node",
+        "group_max_size_fraction",
+        "duplicate_node_feature_fraction"
+      ],
+      "folds": 5,
+      "group": "source worker",
+      "ridge_lambda": 10.0,
+      "out_of_fold_R2": 0.3021223354639826,
+      "out_of_fold_rank_correlation": 0.5068289588973006,
+      "scope": "Internal explanatory worker-held-out CV on exposed dev; no independent test or causal claim."
+    },
+    "public_without_connectivity_summaries": {
+      "target": "log G",
+      "features": [
+        "log_n",
+        "log_n_squared",
+        "area_cv",
+        "area_gini",
+        "log_area_ratio",
+        "max_area_share",
+        "effective_module_fraction",
+        "fixed_fraction",
+        "preplaced_fraction",
+        "fixed_area_share",
+        "preplaced_area_share",
+        "boundary_fraction",
+        "boundary_edges_per_node",
+        "pin_edges_per_node",
+        "pin_count_per_node",
+        "pin_connected_fraction",
+        "pin_weight_cv",
+        "mib_fraction",
+        "mib_groups_per_node",
+        "mib_max_size_fraction",
+        "group_fraction",
+        "group_groups_per_node",
+        "group_max_size_fraction",
+        "duplicate_node_feature_fraction"
+      ],
+      "folds": 5,
+      "group": "source worker",
+      "ridge_lambda": 10.0,
+      "out_of_fold_R2": 0.5106093468208275,
+      "out_of_fold_rank_correlation": 0.7125634349080701,
+      "scope": "Internal explanatory worker-held-out CV on exposed dev; no independent test or causal claim."
+    }
+  },
+  "pin_coverage_partial_rank_rho": -0.8135754098713608,
+  "partial_rank_controls": [
+    "log_n",
+    "log_n_squared",
+    "connection_density",
+    "preplaced_fraction",
+    "fixed_fraction",
+    "area_gini",
+    "boundary_fraction"
+  ],
+  "within_case_node_associations": {
+    "case_count": 500,
+    "worker_count": 100,
+    "worker_pids": [
+      8044,
+      30844,
+      45516,
+      46972
+    ],
+    "definition": "Saved decoded center Euclidean error /sqrt(public effective area), not raw pre-clamp center Loss",
+    "regression": "Case-fixed-effect OLS of log1p(local error), equal case weight; controls log(area),log(area)^2,log(weighted degree),boundary flag,fixed-shape flag",
+    "coefficient_order": [
+      "pin_connected",
+      "log_area",
+      "log_area_squared",
+      "log_weighted_degree",
+      "boundary",
+      "fixed_shape"
+    ],
+    "models": {
+      "E65": {
+        "coefficients": [
+          -0.23822360241761006,
+          -0.33200602178397587,
+          0.018539468717453565,
+          -1.014981670615275,
+          -0.10081720186860892,
+          -0.018315628770855824
+        ],
+        "pin_coefficient_worker_bootstrap95": [
+          -0.256346105258467,
+          -0.2226353999009915
+        ],
+        "pin_modules": 23014,
+        "no_pin_modules": 10727,
+        "pin_mean_decoded_local_error": 0.18289403614735705,
+        "no_pin_mean_decoded_local_error": 0.688474884720042,
+        "mixed_case_count": 440,
+        "mixed_case_mean_error_difference": -0.4396912691737737,
+        "mixed_cases_pin_error_lower_fraction": 0.9477272727272728
+      }
+    }
+  },
+  "scope": "Post-hoc exploratory follow-up to initial feature screen; no causal proof or draft-network training",
+  "new_inference": false,
+  "test_read": false
+}

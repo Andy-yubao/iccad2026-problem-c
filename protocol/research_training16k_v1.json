@@ -1,0 +1,27 @@
+{
+  "policy_version": "research.training_subset16k.v1",
+  "effective_date": "2026-11-07",
+  "user_instruction": "在4/12监督后进行的实验用16000的数据进行训练。其中16000的数据从36000中挑出来。先准备好数据处理入口。",
+  "applies_to": "New experiments after the E114 staged layer4/12 supervision experiment; no change to any of the three E114 arms or historical runs",
+  "parent_registry": "protocol/random_reference40k_v1.json",
+  "parent_training_count": 36000,
+  "default_training_count": 16000,
+  "subset_registry": "protocol/random_reference16k_v1.json",
+  "selection": "Uniform random sample without replacement within the frozen parent train36000, then preserve parent order; freeze once and reuse across subsequent experiments",
+  "selection_seed": 2026110716000,
+  "training_monitor_count": 500,
+  "training_monitor_seed": 2026110716001,
+  "training_monitor": "Uniform fixed500 from selected train16000; local subset indices, not the old parent train500",
+  "development": "Keep parent dev2000 and the exact original dev_monitor500 indices",
+  "test": "Keep parent test2000 sealed; no payload reads or evaluation authorized",
+  "payloads": "Read-only references to existing parent NPZ/PNG; no copy, rerender, area transform, resplit, quality filtering or N balancing",
+  "other_policies": [
+    "research.original_no_mib.v1",
+    "research.predict_all_modules.v1"
+  ],
+  "reader": "datasets.random_reference16k.RandomReference16k",
+  "prepare_command": "python -B -m datasets.random_reference16k prepare",
+  "check_command": "python -B -m datasets.random_reference16k check --payloads 5",
+  "training_authorized_by_this_file": false,
+  "current_E114_modified": false
+}

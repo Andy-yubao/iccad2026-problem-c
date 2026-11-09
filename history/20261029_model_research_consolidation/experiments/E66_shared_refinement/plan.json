@@ -1,0 +1,20 @@
+{
+  "revision":"E66.predeclared.v1",
+  "authorization":"This chat authorized all proposed expression/generalization experiments and background training; all seed0, no multi-seed confirmation. Stage2 of E65 long_task.",
+  "question":"Can additive iterative corrections improve drafts, and does block sharing improve development behavior at the same twelve effective applications?",
+  "arms":["unshared_residual","shared_residual"],
+  "seed":0,
+  "architecture":"Original width96 rectangle block, initial public-input node head, separate normalized correction MLP,12 additive state updates. No E65 pair-message branch.",
+  "paired_difference":"unshared keeps12 independently initialized original blocks; shared retains first3 and cycles them4 times. Full12 are initialized in both before discarding, pairing initial coarse head/first3 blocks/RNG. Correction head shared across all12 steps in both arms.",
+  "update_rule":"state += mask * [0.5*max(sqrt(public_normalized_area),0.1)*tanh(delta_xy), 0.5*tanh(delta_log_ratio)]. Padded rows excluded. No intermediate supervision, no reference initialization or perturbation inputs.",
+  "neutral_initialization":"Zero last correction projection means initial final output equals initial coarse head, identically across the two arms; it is not the old E64 deep random output.",
+  "data":"Original v5 train16000 order and fixed train_monitor500/dev_monitor500; no v6, no augmentation",
+  "loss":"Byte-identical E64.frozen_E42_G.v1, final output only, no extra terms or weights",
+  "training":{"batch_size":32,"precision":"FP32","engine":"cuda_graph","max_hours_per_arm":3,"max_epochs_per_arm":200,"seed":0,"lr_levels":[0.001,0.00025,0.0001,0.00005],"scheduler_start_epoch":15,"weight_decay":0.0003,"clip_norm":1.0},
+  "selection":"Unique best by same dev500 G; same E64 four-tier/LR/early-stop thresholds",
+  "assessment":"Full raw dev2000, one unchanged flash dev500, same100 unscored reference/current/E42 images; report fixed train/dev curves, common update steps, parameters and inference time",
+  "interpretation":"E64 to unshared changes residual decoder, bounds and readout normalization together; cannot isolate each component. Between E66 arms effective depth is matched while parameter sharing and unique capacity differ. Shared weights may reduce overfitting or underfit; compare both train and dev, not just their gap. No causal claim of all typical errors being symmetry/capacity limits.",
+  "gate":"Single-seed promising if dev500 G is at least0.5% below E64, full dev2000 improves, overlap mean no more than2% worse, and healthy early-stop trajectory. No seed1, no automatic baseline promotion; user draft assessment pending.",
+  "failure_policy":"Nonfinite blocks Adam, saves latest, and stops that arm. No silent batch/precision changes. Independent planned arm may run, failures retain cumulative budget. Two formal runs only unless evidence warrants the one global repair allowance.",
+  "test_read":false
+}

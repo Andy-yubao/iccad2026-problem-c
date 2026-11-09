@@ -1,0 +1,1074 @@
+{
+  "total_solver_outputs": 2865,
+  "hard_legal_outputs": 2865,
+  "unique_development_cases": 500,
+  "all_full_drafts_bitwise_unchanged": true,
+  "noncausal_diagnostic_outputs": 20,
+  "historical_source_quality": {
+    "best_saved_legal": {
+      "better_tie_worse_vs_fresh_control": [
+        155,
+        179,
+        166
+      ],
+      "weighted_Q_difference": -0.006448715746873988,
+      "worst_Q_difference": 0.17360667710701172,
+      "interpretation": "historical output vs current paired control; not a teacher/student gain or a timing repeat guarantee"
+    },
+    "single_historical_baseline": {
+      "better_tie_worse_vs_fresh_control": [
+        74,
+        244,
+        182
+      ],
+      "weighted_Q_difference": -0.0023440045130626403,
+      "worst_Q_difference": 0.4003639313470615,
+      "interpretation": "historical output vs current paired control; not a teacher/student gain or a timing repeat guarantee"
+    }
+  },
+  "shape_factorial_results": [
+    {
+      "index": 443,
+      "Q": {
+        "control": 1.7643778487540673,
+        "oracle_hybrid": 1.3241023245952868,
+        "oracle_shape_only": 1.1783509071920233,
+        "oracle_hybrid_shape": 1.2329585093460127
+      },
+      "aspect_relation_interaction_Q": 0.49488312631277,
+      "source_tag": "20261024_shape_structure_gate5_v2",
+      "privileged_mechanism_diagnostic_only": true
+    },
+    {
+      "index": 247,
+      "Q": {
+        "oracle_hybrid": 1.0411402193803996,
+        "oracle_shape_only": 1.1374002155770508,
+        "oracle_hybrid_shape": 1.0,
+        "control": 1.005576092441637
+      },
+      "aspect_relation_interaction_Q": -0.17296434251581339,
+      "source_tag": "20261024_shape_structure_gate5_v2",
+      "privileged_mechanism_diagnostic_only": true
+    },
+    {
+      "index": 259,
+      "Q": {
+        "oracle_shape_only": 1.0,
+        "oracle_hybrid_shape": 1.0,
+        "control": 1.0320382028025326,
+        "oracle_hybrid": 1.029981089664015
+      },
+      "aspect_relation_interaction_Q": 0.002057113138517641,
+      "source_tag": "20261024_shape_structure_gate5_v2",
+      "privileged_mechanism_diagnostic_only": true
+    },
+    {
+      "index": 368,
+      "Q": {
+        "oracle_hybrid_shape": 1.1784025234313442,
+        "control": 1.1732427014508988,
+        "oracle_hybrid": 1.1719608511001658,
+        "oracle_shape_only": 1.1578660816422852
+      },
+      "aspect_relation_interaction_Q": 0.021818292139792028,
+      "source_tag": "20261024_shape_structure_gate5_v2",
+      "privileged_mechanism_diagnostic_only": true
+    },
+    {
+      "index": 366,
+      "Q": {
+        "control": 1.242593767066658,
+        "oracle_hybrid": 1.4562894687803716,
+        "oracle_shape_only": 1.2393976487584362,
+        "oracle_hybrid_shape": 1.195736272492928
+      },
+      "aspect_relation_interaction_Q": -0.2573570779792218,
+      "source_tag": "20261024_shape_structure_gate5_v2",
+      "privileged_mechanism_diagnostic_only": true
+    }
+  ],
+  "frozen_global_core_confirmed": {
+    "confidence.py": true,
+    "global_information.py": true,
+    "solver.py": true,
+    "fast_geometry.py": true,
+    "projection.py": true,
+    "model.py": true,
+    "features.py": true,
+    "inference.py": true
+  },
+  "original_source_files_unchanged": {
+    "__init__.py": true,
+    "solver.py": true,
+    "fast_geometry.py": true,
+    "projection.py": true,
+    "legal_seed.py": true,
+    "canonical.py": true,
+    "canonical_py.py": true,
+    "canonical_native.py": true,
+    "certify_polish.py": true,
+    "backend/conic_geometry.py": true,
+    "backend/guard.py": true,
+    "backend/observe.py": true,
+    "backend/optimizer.py": true,
+    "backend/reduction.py": true,
+    "backend/rescue.py": true,
+    "backend/robust.py": true,
+    "backend/selection.py": true,
+    "backend/stable.py": true,
+    "backend/__init__.py": true,
+    "backend/frozen/canonical_geometry.py": true,
+    "backend/frozen/feasible.py": true,
+    "backend/frozen/global_refine.py": true,
+    "backend/frozen/packing.py": true,
+    "backend/frozen/postprocess.py": true,
+    "backend/frozen/shape_lp.py": true,
+    "backend/frozen/solver.py": true,
+    "backend/frozen/topology_mip.py": true,
+    "backend/frozen/__init__.py": true,
+    "model.py": true,
+    "features.py": true,
+    "inference.py": true,
+    "io.py": true,
+    "report.py": true
+  },
+  "runs": [
+    {
+      "tag": "20261024_information_gate5",
+      "cases": 5,
+      "outputs": 35,
+      "pipeline_seconds": 42.68525209999643,
+      "results_sha256": "eb19d774a78d8d710ad64970074653cba1e9530598b5bddf54d65dc5f4ce9f08",
+      "commands": [
+        [
+          "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E47_draft_topology_confidence\\run.py",
+          "--tag",
+          "20261024_information_gate5",
+          "--wall-seconds",
+          "300"
+        ]
+      ],
+      "method_status": "recorded experiment"
+    },
+    {
+      "tag": "20261024_commit_gate5",
+      "cases": 5,
+      "outputs": 30,
+      "pipeline_seconds": 24.46428069996182,
+      "results_sha256": "7bd4452001afe5c0d669fe3ed04ec188fa940b3b784841438ae214a4fb008da1",
+      "commands": [
+        [
+          "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E47_draft_topology_confidence\\run.py",
+          "--tag",
+          "20261024_commit_gate5",
+          "--policies",
+          "control",
+          "geometric_commit",
+          "oracle_commit",
+          "oracle_structured",
+          "shuffle_commit",
+          "oracle_priority",
+          "--wall-seconds",
+          "300"
+        ]
+      ],
+      "method_status": "recorded experiment"
+    },
+    {
+      "tag": "20261024_commit_screen100",
+      "cases": 100,
+      "outputs": 800,
+      "pipeline_seconds": 877.6822290000273,
+      "results_sha256": "501e39573c2901fa2141f57d290b9cc41e562d7de4fc7d5bfb5bac102f7bb829",
+      "commands": [
+        [
+          "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E47_draft_topology_confidence\\run.py",
+          "--tag",
+          "20261024_commit_screen100",
+          "--stage",
+          "screen",
+          "--policies",
+          "control",
+          "geometric_commit",
+          "oracle_commit",
+          "oracle_structured",
+          "shuffle_commit",
+          "oracle_priority",
+          "shuffle_draft_commit",
+          "oracle_draft_priority",
+          "--wall-seconds",
+          "1800"
+        ]
+      ],
+      "method_status": "recorded experiment"
+    },
+    {
+      "tag": "20261024_global_information_gate5",
+      "cases": 5,
+      "outputs": 30,
+      "pipeline_seconds": 15.5241049999604,
+      "results_sha256": "ad287291bf6185a094fdd1b9af3248765deed313792ece708345f8b494c97549",
+      "commands": [
+        [
+          "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E47_draft_topology_confidence\\run.py",
+          "--tag",
+          "20261024_global_information_gate5",
+          "--policies",
+          "control",
+          "draft_static",
+          "oracle_full",
+          "oracle_hybrid",
+          "oracle_hybrid_contacts",
+          "shuffle_hybrid",
+          "--wall-seconds",
+          "300"
+        ]
+      ],
+      "method_status": "recorded experiment"
+    },
+    {
+      "tag": "20261024_global_information_screen100",
+      "cases": 100,
+      "outputs": 600,
+      "pipeline_seconds": 455.8293100000592,
+      "results_sha256": "f3b9cd650b679861a89614688f47f7cdb233e3ee10ad01f67db86fd1ea726634",
+      "commands": [
+        [
+          "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E47_draft_topology_confidence\\run.py",
+          "--tag",
+          "20261024_global_information_screen100",
+          "--stage",
+          "screen",
+          "--policies",
+          "control",
+          "draft_static",
+          "oracle_full",
+          "oracle_hybrid",
+          "oracle_hybrid_contacts",
+          "shuffle_hybrid",
+          "--wall-seconds",
+          "1800"
+        ]
+      ],
+      "method_status": "recorded experiment"
+    },
+    {
+      "tag": "20261024_reference_information_gate5",
+      "cases": 5,
+      "outputs": 25,
+      "pipeline_seconds": 15.901240299921483,
+      "results_sha256": "f7799f445f0a6d866a8e8c1f00146e3d43bb902876094338974ae4136392deff",
+      "commands": [
+        [
+          "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E47_draft_topology_confidence\\run.py",
+          "--tag",
+          "20261024_reference_information_gate5",
+          "--policies",
+          "control",
+          "oracle_hybrid",
+          "reference_full",
+          "reference_hybrid",
+          "reference_shuffle",
+          "--wall-seconds",
+          "300"
+        ]
+      ],
+      "method_status": "recorded experiment"
+    },
+    {
+      "tag": "20261024_label_sources_screen100",
+      "cases": 100,
+      "outputs": 500,
+      "pipeline_seconds": 339.663450299995,
+      "results_sha256": "7df1e9f9667121923daf99dd315c166e546dca178629881abad4498719d6520e",
+      "commands": [
+        [
+          "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E47_draft_topology_confidence\\run.py",
+          "--tag",
+          "20261024_label_sources_screen100",
+          "--stage",
+          "screen",
+          "--policies",
+          "control",
+          "oracle_hybrid",
+          "baseline_hybrid",
+          "baseline_shuffle",
+          "reference_hybrid",
+          "--wall-seconds",
+          "1800"
+        ]
+      ],
+      "method_status": "recorded experiment"
+    },
+    {
+      "tag": "20261024_global_information_confirm400",
+      "cases": 400,
+      "outputs": 800,
+      "pipeline_seconds": 860.4274637000635,
+      "results_sha256": "a0c50887ceb37e7f6739f807c3ccd83ded2107e7e7fb4d6959dd9e67a040f1ad",
+      "commands": [
+        [
+          "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E47_draft_topology_confidence\\run.py",
+          "--tag",
+          "20261024_global_information_confirm400",
+          "--stage",
+          "confirm",
+          "--policies",
+          "control",
+          "oracle_hybrid",
+          "--wall-seconds",
+          "1800"
+        ]
+      ],
+      "method_status": "recorded experiment"
+    },
+    {
+      "tag": "20261024_timing_accounting_gate5",
+      "cases": 5,
+      "outputs": 5,
+      "pipeline_seconds": 6.513039799989201,
+      "results_sha256": "5b6d10643f569552aaaac12e0c891be592e4d53f11175338aa9d2a533a2ebfd1",
+      "commands": [
+        [
+          "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E47_draft_topology_confidence\\run.py",
+          "--tag",
+          "20261024_timing_accounting_gate5",
+          "--policies",
+          "control",
+          "--wall-seconds",
+          "120"
+        ]
+      ],
+      "method_status": "recorded experiment"
+    },
+    {
+      "tag": "20261024_shape_structure_gate5",
+      "cases": 5,
+      "outputs": 20,
+      "pipeline_seconds": 11.188890499994159,
+      "results_sha256": "a08ab86b5bf8c6734ae26e117367b4f9cb90720ae90dd1012beb91a6ab00d0d6",
+      "commands": [
+        [
+          "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E47_draft_topology_confidence\\run.py",
+          "--tag",
+          "20261024_shape_structure_gate5",
+          "--indices",
+          "443",
+          "247",
+          "259",
+          "368",
+          "366",
+          "--policies",
+          "control",
+          "oracle_hybrid",
+          "oracle_shape_only",
+          "oracle_hybrid_shape",
+          "--wall-seconds",
+          "180"
+        ]
+      ],
+      "method_status": "center-preservation confound; excluded from causal interpretation"
+    },
+    {
+      "tag": "20261024_shape_structure_gate5_v2",
+      "cases": 5,
+      "outputs": 20,
+      "pipeline_seconds": 10.190533300046809,
+      "results_sha256": "938812bfa142697c94db0d44ee88eff3aba14e550c29d07eda938ade0425e123",
+      "commands": [
+        [
+          "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E47_draft_topology_confidence\\run.py",
+          "--tag",
+          "20261024_shape_structure_gate5_v2",
+          "--indices",
+          "443",
+          "247",
+          "259",
+          "368",
+          "366",
+          "--policies",
+          "control",
+          "oracle_hybrid",
+          "oracle_shape_only",
+          "oracle_hybrid_shape",
+          "--wall-seconds",
+          "180"
+        ]
+      ],
+      "method_status": "recorded experiment"
+    }
+  ],
+  "focus_diagnostics": [
+    {
+      "index": 443,
+      "n": 36,
+      "source": "best_saved_legal",
+      "witness_Q_diagnostic": 1.288966602883642,
+      "witness_policy": "shape_trust",
+      "original_relations": 630,
+      "changed_relations": 64,
+      "changed_between_groups": 59,
+      "changed_within_groups": 5,
+      "raw_reduced_relations": 165,
+      "raw_reduced_incompatible_with_witness": 32,
+      "initial_shape_chain_area_bound_over_draft_bbox": 1.4377766177612537,
+      "initial_shape_chain_area_bound_over_witness_bbox": 1.391396274803561,
+      "witness_shape_chain_area_bound_over_witness_bbox": 0.9999999999724564,
+      "mean_abs_log_shape_change": 0.4022876820537603,
+      "public_native_objective_witness": 0.5084904155187528
+    },
+    {
+      "index": 443,
+      "n": 36,
+      "source": "single_baseline",
+      "witness_Q_diagnostic": 1.7643778487540673,
+      "witness_policy": "control",
+      "original_relations": 630,
+      "changed_relations": 42,
+      "changed_between_groups": 42,
+      "changed_within_groups": 0,
+      "raw_reduced_relations": 165,
+      "raw_reduced_incompatible_with_witness": 26,
+      "initial_shape_chain_area_bound_over_draft_bbox": 1.6663659156229458,
+      "initial_shape_chain_area_bound_over_witness_bbox": 0.9599939618109858,
+      "witness_shape_chain_area_bound_over_witness_bbox": 1.0000000000040696,
+      "mean_abs_log_shape_change": 1.2548322171842878,
+      "public_native_objective_witness": 0.7032301541366166
+    },
+    {
+      "index": 247,
+      "n": 84,
+      "source": "best_saved_legal",
+      "witness_Q_diagnostic": 1.0510946112768869,
+      "witness_policy": "shape_large_fast",
+      "original_relations": 3486,
+      "changed_relations": 35,
+      "changed_between_groups": 31,
+      "changed_within_groups": 4,
+      "raw_reduced_relations": 477,
+      "raw_reduced_incompatible_with_witness": 33,
+      "initial_shape_chain_area_bound_over_draft_bbox": 1.3353725360473854,
+      "initial_shape_chain_area_bound_over_witness_bbox": 1.318783159460982,
+      "witness_shape_chain_area_bound_over_witness_bbox": 1.0000000006088992,
+      "mean_abs_log_shape_change": 0.3069962627668537,
+      "public_native_objective_witness": 0.3095113171369027
+    },
+    {
+      "index": 247,
+      "n": 84,
+      "source": "single_baseline",
+      "witness_Q_diagnostic": 1.4059400237886985,
+      "witness_policy": "control",
+      "original_relations": 3486,
+      "changed_relations": 432,
+      "changed_between_groups": 412,
+      "changed_within_groups": 20,
+      "raw_reduced_relations": 477,
+      "raw_reduced_incompatible_with_witness": 168,
+      "initial_shape_chain_area_bound_over_draft_bbox": 1.7208268134136289,
+      "initial_shape_chain_area_bound_over_witness_bbox": 1.6612289367981743,
+      "witness_shape_chain_area_bound_over_witness_bbox": 0.999999999873412,
+      "mean_abs_log_shape_change": 0.7227246154336909,
+      "public_native_objective_witness": 0.5081408921816846
+    },
+    {
+      "index": 259,
+      "n": 112,
+      "source": "best_saved_legal",
+      "witness_Q_diagnostic": 1.0,
+      "witness_policy": "large_area_fast",
+      "original_relations": 6216,
+      "changed_relations": 28,
+      "changed_between_groups": 24,
+      "changed_within_groups": 4,
+      "raw_reduced_relations": 648,
+      "raw_reduced_incompatible_with_witness": 28,
+      "initial_shape_chain_area_bound_over_draft_bbox": 1.3821731105974076,
+      "initial_shape_chain_area_bound_over_witness_bbox": 1.4046874686871116,
+      "witness_shape_chain_area_bound_over_witness_bbox": 0.9999999986212851,
+      "mean_abs_log_shape_change": 0.36139546730435423,
+      "public_native_objective_witness": 0.27860005050362413
+    },
+    {
+      "index": 259,
+      "n": 112,
+      "source": "single_baseline",
+      "witness_Q_diagnostic": 1.0320382028025326,
+      "witness_policy": "control",
+      "original_relations": 6216,
+      "changed_relations": 23,
+      "changed_between_groups": 21,
+      "changed_within_groups": 2,
+      "raw_reduced_relations": 648,
+      "raw_reduced_incompatible_with_witness": 22,
+      "initial_shape_chain_area_bound_over_draft_bbox": 1.2994510987507029,
+      "initial_shape_chain_area_bound_over_witness_bbox": 1.3105149100784959,
+      "witness_shape_chain_area_bound_over_witness_bbox": 1.0000000000281999,
+      "mean_abs_log_shape_change": 0.3515429223913213,
+      "public_native_objective_witness": 0.3127812563673601
+    },
+    {
+      "index": 368,
+      "n": 22,
+      "source": "best_saved_legal",
+      "witness_Q_diagnostic": 1.1732427014508988,
+      "witness_policy": "large_area_fast",
+      "original_relations": 231,
+      "changed_relations": 8,
+      "changed_between_groups": 7,
+      "changed_within_groups": 1,
+      "raw_reduced_relations": 85,
+      "raw_reduced_incompatible_with_witness": 8,
+      "initial_shape_chain_area_bound_over_draft_bbox": 1.294347185797231,
+      "initial_shape_chain_area_bound_over_witness_bbox": 1.1172121692022736,
+      "witness_shape_chain_area_bound_over_witness_bbox": 0.9999999978485711,
+      "mean_abs_log_shape_change": 0.2934869336819457,
+      "public_native_objective_witness": 0.4038226323633929
+    },
+    {
+      "index": 368,
+      "n": 22,
+      "source": "single_baseline",
+      "witness_Q_diagnostic": 1.1732427014508988,
+      "witness_policy": "control",
+      "original_relations": 231,
+      "changed_relations": 8,
+      "changed_between_groups": 7,
+      "changed_within_groups": 1,
+      "raw_reduced_relations": 85,
+      "raw_reduced_incompatible_with_witness": 8,
+      "initial_shape_chain_area_bound_over_draft_bbox": 1.294347185797231,
+      "initial_shape_chain_area_bound_over_witness_bbox": 1.1172121692022736,
+      "witness_shape_chain_area_bound_over_witness_bbox": 0.9999999978485711,
+      "mean_abs_log_shape_change": 0.2934869336819457,
+      "public_native_objective_witness": 0.4038226323633929
+    },
+    {
+      "index": 366,
+      "n": 87,
+      "source": "best_saved_legal",
+      "witness_Q_diagnostic": 1.238218938147552,
+      "witness_policy": "large_area_fast",
+      "original_relations": 3741,
+      "changed_relations": 300,
+      "changed_between_groups": 286,
+      "changed_within_groups": 14,
+      "raw_reduced_relations": 460,
+      "raw_reduced_incompatible_with_witness": 133,
+      "initial_shape_chain_area_bound_over_draft_bbox": 1.7905499995965832,
+      "initial_shape_chain_area_bound_over_witness_bbox": 1.7543339962169957,
+      "witness_shape_chain_area_bound_over_witness_bbox": 0.9999999990544554,
+      "mean_abs_log_shape_change": 0.6303603115353605,
+      "public_native_objective_witness": 0.4651015471397433
+    },
+    {
+      "index": 366,
+      "n": 87,
+      "source": "single_baseline",
+      "witness_Q_diagnostic": 1.238218938147552,
+      "witness_policy": "control",
+      "original_relations": 3741,
+      "changed_relations": 300,
+      "changed_between_groups": 286,
+      "changed_within_groups": 14,
+      "raw_reduced_relations": 460,
+      "raw_reduced_incompatible_with_witness": 133,
+      "initial_shape_chain_area_bound_over_draft_bbox": 1.7905499995965832,
+      "initial_shape_chain_area_bound_over_witness_bbox": 1.7543339962169957,
+      "witness_shape_chain_area_bound_over_witness_bbox": 0.9999999990544554,
+      "mean_abs_log_shape_change": 0.6303603115353605,
+      "public_native_objective_witness": 0.4651015471397433
+    }
+  ],
+  "images": [
+    {
+      "index": 443,
+      "path": "runs\\research_summary\\images\\case_443.png",
+      "stages": [
+        [
+          "draft",
+          "Full model draft"
+        ],
+        [
+          "control",
+          "Original postprocessing"
+        ],
+        [
+          "oracle_hybrid",
+          "Global hybrid (privileged)"
+        ]
+      ],
+      "source_tag": "20261024_global_information_gate5",
+      "layout": {
+        "axis_limits": [
+          -11.35608709588465,
+          217.830397930151,
+          -11.35608709588465,
+          140.18044027538613
+        ],
+        "bounding_policy": "union of all three stages plus 5.5% maximum-span margin; no blocks cropped",
+        "axes_bounds": [
+          [
+            0.035,
+            0.4617017196999464,
+            0.29999999999999993,
+            0.33059656060010717
+          ],
+          [
+            0.358,
+            0.4617017196999464,
+            0.29999999999999993,
+            0.33059656060010717
+          ],
+          [
+            0.681,
+            0.4617017196999463,
+            0.30000000000000004,
+            0.3305965606001075
+          ]
+        ],
+        "grouping_colors": {
+          "1": [
+            0.5529411764705883,
+            0.8274509803921568,
+            0.7803921568627451,
+            1.0
+          ],
+          "2": [
+            1.0,
+            1.0,
+            0.7019607843137254,
+            1.0
+          ],
+          "3": [
+            0.7450980392156863,
+            0.7294117647058823,
+            0.8549019607843137,
+            1.0
+          ]
+        },
+        "mib_hatches": {
+          "1": "///"
+        },
+        "plot_overlap_axis_tolerance": 2.0647431083426637e-07
+      }
+    },
+    {
+      "index": 247,
+      "path": "runs\\research_summary\\images\\case_247.png",
+      "stages": [
+        [
+          "control",
+          "Original postprocessing"
+        ],
+        [
+          "baseline_hybrid",
+          "Single baseline structure"
+        ],
+        [
+          "oracle_hybrid",
+          "Better witness structure"
+        ]
+      ],
+      "source_tag": "20261024_label_sources_screen100",
+      "layout": {
+        "axis_limits": [
+          -13.007117238196225,
+          145.01444701788787,
+          -13.007117238196225,
+          249.50015793267303
+        ],
+        "bounding_policy": "union of all three stages plus 5.5% maximum-span margin; no blocks cropped",
+        "axes_bounds": [
+          [
+            0.09362091940705378,
+            0.374,
+            0.18275816118589236,
+            0.506
+          ],
+          [
+            0.41662091940705376,
+            0.374,
+            0.18275816118589244,
+            0.506
+          ],
+          [
+            0.7396209194070539,
+            0.374,
+            0.1827581611858924,
+            0.506
+          ]
+        ],
+        "grouping_colors": {
+          "1": [
+            0.5529411764705883,
+            0.8274509803921568,
+            0.7803921568627451,
+            1.0
+          ],
+          "2": [
+            1.0,
+            1.0,
+            0.7019607843137254,
+            1.0
+          ],
+          "3": [
+            0.7450980392156863,
+            0.7294117647058823,
+            0.8549019607843137,
+            1.0
+          ],
+          "4": [
+            0.984313725490196,
+            0.5019607843137255,
+            0.4470588235294118,
+            1.0
+          ]
+        },
+        "mib_hatches": {
+          "1": "///"
+        },
+        "plot_overlap_axis_tolerance": 2.3649304069447682e-07
+      }
+    },
+    {
+      "index": 259,
+      "path": "runs\\research_summary\\images\\case_259.png",
+      "stages": [
+        [
+          "control",
+          "Original postprocessing"
+        ],
+        [
+          "oracle_commit",
+          "Group contact (privileged)"
+        ],
+        [
+          "special_global",
+          "Global hybrid + contacts"
+        ]
+      ],
+      "source_tag": "20261024_commit_screen100",
+      "layout": {
+        "axis_limits": [
+          -18.21512580670089,
+          139.84626982538458,
+          -18.21512580670089,
+          349.3992313830807
+        ],
+        "bounding_policy": "union of all three stages plus 5.5% maximum-span margin; no blocks cropped",
+        "axes_bounds": [
+          [
+            0.11973127643770512,
+            0.374,
+            0.13053744712458967,
+            0.506
+          ],
+          [
+            0.4427312764377051,
+            0.374,
+            0.13053744712458976,
+            0.506
+          ],
+          [
+            0.7657312764377052,
+            0.374,
+            0.1305374471245897,
+            0.506
+          ]
+        ],
+        "grouping_colors": {
+          "1": [
+            0.5529411764705883,
+            0.8274509803921568,
+            0.7803921568627451,
+            1.0
+          ],
+          "2": [
+            1.0,
+            1.0,
+            0.7019607843137254,
+            1.0
+          ],
+          "3": [
+            0.7450980392156863,
+            0.7294117647058823,
+            0.8549019607843137,
+            1.0
+          ],
+          "4": [
+            0.984313725490196,
+            0.5019607843137255,
+            0.4470588235294118,
+            1.0
+          ]
+        },
+        "mib_hatches": {
+          "1": "///"
+        },
+        "plot_overlap_axis_tolerance": 3.311841055763798e-07
+      }
+    },
+    {
+      "index": 368,
+      "path": "runs\\research_summary\\images\\case_368.png",
+      "stages": [
+        [
+          "draft",
+          "Full model draft"
+        ],
+        [
+          "control",
+          "Original postprocessing"
+        ],
+        [
+          "reference_hybrid",
+          "Reference hybrid (privileged)"
+        ]
+      ],
+      "source_tag": "20261024_reference_information_gate5",
+      "layout": {
+        "axis_limits": [
+          -5.079964569486329,
+          77.99026802312466,
+          -5.079964569486329,
+          97.44295674196502
+        ],
+        "bounding_policy": "union of all three stages plus 5.5% maximum-span margin; no blocks cropped",
+        "axes_bounds": [
+          [
+            0.06200251664454022,
+            0.374,
+            0.24599496671091953,
+            0.506
+          ],
+          [
+            0.3850025166445402,
+            0.374,
+            0.24599496671091947,
+            0.506
+          ],
+          [
+            0.7080025166445403,
+            0.374,
+            0.24599496671091958,
+            0.506
+          ]
+        ],
+        "grouping_colors": {
+          "1": [
+            0.5529411764705883,
+            0.8274509803921568,
+            0.7803921568627451,
+            1.0
+          ],
+          "2": [
+            1.0,
+            1.0,
+            0.7019607843137254,
+            1.0
+          ],
+          "3": [
+            0.7450980392156863,
+            0.7294117647058823,
+            0.8549019607843137,
+            1.0
+          ],
+          "4": [
+            0.984313725490196,
+            0.5019607843137255,
+            0.4470588235294118,
+            1.0
+          ]
+        },
+        "mib_hatches": {
+          "1": "///"
+        },
+        "plot_overlap_axis_tolerance": 9.23629921724787e-08
+      }
+    },
+    {
+      "index": 366,
+      "path": "runs\\research_summary\\images\\case_366.png",
+      "stages": [
+        [
+          "draft",
+          "Full model draft"
+        ],
+        [
+          "control",
+          "Original postprocessing"
+        ],
+        [
+          "oracle_hybrid",
+          "Frozen hybrid regression"
+        ]
+      ],
+      "source_tag": "20261024_global_information_confirm400",
+      "layout": {
+        "axis_limits": [
+          -17.380753209352335,
+          121.90352683321173,
+          -17.380753209352335,
+          333.3944479248493
+        ],
+        "bounding_policy": "union of all three stages plus 5.5% maximum-span margin; no blocks cropped",
+        "axes_bounds": [
+          [
+            0.12472392106940285,
+            0.374,
+            0.12055215786119426,
+            0.506
+          ],
+          [
+            0.44772392106940284,
+            0.374,
+            0.12055215786119422,
+            0.506
+          ],
+          [
+            0.770723921069403,
+            0.374,
+            0.12055215786119422,
+            0.506
+          ]
+        ],
+        "grouping_colors": {
+          "1": [
+            0.5529411764705883,
+            0.8274509803921568,
+            0.7803921568627451,
+            1.0
+          ],
+          "2": [
+            1.0,
+            1.0,
+            0.7019607843137254,
+            1.0
+          ],
+          "3": [
+            0.7450980392156863,
+            0.7294117647058823,
+            0.8549019607843137,
+            1.0
+          ]
+        },
+        "mib_hatches": {
+          "1": "///"
+        },
+        "plot_overlap_axis_tolerance": 3.16013694715497e-07
+      }
+    },
+    {
+      "index": 366,
+      "path": "runs\\research_summary\\images\\case_366_shape_structure.png",
+      "stages": [
+        [
+          "oracle_hybrid",
+          "Relations only"
+        ],
+        [
+          "oracle_shape_only",
+          "Aspect ratios only"
+        ],
+        [
+          "oracle_hybrid_shape",
+          "Relations + aspect ratios"
+        ]
+      ],
+      "source_tag": "20261024_shape_structure_gate5_v2",
+      "layout": {
+        "axis_limits": [
+          -17.12923208101449,
+          121.65200570487389,
+          -12.556120656690037,
+          333.14292679651146
+        ],
+        "bounding_policy": "union of all three stages plus 5.5% maximum-span margin; no blocks cropped",
+        "axes_bounds": [
+          [
+            0.12405973403426927,
+            0.374,
+            0.12188053193146138,
+            0.506
+          ],
+          [
+            0.44705973403426924,
+            0.374,
+            0.12188053193146131,
+            0.506
+          ],
+          [
+            0.7700597340342694,
+            0.374,
+            0.12188053193146142,
+            0.506
+          ]
+        ],
+        "grouping_colors": {
+          "1": [
+            0.5529411764705883,
+            0.8274509803921568,
+            0.7803921568627451,
+            1.0
+          ],
+          "2": [
+            1.0,
+            1.0,
+            0.7019607843137254,
+            1.0
+          ],
+          "3": [
+            0.7450980392156863,
+            0.7294117647058823,
+            0.8549019607843137,
+            1.0
+          ]
+        },
+        "mib_hatches": {
+          "1": "///"
+        },
+        "plot_overlap_axis_tolerance": 3.1144058329117254e-07
+      }
+    }
+  ],
+  "weighted_Q_excess_decomposition": {
+    "control": {
+      "positive_hpwl_half": 0.0050080260031524155,
+      "positive_area_half": 0.00826354842129848,
+      "soft_exponential": 0.015116657113585723,
+      "geometry_soft_interaction": 0.00031756815613786756,
+      "max_identity_error": 3.129007469793166e-16
+    },
+    "oracle_hybrid": {
+      "positive_hpwl_half": 0.004370015958759457,
+      "positive_area_half": 0.00676158549253057,
+      "soft_exponential": 0.015533964453435956,
+      "geometry_soft_interaction": 0.0003434431319296975,
+      "max_identity_error": 2.920840652675949e-16
+    }
+  },
+  "worst_confirmation_case": 366,
+  "gallery_selection": "four mechanism/source cases plus the largest positive Q difference in frozen400; illustrations, not tuning",
+  "research_solver_outputs": 2840,
+  "timing_verification_outputs": 5,
+  "new_solver_calls_in_audit": 0,
+  "trained_models": 0,
+  "train_teacher_labels_generated": 0,
+  "sealed_test_read": false,
+  "environment": {
+    "python": "3.10.22 | packaged by conda-forge | (main, Oct  6 2026, 22:57:13) [MSC v.1944 64 bit (AMD64)]",
+    "torch": "2.7.1+cu128",
+    "scipy": "1.15.3",
+    "clarabel": "0.11.1",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "completed_utc": "2026-10-24T01:30:41.203252+00:00",
+  "limitations": [
+    "All Q values are neutral-runtime local MIB-derived development diagnostics.",
+    "Auxiliary witness structures are privileged annotations, not model predictions or upper bounds.",
+    "Original research latency is v1 recorded solve-stage; shared input preparation and offline witness cost excluded. The five-case v2 accounting repair does not retroactively alter old records.",
+    "Fixed-shape chain area is only a lower bound under that shape and graph; not a Q bound or a bound with variable shapes."
+  ]
+}

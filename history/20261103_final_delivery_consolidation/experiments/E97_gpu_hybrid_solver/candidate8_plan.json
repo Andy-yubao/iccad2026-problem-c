@@ -1,0 +1,108 @@
+{
+  "candidate": 8,
+  "status": "registered_before_preflight",
+  "name": "weighted_public_geometry_task",
+  "hypothesis": "C7 optimization works but imitation reduces teacher coordinate error without improving raw overlap/corridor failures. Train the same conditioned model for public geometric feasibility plus public quality, retaining teacher intent. Coefficients fixed from one pre-registered train500 local-gradient calibration; public count weighting matches official weighting emphasis.",
+  "model": "Exactly C7 normalized_geometry.DeploymentModel, 1974355 trainable adapter params, frozen C1 L/F. No new NN input fields, relation heads, CPU solver strength, or inference operations.",
+  "source_checkpoint": "experiments/E97_gpu_hybrid_solver/runs/20261102_candidate7_normalized_geometry_seed0/checkpoints/best.pt",
+  "source_sha256": "ac003467665ac78dab540f03117c77c86627b5340854e2cfafba642be8504a51",
+  "initialization": "Strictly load C7 unique own-Loss best including learned head.3 and normalization; do not reinitialize/zero. Fresh AdamW and seed0/order/scheduler; objective migration, not ordinary resume.",
+  "data": "v5 frozen first16000 train and same dev_monitor500; train_monitor500 reuse train labels; source has inherited32k exposure",
+  "teacher": {
+    "method": "Read-only reuse completed16500 public-solver teacher, no generation",
+    "inputs": "public specs/connectivity/current frozen NN draft only, no free reference geometry or official score denominators",
+    "labels": "center/log-aspect of final public-solver geometry; stored only as supervision, never network input",
+    "usable": "strict public hard-legal, finite, not row_control fallback; all members retained, fallback labels carry zero imitation weight",
+    "panel": "train16000+dev_monitor500 only; no full dev2000 or test teacher generation",
+    "workers": 4,
+    "worker_torch_threads": 1,
+    "solver_threads": 2,
+    "wall_cap_seconds": 5400
+  },
+  "loss": {
+    "total": "exp((n-120)/12)/0.12578465955104443 * (teacher_imitation + alpha*physics + gamma*corridor + beta*public_quality)",
+    "weights": {
+      "teacher": 1.0,
+      "physics": 0.5392561010352398,
+      "corridor": 0.1320398351856648,
+      "quality": 0.12665827536621818
+    },
+    "teacher": "Exactly C7/C1 center1+shape.25+near-relative.25, teacher usable mask retained for imitation.",
+    "physics": "Exact pair intersection/public area + squared minimal translation depth/mean sqrt(area), summed unordered pairs/valid N + .25 public boundary SmoothL1(beta.1) + .1 compatible public MIB log-WH MSE. Mutable unordered pairs only, all public inputs.",
+    "corridor": "log1p(mean squared public-anchor path deficit + .25 worst squared deficit); fixed16 native-mode0 per-axis max path relaxations. Discrete edge choices have ordinary piecewise gradients, no straight-through estimator.",
+    "public_quality": ".5*log1p(actual bbox/public total area)+.5*log1p(exact all-net L1 wire/(public net weight*sqrt(public area))). No reference denominator or free reference target.",
+    "count_weight": "Public n weighting exp((n-120)/12), normalized by fixed first16k mean0.12578465955104443. Sampler/order/batch unchanged; same weighted per-case total arithmetic mean used for backward/train500/dev500/best/LR/early-stop.",
+    "calibration": "candidate8_calibration_plan.json committed formula before one train_monitor500 pass, no optimizer/solver/dev/Q calls; fixed projected local-state gradient median shares physics1, corridor.5, quality.1. Weighted medians use same public count weights, positive-gradient subset only for coefficient identification; no members removed from Loss.",
+    "state_gradient_caveat": "Balances local-state gradient scales, not a guarantee of parameter-gradient balance or solution quality."
+  },
+  "optimization": {
+    "batch_size": 32,
+    "precision": "FP32 no AMP/TF32",
+    "optimizer": "AdamW",
+    "weight_decay": 0.0003,
+    "clip_norm": 1.0,
+    "seed": 0,
+    "lr_levels": [
+      0.00025,
+      0.0001,
+      5e-05,
+      2e-05
+    ],
+    "protection_epochs": 0,
+    "baseline_epoch0": true,
+    "lr_bad_rounds": 3,
+    "min_delta": "max(1e-5,abs(best)*.001)",
+    "lowest_wait_epochs": 2,
+    "max_epochs": 200,
+    "max_training_seconds": 7200,
+    "no_old9872step_cap": true
+  },
+  "engine": "Same batch32 FP32 CUDA graph and guarded AdamW; full original connectivity and ports pass to Loss only, network_inputs(g) filters strictly to LEGACY compressed graph. Real updates/restores and port isolation checked on original5 before start. Per-epoch original5 eval-only activation logs retained; do not drive best/LR/early-stop.",
+  "terminal": "Unique own-Loss best once original dynamic-native slim3 full single-case dev500, new raw2000, same100 fourstage gallery. If best remains epoch0, verify exact C7 source model and reuse identical completed C7 terminal/raw/gallery, no repeated solve; no adapter pruning because C7 head is learned. Source C7 control reused otherwise.",
+  "caveats": [
+    "Teacher imitation can misalign final Q; new public objective is still a proxy and all row fallbacks stay in full score.",
+    "Count weighting intentionally emphasizes high-N like official Q; all members and hard legality remain, no batch/split resampling.",
+    "Corridor sixteen-step fixed-shape pressure is not a global feasibility certificate; edge selection is nondifferentiable.",
+    "Full ports are Loss-only; NN compressed-port representation and deployment latency path unchanged.",
+    "Median gradient coefficient identification on exposed train500 is adaptive development; not independent generalization.",
+    "Nominal-area/teacher tolerance mismatch and9train target aspect>5 remain."
+  ],
+  "preflight_ids": [
+    1683,
+    10027,
+    5474,
+    10140,
+    15001
+  ],
+  "training_start_gate": "Completed C7 full result/gallery/activation review, one train500 pre-registered gradient calibration complete with frozen positive finite coefficients, same5 real Adam/graph/resume/finite/frozen-C1 and strict C7 warm-start/port-isolation checks passed",
+  "formal_training_started": false,
+  "test_read": false,
+  "revision": "v1",
+  "control": "Completed C7 unique own-Loss best dev500, same inference class/numerical solver. Stage0 exactly C7; reuse existing control, no repeat.",
+  "calibration": {
+    "path": "runs/20261102_candidate8_calibration/weights.json",
+    "sha256": "031a5cb9bcdcc78da365b8cd39f5c724f5634da4c5c63771802f904c6ac8de2b",
+    "details": {
+      "physics": {
+        "active_count": 500,
+        "weighted_median_teacher_gradient": 0.0647464245557785,
+        "weighted_median_component_gradient": 0.12006618827581406,
+        "registered_share": 1.0
+      },
+      "corridor": {
+        "active_count": 396,
+        "weighted_median_teacher_gradient": 0.06487564742565155,
+        "weighted_median_component_gradient": 0.24566695094108582,
+        "registered_share": 0.5
+      },
+      "quality": {
+        "active_count": 500,
+        "weighted_median_teacher_gradient": 0.0647464245557785,
+        "weighted_median_component_gradient": 0.05111898481845856,
+        "registered_share": 0.1
+      }
+    },
+    "count_normalizer": 0.12578465955104443
+  },
+  "final_budget_rule": "This is the eighth and last authorized formal candidate. No further candidates/runs/sweeps. Existing registered C8 training+unique evaluation may finish within original global deadline; then report outcome and close heartbeat. Global UTC2026-11-02T02:58:12 wall deadline always takes priority."
+}

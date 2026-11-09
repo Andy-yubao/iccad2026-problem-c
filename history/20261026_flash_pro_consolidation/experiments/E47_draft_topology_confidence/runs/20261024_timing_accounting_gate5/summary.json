@@ -1,0 +1,28 @@
+{
+  "finished": true,
+  "stage": "gate",
+  "variants": {
+    "control": {
+      "count": 5,
+      "hard_legal": 5,
+      "weighted_Q": 1.0065783905437147,
+      "mean_Q": 1.3736607991411205,
+      "p95_Q": 1.8946990456940078,
+      "CVaR95_Q": 1.927279344928993,
+      "max_Q": 1.927279344928993,
+      "complete_seconds_mean": 0.9129016399849206,
+      "complete_seconds_p95": 2.6765204200288277,
+      "complete_seconds_max": 3.178777900058776,
+      "over_2s": 1,
+      "area_ratio_mean": 1.175790616270152,
+      "hpwl_gap_mean": 0.32439173383156683,
+      "area_gap_mean": 0.19203132757755303,
+      "soft_violations_total": 8,
+      "postprocess_seconds_mean": 0.8624249799875543
+    }
+  },
+  "comparisons": {},
+  "cumulative_pipeline_seconds": 6.513039799989201,
+  "time_accounting": "v2: public problem preparation + CPU features/inference + annotation conversion/guidance + optimizer; offline witness generation/loading excluded; no learned head exists",
+  "test_read": false
+}

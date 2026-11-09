@@ -1,0 +1,93 @@
+{
+  "status": "complete",
+  "arm": "all",
+  "stage": "complete",
+  "updated_utc": "2026-10-28T10:05:52.447569+00:00",
+  "controller_pid": 41176,
+  "child_pid": null,
+  "outputs": {
+    "full_ports": "runs\\20261028_full_ports_taskloss_v1_seed0"
+  },
+  "events": [
+    {
+      "status": "running",
+      "arm": "full_ports",
+      "stage": "train",
+      "utc": "2026-10-28T06:13:12.689706+00:00"
+    },
+    {
+      "status": "stopped",
+      "arm": "full_ports",
+      "stage": "train",
+      "utc": "2026-10-28T07:10:18.978938+00:00"
+    },
+    {
+      "status": "running",
+      "arm": "full_ports",
+      "stage": "train",
+      "utc": "2026-10-28T07:35:20.978890+00:00"
+    },
+    {
+      "status": "stopped",
+      "arm": "full_ports",
+      "stage": "train",
+      "utc": "2026-10-28T08:30:08.920558+00:00"
+    },
+    {
+      "status": "running",
+      "arm": "full_ports",
+      "stage": "train",
+      "utc": "2026-10-28T09:18:34.174467+00:00"
+    },
+    {
+      "status": "stage_complete",
+      "arm": "full_ports",
+      "stage": "train",
+      "utc": "2026-10-28T10:00:44.491680+00:00"
+    },
+    {
+      "status": "running",
+      "arm": "full_ports",
+      "stage": "final",
+      "utc": "2026-10-28T10:00:44.526870+00:00"
+    },
+    {
+      "status": "stage_complete",
+      "arm": "full_ports",
+      "stage": "final",
+      "utc": "2026-10-28T10:04:47.654260+00:00"
+    },
+    {
+      "status": "running",
+      "arm": "full_ports",
+      "stage": "draft100",
+      "utc": "2026-10-28T10:04:47.666028+00:00"
+    },
+    {
+      "status": "stage_complete",
+      "arm": "full_ports",
+      "stage": "draft100",
+      "utc": "2026-10-28T10:05:18.861887+00:00"
+    },
+    {
+      "status": "running",
+      "arm": "all",
+      "stage": "report",
+      "utc": "2026-10-28T10:05:18.880603+00:00"
+    },
+    {
+      "status": "complete",
+      "arm": "all",
+      "stage": "complete",
+      "utc": "2026-10-28T10:05:52.447569+00:00"
+    }
+  ],
+  "formal_seeds": [
+    0
+  ],
+  "automation_enabled": false,
+  "test_read": false,
+  "report": "runs/review.md",
+  "baseline_promoted": false,
+  "next_action": "User review; no additional runs, seeds, automation, or experiment continuation"
+}

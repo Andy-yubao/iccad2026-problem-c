@@ -1,0 +1,23 @@
+{
+  "method": "Within-epoch adjacent100-step log intervals, median; excludes epoch monitors and cold loading, includes periodic I/O",
+  "E91": {
+    "steps": 29800,
+    "median_seconds_per_step": 0.20032170499995117,
+    "recent_median": 0.2017059125000378,
+    "recent_p10_p90": [
+      0.19681623509997734,
+      0.2316928496003966
+    ]
+  },
+  "E90": {
+    "steps": 7000,
+    "median_seconds_per_step": 0.19955851099977734,
+    "recent_median": 0.19987077350000618
+  },
+  "E74": {
+    "steps": 42338,
+    "median_seconds_per_step": 0.16175032400002237,
+    "recent_median": 0.16108309100003682
+  },
+  "limitations": "Historical machine load/power differs. E74 has different old Loss and frozen graph-local layers; compare per-step, not per-epoch or GPU percent. Values recorded before performance probes."
+}

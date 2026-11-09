@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "checkpoint_sha256": "0b678382d5b52e38f291d65696f6ee4bf15a8f70690881ac608f353d2c08d743",
+  "checkpoint_step": 14800,
+  "unique_real_train_cases": 5,
+  "ids": [
+    1683,
+    10027,
+    5474,
+    18140,
+    25001
+  ],
+  "device": "CPU only",
+  "different_batch_sizes_reorder_and_out_reuse_bit_exact": true,
+  "train_monitor_loss_and_state_gradient_bit_exact": true,
+  "public_model_inputs_independent_of_labels": true,
+  "public_loss_terms_independent_of_labels": true,
+  "scheduler_replayed_from_saved_history": true,
+  "all_Adam_LR_matches_scheduler": true,
+  "core_files_byte_equal_E90": {
+    "model.py": true,
+    "features.py": true,
+    "batches.py": true,
+    "simple_loss.py": true,
+    "group_tree.py": true,
+    "loss.py": true,
+    "ops.py": true
+  },
+  "model_byte_equal_E74": true,
+  "frozen_snapshot_case_loss": 0.4388205111026764,
+  "formal_training_or_checkpoint_mutated": false,
+  "neural_parameter_updates": 0,
+  "seconds": 9.34085659997072,
+  "test_read": false
+}

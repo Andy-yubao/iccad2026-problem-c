@@ -1,0 +1,8 @@
+{
+  "attempt": 1,
+  "error": "CUDA operation not permitted during stream capture",
+  "location": "losses.py: boundary torch.tensor([1,2,4,8], device=cuda)",
+  "cause": "CPU-to-CUDA constant allocation inside per-step Loss",
+  "resolution": "cache the identical GPU constant during warmup; do not change Loss formula",
+  "formal_training_started": false
+}

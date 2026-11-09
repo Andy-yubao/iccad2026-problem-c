@@ -1,0 +1,20 @@
+{
+  "revision":"E99.R23.frozen_R15_complete_dev500_acceptance.v1",
+  "stage":"Freeze one retained training-developed candidate before any new dev evaluation; no coefficient sweep or candidate choice on this dev run.",
+  "selection":"R15 attraction_equal_slope remained lowest complete train500 Q1.010848448528 after R16-R22 controls. Keep its exact source and parameters; rejected newer operators are not applied. No checkpoint reselection.",
+  "configuration":{"iterations":20,"step_size":0.5,"step_fraction":0.05,"total_fraction":0.4,"attraction_range":0.5,"attraction_strength":1.0,"repulsion_strength":1.0,"shape_step_size":0.5,"shape_step_fraction":0.03,"shape_total_fraction":0.5,"exclude_exhausted":true,"area_attraction":false},
+  "checkpoint":"experiments/E97_gpu_hybrid_solver/runs/20261102_candidate3_clearance_seed0/checkpoints/best.pt",
+  "checkpoint_sha256":"d784e96f46decf7a487c25bde2ab16db8cf6ebae1bc0632434cc5e2f78173fce",
+  "pipeline":"Resident frozen C3 batch1 GPU, fresh public inputs and features for every request -> exact frozen R15 AR -> unchanged original full planner/config -> necessary public-only independent hard check. Official evaluator and scoring references only after timer.",
+  "timer":"Start before public tensor extraction/cloning, locked/preplaced specification masking and public mean-area transform from a resident immutable shard; include C3 feature construction, padding,H2D,inference,D2H,AR,all planner/fallback,necessary hard checks and final CUDA synchronization. No batched amortization. Record shard disk-loading/identity validation outside timer separately; model load/capture and native warmup separately.",
+  "public_boundary":"Public-only shard input builder copied from datasets.public_member_inputs and verified on5 training cases. It indexes only fields0..3, locked WH and preplaced XY in field5; never free WH/XY,labels or score denominators. Role guard permits train/dev only. Test sealed.",
+  "preflight":{"panel":"train_monitor500","indices":[0,4,43,95,135],"checks":"fresh resident public tuple exact vs existing public_member_inputs; masked specs; frozen GPU eager/capture exact; draft and AR prefix exact vs saved current-best training evidence; full end-to-end official/independent legality; model state unchanged. One four-stage preview from these same5, no extra solver cases."},
+  "formal_panel":"v5.dev_monitor500 all500 original frozen order; no preflight records reused because train/dev disjoint; no excluded bad/slow cases",
+  "acceptance":{"all500_hard_legal":true,"weighted_neutral_Q_less_than":1.01,"each_complete_seconds_less_than":0.25,"cold_separate":true},
+  "gallery":{"indices":"dev_monitor5000..99 unchanged original100","stages":["raw C3 draft","previous retained V3 AR replayed on same fresh raw draft","current retained R15 strong AR draft","current full final layout"],"previous_config_source":"experiments/E99_attraction_repulsion/runs/20261102_deform_v3_dev100/config.json","binding":"one prior V3 whole-version configuration fixed before this dev run; no per-case mixing or dev selection. Replay cheap previous AR after all timed solves, no extra planner controls.","render":"shared visualization.layouts,common IDs/scales,scores hidden,no scoring controls,no automatic UI; sequential render after timed run,source/coordinate hashes and resumable images"},
+  "execution":"Single numerical OS lock1 math thread, no concurrent numerical jobs during complete timers. Source-bound registration/snapshot,atomic percase saves,STOP boundaries,explicit matching resume only; failures preserved and diagnosed,no automatic retries.",
+  "preflight_output":"runs/research/20261103_R23_complete_preflight5",
+  "output":"runs/research/20261103_R23_frozen_R15_complete_dev500",
+  "after":"Audit complete latency/quality and four-stage100 gallery; do not mark goal complete unless strict acceptance satisfied, then keep optimizing as authorized. New mechanisms/parameters return to training sources; do not sweep dev from this acceptance.",
+  "test_read":false,"new_training":false
+}

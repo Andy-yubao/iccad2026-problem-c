@@ -1,0 +1,85 @@
+{
+  "status": "complete",
+  "checks": {
+    "best51_eval_gradient": {
+      "checkpoint_sha256": "12878108e9a58b8c195b314ba6586686c2a6e2796c1f4b6443e102b4db4224a6",
+      "step": 25500,
+      "gradient_Dropout_active": false,
+      "arms": {
+        "full_G": {
+          "mean_area_delta": 0.0002214056143198903,
+          "area_improved_cases": 1,
+          "area_regressed_cases": 4,
+          "per_case_area_deltas": [
+            7.25209348937661e-05,
+            -4.649689129929829e-05,
+            0.00023833103927375227,
+            0.0003749302217855646,
+            0.00046774276694566685
+          ],
+          "gradient_norm_before_clip": 4.90483283996582
+        },
+        "without_center": {
+          "mean_area_delta": -0.0005572635786828372,
+          "area_improved_cases": 3,
+          "area_regressed_cases": 2,
+          "per_case_area_deltas": [
+            -0.0010712588887684601,
+            -0.0016914239012231422,
+            0.00022138975555514168,
+            -0.0002498332018322433,
+            4.808342854517589e-06
+          ],
+          "gradient_norm_before_clip": 1.3134056329727173
+        }
+      },
+      "source_unchanged": true
+    },
+    "latest54_train_gradient": {
+      "checkpoint_sha256": "94abb24266e61c681ed33a44bc2a8f5a819a7678bb23963145af0ec8baf41fcb",
+      "step": 27000,
+      "gradient_Dropout_active": true,
+      "arms": {
+        "full_G": {
+          "mean_area_delta": 0.000205113668269543,
+          "area_improved_cases": 2,
+          "area_regressed_cases": 3,
+          "per_case_area_deltas": [
+            0.00016028365487323962,
+            -0.00027792334336451674,
+            -0.00016686605853730163,
+            0.0006934165808673079,
+            0.0006166575075089858
+          ],
+          "gradient_norm_before_clip": 4.55982780456543
+        },
+        "without_center": {
+          "mean_area_delta": -0.0005724486574752337,
+          "area_improved_cases": 3,
+          "area_regressed_cases": 2,
+          "per_case_area_deltas": [
+            -0.0007435890364346949,
+            -0.0017572523764574355,
+            -0.0007009700067343375,
+            0.0001335592072287048,
+            0.00020600892502159462
+          ],
+          "gradient_norm_before_clip": 1.2823699712753296
+        }
+      },
+      "source_unchanged": true
+    }
+  },
+  "same_training_indices": [
+    1683,
+    10027,
+    5474,
+    9793,
+    1814
+  ],
+  "unique_cases": 5,
+  "scope": "Focused temporal/stochastic controls, not additional seeds or new training candidates",
+  "elapsed_seconds": 30.511731600010535,
+  "test_read": false,
+  "formal_training_runs": 0
+}

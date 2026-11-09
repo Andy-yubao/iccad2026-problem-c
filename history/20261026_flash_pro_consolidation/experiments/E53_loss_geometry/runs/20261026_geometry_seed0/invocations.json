@@ -1,0 +1,57 @@
+[
+  {
+    "argv": [
+      "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+      "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E53_loss_geometry\\train.py",
+      "--arm",
+      "geometry",
+      "--seed",
+      "0",
+      "--output",
+      "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E53_loss_geometry\\runs\\20261026_geometry_seed0",
+      "--device",
+      "cuda",
+      "--batch-size",
+      "32",
+      "--engine",
+      "cuda_graph",
+      "--max-hours",
+      "2.0",
+      "--max-epochs",
+      "200",
+      "--scheduler-start-epoch",
+      "15"
+    ],
+    "resume": false,
+    "prior_seconds": 0.0,
+    "started_utc": "2026-10-25T16:20:11Z"
+  },
+  {
+    "argv": [
+      "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+      "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E53_loss_geometry\\train.py",
+      "--output",
+      ".\\experiments\\E53_loss_geometry\\runs\\20261026_geometry_seed0",
+      "--arm",
+      "geometry",
+      "--seed",
+      "0",
+      "--device",
+      "cuda",
+      "--batch-size",
+      "32",
+      "--engine",
+      "cuda_graph",
+      "--max-hours",
+      "2",
+      "--max-epochs",
+      "200",
+      "--scheduler-start-epoch",
+      "15",
+      "--resume"
+    ],
+    "resume": true,
+    "prior_seconds": 447.9163032000006,
+    "started_utc": "2026-10-26T00:12:57Z"
+  }
+]

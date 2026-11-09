@@ -1,0 +1,43 @@
+Verified archived cache loaded: train 32000 cases
+{
+  "status": "error",
+  "test_read": false,
+  "schedule": {
+    "P_first_drop_epoch": 18,
+    "P_switch_epoch": 21,
+    "F_drops": [
+      3,
+      6
+    ],
+    "F_stop_epoch": 8,
+    "tiny_improvement_does_not_reset": true
+  },
+  "initial_loss": {
+    "P": {
+      "mean": 13.364398002624512,
+      "max": 18.573148727416992
+    },
+    "F": {
+      "mean": 16.069229125976562,
+      "max": 23.101821899414062
+    }
+  },
+  "error": "AssertionError()",
+  "elapsed_seconds": 92.82721460005268
+Traceback (most recent call last):
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\runpy.py", line 86, in _run_code
+}
+    exec(code, run_globals)
+  File "E:\project\ICCAD\2026\problemC\experiments\E92_two_stage_placer\preflight.py", line 167, in <module>
+    if __name__=='__main__':main()
+  File "E:\project\ICCAD\2026\problemC\experiments\E92_two_stage_placer\preflight.py", line 131, in main
+    same(uninterrupted,resumed)
+  File "E:\project\ICCAD\2026\problemC\experiments\E92_two_stage_placer\preflight.py", line 25, in same
+    for key in a:same(a[key],b[key])
+  File "E:\project\ICCAD\2026\problemC\experiments\E92_two_stage_placer\preflight.py", line 25, in same
+    for key in a:same(a[key],b[key])
+  File "E:\project\ICCAD\2026\problemC\experiments\E92_two_stage_placer\preflight.py", line 29, in same
+    else:assert a==b
+AssertionError

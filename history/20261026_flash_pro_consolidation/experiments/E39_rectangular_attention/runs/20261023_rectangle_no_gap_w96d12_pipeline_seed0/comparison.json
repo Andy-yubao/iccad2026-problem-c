@@ -1,0 +1,139 @@
+{
+  "arms": {
+    "rectangle_no_gap": {
+      "status": "early_stop",
+      "finished": true,
+      "epoch": 51,
+      "step": 25500,
+      "best_epoch": 48,
+      "best_proxy": 0.4885559997558594,
+      "elapsed_seconds": 5183.3695283000125,
+      "parameters": 1471539,
+      "best_dev": {
+        "total": 0.37597130465507506,
+        "mse": 0.0564786112010479,
+        "center_mse": 0.0020868068281561136,
+        "shape_mse": 0.1768880889415741,
+        "center_local": 0.19146720492839814,
+        "shape": 0.1768880889415741,
+        "relative_local": 0.24326720643043517,
+        "overlap": 0.0598525604903698,
+        "contact": 0.09264995509386062,
+        "boundary": 0.007837634544819594,
+        "mib": 0.012408621862530708,
+        "bbox": 0.00013746815168997272,
+        "local": 0.29650602865219117,
+        "geometry": 0.3759713020324707,
+        "overlap_area": 0.07754161310195923,
+        "crowding": 0.005528846595436334,
+        "void": 0.13387466990947725,
+        "compactness": 0.0012813433734700083,
+        "occupancy": 0.11258469146490097,
+        "repair": 0.4885559997558594,
+        "supervision": 0.29650602865219117,
+        "quality_proxy": 0.3759713020324707,
+        "count": 500,
+        "selection_proxy": 0.4885559997558594,
+        "raw_hard_legal": 0,
+        "raw_hard_legal_rate": 0.0,
+        "batched_inference_seconds_per_case": 0.0019906284001190216,
+        "draft_diagnostics": {
+          "overlap_pairs": {
+            "mean": 78.456,
+            "p95": 130.04999999999995,
+            "max": 145.0
+          },
+          "overlap_area_fraction": {
+            "mean": 0.07754158442449458,
+            "p95": 0.12267218541190059,
+            "max": 0.15916142271521344
+          },
+          "penetration_squared_per_block": {
+            "mean": 0.029222157753257223,
+            "p95": 0.05604020058600138,
+            "max": 0.07922231232347228
+          },
+          "max_local_penetration": {
+            "mean": 0.506874057486717,
+            "p95": 0.750576191711365,
+            "max": 0.8892047032306241
+          },
+          "largest_conflict_cluster": {
+            "mean": 56.716,
+            "p95": 98.0,
+            "max": 110.0
+          },
+          "largest_conflict_cluster_fraction": {
+            "mean": 0.813237988617962,
+            "p95": 0.9473958333333332,
+            "max": 1.0
+          }
+        }
+      },
+      "best_train": {
+        "total": 0.2843754961490631,
+        "mse": 0.04826467087864876,
+        "center_mse": 0.001139046460390091,
+        "shape_mse": 0.152613040804863,
+        "center_local": 0.14818973863124849,
+        "shape": 0.152613040804863,
+        "relative_local": 0.19201012980937956,
+        "overlap": 0.04916287544369698,
+        "contact": 0.045278956592082975,
+        "boundary": 0.006491278417408466,
+        "mib": 0.011746079944074153,
+        "bbox": 0.00011624831426888704,
+        "local": 0.2343455331325531,
+        "geometry": 0.2843755066394806,
+        "overlap_area": 0.071002525806427,
+        "crowding": 0.003599450033158064,
+        "void": 0.12873959279060362,
+        "compactness": 0.0012022436708211898,
+        "occupancy": 0.10426762264966964,
+        "repair": 0.38864312052726746,
+        "supervision": 0.2343455331325531,
+        "quality_proxy": 0.2843755066394806,
+        "count": 500,
+        "selection_proxy": 0.38864312052726746,
+        "raw_hard_legal": 0,
+        "raw_hard_legal_rate": 0.0,
+        "batched_inference_seconds_per_case": 0.001961525600403547,
+        "draft_diagnostics": {
+          "overlap_pairs": {
+            "mean": 78.99,
+            "p95": 132.04999999999995,
+            "max": 151.0
+          },
+          "overlap_area_fraction": {
+            "mean": 0.07100252996783941,
+            "p95": 0.10779404674288576,
+            "max": 0.13323335870039266
+          },
+          "penetration_squared_per_block": {
+            "mean": 0.024302046179084307,
+            "p95": 0.04652483306860597,
+            "max": 0.06432164661518186
+          },
+          "max_local_penetration": {
+            "mean": 0.4631991325547366,
+            "p95": 0.7356569100114012,
+            "max": 0.9208074243819837
+          },
+          "largest_conflict_cluster": {
+            "mean": 56.756,
+            "p95": 98.0,
+            "max": 114.0
+          },
+          "largest_conflict_cluster_fraction": {
+            "mean": 0.8135236323541251,
+            "p95": 0.9501470588235292,
+            "max": 1.0
+          }
+        }
+      }
+    }
+  },
+  "test_read": false,
+  "scope": "Adaptive development; rank by fixed raw validation proxy, report diagnostic and deployment tradeoffs separately",
+  "fixed_Q_or_runtime_acceptance_threshold": null
+}

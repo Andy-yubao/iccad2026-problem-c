@@ -1,0 +1,66 @@
+{
+  "revision": "E99.R16.train500_four_limiting_mechanisms.v1",
+  "stage": "diagnostic trajectories after completed R15 original-planner controls",
+  "panel": "v5.train_monitor500 in original frozen order; cached identical C3/public inputs from completed full control",
+  "controls": [
+    {
+      "name": "local_step_limits",
+      "purpose": "R15 budget_gate forces/mass/budgets unchanged; independently cap each module own step so one tiny module no longer suppresses all others"
+    },
+    {
+      "name": "double_step_limit",
+      "purpose": "R15 budget_gate with only per-step ceiling5%\u219210%, cumulative40% unchanged; isolate step allowance from global collateral capping"
+    },
+    {
+      "name": "balanced_area_source",
+      "purpose": "R15 bounded_area_source with same harmonic pair factor additionally applied to repulsion, all20-round/5%/40% shape allowances unchanged; preserve matched near-contact slopes under area-scaled pair attraction"
+    },
+    {
+      "name": "longer_relaxation",
+      "purpose": "R15 budget_gate20\u219280 rounds, all5%/40%/shape1.03/1.5 budgets and force coefficients unchanged; test actual use of existing allowed motion rather than increasing total deformation"
+    }
+  ],
+  "amplitude_decision": "Only single-step ceiling doubled in one controlled arm; cumulative center and shape allowance remain unchanged because R15 logs show rare exhaustion. Independent local cap does not claim exact inverse-mass displacement ratio after saturation.",
+  "logs": "For every case/arm/round/module save forces, pair-magnitude sums, degree, raw mass-scaled step, own remaining bound, common scale, actual movement/path, attraction/repulsion shape stress, raw/actual log-shape update, shape path and excluded-budget flag. Save all trajectories once; per-round exact pair-intersection proxy/bbox and final exact union/coverage diagnostics. Serialization and diagnostics outside pure operator timing.",
+  "preflight": {
+    "indices": [
+      0,
+      4,
+      43,
+      95,
+      135
+    ],
+    "checks": "R16 unchanged common-cap budget-gated branch vs frozen R15 budget_gate all history coordinates;3 new arms capture true/false bit exact; all initial-area mobility, path/shape limits, locks and area preservation checks"
+  },
+  "execution": "Single sequential CPU numerical worker,1 math thread, shared research OS lock, STOP at case/arm boundaries, atomic source-bound records, explicit resume missing arms only",
+  "output": "runs/research/20261103_R16_train500_trajectory_audit",
+  "preflight_output": "runs/research/20261103_R16_operator_preflight5",
+  "planner": "Original planner Python files and planner_config.json frozen and identity-checked against original train500 registration; no planner solve in this diagnostic stage",
+  "source_only": "Reference labels/denominators never enter operator, diagnostics or selection. Historicaldev100 read-only audit supports mechanism questions only; all new controls on training sources.",
+  "test_read": false,
+  "new_training": false,
+  "automatic_later_full_solve_launch": false,
+  "base_budgets": {
+    "iterations": 20,
+    "center_step_initial_short_side_fraction": 0.05,
+    "center_total_path_fraction": 0.4,
+    "shape_step_factor": 1.03,
+    "shape_total_factor": 1.5
+  },
+  "per_arm_overrides": {
+    "local_step_limits": {
+      "per_module_limits": true
+    },
+    "double_step_limit": {
+      "step_fraction": 0.1
+    },
+    "balanced_area_source": {
+      "attraction_strength": 1.0,
+      "area_attraction": true,
+      "area_repulsion": true
+    },
+    "longer_relaxation": {
+      "iterations": 80
+    }
+  }
+}

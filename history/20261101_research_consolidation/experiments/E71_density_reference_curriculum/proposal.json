@@ -1,0 +1,40 @@
+{
+  "revision": "E71.density_mild_position_curriculum.v1",
+  "status": "implemented_preflight_required",
+  "reference_read_allowlist": [
+    "position",
+    "shape"
+  ],
+  "weights": {
+    "position": 0.25,
+    "shape": 0.25,
+    "penetration": 1.0,
+    "intersection_area": 1.0,
+    "actual_wirelength": 0.25,
+    "compactness": 0.5,
+    "density": 0.5,
+    "group_connectivity": 0.5,
+    "boundary": 0.25,
+    "mib": 0.1,
+    "parameter_domain": 0.1
+  },
+  "position_schedule": {
+    "epochs1_5": 0.375,
+    "epochs6_15": "cosine decay, endpoint .25 at epoch15",
+    "epochs16_plus": 0.25
+  },
+  "density": {
+    "bands": [
+      4,
+      8
+    ],
+    "basis": "Exact rectangle-integrated cosine moments in actual predicted bbox; non-DC coefficients normalized by public mass A",
+    "aggregation": "Mean of two normalized inverse-spectrum weighted squared coefficient sums",
+    "bbox_derivatives": "Full differentiation through predicted min/max bounds; no detached surrogate gradient",
+    "limitations": "Finite-mode uniformity proxy, not exact void or legality. No 1/B amplitude dilution, but geometric expansion may still improve uniformity and is penalized separately."
+  },
+  "selection": "Current-epoch objective shared by train/backward/dev. Final best, LR and early stop start epoch16, final objective only. Terminal-total diagnostic never selects early checkpoints.",
+  "seed": 0,
+  "training_started": false,
+  "test_read": false
+}

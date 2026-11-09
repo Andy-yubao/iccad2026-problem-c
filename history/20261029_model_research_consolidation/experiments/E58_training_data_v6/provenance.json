@@ -1,0 +1,22 @@
+{
+  "experiment": "E58_training_data_v6",
+  "purpose": "prepare only expanded 64k train data and CPU tensor cache; no model training",
+  "feature_sources": {
+    "features.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+    "batches.py": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92"
+  },
+  "frozen_existing_protocol": {
+    "protocol/derived_workset_v3.json": "dfa55dab012040ef50ec12ce7376e03e8ae8c015d6e9177fa9392ba06e7e1896",
+    "protocol/distillation_workset_v4.json": "4a30f802aa541b3da17d31bfeeead54f4425beb86c69231cfdd367ecc35c4860",
+    "protocol/paths.json": "7a28cd42de0f10809500c43c48836576361e67a72e723f7b32a404186df9b419",
+    "protocol/reference_workset_v5.json": "1409ccf825b9c7cae1097a22e8dc4068e1283d79541c85ce54c5627d0c2b4208",
+    "protocol/split_v1.json": "a1f23edae03194c1155d260415482d892e4cb5ad66170abc93af04aafc8cefbd",
+    "protocol/teacher_archive25000_v1.json": "146f7e5cc16dbea5eae6e2705914f16cb7aee6570b9643d315b9b319a4adbd56",
+    "protocol/teacher_selection_q104_v1.json": "5f895ac96399bf07da5e8a4022b2fb31a40283d1786dcb2c306840ea2e654474",
+    "protocol/workset_v2.json": "b520f75d67d12a00aa4f52953e1b9f3cf4ad1c55f1af67206b4c3bc75e9a5bb3"
+  },
+  "scan_metadata_root": "history/20261020_E25_consolidation/experiments/E16_reference_curriculum/runs/20261019_balanced_v5_seed20261019",
+  "existing_cache": "experiments/E42_joint_regularization/runs/prepared_v5_e10_cache_v1",
+  "MIB_rule": "unchanged E14.mean_area.v1; average public group area; preserve sum within FP32 precision and locked specs; reject incompatibility",
+  "test_payloads_read": false
+}

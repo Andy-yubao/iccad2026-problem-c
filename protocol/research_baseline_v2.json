@@ -1,0 +1,22 @@
+{
+  "registered_date": "2026-11-08",
+  "role": "primary baseline for subsequent layout research",
+  "user_selection": "User selected E114 4+12 sparse supervision because dense per-layer supervision is too slow.",
+  "experiment": "E114_supervision_placement",
+  "arm": "staged",
+  "run": "staged_seed0",
+  "checkpoint": "experiments/E114_supervision_placement/runs/staged_seed0/checkpoints/best.pt",
+  "checkpoint_sha256": "bd6906668cc2584133bb863590825874a951e7c24d8085280b7fd821c13f6937",
+  "best_epoch": 48,
+  "architecture": "64x12 independent graph blocks, shared 64->64->3 head, 612307 parameters",
+  "objective": "0.2*loss(layer4)+0.8*loss(layer12); all layers trained jointly",
+  "dataset_identity": "historical run random40k train36000; original areas/specs, no MIB, all modules predicted",
+  "final_dev_loss": 0.3423073971569538,
+  "mixed_Q_dev500": 1.037635930107653,
+  "training_seconds": 6561.172119900002,
+  "prior_baseline": "protocol/research_baseline_v1.json retained unchanged as historical E109 A identity",
+  "contest_delivery": "E101 original C5 plus original full postprocessing remains unchanged",
+  "future_default": "Fixed random_reference16k subset, unless explicitly overridden; do not change historical weights or resume any run",
+  "new_training_authorized": false,
+  "comparison_limit": "Research baseline choice for cost/quality; not a claim of universal quality superiority or causal architecture result"
+}

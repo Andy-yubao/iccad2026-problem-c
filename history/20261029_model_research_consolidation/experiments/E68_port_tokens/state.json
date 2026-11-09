@@ -1,0 +1,69 @@
+{
+  "status": "complete",
+  "arm": "all",
+  "stage": "complete",
+  "updated_utc": "2026-10-28T05:47:17.214464+00:00",
+  "controller_pid": 32836,
+  "child_pid": null,
+  "outputs": {
+    "full_ports": "runs\\20261028_full_ports_nosummary_v2_seed0"
+  },
+  "events": [
+    {
+      "status": "running",
+      "arm": "full_ports",
+      "stage": "train",
+      "utc": "2026-10-28T04:30:46.863002+00:00"
+    },
+    {
+      "status": "stage_complete",
+      "arm": "full_ports",
+      "stage": "train",
+      "utc": "2026-10-28T05:41:38.855487+00:00"
+    },
+    {
+      "status": "running",
+      "arm": "full_ports",
+      "stage": "final",
+      "utc": "2026-10-28T05:41:38.870573+00:00"
+    },
+    {
+      "status": "stage_complete",
+      "arm": "full_ports",
+      "stage": "final",
+      "utc": "2026-10-28T05:46:10.543951+00:00"
+    },
+    {
+      "status": "running",
+      "arm": "full_ports",
+      "stage": "draft100",
+      "utc": "2026-10-28T05:46:10.560948+00:00"
+    },
+    {
+      "status": "stage_complete",
+      "arm": "full_ports",
+      "stage": "draft100",
+      "utc": "2026-10-28T05:46:42.434755+00:00"
+    },
+    {
+      "status": "running",
+      "arm": "all",
+      "stage": "report",
+      "utc": "2026-10-28T05:46:42.456853+00:00"
+    },
+    {
+      "status": "complete",
+      "arm": "all",
+      "stage": "complete",
+      "utc": "2026-10-28T05:47:17.214464+00:00"
+    }
+  ],
+  "formal_seeds": [
+    0
+  ],
+  "automation_enabled": false,
+  "test_read": false,
+  "report": "runs/review.md",
+  "baseline_promoted": false,
+  "next_action": "User review; no additional runs, seeds, automation, or experiment continuation"
+}

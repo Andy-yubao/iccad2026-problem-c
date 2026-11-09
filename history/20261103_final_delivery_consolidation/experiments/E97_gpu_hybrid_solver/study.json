@@ -1,0 +1,131 @@
+{
+  "status": "closed_candidate_budget_exhausted_goal_unmet",
+  "start_utc": "2026-11-01T14:58:12+00:00",
+  "deadline_utc": "2026-11-02T02:58:12+00:00",
+  "max_wall_seconds": 43200,
+  "includes": [
+    "engineering",
+    "training",
+    "evaluation",
+    "wakeup elapsed time"
+  ],
+  "max_formal_training_candidates": 8,
+  "formal_candidates_started": 8,
+  "charged_active_seconds": 0,
+  "candidate_ledger": [
+    {
+      "candidate": 1,
+      "name": "public_solver_distillation_free_threehead",
+      "status": "complete",
+      "formal_training_started": true,
+      "plan": "candidate1_plan.json",
+      "teacher": "runs/20261101_public_teacher",
+      "output": "runs/20261102_candidate1_distill_seed0",
+      "revision": "v2"
+    },
+    {
+      "candidate": 2,
+      "name": "decoder_native_topology_tail",
+      "status": "complete",
+      "formal_training_started": true,
+      "plan": "candidate2_plan.json",
+      "output": "runs/20261102_candidate2_topology_seed0"
+    },
+    {
+      "candidate": 3,
+      "name": "teacher_axis_physical_clearance",
+      "status": "complete",
+      "formal_training_started": true,
+      "plan": "candidate3_plan.json",
+      "output": "runs/20261102_candidate3_clearance_seed0"
+    },
+    {
+      "candidate": 4,
+      "name": "learned_relation_graph",
+      "status": "complete",
+      "formal_training_started": true,
+      "plan": "candidate4_plan.json",
+      "output": "runs/20261102_candidate4_relations_seed0"
+    },
+    {
+      "candidate": 5,
+      "name": "admissible_relation_set",
+      "status": "complete",
+      "formal_training_started": true,
+      "plan": "candidate5_plan.json",
+      "output": "runs/20261102_candidate5_admissible_seed0"
+    },
+    {
+      "candidate": 6,
+      "name": "pretrained_deep_geometry_adapter",
+      "status": "complete",
+      "formal_training_started": true,
+      "plan": "candidate6_plan.json",
+      "output": "runs/20261102_candidate6_deep_geometry_seed0"
+    },
+    {
+      "candidate": 7,
+      "name": "normalized_geometry_adapter",
+      "status": "complete",
+      "formal_training_started": true,
+      "plan": "candidate7_plan.json",
+      "output": "runs/20261102_candidate7_normalized_geometry_seed0"
+    },
+    {
+      "candidate": 8,
+      "name": "weighted_public_geometry_task",
+      "status": "complete",
+      "formal_training_started": true,
+      "plan": "candidate8_plan.json",
+      "output": "runs/20261102_candidate8_public_task_seed0"
+    }
+  ],
+  "heartbeat_id": "problem-c-gpu",
+  "test_read": false,
+  "last_updated_utc": "2026-11-01T20:38:03.046534+00:00",
+  "spent_wall_seconds": 20391.046534,
+  "latency_target_seconds": 0.25,
+  "current_stage": "closed: eight registered candidates and terminal evaluations complete",
+  "last_completed_stage": "C8 full dev500/new raw2000/same100 complete; saved-results/hash/lock audit complete; heartbeat paused",
+  "reports": [
+    "runs/latency_report.md",
+    "runs/slim3_dev500_report.md",
+    "runs/candidate1_start_report.md",
+    "runs/candidate1_result_report.md",
+    "runs/candidate2_start_report.md",
+    "runs/candidate2_result_report.md",
+    "runs/candidate3_start_report.md",
+    "runs/candidate3_result_report.md",
+    "runs/candidate4_start_report.md",
+    "runs/candidate4_result_report.md",
+    "runs/candidate5_start_report.md",
+    "runs/candidate5_result_report.md",
+    "runs/candidate6_start_report.md",
+    "runs/candidate6_result_report.md",
+    "runs/candidate7_start_report.md",
+    "runs/candidate7_result_report.md",
+    "runs/candidate8_start_report.md",
+    "runs/candidate8_result_report.md",
+    "runs/final_report.md"
+  ],
+  "next_actions": [],
+  "candidate_limit_amendment": "用户明确：小模型训练时间短，训练候选预算提升到8个；12小时总窗口与固定截止不变。",
+  "closed_at_utc": "2026-11-01T20:38:03.046534+00:00",
+  "stop_reason": "max8 formal candidates completed; quality goal unmet",
+  "goal_met": false,
+  "heartbeat_status": "PAUSED",
+  "background_work_remaining": false,
+  "final_report": "runs/final_report.md",
+  "outcome": {
+    "best_slim3_development_candidate": 2,
+    "best_weighted_Q": 1.1693654679982994,
+    "goal_Q_lt": 1.01,
+    "final_candidate": 8,
+    "final_weighted_Q": 1.2336262696726321,
+    "final_legal": 500,
+    "final_complete_mean_seconds": 0.14016888419992757,
+    "final_complete_p95_seconds": 0.2186888499989436,
+    "no_baseline_upgrade": true,
+    "test_read": false
+  }
+}

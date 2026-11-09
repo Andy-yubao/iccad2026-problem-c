@@ -1,0 +1,42 @@
+{
+  "train_ids": [
+    1683,
+    10027,
+    5474,
+    10140,
+    15001
+  ],
+  "FULL": {
+    "relaxed": false,
+    "mode": 0,
+    "adaptive": true,
+    "fast_budget": false,
+    "late_extension": true,
+    "plateau": true,
+    "robust_seeds": true,
+    "certified": true,
+    "quick_project": true,
+    "quadratic_project": true,
+    "incumbent_project": true,
+    "snap": 0.0001
+  },
+  "SLIM": {
+    "iterations": 3,
+    "seconds": 0.18,
+    "adaptive": false,
+    "late_extension": false,
+    "certified": false,
+    "robust_seeds": false,
+    "quick_project": false,
+    "quadratic_project": true,
+    "incumbent_project": false,
+    "projection": true,
+    "snap": 0.0001
+  },
+  "checkpoint_sha256": "02c172021a553bd44e3ca552d3dcc755469eccf8c54edc08364ec92bcbf0af3f",
+  "source_sha256": "208978203edd974c255524c7b1ebb38e1356b7f995e71d39058cdd6855a5114b",
+  "native_initialization_seconds": 6.702626999998756,
+  "GPU_capture_seconds": 16.388855199998943,
+  "official_Q_evaluated": false,
+  "test_read": false
+}

@@ -1,0 +1,93 @@
+Verified archived cache loaded: train 5 cases
+Five-case public/raw/cache parity passed
+Direct bbox objective, remaining Loss and finite-difference check passed
+Eager Dropout/Adam/RNG resume passed
+Neural contract, finite rejection and one-case terminal passed; checking packed engine
+Verified archived cache loaded: train 5 cases
+Engine: packed/reference update parity 0.0 0.0
+Engine: worst32x120x512 actual updates passed; MiB 5235.85986328125 7004.0
+Engine: exact large-attention Adam/Dropout/RNG restore passed
+{
+  "status": "passed",
+  "unique_train_cases": 5,
+  "indices": [
+    1683,
+    10027,
+    5474,
+    10140,
+    15001
+  ],
+  "public_port_counts": [
+    92,
+    172,
+    207,
+    151,
+    109
+  ],
+  "raw_cache_parity": true,
+  "complete_public_port_coordinates_and_edge_weights": true,
+  "labels_rejected": true,
+  "test_roles_rejected": true,
+  "independent_corrector": true,
+  "one_simultaneous_output_head": true,
+  "global_hidden_layers": 12,
+  "initial_draft_geometry_identity_exact": true,
+  "source_decode_identity_exact": true,
+  "no_local_movement_cap": true,
+  "hard_area_shapes_preplacements_after_updates": true,
+  "all_12_neural_layers_update": true,
+  "frozen_placer_bit_exact": true,
+  "real_Dropout_Adam_RNG_resume_bit_exact": true,
+  "module_permutation_equivariant": true,
+  "far_module_cross_influence": 0.007559573743492365,
+  "standalone_export_equivalent": true,
+  "parameters": 11661662,
+  "corrector_parameters": 5831723,
+  "optimizer_steps_are_implementation_checks_only": true,
+  "first_two_step_Loss": [
+    8.982993125915527,
+    8.827807426452637
+  ],
+  "bbox_objective": {
+    "other_loss_reconstruction_matches": true,
+    "decoded_bbox_matches": true,
+    "exact_coefficient_gradient": true,
+    "finite_difference": 1.4352798461914062,
+    "analytic": 1.4351966381072998,
+    "box_weight": 8.46,
+    "unique_cases": 5
+  },
+  "no_reference_corrector_objective": true,
+  "identity_intent_zero": true,
+  "complete_wirelength_matches_raw_edges": true,
+  "zero_head_eight_calls_no_numerical_drift": true,
+  "source_terminal_protocol_matches": true,
+  "nonfinite_update_rejected_before_Adam": true,
+  "one_train_case_frozen_flash_hard_legal": true,
+  "scheduler_flat_loss_drop_epochs": [
+    3,
+    6,
+    9
+  ],
+  "seconds": 34.00206950000029,
+  "formal_training_started": false,
+  "test_read": false,
+  "engine": {
+    "shape": "dynamic batch32, max120modules/512ports",
+    "public_only_pinned_batch": true,
+    "public_collate_bit_exact": true,
+    "loss_max_abs_difference": 0.0,
+    "parameter_max_abs_difference": 0.0,
+    "exact_large_attention_resume_model_Adam_RNG": true,
+    "serialized_cursor": 32,
+    "nonfinite_rejected_before_Adam": true,
+    "peak_allocated_MiB": 5235.85986328125,
+    "peak_reserved_MiB": 7004.0,
+    "reference_ms_per_step": 290.19527499986,
+    "packed_ms_per_step": 303.1098000001293,
+    "microbenchmark_scope": "four updates each including packing; same five cases; not full epoch speed",
+    "worst_shape_valid_port_max": 207,
+    "stress_shape_padded_ports": 512,
+    "attention_recompute_above_tokens": 448
+  }
+}

@@ -1,0 +1,488 @@
+{
+  "status": "complete",
+  "summaries": {
+    "sparse_static": {
+      "count": 500,
+      "hard_legal": 500,
+      "weighted_Q": 1.0439319083607843,
+      "mean_Q": 1.065208660603045,
+      "p95_Q": 1.2118997951127695,
+      "cvar95_Q": 1.35470146473028,
+      "max_Q": 2.5250823526416832,
+      "seconds_mean": 0.24760564540280028,
+      "seconds_p95": 0.6643197699973825,
+      "seconds_max": 3.1508806999772787,
+      "errors": 0,
+      "row_retained": 0,
+      "dense_fallbacks": 2,
+      "policy_seconds_mean": 0.00421631480101496,
+      "rescued_cases": 11,
+      "hpwl_gap_mean": 0.027279840402998922,
+      "area_gap_mean": 0.03246981384547031,
+      "boundary_violations_mean": 0.342,
+      "grouping_violations_mean": 0.324,
+      "mib_violations_mean": 0.0
+    },
+    "sparse_feedback": {
+      "count": 500,
+      "hard_legal": 500,
+      "weighted_Q": 1.0413346610440042,
+      "mean_Q": 1.0648002705037198,
+      "p95_Q": 1.212003878724797,
+      "cvar95_Q": 1.3515961875840166,
+      "max_Q": 2.5250823526416832,
+      "seconds_mean": 0.25528430500091054,
+      "seconds_p95": 0.672528954950394,
+      "seconds_max": 3.079877700074576,
+      "errors": 0,
+      "row_retained": 0,
+      "dense_fallbacks": 9,
+      "policy_seconds_mean": 0.01144567200774327,
+      "rescued_cases": 11,
+      "hpwl_gap_mean": 0.027171168182755813,
+      "area_gap_mean": 0.032435761761829066,
+      "boundary_violations_mean": 0.34,
+      "grouping_violations_mean": 0.316,
+      "mib_violations_mean": 0.0
+    }
+  },
+  "paired": {
+    "sparse_static": {
+      "against_e25": {
+        "weighted_Q_delta": 0.003886538008553209,
+        "weighted_Q_delta_95CI": [
+          -0.0016185271180353279,
+          0.009727058057510287
+        ],
+        "seconds_delta": -0.012650829194113613,
+        "seconds_delta_95CI": [
+          -0.027609258790588755,
+          0.0009421782372885179
+        ],
+        "max_Q_regression": 0.43696337145552744,
+        "improved": 217,
+        "regressed": 234,
+        "bootstrap_shards": 333,
+        "largest_regressions": [
+          {
+            "member": [
+              "worker_43/layouts_2576.th",
+              93
+            ],
+            "index": 368,
+            "n": 22,
+            "delta": 0.43696337145552744
+          },
+          {
+            "member": [
+              "worker_63/layouts_8624.th",
+              63
+            ],
+            "index": 398,
+            "n": 114,
+            "delta": 0.23834541754601468
+          },
+          {
+            "member": [
+              "worker_91/layouts_0.th",
+              65
+            ],
+            "index": 130,
+            "n": 67,
+            "delta": 0.2228739206417385
+          },
+          {
+            "member": [
+              "worker_58/layouts_1232.th",
+              81
+            ],
+            "index": 237,
+            "n": 50,
+            "delta": 0.21980374566897476
+          },
+          {
+            "member": [
+              "worker_50/layouts_4368.th",
+              58
+            ],
+            "index": 402,
+            "n": 41,
+            "delta": 0.12670860593997602
+          },
+          {
+            "member": [
+              "worker_31/layouts_9184.th",
+              0
+            ],
+            "index": 419,
+            "n": 80,
+            "delta": 0.12304101241692988
+          },
+          {
+            "member": [
+              "worker_46/layouts_1232.th",
+              75
+            ],
+            "index": 420,
+            "n": 30,
+            "delta": 0.0952568477503597
+          },
+          {
+            "member": [
+              "worker_95/layouts_3920.th",
+              57
+            ],
+            "index": 276,
+            "n": 81,
+            "delta": 0.08701006898665065
+          },
+          {
+            "member": [
+              "worker_14/layouts_1680.th",
+              87
+            ],
+            "index": 145,
+            "n": 53,
+            "delta": 0.08613167987040327
+          },
+          {
+            "member": [
+              "worker_96/layouts_9744.th",
+              57
+            ],
+            "index": 465,
+            "n": 28,
+            "delta": 0.08403986739225977
+          }
+        ]
+      },
+      "against_dense": {
+        "weighted_Q_delta": 0.002066880971803127,
+        "weighted_Q_delta_95CI": [
+          -0.0017230465707082183,
+          0.007581073254648628
+        ],
+        "seconds_delta": -0.009669679396320135,
+        "seconds_delta_95CI": [
+          -0.017431582677149317,
+          -0.0030751765002894555
+        ],
+        "max_Q_regression": 0.24150915618953284,
+        "improved": 91,
+        "regressed": 58,
+        "bootstrap_shards": 333,
+        "largest_regressions": [
+          {
+            "member": [
+              "worker_63/layouts_8624.th",
+              63
+            ],
+            "index": 398,
+            "n": 114,
+            "delta": 0.24150915618953284
+          },
+          {
+            "member": [
+              "worker_95/layouts_3920.th",
+              57
+            ],
+            "index": 276,
+            "n": 81,
+            "delta": 0.08701006898665065
+          },
+          {
+            "member": [
+              "worker_80/layouts_0.th",
+              109
+            ],
+            "index": 286,
+            "n": 24,
+            "delta": 0.08055808012842891
+          },
+          {
+            "member": [
+              "worker_50/layouts_4368.th",
+              58
+            ],
+            "index": 402,
+            "n": 41,
+            "delta": 0.08011227272145782
+          },
+          {
+            "member": [
+              "worker_96/layouts_9744.th",
+              57
+            ],
+            "index": 465,
+            "n": 28,
+            "delta": 0.07813622461260716
+          },
+          {
+            "member": [
+              "worker_31/layouts_9184.th",
+              0
+            ],
+            "index": 419,
+            "n": 80,
+            "delta": 0.07414115541367439
+          },
+          {
+            "member": [
+              "worker_11/layouts_2464.th",
+              0
+            ],
+            "index": 397,
+            "n": 53,
+            "delta": 0.06674854118406404
+          },
+          {
+            "member": [
+              "worker_17/layouts_6608.th",
+              68
+            ],
+            "index": 21,
+            "n": 120,
+            "delta": 0.051180956143597856
+          },
+          {
+            "member": [
+              "worker_5/layouts_2016.th",
+              75
+            ],
+            "index": 331,
+            "n": 56,
+            "delta": 0.04927686915821128
+          },
+          {
+            "member": [
+              "worker_72/layouts_3248.th",
+              104
+            ],
+            "index": 91,
+            "n": 59,
+            "delta": 0.048189315406785616
+          }
+        ]
+      }
+    },
+    "sparse_feedback": {
+      "against_e25": {
+        "weighted_Q_delta": 0.0012892906917730989,
+        "weighted_Q_delta_95CI": [
+          -0.002510960712600673,
+          0.004849593352834029
+        ],
+        "seconds_delta": -0.004972169596003368,
+        "seconds_delta_95CI": [
+          -0.019671390940897964,
+          0.00839557829129076
+        ],
+        "max_Q_regression": 0.4623865178843871,
+        "improved": 221,
+        "regressed": 230,
+        "bootstrap_shards": 333,
+        "largest_regressions": [
+          {
+            "member": [
+              "worker_43/layouts_2576.th",
+              93
+            ],
+            "index": 368,
+            "n": 22,
+            "delta": 0.4623865178843871
+          },
+          {
+            "member": [
+              "worker_91/layouts_0.th",
+              65
+            ],
+            "index": 130,
+            "n": 67,
+            "delta": 0.22300584433284287
+          },
+          {
+            "member": [
+              "worker_58/layouts_1232.th",
+              81
+            ],
+            "index": 237,
+            "n": 50,
+            "delta": 0.21980374566897476
+          },
+          {
+            "member": [
+              "worker_50/layouts_4368.th",
+              58
+            ],
+            "index": 402,
+            "n": 41,
+            "delta": 0.12670860593997602
+          },
+          {
+            "member": [
+              "worker_46/layouts_1232.th",
+              75
+            ],
+            "index": 420,
+            "n": 30,
+            "delta": 0.09525688521841191
+          },
+          {
+            "member": [
+              "worker_95/layouts_3920.th",
+              57
+            ],
+            "index": 276,
+            "n": 81,
+            "delta": 0.08701006898647323
+          },
+          {
+            "member": [
+              "worker_47/layouts_7056.th",
+              30
+            ],
+            "index": 239,
+            "n": 21,
+            "delta": 0.08589582922653305
+          },
+          {
+            "member": [
+              "worker_68/layouts_6944.th",
+              107
+            ],
+            "index": 495,
+            "n": 86,
+            "delta": 0.08159094001775169
+          },
+          {
+            "member": [
+              "worker_94/layouts_6496.th",
+              93
+            ],
+            "index": 467,
+            "n": 107,
+            "delta": 0.07804172157594236
+          },
+          {
+            "member": [
+              "worker_72/layouts_6720.th",
+              14
+            ],
+            "index": 409,
+            "n": 92,
+            "delta": 0.07775807017302738
+          }
+        ]
+      },
+      "against_dense": {
+        "weighted_Q_delta": -0.0019763341275295166,
+        "weighted_Q_delta_95CI": [
+          -0.0075046369523148115,
+          0.001527515489037137
+        ],
+        "seconds_delta": -0.011669180199271068,
+        "seconds_delta_95CI": [
+          -0.019052292056496525,
+          -0.004809920203265499
+        ],
+        "max_Q_regression": 0.1289439040652811,
+        "improved": 107,
+        "regressed": 50,
+        "bootstrap_shards": 333,
+        "largest_regressions": [
+          {
+            "member": [
+              "worker_11/layouts_2464.th",
+              0
+            ],
+            "index": 397,
+            "n": 53,
+            "delta": 0.1289439040652811
+          },
+          {
+            "member": [
+              "worker_95/layouts_3920.th",
+              57
+            ],
+            "index": 276,
+            "n": 81,
+            "delta": 0.08701006898647323
+          },
+          {
+            "member": [
+              "worker_50/layouts_4368.th",
+              58
+            ],
+            "index": 402,
+            "n": 41,
+            "delta": 0.07958422056087056
+          },
+          {
+            "member": [
+              "worker_94/layouts_6496.th",
+              93
+            ],
+            "index": 467,
+            "n": 107,
+            "delta": 0.07190983288065533
+          },
+          {
+            "member": [
+              "worker_89/layouts_3584.th",
+              74
+            ],
+            "index": 13,
+            "n": 54,
+            "delta": 0.060807242146921237
+          },
+          {
+            "member": [
+              "worker_65/layouts_6720.th",
+              90
+            ],
+            "index": 456,
+            "n": 116,
+            "delta": 0.05943153210194785
+          },
+          {
+            "member": [
+              "worker_32/layouts_6048.th",
+              19
+            ],
+            "index": 355,
+            "n": 68,
+            "delta": 0.04592695759779675
+          },
+          {
+            "member": [
+              "worker_5/layouts_6160.th",
+              110
+            ],
+            "index": 152,
+            "n": 44,
+            "delta": 0.04107635641719298
+          },
+          {
+            "member": [
+              "worker_97/layouts_7616.th",
+              57
+            ],
+            "index": 303,
+            "n": 50,
+            "delta": 0.03207678720364804
+          },
+          {
+            "member": [
+              "worker_22/layouts_5712.th",
+              42
+            ],
+            "index": 22,
+            "n": 49,
+            "delta": 0.030931304675787752
+          }
+        ]
+      }
+    }
+  },
+  "test_read": false
+}

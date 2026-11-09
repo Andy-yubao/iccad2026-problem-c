@@ -1,0 +1,50 @@
+{
+  "stage": "L",
+  "paths": {
+    "legacy_update": {
+      "mean_update_ms": 205.26886000297964,
+      "times_ms": [
+        325.12839999981225,
+        189.92309999885038,
+        187.08999999216758,
+        162.1387000195682,
+        162.06410000449978
+      ],
+      "losses": [
+        0.34446412324905396,
+        0.3315843939781189,
+        0.30982276797294617,
+        0.3056507706642151,
+        0.2897252142429352
+      ],
+      "peak_allocated_bytes": 2661037568,
+      "capture_optimizer_updates": 0,
+      "frozen_parameters_unchanged": true
+    },
+    "captured_update": {
+      "mean_update_ms": 101.57315999967977,
+      "times_ms": [
+        117.73890000768006,
+        106.30780001520179,
+        106.94889997830614,
+        93.3937999943737,
+        83.47640000283718
+      ],
+      "losses": [
+        0.34446412324905396,
+        0.331584632396698,
+        0.3098227381706238,
+        0.30565109848976135,
+        0.2897235155105591
+      ],
+      "peak_allocated_bytes": 2728146432,
+      "capture_optimizer_updates": 0,
+      "frozen_parameters_unchanged": true
+    }
+  },
+  "max_parameter_abs_difference": 7.107853889465332e-06,
+  "max_moment_abs_difference": 1.9306200556457043e-05,
+  "max_loss_abs_difference": 1.6987323760986328e-06,
+  "first_step_parameter_difference": 1.1920928955078125e-07,
+  "first_step_moment_difference": 0.0
+}

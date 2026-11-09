@@ -1,0 +1,5129 @@
+{
+  "schema_version": 1,
+  "session_id": "20261024_visual_review100_seed20261024",
+  "title": "E42 · 常规后处理 / 草稿评分",
+  "created_utc": "2026-10-24T08:50:02.647330+00:00",
+  "checkpoint_sha256": "12878108e9a58b8c195b314ba6586686c2a6e2796c1f4b6443e102b4db4224a6",
+  "display_note": "随机100例，来自已暴露测试1000例。草稿为冻结模型补生成；最终布局沿用原记录。原参考处于MIB面积变换之前。",
+  "rubric": {
+    "version": 1,
+    "target": "raw_draft_only",
+    "scale": {
+      "1": "差",
+      "2": "一般",
+      "3": "好"
+    },
+    "dimensions": "Open-ended observation tags and verbatim notes; dimensions may evolve in later rounds"
+  },
+  "selection": {
+    "seed": 20261024,
+    "selection": "Python random.Random(seed).sample(range(1000),100); sampled order is presentation order; no Q filtering",
+    "source_run": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024",
+    "source_config_sha256": "a5cb66a4f80cd9ff69ebbb0b16be3db4f271532068bc84ac7d6e1c0825a57dc4",
+    "selected_indices": [
+      602,
+      180,
+      743,
+      76,
+      315,
+      664,
+      19,
+      196,
+      538,
+      887,
+      786,
+      63,
+      760,
+      670,
+      572,
+      88,
+      346,
+      898,
+      524,
+      872,
+      952,
+      666,
+      515,
+      627,
+      934,
+      355,
+      408,
+      514,
+      163,
+      775,
+      178,
+      484,
+      445,
+      918,
+      498,
+      597,
+      850,
+      273,
+      260,
+      377,
+      343,
+      292,
+      78,
+      852,
+      44,
+      862,
+      429,
+      875,
+      61,
+      144,
+      882,
+      317,
+      997,
+      972,
+      166,
+      136,
+      276,
+      89,
+      376,
+      245,
+      692,
+      592,
+      34,
+      849,
+      568,
+      318,
+      324,
+      468,
+      57,
+      895,
+      910,
+      37,
+      412,
+      199,
+      82,
+      510,
+      503,
+      645,
+      792,
+      574,
+      119,
+      547,
+      49,
+      677,
+      506,
+      190,
+      361,
+      716,
+      713,
+      739,
+      250,
+      13,
+      58,
+      537,
+      2,
+      419,
+      957,
+      295,
+      878,
+      893
+    ],
+    "data_policy": "These 100 already exposed test cases are now adaptive research feedback; remaining 900 sealed cases are not accessed"
+  },
+  "cases": [
+    {
+      "id": "case_0602",
+      "source_index": 602,
+      "member": [
+        "worker_79/layouts_1232.th",
+        23
+      ],
+      "n": 81,
+      "image": "images/case_0602.png",
+      "image_sha256": "957ef83894fea957f1f168576104ee8ca5af8dcd9173bc84ba7c1f6ade743dd0",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0602.json",
+      "draft_sha256": "1b303e4eb0a88b954d22ea0ecbd18415437516ca3dc40e24e37359cc53bda064",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0602.json",
+      "final_source_sha256": "4d3eadf3b0ccb12c41ca9c3df9a535e30fee043aa485bfcc075354f93d9e565b",
+      "axes_bounds": [
+        [
+          0.06899002020781674,
+          0.21700000000000003,
+          0.23201995958436644,
+          0.663
+        ],
+        [
+          0.3919900202078167,
+          0.21700000000000003,
+          0.2320199595843665,
+          0.663
+        ],
+        [
+          0.7149900202078168,
+          0.21700000000000003,
+          0.2320199595843665,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0484817148680297,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.16247810004279017,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0180",
+      "source_index": 180,
+      "member": [
+        "worker_40/layouts_4592.th",
+        82
+      ],
+      "n": 38,
+      "image": "images/case_0180.png",
+      "image_sha256": "7b58b643d70a8a0c22a5b868596ae4515b89b0da6c3fec04a7a2ebc4d51f52ea",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0180.json",
+      "draft_sha256": "0e3cd138b332b694f28884ab201c4b55730db6d1674703685449aeb56943fb75",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0180.json",
+      "final_source_sha256": "c303a2ba085c64c1744dbb36fc09d364aead9bf52ee4192921db2d748c828ac7",
+      "axes_bounds": [
+        [
+          0.035,
+          0.25119424607764235,
+          0.29999999999999993,
+          0.5946115078447154
+        ],
+        [
+          0.358,
+          0.25119424607764235,
+          0.29999999999999993,
+          0.5946115078447154
+        ],
+        [
+          0.681,
+          0.25119424607764224,
+          0.30000000000000004,
+          0.5946115078447156
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.121444115225032,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.6656129999319091,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0743",
+      "source_index": 743,
+      "member": [
+        "worker_82/layouts_3584.th",
+        65
+      ],
+      "n": 95,
+      "image": "images/case_0743.png",
+      "image_sha256": "9f165232675823013118f1b1bf690796f37ae314a019c59abc506df24c3f83ae",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0743.json",
+      "draft_sha256": "0e7997afc6e8936f39340e6924c3ce509b74db1f005bda24f58f4349a9956382",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0743.json",
+      "final_source_sha256": "ae3faa8c94031487d49e9f842d16a9418f545710a77257dcd85036300ff3791b",
+      "axes_bounds": [
+        [
+          0.0960803700247509,
+          0.21700000000000003,
+          0.17783925995049815,
+          0.663
+        ],
+        [
+          0.41908037002475085,
+          0.21700000000000003,
+          0.1778392599504982,
+          0.663
+        ],
+        [
+          0.742080370024751,
+          0.21700000000000003,
+          0.1778392599504981,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0064609113337357,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.20747210003901273,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0076",
+      "source_index": 76,
+      "member": [
+        "worker_36/layouts_448.th",
+        1
+      ],
+      "n": 28,
+      "image": "images/case_0076.png",
+      "image_sha256": "d5f7198bc42b943d3ee499555a2b74dc7aeadce26f5934b42b810a476ef7fce2",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0076.json",
+      "draft_sha256": "5b05f8cb6703d787e46a9f86d93c18b0e4ae57fe45b9050e546e8cbf63c2d4eb",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0076.json",
+      "final_source_sha256": "9abfce7d6906bb83c41f22a9e97ccfa8dc6da265971356da4ec847bb732c3fa5",
+      "axes_bounds": [
+        [
+          0.035,
+          0.244223824456607,
+          0.29999999999999993,
+          0.6085523510867861
+        ],
+        [
+          0.358,
+          0.244223824456607,
+          0.29999999999999993,
+          0.6085523510867861
+        ],
+        [
+          0.681,
+          0.2442238244566069,
+          0.30000000000000004,
+          0.6085523510867863
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.044264977376587,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.07443170004989952,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0315",
+      "source_index": 315,
+      "member": [
+        "worker_64/layouts_6048.th",
+        65
+      ],
+      "n": 51,
+      "image": "images/case_0315.png",
+      "image_sha256": "f1fb7afa0d3b629bb21787fa9c1911a76d3ebcb656032784e9947176a03b6fda",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0315.json",
+      "draft_sha256": "661ef0a7a348341fb4f606c55b8cebb25d826fd13cb56ce8f36e60c61290abcb",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0315.json",
+      "final_source_sha256": "9bbac9ad370132813eb84e8af318968a5283d79b7c091247603dd903e0576571",
+      "axes_bounds": [
+        [
+          0.0432228952902772,
+          0.21700000000000003,
+          0.28355420941944554,
+          0.663
+        ],
+        [
+          0.3662228952902772,
+          0.21700000000000003,
+          0.28355420941944554,
+          0.663
+        ],
+        [
+          0.6892228952902772,
+          0.21700000000000003,
+          0.28355420941944554,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0493439468161996,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.08662209997419268,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0664",
+      "source_index": 664,
+      "member": [
+        "worker_47/layouts_4816.th",
+        8
+      ],
+      "n": 87,
+      "image": "images/case_0664.png",
+      "image_sha256": "8971895bbdb8429b234941e57adbc6f05285fc5c293df92ee872c0f2475b4a68",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0664.json",
+      "draft_sha256": "74dd71d8bf28219ecab77f48a1408971223787311fcf10f143c6903d5306c037",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0664.json",
+      "final_source_sha256": "336f67933c3a72bc2532fed28358a325ffee6fae5d900c74769f622dfd61c921",
+      "axes_bounds": [
+        [
+          0.05649823981619831,
+          0.21700000000000003,
+          0.2570035203676033,
+          0.663
+        ],
+        [
+          0.3794982398161983,
+          0.21700000000000003,
+          0.2570035203676034,
+          0.663
+        ],
+        [
+          0.7024982398161984,
+          0.21700000000000003,
+          0.2570035203676033,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0071158108152998,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.15828800003509969,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0019",
+      "source_index": 19,
+      "member": [
+        "worker_47/layouts_7952.th",
+        73
+      ],
+      "n": 22,
+      "image": "images/case_0019.png",
+      "image_sha256": "bedc5c05d126c0d43bcb0bf2d9ff6dcd3a2b793e5910b383ef899519ae1572d7",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0019.json",
+      "draft_sha256": "96d8b46ea26e054993f8598bee864bcd2f6954a2b68b1aa5b9834bb50b90ee95",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0019.json",
+      "final_source_sha256": "2465fdfe45a5c3b62719900017402454b8aac63cb1cfcbbc82b80f1cb6c03350",
+      "axes_bounds": [
+        [
+          0.035,
+          0.23081025805156447,
+          0.29999999999999993,
+          0.6353794838968712
+        ],
+        [
+          0.358,
+          0.23081025805156447,
+          0.29999999999999993,
+          0.6353794838968712
+        ],
+        [
+          0.681,
+          0.23081025805156435,
+          0.30000000000000004,
+          0.6353794838968714
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.019634453500386,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.06967859994620085,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0196",
+      "source_index": 196,
+      "member": [
+        "worker_32/layouts_7728.th",
+        76
+      ],
+      "n": 39,
+      "image": "images/case_0196.png",
+      "image_sha256": "f3be000e8b851071e2885cc574c6928c19f57bbeb459988cd468f7fc618ae9ca",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0196.json",
+      "draft_sha256": "7b124d48e27ddd276395825224ea18b998087ed8d0bb1438fde4436353f3b579",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0196.json",
+      "final_source_sha256": "6610014ebdf428ec85b19f16dc5779465a6bda3061d8cbaabc26cc2f6c635952",
+      "axes_bounds": [
+        [
+          0.035,
+          0.22626175920705188,
+          0.29999999999999993,
+          0.6444764815858963
+        ],
+        [
+          0.358,
+          0.22626175920705188,
+          0.29999999999999993,
+          0.6444764815858963
+        ],
+        [
+          0.681,
+          0.22626175920705177,
+          0.30000000000000004,
+          0.6444764815858965
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0046080584747907,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.08277259999886155,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0538",
+      "source_index": 538,
+      "member": [
+        "worker_46/layouts_8960.th",
+        23
+      ],
+      "n": 73,
+      "image": "images/case_0538.png",
+      "image_sha256": "2a53ab5f11314aa3c0c54d63d7b261a313f7c1eec7b57c2250c2857ea2e09dc8",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0538.json",
+      "draft_sha256": "55dce49ff87c0d511752821d3cdfd446d712e88e431c8107f2eebf070276d93d",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0538.json",
+      "final_source_sha256": "816ebdab901fb3c1f80fdc1a856acc7d6e0941f5bdd20ab75ac664af0a69b78f",
+      "axes_bounds": [
+        [
+          0.04525266365250205,
+          0.21700000000000003,
+          0.27949467269499584,
+          0.663
+        ],
+        [
+          0.368252663652502,
+          0.21700000000000003,
+          0.27949467269499595,
+          0.663
+        ],
+        [
+          0.6912526636525022,
+          0.21700000000000003,
+          0.27949467269499584,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.16522620001342148,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0887",
+      "source_index": 887,
+      "member": [
+        "worker_60/layouts_4816.th",
+        38
+      ],
+      "n": 109,
+      "image": "images/case_0887.png",
+      "image_sha256": "f226cf934c9ba2d7e3f8a73e8b9ba199447e3aa2f137a21f02515049e56570ac",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0887.json",
+      "draft_sha256": "0f7edee62146af515ff39da58d20ce6acabea032595eb9627ecc431896d6cb3d",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0887.json",
+      "final_source_sha256": "54bf1f1b9e3a6002793601a7528bd0b6a251f896e43ffc076a299160f583a07b",
+      "axes_bounds": [
+        [
+          0.0968423421498891,
+          0.21700000000000003,
+          0.17631531570022171,
+          0.663
+        ],
+        [
+          0.4198423421498891,
+          0.21700000000000003,
+          0.1763153157002218,
+          0.663
+        ],
+        [
+          0.7428423421498892,
+          0.21700000000000003,
+          0.17631531570022174,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.000351513866012,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.33826770004816353,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0786",
+      "source_index": 786,
+      "member": [
+        "worker_98/layouts_1344.th",
+        68
+      ],
+      "n": 99,
+      "image": "images/case_0786.png",
+      "image_sha256": "af9718e52e6227b2aca35f6ac0a131e14c9dd4abe6d85c1813faf2ea306780aa",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0786.json",
+      "draft_sha256": "91d8320a2457ccc9b6e7c5a42d037e6739b1fc237a7937b736f1872ece59b49f",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0786.json",
+      "final_source_sha256": "966b881e3ab49b81a70e44fceaae67f3074c87de34e4e3eeeb0631961d46d3a8",
+      "axes_bounds": [
+        [
+          0.08973174328986687,
+          0.21700000000000003,
+          0.19053651342026617,
+          0.663
+        ],
+        [
+          0.41273174328986684,
+          0.21700000000000003,
+          0.19053651342026623,
+          0.663
+        ],
+        [
+          0.7357317432898669,
+          0.21700000000000003,
+          0.19053651342026623,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0285670282372976,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.2545067999744788,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0063",
+      "source_index": 63,
+      "member": [
+        "worker_69/layouts_3136.th",
+        26
+      ],
+      "n": 26,
+      "image": "images/case_0063.png",
+      "image_sha256": "b809eea1a0480d0a79725898ce524e97537f7f882c3bea108b51cdc55e7ae95d",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0063.json",
+      "draft_sha256": "759ac4a406569e5ff9055f9e7907d7e4f12e5674c6bd8557b47d66f4c332d33a",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0063.json",
+      "final_source_sha256": "18763081fa0a47f089afd283ae1ea2a793f8f2f3012ea249403a6ac9c3ef4a31",
+      "axes_bounds": [
+        [
+          0.05899390053780759,
+          0.21700000000000003,
+          0.25201219892438476,
+          0.663
+        ],
+        [
+          0.3819939005378076,
+          0.21700000000000003,
+          0.25201219892438476,
+          0.663
+        ],
+        [
+          0.7049939005378076,
+          0.21700000000000003,
+          0.25201219892438487,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.067398363941874,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.07277760002762079,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0760",
+      "source_index": 760,
+      "member": [
+        "worker_60/layouts_7616.th",
+        73
+      ],
+      "n": 96,
+      "image": "images/case_0760.png",
+      "image_sha256": "9bd1b0601933f92553581cc0dfba93ef1b0bb4fe883e8f29ad6fc8e20317310f",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0760.json",
+      "draft_sha256": "e2b8b40d97921abcbcbd702e9456fcbaeb8ba8b67d9e152526625fd968570de2",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0760.json",
+      "final_source_sha256": "acc3a804d8a3264b49efffd9641db8b8bfd5c0a17c81c7cf72df7673ebc3e75c",
+      "axes_bounds": [
+        [
+          0.09014473397844407,
+          0.21700000000000003,
+          0.18971053204311178,
+          0.663
+        ],
+        [
+          0.41314473397844403,
+          0.21700000000000003,
+          0.18971053204311178,
+          0.663
+        ],
+        [
+          0.7361447339784442,
+          0.21700000000000003,
+          0.18971053204311183,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.16940270003397018,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0670",
+      "source_index": 670,
+      "member": [
+        "worker_27/layouts_2128.th",
+        109
+      ],
+      "n": 87,
+      "image": "images/case_0670.png",
+      "image_sha256": "e083ba7aa67c104f664d773e8ef984caef82179b84ed441319e7f3b64de0da99",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0670.json",
+      "draft_sha256": "827d432d2612088f70d3e390bcf7c2cd7790efc17c5998b7d686a20452f7c199",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0670.json",
+      "final_source_sha256": "c8fd9624e6f8c719508dc3df3c4f60994643ab30c9979fd661954fe0a7ee3380",
+      "axes_bounds": [
+        [
+          0.11147204931227839,
+          0.21700000000000003,
+          0.14705590137544317,
+          0.663
+        ],
+        [
+          0.43447204931227834,
+          0.21700000000000003,
+          0.14705590137544322,
+          0.663
+        ],
+        [
+          0.7574720493122785,
+          0.21700000000000003,
+          0.1470559013754431,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.1132023266207767,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.17865869996603578,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0572",
+      "source_index": 572,
+      "member": [
+        "worker_70/layouts_5376.th",
+        31
+      ],
+      "n": 77,
+      "image": "images/case_0572.png",
+      "image_sha256": "782cfbf169fdcf72d4f918010d33b60c01d074a2c24fb334728ca9e7dbb7ff44",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0572.json",
+      "draft_sha256": "300258a84e448b09114a9bfdfb00d6d0038c115dc94f040dc1a94fbc080ed00f",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0572.json",
+      "final_source_sha256": "d2a24e16a0ba31b4f47f814f8da24d608dfbc316cc5303ea0ca7e8178c1544c3",
+      "axes_bounds": [
+        [
+          0.07331328283457032,
+          0.21700000000000003,
+          0.22337343433085927,
+          0.663
+        ],
+        [
+          0.3963132828345703,
+          0.21700000000000003,
+          0.22337343433085938,
+          0.663
+        ],
+        [
+          0.7193132828345704,
+          0.21700000000000003,
+          0.22337343433085932,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0015768294566922,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.16051319998223335,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0088",
+      "source_index": 88,
+      "member": [
+        "worker_53/layouts_3248.th",
+        111
+      ],
+      "n": 29,
+      "image": "images/case_0088.png",
+      "image_sha256": "8337cd87b274febd0c35304ad2831b0b3696342bf179f3b4fac4342cb25ed591",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0088.json",
+      "draft_sha256": "3f9a1409f718812743e9f7b6cc056045524126f734bdac6b14ed74b526875ac4",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0088.json",
+      "final_source_sha256": "48dbedef134e9031ca69b0004eac01215a8e8fba333a938c1bb30921d43368af",
+      "axes_bounds": [
+        [
+          0.04397851850312226,
+          0.21700000000000003,
+          0.2820429629937554,
+          0.663
+        ],
+        [
+          0.36697851850312224,
+          0.21700000000000003,
+          0.2820429629937554,
+          0.663
+        ],
+        [
+          0.6899785185031224,
+          0.21700000000000003,
+          0.2820429629937554,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0249501352212922,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.0736092000734061,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0346",
+      "source_index": 346,
+      "member": [
+        "worker_94/layouts_8400.th",
+        100
+      ],
+      "n": 53,
+      "image": "images/case_0346.png",
+      "image_sha256": "5969782faf8e61b5fae2cd6c5bc967cf54e45f54e27c53658601df8c05aa3b35",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0346.json",
+      "draft_sha256": "ceaf732cf58e7ef509400548ef0780208baaf1bf74aff510113a7f7cff78fa08",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0346.json",
+      "final_source_sha256": "874e0395f34c68a3887b4f220ee2b3654e05f2f3bdccb9942c6d47fb793845be",
+      "axes_bounds": [
+        [
+          0.0794916298802254,
+          0.21700000000000003,
+          0.21101674023954914,
+          0.663
+        ],
+        [
+          0.40249162988022535,
+          0.21700000000000003,
+          0.2110167402395492,
+          0.663
+        ],
+        [
+          0.7254916298802255,
+          0.21700000000000003,
+          0.21101674023954908,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.04204537115857,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.08506430010311306,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0898",
+      "source_index": 898,
+      "member": [
+        "worker_52/layouts_1792.th",
+        106
+      ],
+      "n": 110,
+      "image": "images/case_0898.png",
+      "image_sha256": "dc4ff9b6b6b2b570545fd86aad49c8e52dc971b6a23ecde35ab1b70a9e5679f2",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0898.json",
+      "draft_sha256": "acb2bec865a19979316ff04d4ea7c0048014867d8d33b872d8ab616ecf84c92f",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0898.json",
+      "final_source_sha256": "50bdc5bf1eed0e49da2fe4ecebf0e57eeaf06c6d9e25c3486dc716864b7ae6b5",
+      "axes_bounds": [
+        [
+          0.11647989011265235,
+          0.21700000000000003,
+          0.13704021977469522,
+          0.663
+        ],
+        [
+          0.4394798901126523,
+          0.21700000000000003,
+          0.13704021977469527,
+          0.663
+        ],
+        [
+          0.7624798901126524,
+          0.21700000000000003,
+          0.13704021977469527,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0887053468787744,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.5276105999946594,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0524",
+      "source_index": 524,
+      "member": [
+        "worker_51/layouts_3472.th",
+        103
+      ],
+      "n": 72,
+      "image": "images/case_0524.png",
+      "image_sha256": "cf7bb2b61975c379b9d086911fe872f8e23973fc0f5eb28cc4913c40e253ddb7",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0524.json",
+      "draft_sha256": "a6e6277a68b2d55bbd0a67b691c80d88d3aa9cb94d21aa96e73cf4f6e6ebd870",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0524.json",
+      "final_source_sha256": "e4278496a7bd4b3e2d3ff04765c8a6f553b7cae9c699adfcc03ba034214f3b41",
+      "axes_bounds": [
+        [
+          0.09858311906097096,
+          0.21700000000000003,
+          0.17283376187805805,
+          0.663
+        ],
+        [
+          0.42158311906097096,
+          0.21700000000000003,
+          0.17283376187805793,
+          0.663
+        ],
+        [
+          0.7445831190609711,
+          0.21700000000000003,
+          0.172833761878058,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.39025234331471,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 1.474977600038983,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0872",
+      "source_index": 872,
+      "member": [
+        "worker_34/layouts_1568.th",
+        61
+      ],
+      "n": 108,
+      "image": "images/case_0872.png",
+      "image_sha256": "e383245321355441e89aed22454f9d6374b378e593c3ba1777bbda3ff0732808",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0872.json",
+      "draft_sha256": "44319721d01bbdc8a71d79f6031c604612179213a8fceed14c4f5c95801e05b7",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0872.json",
+      "final_source_sha256": "85c5c960bf779cfa01b6c26498c531f8905a363d5278924af9621e9e0f9a8f5e",
+      "axes_bounds": [
+        [
+          0.09060818673049165,
+          0.21700000000000003,
+          0.18878362653901665,
+          0.663
+        ],
+        [
+          0.4136081867304916,
+          0.21700000000000003,
+          0.1887836265390167,
+          0.663
+        ],
+        [
+          0.7366081867304918,
+          0.21700000000000003,
+          0.1887836265390166,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.076886571917569,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.3466021000640467,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0952",
+      "source_index": 952,
+      "member": [
+        "worker_24/layouts_4256.th",
+        22
+      ],
+      "n": 116,
+      "image": "images/case_0952.png",
+      "image_sha256": "3002b173645b1c8a3ca1864340ff93f0b9e7767ebfce73fb6c08fb2d5c57ea15",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0952.json",
+      "draft_sha256": "c85494a57c77b264cc15db4afd801efef7f5f9f3934c9f3cad9335d510c8a605",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0952.json",
+      "final_source_sha256": "1271e5065603ba75475820486f3b1d8cce2dc56c7007cbbc1a211408eb134c2f",
+      "axes_bounds": [
+        [
+          0.09618014530299308,
+          0.21700000000000003,
+          0.1776397093940138,
+          0.663
+        ],
+        [
+          0.4191801453029931,
+          0.21700000000000003,
+          0.17763970939401375,
+          0.663
+        ],
+        [
+          0.7421801453029933,
+          0.21700000000000003,
+          0.17763970939401375,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0026714094957336,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.5376706999959424,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0666",
+      "source_index": 666,
+      "member": [
+        "worker_33/layouts_1008.th",
+        107
+      ],
+      "n": 87,
+      "image": "images/case_0666.png",
+      "image_sha256": "989e1cb9afcd078a1d777c0ab3f26dbaa70e1d5853aa8f82e54d7155569bb2a6",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0666.json",
+      "draft_sha256": "fafb531a74c9bc4f4b4c9205e021573562eac504bca276af37a91ed300879c61",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0666.json",
+      "final_source_sha256": "4de4bcb7ccd2aae8e47c18a22d233fbab52c66a40b428090e59978d00bc4e188",
+      "axes_bounds": [
+        [
+          0.09694509680102299,
+          0.21700000000000003,
+          0.17610980639795398,
+          0.663
+        ],
+        [
+          0.419945096801023,
+          0.21700000000000003,
+          0.17610980639795393,
+          0.663
+        ],
+        [
+          0.7429450968010232,
+          0.21700000000000003,
+          0.17610980639795393,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.006588996270883,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.16549060004763305,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0515",
+      "source_index": 515,
+      "member": [
+        "worker_80/layouts_9184.th",
+        57
+      ],
+      "n": 71,
+      "image": "images/case_0515.png",
+      "image_sha256": "1ca58f496ed9ec623e76d79ead0d4bb881ade721ed7e20f5e6a7ad8fb82aadc1",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0515.json",
+      "draft_sha256": "85ef0011f4213b3ede820da3bba6f527d6059e1441c9a9b52e9789081d1ae536",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0515.json",
+      "final_source_sha256": "8e3fac37437bbfbe72d528f0c56182c9f5aa148e7e3ae7b23fd080a52b099c27",
+      "axes_bounds": [
+        [
+          0.0665066989815827,
+          0.21700000000000003,
+          0.23698660203683458,
+          0.663
+        ],
+        [
+          0.38950669898158263,
+          0.21700000000000003,
+          0.23698660203683464,
+          0.663
+        ],
+        [
+          0.7125066989815828,
+          0.21700000000000003,
+          0.23698660203683453,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0163838782719197,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.17639710009098053,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0627",
+      "source_index": 627,
+      "member": [
+        "worker_42/layouts_9184.th",
+        81
+      ],
+      "n": 83,
+      "image": "images/case_0627.png",
+      "image_sha256": "e072bcf1d944343c0c77698d7c1242e7fc835dc57770bdfd958c600e52fa50d8",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0627.json",
+      "draft_sha256": "2f7d98e7352540943b622eaba2e8d0d12ae95ce06c6688582b4d3c5214134859",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0627.json",
+      "final_source_sha256": "a2feedf0bae25579ade226704c1984989caf06ba2f506f029b45671f819aa583",
+      "axes_bounds": [
+        [
+          0.10706633637477381,
+          0.21700000000000003,
+          0.15586732725045233,
+          0.663
+        ],
+        [
+          0.43006633637477376,
+          0.21700000000000003,
+          0.15586732725045238,
+          0.663
+        ],
+        [
+          0.7530663363747739,
+          0.21700000000000003,
+          0.15586732725045227,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.041660762527521,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.15441680001094937,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0934",
+      "source_index": 934,
+      "member": [
+        "worker_91/layouts_2464.th",
+        60
+      ],
+      "n": 114,
+      "image": "images/case_0934.png",
+      "image_sha256": "c02dae5a285e294e4dd4c165b27884228b7296eadc33956de34f42ae3610069c",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0934.json",
+      "draft_sha256": "620e42cad582c8b1418a7e0741682dbf5ef82e6d514dabb0e04b981af29a13ea",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0934.json",
+      "final_source_sha256": "83e8dfb3a65f99c3fe5ed0bbb5bc1c67431472725562d39b57c3b256cfd5bc36",
+      "axes_bounds": [
+        [
+          0.09501448222148463,
+          0.21700000000000003,
+          0.1799710355570307,
+          0.663
+        ],
+        [
+          0.41801448222148463,
+          0.21700000000000003,
+          0.17997103555703065,
+          0.663
+        ],
+        [
+          0.7410144822214848,
+          0.21700000000000003,
+          0.17997103555703065,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0454535072784448,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.5509648999432102,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0355",
+      "source_index": 355,
+      "member": [
+        "worker_76/layouts_5712.th",
+        30
+      ],
+      "n": 54,
+      "image": "images/case_0355.png",
+      "image_sha256": "5aba84fda10368b3eeeca2a8cffa99312560049fb546db3a0a111e438a599164",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0355.json",
+      "draft_sha256": "cfb8d80d04ba05d874f46e6df0f48331a88557bd4e2c88592ac5b90febc92e42",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0355.json",
+      "final_source_sha256": "2e4825ec2a2a25223c7bfd1b523266b5997105038de6dcfb3597cbdee17b970b",
+      "axes_bounds": [
+        [
+          0.05864073409704354,
+          0.21700000000000003,
+          0.25271853180591286,
+          0.663
+        ],
+        [
+          0.38164073409704347,
+          0.21700000000000003,
+          0.25271853180591297,
+          0.663
+        ],
+        [
+          0.7046407340970436,
+          0.21700000000000003,
+          0.25271853180591286,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.014981557515597,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.09173250000458211,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0408",
+      "source_index": 408,
+      "member": [
+        "worker_0/layouts_5264.th",
+        72
+      ],
+      "n": 60,
+      "image": "images/case_0408.png",
+      "image_sha256": "2ed72beeeda5a2320b188143fa8f0688780b4c3ad4f5455a1a35fb7c6dc5e3f1",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0408.json",
+      "draft_sha256": "262658604e489b6c58e7dad29a93bcf74badd2e2ef253819ccf9bf0f0eea2c8b",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0408.json",
+      "final_source_sha256": "7ce51c1fd547403a954ec8b1d4be7e5e6301770a54d6fb0d7795e2ba7177a0d0",
+      "axes_bounds": [
+        [
+          0.0779894533107761,
+          0.21700000000000003,
+          0.2140210933784477,
+          0.663
+        ],
+        [
+          0.40098945331077607,
+          0.21700000000000003,
+          0.21402109337844777,
+          0.663
+        ],
+        [
+          0.7239894533107762,
+          0.21700000000000003,
+          0.21402109337844777,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0493764975446465,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.1538068000227213,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0514",
+      "source_index": 514,
+      "member": [
+        "worker_80/layouts_9184.th",
+        65
+      ],
+      "n": 71,
+      "image": "images/case_0514.png",
+      "image_sha256": "5c02bc2bab84a96acf69fc3cf62c0758c5c53a69e37e7b0615650c717b41fe9c",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0514.json",
+      "draft_sha256": "e26b384ebbe4e6ad20ca5bd8cf5201516f7a4764ae1062f79e8d5381b1a87e48",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0514.json",
+      "final_source_sha256": "6c8e826b9b46bf0992b59c66a0e6ad81dd2a181d1411b6bea16b5a13bbd27c38",
+      "axes_bounds": [
+        [
+          0.09203227456725387,
+          0.21700000000000003,
+          0.18593545086549218,
+          0.663
+        ],
+        [
+          0.41503227456725383,
+          0.21700000000000003,
+          0.1859354508654923,
+          0.663
+        ],
+        [
+          0.738032274567254,
+          0.21700000000000003,
+          0.18593545086549224,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0231877800942724,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.14977759995963424,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0163",
+      "source_index": 163,
+      "member": [
+        "worker_39/layouts_9968.th",
+        107
+      ],
+      "n": 36,
+      "image": "images/case_0163.png",
+      "image_sha256": "43b033d3c96116c35b146f3783672f52aedae8bdf1d7551f3a79ce954b0e1073",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0163.json",
+      "draft_sha256": "a977d0c49cee2a9aa23ec4f15506b5750be6104d47b7f8ab37227f4962974b58",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0163.json",
+      "final_source_sha256": "13b0083d390dad1fc27ae0de53911ca4ad410acb51b675c1bed0d265f3c7f3fa",
+      "axes_bounds": [
+        [
+          0.0953106834765494,
+          0.21700000000000003,
+          0.1793786330469011,
+          0.663
+        ],
+        [
+          0.41831068347654937,
+          0.21700000000000003,
+          0.1793786330469011,
+          0.663
+        ],
+        [
+          0.7413106834765495,
+          0.21700000000000003,
+          0.17937863304690116,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.066125461481449,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.07421959994826466,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0775",
+      "source_index": 775,
+      "member": [
+        "worker_37/layouts_8064.th",
+        81
+      ],
+      "n": 98,
+      "image": "images/case_0775.png",
+      "image_sha256": "3daa22cb1a488dbc74561f076a079d159d2b07b9e234f76e77826201e4f4a154",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0775.json",
+      "draft_sha256": "9f3af2510e7218d4b4270cdc7edbeb6639f4bae2342d85e1813e35cf9b952665",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0775.json",
+      "final_source_sha256": "8c3a15f01b4ad3f73cfe99929e96d49702fd97d5e7649c3197c7555917965f5c",
+      "axes_bounds": [
+        [
+          0.09626012120832969,
+          0.21700000000000003,
+          0.17747975758334059,
+          0.663
+        ],
+        [
+          0.4192601212083297,
+          0.21700000000000003,
+          0.17747975758334056,
+          0.663
+        ],
+        [
+          0.7422601212083297,
+          0.21700000000000003,
+          0.17747975758334056,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.3398693000199273,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0178",
+      "source_index": 178,
+      "member": [
+        "worker_3/layouts_6384.th",
+        83
+      ],
+      "n": 37,
+      "image": "images/case_0178.png",
+      "image_sha256": "9f14ba906c2e92cc45f8de5f5228b33514a7f10468ea5b6ddd8f0ea56af3da4a",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0178.json",
+      "draft_sha256": "e809d6645ba050bba7a17e9ff49eb1fae1aca30bd41897544bb54a5984c2f3d3",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0178.json",
+      "final_source_sha256": "02c624d23cec363c4fbba2b616700eafe6e32a0cc379b202a6fa0bb518d809bd",
+      "axes_bounds": [
+        [
+          0.044922631529946105,
+          0.21700000000000003,
+          0.28015473694010773,
+          0.663
+        ],
+        [
+          0.3679226315299461,
+          0.21700000000000003,
+          0.28015473694010773,
+          0.663
+        ],
+        [
+          0.6909226315299462,
+          0.21700000000000003,
+          0.28015473694010784,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0083311694528805,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.07564339996315539,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0484",
+      "source_index": 484,
+      "member": [
+        "worker_16/layouts_5936.th",
+        33
+      ],
+      "n": 67,
+      "image": "images/case_0484.png",
+      "image_sha256": "d58f6fe8856a41056c98459724a904824201b1b4110f4e50be15c72210a90c9e",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0484.json",
+      "draft_sha256": "a9b20c939572a05e3329cadb08dfd89865c790a955af1776f00044286c539b02",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0484.json",
+      "final_source_sha256": "0c5808fac89310a478a51f8858417fc31262e8d3a4e47378dcb46022814d27b2",
+      "axes_bounds": [
+        [
+          0.051038310599861,
+          0.21700000000000003,
+          0.26792337880027794,
+          0.663
+        ],
+        [
+          0.374038310599861,
+          0.21700000000000003,
+          0.267923378800278,
+          0.663
+        ],
+        [
+          0.6970383105998611,
+          0.21700000000000003,
+          0.26792337880027794,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.088633186859854,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.16421670001000166,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0445",
+      "source_index": 445,
+      "member": [
+        "worker_71/layouts_8064.th",
+        21
+      ],
+      "n": 63,
+      "image": "images/case_0445.png",
+      "image_sha256": "3a3444fafce7dedd68ddcd1d77a3daa23f321d2563c7a447676935709c542fac",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0445.json",
+      "draft_sha256": "fc325d6da297aa340831b9bb4d4c4511d434ff0bbf03b2d38796e4c6f3b37fbc",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0445.json",
+      "final_source_sha256": "b4283d6a8ec9ca34273bf491ab01b5eab59c598de0bc6525ad99023993401a7f",
+      "axes_bounds": [
+        [
+          0.05503702327079993,
+          0.21700000000000003,
+          0.2599259534584001,
+          0.663
+        ],
+        [
+          0.3780370232707999,
+          0.21700000000000003,
+          0.2599259534584001,
+          0.663
+        ],
+        [
+          0.7010370232708,
+          0.21700000000000003,
+          0.2599259534584002,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0006317224023213,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.1516403000568971,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0918",
+      "source_index": 918,
+      "member": [
+        "worker_27/layouts_2016.th",
+        37
+      ],
+      "n": 112,
+      "image": "images/case_0918.png",
+      "image_sha256": "aa8698bb04425e7ee29e5f82544f53b408c0b2499a4a09a444c80e0e4bbbd72c",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0918.json",
+      "draft_sha256": "6372ebe076f3336f27f4536a8dffbe6d8507f9c9319e69a39a7bb7b4a0957708",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0918.json",
+      "final_source_sha256": "c05dc88101efe30aa0d10e3a45bcb73f063250a4b04688c0a589e6312c4fe87b",
+      "axes_bounds": [
+        [
+          0.08644340795554281,
+          0.21700000000000003,
+          0.19711318408891434,
+          0.663
+        ],
+        [
+          0.4094434079555428,
+          0.21700000000000003,
+          0.19711318408891432,
+          0.663
+        ],
+        [
+          0.7324434079555429,
+          0.21700000000000003,
+          0.19711318408891432,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0045957590903145,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.39573540003038943,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0498",
+      "source_index": 498,
+      "member": [
+        "worker_79/layouts_8736.th",
+        58
+      ],
+      "n": 69,
+      "image": "images/case_0498.png",
+      "image_sha256": "94fae58d743081743ddddcee97cab6b2ced8bfe6ac7937e24077d6098b99e932",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0498.json",
+      "draft_sha256": "ddd2317883963ec7c249b9a7915ea24e3f8fca050f72c9d78b0c340ea032ac22",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0498.json",
+      "final_source_sha256": "5a2e8e79b0f379928a6629e6f91cc16eb35d020ebc399babcf1d02988fd8ecd7",
+      "axes_bounds": [
+        [
+          0.07542798511323533,
+          0.21700000000000003,
+          0.21914402977352926,
+          0.663
+        ],
+        [
+          0.3984279851132353,
+          0.21700000000000003,
+          0.21914402977352931,
+          0.663
+        ],
+        [
+          0.7214279851132355,
+          0.21700000000000003,
+          0.21914402977352931,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.15591139998286963,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0597",
+      "source_index": 597,
+      "member": [
+        "worker_73/layouts_1456.th",
+        29
+      ],
+      "n": 79,
+      "image": "images/case_0597.png",
+      "image_sha256": "0814a53db11955fe4d4bb1581a958387bf3444fc6ecf05d5c75aef6736428156",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0597.json",
+      "draft_sha256": "f9232fbb0dd6cc76c5427971113d8fa15dfb42c93977be3de12a5bd3891123fa",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0597.json",
+      "final_source_sha256": "d6fa874a581209520fe123a5a72683130fa7e3e5eb3c1a1e4076f55ef099393e",
+      "axes_bounds": [
+        [
+          0.052915503198727315,
+          0.21700000000000003,
+          0.2641689936025453,
+          0.663
+        ],
+        [
+          0.37591550319872724,
+          0.21700000000000003,
+          0.2641689936025454,
+          0.663
+        ],
+        [
+          0.6989155031987274,
+          0.21700000000000003,
+          0.2641689936025453,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.040244731951926,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.1759147000266239,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0850",
+      "source_index": 850,
+      "member": [
+        "worker_61/layouts_3360.th",
+        1
+      ],
+      "n": 105,
+      "image": "images/case_0850.png",
+      "image_sha256": "4e60f61963f269724596696f0f3e7abe5ec5731e3b09a1bfc8874b214643c4b0",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0850.json",
+      "draft_sha256": "954835cb288d801a2c88319a4df64ce66836e81b54d311b7504ffa03f3fda01c",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0850.json",
+      "final_source_sha256": "1722ddf0225832e41a56c5053d25ea07ec384f32e8021ed376d680f1fa0a1084",
+      "axes_bounds": [
+        [
+          0.045847617460574946,
+          0.21700000000000003,
+          0.27830476507885005,
+          0.663
+        ],
+        [
+          0.36884761746057493,
+          0.21700000000000003,
+          0.27830476507885005,
+          0.663
+        ],
+        [
+          0.691847617460575,
+          0.21700000000000003,
+          0.27830476507885016,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0038618175008585,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.35520899994298816,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0273",
+      "source_index": 273,
+      "member": [
+        "worker_79/layouts_5376.th",
+        19
+      ],
+      "n": 47,
+      "image": "images/case_0273.png",
+      "image_sha256": "81aa65ed8eb2033d526f09d982475d20f00ce5ce97f4f631f3348aa13fffdcd2",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0273.json",
+      "draft_sha256": "65d655296c3168442e3e513c3450f1a8744312795326915d30f846476d5de378",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0273.json",
+      "final_source_sha256": "e45dbc8854e2bf13e618b1eb2905f694ef84477afed28d5b7bef148c624f12f0",
+      "axes_bounds": [
+        [
+          0.035,
+          0.24887130745416225,
+          0.29999999999999993,
+          0.5992573850916756
+        ],
+        [
+          0.358,
+          0.24887130745416225,
+          0.29999999999999993,
+          0.5992573850916756
+        ],
+        [
+          0.681,
+          0.24887130745416214,
+          0.30000000000000004,
+          0.5992573850916758
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.038621031150983,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.07968210009858012,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0260",
+      "source_index": 260,
+      "member": [
+        "worker_42/layouts_9520.th",
+        8
+      ],
+      "n": 45,
+      "image": "images/case_0260.png",
+      "image_sha256": "a6651f8dc3ea503117d1e7401fe8e37591720d2fa8575581f8c97b03d622f347",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0260.json",
+      "draft_sha256": "a3067e98504034f532509e3e1ed76a81c57d5470c62de7b09ff7b5e466a9baea",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0260.json",
+      "final_source_sha256": "aa71795794c436b592afd5167f10f0b6e80396fc8471c890c5ef8597c4694309",
+      "axes_bounds": [
+        [
+          0.04078132643412383,
+          0.21700000000000003,
+          0.2884373471317523,
+          0.663
+        ],
+        [
+          0.36378132643412375,
+          0.21700000000000003,
+          0.2884373471317524,
+          0.663
+        ],
+        [
+          0.6867813264341239,
+          0.21700000000000003,
+          0.2884373471317523,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.08832670003175735,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0377",
+      "source_index": 377,
+      "member": [
+        "worker_63/layouts_7840.th",
+        51
+      ],
+      "n": 56,
+      "image": "images/case_0377.png",
+      "image_sha256": "cbb40f23f571900b6fadbacdd63bb6f19e875787c3de2a035b297205ee157c4f",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0377.json",
+      "draft_sha256": "894925edc62aac85aecf48da2aec47ded03e90a86533ff353a587580fa997c6a",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0377.json",
+      "final_source_sha256": "302017ea188b0f104d68cd17bd959a832349fcbab547ce167462792a0c838c3e",
+      "axes_bounds": [
+        [
+          0.05930752738889769,
+          0.21700000000000003,
+          0.25138494522220456,
+          0.663
+        ],
+        [
+          0.3823075273888976,
+          0.21700000000000003,
+          0.25138494522220467,
+          0.663
+        ],
+        [
+          0.7053075273888978,
+          0.21700000000000003,
+          0.25138494522220456,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0221460724016693,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.09198589995503426,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0343",
+      "source_index": 343,
+      "member": [
+        "worker_2/layouts_1456.th",
+        96
+      ],
+      "n": 53,
+      "image": "images/case_0343.png",
+      "image_sha256": "49aeec377c80cd0700392e1d5705710b16a02cea7c77a38b26e8b41deb22b1d1",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0343.json",
+      "draft_sha256": "430ce5667fe9538db47ea7d683bbefde4504a33f1c57de035f41209ca006b45d",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0343.json",
+      "final_source_sha256": "c1e11caab5ed380a9bb9a197857aff82093a0b5372dee6397ca079d707382954",
+      "axes_bounds": [
+        [
+          0.08542700206505852,
+          0.21700000000000003,
+          0.19914599586988288,
+          0.663
+        ],
+        [
+          0.4084270020650585,
+          0.21700000000000003,
+          0.19914599586988285,
+          0.663
+        ],
+        [
+          0.7314270020650586,
+          0.21700000000000003,
+          0.1991459958698829,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0001168292595717,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.08205239998642355,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0292",
+      "source_index": 292,
+      "member": [
+        "worker_19/layouts_8960.th",
+        55
+      ],
+      "n": 48,
+      "image": "images/case_0292.png",
+      "image_sha256": "b5baed8db107ec537ccf89882801d9e87fbb9d7e57a11cdddc8764e5847b04a1",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0292.json",
+      "draft_sha256": "4762d6a04fe46fdef056e30232ea6db1a7667c9ab7d648b25ffdbe45430bf487",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0292.json",
+      "final_source_sha256": "a353eb5f45ffe74ef7dd8f11d4c9b9e17325789dcd66a5aa1bb0e41e779b8d9a",
+      "axes_bounds": [
+        [
+          0.08759352273696515,
+          0.21700000000000003,
+          0.19481295452606967,
+          0.663
+        ],
+        [
+          0.41059352273696514,
+          0.21700000000000003,
+          0.19481295452606961,
+          0.663
+        ],
+        [
+          0.7335935227369652,
+          0.21700000000000003,
+          0.19481295452606961,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.1955712832567107,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.08338299999013543,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0078",
+      "source_index": 78,
+      "member": [
+        "worker_36/layouts_448.th",
+        31
+      ],
+      "n": 28,
+      "image": "images/case_0078.png",
+      "image_sha256": "dcdb61dbce99c0aead863928fb5905fb41d4cfdc5b51599d7c266b9c9cab515f",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0078.json",
+      "draft_sha256": "589c495fbbf60c8ec980963d05f4c0000a51a63502b7f1a14fdd75c2f7e0a494",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0078.json",
+      "final_source_sha256": "e0f5a999f09fa01b7aa3afd92e0ba54ce83d0dab75bada4a377f71e80c1fcf35",
+      "axes_bounds": [
+        [
+          0.05957817112428035,
+          0.21700000000000003,
+          0.25084365775143924,
+          0.663
+        ],
+        [
+          0.38257817112428033,
+          0.21700000000000003,
+          0.2508436577514393,
+          0.663
+        ],
+        [
+          0.7055781711242805,
+          0.21700000000000003,
+          0.25084365775143924,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0284839109410202,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.06501360004767776,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0852",
+      "source_index": 852,
+      "member": [
+        "worker_33/layouts_7728.th",
+        81
+      ],
+      "n": 106,
+      "image": "images/case_0852.png",
+      "image_sha256": "e3edeafd47bd08ffcdaf730aa77077e526b1840d39258fc996ae88fad8952719",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0852.json",
+      "draft_sha256": "89310ab16785d73735d4a78bc1ab76b4cedb459c46095007d4fa23d2b6a3353f",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0852.json",
+      "final_source_sha256": "0ac3774830b060228ea122e5350cb92c8f0d375f6a48eb9e07fe2ca2e061362c",
+      "axes_bounds": [
+        [
+          0.1009214230231592,
+          0.21700000000000003,
+          0.16815715395368153,
+          0.663
+        ],
+        [
+          0.42392142302315916,
+          0.21700000000000003,
+          0.16815715395368158,
+          0.663
+        ],
+        [
+          0.7469214230231593,
+          0.21700000000000003,
+          0.16815715395368147,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.36657389998435974,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0044",
+      "source_index": 44,
+      "member": [
+        "worker_23/layouts_5936.th",
+        21
+      ],
+      "n": 25,
+      "image": "images/case_0044.png",
+      "image_sha256": "910da3db9e0c428ad5d3218155eb9aa064d9c5191f9edaf100e5e0c0d710b56b",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0044.json",
+      "draft_sha256": "ca0d081ee8e38c8fd5b6cd8ce43dce9133df94c715ec565c030b9e1639055786",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0044.json",
+      "final_source_sha256": "81df7151809cdfd45f35bd235c1f0e7623da69e69f4f6f792325b1a405e7596e",
+      "axes_bounds": [
+        [
+          0.035,
+          0.3485003792357261,
+          0.29999999999999993,
+          0.39999924152854793
+        ],
+        [
+          0.358,
+          0.3485003792357261,
+          0.29999999999999993,
+          0.39999924152854793
+        ],
+        [
+          0.681,
+          0.34850037923572597,
+          0.30000000000000004,
+          0.39999924152854804
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0371350064842026,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.06366769992746413,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0862",
+      "source_index": 862,
+      "member": [
+        "worker_84/layouts_6944.th",
+        27
+      ],
+      "n": 107,
+      "image": "images/case_0862.png",
+      "image_sha256": "1661465a30e5bb1c1c6f7db5f7fe58a4d58024924a644fd3acddd61535170dbf",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0862.json",
+      "draft_sha256": "cafa24bbb89cd96fb892ed2432993a265a01baf29a48f5f4844d74723b91086e",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0862.json",
+      "final_source_sha256": "02f8eee05011adf511417d33ae7d9e1ff4233e8bfbcd41c3f96c88bfc0cfe3f2",
+      "axes_bounds": [
+        [
+          0.08333341354331518,
+          0.21700000000000003,
+          0.20333317291336955,
+          0.663
+        ],
+        [
+          0.40633341354331515,
+          0.21700000000000003,
+          0.20333317291336966,
+          0.663
+        ],
+        [
+          0.7293334135433153,
+          0.21700000000000003,
+          0.2033331729133696,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0056828887650602,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.3333938999567181,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0429",
+      "source_index": 429,
+      "member": [
+        "worker_45/layouts_560.th",
+        70
+      ],
+      "n": 62,
+      "image": "images/case_0429.png",
+      "image_sha256": "aa2628c11a6725930b11c066008f52ef6c6956a6a88999f9b435df2939428323",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0429.json",
+      "draft_sha256": "54ce8d6a8c119db9fe867b55a7a68b97a45e98edb6355a411662cefe8fce15dd",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0429.json",
+      "final_source_sha256": "63721564ef2e74883ae85a5381d77bc3ea3b6e8117bea0f4bc639a4527a20e7b",
+      "axes_bounds": [
+        [
+          0.09097002039902621,
+          0.21700000000000003,
+          0.18805995920194754,
+          0.663
+        ],
+        [
+          0.4139700203990262,
+          0.21700000000000003,
+          0.1880599592019475,
+          0.663
+        ],
+        [
+          0.7369700203990264,
+          0.21700000000000003,
+          0.1880599592019475,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0570177220372625,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.14798940008040518,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0875",
+      "source_index": 875,
+      "member": [
+        "worker_90/layouts_3472.th",
+        76
+      ],
+      "n": 108,
+      "image": "images/case_0875.png",
+      "image_sha256": "80a4a7d448e5b229ff56ea020ac9ac278b741107864822f4833ee73b41ae794b",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0875.json",
+      "draft_sha256": "e2b8547266b17e03d2d87f2fe723e3e03733b6dab19d4f18e2990285646b36c9",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0875.json",
+      "final_source_sha256": "9bc328a6092c464f8ebf8a7446bb4a7954cbe07962a5e3f0613840e9eff8dd50",
+      "axes_bounds": [
+        [
+          0.09553419353382003,
+          0.21700000000000003,
+          0.17893161293235987,
+          0.663
+        ],
+        [
+          0.41853419353382004,
+          0.21700000000000003,
+          0.17893161293235982,
+          0.663
+        ],
+        [
+          0.7415341935338201,
+          0.21700000000000003,
+          0.17893161293235993,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.064974930263861,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.3449409999884665,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0061",
+      "source_index": 61,
+      "member": [
+        "worker_69/layouts_3136.th",
+        84
+      ],
+      "n": 26,
+      "image": "images/case_0061.png",
+      "image_sha256": "d68b7b127353970cf1268590e3559568ebfc154f8b8fc56cc455ee5c96fe388b",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0061.json",
+      "draft_sha256": "f47dc0d40b4733455bec80da356544b1db00cae419d6193c1862be303c23f012",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0061.json",
+      "final_source_sha256": "97ce27129fa5668f65efdba2810370000e5ee7498242a60946091e775862985d",
+      "axes_bounds": [
+        [
+          0.03959931960224025,
+          0.21700000000000003,
+          0.29080136079551944,
+          0.663
+        ],
+        [
+          0.36259931960224023,
+          0.21700000000000003,
+          0.29080136079551944,
+          0.663
+        ],
+        [
+          0.6855993196022403,
+          0.21700000000000003,
+          0.29080136079551944,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.045119322763308,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.06960570008959621,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0144",
+      "source_index": 144,
+      "member": [
+        "worker_33/layouts_1456.th",
+        48
+      ],
+      "n": 34,
+      "image": "images/case_0144.png",
+      "image_sha256": "59477f860b2fb7d63ffb92711efb90269be01f8aa8bda1055fe92564431ff207",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0144.json",
+      "draft_sha256": "033db28b93c28b93a58c01ef2f3bf06e1249f2b9c763d978b168644217ca89f1",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0144.json",
+      "final_source_sha256": "b0da27f96d33ce41e1304ebdade4e6c8e8cb307185f5bca9b3fbd9bfba2e8733",
+      "axes_bounds": [
+        [
+          0.05250241221454058,
+          0.21700000000000003,
+          0.2649951755709188,
+          0.663
+        ],
+        [
+          0.3755024122145405,
+          0.21700000000000003,
+          0.2649951755709189,
+          0.663
+        ],
+        [
+          0.6985024122145407,
+          0.21700000000000003,
+          0.2649951755709188,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0484269394402468,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.07388679997529835,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0882",
+      "source_index": 882,
+      "member": [
+        "worker_60/layouts_4816.th",
+        72
+      ],
+      "n": 109,
+      "image": "images/case_0882.png",
+      "image_sha256": "38a4642fd290c40de097399cc13b4dcd29c5badb5c72da1d82a9a223f6e38cd6",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0882.json",
+      "draft_sha256": "5933c78d3017e9e906bae78dd3643868ce1d34da41f098eb19859ac893377a5c",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0882.json",
+      "final_source_sha256": "12687420bd8ff477c7e32a63c2c6973c612304f4b92233334432b1c94c054fdb",
+      "axes_bounds": [
+        [
+          0.10111330206668254,
+          0.21700000000000003,
+          0.1677733958666349,
+          0.663
+        ],
+        [
+          0.4241133020666825,
+          0.21700000000000003,
+          0.16777339586663487,
+          0.663
+        ],
+        [
+          0.7471133020666827,
+          0.21700000000000003,
+          0.16777339586663487,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0003441579828556,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.3392490999540314,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0317",
+      "source_index": 317,
+      "member": [
+        "worker_55/layouts_784.th",
+        58
+      ],
+      "n": 51,
+      "image": "images/case_0317.png",
+      "image_sha256": "f9c677be225d75b8c0e027930b6b29a916bd2d480dcd6b80a0dd932fcbb5af78",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0317.json",
+      "draft_sha256": "0c1eacc41a1a128fe8eccb33d41e2ddd55f28fcaa76846de105475e4844705a2",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0317.json",
+      "final_source_sha256": "09a725a6f1167c51f805abe7432ce0225a34de5d0d7583f6b04f0f64ab600114",
+      "axes_bounds": [
+        [
+          0.06142214974517894,
+          0.21700000000000003,
+          0.24715570050964203,
+          0.663
+        ],
+        [
+          0.3844221497451789,
+          0.21700000000000003,
+          0.24715570050964214,
+          0.663
+        ],
+        [
+          0.707422149745179,
+          0.21700000000000003,
+          0.24715570050964208,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0716109659415989,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.0827184000518173,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0997",
+      "source_index": 997,
+      "member": [
+        "worker_89/layouts_1456.th",
+        82
+      ],
+      "n": 120,
+      "image": "images/case_0997.png",
+      "image_sha256": "4525e29fbace0e17defe05c277da9bdf3d6d9867c2b8dae9984589ba440ae8e1",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0997.json",
+      "draft_sha256": "4147d9a9b01a000e2cad814f0055a4087301a776c01da8c22477cfbac979bcb5",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0997.json",
+      "final_source_sha256": "a96bd32fe7c151d1ef776e3b9fd233770a4645ea5c4dca4a2a260c4c7f37d6d5",
+      "axes_bounds": [
+        [
+          0.09739313426587533,
+          0.21700000000000003,
+          0.1752137314682493,
+          0.663
+        ],
+        [
+          0.4203931342658753,
+          0.21700000000000003,
+          0.17521373146824926,
+          0.663
+        ],
+        [
+          0.7433931342658755,
+          0.21700000000000003,
+          0.17521373146824926,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0526197441660043,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.5778172001009807,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0972",
+      "source_index": 972,
+      "member": [
+        "worker_33/layouts_5264.th",
+        49
+      ],
+      "n": 118,
+      "image": "images/case_0972.png",
+      "image_sha256": "6bea5c986cb561814cfdad692a2afa1f16f159762e89671ab93300d7f252ae0e",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0972.json",
+      "draft_sha256": "da58bded640cf0e581326ff5f11b1bb0ce0f5237f495bb8705d646f85c1e17ff",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0972.json",
+      "final_source_sha256": "47e3c9d4418450382a883c945d9bac212e32ad89194a8421b1093f8e75812d70",
+      "axes_bounds": [
+        [
+          0.0986244749481046,
+          0.21700000000000003,
+          0.17275105010379072,
+          0.663
+        ],
+        [
+          0.42162447494810457,
+          0.21700000000000003,
+          0.17275105010379083,
+          0.663
+        ],
+        [
+          0.7446244749481047,
+          0.21700000000000003,
+          0.17275105010379077,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0155624812694133,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.2311591999605298,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0166",
+      "source_index": 166,
+      "member": [
+        "worker_36/layouts_6160.th",
+        64
+      ],
+      "n": 36,
+      "image": "images/case_0166.png",
+      "image_sha256": "905f97e95534d3a2a2f4400a9f82d4f7f9ea3d3866c09d474f0a855f33f942be",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0166.json",
+      "draft_sha256": "7ba810f089e1a9a12a4684518566aec8b0342787f1bde143ddda8ad1ab1fad55",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0166.json",
+      "final_source_sha256": "eae6d931bb5de16f6dd245d5a26d2df2a5d94a640f4f5ef4efb1796a7a388679",
+      "axes_bounds": [
+        [
+          0.05680303180628529,
+          0.21700000000000003,
+          0.25639393638742936,
+          0.663
+        ],
+        [
+          0.3798030318062853,
+          0.21700000000000003,
+          0.25639393638742936,
+          0.663
+        ],
+        [
+          0.7028030318062853,
+          0.21700000000000003,
+          0.25639393638742947,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0590103167081433,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.0779182999394834,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0136",
+      "source_index": 136,
+      "member": [
+        "worker_92/layouts_8736.th",
+        25
+      ],
+      "n": 33,
+      "image": "images/case_0136.png",
+      "image_sha256": "ff339e8d96fddc643add23afcc4789834d56fef6e49cd2ea9f2a77cf1834d70b",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0136.json",
+      "draft_sha256": "1646ffcc6bc1af4cc103ecca73c3ce5bc625094e96f1f51282d876e0cf544786",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0136.json",
+      "final_source_sha256": "a80783f1c1bc6b71233c1de66e7064ed49985ccd54e479b87cf2f27b64524100",
+      "axes_bounds": [
+        [
+          0.035,
+          0.2494018150929455,
+          0.29999999999999993,
+          0.5981963698141091
+        ],
+        [
+          0.358,
+          0.2494018150929455,
+          0.29999999999999993,
+          0.5981963698141091
+        ],
+        [
+          0.681,
+          0.2494018150929454,
+          0.30000000000000004,
+          0.5981963698141093
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0055837184294305,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.072812799946405,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0276",
+      "source_index": 276,
+      "member": [
+        "worker_99/layouts_3696.th",
+        105
+      ],
+      "n": 47,
+      "image": "images/case_0276.png",
+      "image_sha256": "b51b26309695541c9feb3c935dc76ee1b4f86cae20c0015acc4276aa17387043",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0276.json",
+      "draft_sha256": "d41dbe703776a1373b00403c6d295d74953a00dcff91dd9a43ffed9655e4759e",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0276.json",
+      "final_source_sha256": "79c1446f69cf54a753fa0345136417487e2e76c7abe91c5b9efe36d348f810a3",
+      "axes_bounds": [
+        [
+          0.09885807514831901,
+          0.21700000000000003,
+          0.1722838497033619,
+          0.663
+        ],
+        [
+          0.42185807514831897,
+          0.21700000000000003,
+          0.17228384970336197,
+          0.663
+        ],
+        [
+          0.7448580751483191,
+          0.21700000000000003,
+          0.17228384970336186,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0007364345128644,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.0852829999057576,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0089",
+      "source_index": 89,
+      "member": [
+        "worker_17/layouts_2016.th",
+        67
+      ],
+      "n": 29,
+      "image": "images/case_0089.png",
+      "image_sha256": "2052ac5016c7005fac9a8aa07089f358a00514299d83f07cd4eabc5d48e39130",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0089.json",
+      "draft_sha256": "c4aa164f93368012b374270fdcf5c9b491ae7c0f4011a0f8caeeb4108c29cbda",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0089.json",
+      "final_source_sha256": "b4e42d908d832fbfcf1cf6641bd6d3bc88bd0d31f21f6ac71ca9e311ebc7d8e7",
+      "axes_bounds": [
+        [
+          0.035,
+          0.2839654152432915,
+          0.29999999999999993,
+          0.5290691695134171
+        ],
+        [
+          0.358,
+          0.2839654152432915,
+          0.29999999999999993,
+          0.5290691695134171
+        ],
+        [
+          0.681,
+          0.2839654152432914,
+          0.30000000000000004,
+          0.5290691695134173
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.034901165504758,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.0703897998901084,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0376",
+      "source_index": 376,
+      "member": [
+        "worker_63/layouts_7840.th",
+        98
+      ],
+      "n": 56,
+      "image": "images/case_0376.png",
+      "image_sha256": "00389e9d999983691dc63e9b05c124a18c9566f3bfc156ea07f16613398cae30",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0376.json",
+      "draft_sha256": "8809368d6dd26d225d4db4bf43c001c36004f340f98825a24597e9c0d3843855",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0376.json",
+      "final_source_sha256": "b2edf7cb22c7f7bf186e22f29a3774be1c8bba951f9ea5b3e184c7b327a20d30",
+      "axes_bounds": [
+        [
+          0.10116460561308904,
+          0.21700000000000003,
+          0.16767078877382185,
+          0.663
+        ],
+        [
+          0.424164605613089,
+          0.21700000000000003,
+          0.1676707887738219,
+          0.663
+        ],
+        [
+          0.7471646056130892,
+          0.21700000000000003,
+          0.1676707887738218,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.003879301038758,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.08788339991588145,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0245",
+      "source_index": 245,
+      "member": [
+        "worker_75/layouts_7728.th",
+        48
+      ],
+      "n": 44,
+      "image": "images/case_0245.png",
+      "image_sha256": "af3cd82e03adc7f74ce6c9d305b6c7f5c421cb0b51522fdb01eb7f58322b9a58",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0245.json",
+      "draft_sha256": "cd36ee81d46af28c4f53ca632ffb47669d4109b61c8c4e3df07a173cb1c9ca59",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0245.json",
+      "final_source_sha256": "50ae9be69bb0753013581ff2a2d953d6fb50417cc27877a80b70658507877cee",
+      "axes_bounds": [
+        [
+          0.05836142369704109,
+          0.21700000000000003,
+          0.25327715260591777,
+          0.663
+        ],
+        [
+          0.38136142369704107,
+          0.21700000000000003,
+          0.25327715260591777,
+          0.663
+        ],
+        [
+          0.7043614236970411,
+          0.21700000000000003,
+          0.2532771526059179,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0615837491536884,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.08690140000544488,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0692",
+      "source_index": 692,
+      "member": [
+        "worker_24/layouts_2016.th",
+        104
+      ],
+      "n": 90,
+      "image": "images/case_0692.png",
+      "image_sha256": "d0554deebdfc214f3f45cf510a0d7bf8b4fa6565c2cd5a5972883ce7fbabd8c9",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0692.json",
+      "draft_sha256": "ccb3b53c880f69e29de76a121d26d984712607572174e2bd22973e730ff1eeaf",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0692.json",
+      "final_source_sha256": "aeb21f66a017128e5d788a30cdf60ddd873ee04361ebf8cf9fcd9bbe991fd407",
+      "axes_bounds": [
+        [
+          0.09420758759256345,
+          0.21700000000000003,
+          0.181584824814873,
+          0.663
+        ],
+        [
+          0.41720758759256343,
+          0.21700000000000003,
+          0.18158482481487298,
+          0.663
+        ],
+        [
+          0.7402075875925636,
+          0.21700000000000003,
+          0.18158482481487304,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0055978122002631,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.31459219998214394,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0592",
+      "source_index": 592,
+      "member": [
+        "worker_18/layouts_4144.th",
+        83
+      ],
+      "n": 79,
+      "image": "images/case_0592.png",
+      "image_sha256": "a3de64887d296fa01d14829ce25ce317b8c8c3cc1b54d23a60ed62f4d6631ae5",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0592.json",
+      "draft_sha256": "9fc6d991bb3c7de839df43162f7f11ac3510cf4554d4881fcfdf639252b8e237",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0592.json",
+      "final_source_sha256": "4d1beb91867968fb2048db22fc464da4c7fee2dc9654a1ff9cd428ce5985087d",
+      "axes_bounds": [
+        [
+          0.09228615531305914,
+          0.21700000000000003,
+          0.18542768937388168,
+          0.663
+        ],
+        [
+          0.4152861553130591,
+          0.21700000000000003,
+          0.18542768937388165,
+          0.663
+        ],
+        [
+          0.7382861553130593,
+          0.21700000000000003,
+          0.18542768937388165,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.015149607760949,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.16543770011048764,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0034",
+      "source_index": 34,
+      "member": [
+        "worker_37/layouts_7056.th",
+        45
+      ],
+      "n": 24,
+      "image": "images/case_0034.png",
+      "image_sha256": "7b9bd19e5fa2019f9269eb9b51c61e36c8b2414818fd28f7845c3f15dd230cd9",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0034.json",
+      "draft_sha256": "8143fc8a9c88073483766a75e4cddf563b6b8e3cd0f65817560bb1f150401b5a",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0034.json",
+      "final_source_sha256": "ae039fd8a10202557cdce46d271207b5b12867205a8de1b6e926e987c0566be7",
+      "axes_bounds": [
+        [
+          0.035,
+          0.2916240173324966,
+          0.29999999999999993,
+          0.5137519653350069
+        ],
+        [
+          0.358,
+          0.2916240173324966,
+          0.29999999999999993,
+          0.5137519653350069
+        ],
+        [
+          0.681,
+          0.2916240173324965,
+          0.30000000000000004,
+          0.5137519653350071
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0951945067439925,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.06966119993012398,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0849",
+      "source_index": 849,
+      "member": [
+        "worker_58/layouts_6272.th",
+        63
+      ],
+      "n": 105,
+      "image": "images/case_0849.png",
+      "image_sha256": "5ae4a3250698e008501c2e3d43d962982a4a19ba32380af9acb064975cb89dcc",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0849.json",
+      "draft_sha256": "2ac27e754905939febe521396e07814b26df0e5f559fb542b7bcd3941c100d81",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0849.json",
+      "final_source_sha256": "b5db3c4ec1abc0d65bc948ef84b908672823a27e4063daa54f91a3f8fa7c30d4",
+      "axes_bounds": [
+        [
+          0.09669067112231648,
+          0.21700000000000003,
+          0.17661865775536695,
+          0.663
+        ],
+        [
+          0.41969067112231645,
+          0.21700000000000003,
+          0.17661865775536706,
+          0.663
+        ],
+        [
+          0.7426906711223166,
+          0.21700000000000003,
+          0.176618657755367,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0179328765219482,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.39384540007449687,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0568",
+      "source_index": 568,
+      "member": [
+        "worker_75/layouts_8624.th",
+        80
+      ],
+      "n": 77,
+      "image": "images/case_0568.png",
+      "image_sha256": "f8c281f2545faefdcd5aa464f13162f022ad9b1f35eee9b9c60e1a6ccffe9b0b",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0568.json",
+      "draft_sha256": "981164ec7763e678ed2960aa3d8794cf99cdc08088d644d6376da78e3dd66ecf",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0568.json",
+      "final_source_sha256": "4e78b98132040e3722cb68be9aa2d0c02bb1ec967d713325105da02fea6e2a7a",
+      "axes_bounds": [
+        [
+          0.08722316126947056,
+          0.21700000000000003,
+          0.19555367746105884,
+          0.663
+        ],
+        [
+          0.41022316126947056,
+          0.21700000000000003,
+          0.19555367746105878,
+          0.663
+        ],
+        [
+          0.7332231612694706,
+          0.21700000000000003,
+          0.19555367746105878,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.15855090005788952,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0318",
+      "source_index": 318,
+      "member": [
+        "worker_50/layouts_1232.th",
+        49
+      ],
+      "n": 51,
+      "image": "images/case_0318.png",
+      "image_sha256": "15cc4c36d7a216c0530511ee866d30465087756635db3951cde023fbccc16a1d",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0318.json",
+      "draft_sha256": "4cbf8e08c0188cd6a387ef01c0b07153ad200796b77e51bcc16ae939c54f58f6",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0318.json",
+      "final_source_sha256": "f600371f22b59c2c3a65b9067d232261b8b66bfb2d17b9b88aec17492abad398",
+      "axes_bounds": [
+        [
+          0.06479958828311917,
+          0.21700000000000003,
+          0.24040082343376162,
+          0.663
+        ],
+        [
+          0.3877995882831191,
+          0.21700000000000003,
+          0.24040082343376168,
+          0.663
+        ],
+        [
+          0.7107995882831193,
+          0.21700000000000003,
+          0.24040082343376157,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0091632550085654,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.08999549993313849,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0324",
+      "source_index": 324,
+      "member": [
+        "worker_86/layouts_4592.th",
+        98
+      ],
+      "n": 51,
+      "image": "images/case_0324.png",
+      "image_sha256": "870e24393c5f44dcd65e43109afd42c8e7aed24a77a6c5fc4990f04e48093986",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0324.json",
+      "draft_sha256": "a2ede85a5ff360af7ce2b5991c56994d1ffab3d5288af6a83e1f1b8591ff3f64",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0324.json",
+      "final_source_sha256": "99cd9e5b818560dfd5904c746d08e0d55c920e9f394c12a34457147d4c28dd63",
+      "axes_bounds": [
+        [
+          0.09091947513051835,
+          0.21700000000000003,
+          0.18816104973896325,
+          0.663
+        ],
+        [
+          0.4139194751305183,
+          0.21700000000000003,
+          0.1881610497389633,
+          0.663
+        ],
+        [
+          0.7369194751305185,
+          0.21700000000000003,
+          0.1881610497389632,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0732509589559962,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.07873170007951558,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0468",
+      "source_index": 468,
+      "member": [
+        "worker_6/layouts_4368.th",
+        110
+      ],
+      "n": 66,
+      "image": "images/case_0468.png",
+      "image_sha256": "c9631ac8df33f3e53d9de575166a233f10f1d92b0edfe81ae655fbbbdf94a744",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0468.json",
+      "draft_sha256": "577b1ae7569ae9f6bb889bf03e665fabe81b31067b0de3c5280e0b1d12b00f2c",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0468.json",
+      "final_source_sha256": "9c28af9019cefc8ffe56b57d951a21846ecfb24c3f7499a961f983afd26b9d55",
+      "axes_bounds": [
+        [
+          0.10420342738354016,
+          0.21700000000000003,
+          0.16159314523291962,
+          0.663
+        ],
+        [
+          0.4272034273835401,
+          0.21700000000000003,
+          0.16159314523291968,
+          0.663
+        ],
+        [
+          0.7502034273835403,
+          0.21700000000000003,
+          0.16159314523291957,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0037895540638402,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.1313869000878185,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0057",
+      "source_index": 57,
+      "member": [
+        "worker_69/layouts_3136.th",
+        48
+      ],
+      "n": 26,
+      "image": "images/case_0057.png",
+      "image_sha256": "4319e738fa39d83e0f5848dac89d5795b757c2d5f6eb7ea8ad49f83ffc0e1122",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0057.json",
+      "draft_sha256": "ff70f68eb85266d13f251f7dbc79eee41bd093ea902b3caa6dd91527ae102598",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0057.json",
+      "final_source_sha256": "1dd59eb8720458c83ae8f33fcac8731210aa5cda3eff0ca69b2cc51f7adfccdd",
+      "axes_bounds": [
+        [
+          0.06390981975172476,
+          0.21700000000000003,
+          0.2421803604965504,
+          0.663
+        ],
+        [
+          0.3869098197517247,
+          0.21700000000000003,
+          0.2421803604965504,
+          0.663
+        ],
+        [
+          0.7099098197517248,
+          0.21700000000000003,
+          0.24218036049655045,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0101355021446536,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.07145070005208254,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0895",
+      "source_index": 895,
+      "member": [
+        "worker_10/layouts_4592.th",
+        4
+      ],
+      "n": 110,
+      "image": "images/case_0895.png",
+      "image_sha256": "7c6b9983ff5936b1fab5e69711fdda18e4738130cdefcb09d6a1d104996de893",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0895.json",
+      "draft_sha256": "580756e3077b3859e58123402ad8fbf855c547845a9bf97810173680eb864fec",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0895.json",
+      "final_source_sha256": "bb15e620107edaf92dcd4e417dd7e62c40ddaa1ba0ba64ffb83eeeb312cbab4f",
+      "axes_bounds": [
+        [
+          0.0750319288169297,
+          0.21700000000000003,
+          0.2199361423661405,
+          0.663
+        ],
+        [
+          0.39803192881692967,
+          0.21700000000000003,
+          0.2199361423661405,
+          0.663
+        ],
+        [
+          0.7210319288169298,
+          0.21700000000000003,
+          0.21993614236614056,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0135302764594898,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.32465379999484867,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0910",
+      "source_index": 910,
+      "member": [
+        "worker_66/layouts_8736.th",
+        74
+      ],
+      "n": 112,
+      "image": "images/case_0910.png",
+      "image_sha256": "b3b0fdcec296185aaa3966f003866a05e2848e91f8e7824e0134b6ea7fb0fd37",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0910.json",
+      "draft_sha256": "5c4deced9c4870537413380d25f6afd3055b2f7cd86857af694ceecd8dfb0c4f",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0910.json",
+      "final_source_sha256": "37c29b66aea61304e3e09994ea73cacccb148d2fc031532d1a713778ff71c2c0",
+      "axes_bounds": [
+        [
+          0.09494147209576807,
+          0.21700000000000003,
+          0.18011705580846377,
+          0.663
+        ],
+        [
+          0.41794147209576804,
+          0.21700000000000003,
+          0.18011705580846382,
+          0.663
+        ],
+        [
+          0.7409414720957681,
+          0.21700000000000003,
+          0.18011705580846382,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0675866255034245,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.5697157999966294,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0037",
+      "source_index": 37,
+      "member": [
+        "worker_29/layouts_3472.th",
+        107
+      ],
+      "n": 24,
+      "image": "images/case_0037.png",
+      "image_sha256": "5f437f5cfa3be31fcf6d267f9eb2d4d2ce2486a000e08154dae5eefd7c840265",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0037.json",
+      "draft_sha256": "d358992b9b348ce5fc893bee7d13831f3c5110a0053ff26a493a3d5f8ebc3757",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0037.json",
+      "final_source_sha256": "e8c7055ea74a9920653bcc39bff4ac389a7c9d78a7ef05d2bdaa250aa2a1f5c1",
+      "axes_bounds": [
+        [
+          0.07279375953469032,
+          0.21700000000000003,
+          0.22441248093061933,
+          0.663
+        ],
+        [
+          0.3957937595346903,
+          0.21700000000000003,
+          0.22441248093061927,
+          0.663
+        ],
+        [
+          0.7187937595346904,
+          0.21700000000000003,
+          0.22441248093061938,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.2103948531222364,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.07350980001501739,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0412",
+      "source_index": 412,
+      "member": [
+        "worker_0/layouts_5264.th",
+        106
+      ],
+      "n": 60,
+      "image": "images/case_0412.png",
+      "image_sha256": "7f9f32733128245d695d32b1de92eccf4142e676e624b821c45ab4b7e800734c",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0412.json",
+      "draft_sha256": "4fb34a1894ad8b40f56d8edcbfb20e5b0e8112628eb9e32e7ba68898ef222164",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0412.json",
+      "final_source_sha256": "1b2891a0079858fea11769b80d514788bfa45449cee7b9b18137f1c0296eddab",
+      "axes_bounds": [
+        [
+          0.11195091284325669,
+          0.21700000000000003,
+          0.14609817431348654,
+          0.663
+        ],
+        [
+          0.43495091284325665,
+          0.21700000000000003,
+          0.14609817431348665,
+          0.663
+        ],
+        [
+          0.7579509128432568,
+          0.21700000000000003,
+          0.1460981743134866,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.1462262999266386,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0199",
+      "source_index": 199,
+      "member": [
+        "worker_84/layouts_3584.th",
+        43
+      ],
+      "n": 39,
+      "image": "images/case_0199.png",
+      "image_sha256": "a18b04ae9c8906ee8dc884b6d381e3e6ad2029994495648cc068bf5de21d6eab",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0199.json",
+      "draft_sha256": "3c0835ae8ee100b8a5076bf7a9df3f49aa7e6b747432bb0f55a542e9493be79c",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0199.json",
+      "final_source_sha256": "f8899b87f507c803a4766b2d95a6be574bf8af1398f1e2336d4d57f070000924",
+      "axes_bounds": [
+        [
+          0.052178705086806526,
+          0.21700000000000003,
+          0.2656425898263869,
+          0.663
+        ],
+        [
+          0.3751787050868065,
+          0.21700000000000003,
+          0.2656425898263869,
+          0.663
+        ],
+        [
+          0.6981787050868067,
+          0.21700000000000003,
+          0.2656425898263869,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.0749488000292331,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0082",
+      "source_index": 82,
+      "member": [
+        "worker_93/layouts_7056.th",
+        15
+      ],
+      "n": 28,
+      "image": "images/case_0082.png",
+      "image_sha256": "989ef198b94f41dc79b83878c71e9708f4037bfe13266e40b83f1aaee38c4041",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0082.json",
+      "draft_sha256": "c1894fd369c7ee11d43f67cb745f691521155e13167d7fd799bdfd61252ce3ae",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0082.json",
+      "final_source_sha256": "a422784fcf40eac326bec6df4d27cb38da2c817056eee9c4d7cfd5fd26336195",
+      "axes_bounds": [
+        [
+          0.035,
+          0.2415238005008586,
+          0.29999999999999993,
+          0.6139523989982829
+        ],
+        [
+          0.358,
+          0.2415238005008586,
+          0.29999999999999993,
+          0.6139523989982829
+        ],
+        [
+          0.681,
+          0.24152380050085848,
+          0.30000000000000004,
+          0.6139523989982831
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0298493527293888,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.0717882999451831,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0510",
+      "source_index": 510,
+      "member": [
+        "worker_96/layouts_8848.th",
+        19
+      ],
+      "n": 70,
+      "image": "images/case_0510.png",
+      "image_sha256": "fbabf0bb1a0db6a60b0108534147416daee607c52e2c8200301a371a3ad800e2",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0510.json",
+      "draft_sha256": "1e1545d7f33d8a203f643bb3938e9408a851bc9d33dffd1d44a9107e0a17e35f",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0510.json",
+      "final_source_sha256": "2b24d2267eca6ed955d80140026fdac0bf023b316121c5d36da12e7a24c959a2",
+      "axes_bounds": [
+        [
+          0.0663156640205544,
+          0.21700000000000003,
+          0.23736867195889116,
+          0.663
+        ],
+        [
+          0.3893156640205544,
+          0.21700000000000003,
+          0.2373686719588911,
+          0.663
+        ],
+        [
+          0.7123156640205545,
+          0.21700000000000003,
+          0.23736867195889122,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0052049891498698,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.1568262999644503,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0503",
+      "source_index": 503,
+      "member": [
+        "worker_71/layouts_8736.th",
+        63
+      ],
+      "n": 69,
+      "image": "images/case_0503.png",
+      "image_sha256": "9323493371cb3d7730023facbfa75192d65191c7decbe6ef60c21fe65fcbffb9",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0503.json",
+      "draft_sha256": "c74043a73007e353ad4ce7bd2e22355e049658b2cb887edee2198b727357034b",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0503.json",
+      "final_source_sha256": "6ff933ebc6fac6e273e0f997ac76eb8008c0b35b45e0afcaab1ce454eb571385",
+      "axes_bounds": [
+        [
+          0.0851586284857529,
+          0.21700000000000003,
+          0.19968274302849415,
+          0.663
+        ],
+        [
+          0.4081586284857529,
+          0.21700000000000003,
+          0.1996827430284941,
+          0.663
+        ],
+        [
+          0.731158628485753,
+          0.21700000000000003,
+          0.1996827430284942,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0067107017228656,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.13347669993527234,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0645",
+      "source_index": 645,
+      "member": [
+        "worker_47/layouts_9408.th",
+        43
+      ],
+      "n": 85,
+      "image": "images/case_0645.png",
+      "image_sha256": "fc43caf814701676c08d1212accea7d227cc211de3a2f3b5790b2c954c67708c",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0645.json",
+      "draft_sha256": "8f05d388cc790b98207873b6c6b4c11e482fa030c9bfea573ec127f500ea06a2",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0645.json",
+      "final_source_sha256": "4b62fd0b81efd291659d36f224a14cc221059f0d675dab2c7baa1166658abb92",
+      "axes_bounds": [
+        [
+          0.08159740039703257,
+          0.21700000000000003,
+          0.20680519920593482,
+          0.663
+        ],
+        [
+          0.40459740039703257,
+          0.21700000000000003,
+          0.2068051992059347,
+          0.663
+        ],
+        [
+          0.7275974003970327,
+          0.21700000000000003,
+          0.20680519920593476,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.16105330002028495,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0792",
+      "source_index": 792,
+      "member": [
+        "worker_12/layouts_1680.th",
+        77
+      ],
+      "n": 100,
+      "image": "images/case_0792.png",
+      "image_sha256": "5fc3ccde08cc3fb5185c974c005d42461cd7a889d959999a2dd144f1661a3e57",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0792.json",
+      "draft_sha256": "b93248aa8c5e188e61440859dc82bbeef3adb3fcc1146edfe6ad722bb558344f",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0792.json",
+      "final_source_sha256": "cccc163de0bf901fd1c71451bf0e494877b1e8d8d314d635b4463094d2b870a5",
+      "axes_bounds": [
+        [
+          0.09155143221252537,
+          0.21700000000000003,
+          0.1868971355749492,
+          0.663
+        ],
+        [
+          0.41455143221252533,
+          0.21700000000000003,
+          0.18689713557494925,
+          0.663
+        ],
+        [
+          0.7375514322125255,
+          0.21700000000000003,
+          0.18689713557494914,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.21520800003781915,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0574",
+      "source_index": 574,
+      "member": [
+        "worker_75/layouts_8624.th",
+        9
+      ],
+      "n": 77,
+      "image": "images/case_0574.png",
+      "image_sha256": "ac62abe3820abb9d88d6eb8d58f2bc4c96a31d65520da2c5b2017bff1d970fb7",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0574.json",
+      "draft_sha256": "5498acb8d9ed40ecd2d2fcbd4764f614692e5fee3e70a83ab55d0022d3f63ba2",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0574.json",
+      "final_source_sha256": "e87705b2deb3375038942a943ce811159b6a874cf9fb475f9f4634e0c4c6d4eb",
+      "axes_bounds": [
+        [
+          0.04117766615689053,
+          0.21700000000000003,
+          0.2876446676862189,
+          0.663
+        ],
+        [
+          0.3641776661568905,
+          0.21700000000000003,
+          0.2876446676862189,
+          0.663
+        ],
+        [
+          0.6871776661568907,
+          0.21700000000000003,
+          0.2876446676862189,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.1592209791118286,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.16523570008575916,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0119",
+      "source_index": 119,
+      "member": [
+        "worker_91/layouts_6272.th",
+        82
+      ],
+      "n": 32,
+      "image": "images/case_0119.png",
+      "image_sha256": "3fb06135bbaa9090e7844ec8acde25ec9930fcb848b0fedc0ef5922028dc0e1a",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0119.json",
+      "draft_sha256": "288338f73caade207fc95dbf77a28fd536175962ead0ece3a90e0339fc2bedb2",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0119.json",
+      "final_source_sha256": "82b4e929b5bd10490124a7760802a4a6561d3892ebd26d363f8b1fcd3ba6dd90",
+      "axes_bounds": [
+        [
+          0.06146526278620297,
+          0.21700000000000003,
+          0.24706947442759403,
+          0.663
+        ],
+        [
+          0.38446526278620297,
+          0.21700000000000003,
+          0.24706947442759397,
+          0.663
+        ],
+        [
+          0.707465262786203,
+          0.21700000000000003,
+          0.24706947442759408,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.017469253824274,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.07583740004338324,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0547",
+      "source_index": 547,
+      "member": [
+        "worker_17/layouts_4928.th",
+        85
+      ],
+      "n": 74,
+      "image": "images/case_0547.png",
+      "image_sha256": "324599c0c28d2d83fddfc95330ca4f77c5bd38701aea943726baaed82e4e60f1",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0547.json",
+      "draft_sha256": "b13eb72e2093ceaa76c7e675ed01d7ba56b5125d22edd3a98c502b085a696467",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0547.json",
+      "final_source_sha256": "22483953ceb2cd824ff0569308b7b48fb737261502c30c786cbb1acb617d3b96",
+      "axes_bounds": [
+        [
+          0.08979131412126287,
+          0.21700000000000003,
+          0.19041737175747417,
+          0.663
+        ],
+        [
+          0.41279131412126285,
+          0.21700000000000003,
+          0.19041737175747425,
+          0.663
+        ],
+        [
+          0.735791314121263,
+          0.21700000000000003,
+          0.1904173717574742,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0010864899354563,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.16688469995278865,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0049",
+      "source_index": 49,
+      "member": [
+        "worker_23/layouts_5936.th",
+        16
+      ],
+      "n": 25,
+      "image": "images/case_0049.png",
+      "image_sha256": "73080fe3ce9784e67a2ea1ec88dde4bfef7ddbf6da9bdc1f7addc01c0caf5873",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0049.json",
+      "draft_sha256": "00dcf5a508eb0d6b7d8bd7309552ffc372093ff7917f5169131886dc055b1260",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0049.json",
+      "final_source_sha256": "0a9f6d4c6de35d2fc32c22e02f1e3f22b9719b32c326ac4c0ac760aef7adcf15",
+      "axes_bounds": [
+        [
+          0.035,
+          0.3023956301935621,
+          0.29999999999999993,
+          0.4922087396128759
+        ],
+        [
+          0.358,
+          0.3023956301935621,
+          0.29999999999999993,
+          0.4922087396128759
+        ],
+        [
+          0.681,
+          0.30239563019356197,
+          0.30000000000000004,
+          0.49220873961287603
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.1138739246199294,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.07163289992604405,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0677",
+      "source_index": 677,
+      "member": [
+        "worker_22/layouts_2576.th",
+        21
+      ],
+      "n": 88,
+      "image": "images/case_0677.png",
+      "image_sha256": "b524f86cb69e01ec1fb7f5d9c5b508c67aefbbe3dd46d1df6bcb01125f61084c",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0677.json",
+      "draft_sha256": "5a5f3805dc9c571b82d71cae7223b8e6a056d16eeda4f6a01fba30e30668d09c",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0677.json",
+      "final_source_sha256": "d0aec2c936a1a8e1f5fa4ea2060a19392d8fe90e98c0b1970a64b5313e1cdba8",
+      "axes_bounds": [
+        [
+          0.07221509843168035,
+          0.21700000000000003,
+          0.22556980313663927,
+          0.663
+        ],
+        [
+          0.39521509843168035,
+          0.21700000000000003,
+          0.2255698031366392,
+          0.663
+        ],
+        [
+          0.7182150984316804,
+          0.21700000000000003,
+          0.2255698031366392,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.17274040007032454,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0506",
+      "source_index": 506,
+      "member": [
+        "worker_89/layouts_6496.th",
+        46
+      ],
+      "n": 70,
+      "image": "images/case_0506.png",
+      "image_sha256": "a423aac3af992a62d17df7ba3281a7d40d150fd819f31c167053575e262b6b5f",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0506.json",
+      "draft_sha256": "b345274d2745561d860a6bcdc56fd4f87f3b42b154db86ab116c11096198d830",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0506.json",
+      "final_source_sha256": "6477507d9108b4599f4b34c21a2490b95bbea4a99d078773642ca7a87365f370",
+      "axes_bounds": [
+        [
+          0.0731518863819471,
+          0.21700000000000003,
+          0.22369622723610577,
+          0.663
+        ],
+        [
+          0.3961518863819471,
+          0.21700000000000003,
+          0.22369622723610572,
+          0.663
+        ],
+        [
+          0.7191518863819472,
+          0.21700000000000003,
+          0.22369622723610583,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0033538474557975,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.16632340010255575,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0190",
+      "source_index": 190,
+      "member": [
+        "worker_15/layouts_3920.th",
+        42
+      ],
+      "n": 39,
+      "image": "images/case_0190.png",
+      "image_sha256": "5a75bba97ba34e53dd69ac1911e96ca8dde9cdd4b8c003735a940abc632fce53",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0190.json",
+      "draft_sha256": "1052265f844963a960f4a4ed8727540872f28feb931cfce8234c8b85afaef058",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0190.json",
+      "final_source_sha256": "6bf578b0ed97b4368870de60ab1cbf2aade799e1de18349ef9888e6d40059d65",
+      "axes_bounds": [
+        [
+          0.05408298356908883,
+          0.21700000000000003,
+          0.2618340328618223,
+          0.663
+        ],
+        [
+          0.3770829835690888,
+          0.21700000000000003,
+          0.2618340328618222,
+          0.663
+        ],
+        [
+          0.7000829835690889,
+          0.21700000000000003,
+          0.2618340328618223,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0104893485621158,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.07593880000058562,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0361",
+      "source_index": 361,
+      "member": [
+        "worker_7/layouts_3136.th",
+        111
+      ],
+      "n": 55,
+      "image": "images/case_0361.png",
+      "image_sha256": "0eca9ed2b3d02f1f21766d619bcc84ee754e2d89292fdd3cc62060d9586a0bd7",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0361.json",
+      "draft_sha256": "42492f28bd576cdce1ff78903156e999cbc2c91bfa0a196862f04c7c32b0c682",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0361.json",
+      "final_source_sha256": "7b1692f50c908f02292cf4673c1b559aea77de518e8c9bd8c16a450299153b2b",
+      "axes_bounds": [
+        [
+          0.09089559969017977,
+          0.21700000000000003,
+          0.18820880061964043,
+          0.663
+        ],
+        [
+          0.41389559969017975,
+          0.21700000000000003,
+          0.1882088006196404,
+          0.663
+        ],
+        [
+          0.7368955996901798,
+          0.21700000000000003,
+          0.1882088006196404,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0048874848442606,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.08823009999468923,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0716",
+      "source_index": 716,
+      "member": [
+        "worker_95/layouts_5824.th",
+        77
+      ],
+      "n": 92,
+      "image": "images/case_0716.png",
+      "image_sha256": "d071789e6d4beb22cae70a96f1af258a980375be1309e1668abeef581e68e5a5",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0716.json",
+      "draft_sha256": "5386be8c425f1ce7a31d9c8cffd80b53590c82abdc65428e2c90bcba019dba2b",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0716.json",
+      "final_source_sha256": "175ea940db9232759bdc891f12db31a126e5dc31ffca33c7d00bd326d3f0114a",
+      "axes_bounds": [
+        [
+          0.09407163851811498,
+          0.21700000000000003,
+          0.18185672296376995,
+          0.663
+        ],
+        [
+          0.41707163851811496,
+          0.21700000000000003,
+          0.18185672296377003,
+          0.663
+        ],
+        [
+          0.7400716385181151,
+          0.21700000000000003,
+          0.18185672296376998,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0281049942890785,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.31159109994769096,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0713",
+      "source_index": 713,
+      "member": [
+        "worker_99/layouts_8848.th",
+        53
+      ],
+      "n": 92,
+      "image": "images/case_0713.png",
+      "image_sha256": "3dbe7cdfca52e2db52538f7afb291ec9c38516a0af98140aeb6d17e8aa82fe8b",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0713.json",
+      "draft_sha256": "42edc342f9826e2161c344099bee7c6fcffa62944c640f47ba878386548692bb",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0713.json",
+      "final_source_sha256": "2367b692ab0c9b282306e71d80f696188af94f64ed168dbb4a22ab1dfbbc13f3",
+      "axes_bounds": [
+        [
+          0.08792195502997925,
+          0.21700000000000003,
+          0.19415608994004147,
+          0.663
+        ],
+        [
+          0.41092195502997925,
+          0.21700000000000003,
+          0.19415608994004135,
+          0.663
+        ],
+        [
+          0.7339219550299794,
+          0.21700000000000003,
+          0.1941560899400414,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0129720635113704,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.3141839999007061,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0739",
+      "source_index": 739,
+      "member": [
+        "worker_18/layouts_7056.th",
+        60
+      ],
+      "n": 94,
+      "image": "images/case_0739.png",
+      "image_sha256": "a1e27f3ba3d731fb106ab3cac9b95889cac737ff351cd06e7a086159ce93629d",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0739.json",
+      "draft_sha256": "e5b38facfd2dbef95f49afff3884677eb6a67979f1569b8eeb8307d24b37077c",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0739.json",
+      "final_source_sha256": "7473f8a7b2ef83d1795445b22ce2e53cab041bad1ec5d06942f00ba67d009739",
+      "axes_bounds": [
+        [
+          0.09481264648098847,
+          0.21700000000000003,
+          0.180374707038023,
+          0.663
+        ],
+        [
+          0.4178126464809885,
+          0.21700000000000003,
+          0.18037470703802294,
+          0.663
+        ],
+        [
+          0.7408126464809885,
+          0.21700000000000003,
+          0.18037470703802305,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.31456949992571026,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0250",
+      "source_index": 250,
+      "member": [
+        "worker_10/layouts_9744.th",
+        4
+      ],
+      "n": 44,
+      "image": "images/case_0250.png",
+      "image_sha256": "40ec87addd87ae75338a5d73eeffdec079437f8fdffe8a481e60464e1a2b09fa",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0250.json",
+      "draft_sha256": "649885a1e4dab780d2e8854027787a0f955a2dc1c4ac06928b888060b244e5c4",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0250.json",
+      "final_source_sha256": "4c89128cf26ccb42522a68544d18fe0c64c68a1f738dfc93704713a03f974d17",
+      "axes_bounds": [
+        [
+          0.035,
+          0.2416675206709184,
+          0.29999999999999993,
+          0.6136649586581633
+        ],
+        [
+          0.358,
+          0.2416675206709184,
+          0.29999999999999993,
+          0.6136649586581633
+        ],
+        [
+          0.681,
+          0.2416675206709183,
+          0.30000000000000004,
+          0.6136649586581635
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.082135200034827,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0013",
+      "source_index": 13,
+      "member": [
+        "worker_50/layouts_4928.th",
+        47
+      ],
+      "n": 22,
+      "image": "images/case_0013.png",
+      "image_sha256": "31ce9cbacb2f71710697daa5b337c13d041275fda41b29c8d4377d4c2d92b432",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0013.json",
+      "draft_sha256": "456a340b79a87d2138125a25653739cf96f4de764602c0dfece7075432bda9c7",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0013.json",
+      "final_source_sha256": "83fd64df78f341a75aceb8019c9e9a0f344e8d60aadcbd4e19ca4cdae0382197",
+      "axes_bounds": [
+        [
+          0.035,
+          0.25186312752802004,
+          0.29999999999999993,
+          0.59327374494396
+        ],
+        [
+          0.358,
+          0.25186312752802004,
+          0.29999999999999993,
+          0.59327374494396
+        ],
+        [
+          0.681,
+          0.2518631275280199,
+          0.30000000000000004,
+          0.5932737449439602
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.06513380003161728,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0058",
+      "source_index": 58,
+      "member": [
+        "worker_64/layouts_1904.th",
+        28
+      ],
+      "n": 26,
+      "image": "images/case_0058.png",
+      "image_sha256": "84c86acd780092c4e3a5fb74b764541ae6747feb78f66f4ebbc62e4b1841c71c",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0058.json",
+      "draft_sha256": "5d9dd1c5f7270ce0d71e186e7e01807f0c3bb66838dbc086ba0d99949500a57c",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0058.json",
+      "final_source_sha256": "93bceed3e7a9870e473089f372009e9b872993b7b77a793a3dbbadf816ccfb50",
+      "axes_bounds": [
+        [
+          0.035,
+          0.35550715448468895,
+          0.29999999999999993,
+          0.3859856910306222
+        ],
+        [
+          0.358,
+          0.35550715448468895,
+          0.29999999999999993,
+          0.3859856910306222
+        ],
+        [
+          0.681,
+          0.35550715448468895,
+          0.30000000000000004,
+          0.3859856910306222
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.086904049521229,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.07568970008287579,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0537",
+      "source_index": 537,
+      "member": [
+        "worker_92/layouts_9744.th",
+        60
+      ],
+      "n": 73,
+      "image": "images/case_0537.png",
+      "image_sha256": "fa252dee3c262d0ee0f88dbae89f6c801f74bb12754e92518525936e08877275",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0537.json",
+      "draft_sha256": "08bb7e58dcc25fced8fe1cbcd4fb6fa79fff564344afce30b922c24ad8e622db",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0537.json",
+      "final_source_sha256": "8849a15580a5aabb81173da7e0597022bcc15483f9551381082c75a5b2a2da9d",
+      "axes_bounds": [
+        [
+          0.08198127599758494,
+          0.21700000000000003,
+          0.2060374480048301,
+          0.663
+        ],
+        [
+          0.40498127599758493,
+          0.21700000000000003,
+          0.20603744800483004,
+          0.663
+        ],
+        [
+          0.727981275997585,
+          0.21700000000000003,
+          0.20603744800483004,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.1638570759594304,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.17587460007052869,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0002",
+      "source_index": 2,
+      "member": [
+        "worker_14/layouts_7840.th",
+        29
+      ],
+      "n": 21,
+      "image": "images/case_0002.png",
+      "image_sha256": "648e37b007146a9cc3e5e56c519bd1c6a5297cc2870aa3174e8e423ff0b969b3",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0002.json",
+      "draft_sha256": "352c7f8c7a80557d0c11a8b1061361a2e287455aa25e2a785bb2df5c9cb48868",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0002.json",
+      "final_source_sha256": "c3a8803fe4d5e54cb58e34d2efb2f132ffe168a64e5d9c5c1816af93ee0d964b",
+      "axes_bounds": [
+        [
+          0.0387391335608854,
+          0.21700000000000003,
+          0.29252173287822913,
+          0.663
+        ],
+        [
+          0.3617391335608854,
+          0.21700000000000003,
+          0.29252173287822913,
+          0.663
+        ],
+        [
+          0.6847391335608854,
+          0.21700000000000003,
+          0.29252173287822925,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.112621485763501,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.0742706999881193,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0419",
+      "source_index": 419,
+      "member": [
+        "worker_77/layouts_336.th",
+        68
+      ],
+      "n": 61,
+      "image": "images/case_0419.png",
+      "image_sha256": "fe555d1c6b05d40e488faa37cb2f7132699bd23ac5ef7f69de42d85eca63bdd0",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0419.json",
+      "draft_sha256": "402535ded0d5e6c04c2672ab64a570bd3ae4fc9bdaa32a8fcab34e4f38d68b9c",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0419.json",
+      "final_source_sha256": "ec6dd5cd34f4a51f9ee295a0191f74c5dab9c505ac7bcded5f61bc2ef86d2a65",
+      "axes_bounds": [
+        [
+          0.08439673274347743,
+          0.21700000000000003,
+          0.2012065345130451,
+          0.663
+        ],
+        [
+          0.40739673274347743,
+          0.21700000000000003,
+          0.20120653451304504,
+          0.663
+        ],
+        [
+          0.7303967327434775,
+          0.21700000000000003,
+          0.20120653451304504,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0465034351948703,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.14778320002369583,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0957",
+      "source_index": 957,
+      "member": [
+        "worker_65/layouts_8848.th",
+        5
+      ],
+      "n": 116,
+      "image": "images/case_0957.png",
+      "image_sha256": "553fdeebbeacc62918027bbe3df21003b45e1814ed568719fe6a453856cb35bb",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0957.json",
+      "draft_sha256": "b5244e5e40f68081c310ad70374a6e56809cb40ac9157694f96b8940e387bb24",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0957.json",
+      "final_source_sha256": "cb1e32e93050f86191dbaf703993e2f3e0a26f67c9352cdf2d66b477f28346e6",
+      "axes_bounds": [
+        [
+          0.08379277325857674,
+          0.21700000000000003,
+          0.20241445348284642,
+          0.663
+        ],
+        [
+          0.4067927732585767,
+          0.21700000000000003,
+          0.20241445348284653,
+          0.663
+        ],
+        [
+          0.7297927732585768,
+          0.21700000000000003,
+          0.20241445348284648,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0008501472524842,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.5382802999811247,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0295",
+      "source_index": 295,
+      "member": [
+        "worker_82/layouts_8960.th",
+        12
+      ],
+      "n": 49,
+      "image": "images/case_0295.png",
+      "image_sha256": "89295b8cf8789a6f79129fbe48252290b8379dd3733b134fd3048ad50177af46",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0295.json",
+      "draft_sha256": "a10dfab213f857a161442f7f84c1267415107da71a610828a013115aabda41fd",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0295.json",
+      "final_source_sha256": "b467ded13ad1c267f6c496ea189a0ce7a46f30e1986fd77cc4a495ee0fa596c7",
+      "axes_bounds": [
+        [
+          0.04709204596733538,
+          0.21700000000000003,
+          0.2758159080653292,
+          0.663
+        ],
+        [
+          0.37009204596733536,
+          0.21700000000000003,
+          0.2758159080653292,
+          0.663
+        ],
+        [
+          0.6930920459673354,
+          0.21700000000000003,
+          0.2758159080653293,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.01036065740141,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.08190300001297146,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0878",
+      "source_index": 878,
+      "member": [
+        "worker_28/layouts_1568.th",
+        43
+      ],
+      "n": 108,
+      "image": "images/case_0878.png",
+      "image_sha256": "17c7dd9f907d5c6a997a4f67423b4eef1f9d878eb158d6cce58eb5d9a67ac584",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0878.json",
+      "draft_sha256": "19cebad25a855f8cf5fe799adeb5b3272cef8f9d43108325e3969f58ca8e6525",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0878.json",
+      "final_source_sha256": "9bf38cae7fc7f186d91ba74223d0d8f0b19db3f55147bcff2065dc49b039b3c8",
+      "axes_bounds": [
+        [
+          0.08624041022559878,
+          0.21700000000000003,
+          0.1975191795488024,
+          0.663
+        ],
+        [
+          0.40924041022559876,
+          0.21700000000000003,
+          0.19751917954880238,
+          0.663
+        ],
+        [
+          0.7322404102255988,
+          0.21700000000000003,
+          0.19751917954880238,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.009647944083024,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.329250399954617,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    },
+    {
+      "id": "case_0893",
+      "source_index": 893,
+      "member": [
+        "worker_91/layouts_4256.th",
+        80
+      ],
+      "n": 110,
+      "image": "images/case_0893.png",
+      "image_sha256": "5a1cb1c7c1a8d37b262f4193a7610e6b27adb4a2d0ca1d7e3b32c0d1e3c8a102",
+      "draft_source": "experiments/E42_joint_regularization/runs/20261024_visual_review100_seed20261024/drafts_local/case_0893.json",
+      "draft_sha256": "253538cdf34b53e1f380330d5637520c52ec2326f12f9292449fb9d09b9083d9",
+      "final_source": "experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/0893.json",
+      "final_source_sha256": "6b9580ff9658dbe9dcf9685ee8e287e0cb2032a02d18bb56e26b3b1733a3c752",
+      "axes_bounds": [
+        [
+          0.09406573780546139,
+          0.21700000000000003,
+          0.18186852438907714,
+          0.663
+        ],
+        [
+          0.41706573780546136,
+          0.21700000000000003,
+          0.18186852438907725,
+          0.663
+        ],
+        [
+          0.7400657378054615,
+          0.21700000000000003,
+          0.1818685243890772,
+          0.663
+        ]
+      ],
+      "auxiliary": {
+        "后处理Q（已有记录）": 1.0298485624720415,
+        "最终硬合法（已有记录）": true,
+        "完整求解秒数（原运行）": 0.5543010999681428,
+        "完整开发集Loss（非本例）": {
+          "total": 0.3575172619819641,
+          "selection_proxy": 0.45381430387496946,
+          "center_local": 0.18914555644989015,
+          "shape": 0.16962164855003356,
+          "overlap": 0.04140220791101456,
+          "occupancy": 0.09629704350233079
+        },
+        "草稿来源": "冻结best51为本次视觉审阅补生成；未重跑后处理",
+        "参考列": "原任务几何，尚未应用MIB平均面积变换，不保证满足派生面积"
+      }
+    }
+  ]
+}

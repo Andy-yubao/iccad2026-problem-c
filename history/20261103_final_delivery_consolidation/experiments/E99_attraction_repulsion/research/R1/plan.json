@@ -1,0 +1,14 @@
+{
+  "revision": "E99.R1.synchronous_public_organization.v1",
+  "registered_utc": "2026-11-02T16:16:00Z",
+  "hypothesis": "A short synchronous area-mass field that preserves compatible MIB shapes and organizes group/boundary contacts can improve the topology presented to a bounded conic backend. Reduced intersection alone is not the success criterion.",
+  "arms": ["bounded_control", "organized"],
+  "shared_backend": "At most4 conservative shape solves in a180ms geometry budget, reserve25ms for fixed-shape projection and8ms for certificate polish; no deep recovery. Mode1 public boundary ordering and group-consistent ordering are shared by both arms. Always retain a hard-legal fallback; all retained cases count.",
+  "field": {"iterations": 12, "step_fraction": 0.04, "total_fraction": 0.35, "shape_step_log": 0.025, "shape_total_factor": 1.3, "mass": "initial area/median area", "group_strength": 0.35, "boundary_strength": 0.5, "repulsion_strength": 1.0, "attraction_strength": 0.25, "attraction_range": 0.5},
+  "implementation_panel": [0,4,43,95,135],
+  "calibration_panel": "v5.train_monitor500, both arms once, cached identical frozen C3/public inputs from preparation; CPU-only timing explicitly diagnostic",
+  "promotion": "No automatic dev launch. Assess final weightedQ, paired deltas, feasibility, row fallbacks, geometry time and shape solve counts against bounded control and existing full train control. Mechanism/quality failure retained; no dev coefficient sweep.",
+  "solver_inputs": "Public tuple and C3 draft only; no free reference or score denominator",
+  "test_read": false,
+  "training": false
+}

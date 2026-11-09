@@ -1,0 +1,62 @@
+{
+  "finished": true,
+  "stage": "screen",
+  "comparisons": {
+    "draft_reset_fast": {
+      "count": 100,
+      "weighted_Q_control": 1.0187372914081192,
+      "weighted_Q_candidate": 1.0207591197315644,
+      "weighted_Q_delta": 0.0020218283234452183,
+      "relative_excess_Q_reduction": -0.10790398032498576,
+      "mean_Q_delta": 0.019154123912433967,
+      "complete_time_control": 0.24698883500415833,
+      "complete_time_candidate": 0.24986784000182524,
+      "complete_time_delta": 0.0028790049976669253,
+      "time_ratio": 1.0116564175770069,
+      "wins_ties_losses": [
+        1,
+        93,
+        6
+      ],
+      "CVaR95_control": 1.2611080586731103,
+      "CVaR95_candidate": 1.5527345687978538,
+      "max_Q_control": 1.4111171335045705,
+      "max_Q_candidate": 1.8537865964621316,
+      "candidate_over_2s": 0,
+      "two_second_target_met_in_this_panel": true,
+      "severe_regression_indices": [
+        182,
+        73,
+        496,
+        247
+      ],
+      "candidate_hard_legal": 100,
+      "paired_cluster_bootstrap": {
+        "shard": {
+          "weighted_Q_delta_95": [
+            3.2334137807834154e-05,
+            0.007192492258816438
+          ],
+          "complete_time_delta_95": [
+            -0.005335100546828471,
+            0.011712118403840573
+          ]
+        },
+        "worker": {
+          "weighted_Q_delta_95": [
+            3.469553302280375e-05,
+            0.007054413599343853
+          ],
+          "complete_time_delta_95": [
+            -0.005527351627650205,
+            0.011481890605216706
+          ]
+        }
+      },
+      "quality_and_mean_time_gate_passed": false,
+      "eligible_for_later_confirmation": false
+    }
+  },
+  "test_read": false,
+  "interval_scope": "paired case variation only; one timing run does not measure machine-state uncertainty"
+}

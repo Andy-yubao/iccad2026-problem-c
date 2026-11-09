@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "E:\project\ICCAD\2026\problemC\experiments\E101_final_c5_solver\runs\20261103_replay\run.py", line 75, in <module>
+    try:main(args.resume)
+  File "E:\project\ICCAD\2026\problemC\experiments\E101_final_c5_solver\runs\20261103_replay\run.py", line 62, in main
+    if not (run/'evaluation'/role/'results.json').exists():stage(name,fr,['-m','experiments.E101_final_c5_solver.evaluate',role],[run/'STOP'])
+  File "E:\project\ICCAD\2026\problemC\experiments\E101_final_c5_solver\runs\20261103_replay\run.py", line 27, in stage
+    if p.returncode:raise RuntimeError(f'{name} exited{p.returncode}; see{name}.log; no automatic retry')
+RuntimeError: dev500 exited1; seedev500.log; no automatic retry

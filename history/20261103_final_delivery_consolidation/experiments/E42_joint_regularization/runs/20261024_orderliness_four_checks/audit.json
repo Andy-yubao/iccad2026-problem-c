@@ -1,0 +1,48 @@
+{
+  "frozen_core_sha256_unchanged": {
+    "model.py": true,
+    "features.py": true,
+    "inference.py": true,
+    "loss.py": true,
+    "losses.py": true,
+    "batches.py": true
+  },
+  "checkpoint_sha256": "12878108e9a58b8c195b314ba6586686c2a6e2796c1f4b6443e102b4db4224a6",
+  "training_steps": 0,
+  "new_sealed_test_access": false,
+  "scored_source_cases": 22,
+  "annotated_source_cases": 23,
+  "development_cases": 5,
+  "comparison_images_decoded": 5,
+  "assistant_inserted_real_ratings": 0,
+  "QA_fixture_cleaned": true,
+  "main_git_commit": "34b073d82ea17815661c91854357b4ffcb16c566",
+  "git_dirty": true,
+  "current_sources": {
+    "experiments/E42_joint_regularization/orderliness.py": "f3b87db2dd9ce17915110467c7f667d95c34a68f92faaa159864b870d325ade4",
+    "experiments/E42_joint_regularization/orderliness_analysis.py": "f15e25f414a61d13c4be25311dd0b07bf3ab8c664ca3e4de8f7fc709e4f8ab23",
+    "experiments/E42_joint_regularization/orderliness_gradients.py": "40a5c4cdf71229ccb508b1bf394e95b55d196da5c662d487932033085ef0c74c",
+    "experiments/E42_joint_regularization/orderliness_comparisons.py": "875187c706d32e4d8601527e57c9821010c9a7a1ad9422e3c68e3ceadc7774ac",
+    "experiments/E42_joint_regularization/orderliness_relaxation.py": "1142132483307a050381072a11a375a1b6030b64b68f37ff592e8d77e8be2817",
+    "experiments/E42_joint_regularization/orderliness_report.py": "1df8dac42e6e7d52134362edfde12426c027e8ceb64f6bada31ebbc0385af115",
+    "visualization/review.py": "5c305f43668bc0240f48f3f9df4d6c943f03b67cd4c0f6d336e5ad3506b41c5a",
+    "visualization/review_web/app.js": "986dde92165e418baefbee94f2e56b793cbcff8b2191be2a5bb2dac45bae80c7",
+    "visualization/review_web/index.html": "44693b10b2d5efd31bf1835434d2954050ad0ab1c5d7a2fb0b6733bb8ea5800c",
+    "visualization/review_web/style.css": "b136783d7427eb7cd9b4693219f93617c43b74aa798f43a36a4e06794428bf45"
+  },
+  "source_snapshot_sha256": "d48c4439d9a5cffe977db9d93544718179e6f49d24fe31c26293bd0d6c59fac9",
+  "reproduction_commands": [
+    "python -m experiments.E42_joint_regularization.orderliness",
+    "python -m experiments.E42_joint_regularization.orderliness_analysis",
+    "python -m experiments.E42_joint_regularization.orderliness_gradients",
+    "python -m experiments.E42_joint_regularization.orderliness_comparisons",
+    "python -m experiments.E42_joint_regularization.orderliness_report"
+  ],
+  "reproduction_scope": "Primary config pins original source hash in source_snapshot.zip; current orderliness.py adds optional sensitivity parameters and strict negative guard. Do not rerun primary overwriting old evidence.",
+  "completion": {
+    "stage1": "executed; no qualifying small-budget legal witness",
+    "stage2": "executed;4 disjoint natural matches",
+    "stage3": "executed;5 development cases",
+    "stage4": "prepared, awaiting user preference feedback"
+  }
+}

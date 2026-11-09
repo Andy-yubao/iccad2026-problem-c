@@ -1,0 +1,58 @@
+{
+  "status": "authorized_preparation_then_background_training",
+  "arms": [
+    "C",
+    "G"
+  ],
+  "execution_order": [
+    "C",
+    "G"
+  ],
+  "architecture": {
+    "width": 192,
+    "layers": 12,
+    "rectangle": true,
+    "ffn_dropout": 0.05
+  },
+  "parameters": 5829939,
+  "trainable_parameters": 5829939,
+  "training_data_size": 32000,
+  "draws_per_epoch": 32000,
+  "updates_per_epoch": 1000,
+  "batch_size": 32,
+  "seed": 0,
+  "maximum_hours_per_arm": 1,
+  "maximum_phase_epochs": 24,
+  "maximum_formal_training_seconds": 7200,
+  "reference_weight": 1.0,
+  "task_weight": 0.3336832108335229,
+  "overlap_weights": {
+    "C": 0.08975162861857286,
+    "G": 0.17950325723714572
+  },
+  "parent_model_epoch": 36,
+  "parent_model_step": 36000,
+  "data_epoch_offset": 39,
+  "parent_rng_step": 39000,
+  "optimizer": "load P best36 exact AdamW moments/step; only LR changed to1e-4; same all-trainable parameter order",
+  "lr_levels": [
+    0.0001,
+    5e-05
+  ],
+  "scheduler_baseline_epoch": 0,
+  "protection_epochs": 0,
+  "patience": 3,
+  "meaningful_relative_delta": 0.001,
+  "meaningful_absolute_delta": 1e-05,
+  "required_lr_drops": 1,
+  "lowest_lr_complete_epochs": 2,
+  "branch_initialization": "same P best model+Adam+projection; same P terminal RNG; new branch counters; retain all prior charges separately",
+  "precision": "FP32; original deterministic kernels and .005 joint step bound",
+  "data_transfer": "unchanged CPU cache rows and pinned minibatch",
+  "selection": "same own-arm fixed Loss for backward, train/dev monitor, best, LR and early stop; C-Loss diagnostic only for G",
+  "evaluation": "train only; no automatic Q/dev2000 or new corrector; sealed tests",
+  "automation": "no automatic wakeup recreation",
+  "budget": "newly authorized <=1h per arm/24 epochs, cumulative on resume; full preflight wall separately preserved; historical costs not reset",
+  "authorization": "用户：直接尝试先做两个匹配的后训练分支，复用P best36，后台启动训练",
+  "test_read": false
+}

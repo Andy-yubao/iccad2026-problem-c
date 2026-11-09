@@ -1,0 +1,53 @@
+{
+  "round": 2,
+  "candidate": 1,
+  "name": "C3_public_boundary_group_contact",
+  "status": "registered_before_preflight",
+  "source_checkpoint": "experiments/E97_gpu_hybrid_solver/runs/20261102_candidate3_clearance_seed0/checkpoints/best.pt",
+  "source_sha256": "d784e96f46decf7a487c25bde2ab16db8cf6ebae1bc0632434cc5e2f78173fce",
+  "model": "student.DeploymentModel; strict C3 own-best all241547 F parameters retained, E74 frozen, no head reset or extra inference work",
+  "data": "same v5 first16k/train_monitor500/dev_monitor500, inherited32k source exposure, test sealed",
+  "loss": {
+    "base": "exact C3 center1+shape.25+near-relative.25+teacher-axis physical-clearance-tail1",
+    "new_term": "public boundary worst required side per block + teacher-native Kruskal group contact normal-touch and positive tangent overlap, sum/public N_soft",
+    "coefficient": 3.264434296319982,
+    "calibration": "one preregistered train_monitor500 local-state gradient pass, share.5,500 active, no optimizer/solver/dev/Q",
+    "aggregation": "unchanged unweighted per-case arithmetic mean, identical backward/monitor/best/LR/early-stop",
+    "teacher_input_to_NN": false,
+    "reference_input_or_scoring_denominator": false
+  },
+  "calibration_weights": "runs/20261102_round2_candidate1_calibration/weights.json",
+  "calibration_sha256": "876a4e1314b602810594cbd2e2f7209f6d265bc931519ab6e0c030496d57eb4c",
+  "optimization": {
+    "seed": 0,
+    "batch": 32,
+    "precision": "FP32 no AMP/TF32",
+    "optimizer": "fresh AdamW",
+    "weight_decay": 0.0003,
+    "clip": 1,
+    "lr_levels": [
+      0.00025,
+      0.0001,
+      5e-05,
+      2e-05
+    ],
+    "max_training_seconds": 3600,
+    "max_epochs": 100,
+    "baseline_epoch0": true,
+    "protection": 0,
+    "lr_bad_rounds": 3,
+    "min_delta": "max(1e-5,abs(best)*.001)",
+    "lowest_wait_epochs": 2
+  },
+  "deployment": "same small C3 architecture; verified decode/scaling captured in resident GPU graph, original full E85 singlethread CPU solver unchanged",
+  "terminal": "unique own-Loss best once full dev500/new raw2000/same100. If whole initial model selected unchanged, reuse this window current-condition C3 control plus existing C3 raw2000; no duplicate solve",
+  "control": "one registered current-condition C3 full singlethread decode-captured control; old complete source results read-only",
+  "preflight": "original5 real Dropout/Adam eager-vs-CUDA-graph updates, next-step restored model/Adam/RNG/order, explicit finite teacher gate, frozen L, strict C3 warm start, labels isolated from NN, contact/boundary semantic fixtures",
+  "caveats": [
+    "Teacher contact tree is a soft supervision target, not global anchor/shape feasibility certificate. Immutable or mutually incompatible tree contacts can be unachievable.",
+    "Group objective is a smooth surrogate for exact component count; contact axis/normalization nominal teacher WH and9aspect>5 limitations remain.",
+    "Public soft improvement can trade off teacher intent, area or wire; final full quality decides, no Q checkpoint reselection.",
+    "New lower LR/fresh optimizer plus objective migration is a new run, not ordinary continuation."
+  ],
+  "test_read": false
+}

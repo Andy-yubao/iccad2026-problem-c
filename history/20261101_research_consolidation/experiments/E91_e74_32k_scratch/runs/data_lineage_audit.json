@@ -1,0 +1,44 @@
+{
+  "status": "verified_metadata",
+  "history": [
+    {
+      "experiment": "E74",
+      "pool": 32000,
+      "draws": 32000,
+      "updates": 1000
+    },
+    {
+      "experiment": "E87/E90",
+      "pool": 16000,
+      "draws": 16000,
+      "updates": 500,
+      "reason": "explicit16k prefix in dataset_view/cache; E90 kept E87 dataset for weight comparison"
+    },
+    {
+      "experiment": "E88/E89",
+      "pool": 18268,
+      "draws": 16000,
+      "updates": 500,
+      "base_draws": 12800,
+      "sparse_draws": 3200,
+      "reason": "mixed round-robin sampler; log denominator is draws, not pool size"
+    },
+    {
+      "experiment": "E91",
+      "pool": 32000,
+      "draws": 32000,
+      "updates": 1000
+    }
+  ],
+  "train_exact_E74_frozen_prefix": true,
+  "train_member_sha256": "2fe459b0a785ffb6995dd3e5966cd47337b948b15ec4bb4d4c19ffe169e404ae",
+  "counts": {
+    "train": 32000,
+    "dev": 2000,
+    "train_monitor500": 500,
+    "dev_monitor500": 500
+  },
+  "all_partitions_preserved": true,
+  "global_charged_seconds_before_preflight": 48496.34417629987,
+  "test_payload_read": false
+}

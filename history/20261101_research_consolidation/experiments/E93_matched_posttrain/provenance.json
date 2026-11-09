@@ -1,0 +1,37 @@
+{
+  "experiment": "E93_matched_posttrain",
+  "authorization": "用户：直接尝试先做两个匹配的后训练分支，复用P best36，后台启动训练",
+  "independent_source": "experiments/E92_two_stage_placer",
+  "copied_files": {
+    "__init__.py": "2fa68381a985db9d05b86e2a03b74373584b2d5f24e3b69191b8eabe6583828a",
+    "model.py": "0d71c96c75976dc57d589d5709639291d1a30addffa8a5f0f2c53e2cb88a9089",
+    "features.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+    "batches.py": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92",
+    "data.py": "1e43fe61a6d4dde4007295f817db927d75cd61439239423621ef65bf826e0d66",
+    "dataset_view.py": "f0c2274ce4c02c85869d6223a2d80db560ed057750cb6227f2afcbb2317e4cd0",
+    "cache.py": "bb929f7ea9c20cfd03436cf1de12bc3ff11805caeaaa198e9004604f1caa6d6a",
+    "ports.py": "431b54476e7de8a94c12cf935a30a3b49b911e208305fbe6bb7b23d72e37dbef",
+    "simple_loss.py": "a6de1f749edc3c74a56f1b38e354c2dfc5e7110031a148b3e63c7284ea47e3ca",
+    "group_tree.py": "867ca3b84848ae78da25dd2a2db16018d722102c7bb5a34644492451efef65fd",
+    "ops.py": "a3882e8637040c4161ec82eca7a2386c70b40317d319b974244831c26d02fd43",
+    "resident.py": "a70da9f834fd05091ab011459e34fcff214bd41cb753f98ee9c088975c0a3c81",
+    "step_control.py": "795ddb45dd257e123f1880eea28b58502711807ee643bfcb51a7e72d484952da",
+    "captured_projection.py": "dd031332127edd706c0e09f49a07f5e6133f5a9cd0f7fcd69d2246644cbb74c9",
+    "cuda_step.py": "6ff0ad8fcaf3cb4815d810d314c18b48f2acf2b4c9831d3b1e0cb7745c4a2abf",
+    "io.py": "ea5696c246e8b252183a628e58ae9860812d34f37b226852c2cf54ff038a7b18",
+    "arms.py": "c55d6b1af8acea0bc3c9a2d3a95e62db2993639b1a8bd75016ca5bed788dac0f",
+    "loss.py": "c7f222d479ccd9dda40a01c5d0819b8db7e78e55dde31373487589b2dd0b754d",
+    "loss_config.py": "78cf559ace74e71590ebdccfc7b13643dc645bf9ea585ceff715fa9d2980291b",
+    "train.py": "636d8b82cbe9e840554ad6b49f5be0973f484ed1906f7255df37f17f7fe4247e",
+    "requirements-native.txt": "eddfdc929bf37a85b9b17d7c68af80a8ec5138dd8585c1afe0efc312435473b6"
+  },
+  "parent_model_and_optimizer": "experiments/E92_two_stage_placer/runs/20261031_two_stage32k_seed0/checkpoints/P_best.pt",
+  "parent_rng_and_data_epoch": "experiments/E92_two_stage_placer/runs/20261031_two_stage32k_seed0/checkpoints/P_terminal.pt",
+  "protected_artifacts": {
+    "experiments/E92_two_stage_placer/runs/20261031_two_stage32k_seed0/checkpoints/P_best.pt": "14c59e05c9973dbbfcfc2c6c6c00345816d8d05b5b966fe413b4a2630d2562d4",
+    "experiments/E92_two_stage_placer/runs/20261031_two_stage32k_seed0/checkpoints/P_terminal.pt": "13fd8159923b1d3a0be7030e950cce0736110f57bd7653f23e29bbddd8570b0d",
+    "experiments/E92_two_stage_placer/runs/20261031_two_stage32k_seed0/checkpoints/F_best.pt": "1d5d8e4122305848ba72ca04cf7d8528b9fcbd9ce77ee6f35e49bf29da7814db"
+  },
+  "cross_experiment_private_algorithm_imports": false,
+  "test_read": false
+}

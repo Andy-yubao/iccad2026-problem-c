@@ -1,0 +1,12 @@
+{
+  "status": "invalid_architecture_excluded",
+  "reason": "Training v1 constructed plain width/depth model and ignored rectangle=True; saved model_config/declared parameter count did not describe the actual state_dict.",
+  "actual_state_parameters": 1468083,
+  "declared_parameters": 1471539,
+  "steps": 725,
+  "elapsed_seconds": 169.02026399993338,
+  "no_terminal_evaluation": true,
+  "weights_never_reused": true,
+  "fix": "v2 full model_config kwargs and actual parameter-count guard; strict checkpoint-load plus two-step exact resume checks on actual train entry for E39 and E40 passed",
+  "test_read": false
+}

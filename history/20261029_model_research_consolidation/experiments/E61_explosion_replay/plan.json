@@ -1,0 +1,61 @@
+{
+  "authorization": "2026-10-27 explicit autonomous long-task and hourly heartbeat authorization in this chat",
+  "stages": [
+    "exact_original_replay_complete",
+    "same_state_fault_probes_complete",
+    "graph_step_projection_validation",
+    "one_large_training_after_acceptance",
+    "unique_best_finalization"
+  ],
+  "large_run": {
+    "name": "20261027_large64000_graph_step_seed0",
+    "train_size": 64000,
+    "width": 160,
+    "depth": 12,
+    "seed": 0,
+    "graph_prenorm": false,
+    "batch_size": 32,
+    "precision": "FP32",
+    "ffn_dropout": 0.05,
+    "weight_decay": 0.0003,
+    "fixed_loss": "original eight-term G, same definitions/weights as E59 original",
+    "graph_local_actual_step_projection": 0.01,
+    "lr_levels": [
+      0.001,
+      0.00025,
+      0.0001,
+      5e-05
+    ],
+    "monitor_block_updates": 500,
+    "max_hours": 4,
+    "max_blocks": 200
+  },
+  "repair_acceptance": {
+    "original_fault_step_passed": true,
+    "targeted_updates": 2000,
+    "no_loss_above": 5,
+    "no_grad_norm_above": 1000,
+    "no_hidden_above": 1000,
+    "no_graph_input_normalization": true
+  },
+  "diagnostic_max_hours": 4,
+  "new_large_runs": 1,
+  "test_read": false,
+  "terminal": "one fixed dev500 flash assessment; rawdev2000; same100 reference/current/E42 no ratings; no checkpoint reselection",
+  "repair_accepted": true,
+  "repair_evidence": "runs/20261027_graph_step_projection_seed0/results.json",
+  "preflight_evidence": "runs/20261027_preflight/results.json",
+  "frozen_utc": "2026-10-27T01:47:22.659317+00:00",
+  "numerical_guards": {
+    "first2000_updates": {
+      "G": 10000,
+      "grad_norm": 10000000
+    },
+    "subsequent_updates": {
+      "G": 5,
+      "grad_norm": 1000
+    },
+    "hidden_and_state_abs_max": 1000,
+    "scope": "safety stops only; never a second model-selection objective"
+  }
+}

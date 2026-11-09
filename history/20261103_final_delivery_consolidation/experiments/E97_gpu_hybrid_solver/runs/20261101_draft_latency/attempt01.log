@@ -1,0 +1,44 @@
+L74 cpu 1683 resident_ms 29.35790000083216 public_to_draft_ms 33.74280000025465
+E85_full_draft cpu 1683 resident_ms 45.88915000022098 public_to_draft_ms 45.64599999866914
+L90 cpu 1683 resident_ms 28.063249999831896 public_to_draft_ms 32.9120000005787
+E96_full_draft cpu 1683 resident_ms 54.66264999995474 public_to_draft_ms 42.62210000160849
+L74 cpu 10027 resident_ms 40.84744999818213 public_to_draft_ms 47.24584999894432
+E85_full_draft cpu 10027 resident_ms 63.617949999752454 public_to_draft_ms 58.31989999933285
+L90 cpu 10027 resident_ms 36.63974999835773 public_to_draft_ms 45.05115000210935
+E96_full_draft cpu 10027 resident_ms 64.89849999888975 public_to_draft_ms 66.69994999901974
+L74 cpu 5474 resident_ms 59.90245000066352 public_to_draft_ms 54.64314999881026
+E85_full_draft cpu 5474 resident_ms 85.61975000156963 public_to_draft_ms 92.95600000041304
+L90 cpu 5474 resident_ms 62.73605000023963 public_to_draft_ms 54.48109999997541
+E96_full_draft cpu 5474 resident_ms 96.04405000027327 public_to_draft_ms 109.51234999993176
+L74 cpu 10140 resident_ms 60.85834999976214 public_to_draft_ms 67.77864999821759
+E85_full_draft cpu 10140 resident_ms 79.8770000001241 public_to_draft_ms 81.65739999822108
+L90 cpu 10140 resident_ms 60.41480000021693 public_to_draft_ms 63.30399999933434
+E96_full_draft cpu 10140 resident_ms 108.33810000076483 public_to_draft_ms 107.70409999895492
+L74 cpu 15001 resident_ms 41.76675000053365 public_to_draft_ms 47.23955000190472
+E85_full_draft cpu 15001 resident_ms 62.11329999860027 public_to_draft_ms 65.79684999996971
+L90 cpu 15001 resident_ms 41.60620000038762 public_to_draft_ms 47.03220000192232
+E96_full_draft cpu 15001 resident_ms 64.63580000126967 public_to_draft_ms 67.30860000061512
+Traceback (most recent call last):
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "E:\project\ICCAD\2026\problemC\experiments\E97_gpu_hybrid_solver\latency.py", line 170, in <module>
+    if __name__=='__main__':main()
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\site-packages\torch\utils\_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "E:\project\ICCAD\2026\problemC\experiments\E97_gpu_hybrid_solver\latency.py", line 128, in main
+    for _ in range(warmups):fn(g)
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "E:\project\ICCAD\2026\problemC\experiments\E97_gpu_hybrid_solver\nn85\base_model.py", line 58, in forward
+    h = layer(h + self.state_embed(state * g['mask']), g, state)
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "E:\project\ICCAD\2026\problemC\experiments\E97_gpu_hybrid_solver\nn85\base_model.py", line 103, in forward
+    scores = (q @ k.transpose(-2, -1))/math.sqrt(self.dim)+self.bias(pair).permute(0, 3, 1, 2)
+RuntimeError: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility

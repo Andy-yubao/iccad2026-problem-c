@@ -1,0 +1,36 @@
+{
+  "revision": "E99.R4.convex_area_envelope.v1",
+  "registered_utc": "2026-11-02T16:44:00Z",
+  "evidence": "R3 five-case hard solves are legal immediately when feasible, but cases43/95/135 declare raw topology infeasible under conservative area tangents; partial train has material constructive recoveries. The area upper tangent restricts aspect changes around the current shape even though the original task only fixes area within1%.",
+  "hypothesis": "Keep exact convex lower-area cones and hard disjunctions, remove the local upper-area tangent, then shrink any enlarged free shapes to public target area before fixed-shape projection. Shrinking at fixed lower-left coordinates preserves nonoverlap; compatible MIB members shrink together, locked geometry stays exact. This can obtain legal candidates in fewer shape steps without greedy topology destruction.",
+  "arms": [
+    "conservative_control",
+    "convex_area"
+  ],
+  "backend": {
+    "seconds": 0.18,
+    "maximum_shape_solves": 4,
+    "shape_cap_seconds": 0.045,
+    "projection_and_polish_reserve_seconds": 0.033,
+    "elastic": 0,
+    "mode": 0,
+    "group_order": false,
+    "deep_recovery": false,
+    "field": false,
+    "normalization": "shrink-only for enlarged free shapes; common MIB scale; never expand a shape during normalization; locked groups unscaled"
+  },
+  "control": "R3 raw_hard_control algorithm preserved except arm branch area tangent; no boundary route",
+  "implementation_panel": [
+    0,
+    4,
+    43,
+    95,
+    135
+  ],
+  "checks": "five-case mathematical invariant checks: normalization never expands, locked unchanged, MIB ties preserved, original official/independent area/nonoverlap; all time includes normalization and fallback",
+  "calibration_panel": "fixed v5 train_monitor500 convex_area once after R3; reuse completed R3 raw_hard_control coordinates/quality/timing read-only; historical control timing labeled, not a new matched timing experiment",
+  "promotion": "No dev scan. Freeze candidate and full inference pipeline before dev500 acceptance; retain all failures and latency tails",
+  "test_read": false,
+  "new_training": false,
+  "control_reuse_amendment": "Before R4 implementation/evaluation, reuse identical R3 raw_hard_control instead of repeating500 solves. Register source result hash and each reused record; preflight control5 also reused."
+}

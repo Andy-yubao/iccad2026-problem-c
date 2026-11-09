@@ -1,0 +1,22 @@
+{
+  "protocol": {
+    "revision": "E99.configurable_attraction_repulsion.v4",
+    "authorization": "用户明确要求继续放松位移和形变，并建立统一调参入口：调整后自行运行吸引排斥+其他后处理，与原后处理比较统计，生成同100例对比图。",
+    "algorithm": "Unchanged deformation.py V3 central-force / area-mass / anisotropic-stress algorithm. New Parameters subclass removes old experimental budget ceilings; validates positive finite settings. No objective/weight/model change.",
+    "current_single_setting": "tuning.json:20 rounds, per-step center budget5% initial shortest side, cumulative40%; shape dimension factor per step1.03, cumulative1.5 (reciprocal lower bound). One setting only, no automatic parameter sweep.",
+    "panel": "Fixed v5 dev_monitor500 indices0..99, unchanged original split_v1 and public MIB mean-area task; same saved C3 own-Loss-best drafts. No network inference, training, full dev500, test or automation.",
+    "source_draft": "experiments/E97_gpu_hybrid_solver/runs/20261102_fullrepair_singlethread_dev500/C3/terminal/{index:04d}.json",
+    "baseline": "Original no-preprocessor planner on identical saved C3 draft. Auto mode reuses frozen completed original output only when source/planner hashes, effective options and member binding match. A changed planner or fresh mode runs a matched baseline once per member; sequential alternating order. Cached historical time is labeled unpaired, never used to claim speedup.",
+    "run_identity": "Canonical numerical settings, effective planner options, panel/source hashes and analysis/solver source hashes define identity. Label and config file formatting do not. Completed identical runs return existing artifacts. Changed settings create a new immutable config snapshot/run; no best selection. Resume requires identical identity and verifies completed cases.",
+    "reports": "Original-vs-hybrid official neutral-runtime Q, legality, soft constraints, bbox/wire, paired win/tie/loss, weighted influence and leave-one-out sensitivity; exact raw overlap/union void, coverage<10% and worst module, center/shape/area/lock audits, CPU resident draft-stage timing mean/P95. No new Loss-Q study.",
+    "render": "Same100 reference/draft/AR/final pipeline plus original-vs-hybrid final comparison, common IDs/scale with shared visualization. No scoring controls or automatic UI. Saved coordinates are the sole source, no repeated solve for images.",
+    "lifecycle": "One OS-released process lock; STOP at case/arm boundaries; atomic per-case records/NPZ and resumable rendering. Errors preserve evidence and require explicit resume, no automatic retry/wakeup. Fixed output root under this experiment/runs/tuning. Latest is chronological, never best-by-Q.",
+    "timing": "Resident CPU draft->AR->same planner->hard checks; NN/input construction/transfers excluded. Cold native warmup separate; batch throughput not claimed; other user jobs not paused.",
+    "test_read": false
+  },
+  "identity_sha256": "7ed2f2bd4de0161a645ed027ee6eafd1983150fc0d0e585a9e1421693858e2ab",
+  "input_settings_sha256": "3e9214c4401b2ea6136eab862c3b1647f5bfd553cb9c6bb067ddb897a26aa0f5",
+  "git_head": "ccfbd6f78254a5e774d7298946c7de15b3a285d8",
+  "created_utc": "2026-11-02T15:09:03.102660+00:00",
+  "test_read": false
+}

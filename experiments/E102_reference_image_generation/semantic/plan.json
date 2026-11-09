@@ -1,0 +1,70 @@
+{
+  "task": "E102.semantic_masked_image.v2.1",
+  "date": "2026-11-06",
+  "status": "redesign_implementation_and_bounded_learning_check_only",
+  "formal_training_authorized": false,
+  "old_run": "20261106_rgb512_canvas_v2_seed0 remains user-paused; both STOP files preserved",
+  "objective": "Original-reference picture similarity, module identity and visible edges; no geometry extraction, repairs or Q",
+  "members": "Unchanged reference_workset_v5 train16k/dev2k/test2k; train/dev monitoring500; test sealed",
+  "area_transform": "none",
+  "reference_input_rule": "Reference labels are supervision and the training-only corrupted denoising state. Public conditioning never contains reference geometry; generation starts entirely masked and takes public inputs only.",
+  "representation": "512x512 discrete image: background0, module i uses class i+1; direct palette display only. Target comes from original rectangle pixel-center rasterization, never reverse-engineered from RGB.",
+  "canvas": "Preserve registered public canvas_v2, kappa1.5 margin0.05 including public terminal and preplaced extents; never fit by reference",
+  "architecture": {
+    "widths": [
+      48,
+      64,
+      128,
+      192,
+      256
+    ],
+    "dim": 192,
+    "module_layers": 6,
+    "descriptor": 32
+  },
+  "architecture_description": "Conditional residual U-Net, full-resolution image features, skips, module cross-attention at128/64/32 and decoder128/64, dynamic per-module pixel classifiers at512. Global pooled conditioning is auxiliary.",
+  "generation": "MaskGIT-inspired16-round image denoising. Every round may correct previous generated IDs; low-confidence pixels are re-masked by cosine schedule. No DDPM/D3PM likelihood implementation claimed.",
+  "corruption": "Cosine random hidden-pixel ratio, minimum0.05, plus25% fully-masked training examples",
+  "loss": "Per image L=.5*J(all-masked)+.5*J(random-masked), same public problem and reference. J=equal-module masked CE + module-mean soft Dice +.2 balanced BCE of adjacent-pixel class-difference probability (directly from segmentation probabilities). CE=mean foreground classes +.25 background. No independent boundary head, RGB MSE or geometric penalties.",
+  "selection": "Backprop/monitor/best/LR/early stop use the same two-view total; the random-mask view uses fixed member-derived seeds during monitoring. Sampling never selects checkpoint/seed.",
+  "formal_proposal": {
+    "initialization": "fresh; do not warm-start RGB weights",
+    "batch": 2,
+    "precision": "FP32",
+    "seed": 0,
+    "lr": 0.0002,
+    "weight_decay": 0.0001,
+    "max_epochs": 100,
+    "max_hours": 8,
+    "launch": "commands only; not launched"
+  },
+  "necessary_learning_check": {
+    "role": "train_monitor500",
+    "members": 1,
+    "selection": "same metadata rule near n=21 used by original five-case check",
+    "resolution": 512,
+    "batch": 1,
+    "steps": 250,
+    "max_seconds": 180,
+    "lr": 0.0003,
+    "evaluation": "fixed all-masked reconstruction before/after, plus public-only16-round generation; no dev or test",
+    "gate": "end all-masked module-mean image IoU>=0.75 and visible recovery of colored module regions; failure does not auto-extend or start formal training",
+    "purpose": "Necessary response to actual flat-loss/gray-image failure; one bounded fit check, not a generalization claim",
+    "paired_views": "same one member: all-masked and random-masked forwards; sequential .5/.5 backward accumulation; one Adam update",
+    "actual_result": "v2.1:250 updates on the same one21-module train member; all-MASK IoU .824502 and foreground accuracy .917833; sample16 IoU .577686. Basic fitting gate passed, boundaries remain curved; no generalization claim."
+  },
+  "limitations": [
+    "A categorical head prevents gray averaging in display but does not guarantee correct identities or boundaries",
+    "A small fit demonstrates fitting capacity only",
+    "Sampling a plausible layout need not reproduce the single paired reference; non-unique inputs remain a limitation",
+    "No classifier-free guidance or best-of-N reference selection",
+    "No guarantee of achieving the desired visual result without observed evidence"
+  ],
+  "sources": [
+    "https://arxiv.org/abs/2202.04200",
+    "https://arxiv.org/abs/2112.01527",
+    "https://arxiv.org/abs/2107.03006"
+  ],
+  "revision_reason": "First actual one-image fit v2 reached only .551 all-masked module-IoU and .377 sampled module-IoU after250updates. Preserve that failure. v2.1 pairs all-masked supervision at every update, couples boundary loss to mask probabilities, and lets sampling correct prior assignments. No coefficient sweep or dev feedback.",
+  "default_inference": "One all-MASK forward then pixel argmax; MaskGIT16-round generation retained for diagnostics only. On the same final250-step training-image checkpoint, all-MASK module-IoU .8245 versus iterative .5777; no dev or seed selection."
+}

@@ -1,0 +1,23 @@
+{
+  "revision": "E99.central_rectangles.translation.v1",
+  "authorization": "2026-11-02用户要求开始实施；细节自定，严格控制迭代和步长，避免大幅改写草稿。",
+  "scope": "Independent non-neural center-to-center finite-range attraction/repulsion preprocessor; translations only. No group, boundary, wire, MIB, bbox or reference objective. Preserve dimensions and preplaced geometry.",
+  "config": {"iterations": 4, "step_size": 0.5, "step_fraction": 0.02, "total_fraction": 0.06, "attraction_range": 0.5, "attraction_strength": 0.25, "repulsion_strength": 1.0},
+  "hard_ceilings": {"iterations": 8, "step_fraction": 0.02, "path_and_displacement_fraction": 0.06},
+  "distance": "Signed gap d-min((wi+wj)/2/abs(ux),(hi+hj)/2/abs(uy)); zero direction denominator means infinity. g<0 repels, 0<g<R attracts, g>=R is zero. R=.5*min(shortest sides).",
+  "force": "Attraction=.25*g*(1-g/R)^2 for 0<g<R; repulsion=-ell*tanh(-g/ell) for g<0. Equal opposite pair forces, synchronous overdamped updates, one global maximum-active-degree damping. XY>=0 projection is coordinate-domain protection only.",
+  "short_check": {
+    "count": 5,
+    "panel": "Already exposed v5 dev_monitor500 indices 0..4 in frozen order; no selection by overlap or Q",
+    "source_draft": "experiments/E97_gpu_hybrid_solver/runs/20261102_fullrepair_singlethread_dev500/C3/terminal/{index:04d}.json",
+    "source_field": "draft_positions",
+    "source_model": "E97 C3 own-Loss best, d784e96f46decf7a487c25bde2ab16db8cf6ebae1bc0632434cc5e2f78173fce",
+    "task": "Existing E14.mean_area.v1 public MIB mean-area transform, original split_v1/v5 membership",
+    "checks": "Analytic force/invariance fixtures plus these five real instances. Before/after raw geometry and an identical experiment-local copied full single-thread planner on both arms, one call per arm/member. No parameter sweep.",
+    "timing": "CPU resident draft->relaxation->planner->returned hard check; no NN/input construction/H2D included. Cold preparation separate; five-case mean/P95 only diagnostic, no speedup or generalization claim.",
+    "quality": "Pair intersection sum, exact union coverage per module, strictly below10% attainment and worst module, exact union void fraction and bbox. Final independent hard legality; final Q not evaluated in this implementation short check."
+  },
+  "downstream": {"source": "experiments/E97_gpu_hybrid_solver/repair85_one_thread", "copy": "planner", "config_source": "experiments/E97_gpu_hybrid_solver/fullrepair_singlethread_plan.json:full_repair", "changes": "None; local independent copy with SHA256 provenance. Not part of the pair force."},
+  "stopping": "Exactly five real members, no formal dev500 run, no training, no test, no automation. Preserve failures, do not overwrite or auto-resume completed checks.",
+  "test_read": false
+}

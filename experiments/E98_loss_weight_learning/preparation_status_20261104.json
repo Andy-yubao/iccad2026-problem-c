@@ -1,0 +1,41 @@
+{
+  "active_baseline": "experiments/E98_loss_weight_learning/runs/20261104_generalization96_seed0",
+  "baseline": {
+    "status": "running_verified",
+    "pid": 31920,
+    "supervised_exec_session": 40090,
+    "actual_updates_at_least": 5500,
+    "completed_epochs": 11,
+    "train_count": 16000,
+    "model_config": {
+      "width": 96,
+      "layers": 12,
+      "rectangle": true,
+      "ffn_dropout": 0.1,
+      "residual_dropout": 0.05
+    },
+    "augmentation": {
+      "axis_swap_probability": 0.5,
+      "seed_rule": "SeedSequence([20261104,seed,epoch]); member-index flags; independent sampling and Dropout streams",
+      "monitoring": "unaugmented original train500/dev500, eval mode; same fixed per-case Loss"
+    },
+    "fixed_shape_modules_shortchecked": 27,
+    "preplaced_modules_shortchecked": 9,
+    "initial_lr": 0.001,
+    "current_lr": 0.001,
+    "checkpoint_selection": "fixed dev500 Loss",
+    "active_training_sources_unchanged": true,
+    "source_snapshot_sha256": "03863ca4449bf41fe1f94e244f3dfe5daf5713a3543fa9ba8aa575d8f6c55abf",
+    "old_dynamic_stop_preserved": true,
+    "v2_search_started": false,
+    "test_read": false,
+    "postprocessing_calls": 0
+  },
+  "depth_evaluator": "depth_evaluation/preflight.json",
+  "depth_unique_train_cases": 5,
+  "depth_reproductions_per_case": 2,
+  "v2": "dynamic_weight_learning_v2/preflight.json",
+  "v2_ready": "prepared; waits for finished-baseline adoption and explicit freeze",
+  "all_candidate_best_latest_preserved": true,
+  "test_read": false
+}

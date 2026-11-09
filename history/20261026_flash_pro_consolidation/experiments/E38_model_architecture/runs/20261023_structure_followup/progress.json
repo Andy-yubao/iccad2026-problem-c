@@ -1,0 +1,37 @@
+{
+  "stages": [
+    {
+      "kind": "E39 GPU check",
+      "command": [
+        "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+        "-u",
+        "-B",
+        "-m",
+        "experiments.E39_rectangular_attention.check",
+        "--device",
+        "cuda",
+        "--tag",
+        "20261023_w96d12_check_cuda"
+      ],
+      "returncode": 0,
+      "seconds": 30.29467490001116
+    },
+    {
+      "kind": "E40 GPU check",
+      "command": [
+        "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+        "-u",
+        "-B",
+        "-m",
+        "experiments.E40_endpoint_constraint_tokens.check",
+        "--device",
+        "cuda",
+        "--tag",
+        "20261023_w96d12_check_cuda"
+      ],
+      "returncode": 0,
+      "seconds": 34.61035830003675
+    }
+  ],
+  "test_read": false
+}

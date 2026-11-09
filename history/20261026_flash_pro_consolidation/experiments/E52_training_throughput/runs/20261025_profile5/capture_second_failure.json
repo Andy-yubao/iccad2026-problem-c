@@ -1,0 +1,7 @@
+{
+  "attempt": 2,
+  "error": "CUDA capture rejected during backward after constant transfer fix",
+  "suspected_operation": "generic two-axis prod backward includes data-dependent zero handling",
+  "next_check": "replace length-two products with explicit x*y; verify equal Loss/gradient against independent original copies",
+  "formal_training_started": false
+}

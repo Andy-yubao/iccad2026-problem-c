@@ -1,0 +1,17 @@
+{
+  "batch_member_alignment": true,
+  "single_vs_padded_inference": [
+    {
+      "model": "current",
+      "unique_train_cases": 5,
+      "CPU_unpadded_vs_GPU_padded_state_max_abs_delta": 1.1622905731201172e-05
+    },
+    {
+      "model": "previous",
+      "unique_train_cases": 5,
+      "CPU_unpadded_vs_GPU_padded_state_max_abs_delta": 6.943941116333008e-06
+    }
+  ],
+  "unique_check_cases": 5,
+  "test_read": false
+}

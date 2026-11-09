@@ -1,0 +1,21 @@
+{
+  "identity": {
+    "plan": {
+      "revision": "E99.R21.saved_pair_potential_audit.v1",
+      "scope": "Read all21 snapshots of R15 attraction_equal_slope train500; no new trajectories, downstream solves, dev or test.",
+      "hypothesis": "Current center and angular-shape updates need not decrease a scalar rectangle pair potential because angular/shape derivatives are approximate. Determine whether whole-layout step backtracking has a nontrivial target before candidate testing.",
+      "potential": "For current ell=min(short_i,short_j), z=g/ell, r=attraction_range, U/ell^2 is0 for z>=r; ka*(z^2/2-2z^3/(3r)+z^4/(4r^2)-r^2/12) for0<=z<r; kr*logcosh(z)-ka*r^2/12 for z<0. Stable logcosh=abs(z)+log1p(exp(-2abs(z)))-log2. Sum over all pairs. At fixed ell/direction its signed-gap derivative equals current attraction/repulsion; full rectangle forces are not asserted conservative.",
+      "round_tolerance": "1e-12*max(1,abs(U_before))",
+      "decision": "Only register a bounded full-layout backtracking candidate if saved rounds show meaningful ascent; preserve original forces, area inertia,20 rounds,all caps and original planner. Potential is a geometry merit, not finalQ.",
+      "test_read": false,
+      "new_training": false
+    },
+    "sources": {
+      "experiments/E99_attraction_repulsion/research/R21/audit_energy.py": "c5a9c65edddaa97a5fdd1af2c899411f2f8b66c94809ae1175b0d35aa7d768b8",
+      "experiments/E99_attraction_repulsion/research/R21/audit_plan.json": "a60f18fdd6fbbe04fe73282b903ecf8a7295ef589b5e8ed1ae90632615d26b5a"
+    },
+    "source_registration_sha256": "193da4f6712b501759bbe5091c17af57c3eeb3af2e772e035e5d9b4a0f38d8fc",
+    "source_results_sha256": "6fa6155eeb7e45fb48ef7fc30f986d6e47711552f4840895344bf6980686fd12"
+  },
+  "created_utc": "2026-11-03T03:34:37.341647+00:00"
+}

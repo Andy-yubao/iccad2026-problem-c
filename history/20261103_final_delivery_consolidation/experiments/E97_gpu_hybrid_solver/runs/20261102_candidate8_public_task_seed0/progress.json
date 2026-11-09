@@ -1,0 +1,1174 @@
+{
+  "epoch": 17,
+  "step": 8500,
+  "cursor": 0,
+  "pending_monitor": false,
+  "best_loss": 0.23037981605529786,
+  "best_epoch": 9,
+  "history": [
+    {
+      "epoch": 0,
+      "step": 0,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.5491868853569031,
+            "max_abs": 5.86397647857666,
+            "positive_fraction": 0.049079254269599915
+          },
+          {
+            "rms": 0.35127294063568115,
+            "max_abs": 3.9705796241760254,
+            "positive_fraction": 0.15995314717292786
+          },
+          {
+            "rms": 0.38566917181015015,
+            "max_abs": 6.668238639831543,
+            "positive_fraction": 0.9231156706809998
+          },
+          {
+            "rms": 0.27832597494125366,
+            "max_abs": 3.6676244735717773,
+            "positive_fraction": 0.7712301015853882
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher": 0.14677812433242798,
+        "physics": 0.03714406406879425,
+        "corridor": 0.04115859842300415,
+        "quality": 0.49026319122314455,
+        "intersection": 0.027265222311019896,
+        "penetration": 0.00474784405529499,
+        "boundary": 0.02022860276699066,
+        "mib": 0.000738468344323337,
+        "bbox_ratio": 1.0495794372558593,
+        "wire_ratio": 0.30099490547180174,
+        "corridor_raw": 0.04716006982326507,
+        "total": 0.24052153635025025,
+        "count_weight": 0.9947826290130615,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher": 0.1529908142089844,
+        "physics": 0.03862517297267914,
+        "corridor": 0.04296028909087181,
+        "quality": 0.49075047111511233,
+        "intersection": 0.02844481861591339,
+        "penetration": 0.004808185622096062,
+        "boundary": 0.02104034358263016,
+        "mib": 0.0011208229828625917,
+        "bbox_ratio": 1.0510629920959473,
+        "wire_ratio": 0.30153367710113527,
+        "corridor_raw": 0.04978790536522865,
+        "total": 0.2366209101676941,
+        "count_weight": 0.9921970405578613,
+        "count": 500
+      },
+      "lr": 0.00025,
+      "lr_next": 0.00025,
+      "train_monitor_seen_count": 0
+    },
+    {
+      "epoch": 1,
+      "step": 500,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.5392680764198303,
+            "max_abs": 5.773352146148682,
+            "positive_fraction": 0.06916628777980804
+          },
+          {
+            "rms": 0.3835076689720154,
+            "max_abs": 3.2125635147094727,
+            "positive_fraction": 0.1664241999387741
+          },
+          {
+            "rms": 0.3603607714176178,
+            "max_abs": 5.644939422607422,
+            "positive_fraction": 0.9268314242362976
+          },
+          {
+            "rms": 0.26011452078819275,
+            "max_abs": 3.8681516647338867,
+            "positive_fraction": 0.5934823751449585
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher": 0.14969320821762086,
+        "physics": 0.030770548582077027,
+        "corridor": 0.027705926775932314,
+        "quality": 0.4928980293273926,
+        "intersection": 0.021725535273551942,
+        "penetration": 0.004071653321385383,
+        "boundary": 0.019511909782886507,
+        "mib": 0.000953828813508153,
+        "bbox_ratio": 1.0587581863403321,
+        "wire_ratio": 0.30204938983917234,
+        "corridor_raw": 0.03096695154905319,
+        "total": 0.23638747310638428,
+        "count_weight": 0.9947826290130615,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher": 0.15405046367645264,
+        "physics": 0.03221636629104614,
+        "corridor": 0.025233528420329093,
+        "quality": 0.4933643817901611,
+        "intersection": 0.02285282427072525,
+        "penetration": 0.00416206918656826,
+        "boundary": 0.020279045045375824,
+        "mib": 0.001317117551341653,
+        "bbox_ratio": 1.0601315422058106,
+        "wire_ratio": 0.3026022186279297,
+        "corridor_raw": 0.027833031982183457,
+        "total": 0.23210092401504517,
+        "count_weight": 0.9921970405578613,
+        "count": 500
+      },
+      "lr": 0.00025,
+      "lr_next": 0.00025,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 2,
+      "step": 1000,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.5586796402931213,
+            "max_abs": 5.789425849914551,
+            "positive_fraction": 0.07170117646455765
+          },
+          {
+            "rms": 0.38595205545425415,
+            "max_abs": 3.743410110473633,
+            "positive_fraction": 0.17897269129753113
+          },
+          {
+            "rms": 0.37619107961654663,
+            "max_abs": 5.413249969482422,
+            "positive_fraction": 0.9273730516433716
+          },
+          {
+            "rms": 0.2707144021987915,
+            "max_abs": 4.290951728820801,
+            "positive_fraction": 0.550190806388855
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher": 0.14944575119018555,
+        "physics": 0.030921043872833252,
+        "corridor": 0.027182780385017397,
+        "quality": 0.4921963577270508,
+        "intersection": 0.022080118060111998,
+        "penetration": 0.004094343841075898,
+        "boundary": 0.018524402558803558,
+        "mib": 0.00115481723472476,
+        "bbox_ratio": 1.0562088317871094,
+        "wire_ratio": 0.30183714008331297,
+        "corridor_raw": 0.030108183979988098,
+        "total": 0.234807213306427,
+        "count_weight": 0.9947826290130615,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher": 0.15387719488143922,
+        "physics": 0.032440720200538634,
+        "corridor": 0.024565001264214514,
+        "quality": 0.49260782623291016,
+        "intersection": 0.023228119134902955,
+        "penetration": 0.004197637692093849,
+        "boundary": 0.019442862629890444,
+        "mib": 0.0015424654111266137,
+        "bbox_ratio": 1.0573987693786622,
+        "wire_ratio": 0.3023580312728882,
+        "corridor_raw": 0.02688391163945198,
+        "total": 0.23130725860595702,
+        "count_weight": 0.9921970405578613,
+        "count": 500
+      },
+      "lr": 0.00025,
+      "lr_next": 0.00025,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 3,
+      "step": 1500,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.5511711835861206,
+            "max_abs": 5.3972392082214355,
+            "positive_fraction": 0.07993564009666443
+          },
+          {
+            "rms": 0.3965674340724945,
+            "max_abs": 3.2204196453094482,
+            "positive_fraction": 0.1873394101858139
+          },
+          {
+            "rms": 0.3714453876018524,
+            "max_abs": 5.053101062774658,
+            "positive_fraction": 0.9256348609924316
+          },
+          {
+            "rms": 0.27229976654052734,
+            "max_abs": 4.920022964477539,
+            "positive_fraction": 0.45894739031791687
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher": 0.14869242095947266,
+        "physics": 0.03126680910587311,
+        "corridor": 0.024851120710372925,
+        "quality": 0.49229884338378904,
+        "intersection": 0.02228368079662323,
+        "penetration": 0.004116896316409111,
+        "boundary": 0.01887812566757202,
+        "mib": 0.0014670090600848197,
+        "bbox_ratio": 1.0566204109191895,
+        "wire_ratio": 0.3018433198928833,
+        "corridor_raw": 0.02736830085515976,
+        "total": 0.2325699782371521,
+        "count_weight": 0.9947826290130615,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher": 0.15408496332168578,
+        "physics": 0.03279144489765167,
+        "corridor": 0.02252699476480484,
+        "quality": 0.49266293334960937,
+        "intersection": 0.02347771328687668,
+        "penetration": 0.00421017849445343,
+        "boundary": 0.01970766681432724,
+        "mib": 0.0017663708329200745,
+        "bbox_ratio": 1.0576403198242188,
+        "wire_ratio": 0.30234245014190675,
+        "corridor_raw": 0.02456178855895996,
+        "total": 0.23216636562347412,
+        "count_weight": 0.9921970405578613,
+        "count": 500
+      },
+      "lr": 0.00025,
+      "lr_next": 0.00025,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 4,
+      "step": 2000,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.5569612383842468,
+            "max_abs": 5.475982666015625,
+            "positive_fraction": 0.08514712005853653
+          },
+          {
+            "rms": 0.3947995901107788,
+            "max_abs": 3.2166428565979004,
+            "positive_fraction": 0.18153592944145203
+          },
+          {
+            "rms": 0.39353662729263306,
+            "max_abs": 6.335989475250244,
+            "positive_fraction": 0.9249987602233887
+          },
+          {
+            "rms": 0.29101523756980896,
+            "max_abs": 5.2848005294799805,
+            "positive_fraction": 0.5010800957679749
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher": 0.1492901816368103,
+        "physics": 0.031518439173698426,
+        "corridor": 0.023596373587846754,
+        "quality": 0.49362193870544435,
+        "intersection": 0.02198901355266571,
+        "penetration": 0.004140519216656685,
+        "boundary": 0.02083284878730774,
+        "mib": 0.0018069490045309067,
+        "bbox_ratio": 1.0613995208740234,
+        "wire_ratio": 0.3022787084579468,
+        "corridor_raw": 0.025882279336452485,
+        "total": 0.23155569744110108,
+        "count_weight": 0.9947826290130615,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher": 0.15509401512145995,
+        "physics": 0.03266229474544525,
+        "corridor": 0.021851225316524506,
+        "quality": 0.4938916416168213,
+        "intersection": 0.023028038203716277,
+        "penetration": 0.004178092241287231,
+        "boundary": 0.02097025966644287,
+        "mib": 0.0021359869875013826,
+        "bbox_ratio": 1.0620708694458008,
+        "wire_ratio": 0.3027487735748291,
+        "corridor_raw": 0.023684467494487764,
+        "total": 0.23084069633483886,
+        "count_weight": 0.9921970405578613,
+        "count": 500
+      },
+      "lr": 0.00025,
+      "lr_next": 0.00025,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 5,
+      "step": 2500,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.5768430829048157,
+            "max_abs": 5.624661922454834,
+            "positive_fraction": 0.07879572361707687
+          },
+          {
+            "rms": 0.39264675974845886,
+            "max_abs": 3.435178756713867,
+            "positive_fraction": 0.20977555215358734
+          },
+          {
+            "rms": 0.361484169960022,
+            "max_abs": 4.592007160186768,
+            "positive_fraction": 0.9217238426208496
+          },
+          {
+            "rms": 0.3027712106704712,
+            "max_abs": 5.712115287780762,
+            "positive_fraction": 0.5284285545349121
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher": 0.14813348960876466,
+        "physics": 0.030329939484596252,
+        "corridor": 0.025759489119052886,
+        "quality": 0.4934572811126709,
+        "intersection": 0.021206000924110412,
+        "penetration": 0.004054161250591278,
+        "boundary": 0.019511942505836488,
+        "mib": 0.0019179208055138588,
+        "bbox_ratio": 1.0606072845458985,
+        "wire_ratio": 0.30235796070098875,
+        "corridor_raw": 0.028602006554603578,
+        "total": 0.23081268310546876,
+        "count_weight": 0.9947826290130615,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher": 0.155182270526886,
+        "physics": 0.03179737758636474,
+        "corridor": 0.024223918586969376,
+        "quality": 0.49376377296447754,
+        "intersection": 0.02239757478237152,
+        "penetration": 0.00415909181535244,
+        "boundary": 0.020073257863521574,
+        "mib": 0.0022239734157919883,
+        "bbox_ratio": 1.0614106063842774,
+        "wire_ratio": 0.3028489055633545,
+        "corridor_raw": 0.026654217153787612,
+        "total": 0.23270582056045533,
+        "count_weight": 0.9921970405578613,
+        "count": 500
+      },
+      "lr": 0.00025,
+      "lr_next": 0.00025,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 6,
+      "step": 3000,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.5821905732154846,
+            "max_abs": 5.778663635253906,
+            "positive_fraction": 0.08050559461116791
+          },
+          {
+            "rms": 0.4030536115169525,
+            "max_abs": 3.1416432857513428,
+            "positive_fraction": 0.2054709494113922
+          },
+          {
+            "rms": 0.38305360078811646,
+            "max_abs": 5.45203971862793,
+            "positive_fraction": 0.9223599433898926
+          },
+          {
+            "rms": 0.30470192432403564,
+            "max_abs": 5.441003799438477,
+            "positive_fraction": 0.47229570150375366
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher": 0.1477722120285034,
+        "physics": 0.03140119445323944,
+        "corridor": 0.02459948468208313,
+        "quality": 0.4930687713623047,
+        "intersection": 0.022083078742027282,
+        "penetration": 0.004154278472065925,
+        "boundary": 0.01983269202709198,
+        "mib": 0.002056649871170521,
+        "bbox_ratio": 1.0593386840820314,
+        "wire_ratio": 0.3021485958099365,
+        "corridor_raw": 0.027207837283611296,
+        "total": 0.22843887519836426,
+        "count_weight": 0.9947826290130615,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher": 0.15512297201156616,
+        "physics": 0.0328067901134491,
+        "corridor": 0.021977345287799835,
+        "quality": 0.49336471366882323,
+        "intersection": 0.02320521819591522,
+        "penetration": 0.004237603187561035,
+        "boundary": 0.020482181310653685,
+        "mib": 0.0024342342466115953,
+        "bbox_ratio": 1.0601813011169434,
+        "wire_ratio": 0.30258563613891604,
+        "corridor_raw": 0.023876696199178697,
+        "total": 0.23209516477584838,
+        "count_weight": 0.9921970405578613,
+        "count": 500
+      },
+      "lr": 0.00025,
+      "lr_next": 0.00025,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 7,
+      "step": 3500,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.591752827167511,
+            "max_abs": 5.656656265258789,
+            "positive_fraction": 0.08458346128463745
+          },
+          {
+            "rms": 0.4051450192928314,
+            "max_abs": 3.365149974822998,
+            "positive_fraction": 0.2683677077293396
+          },
+          {
+            "rms": 0.3742731213569641,
+            "max_abs": 4.965658664703369,
+            "positive_fraction": 0.9209995865821838
+          },
+          {
+            "rms": 0.31108689308166504,
+            "max_abs": 5.900365829467773,
+            "positive_fraction": 0.40460625290870667
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher": 0.14763538122177125,
+        "physics": 0.031156031489372252,
+        "corridor": 0.02247841548919678,
+        "quality": 0.49311258125305174,
+        "intersection": 0.02189127802848816,
+        "penetration": 0.004088107571005821,
+        "boundary": 0.019697348058223724,
+        "mib": 0.0025230908542871475,
+        "bbox_ratio": 1.0595814437866211,
+        "wire_ratio": 0.3021072254180908,
+        "corridor_raw": 0.02472279465198517,
+        "total": 0.22814445161819458,
+        "count_weight": 0.9947826290130615,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher": 0.15486883401870727,
+        "physics": 0.03238106834888458,
+        "corridor": 0.021451071202754975,
+        "quality": 0.4933652400970459,
+        "intersection": 0.022963003754615782,
+        "penetration": 0.004140133768320084,
+        "boundary": 0.019975481271743773,
+        "mib": 0.002840599574148655,
+        "bbox_ratio": 1.060245761871338,
+        "wire_ratio": 0.3025463943481445,
+        "corridor_raw": 0.02328193873167038,
+        "total": 0.23360198736190796,
+        "count_weight": 0.9921970405578613,
+        "count": 500
+      },
+      "lr": 0.00025,
+      "lr_next": 0.0001,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 8,
+      "step": 4000,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.5954523682594299,
+            "max_abs": 5.115775108337402,
+            "positive_fraction": 0.08410482108592987
+          },
+          {
+            "rms": 0.4048759639263153,
+            "max_abs": 3.1563611030578613,
+            "positive_fraction": 0.25914135575294495
+          },
+          {
+            "rms": 0.3762389123439789,
+            "max_abs": 5.212529182434082,
+            "positive_fraction": 0.9208295345306396
+          },
+          {
+            "rms": 0.3236129879951477,
+            "max_abs": 6.031626224517822,
+            "positive_fraction": 0.42840903997421265
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher": 0.14667021417617798,
+        "physics": 0.0306504625082016,
+        "corridor": 0.023260598957538604,
+        "quality": 0.492885913848877,
+        "intersection": 0.021532534182071687,
+        "penetration": 0.0040396607518196105,
+        "boundary": 0.019351948261260986,
+        "mib": 0.0024028030708432195,
+        "bbox_ratio": 1.0587170104980468,
+        "wire_ratio": 0.3020686750411987,
+        "corridor_raw": 0.025704469084739685,
+        "total": 0.2261917190551758,
+        "count_weight": 0.9947826290130615,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher": 0.15451930665969849,
+        "physics": 0.032017572760581973,
+        "corridor": 0.021985421344637872,
+        "quality": 0.49310516166687013,
+        "intersection": 0.022705403983592987,
+        "penetration": 0.004113378256559372,
+        "boundary": 0.01971186751127243,
+        "mib": 0.0027082370072603226,
+        "bbox_ratio": 1.0592082138061523,
+        "wire_ratio": 0.3025223789215088,
+        "corridor_raw": 0.023934397518634794,
+        "total": 0.23203620576858522,
+        "count_weight": 0.9921970405578613,
+        "count": 500
+      },
+      "lr": 0.0001,
+      "lr_next": 0.0001,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 9,
+      "step": 4500,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.5969453454017639,
+            "max_abs": 5.248399257659912,
+            "positive_fraction": 0.08572022616863251
+          },
+          {
+            "rms": 0.410040944814682,
+            "max_abs": 3.1732819080352783,
+            "positive_fraction": 0.2497480809688568
+          },
+          {
+            "rms": 0.37005841732025146,
+            "max_abs": 4.974715232849121,
+            "positive_fraction": 0.920202910900116
+          },
+          {
+            "rms": 0.31997716426849365,
+            "max_abs": 5.941769123077393,
+            "positive_fraction": 0.4637432098388672
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher": 0.14637679290771485,
+        "physics": 0.030515674948692322,
+        "corridor": 0.023040366888046265,
+        "quality": 0.49310362815856934,
+        "intersection": 0.021436180710792542,
+        "penetration": 0.004028866305947304,
+        "boundary": 0.019201013684272766,
+        "mib": 0.002503750041127205,
+        "bbox_ratio": 1.0594249954223633,
+        "wire_ratio": 0.30219181060791017,
+        "corridor_raw": 0.02546456629037857,
+        "total": 0.22520907735824586,
+        "count_weight": 0.9947826290130615,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher": 0.15448551273345948,
+        "physics": 0.03188693189620972,
+        "corridor": 0.021904451549053194,
+        "quality": 0.493288049697876,
+        "intersection": 0.022607313871383667,
+        "penetration": 0.004104158639907837,
+        "boundary": 0.01956368464231491,
+        "mib": 0.002845372974872589,
+        "bbox_ratio": 1.0598052558898925,
+        "wire_ratio": 0.3026226348876953,
+        "corridor_raw": 0.023907459169626236,
+        "total": 0.23037981605529786,
+        "count_weight": 0.9921970405578613,
+        "count": 500
+      },
+      "lr": 0.0001,
+      "lr_next": 0.0001,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 10,
+      "step": 5000,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.6041906476020813,
+            "max_abs": 5.293939113616943,
+            "positive_fraction": 0.08303733170032501
+          },
+          {
+            "rms": 0.4112677574157715,
+            "max_abs": 3.0022881031036377,
+            "positive_fraction": 0.2526104748249054
+          },
+          {
+            "rms": 0.3664972484111786,
+            "max_abs": 4.890018463134766,
+            "positive_fraction": 0.9194408655166626
+          },
+          {
+            "rms": 0.3195233941078186,
+            "max_abs": 5.597740173339844,
+            "positive_fraction": 0.47995704412460327
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher": 0.14668144464492797,
+        "physics": 0.030324336290359497,
+        "corridor": 0.021690178513526916,
+        "quality": 0.49338566398620604,
+        "intersection": 0.021207450985908507,
+        "penetration": 0.00399182976782322,
+        "boundary": 0.019511841535568238,
+        "mib": 0.00247095887362957,
+        "bbox_ratio": 1.0604196014404297,
+        "wire_ratio": 0.30229877662658694,
+        "corridor_raw": 0.023788240253925324,
+        "total": 0.22439992809295653,
+        "count_weight": 0.9947826290130615,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher": 0.1551888952255249,
+        "physics": 0.03165283155441284,
+        "corridor": 0.02127403263747692,
+        "quality": 0.4936065082550049,
+        "intersection": 0.022306623101234435,
+        "penetration": 0.004061312362551689,
+        "boundary": 0.020001733779907226,
+        "mib": 0.0028446282371878623,
+        "bbox_ratio": 1.0609363746643066,
+        "wire_ratio": 0.3027380180358887,
+        "corridor_raw": 0.02304497492313385,
+        "total": 0.2315587224960327,
+        "count_weight": 0.9921970405578613,
+        "count": 500
+      },
+      "lr": 0.0001,
+      "lr_next": 0.0001,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 11,
+      "step": 5500,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.6124964952468872,
+            "max_abs": 5.209144592285156,
+            "positive_fraction": 0.08255869895219803
+          },
+          {
+            "rms": 0.41859322786331177,
+            "max_abs": 3.157752275466919,
+            "positive_fraction": 0.24623388051986694
+          },
+          {
+            "rms": 0.37150225043296814,
+            "max_abs": 5.117985725402832,
+            "positive_fraction": 0.9181151986122131
+          },
+          {
+            "rms": 0.32681840658187866,
+            "max_abs": 5.654166221618652,
+            "positive_fraction": 0.5000976324081421
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher": 0.14632401990890503,
+        "physics": 0.030464508652687072,
+        "corridor": 0.022923696398735045,
+        "quality": 0.4930911102294922,
+        "intersection": 0.021340552926063537,
+        "penetration": 0.004027460709214211,
+        "boundary": 0.01938640820980072,
+        "mib": 0.0024989289194345472,
+        "bbox_ratio": 1.059378044128418,
+        "wire_ratio": 0.30219072437286376,
+        "corridor_raw": 0.02522245806455612,
+        "total": 0.22396012020111083,
+        "count_weight": 0.9947826290130615,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher": 0.15488360166549683,
+        "physics": 0.03179903590679169,
+        "corridor": 0.02149266204237938,
+        "quality": 0.49329858016967776,
+        "intersection": 0.022455998599529268,
+        "penetration": 0.004102416649460793,
+        "boundary": 0.019815742015838623,
+        "mib": 0.002866847164928913,
+        "bbox_ratio": 1.0598492813110352,
+        "wire_ratio": 0.3026206932067871,
+        "corridor_raw": 0.02333098916709423,
+        "total": 0.23098935413360597,
+        "count_weight": 0.9921970405578613,
+        "count": 500
+      },
+      "lr": 0.0001,
+      "lr_next": 0.0001,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 12,
+      "step": 6000,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.6144986748695374,
+            "max_abs": 5.216670513153076,
+            "positive_fraction": 0.08126133680343628
+          },
+          {
+            "rms": 0.4163058400154114,
+            "max_abs": 3.1156129837036133,
+            "positive_fraction": 0.2549816071987152
+          },
+          {
+            "rms": 0.37054505944252014,
+            "max_abs": 5.174782752990723,
+            "positive_fraction": 0.9197242856025696
+          },
+          {
+            "rms": 0.3292262554168701,
+            "max_abs": 5.788253307342529,
+            "positive_fraction": 0.471385657787323
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher": 0.14606328535079957,
+        "physics": 0.030973998069763184,
+        "corridor": 0.022181996941566466,
+        "quality": 0.4928444862365723,
+        "intersection": 0.021774683117866515,
+        "penetration": 0.004100931644439697,
+        "boundary": 0.019346428751945494,
+        "mib": 0.002617763817310333,
+        "bbox_ratio": 1.0585169868469237,
+        "wire_ratio": 0.30209511089324953,
+        "corridor_raw": 0.02442097544670105,
+        "total": 0.22332041358947755,
+        "count_weight": 0.9947826290130615,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher": 0.1547153253555298,
+        "physics": 0.03221314561367035,
+        "corridor": 0.02123130190372467,
+        "quality": 0.4930447883605957,
+        "intersection": 0.02286819565296173,
+        "penetration": 0.00413228689134121,
+        "boundary": 0.019647600412368776,
+        "mib": 0.003007633648812771,
+        "bbox_ratio": 1.0589576454162597,
+        "wire_ratio": 0.3025222330093384,
+        "corridor_raw": 0.023027291387319564,
+        "total": 0.231227370262146,
+        "count_weight": 0.9921970405578613,
+        "count": 500
+      },
+      "lr": 0.0001,
+      "lr_next": 5e-05,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 13,
+      "step": 6500,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.6134352684020996,
+            "max_abs": 5.217512607574463,
+            "positive_fraction": 0.08218712359666824
+          },
+          {
+            "rms": 0.418835312128067,
+            "max_abs": 3.1274209022521973,
+            "positive_fraction": 0.25132885575294495
+          },
+          {
+            "rms": 0.3683529198169708,
+            "max_abs": 4.87468147277832,
+            "positive_fraction": 0.9177782535552979
+          },
+          {
+            "rms": 0.33341044187545776,
+            "max_abs": 5.847163677215576,
+            "positive_fraction": 0.4921024739742279
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher": 0.14586349725723266,
+        "physics": 0.03072715127468109,
+        "corridor": 0.02248442107439041,
+        "quality": 0.4932365951538086,
+        "intersection": 0.02148468852043152,
+        "penetration": 0.004057401761412621,
+        "boundary": 0.019698087215423585,
+        "mib": 0.0026053868755698205,
+        "bbox_ratio": 1.0599389266967774,
+        "wire_ratio": 0.3022187757492065,
+        "corridor_raw": 0.02502925568819046,
+        "total": 0.22295739650726318,
+        "count_weight": 0.9947826290130615,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher": 0.1552962212562561,
+        "physics": 0.03197351205348969,
+        "corridor": 0.02044016361236572,
+        "quality": 0.49345833587646487,
+        "intersection": 0.02255333536863327,
+        "penetration": 0.004110583141446114,
+        "boundary": 0.02004688376188278,
+        "mib": 0.0029787269830703735,
+        "bbox_ratio": 1.06045458984375,
+        "wire_ratio": 0.30265738010406495,
+        "corridor_raw": 0.022123849779367447,
+        "total": 0.2316143708229065,
+        "count_weight": 0.9921970405578613,
+        "count": 500
+      },
+      "lr": 5e-05,
+      "lr_next": 5e-05,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 14,
+      "step": 7000,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.6191200017929077,
+            "max_abs": 5.203705787658691,
+            "positive_fraction": 0.08152899891138077
+          },
+          {
+            "rms": 0.4197421073913574,
+            "max_abs": 3.0657145977020264,
+            "positive_fraction": 0.25173506140708923
+          },
+          {
+            "rms": 0.36933985352516174,
+            "max_abs": 5.047077178955078,
+            "positive_fraction": 0.9161502718925476
+          },
+          {
+            "rms": 0.33368727564811707,
+            "max_abs": 5.86226749420166,
+            "positive_fraction": 0.49709352850914
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher": 0.1457768578529358,
+        "physics": 0.0307446813583374,
+        "corridor": 0.023013356000185014,
+        "quality": 0.49296921348571776,
+        "intersection": 0.021540801763534546,
+        "penetration": 0.00407701388001442,
+        "boundary": 0.01941819566488266,
+        "mib": 0.0027231650054454805,
+        "bbox_ratio": 1.0589969940185546,
+        "wire_ratio": 0.3021173849105835,
+        "corridor_raw": 0.02558438676595688,
+        "total": 0.222613534450531,
+        "count_weight": 0.9947826290130615,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher": 0.15481164216995238,
+        "physics": 0.03197500872612,
+        "corridor": 0.021296333998441695,
+        "quality": 0.49317493438720705,
+        "intersection": 0.022623877882957458,
+        "penetration": 0.0041203836053609845,
+        "boundary": 0.019680578768253326,
+        "mib": 0.0031060196161270142,
+        "bbox_ratio": 1.0594688301086426,
+        "wire_ratio": 0.3025410509109497,
+        "corridor_raw": 0.023144233345985414,
+        "total": 0.23069948530197143,
+        "count_weight": 0.9921970405578613,
+        "count": 500
+      },
+      "lr": 5e-05,
+      "lr_next": 5e-05,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 15,
+      "step": 7500,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.6207544803619385,
+            "max_abs": 5.068038463592529,
+            "positive_fraction": 0.08194780349731445
+          },
+          {
+            "rms": 0.42148590087890625,
+            "max_abs": 3.070996046066284,
+            "positive_fraction": 0.25366219878196716
+          },
+          {
+            "rms": 0.3692450523376465,
+            "max_abs": 5.052126407623291,
+            "positive_fraction": 0.9154196977615356
+          },
+          {
+            "rms": 0.3381286859512329,
+            "max_abs": 5.910924434661865,
+            "positive_fraction": 0.4994678497314453
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher": 0.1458261947631836,
+        "physics": 0.03055611753463745,
+        "corridor": 0.022676308929920196,
+        "quality": 0.4930202178955078,
+        "intersection": 0.021371219277381896,
+        "penetration": 0.004084883511066437,
+        "boundary": 0.01931755244731903,
+        "mib": 0.002706267207860947,
+        "bbox_ratio": 1.0591387100219727,
+        "wire_ratio": 0.30216046142578123,
+        "corridor_raw": 0.025195469677448273,
+        "total": 0.2224120798110962,
+        "count_weight": 0.9947826290130615,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher": 0.15498843240737914,
+        "physics": 0.03178513443470001,
+        "corridor": 0.02068095302581787,
+        "quality": 0.49320925521850584,
+        "intersection": 0.022453312039375305,
+        "penetration": 0.0041211689114570614,
+        "boundary": 0.019615174233913422,
+        "mib": 0.003068597964942455,
+        "bbox_ratio": 1.059552448272705,
+        "wire_ratio": 0.3025752429962158,
+        "corridor_raw": 0.022414795964956283,
+        "total": 0.23153273010253905,
+        "count_weight": 0.9921970405578613,
+        "count": 500
+      },
+      "lr": 5e-05,
+      "lr_next": 2e-05,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 16,
+      "step": 8000,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.6218439340591431,
+            "max_abs": 5.114034175872803,
+            "positive_fraction": 0.08190687000751495
+          },
+          {
+            "rms": 0.42395633459091187,
+            "max_abs": 3.0773425102233887,
+            "positive_fraction": 0.2524813711643219
+          },
+          {
+            "rms": 0.3713962435722351,
+            "max_abs": 5.141843318939209,
+            "positive_fraction": 0.9156275391578674
+          },
+          {
+            "rms": 0.33778607845306396,
+            "max_abs": 5.9282121658325195,
+            "positive_fraction": 0.5040684342384338
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher": 0.14561851930618286,
+        "physics": 0.030582655191421507,
+        "corridor": 0.022396012037992477,
+        "quality": 0.4931389808654785,
+        "intersection": 0.021367978632450105,
+        "penetration": 0.004059562548995018,
+        "boundary": 0.019514421880245207,
+        "mib": 0.0027650801241397857,
+        "bbox_ratio": 1.0595730094909668,
+        "wire_ratio": 0.3021955270767212,
+        "corridor_raw": 0.024846892952919006,
+        "total": 0.2218461208343506,
+        "count_weight": 0.9947826290130615,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher": 0.15506985330581666,
+        "physics": 0.031812487721443176,
+        "corridor": 0.020776739090681076,
+        "quality": 0.49332895851135256,
+        "intersection": 0.022441051304340362,
+        "penetration": 0.004105387642979622,
+        "boundary": 0.01980206882953644,
+        "mib": 0.003155324123799801,
+        "bbox_ratio": 1.0599966354370116,
+        "wire_ratio": 0.30260826873779295,
+        "corridor_raw": 0.022487350940704344,
+        "total": 0.2314289035797119,
+        "count_weight": 0.9921970405578613,
+        "count": 500
+      },
+      "lr": 2e-05,
+      "lr_next": 2e-05,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 17,
+      "step": 8500,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.6225454807281494,
+            "max_abs": 5.087432861328125,
+            "positive_fraction": 0.08206745982170105
+          },
+          {
+            "rms": 0.4250350594520569,
+            "max_abs": 3.0897984504699707,
+            "positive_fraction": 0.2520751357078552
+          },
+          {
+            "rms": 0.3704679012298584,
+            "max_abs": 5.090572357177734,
+            "positive_fraction": 0.9148277044296265
+          },
+          {
+            "rms": 0.33652669191360474,
+            "max_abs": 5.92507791519165,
+            "positive_fraction": 0.5035173892974854
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher": 0.1455974464416504,
+        "physics": 0.030681488633155823,
+        "corridor": 0.02236946079134941,
+        "quality": 0.4929132194519043,
+        "intersection": 0.02154574704170227,
+        "penetration": 0.004048874318599701,
+        "boundary": 0.019229280412197115,
+        "mib": 0.0027954715862870214,
+        "bbox_ratio": 1.058786964416504,
+        "wire_ratio": 0.3021043710708618,
+        "corridor_raw": 0.024792570412158967,
+        "total": 0.22182654762268067,
+        "count_weight": 0.9947826290130615,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher": 0.1550262589454651,
+        "physics": 0.031948363423347476,
+        "corridor": 0.020731225073337554,
+        "quality": 0.4931154136657715,
+        "intersection": 0.022626750707626344,
+        "penetration": 0.004108360469341278,
+        "boundary": 0.0195732204914093,
+        "mib": 0.0031994706466794013,
+        "bbox_ratio": 1.0592543983459473,
+        "wire_ratio": 0.30251959323883054,
+        "corridor_raw": 0.022453550159931182,
+        "total": 0.2315214195251465,
+        "count_weight": 0.9921970405578613,
+        "count": 500
+      },
+      "lr": 2e-05,
+      "lr_next": 2e-05,
+      "train_monitor_seen_count": 500
+    }
+  ],
+  "status": "early_stop",
+  "finished": true,
+  "seen_count": 16000,
+  "scheduler": {
+    "best": 0.23037981605529786,
+    "bad": 2,
+    "early_bad": 8,
+    "drops": 3,
+    "last_drop": 15
+  },
+  "elapsed_seconds": 622.4062486000039,
+  "test_read": false
+}

@@ -1,0 +1,284 @@
+
+train: E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\python.exe -u -B -m experiments.E57_capacity_data_diagnosis.train --output E:\project\ICCAD\2026\problemC\experiments\E57_capacity_data_diagnosis\runs\20261026_data8192_geometry96_seed1 --arm geometry96 --seed 1 --dataset-size 8192 --block-steps 500 --max-hours 2.0 --max-epochs 200 --batch-size 32 --engine cuda_graph --deadline 1793053607.7690234
+Prepared tensor cache loaded: train, 16000 cases
+Prepared tensor cache loaded: dev, 2000 cases
+GPU resident inputs: 1.665 GiB; max_nodes=120
+FP32 CUDA training graph captured; weights and optimizer not advanced during warmup.
+epoch=0 step=0 train_loss=54.604920 dev_loss=54.080752 supervision=39.791369 lr=0.001 (same fixed Loss; no postprocessing)
+step=100 epoch=1 draws=3200/16000 total=2.74554
+step=200 epoch=1 draws=6400/16000 total=1.20124
+step=300 epoch=1 draws=9600/16000 total=1.42554
+step=400 epoch=1 draws=12800/16000 total=1.10554
+step=500 epoch=1 draws=16000/16000 total=0.93698
+epoch=1 step=500 train_loss=0.926402 dev_loss=0.932777 supervision=0.594852 lr=0.001 (same fixed Loss; no postprocessing)
+step=600 epoch=2 draws=3200/16000 total=1.03632
+step=700 epoch=2 draws=6400/16000 total=0.80852
+step=800 epoch=2 draws=9600/16000 total=1.11134
+step=900 epoch=2 draws=12800/16000 total=0.86234
+step=1000 epoch=2 draws=16000/16000 total=0.88978
+epoch=2 step=1000 train_loss=0.830037 dev_loss=0.841107 supervision=0.591170 lr=0.001 (same fixed Loss; no postprocessing)
+step=1100 epoch=3 draws=3200/16000 total=0.86066
+step=1200 epoch=3 draws=6400/16000 total=0.80430
+step=1300 epoch=3 draws=9600/16000 total=0.64441
+step=1400 epoch=3 draws=12800/16000 total=0.74782
+step=1500 epoch=3 draws=16000/16000 total=0.73389
+epoch=3 step=1500 train_loss=0.695482 dev_loss=0.702721 supervision=0.500453 lr=0.001 (same fixed Loss; no postprocessing)
+step=1600 epoch=4 draws=3200/16000 total=0.66383
+step=1700 epoch=4 draws=6400/16000 total=0.74592
+step=1800 epoch=4 draws=9600/16000 total=0.62567
+step=1900 epoch=4 draws=12800/16000 total=0.82703
+step=2000 epoch=4 draws=16000/16000 total=0.65964
+epoch=4 step=2000 train_loss=0.685461 dev_loss=0.694829 supervision=0.516025 lr=0.001 (same fixed Loss; no postprocessing)
+step=2100 epoch=5 draws=3200/16000 total=0.63338
+step=2200 epoch=5 draws=6400/16000 total=0.68096
+step=2300 epoch=5 draws=9600/16000 total=0.56591
+step=2400 epoch=5 draws=12800/16000 total=0.65676
+step=2500 epoch=5 draws=16000/16000 total=0.57974
+epoch=5 step=2500 train_loss=0.574692 dev_loss=0.584749 supervision=0.430648 lr=0.001 (same fixed Loss; no postprocessing)
+step=2600 epoch=6 draws=3200/16000 total=0.61126
+step=2700 epoch=6 draws=6400/16000 total=0.62719
+step=2800 epoch=6 draws=9600/16000 total=0.54752
+step=2900 epoch=6 draws=12800/16000 total=0.61756
+step=3000 epoch=6 draws=16000/16000 total=0.56001
+epoch=6 step=3000 train_loss=0.545659 dev_loss=0.554171 supervision=0.412539 lr=0.001 (same fixed Loss; no postprocessing)
+step=3100 epoch=7 draws=3200/16000 total=0.55131
+step=3200 epoch=7 draws=6400/16000 total=0.52818
+step=3300 epoch=7 draws=9600/16000 total=0.58058
+step=3400 epoch=7 draws=12800/16000 total=0.58627
+step=3500 epoch=7 draws=16000/16000 total=0.52818
+epoch=7 step=3500 train_loss=0.577994 dev_loss=0.593407 supervision=0.449227 lr=0.001 (same fixed Loss; no postprocessing)
+step=3600 epoch=8 draws=3200/16000 total=0.64444
+step=3700 epoch=8 draws=6400/16000 total=0.47300
+step=3800 epoch=8 draws=9600/16000 total=0.55668
+step=3900 epoch=8 draws=12800/16000 total=0.69213
+step=4000 epoch=8 draws=16000/16000 total=0.51988
+epoch=8 step=4000 train_loss=0.557291 dev_loss=0.569892 supervision=0.428858 lr=0.001 (same fixed Loss; no postprocessing)
+step=4100 epoch=9 draws=3200/16000 total=0.51850
+step=4200 epoch=9 draws=6400/16000 total=0.55632
+step=4300 epoch=9 draws=9600/16000 total=0.52333
+step=4400 epoch=9 draws=12800/16000 total=0.48305
+step=4500 epoch=9 draws=16000/16000 total=0.55204
+epoch=9 step=4500 train_loss=0.523192 dev_loss=0.542968 supervision=0.408558 lr=0.001 (same fixed Loss; no postprocessing)
+step=4600 epoch=10 draws=3200/16000 total=0.58143
+step=4700 epoch=10 draws=6400/16000 total=0.62649
+step=4800 epoch=10 draws=9600/16000 total=0.44056
+step=4900 epoch=10 draws=12800/16000 total=0.62371
+step=5000 epoch=10 draws=16000/16000 total=0.57128
+epoch=10 step=5000 train_loss=0.482717 dev_loss=0.501822 supervision=0.382607 lr=0.001 (same fixed Loss; no postprocessing)
+step=5100 epoch=11 draws=3200/16000 total=0.39690
+step=5200 epoch=11 draws=6400/16000 total=0.53597
+step=5300 epoch=11 draws=9600/16000 total=0.58881
+step=5400 epoch=11 draws=12800/16000 total=0.52611
+step=5500 epoch=11 draws=16000/16000 total=0.49566
+epoch=11 step=5500 train_loss=0.487593 dev_loss=0.510319 supervision=0.387883 lr=0.001 (same fixed Loss; no postprocessing)
+step=5600 epoch=12 draws=3200/16000 total=0.51816
+step=5700 epoch=12 draws=6400/16000 total=0.55352
+step=5800 epoch=12 draws=9600/16000 total=0.50347
+step=5900 epoch=12 draws=12800/16000 total=0.47192
+step=6000 epoch=12 draws=16000/16000 total=0.43562
+epoch=12 step=6000 train_loss=0.486011 dev_loss=0.508824 supervision=0.384611 lr=0.001 (same fixed Loss; no postprocessing)
+step=6100 epoch=13 draws=3200/16000 total=0.50758
+step=6200 epoch=13 draws=6400/16000 total=0.59182
+step=6300 epoch=13 draws=9600/16000 total=0.48260
+step=6400 epoch=13 draws=12800/16000 total=0.47978
+step=6500 epoch=13 draws=16000/16000 total=0.54339
+epoch=13 step=6500 train_loss=0.584759 dev_loss=0.594106 supervision=0.440317 lr=0.001 (same fixed Loss; no postprocessing)
+step=6600 epoch=14 draws=3200/16000 total=0.49965
+step=6700 epoch=14 draws=6400/16000 total=0.45774
+step=6800 epoch=14 draws=9600/16000 total=0.44394
+step=6900 epoch=14 draws=12800/16000 total=0.46367
+step=7000 epoch=14 draws=16000/16000 total=0.47233
+epoch=14 step=7000 train_loss=0.462086 dev_loss=0.491911 supervision=0.374759 lr=0.001 (same fixed Loss; no postprocessing)
+step=7100 epoch=15 draws=3200/16000 total=0.43797
+step=7200 epoch=15 draws=6400/16000 total=0.47352
+step=7300 epoch=15 draws=9600/16000 total=0.45619
+step=7400 epoch=15 draws=12800/16000 total=0.50645
+step=7500 epoch=15 draws=16000/16000 total=0.49368
+epoch=15 step=7500 train_loss=0.473738 dev_loss=0.504733 supervision=0.388321 lr=0.001 (same fixed Loss; no postprocessing)
+step=7600 epoch=16 draws=3200/16000 total=0.44459
+step=7700 epoch=16 draws=6400/16000 total=0.51305
+step=7800 epoch=16 draws=9600/16000 total=0.46977
+step=7900 epoch=16 draws=12800/16000 total=0.47034
+step=8000 epoch=16 draws=16000/16000 total=0.51868
+epoch=16 step=8000 train_loss=0.469507 dev_loss=0.498973 supervision=0.384676 lr=0.001 (same fixed Loss; no postprocessing)
+step=8100 epoch=17 draws=3200/16000 total=0.58393
+step=8200 epoch=17 draws=6400/16000 total=0.42584
+step=8300 epoch=17 draws=9600/16000 total=0.46938
+step=8400 epoch=17 draws=12800/16000 total=0.45099
+step=8500 epoch=17 draws=16000/16000 total=0.37825
+epoch=17 step=8500 train_loss=0.455045 dev_loss=0.485213 supervision=0.375455 lr=0.001 (same fixed Loss; no postprocessing)
+step=8600 epoch=18 draws=3200/16000 total=0.45798
+step=8700 epoch=18 draws=6400/16000 total=0.43532
+step=8800 epoch=18 draws=9600/16000 total=0.40398
+step=8900 epoch=18 draws=12800/16000 total=0.51542
+step=9000 epoch=18 draws=16000/16000 total=0.51198
+epoch=18 step=9000 train_loss=0.468396 dev_loss=0.501648 supervision=0.388713 lr=0.001 (same fixed Loss; no postprocessing)
+step=9100 epoch=19 draws=3200/16000 total=0.44566
+step=9200 epoch=19 draws=6400/16000 total=0.48955
+step=9300 epoch=19 draws=9600/16000 total=0.42313
+step=9400 epoch=19 draws=12800/16000 total=0.44530
+step=9500 epoch=19 draws=16000/16000 total=0.45357
+epoch=19 step=9500 train_loss=0.470879 dev_loss=0.502677 supervision=0.387795 lr=0.001 (same fixed Loss; no postprocessing)
+step=9600 epoch=20 draws=3200/16000 total=0.57202
+step=9700 epoch=20 draws=6400/16000 total=0.40872
+step=9800 epoch=20 draws=9600/16000 total=0.36538
+step=9900 epoch=20 draws=12800/16000 total=0.53907
+step=10000 epoch=20 draws=16000/16000 total=0.34521
+epoch=20 step=10000 train_loss=0.423899 dev_loss=0.456753 supervision=0.354248 lr=0.001 (same fixed Loss; no postprocessing)
+step=10100 epoch=21 draws=3200/16000 total=0.45164
+step=10200 epoch=21 draws=6400/16000 total=0.41965
+step=10300 epoch=21 draws=9600/16000 total=0.44618
+step=10400 epoch=21 draws=12800/16000 total=0.50067
+step=10500 epoch=21 draws=16000/16000 total=0.48024
+epoch=21 step=10500 train_loss=0.439229 dev_loss=0.474014 supervision=0.365901 lr=0.001 (same fixed Loss; no postprocessing)
+step=10600 epoch=22 draws=3200/16000 total=0.47816
+step=10700 epoch=22 draws=6400/16000 total=0.43937
+step=10800 epoch=22 draws=9600/16000 total=0.56818
+step=10900 epoch=22 draws=12800/16000 total=0.40412
+step=11000 epoch=22 draws=16000/16000 total=0.48110
+epoch=22 step=11000 train_loss=0.446762 dev_loss=0.480815 supervision=0.374601 lr=0.001 (same fixed Loss; no postprocessing)
+step=11100 epoch=23 draws=3200/16000 total=0.32112
+step=11200 epoch=23 draws=6400/16000 total=0.40199
+step=11300 epoch=23 draws=9600/16000 total=0.40506
+step=11400 epoch=23 draws=12800/16000 total=0.36801
+step=11500 epoch=23 draws=16000/16000 total=0.42070
+epoch=23 step=11500 train_loss=0.422619 dev_loss=0.456838 supervision=0.356728 lr=0.00025 (same fixed Loss; no postprocessing)
+step=11600 epoch=24 draws=3200/16000 total=0.31942
+step=11700 epoch=24 draws=6400/16000 total=0.44380
+step=11800 epoch=24 draws=9600/16000 total=0.37919
+step=11900 epoch=24 draws=12800/16000 total=0.39370
+step=12000 epoch=24 draws=16000/16000 total=0.32382
+epoch=24 step=12000 train_loss=0.354927 dev_loss=0.412094 supervision=0.325917 lr=0.00025 (same fixed Loss; no postprocessing)
+step=12100 epoch=25 draws=3200/16000 total=0.40289
+step=12200 epoch=25 draws=6400/16000 total=0.36018
+step=12300 epoch=25 draws=9600/16000 total=0.37646
+step=12400 epoch=25 draws=12800/16000 total=0.32818
+step=12500 epoch=25 draws=16000/16000 total=0.36764
+epoch=25 step=12500 train_loss=0.348613 dev_loss=0.413076 supervision=0.325374 lr=0.00025 (same fixed Loss; no postprocessing)
+step=12600 epoch=26 draws=3200/16000 total=0.29188
+step=12700 epoch=26 draws=6400/16000 total=0.41407
+step=12800 epoch=26 draws=9600/16000 total=0.33519
+step=12900 epoch=26 draws=12800/16000 total=0.29670
+step=13000 epoch=26 draws=16000/16000 total=0.35543
+epoch=26 step=13000 train_loss=0.335125 dev_loss=0.407696 supervision=0.321596 lr=0.00025 (same fixed Loss; no postprocessing)
+step=13100 epoch=27 draws=3200/16000 total=0.34755
+step=13200 epoch=27 draws=6400/16000 total=0.35226
+step=13300 epoch=27 draws=9600/16000 total=0.32748
+step=13400 epoch=27 draws=12800/16000 total=0.30335
+step=13500 epoch=27 draws=16000/16000 total=0.35273
+epoch=27 step=13500 train_loss=0.334091 dev_loss=0.414270 supervision=0.326540 lr=0.00025 (same fixed Loss; no postprocessing)
+step=13600 epoch=28 draws=3200/16000 total=0.35118
+step=13700 epoch=28 draws=6400/16000 total=0.34644
+step=13800 epoch=28 draws=9600/16000 total=0.35541
+step=13900 epoch=28 draws=12800/16000 total=0.34053
+step=14000 epoch=28 draws=16000/16000 total=0.30859
+epoch=28 step=14000 train_loss=0.320024 dev_loss=0.407287 supervision=0.321838 lr=0.00025 (same fixed Loss; no postprocessing)
+step=14100 epoch=29 draws=3200/16000 total=0.31599
+step=14200 epoch=29 draws=6400/16000 total=0.35480
+step=14300 epoch=29 draws=9600/16000 total=0.36338
+step=14400 epoch=29 draws=12800/16000 total=0.34894
+step=14500 epoch=29 draws=16000/16000 total=0.28967
+epoch=29 step=14500 train_loss=0.316944 dev_loss=0.409894 supervision=0.324457 lr=0.00025 (same fixed Loss; no postprocessing)
+step=14600 epoch=30 draws=3200/16000 total=0.35395
+step=14700 epoch=30 draws=6400/16000 total=0.30723
+step=14800 epoch=30 draws=9600/16000 total=0.30136
+step=14900 epoch=30 draws=12800/16000 total=0.38087
+step=15000 epoch=30 draws=16000/16000 total=0.32586
+epoch=30 step=15000 train_loss=0.306717 dev_loss=0.404990 supervision=0.319145 lr=0.00025 (same fixed Loss; no postprocessing)
+step=15100 epoch=31 draws=3200/16000 total=0.27189
+step=15200 epoch=31 draws=6400/16000 total=0.32003
+step=15300 epoch=31 draws=9600/16000 total=0.27886
+step=15400 epoch=31 draws=12800/16000 total=0.27883
+step=15500 epoch=31 draws=16000/16000 total=0.33754
+epoch=31 step=15500 train_loss=0.306883 dev_loss=0.406822 supervision=0.321799 lr=0.00025 (same fixed Loss; no postprocessing)
+step=15600 epoch=32 draws=3200/16000 total=0.36186
+step=15700 epoch=32 draws=6400/16000 total=0.29048
+step=15800 epoch=32 draws=9600/16000 total=0.28935
+step=15900 epoch=32 draws=12800/16000 total=0.37144
+step=16000 epoch=32 draws=16000/16000 total=0.34366
+epoch=32 step=16000 train_loss=0.304522 dev_loss=0.413362 supervision=0.324885 lr=0.00025 (same fixed Loss; no postprocessing)
+step=16100 epoch=33 draws=3200/16000 total=0.26195
+step=16200 epoch=33 draws=6400/16000 total=0.28068
+step=16300 epoch=33 draws=9600/16000 total=0.29289
+step=16400 epoch=33 draws=12800/16000 total=0.33131
+step=16500 epoch=33 draws=16000/16000 total=0.38064
+epoch=33 step=16500 train_loss=0.292823 dev_loss=0.405629 supervision=0.319155 lr=0.0001 (same fixed Loss; no postprocessing)
+step=16600 epoch=34 draws=3200/16000 total=0.33320
+step=16700 epoch=34 draws=6400/16000 total=0.27529
+step=16800 epoch=34 draws=9600/16000 total=0.25876
+step=16900 epoch=34 draws=12800/16000 total=0.34983
+step=17000 epoch=34 draws=16000/16000 total=0.30527
+epoch=34 step=17000 train_loss=0.275780 dev_loss=0.399850 supervision=0.315256 lr=0.0001 (same fixed Loss; no postprocessing)
+step=17100 epoch=35 draws=3200/16000 total=0.28206
+step=17200 epoch=35 draws=6400/16000 total=0.38481
+step=17300 epoch=35 draws=9600/16000 total=0.29845
+step=17400 epoch=35 draws=12800/16000 total=0.25831
+step=17500 epoch=35 draws=16000/16000 total=0.29968
+epoch=35 step=17500 train_loss=0.269210 dev_loss=0.399299 supervision=0.314637 lr=0.0001 (same fixed Loss; no postprocessing)
+step=17600 epoch=36 draws=3200/16000 total=0.28006
+step=17700 epoch=36 draws=6400/16000 total=0.28853
+step=17800 epoch=36 draws=9600/16000 total=0.26043
+step=17900 epoch=36 draws=12800/16000 total=0.29973
+step=18000 epoch=36 draws=16000/16000 total=0.27008
+epoch=36 step=18000 train_loss=0.267954 dev_loss=0.399277 supervision=0.315140 lr=0.0001 (same fixed Loss; no postprocessing)
+step=18100 epoch=37 draws=3200/16000 total=0.25759
+step=18200 epoch=37 draws=6400/16000 total=0.28641
+step=18300 epoch=37 draws=9600/16000 total=0.24745
+step=18400 epoch=37 draws=12800/16000 total=0.24647
+step=18500 epoch=37 draws=16000/16000 total=0.24858
+epoch=37 step=18500 train_loss=0.262092 dev_loss=0.399740 supervision=0.314402 lr=0.0001 (same fixed Loss; no postprocessing)
+step=18600 epoch=38 draws=3200/16000 total=0.28119
+step=18700 epoch=38 draws=6400/16000 total=0.27569
+step=18800 epoch=38 draws=9600/16000 total=0.31512
+step=18900 epoch=38 draws=12800/16000 total=0.22110
+step=19000 epoch=38 draws=16000/16000 total=0.27410
+epoch=38 step=19000 train_loss=0.266125 dev_loss=0.404930 supervision=0.319977 lr=5e-05 (same fixed Loss; no postprocessing)
+step=19100 epoch=39 draws=3200/16000 total=0.28218
+step=19200 epoch=39 draws=6400/16000 total=0.29764
+step=19300 epoch=39 draws=9600/16000 total=0.24582
+step=19400 epoch=39 draws=12800/16000 total=0.24672
+step=19500 epoch=39 draws=16000/16000 total=0.26381
+epoch=39 step=19500 train_loss=0.255806 dev_loss=0.401169 supervision=0.316240 lr=5e-05 (same fixed Loss; no postprocessing)
+step=19600 epoch=40 draws=3200/16000 total=0.28743
+step=19700 epoch=40 draws=6400/16000 total=0.25873
+step=19800 epoch=40 draws=9600/16000 total=0.26062
+step=19900 epoch=40 draws=12800/16000 total=0.25948
+step=20000 epoch=40 draws=16000/16000 total=0.27015
+epoch=40 step=20000 train_loss=0.252026 dev_loss=0.399098 supervision=0.314859 lr=5e-05 (same fixed Loss; no postprocessing)
+Stopped: early_stop wall hours: 0.48439156463888744 best epoch: 40
+
+raw2000: E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\python.exe -u -B -m experiments.E57_capacity_data_diagnosis.final --output E:\project\ICCAD\2026\problemC\experiments\E57_capacity_data_diagnosis\runs\20261026_data8192_geometry96_seed1 --stage raw
+Prepared tensor cache loaded: dev, 2000 cases
+Full-dev raw diagnostics: 320 / 2000
+Full-dev raw diagnostics: 640 / 2000
+Full-dev raw diagnostics: 960 / 2000
+Full-dev raw diagnostics: 1280 / 2000
+Full-dev raw diagnostics: 1600 / 2000
+Full-dev raw diagnostics: 1920 / 2000
+
+flash500: E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\python.exe -u -B -m experiments.E57_capacity_data_diagnosis.final --output E:\project\ICCAD\2026\problemC\experiments\E57_capacity_data_diagnosis\runs\20261026_data8192_geometry96_seed1 --stage terminal
+Prepared tensor cache loaded: dev, 2000 cases
+Prepared tensor cache loaded: dev, 2000 cases
+Terminal steady: 25 / 500
+Terminal steady: 50 / 500
+Terminal steady: 75 / 500
+Terminal steady: 100 / 500
+Terminal steady: 125 / 500
+Terminal steady: 150 / 500
+Terminal steady: 175 / 500
+Terminal steady: 200 / 500
+Terminal steady: 225 / 500
+Terminal steady: 250 / 500
+Terminal steady: 275 / 500
+Terminal steady: 300 / 500
+Terminal steady: 325 / 500
+Terminal steady: 350 / 500
+Terminal steady: 375 / 500
+Terminal steady: 400 / 500
+Terminal steady: 425 / 500
+Terminal steady: 450 / 500
+Terminal steady: 475 / 500
+Terminal steady: 500 / 500
+{"count": 500, "hard_legal": 500, "mean_Q": 1.0504819165295862, "weighted_Q": 1.0402563934650255, "p95_Q": 1.1769164931892784, "max_Q": 1.9908539233780989, "worst5pct_mean_Q": 1.2898743228635692, "seconds_mean": 0.2740812073999259, "seconds_p95": 0.6094549850000476, "row_fallbacks": 0, "rescue_cases": 12, "errors": 0, "hpwl_gap_mean_returned": 0.022407834473116495, "area_gap_mean_returned": 0.02446552576272417, "boundary_violations_mean_returned": 0.276, "grouping_violations_mean_returned": 0.228, "mib_violations_mean_returned": 0.0, "inference_seconds_mean_returned": 0.05366150920002838, "postprocess_seconds_mean_returned": 0.22026531659983448, "mean_center_move_local_mean_returned": 0.44140506791294776, "max_center_move_local_mean_returned": 1.7893714490573793}
+
+draft100: E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\python.exe -u -B -m experiments.E57_capacity_data_diagnosis.render_drafts --output E:\project\ICCAD\2026\problemC\experiments\E57_capacity_data_diagnosis\runs\20261026_data8192_geometry96_seed1

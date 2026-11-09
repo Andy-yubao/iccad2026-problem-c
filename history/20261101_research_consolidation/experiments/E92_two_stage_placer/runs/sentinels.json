@@ -1,0 +1,68 @@
+{
+  "status": "frozen_before_inference",
+  "selection": "public-only; first32k; no Q/free-reference/model-based selection",
+  "workers": 4,
+  "records": [
+    {
+      "index": 1032,
+      "member": [
+        "worker_30/layouts_112.th",
+        99
+      ],
+      "n": 98,
+      "port_fraction": 0.1326530612244898,
+      "isolated_fraction": 0.0,
+      "max_degree": 20,
+      "reason": "known E91 forward amplification counterexample"
+    },
+    {
+      "index": 8047,
+      "member": [
+        "worker_54/layouts_9184.th",
+        84
+      ],
+      "n": 43,
+      "port_fraction": 0.023255813953488372,
+      "isolated_fraction": 0.0,
+      "max_degree": 10,
+      "reason": "lowest port coverage; larger n breaks ties"
+    },
+    {
+      "index": 27988,
+      "member": [
+        "worker_34/layouts_3920.th",
+        89
+      ],
+      "n": 21,
+      "port_fraction": 0.8095238095238095,
+      "isolated_fraction": 0.2857142857142857,
+      "max_degree": 6,
+      "reason": "most isolated modules; larger n breaks ties"
+    },
+    {
+      "index": 1799,
+      "member": [
+        "worker_95/layouts_3696.th",
+        102
+      ],
+      "n": 120,
+      "port_fraction": 1.0,
+      "isolated_fraction": 0.0,
+      "max_degree": 171,
+      "reason": "largest unnormalised graph degree"
+    },
+    {
+      "index": 75,
+      "member": [
+        "worker_20/layouts_6160.th",
+        8
+      ],
+      "n": 120,
+      "port_fraction": 0.95,
+      "isolated_fraction": 0.0,
+      "max_degree": 28,
+      "reason": "largest module count"
+    }
+  ],
+  "test_read": false
+}

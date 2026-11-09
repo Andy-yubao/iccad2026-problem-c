@@ -1,0 +1,13 @@
+{
+  "revision":"E99.R11.public_shape_domain_recovery.v1",
+  "evidence":"R10 guide+obstacle changes only5 still-infeasible branches and improvesQ1.036356 to1.035173, insufficient. The shape solver has extra numerical bounds .4*current_wh<=new_wh<=2.5*current_wh beyond public area and locks. Initial hard infeasibility prevents even taking a first step to expand that local shape region; elastic multi-step legacy planning can traverse it.",
+  "hypothesis":"Keep R9 first hard solve and independent obstacle correction. If the next hard solve is still PrimalInfeasible, remove both artificial dimension-step bounds on subsequent existing shape calls. Retain positive dimensions, convex public area lower cones, compatible MIB equalities, exact public locks, hard separation, shrink-only public-area normalization and final checks. Do not alter successful branches or increase maximum depth/time.",
+  "arms":["R9_control","public_domain_recovery"],
+  "backend":{"seconds":0.18,"maximum_shape_solves":4,"shape_cap_seconds":0.045,"projection_and_polish_reserve_seconds":0.033,"maximum_edge_flips_per_failure":8,"conservative":false},
+  "implementation_panel":[95,135,295,335,448],
+  "checks":"5 cases; removing a numerical bound never changes task hard checks, locks or area band. Record whether expanded path is used and final free-dimension factor relative to C3; retain unusual shapes and failures. No new NN or labels as inputs.",
+  "control_reuse":"R9 all500 and new no-trigger branches read-only with transitive coordinate provenance; changed branches fresh. Whole500 quality retained, current candidate reused count filters arm to avoid inherited control flags. Historical timings are not complete latency evidence.",
+  "calibration_panel":"v5 train_monitor500; source freeze and5-case check before development run",
+  "promotion":"Fresh all500 complete C3 dev acceptance only after quality review; no dev coefficient sweep",
+  "test_read":false,"new_training":false
+}

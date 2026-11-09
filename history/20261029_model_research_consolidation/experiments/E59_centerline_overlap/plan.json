@@ -1,0 +1,22 @@
+{
+  "revision": "E59.centerline_study.v1",
+  "seed_policy": "single seed per new configuration; seed0 except instability retry reuses failed seed1",
+  "prerequisites": ["E57 stopped and wide seed1 health audited", "E58 verified complete train64000/dev2000 cache"],
+  "stages": ["await_prerequisites", "conditional_wide_repair", "small_original", "small_centerline_v1", "paired_selection", "large_selected", "final_report"],
+  "small": {"train_size": 4096, "members": "E57 frozen subsets.json families.0.4096", "width": 96, "depth": 12, "seed": 0, "max_hours_each": 2, "max_monitor_rounds": 200, "monitor_every_updates": 500},
+  "wide_repair": {"conditional": "wide seed1 numerical collapse or repeated explosive instability", "max_new_runs": 2, "max_hours_each": 2, "seed": 1, "train_size": 16000, "reference_evidence": "E57/runs/20261026_wide_instability_audit"},
+  "large": {"train_size": 64000, "width": 160, "depth": 12, "seed": 0, "max_hours": 4, "max_monitor_rounds": 200, "monitor_every_updates": 500, "input_engine": "CPU cache with batch staging; verify before launch"},
+  "max_new_formal_runs": 5,
+  "max_total_new_training_hours": 12,
+  "max_calendar_hours": 48,
+  "batch_size": 32,
+  "precision": "float32",
+  "learning_rate_tiers": [0.001, 0.00025, 0.0001, 0.00005],
+  "loss_weights": {"center_local": 1, "shape": 0.25, "relative_local": 0.25, "overlap": 0.5, "contact": 0.5, "boundary": 0.25, "mib": 0.1, "bbox": 0.1},
+  "candidate_scale": "one pretraining fixed kappa = mean original-overlap output-state gradient norm / mean centerline-overlap output-state gradient norm, frozen E42 outputs on same five train members; no dev tuning; freeze identical in all phases",
+  "selection_rules": "README.md predeclared conservative common-metric gate; no total-Loss comparison across definitions",
+  "monitor": "unchanged train500/dev500; each run fixed objective for optimization/monitoring/best/LR/early stop",
+  "finalization_each": "one own-Loss best -> raw dev2000 and shared metrics -> one flash500 -> fixed same100 no-rating gallery",
+  "sealed_test": true,
+  "registry_v6_sha256": "2fe459b0a785ffb6995dd3e5966cd47337b948b15ec4bb4d4c19ffe169e404ae"
+}

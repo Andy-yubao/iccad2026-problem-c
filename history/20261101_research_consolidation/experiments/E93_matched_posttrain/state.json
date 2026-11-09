@@ -1,0 +1,35 @@
+{
+  "status": "completed",
+  "completed_arms": [
+    "C",
+    "G"
+  ],
+  "results": {
+    "C": {
+      "status": "early_stop",
+      "phase_epoch": 12,
+      "new_updates": 12000,
+      "best": {
+        "C": 0.32977558180689814
+      },
+      "best_epoch": {
+        "C": 10
+      },
+      "elapsed_seconds": 1652.9799004000379
+    },
+    "G": {
+      "status": "early_stop",
+      "phase_epoch": 19,
+      "new_updates": 19000,
+      "best": {
+        "G": 0.3679320532679558
+      },
+      "best_epoch": {
+        "G": 16
+      },
+      "elapsed_seconds": 2445.004375499906
+    }
+  },
+  "stage": "training ended; no automatic Q or further experiment",
+  "test_read": false
+}

@@ -1,0 +1,49 @@
+{
+  "status": "registered_two_dimensional_mechanism",
+  "authorization": "现在开始训练E89，同样要求使用新的Loss",
+  "starting_placer": "experiments/E90_auxiliary_weight_placer/runs/20261031_aux3_seed0/checkpoints/best.pt",
+  "placer_frozen": true,
+  "corrector_random_init": true,
+  "zero_output_head": true,
+  "mode_pair": [
+    "spatial",
+    "pooled"
+  ],
+  "grid": [
+    16,
+    16
+  ],
+  "hidden_channels": 64,
+  "cnn_dilations": [
+    1,
+    2,
+    4
+  ],
+  "graph_message": true,
+  "region_competition": "one coupled demand/capacity neural read; no geometric optimization",
+  "center_residual_limit_local": 1.0,
+  "log_aspect_residual_limit": 0.5,
+  "loss_baseline": "exact E90 fixed reference1 overlap0.08975162861857286 task0.3336832108335229; no added terms",
+  "data": "same E88 base16k plus frozen2268,80/20,16000 draws per epoch; unchanged train/dev500 and dev2000",
+  "batch_size": 32,
+  "max_hours_per_arm": 1,
+  "max_epochs": 200,
+  "seed": 0,
+  "scheduler_start_epoch": 0,
+  "learning_rate_levels": [
+    0.001,
+    0.00025,
+    0.0001,
+    5e-05
+  ],
+  "trainable_optimizer": "fresh AdamW, clip_norm1; no inherited parameter displacement projection",
+  "rationale": "A zero head would be throttled by the legacy relative-to-zero parameter step bound; new randomly initialized module uses ordinary clipped AdamW in both arms.",
+  "automatic_evaluation": "each own-Loss best raw dev2000 plus one flash500,4 processes x2 threads; reuse E90 if residual head still exactly zero",
+  "controls": "same source, data, seed, initialization, parameter count and major tensor shapes; pool/broadcast occupancy/features in control, retain coordinates and module geometry",
+  "limits": "one-pass corrector; no recurrence claim, no autoregression, no new unsupervised Loss, no test data",
+  "test_read": false,
+  "lr_policy_update_authorization": "停止训练，先调整学习率下降规则；本次取消E89固定14轮保护，不自动续训",
+  "lr_policy": "fixed dev500 same Loss; meaningful improvement max(abs1e-5,relative0.1%);3 stagnant epochs per drop; same four LR tiers; lowest tier2 full epochs",
+  "migration": "spatial stopped after epoch6/step3000; current epoch6 monitor pending. Anchor last complete epoch5, counters0, no retroactive LR drops.",
+  "comparison_limit": "Spatial first6 epochs used old protection; pooled not started. A later continuation versus new pooled policy is not a perfectly matched full-policy comparison."
+}

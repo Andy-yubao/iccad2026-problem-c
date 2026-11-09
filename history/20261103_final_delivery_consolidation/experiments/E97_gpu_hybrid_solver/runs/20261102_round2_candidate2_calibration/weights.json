@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "coefficient": 3.6876450434943204,
+  "gradient_share": 0.5,
+  "active_count": 500,
+  "median_base_gradient": 0.8417289555072784,
+  "median_task_gradient": 0.1141282506287098,
+  "binding": {
+    "source_checkpoint": "experiments/E97_gpu_hybrid_solver/runs/20261102_candidate3_clearance_seed0/checkpoints/best.pt",
+    "source_checkpoint_sha256": "d784e96f46decf7a487c25bde2ab16db8cf6ebae1bc0632434cc5e2f78173fce",
+    "calibration_plan_sha256": "f39dedb77541334081d77c18164609aae05c10cc1a8ea4ce545fe95b3eec9420",
+    "sources": {
+      "experiments/E97_gpu_hybrid_solver/round2_candidate2_calibrate.py": "ef2c7e3413b65db70b20a3f4cfa34d3953b4482910d9f9b1530fdaec247d171e",
+      "experiments/E97_gpu_hybrid_solver/round2_connectivity.py": "4cb363e3bb712bf578acf63c2bfc76135b13983f6be4a85c58e40c1933449c5b",
+      "experiments/E97_gpu_hybrid_solver/candidate3.py": "3882e9867f1a074f1d020ec48f34a74c258a76330bc0a0f11884f929de9bf472",
+      "experiments/E97_gpu_hybrid_solver/student.py": "13574058f99af4a713bed14b8526bb17d3c1386b30b59beb943261fdb303d752",
+      "experiments/E97_gpu_hybrid_solver/repair85_one_thread/fast_geometry.py": "5440a4deaa85397ff47f4323b4106d559e508c3f7af8f37953fea37cdfcdbf02"
+    }
+  },
+  "no_optimizer_solver_dev_or_Q": true,
+  "test_read": false
+}

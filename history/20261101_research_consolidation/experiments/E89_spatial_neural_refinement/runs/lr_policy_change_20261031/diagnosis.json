@@ -1,0 +1,52 @@
+{
+  "stopped_epoch": 6,
+  "stopped_step": 3000,
+  "last_completed_monitor_epoch": 5,
+  "curve": [
+    {
+      "epoch": 0,
+      "train": 0.309720162153244,
+      "dev": 0.32910041260719297,
+      "lr": 0.001
+    },
+    {
+      "epoch": 1,
+      "train": 0.30890629076957704,
+      "dev": 0.3282187659740448,
+      "lr": 0.001
+    },
+    {
+      "epoch": 2,
+      "train": 0.30879371070861816,
+      "dev": 0.3280646598339081,
+      "lr": 0.001
+    },
+    {
+      "epoch": 3,
+      "train": 0.3087425048351288,
+      "dev": 0.32813871455192567,
+      "lr": 0.001
+    },
+    {
+      "epoch": 4,
+      "train": 0.30868136262893675,
+      "dev": 0.32795834231376647,
+      "lr": 0.001
+    },
+    {
+      "epoch": 5,
+      "train": 0.30864503836631774,
+      "dev": 0.3278902986049652,
+      "lr": 0.001
+    }
+  ],
+  "dev_start": 0.32910041260719297,
+  "dev_last": 0.3278902986049652,
+  "max_dev_upward_step": 7.40547180175799e-05,
+  "interpretation": "Recorded batch Loss differs across heterogeneous mixed samples; fixed dev500 is broadly decreasing, with only a tiny epoch3 rise. No evidence here of severe monitored-loss instability.",
+  "sampled_batch_diagnostics": "30 snapshots at100-step intervals: Loss0.31949..0.42564, max pre-clipping gradient norm0.07327; not every training batch was recorded.",
+  "rule": "Remove E89 fixed14-epoch protection only; same patience3, meaningful threshold max(relative0.1%,absolute1e-5), four tiers and minimum2 low-tier epochs.",
+  "currently_paused": true,
+  "no_new_training_or_inference": true,
+  "test_read": false
+}

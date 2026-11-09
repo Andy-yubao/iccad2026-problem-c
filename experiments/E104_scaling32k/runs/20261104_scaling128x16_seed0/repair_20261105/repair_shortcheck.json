@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "model_config": {
+    "width": 128,
+    "layers": 16,
+    "rectangle": true,
+    "ffn_dropout": 0.1,
+    "residual_dropout": 0.05,
+    "normalize_local": true
+  },
+  "model_source_sha256": "c3b015b5a022d2e7f130ae4be0f010b5c3af20e7e09b693e9937a60f98bb4ab7",
+  "failure_batch_replayed_without_skipping": true,
+  "diagnostic_exception_to_five_case_limit": "exact saved failing batch32 required to preserve batch-shaped Dropout path; no new cases or panels",
+  "unique_failure_batch_members": 32,
+  "actual_updates": 1,
+  "discarded_diagnostic_update": true,
+  "parameters": 3463747,
+  "loss": 1.1801419258117676,
+  "max_case": 2.902172327041626,
+  "gradient_norm": 11.771533966064453,
+  "output_max": 1.83030366897583,
+  "all_parameters_finite": true,
+  "guard_thresholds_unchanged": true,
+  "test_read": false,
+  "offender_eval_loss_after_diagnostic_update": 0.9477959871292114
+}

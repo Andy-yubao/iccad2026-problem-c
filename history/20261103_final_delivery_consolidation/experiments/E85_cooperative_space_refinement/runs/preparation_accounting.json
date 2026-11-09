@@ -1,0 +1,26 @@
+{
+  "implementation_preflight_executions": [
+    {
+      "evidence": "runs/preflight_v1_unconditional_neighbor/results.json",
+      "seconds": 60.06661310000345
+    },
+    {
+      "evidence": "runs/preflight_v2_penetration_force/results.json",
+      "seconds": 61.600687099969946
+    },
+    {
+      "evidence": "runs/preflight_v3_oversized_step/results.json",
+      "seconds": 67.10887060000096
+    },
+    {
+      "evidence": "runs/preflight/results.json",
+      "seconds": 57.16231320000952
+    }
+  ],
+  "all_preflight_compute_seconds": 245.93848399998387,
+  "frozen_initial_raw_analysis_wall_seconds": 58.2952973000356,
+  "formal_training_budget_rule": "Each train process cumulative wall includes setup/cache/validation; 7200s per arm, no reset. study.json shows formal training charges; implementation preflight and frozen analysis overhead are explicitly additional here. Even max two-arm budget plus this overhead remains below original 64800s cap.",
+  "prior_training_charges_seconds": 34604.39659300004,
+  "new_max_training_seconds": 14400,
+  "test_read": false
+}

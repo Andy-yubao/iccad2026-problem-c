@@ -1,0 +1,18 @@
+{
+  "checkpoint": "experiments/E90_auxiliary_weight_placer/runs/20261031_aux3_seed0/checkpoints/best.pt",
+  "sha256": "00e75ab87cbc2cc461a89198c5931ae54e1495736320fd621a3f875ff344c58b",
+  "latest": "experiments/E90_auxiliary_weight_placer/runs/20261031_aux3_seed0/checkpoints/latest.pt",
+  "source_epoch": 12,
+  "source_step": 6000,
+  "source_lr": 0.0001,
+  "source_scheduler_drops": 2,
+  "model_source_prefix": "experiments/E90_auxiliary_weight_placer/",
+  "loss_baseline": "E90 fixed three-group Loss, reference1, overlap0.08975162861857286, task0.3336832108335229",
+  "policy": "freeze E90 placer; randomly initialize only new CNN/routing corrector with zero residual head; fresh Adam/RNG/scheduler; preserve global prior budget",
+  "lr_reset_authorization": "learningrate肯定要重置啊，请你做出合理的选择。",
+  "new_stage_lr": 0.001,
+  "new_stage_scheduler": "no protection; fresh baseline at0; existing spatial migrates at explicit pause without replaying old checks",
+  "lr_policy_update_authorization": "停止训练，先调整学习率下降规则；本次取消E89固定14轮保护，不自动续训",
+  "scheduler_start_epoch": 0,
+  "lr_policy": "fixed dev500 same Loss; meaningful improvement max(abs1e-5,relative0.1%);3 stagnant epochs per drop; same four LR tiers; lowest tier2 full epochs"
+}

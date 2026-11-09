@@ -1,0 +1,15 @@
+{
+  "role": "preregistered frozen composition diagnostic, not a trained candidate",
+  "question": "Does the exact E79 correction package transfer from E74 width192 to E42 width96 without adaptation?",
+  "authorization": "User asks to examine placer-only Q and modular corrector transfer; autonomous long research authorization remains in effect.",
+  "training_updates": 0,
+  "new_compositions": 1,
+  "selection": "Parents already selected under their own registered training rules; no selection by Q, no checkpoint search",
+  "panels": {"preflight_train": [1683,10027,5474,18140,25001], "raw_dev": 2000, "flash_dev": 500, "gallery": 100},
+  "fixed_diagnostic_loss": "E79 G+4I+5E+.1R; descriptive only, no optimization or checkpoint selection",
+  "comparison_matrix": ["E74 alone saved", "E74+F = E79 saved", "E42 alone saved", "E42+same F new"],
+  "constraints": ["All weights frozen/eval", "Same steady postprocessor and budgets", "Frame belongs to supplied placer", "No free reference geometry in inputs", "Tests sealed", "No new training before transfer diagnosis"],
+  "max_evaluation_wall_seconds": 3600,
+  "accounting": "New user-steered inference diagnostic recorded separately, no reset of phase/global training costs or training-slot caps",
+  "interpretation": "One related-family transfer is evidence for modularity, not a universal refiner or proof of an optimal size split. Failure can reflect source distribution or inherited frame limitations."
+}

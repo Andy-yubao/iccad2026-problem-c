@@ -1,0 +1,20 @@
+{
+  "status": "registered_before_execution",
+  "name": "fixed_dev500_oracle_component_diagnostic",
+  "panel": "original frozen dev_monitor500 in original order",
+  "arms": [
+    "C1_saved_physical_draft + fixed_teacher_native_relations",
+    "teacher_nominal_geometry + fixed_teacher_native_relations"
+  ],
+  "solver": "solver_relations.py same SLIM3 shape+1 projection/.18s settings",
+  "controls_reused": [
+    "C1 native dynamic dev500",
+    "C4 untrained fixed-native relation dev500"
+  ],
+  "labels": "Only existing dev500 public-solver teacher labels; no teacher regeneration, no free-reference input or score denominators in solve",
+  "purpose": "Before consuming candidate6, diagnose ideal relationship versus geometry input limit of the same simple repair on full panel; no NN training or checkpoint selection",
+  "interpretation": "ORACLE COUNTERFACTUAL ONLY, not deployable quality. Repair-only clock excludes offline teacher computation, so not full inference latency or latency target evidence.",
+  "no_coefficients_swept": true,
+  "formal_slots_consumed": 0,
+  "test_read": false
+}

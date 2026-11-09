@@ -1,0 +1,100 @@
+{
+  "source": "experiments/E114_supervision_placement",
+  "copied_sources": {
+    "features.py": {
+      "source": "experiments/E114_supervision_placement/features.py",
+      "sha256": "097a04bd1259a76b9fce23e5e533f7a22beece7a2f7af0435c3f560696c32dd1"
+    },
+    "batches.py": {
+      "source": "experiments/E114_supervision_placement/batches.py",
+      "sha256": "7d8aaccb6b27ee4ea261d7a9c9bebfedfe484181ee00e5d7f6ccb27d0639be54"
+    },
+    "ports.py": {
+      "source": "experiments/E114_supervision_placement/ports.py",
+      "sha256": "431b54476e7de8a94c12cf935a30a3b49b911e208305fbe6bb7b23d72e37dbef"
+    },
+    "simple_loss.py": {
+      "source": "experiments/E114_supervision_placement/simple_loss.py",
+      "sha256": "fcd0827c829ee2466298eb61c1213b1fb12ae7f54afaef0f8e53a86033478238"
+    },
+    "group_tree.py": {
+      "source": "experiments/E114_supervision_placement/group_tree.py",
+      "sha256": "867ca3b84848ae78da25dd2a2db16018d722102c7bb5a34644492451efef65fd"
+    },
+    "resident.py": {
+      "source": "experiments/E114_supervision_placement/resident.py",
+      "sha256": "f76073f5756a59187ecfc1b90752f4db063e81555bad51835712a731d529cd27"
+    },
+    "augmentation.py": {
+      "source": "experiments/E114_supervision_placement/augmentation.py",
+      "sha256": "dba0658829115b08184fadec488ef0b56fe0adf0e8452cb240029d5c5c4de87c"
+    },
+    "step_control.py": {
+      "source": "experiments/E114_supervision_placement/step_control.py",
+      "sha256": "795ddb45dd257e123f1880eea28b58502711807ee643bfcb51a7e72d484952da"
+    },
+    "captured_projection.py": {
+      "source": "experiments/E114_supervision_placement/captured_projection.py",
+      "sha256": "7f19baba25bc52a686e08a1af32236bffa8b47300cac96c52914b3b81d88131a"
+    },
+    "schedule.py": {
+      "source": "experiments/E114_supervision_placement/schedule.py",
+      "sha256": "8d5dfd1a04a0b02965f91ed3be47c94371a28147705f02fa52e144c9d57c597a"
+    },
+    "cuda_step.py": {
+      "source": "experiments/E114_supervision_placement/cuda_step.py",
+      "sha256": "cd5eddd01dc44b33da1c57c13261b27e1f7ef232b81c425e57080501a25ce7f1"
+    },
+    "io.py": {
+      "source": "experiments/E114_supervision_placement/io.py",
+      "sha256": "d4aef673463486cf495aeb2947ba2b51089fdbe4b6930ea0157a3a738f2ac708"
+    },
+    "train.py": {
+      "source": "experiments/E114_supervision_placement/train.py",
+      "sha256": "fcde062f1a3cf66001eb4b4f9e47b5c1cd59db16b09a506484857f5fb0b0eb0f"
+    },
+    "data.py": {
+      "source": "experiments/E114_supervision_placement/data.py",
+      "sha256": "5055f1a6f97b1ea6cfe77952fccbb56ac3a57d63e7c24e391d0ba29160ec6ce5"
+    },
+    "original_model.py": {
+      "source": "experiments/E114_supervision_placement/model.py",
+      "sha256": "0d5f7a0f897653155d5405e07aab9357b46b52bca4ddedd4b2cb11f05151dc82"
+    }
+  },
+  "ownership": "E116 owns independent model/loss/trainer copies; no cross-experiment private imports",
+  "old_experiments_modified": false,
+  "old_checkpoints_read": false,
+  "copied_unchanged": [
+    "features.py",
+    "batches.py",
+    "ports.py",
+    "simple_loss.py",
+    "group_tree.py",
+    "resident.py",
+    "step_control.py",
+    "captured_projection.py",
+    "schedule.py",
+    "cuda_step.py",
+    "original_model.py"
+  ],
+  "adapted_copies": [
+    "augmentation.py",
+    "io.py",
+    "train.py",
+    "data.py"
+  ],
+  "new_owned_files": [
+    "model.py",
+    "loss.py",
+    "loss_config.py",
+    "inspect.py"
+  ],
+  "adaptations": [
+    "Frozen16k reader/checksums",
+    "Same final single-draft Loss for both arms",
+    "Two standalone arm model factory",
+    "Training disabled before CUDA/data/run creation",
+    "Complete original state preservation and no automatic next stage"
+  ]
+}

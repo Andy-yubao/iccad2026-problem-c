@@ -1,0 +1,20 @@
+{
+  "revision": "E99.R19.translation_shape_factorial_ablation.v1",
+  "status": "registered_after_R18_review_before_R19_numerical_runs",
+  "single_hypothesis": "Attribute the benefit of the current best R15 strong-attraction AR to center movement, old angular strain, or their interaction, before further force/shape tuning. Two missing cells of a2x2 ablation: translation-only and shape-only. Completed noAR and both mechanisms controls are reused read-only.",
+  "evidence": "R18 sign-only shape correction Q1.014329285 vs1.010848449, all500 legal, and mean log-shape path0.02378169 vs old0.02413694. Thus the earlier R17 failure is not explained only by increased amplitude. Largest R18 regression index295 adds8 boundary and2 group violations; all500 retained. Do not label the old strain heuristic a final-objective bug.",
+  "arms": ["translation_only","shape_only"],
+  "config_overrides": {"translation_only":{"shape_step_size":0.0},"shape_only":{"step_size":0.0}},
+  "shared_configuration": "Exact R15 attraction_equal_slope: ka1,kr1,initial area inertia,global degree damping,20 rounds,5% step/40% total path,shape1.03 step/1.5 total,old angular strain,budget gate. Only disable one mechanism per arm. All snapshots synchronous; no soft objective added.",
+  "controls": "R15 attraction_equal_slope full train500 (both) and frozen C3 original full planner train500 (neither), identical members and drafts, no repeated solves.",
+  "panel": "v5.train_monitor500 original frozen order, unchanged C3 and public inputs; no dev or test use",
+  "pipeline": "AR arm -> byte-identical original planner/config -> original necessary hard checks, official neutral-time score after timer",
+  "preflight": {"indices":[0,4,43,95,135],"checks":"unchanged R15 strong branch history bit-exact; each arm capture/production exact; translation-only WH bit-exact to original and zero dq; shape-only centers stationary to roundoff and raw displacement zero; area/locks/budgets; full official+independent legality. Ten same-identity final records reused in full1000."},
+  "trajectory_logging": "Capture every module/round forces, raw/applied movement/strain, limits/path and coordinates once outside production timer; production prefix exactly equals saved final prefix. Save all original planner traces and final coordinates.",
+  "timing": "CPU cached-draft AR+original full planner+hard checks only; no fresh C3, no complete250ms acceptance, historical control timings unpaired. Single numerical worker1 math thread, rotated two-arm order.",
+  "execution": "Shared OS lock, source/member/hash binding, atomic percase saves, STOP at arm boundaries. Explicit identity-bound resume only, failures preserved/diagnosed, no automatic retries or dev launch.",
+  "preflight_output": "runs/research/20261103_R19_components_preflight5",
+  "output": "runs/research/20261103_R19_components_train500",
+  "after": "Review finalQ, raw geometry, soft constraints and paired factorial interaction on all500. Register one next mechanism or freeze a justified candidate before full fresh C3 dev500 and original100-gallery evaluation; no planner changes.",
+  "test_read": false,"new_training": false
+}

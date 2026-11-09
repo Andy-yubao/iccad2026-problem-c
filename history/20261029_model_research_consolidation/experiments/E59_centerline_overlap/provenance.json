@@ -1,0 +1,10 @@
+{
+  "experiment": "E59_centerline_overlap",
+  "source_parent": "experiments/E57_capacity_data_diagnosis",
+  "reuse": "independent local source copies, no private cross-experiment imports",
+  "data_cache": "read-only verified E58 v6",
+  "repair_change": "existing LayerNorm before the three graph-aggregation inputs; no new parameters; same seed1 fixed G and original LR",
+  "engine_change": "CPU mmap rows, fixed padding120, minibatch to static CUDA graph buffers",
+  "preflight": "same5 training cases; Loss/input parity and exact two-step interruption/recovery with Dropout and Adam passed",
+  "test_read": false
+}

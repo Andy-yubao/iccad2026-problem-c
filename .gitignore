@@ -1,12 +1,104 @@
 .venv/
 .conda/
 .cache/
+
+# E102 image training caches, visual evidence and launch snapshots stay local.
+visualization/E102_reference_image_generation/*/
+experiments/E102_reference_image_generation/runs/**/*source_snapshot.zip
+
+# E98 dynamic research: weights are covered by the experiment ignore; raw coordinates and renderings stay local.
+experiments/E98_loss_weight_learning/runs/20261104_dynamic_mixedq_seed0/rounds/**/feedback/
+experiments/E98_loss_weight_learning/runs/20261104_dynamic_mixedq_seed0/terminal/dev500/
+experiments/E98_loss_weight_learning/runs/20261104_dynamic_mixedq_seed0/terminal/gallery/
+experiments/E98_loss_weight_learning/runs/20261104_dynamic_mixedq_seed0/*.log
+experiments/E98_loss_weight_learning/runs/20261104_dynamic_mixedq_seed0/*.lock
+experiments/E98_loss_weight_learning/runs/20261104_dynamic_mixedq_v2_seed0/evaluation_cache/
+experiments/E98_loss_weight_learning/runs/20261104_dynamic_mixedq_v2_seed0/rounds/**/feedback/
+experiments/E98_loss_weight_learning/runs/20261104_dynamic_mixedq_v2_seed0/*.lock
+experiments/E98_loss_weight_learning/runs/20261104_dynamic_mixedq_v2_seed0/*.log
+experiments/E98_loss_weight_learning/runs/20261104_generalization96_seed0/evaluation_depth_dev500/cases/
+experiments/E98_loss_weight_learning/runs/20261104_generalization96_seed0/evaluation_depth_dev500/gallery/
+experiments/E98_loss_weight_learning/runs/20261104_generalization96_seed0/evaluation_depth_dev500/*.lock
+experiments/E98_loss_weight_learning/runs/20261104_weaken_reference120_seed0/evaluation_cache/
+experiments/E98_loss_weight_learning/runs/20261104_weaken_reference120_seed0/train_feedback/
+experiments/E98_loss_weight_learning/runs/20261104_weaken_reference120_seed0/terminal_dev500/
+experiments/E98_loss_weight_learning/runs/20261104_weaken_reference120_seed0/gallery/
+experiments/E98_loss_weight_learning/runs/20261104_weaken_reference120_seed0/*.lock
+
+# Historical-chain replay: isolated runtimes contain shared raw-data junctions,
+# cache hardlinks and generated weights. Keep top-level scripts/evidence only.
+experiments/E101_final_c5_solver/runs/20261103_replay/s42/
+experiments/E101_final_c5_solver/runs/20261103_replay/s74/
+experiments/E101_final_c5_solver/runs/20261103_replay/sf/
+experiments/E101_final_c5_solver/runs/20261103_replay/historical/**/*.zip
+experiments/E101_final_c5_solver/runs/20261103_replay/*.lock
+
+# Separate authorized 64k/64k/64k chain: generated runtimes/data stay local.
+experiments/E101_final_c5_solver/runs/20261104_chain64k_seed0/s42/
+experiments/E101_final_c5_solver/runs/20261104_chain64k_seed0/s74/
+experiments/E101_final_c5_solver/runs/20261104_chain64k_seed0/sf/
+experiments/E101_final_c5_solver/runs/20261104_chain64k_seed0/*.lock
+experiments/E101_final_c5_solver/runs/20261104_original_C5_test2000/cases/
+experiments/E101_final_c5_solver/runs/20261104_original_C5_test2000/*.lock
+
+# E102 prepared image tensors and recoverable source snapshots stay local.
+experiments/E102_reference_image_generation/runs/prepared_*/
+experiments/E102_reference_image_generation/runs/**/source_snapshot.zip
+
+# Final C5 deployment weights, exact numeric caches and full coordinate evidence.
+experiments/E101_final_c5_solver/assets/*.pt
+experiments/E101_final_c5_solver/delivery/*.pt
+experiments/E101_final_c5_solver/runs/**/cache/
+experiments/E101_final_c5_solver/runs/**/teacher/**/*.npy
+experiments/E101_final_c5_solver/runs/**/evaluation/**/cases/
+experiments/E101_final_c5_solver/runs/**/evaluation/**/gallery/
+experiments/E101_final_c5_solver/runs/**/source_snapshot.zip
+history/20261103_final_delivery_consolidation/**/*.npy
+history/20261103_final_delivery_consolidation/**/*.npz
+history/20261103_final_delivery_consolidation/**/*.png
+history/20261103_final_delivery_consolidation/**/*.zip
+history/20261103_final_delivery_consolidation/**/runs/**/cache/
+history/20261103_final_delivery_consolidation/**/runs/**/cases/
+history/20261103_final_delivery_consolidation/**/runs/**/terminal/
+history/20261103_final_delivery_consolidation/**/runs/**/raw/
+history/20261103_final_delivery_consolidation/**/runs/**/gallery/
 __pycache__/
 *.pyc
+
+# E95 numeric inputs, full layouts, rendered galleries and source snapshots stay local.
+experiments/E95_single_pass_corrector/runs/**/inputs/
+experiments/E95_single_pass_corrector/runs/**/evaluation/raw/
+experiments/E95_single_pass_corrector/runs/**/evaluation/terminal/
+experiments/E95_single_pass_corrector/runs/**/evaluation/gallery/
+experiments/E95_single_pass_corrector/runs/**/source_snapshot.zip
 tmp/
 datasets/archives/
 datasets/floorset_lite/
 datasets/LiteTensorDataTest/
+datasets/random_reference40k_v1/
+experiments/E108_random_reference40k/runs/**/check5/
+visualization/E98_layer_diagnosis/*/
+experiments/E98_loss_weight_learning/runs/20261106_layer_diagnosis5/trace.json
+experiments/E109_deep_supervision_shared/runs/**/*.zip
+experiments/E110_deep_supervision_heads/runs/**/*.zip
+experiments/E111_progressive_depth/runs/**/*.zip
+experiments/E109_deep_supervision_shared/runs/**/evaluation_depth_dev500/cases/
+experiments/E110_deep_supervision_heads/runs/**/evaluation_depth_dev500/cases/
+experiments/E111_progressive_depth/runs/**/evaluation_depth_dev500/cases/
+experiments/E109_deep_supervision_shared/runs/**/evaluation_depth_dev500/gallery/
+experiments/E110_deep_supervision_heads/runs/**/evaluation_depth_dev500/gallery/
+experiments/E111_progressive_depth/runs/**/evaluation_depth_dev500/gallery/
+visualization/layer_comparisons/*/
+experiments/E109_deep_supervision_shared/runs/**/layer_trace5_20261107/trace.json
+experiments/E110_deep_supervision_heads/runs/**/layer_trace5_20261107/trace.json
+experiments/E111_progressive_depth/runs/**/layer_trace5_20261107/trace.json
+visualization/critical_budget/*/
+experiments/E112_deep_geometry_budget/runs/**/*.zip
+experiments/E113_deep_head_budget/runs/**/*.zip
+experiments/E112_deep_geometry_budget/runs/**/evaluation_depth_dev500/cases/
+experiments/E113_deep_head_budget/runs/**/evaluation_depth_dev500/cases/
+experiments/E112_deep_geometry_budget/runs/**/layer_trace5_20261107/trace.json
+experiments/E113_deep_head_budget/runs/**/layer_trace5_20261107/trace.json
 experiments/**/checkpoints/
 experiments/**/runs/**/*.pt
 experiments/**/runs/**/*.pth
@@ -511,3 +603,71 @@ experiments/E79_center_refinement/runs/**/source_snapshot.zip
 experiments/E79_center_refinement/runs/**/terminal/results.json
 experiments/E79_center_refinement/runs/**/terminal/partial.json
 experiments/E79_center_refinement/runs/**/draft_comparison100/images/
+
+# E80 inference-only frozen composition and coordinate payloads stay local.
+experiments/E80_modular_transfer/runs/**/source_snapshot.zip
+experiments/E80_modular_transfer/runs/**/terminal/results.json
+experiments/E80_modular_transfer/runs/**/terminal/partial.json
+experiments/E80_modular_transfer/runs/**/draft_comparison100/images/
+
+# E81 warm-wide modular research payloads remain local.
+experiments/E81_multisource_refinement/runs/**/source_snapshot.zip
+experiments/E81_multisource_refinement/runs/**/terminal/results.json
+experiments/E81_multisource_refinement/runs/**/terminal/partial.json
+experiments/E81_multisource_refinement/runs/**/draft_comparison100/images/
+
+# E82 pressure-context payloads stay local.
+experiments/E82_global_pressure_refinement/runs/**/source_snapshot.zip
+experiments/E82_global_pressure_refinement/runs/**/terminal/results.json
+experiments/E82_global_pressure_refinement/runs/**/terminal/partial.json
+experiments/E82_global_pressure_refinement/runs/**/draft_comparison100/images/
+
+# E100 source archives and live numerical payloads remain local.
+experiments/E100_relation_guided_placer/runs/**/source_snapshot.zip
+
+# E104 authorized scaling experiment generated evidence.
+experiments/E104_scaling32k/runs/**/*.pt
+experiments/E104_scaling32k/runs/**/*.zip
+experiments/E104_scaling32k/runs/**/cases/
+experiments/E104_scaling32k/runs/**/gallery/
+experiments/E104_scaling32k/*.log
+
+# E105 authorized scheme1 runtime artifacts.
+experiments/E105_gated_prenorm_placer/runs/**/*.pt
+experiments/E105_gated_prenorm_placer/runs/**/*.zip
+experiments/E105_gated_prenorm_placer/runs/**/cases/
+experiments/E105_gated_prenorm_placer/runs/**/gallery/
+experiments/E105_gated_prenorm_placer/*.log
+
+# E107 parent/checkpoints and full geometry runtime artifacts.
+experiments/E107_geometry_posttrain/assets/*.pt
+experiments/E107_geometry_posttrain/runs/**/*.pt
+experiments/E107_geometry_posttrain/runs/**/*.zip
+experiments/E107_geometry_posttrain/runs/**/cases/
+experiments/E107_geometry_posttrain/runs/**/gallery/
+experiments/E107_geometry_posttrain/*.log
+
+# Apply local-artifact rules consistently after experiment/history migrations.
+*.pt
+*.pth
+*.npy
+*.npz
+*.zip
+*.lock
+*.tmp
+*.nul
+experiments/**/*.png
+history/**/*.png
+**/runs/**/cases/
+**/runs/**/raw/
+**/runs/**/cache/
+**/runs/**/gallery/
+**/runs/**/images/
+**/runs/**/inputs/
+**/runs/**/feedback/
+**/runs/**/labels/
+**/runs/**/results.json
+**/runs/**/drafts.json
+**/runs/**/trace.json
+**/runs/**/forwards.json
+experiments/E114_supervision_placement/evaluation_budget500ms/output/cases/

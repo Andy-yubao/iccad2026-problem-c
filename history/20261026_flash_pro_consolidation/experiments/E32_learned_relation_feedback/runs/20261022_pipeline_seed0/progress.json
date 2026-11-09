@@ -1,0 +1,85 @@
+{
+  "stages": [
+    {
+      "arm": "replay",
+      "kind": "train",
+      "returncode": 0,
+      "seconds": 587.9966759681702,
+      "command": [
+        "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+        "-u",
+        "-B",
+        "-m",
+        "experiments.E32_learned_relation_feedback.train",
+        "--arm",
+        "replay",
+        "--seed",
+        "0",
+        "--output",
+        "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E32_learned_relation_feedback\\runs\\20261022_replay_seed0",
+        "--max-hours",
+        "2",
+        "--max-epochs",
+        "200"
+      ]
+    },
+    {
+      "arm": "replay",
+      "kind": "terminal",
+      "returncode": 0,
+      "seconds": 1321.451609134674,
+      "command": [
+        "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+        "-u",
+        "-B",
+        "-m",
+        "experiments.E32_learned_relation_feedback.evaluate",
+        "--checkpoint",
+        "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E32_learned_relation_feedback\\runs\\20261022_replay_seed0\\checkpoints\\best.pt",
+        "--tag",
+        "20261022_replay_seed0_terminal500"
+      ]
+    },
+    {
+      "arm": "draft_only",
+      "kind": "train",
+      "returncode": 0,
+      "seconds": 565.1301617622375,
+      "command": [
+        "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+        "-u",
+        "-B",
+        "-m",
+        "experiments.E32_learned_relation_feedback.train",
+        "--arm",
+        "draft_only",
+        "--seed",
+        "0",
+        "--output",
+        "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E32_learned_relation_feedback\\runs\\20261022_draft_only_seed0",
+        "--max-hours",
+        "2",
+        "--max-epochs",
+        "200"
+      ]
+    },
+    {
+      "arm": "draft_only",
+      "kind": "terminal",
+      "returncode": 0,
+      "seconds": 1313.3059568405151,
+      "command": [
+        "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+        "-u",
+        "-B",
+        "-m",
+        "experiments.E32_learned_relation_feedback.evaluate",
+        "--checkpoint",
+        "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E32_learned_relation_feedback\\runs\\20261022_draft_only_seed0\\checkpoints\\best.pt",
+        "--tag",
+        "20261022_draft_only_seed0_terminal500"
+      ]
+    }
+  ],
+  "test_read": false
+}

@@ -5,6 +5,8 @@ from __future__ import annotations
 import math
 STAGES = (("reference", "Reference layout"), ("raw", "Attention + geometry proposal"),
           ("final", "Frozen postprocessing"))
+PLACER_CORRECTOR_STAGES = (("reference", "Reference layout"), ("placer", "Layout model output"),
+                          ("corrected", "Correction model output"), ("final", "Postprocessed output"))
 HATCHES = ("///", "\\\\\\", "xxx", "...", "+++", "ooo", "***", "|||", "---", "OO")
 SIDES = ((1, "L"), (2, "R"), (4, "T"), (8, "B"))
 
@@ -102,8 +104,8 @@ def plot_case(row, destination, *, stages=None, show_metrics=True):
 
     stages = stages or STAGES
     columns = len(stages)
-    if not 1 <= columns <= 3:
-        raise ValueError("Layout comparison supports one to three saved stages")
+    if not 1 <= columns <= 4:
+        raise ValueError("Layout comparison supports one to four saved stages")
     validate_case(row, stages)
     constraints = row["constraints"]
     groups, mibs = group_ids(constraints, 3), group_ids(constraints, 2)
@@ -118,10 +120,17 @@ def plot_case(row, destination, *, stages=None, show_metrics=True):
     span = max(xmax - xmin, ymax - ymin, 1e-12)
     margin = span * .055
     limits = (xmin - margin, xmax + margin, ymin - margin, ymax + margin)
+    if row.get("axis_limits") is not None:
+        requested = row["axis_limits"]
+        if (len(requested) != 4 or not all(numeric(v) for v in requested) or
+                not requested[0] < requested[1] or not requested[2] < requested[3] or
+                requested[0] > xmin or requested[1] < xmax or requested[2] > ymin or requested[3] < ymax):
+            raise ValueError("Shared axis limits must contain every saved rectangle")
+        limits = tuple(requested)
     # Reserve separate bands for stage statistics, group tables and shared legend.
     max_groups = max(math.ceil(len(groups) / 5), 1) + max(math.ceil(len(mibs) / 5), 1)
     table_height = max(.072, .018 * (max_groups + 2))
-    legend_columns = 7 if columns == 3 else (5 if columns == 2 else 3)
+    legend_columns = 7 if columns >= 3 else (5 if columns == 2 else 3)
     legend_rows = math.ceil((len(groups) + len(mibs) + 7) / legend_columns)
     legend_height = max(.065, legend_rows * .026 + .025)
     table_bottom = .065 + legend_height + .025
@@ -131,9 +140,9 @@ def plot_case(row, destination, *, stages=None, show_metrics=True):
         axes_bottom = table_bottom + .05
     plt.rcParams.update({"font.size": 10, "hatch.linewidth": .45, "axes.spines.top": False,
                          "axes.spines.right": False, "savefig.facecolor": "white"})
-    fig = plt.figure(figsize=(19.5 if columns == 3 else (13.0 if columns == 2 else 8.8), 11.7))
-    lefts = [.035 + index * .323 for index in range(3)] if columns == 3 else [.05 + index * .92 / columns for index in range(columns)]
-    width = .30 if columns == 3 else .92 / columns - .025
+    fig = plt.figure(figsize=(6.5 * columns if columns >= 2 else 8.8, 11.7))
+    lefts = [.035 + index * .97 / columns for index in range(columns)] if columns >= 3 else [.05 + index * .92 / columns for index in range(columns)]
+    width = .97 / columns - .023 if columns >= 3 else .92 / columns - .025
     axes = [fig.add_axes((left, axes_bottom, width, .88 - axes_bottom)) for left in lefts]
     for index, ((stage, title), ax) in enumerate(zip(stages, axes)):
         variant = row["variants"][stage]
@@ -179,7 +188,7 @@ def plot_case(row, destination, *, stages=None, show_metrics=True):
             fig.text(left, axes_bottom - .04, status_text(variant), fontsize=10, linespacing=1.7, va="top")
             fig.text(left, table_top, detail_text(variant), fontsize=8.5,
                      family="monospace", linespacing=1.5, va="top", color="#334155")
-    fig.suptitle(f"{row['panel']} | {row['case_id']} | {len(constraints)} blocks", fontsize=15 if columns == 3 else 11, y=.975)
+    fig.suptitle(f"{row['panel']} | {row['case_id']} | {len(constraints)} blocks", fontsize=15 if columns >= 3 else 11, y=.975)
     caption = row.get("caption", "Same module IDs and coordinate scale across columns; each column shows only its own layout." if columns > 1 else "Saved layout; module IDs and constraints follow the source task.")
     fig.text(.5, .935, caption, ha="center", fontsize=10 if columns > 1 else 9, color="#475569")
     legend = [Patch(facecolor=colors[group], edgecolor="#475569", label=f"Grouping G{group}") for group in groups]
@@ -192,9 +201,10 @@ def plot_case(row, destination, *, stages=None, show_metrics=True):
                Line2D([], [], color="#64748b", ls="--", label="Own layout bbox"),
                Patch(facecolor="white", label="F: fixed shape; P: preplaced")]
     fig.legend(handles=legend, loc="lower center", bbox_to_anchor=(.5, .065), ncol=legend_columns,
-               fontsize=8, frameon=True, edgecolor="#e2e8f0", title="Constraint identities are unchanged across all three stages" if columns == 3 else "Constraint key for the saved layout", title_fontsize=9)
+               fontsize=8, frameon=True, edgecolor="#e2e8f0", title="Constraint identities are unchanged across all shown stages" if columns >= 3 else "Constraint key for the saved layout", title_fontsize=9)
     fig.text(.035, .024,
-             "Raw model draft only. No postprocessing or scoring. Red outlines indicate geometric overlaps." if not show_metrics else
+             ("Raw model draft only. No postprocessing or scoring. Red outlines indicate geometric overlaps." if columns == 1 else
+              "Saved layout comparison. Scores hidden for visual review. Red outlines indicate geometric overlaps.") if not show_metrics else
              ("B/G/M = official boundary / grouping / MIB violation counts. Q uses neutral runtime; illegal proposals are not feasible-quality results.\n"
               "Boundary badges show status against each layout's own bbox. Group components=1 and MIB distinct shapes=1 indicate consistency. "
               "Overlap outlines are visual only (1e-9 span tolerance).") if columns == 3 else
@@ -203,7 +213,7 @@ def plot_case(row, destination, *, stages=None, show_metrics=True):
              fontsize=8, color="#475569")
     fig.savefig(destination, dpi=170, facecolor="white")
     plt.close(fig)
-    return {"axis_limits": list(limits), "bounding_policy": "union of all three stages plus 5.5% maximum-span margin; no blocks cropped",
+    return {"axis_limits": list(limits), "bounding_policy": "validated caller-supplied common limits; no blocks cropped" if row.get("axis_limits") is not None else "union of all shown stages plus 5.5% maximum-span margin; no blocks cropped",
             "axes_bounds": [list(ax.get_position().bounds) for ax in axes],
             "grouping_colors": {str(group): list(colors[group]) for group in groups},
             "mib_hatches": {str(group): patterns[group] for group in mibs},

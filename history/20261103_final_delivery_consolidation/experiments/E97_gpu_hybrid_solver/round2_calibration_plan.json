@@ -1,0 +1,16 @@
+{
+  "revision": "E97.round2.candidate1.public_soft_calibration.v1",
+  "registered_before_measurement": true,
+  "source": "C3 unique own-Loss best, preserve all trained heads, frozen E74",
+  "panel": "same fixed train_monitor500 only; no optimizer, solver, dev or Q calls",
+  "base": "exact unchanged C3 teacher center1+shape.25+near-relative.25+physical-clearance-tail1",
+  "new_task": "public boundary worst required side per block + public-teacher Kruskal group contact tree normal-touch SmoothL1 and >=.01 local tangent overlap hinge; sum/public N_soft, no MIB penalty because existing hard geometry handles it",
+  "label_source": "read-only completed public-solver teacher; nominal decode plus exact public locked WH, native-mode0 axis/sign and same solver contact-tree ranking; supervision only, never NN input",
+  "coefficient": "lambda=.5*median positive local-state gradient norm(base)/median positive local-state gradient norm(public_soft), same active members. State units sqrt(public area),sqrt(public area),1 masked by free variables. Must be finite and0<lambda<=1000; otherwise stop/diagnose, no scan.",
+  "total": "unchanged unweighted per-case C3 total + lambda*public_soft; identical total for backward/train500/dev500/best/LR/early-stop",
+  "aggregation": "all frozen members retained, positive-gradient subset used only for coefficient identification",
+  "gradient_share": 0.5,
+  "no_new_deployment_operations": true,
+  "no_reference_scoring_denominator": true,
+  "test_read": false
+}

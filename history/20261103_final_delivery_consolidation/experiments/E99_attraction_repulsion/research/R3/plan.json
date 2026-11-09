@@ -1,0 +1,13 @@
+{
+  "revision": "E99.R3.raw_hard_lazy_feasibility.v1",
+  "registered_utc": "2026-11-02T16:35:00Z",
+  "evidence": "R1 bounded elastic/group-macro topology severely fails quality. R2 preflight/partial training shows hard separation from legal seed reliably yields legal conic proposals, but unconditional greedy seed changes many boundary/group relations and causes large Q penalties. Retain frozen C3 topology wherever feasible; construction should only be a recovery.",
+  "hypothesis": "Replacing elastic nonoverlap with hard separation directly on C3's pair ordering should produce useful legal shallow steps. Public boundary ordering can then be attempted without discarding an existing legal incumbent. Expensive depth and topology destruction are separate issues.",
+  "arms": ["raw_hard_control", "boundary_route"],
+  "backend": {"seconds": 0.18, "maximum_shape_solves": 4, "shape_cap_seconds": 0.045, "projection_and_polish_reserve_seconds": 0.033, "shape_elastic": 0, "conservative": true, "field": false, "seed": "lazy after2 failed shape attempts if no useful legal incumbent; never overwrite a legal incumbent", "boundary_route": "After initial physical mode0 solve, try mode1 without group macro ordering; keep best legal state and revert after route failure", "grouping": "existing experiment-local public contact tree; no group macro ordering", "deep_recovery": false},
+  "implementation_panel": [0,4,43,95,135],
+  "calibration_panel": "v5.train_monitor500 two matched arms once, cached identical frozen C3 inputs, only after R2 completes; geometry-only timing diagnostic",
+  "promotion": "Freeze before any dev500 evaluation; compare Q/soft penalties/fallbacks and strict timing evidence, no dev coefficient sweep",
+  "test_read": false,
+  "new_training": false
+}

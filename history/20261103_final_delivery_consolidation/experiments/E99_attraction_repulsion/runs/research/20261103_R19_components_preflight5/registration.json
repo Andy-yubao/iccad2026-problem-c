@@ -1,0 +1,153 @@
+{
+  "identity": {
+    "plan": {
+      "revision": "E99.R19.translation_shape_factorial_ablation.v1",
+      "status": "registered_after_R18_review_before_R19_numerical_runs",
+      "single_hypothesis": "Attribute the benefit of the current best R15 strong-attraction AR to center movement, old angular strain, or their interaction, before further force/shape tuning. Two missing cells of a2x2 ablation: translation-only and shape-only. Completed noAR and both mechanisms controls are reused read-only.",
+      "evidence": "R18 sign-only shape correction Q1.014329285 vs1.010848449, all500 legal, and mean log-shape path0.02378169 vs old0.02413694. Thus the earlier R17 failure is not explained only by increased amplitude. Largest R18 regression index295 adds8 boundary and2 group violations; all500 retained. Do not label the old strain heuristic a final-objective bug.",
+      "arms": [
+        "translation_only",
+        "shape_only"
+      ],
+      "config_overrides": {
+        "translation_only": {
+          "shape_step_size": 0.0
+        },
+        "shape_only": {
+          "step_size": 0.0
+        }
+      },
+      "shared_configuration": "Exact R15 attraction_equal_slope: ka1,kr1,initial area inertia,global degree damping,20 rounds,5% step/40% total path,shape1.03 step/1.5 total,old angular strain,budget gate. Only disable one mechanism per arm. All snapshots synchronous; no soft objective added.",
+      "controls": "R15 attraction_equal_slope full train500 (both) and frozen C3 original full planner train500 (neither), identical members and drafts, no repeated solves.",
+      "panel": "v5.train_monitor500 original frozen order, unchanged C3 and public inputs; no dev or test use",
+      "pipeline": "AR arm -> byte-identical original planner/config -> original necessary hard checks, official neutral-time score after timer",
+      "preflight": {
+        "indices": [
+          0,
+          4,
+          43,
+          95,
+          135
+        ],
+        "checks": "unchanged R15 strong branch history bit-exact; each arm capture/production exact; translation-only WH bit-exact to original and zero dq; shape-only centers stationary to roundoff and raw displacement zero; area/locks/budgets; full official+independent legality. Ten same-identity final records reused in full1000."
+      },
+      "trajectory_logging": "Capture every module/round forces, raw/applied movement/strain, limits/path and coordinates once outside production timer; production prefix exactly equals saved final prefix. Save all original planner traces and final coordinates.",
+      "timing": "CPU cached-draft AR+original full planner+hard checks only; no fresh C3, no complete250ms acceptance, historical control timings unpaired. Single numerical worker1 math thread, rotated two-arm order.",
+      "execution": "Shared OS lock, source/member/hash binding, atomic percase saves, STOP at arm boundaries. Explicit identity-bound resume only, failures preserved/diagnosed, no automatic retries or dev launch.",
+      "preflight_output": "runs/research/20261103_R19_components_preflight5",
+      "output": "runs/research/20261103_R19_components_train500",
+      "after": "Review finalQ, raw geometry, soft constraints and paired factorial interaction on all500. Register one next mechanism or freeze a justified candidate before full fresh C3 dev500 and original100-gallery evaluation; no planner changes.",
+      "test_read": false,
+      "new_training": false
+    },
+    "configs": {
+      "translation_only": {
+        "iterations": 20,
+        "step_size": 0.5,
+        "step_fraction": 0.05,
+        "total_fraction": 0.4,
+        "attraction_range": 0.5,
+        "attraction_strength": 1.0,
+        "repulsion_strength": 1.0,
+        "shape_step_size": 0.0,
+        "shape_step_fraction": 0.03,
+        "shape_total_fraction": 0.5,
+        "exclude_exhausted": true,
+        "area_attraction": false
+      },
+      "shape_only": {
+        "iterations": 20,
+        "step_size": 0.0,
+        "step_fraction": 0.05,
+        "total_fraction": 0.4,
+        "attraction_range": 0.5,
+        "attraction_strength": 1.0,
+        "repulsion_strength": 1.0,
+        "shape_step_size": 0.5,
+        "shape_step_fraction": 0.03,
+        "shape_total_fraction": 0.5,
+        "exclude_exhausted": true,
+        "area_attraction": false
+      }
+    },
+    "sources": {
+      "datasets/paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+      "datasets/reference_layouts.py": "f6aeeba298a163b7d506c67e3fba024cd3a191c3aae1116fc6b5d294431db9b5",
+      "experiments/E99_attraction_repulsion/deformation.py": "829caa2852b98b3b3e451afd4af71607cb04a5a4fd93a3b71e208e5d69126aee",
+      "experiments/E99_attraction_repulsion/diagnostics.py": "cda267e8a1e4bd0983b8e0a7b8b479dd46e2fac792189268b812b1287f14b61e",
+      "experiments/E99_attraction_repulsion/planner/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "experiments/E99_attraction_repulsion/planner/backend/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "experiments/E99_attraction_repulsion/planner/backend/conic_geometry.py": "8d611db3bee47499c77b64039eee09718607f356cd251df5792314a53bcdcd63",
+      "experiments/E99_attraction_repulsion/planner/backend/frozen/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "experiments/E99_attraction_repulsion/planner/backend/frozen/canonical_geometry.py": "c1dcfd377ad33cdb85954c01917e762f87360deb43b1d5cce9b92c1b003fa2e4",
+      "experiments/E99_attraction_repulsion/planner/backend/frozen/feasible.py": "9cfe70894d80fbe54ccaa1c3de60ef4ab111ac9b4472286d1ae6a0c5a1fdc756",
+      "experiments/E99_attraction_repulsion/planner/backend/frozen/global_refine.py": "cd43991827597dfc4c5635cddb26f597774c680a24658237e5f443e9fbbca60c",
+      "experiments/E99_attraction_repulsion/planner/backend/frozen/packing.py": "3c0500b7fee120807e6bd3fa8e9f115e476782af1a3e7620859c6651a089ef30",
+      "experiments/E99_attraction_repulsion/planner/backend/frozen/postprocess.py": "da0e1572a822a589968a19e67e2d36dd5133c7d17b7ea9443bd743ee4653a272",
+      "experiments/E99_attraction_repulsion/planner/backend/frozen/shape_lp.py": "6de2773cfd981723e55a1d317ad9422e8fee76b393d740acaf70007594bc8a9f",
+      "experiments/E99_attraction_repulsion/planner/backend/frozen/solver.py": "ed874db1bac7205d5e1d80350b1d4e82d3c56eb2bb44b9f08ceb256244d24ea0",
+      "experiments/E99_attraction_repulsion/planner/backend/frozen/topology_mip.py": "2ba0f2612f598f5e8d6e80a3ee1f74ad4941b78a3e9163f2d4acd7db5588da1a",
+      "experiments/E99_attraction_repulsion/planner/backend/guard.py": "eb36fbbcea1b694c7fb40fa0b36e3ed659ac66563be583f177fb6bb9e3c35bd7",
+      "experiments/E99_attraction_repulsion/planner/backend/observe.py": "b924be6a40f157e2d2204e358990797192e10a6320e3e3c3399d044918b25dd8",
+      "experiments/E99_attraction_repulsion/planner/backend/reduction.py": "d8ba6af127d9b08469b198f7ed38849e14ac566db58bfab855797920c92012ed",
+      "experiments/E99_attraction_repulsion/planner/backend/rescue.py": "ada10eea489e0f7d65a2f6dd0a20358d33d08808f3dfef6a19c0583139f206e0",
+      "experiments/E99_attraction_repulsion/planner/canonical.py": "9f7da6983541a3c8b0d57c8f869c6905c24f2bc4eb3643e0ed9e0a718d2abf2c",
+      "experiments/E99_attraction_repulsion/planner/canonical_native.py": "e350394ce13f8bb20e53d03494912f9367d29c9f68809ad16c4314a45709718b",
+      "experiments/E99_attraction_repulsion/planner/canonical_py.py": "b5b99c1f77756aa318fe5cb0e7fa82935844752b4fa815ab80367adb34e00195",
+      "experiments/E99_attraction_repulsion/planner/certify_polish.py": "4cdc5c8e368f2ade78d6adcd046d3eb8163b33bda04cfb819e38418671f36094",
+      "experiments/E99_attraction_repulsion/planner/fast_geometry.py": "5440a4deaa85397ff47f4323b4106d559e508c3f7af8f37953fea37cdfcdbf02",
+      "experiments/E99_attraction_repulsion/planner/legal_seed.py": "45a6d0ee77c7cceafd05f41f9317f72ebdbf56dd45fc566da04952810e3a7588",
+      "experiments/E99_attraction_repulsion/planner/projection.py": "7f43f22c1ded622268a4c73a26e0103d4e30edfd027089b80845a7195ee4cbff",
+      "experiments/E99_attraction_repulsion/planner/solver.py": "6c4310ac9ae58ea5fa85732548e14e44f33ccb331f3bc69071a3582cd4fb8f2e",
+      "experiments/E99_attraction_repulsion/planner_config.json": "41cbfb0f344ad7e8394c2651d8476d36a053543c6970813cc379a58a5031e498",
+      "experiments/E99_attraction_repulsion/relaxation.py": "37482099cf22a0659e2fc160157ad8a121085606effd0e0cc4733a8d7015d200",
+      "experiments/E99_attraction_repulsion/research/R15/operator.py": "c3bb00539b07b971f820690937e7faa2171a21a0b7c275af6f58713388a17abb",
+      "experiments/E99_attraction_repulsion/research/R16/operator.py": "d45f2869bdddd5152af5e3c946ce41143626d07bbfd56f203caf9b96f4fde3d7",
+      "experiments/E99_attraction_repulsion/research/R16/replay.py": "5ae6b7d49a51e4b2e987efbcc572b93e26bd45b541febc6c0755140e5c199200",
+      "experiments/E99_attraction_repulsion/research/R16/replay_plan.json": "584cafd22b1f1631455a3eb4862d2a1b6be976051ec830a396135fb79615514f",
+      "experiments/E99_attraction_repulsion/tune.py": "7d7ad9710aa99f1d72117e745e9250eae3ace8d7d0091d1ee9c70aab75be4346",
+      "experiments/E99_attraction_repulsion/tuning_config.py": "74a64e3aca576695cab09185d658881198427c55c8af70f6ad3ba1aef4e27325",
+      "experiments/E99_attraction_repulsion/research/R19/run.py": "3e15c1d36efeb36ba9bfa8e29231828857660e1f917abed292ca8f0b658e6856",
+      "experiments/E99_attraction_repulsion/research/R19/operator.py": "0d304f2c74ecf158826166fd5e304575e02b30a64bc87b998a8f1b8c27d1ec75",
+      "experiments/E99_attraction_repulsion/research/R19/candidate_plan.json": "b0615d9748de93d6c2cfa9c645645090470980ff4b80821b105b16550c3096e1",
+      "experiments/E99_attraction_repulsion/research/R19/operator_provenance.json": "0a8f515f58339397f9a864c90c158a3add6909faa39fc0e023d6f0d1477b5744",
+      "scoring/checks.py": "738f6b57e20dce58516f3f10d83689f8df273a84a02b2dce99c6ccc1f904763a",
+      "scoring/evaluation.py": "356e0d1c788c6f25154b33fb1c2455388317d2cc0dd96ca50d7357c58612c611",
+      "scoring/official.py": "478fbc228a56ec4b336b5d8687a44b22b749f30aae09372f57c08e7124270e03"
+    },
+    "original_planner": {
+      "experiments/E99_attraction_repulsion/planner/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "experiments/E99_attraction_repulsion/planner/backend/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "experiments/E99_attraction_repulsion/planner/backend/conic_geometry.py": "8d611db3bee47499c77b64039eee09718607f356cd251df5792314a53bcdcd63",
+      "experiments/E99_attraction_repulsion/planner/backend/frozen/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "experiments/E99_attraction_repulsion/planner/backend/frozen/canonical_geometry.py": "c1dcfd377ad33cdb85954c01917e762f87360deb43b1d5cce9b92c1b003fa2e4",
+      "experiments/E99_attraction_repulsion/planner/backend/frozen/feasible.py": "9cfe70894d80fbe54ccaa1c3de60ef4ab111ac9b4472286d1ae6a0c5a1fdc756",
+      "experiments/E99_attraction_repulsion/planner/backend/frozen/global_refine.py": "cd43991827597dfc4c5635cddb26f597774c680a24658237e5f443e9fbbca60c",
+      "experiments/E99_attraction_repulsion/planner/backend/frozen/packing.py": "3c0500b7fee120807e6bd3fa8e9f115e476782af1a3e7620859c6651a089ef30",
+      "experiments/E99_attraction_repulsion/planner/backend/frozen/postprocess.py": "da0e1572a822a589968a19e67e2d36dd5133c7d17b7ea9443bd743ee4653a272",
+      "experiments/E99_attraction_repulsion/planner/backend/frozen/shape_lp.py": "6de2773cfd981723e55a1d317ad9422e8fee76b393d740acaf70007594bc8a9f",
+      "experiments/E99_attraction_repulsion/planner/backend/frozen/solver.py": "ed874db1bac7205d5e1d80350b1d4e82d3c56eb2bb44b9f08ceb256244d24ea0",
+      "experiments/E99_attraction_repulsion/planner/backend/frozen/topology_mip.py": "2ba0f2612f598f5e8d6e80a3ee1f74ad4941b78a3e9163f2d4acd7db5588da1a",
+      "experiments/E99_attraction_repulsion/planner/backend/guard.py": "eb36fbbcea1b694c7fb40fa0b36e3ed659ac66563be583f177fb6bb9e3c35bd7",
+      "experiments/E99_attraction_repulsion/planner/backend/observe.py": "b924be6a40f157e2d2204e358990797192e10a6320e3e3c3399d044918b25dd8",
+      "experiments/E99_attraction_repulsion/planner/backend/reduction.py": "d8ba6af127d9b08469b198f7ed38849e14ac566db58bfab855797920c92012ed",
+      "experiments/E99_attraction_repulsion/planner/backend/rescue.py": "ada10eea489e0f7d65a2f6dd0a20358d33d08808f3dfef6a19c0583139f206e0",
+      "experiments/E99_attraction_repulsion/planner/canonical.py": "9f7da6983541a3c8b0d57c8f869c6905c24f2bc4eb3643e0ed9e0a718d2abf2c",
+      "experiments/E99_attraction_repulsion/planner/canonical_native.py": "e350394ce13f8bb20e53d03494912f9367d29c9f68809ad16c4314a45709718b",
+      "experiments/E99_attraction_repulsion/planner/canonical_py.py": "b5b99c1f77756aa318fe5cb0e7fa82935844752b4fa815ab80367adb34e00195",
+      "experiments/E99_attraction_repulsion/planner/certify_polish.py": "4cdc5c8e368f2ade78d6adcd046d3eb8163b33bda04cfb819e38418671f36094",
+      "experiments/E99_attraction_repulsion/planner/fast_geometry.py": "5440a4deaa85397ff47f4323b4106d559e508c3f7af8f37953fea37cdfcdbf02",
+      "experiments/E99_attraction_repulsion/planner/legal_seed.py": "45a6d0ee77c7cceafd05f41f9317f72ebdbf56dd45fc566da04952810e3a7588",
+      "experiments/E99_attraction_repulsion/planner/projection.py": "7f43f22c1ded622268a4c73a26e0103d4e30edfd027089b80845a7195ee4cbff",
+      "experiments/E99_attraction_repulsion/planner/solver.py": "6c4310ac9ae58ea5fa85732548e14e44f33ccb331f3bc69071a3582cd4fb8f2e",
+      "experiments/E99_attraction_repulsion/planner_config.json": "41cbfb0f344ad7e8394c2651d8476d36a053543c6970813cc379a58a5031e498"
+    },
+    "source_C3_registration_sha256": "82dd6d1f8d7a5243dc1510981bfff1424be6014c2a5ab3c50a519017de925264",
+    "source_C3_results_sha256": "dc0b62efb0f7cfb39e6d5998b24fb28e0390bf11b1ce8fa2f01c5222c8478108",
+    "matched_AR_control_registration_sha256": "2b91f5e80b72c32eaaeef34297268209eb7ff0359ad42890df5bff3d524fea47",
+    "matched_AR_control_results_sha256": "b28947968f0bc1834a8557218837d6eb82c5ef8f1f7f70f92f9f4fe3e689dce4",
+    "registry_sha256": "1409ccf825b9c7cae1097a22e8dc4068e1283d79541c85ce54c5627d0c2b4208",
+    "parent_R18_results_sha256": "8ddfba4b84f2c68421f37cee874f56262dbb0c46ad925767c698afe30f1c9654"
+  },
+  "created_utc": "2026-11-03T02:34:27.065376+00:00"
+}

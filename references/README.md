@@ -74,7 +74,7 @@ python .\scripts\convert_official_docs.py
 
 公开验证集记录：[validation_installation.json](../datasets/validation_installation.json)。已核对官方 SHA-256、100 个 config 目录和 100 对输入/标签，全部 200 个解压文件与压缩包内容一致。修复了下载脚本将 config 目录误按文件检查的问题，同一命令已重跑成功。
 
-本页的获取/安装描述是当时记录，当前训练进度以实验索引为准。历史单例与环境安装证据已压缩至 [bootstrap_20261015.zip](../history/bootstrap_20261015.zip)。独立环境中的 [100 例结果](../experiments/baseline/runs/full100_clean_cu128_seed0/run/results.json)和最新 [5 例核查](../experiments/baseline/diagnostics.md)仍保留原始文件。仅为划分查看了 5 个开发分片的结构，未做训练；项目执行规则见 [protocol.md](../docs/protocol.md)。
+本页的获取/安装描述是当时记录，当前训练进度以实验索引为准。历史单例与环境安装证据已压缩至 [bootstrap_20261015.zip](../history/bootstrap_20261015.zip)。独立环境中的 [100 例结果](../history/20261026_flash_pro_consolidation/experiments/baseline/runs/full100_clean_cu128_seed0/run/results.json)和最新 [5 例核查](../history/20261026_flash_pro_consolidation/experiments/baseline/diagnostics.md)仍保留原始文件。仅为划分查看了 5 个开发分片的结构，未做训练；项目执行规则见 [protocol.md](../docs/protocol.md)。
 
 ## 2026-10-16 位置变更
 

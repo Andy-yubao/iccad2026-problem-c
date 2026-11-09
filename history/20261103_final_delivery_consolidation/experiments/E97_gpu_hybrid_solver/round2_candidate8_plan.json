@@ -1,0 +1,58 @@
+{
+  "revision": "E97.round2.candidate8.bounded_area_head.v1",
+  "candidate": 8,
+  "status": "registered_after_C7_full_evidence_before_preflight",
+  "source_checkpoint": "experiments/E97_gpu_hybrid_solver/runs/20261102_round2_candidate5_countweighted_seed0/checkpoints/best.pt",
+  "source_sha256": "028ea3aa124c8cd9e7c3cc7bf8587c699ab9b4932f256899e3780d4d8c8816e0",
+  "teacher": "Read-only reuse completed C5 teacher4000/exactWH + saved dev500 labels from candidate7; zero new teacher generation/solver/scorer. Same4k/500 cohort and exactWH provenance.",
+  "training": {
+    "model": "round2_area_freedom.DeploymentModel. Map preserved C5 F under refiner.draft, add1665-parameter public-only area head; train F+head243212, E74 frozen. Initial new head final layer zero, source F heads untouched; initial physical output must be bit-exact C5.",
+    "data": "new4000 subset includes exact fixed train500; dev500 same existing members. Source model already exposed to original16k/inherited larger training; not new independent generalization.",
+    "loss": "Same C7 exactWH group/public geometry objective + .25 SmoothL1(predicted_area_fraction/.01, teacher_actual_area_fraction/.01), averaged over public free shapes and usable teacher. All components carry unchanged publicN weight; exact same total for backward/monitor/best/LR/earlystop. No coefficient scan.",
+    "count_normalizer": 0.12578465955104443,
+    "public_soft_coefficient": 3.6876450434943204,
+    "seed": 0,
+    "batch": 32,
+    "precision": "FP32 noAMP/TF32",
+    "optimizer": "fresh AdamW",
+    "lr_levels": [
+      0.0001,
+      5e-05,
+      2e-05,
+      1e-05
+    ],
+    "max_seconds": 360,
+    "max_epochs": 60,
+    "same_loss_for": [
+      "backward",
+      "train500",
+      "dev500",
+      "best",
+      "LR",
+      "early_stop"
+    ],
+    "checkpoints": "best/latest full Adam/RNG/order/cursor/seen/scheduler/elapsed budget; no Q checkpoint reselection"
+  },
+  "terminal": "Own-Loss unique best once complete original full CPU1 dev500/new raw2000/same100. If epoch0 preserved source C5 keys and final area readout zero, prune zero area head and reuse C5 existing full terminal/raw/gallery. Full inference time includes area head, pooling and decode4.",
+  "preflight": "Only after C7 full v2 evaluation complete. Original5 eager/graph actual Adam/moments, full next-step restore, finite target/WH before Adam, frozen L, source mapped heads + initial zero-area physical output exact, area bound/locked masks/MIB equality before and after updates, strict LEGACY input. No extra teacher or dev grid.",
+  "caveats": [
+    "New label source +4000 subset+lower LR and teacher-WH numerical objective are a registered migration, not a single-factor attribution or ordinary continuation.",
+    "Actual teacher dimensions may use public area tolerance and source network nominal-area decode still cannot imitate every exact WH; keep diagnostics and9historical aspect>5 caveat.",
+    "C5 full teacher labels are not guaranteed globally optimal; final Q and complete timing decide.",
+    "All offline label time counts in unchanged original-start extended deadline; stop on cap/STOP/failure, no automatic retries or silently missing members.",
+    "Architecture/output flexibility and new .25 area supervision change together; cannot isolate causal area representation benefit from this one run.",
+    "Bounded area freedom uses public tolerance only, teacherWH never enters NN; shape aspect cap and anchored MIB irreducible targets remain."
+  ],
+  "test_read": false,
+  "output_geometry": "Head predicts per-module fractional public-area offset bounded .00999*tanh. Public MIB class shares offset; any class with fixed/preplaced member forced offset0. Fixed/preplaced retain exact public dimensions; decoder supports3-state L and4-state F. Geometry after decode within original public1% area tolerance, independent final hard checks unchanged.",
+  "final_budget_rule": "Eighth and final authorized formal candidate. Conditional start only after C7 full result and enough time for360sec training plus complete evaluation/report before09:45UTC. After this one pipeline closes, audit/report/close heartbeat; no new candidates even if time remains.",
+  "decision": {
+    "C7_full_Q": 1.0136774623546378,
+    "C7_all_hard_legal": 500,
+    "C5_retained_Q": 1.012685893000293,
+    "source_rule": "C5 source fixed in conditional plan before seeing C7 Q, same start as C7 for representation comparison, not retrospective checkpoint selection",
+    "teacher_area_difference_observed": "max~.0099994 train/.0099992dev, all hard-legal exactWH stored",
+    "global_deadline": "2026-11-02T09:45:00+00:00",
+    "max_training_seconds": 360
+  }
+}

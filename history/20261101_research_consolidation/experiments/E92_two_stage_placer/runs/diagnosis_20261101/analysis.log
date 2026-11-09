@@ -1,0 +1,135 @@
+{
+  "Q_strata": [
+    {
+      "N": [
+        20,
+        39
+      ],
+      "count": 98,
+      "Q_weight_fraction": 0.0009565342905394771,
+      "Q_delta": -0.012784081067459617
+    },
+    {
+      "N": [
+        40,
+        59
+      ],
+      "count": 101,
+      "Q_weight_fraction": 0.005123151332962623,
+      "Q_delta": -0.007487233811402447
+    },
+    {
+      "N": [
+        60,
+        79
+      ],
+      "count": 99,
+      "Q_weight_fraction": 0.026343906800134195,
+      "Q_delta": 0.007199513489530257
+    },
+    {
+      "N": [
+        80,
+        99
+      ],
+      "count": 97,
+      "Q_weight_fraction": 0.13958763065139468,
+      "Q_delta": 0.0006110266853076678
+    },
+    {
+      "N": [
+        100,
+        120
+      ],
+      "count": 105,
+      "Q_weight_fraction": 0.8279887769249691,
+      "Q_delta": 0.01050403986778865
+    }
+  ],
+  "loss_components": {
+    "reference": {
+      "E90": 0.2286145852804184,
+      "E92": 0.2251558934301138,
+      "weighted_delta": -0.0034586918503045905,
+      "E92_fraction_of_total": 0.6857699852134469
+    },
+    "overlap_total": {
+      "E90": 0.4472302567958832,
+      "E92": 0.48294912868738177,
+      "weighted_delta": 0.003205826924680162,
+      "E92_fraction_of_total": 0.13201974171721081
+    },
+    "task": {
+      "E90": 0.18084872221946716,
+      "E92": 0.1792847366631031,
+      "weighted_delta": -0.0005218757221448119,
+      "E92_fraction_of_total": 0.1822102598157874
+    }
+  },
+  "saved_cpu_gpu_drift": {
+    "mean": 2.2692800673587738e-06,
+    "case_mean_p95": 3.3541048663094816e-06,
+    "max_single_module": 7.038899343027042e-05
+  },
+  "probe_cases": [
+    {
+      "index": 329,
+      "member": [
+        "worker_85/layouts_2688.th",
+        105
+      ],
+      "n": 64,
+      "reason": "largest Q regression"
+    },
+    {
+      "index": 15,
+      "member": [
+        "worker_58/layouts_9632.th",
+        110
+      ],
+      "n": 106,
+      "reason": "known large-layout regression"
+    },
+    {
+      "index": 83,
+      "member": [
+        "worker_91/layouts_1120.th",
+        49
+      ],
+      "n": 111,
+      "reason": "largest Q regression within frozen sparse157"
+    },
+    {
+      "index": 21,
+      "member": [
+        "worker_17/layouts_6608.th",
+        68
+      ],
+      "n": 120,
+      "reason": "largest-N regression"
+    },
+    {
+      "index": 443,
+      "member": [
+        "worker_29/layouts_5040.th",
+        1
+      ],
+      "n": 36,
+      "reason": "small-layout positive control"
+    }
+  ],
+  "exactN_sparse_extra_overlap_delta": 0.006273260553214729
+}
+Verified archived cache loaded: dev_monitor500 5 cases
+{
+  "probe_status": "completed",
+  "cases": [
+    329,
+    15,
+    83,
+    21,
+    443
+  ],
+  "wall_seconds": 29.378971899976023,
+  "training_updates": 0
+}

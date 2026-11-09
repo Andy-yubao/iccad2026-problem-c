@@ -1,0 +1,75 @@
+{
+  "registered_utc": "2026-10-30T06:47:53.146360+00:00",
+  "status": "neural_contract_validated_formal_objective_under_review",
+  "user_design_requirement": "Independent neural network reads public problem and existing draft, models globally, predicts all modules simultaneously in one output; no optimization/repair loop in forward",
+  "model": {
+    "width": 192,
+    "layers": 12,
+    "heads": 4,
+    "ffn_ratio": 3,
+    "dropout": 0.05,
+    "module_attention": "all valid module pairs at every layer",
+    "ports": "all public port coordinates and full p2b weight matrix as explicit tokens; port identities preserved",
+    "geometry": "source-draft pair geometry encoded once, no intermediate coordinate update",
+    "readout": "one head only after final encoder layer; all modules emitted together",
+    "output": "unbounded learned center/logaspect residual, only per-module hard-spec/area/nonnegative decoding",
+    "no_permitted_repair_in_forward": [
+      "gradient descent",
+      "line search",
+      "frame containment repair",
+      "MIB shape averaging",
+      "local solver",
+      "autoregressive per-module output",
+      "multiple correction-network invocations"
+    ]
+  },
+  "initialization": "Warm independent attention/FFN/graph tensors from E74; zero final neural head; fresh all-corrector AdamW, E74 placer frozen",
+  "data": "Frozen v5 train16k via v6 verified prefix; original dev2000/train-dev500 unchanged; not a same-data causal comparison against E85 train32k",
+  "budget": {
+    "max_hours": 2,
+    "max_epochs": 200,
+    "batch_size": 32,
+    "global_training_prior_seconds": 38831.07569789997,
+    "global_training_cap_seconds": 64800
+  },
+  "scheduler": "Warm post-training, epoch0 baseline and no protection; patience3, same four exact LR tiers, lowest tier two full epochs before stop",
+  "preflight_train_ids": [
+    1683,
+    10027,
+    5474,
+    10140,
+    15001
+  ],
+  "evaluation": "Pure neural corrected draft: exact union N5, legacy pair load, overlap, compactness and public specs. Eventual reference/E74/neural corrected/separate postprocessed four-stage gallery; never attribute postprocessed legality to network.",
+  "primary_goal": "draft quality first; each-dev-case N5=0; user visual comparison; Q dev500 weighted <1.01 secondary",
+  "formal_training_started": false,
+  "test_read": false,
+  "source_comparison_limits": [
+    "new full-port inputs, architecture, initialization and output freedom form a combined first candidate",
+    "new corrector16k vs historical E85 32k; no isolated global-attention causal claim",
+    "zero initialization only verifies identity, not correction quality",
+    "pure neural architecture does not mathematically guarantee N5=0"
+  ],
+  "formal_objective_registered": false,
+  "legacy_fixed_loss_for_diagnostics": "First architecture study uses unchanged E85 per-source G+4I+5E+.25A in train/backward/monitor/best. Existing N5 is measured exactly as priority draft acceptance, not an unregistered new weighted Loss. Follow-up tail-objective change needs separate fixed-objective control.",
+  "objective_review": {
+    "utc": "2026-10-30T07:02:21.945160+00:00",
+    "user_question": "你确定应该沿用现有Loss吗？在后处理器训练过程中还要考虑reference吗？",
+    "decision": "Do not adopt full legacy reference imitation as E86 formal objective by default. Keep the verified neural architecture; task-aligned fixed Loss design precedes training.",
+    "reference_roles": {
+      "public_hard_specs": "always enforced by simple per-module decode, not free-coordinate labels",
+      "exact_reference_centers_shapes_neighbours_contacts": "propose removal from main task objective because of known current-task inconsistency",
+      "reference_bbox_area": "optional weak global-scale supervision, separate matched ablation rather than hard optimal-area assumption",
+      "legacy_G": "common read-only diagnostic, not a second checkpoint-selection objective"
+    },
+    "task_targets": [
+      "per-module serious-overlap tail and total collision",
+      "public boundary/grouping/MIB constraints",
+      "actual public b2b/p2b weighted wirelength",
+      "compactness under area/spec requirements"
+    ],
+    "weights": "Not registered; one training-side normalization/calibration followed by fixed weights, no dev coefficient sweep",
+    "possible_minimal_control": "Same global neural network and task objective, with/without weak reference-box supervision",
+    "test_read": false
+  }
+}

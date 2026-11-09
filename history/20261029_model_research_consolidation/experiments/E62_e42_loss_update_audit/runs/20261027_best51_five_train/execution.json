@@ -1,0 +1,37 @@
+{
+  "status": "complete",
+  "completed_utc": "2026-10-27T09:32:43.602640+00:00",
+  "total_execution_seconds": 97.85405130000436,
+  "commands": [
+    ".conda/envs/iccad2026/python.exe -u -B -m experiments.E62_e42_loss_update_audit.check",
+    ".conda/envs/iccad2026/python.exe -u -B -m experiments.E62_e42_loss_update_audit.refine",
+    ".conda/envs/iccad2026/python.exe -u -B -m experiments.E62_e42_loss_update_audit.robustness"
+  ],
+  "source_sha256": {
+    "batches.py": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92",
+    "cache.py": "0630f588ac8431d9f60e49a344045430d0b2bfac2071cc9936067fcd10a5b64e",
+    "check.py": "7c0138e59eb55ada69ee2535df6c775dd9c079e6533491b62969da0760faefd8",
+    "diagnostics.py": "9b1198569ab119107612011b9ca9d114896200e4392f55c786732381a555062f",
+    "features.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+    "io.py": "60f1e1db1b38183377ad4da89d1c258c94ce8de752c4bf9ca2c25ab9d9914439",
+    "losses.py": "f6503136dc719f6742c66b31da7ebe1076726fac38edb64fa9ae6106ab9d6557",
+    "model.py": "0d71c96c75976dc57d589d5709639291d1a30addffa8a5f0f2c53e2cb88a9089",
+    "refine.py": "1771cd8d285e6ea7a04383549d517d75d071bce0e2bb9b190152fe28c0ddd9f8",
+    "robustness.py": "ed0e53806a820628e81e7e0b3cdfebc89d11d3aa3bcb00bfc66aa5a7d49b7191",
+    "__init__.py": "c6f13e4284d36db1a1e88c2c9103b27aa8870a59a23da2476f6b57a0150a4886"
+  },
+  "actual_data": "Five selected original-v5 train members read through byte-verified v6 prefix cache",
+  "v5_registry_sha256": "1409ccf825b9c7cae1097a22e8dc4068e1283d79541c85ce54c5627d0c2b4208",
+  "v6_registry_sha256": "2fe459b0a785ffb6995dd3e5966cd47337b948b15ec4bb4d4c19ffe169e404ae",
+  "unique_training_cases": 5,
+  "formal_training_runs": 0,
+  "new_deployment_checkpoints": 0,
+  "solver_calls": 0,
+  "test_read": false,
+  "full_update_repeat_bit_exact": true,
+  "refinement_original_updates_bit_exact": true,
+  "initial_full_step_area_delta_pp": 0.02381912130267755,
+  "without_center_area_delta_pp": -0.04348364736542362,
+  "clipping_confounds_checked": true,
+  "same_five_case_stochastic_and_temporal_controls_complete": true
+}

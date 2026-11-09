@@ -1,0 +1,49 @@
+[W1025 23:33:31.000000000 Module.cpp:185] symbolizing C++ stack trace for exception; if this hangs, rerun with TORCH_DISABLE_ADDR2LINE=1...
+
+E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\site-packages\torch\autograd\graph.py:824: UserWarning: record_context_cpp is not support on non-linux non-x86_64 platforms (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\profiler\unwind\unwind.cpp:11.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[W1025 23:33:31.000000000 Module.cpp:185] symbolizing C++ stack trace for exception; if this hangs, rerun with TORCH_DISABLE_ADDR2LINE=1...
+
+Traceback (most recent call last):
+  File "E:\project\ICCAD\2026\problemC\experiments\E52_training_throughput\cuda_step.py", line 25, in __init__
+    self.values['total'].backward()
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\site-packages\torch\_tensor.py", line 648, in backward
+    torch.autograd.backward(
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\site-packages\torch\autograd\__init__.py", line 353, in backward
+    _engine_run_backward(
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\site-packages\torch\autograd\graph.py", line 824, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+RuntimeError: CUDA error: operation not permitted when stream is capturing
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Exception raised from c10_cuda_check_implementation at C:\actions-runner\_work\pytorch\pytorch\pytorch\c10\cuda\CUDAException.cpp:43 (most recent call first):
+C++ CapturedTraceback:
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "E:\project\ICCAD\2026\problemC\experiments\E52_training_throughput\profile.py", line 99, in <module>
+    if __name__=='__main__': run()
+  File "E:\project\ICCAD\2026\problemC\experiments\E52_training_throughput\profile.py", line 62, in run
+    captured = CapturedStep(model, optimizer, resident_batch)
+  File "E:\project\ICCAD\2026\problemC\experiments\E52_training_throughput\cuda_step.py", line 22, in __init__
+    with torch.cuda.graph(self.graph, stream=stream):
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\site-packages\torch\cuda\graphs.py", line 186, in __exit__
+    self.cuda_graph.capture_end()
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\site-packages\torch\cuda\graphs.py", line 84, in capture_end
+    super().capture_end()
+RuntimeError: CUDA error: operation failed due to a previous error during capture
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Exception raised from c10_cuda_check_implementation at C:\actions-runner\_work\pytorch\pytorch\pytorch\c10\cuda\CUDAException.cpp:43 (most recent call first):
+C++ CapturedTraceback:
+

@@ -1,0 +1,88 @@
+{
+  "revision": "E59.gradient_scale.v1",
+  "kappa": 0.5106773061218525,
+  "train_indices": [
+    9983,
+    11950,
+    15124,
+    3668,
+    1248
+  ],
+  "checkpoint_sha256": "12878108e9a58b8c195b314ba6586686c2a6e2796c1f4b6443e102b4db4224a6",
+  "records": [
+    {
+      "member": [
+        "worker_18/layouts_2240.th",
+        102
+      ],
+      "gradient_norms": {
+        "overlap_original": 0.566039502620697,
+        "overlap_centerline": 0.9757159352302551
+      },
+      "raw_values": {
+        "overlap_original": 0.026519184932112694,
+        "overlap_centerline": 0.03899607062339783
+      }
+    },
+    {
+      "member": [
+        "worker_15/layouts_6832.th",
+        90
+      ],
+      "gradient_norms": {
+        "overlap_original": 1.0080236196517944,
+        "overlap_centerline": 1.1186249256134033
+      },
+      "raw_values": {
+        "overlap_original": 0.05139247328042984,
+        "overlap_centerline": 0.054303690791130066
+      }
+    },
+    {
+      "member": [
+        "worker_54/layouts_1344.th",
+        104
+      ],
+      "gradient_norms": {
+        "overlap_original": 1.0187702178955078,
+        "overlap_centerline": 2.9782567024230957
+      },
+      "raw_values": {
+        "overlap_original": 0.04153413698077202,
+        "overlap_centerline": 0.05698361620306969
+      }
+    },
+    {
+      "member": [
+        "worker_48/layouts_2912.th",
+        102
+      ],
+      "gradient_norms": {
+        "overlap_original": 0.5791598558425903,
+        "overlap_centerline": 0.8445507884025574
+      },
+      "raw_values": {
+        "overlap_original": 0.012920038774609566,
+        "overlap_centerline": 0.01760035566985607
+      }
+    },
+    {
+      "member": [
+        "worker_52/layouts_7616.th",
+        7
+      ],
+      "gradient_norms": {
+        "overlap_original": 0.6349666118621826,
+        "overlap_centerline": 1.5375784635543823
+      },
+      "raw_values": {
+        "overlap_original": 0.026233162730932236,
+        "overlap_centerline": 0.039009515196084976
+      }
+    }
+  ],
+  "train_cases": 5,
+  "dev_cases": 0,
+  "test_read": false,
+  "selection": "one preregistered gradient-ratio measurement; no tuning"
+}

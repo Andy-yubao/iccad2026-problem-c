@@ -1,0 +1,47 @@
+{
+  "status": "registered_preparation_only",
+  "architecture": {
+    "width": 192,
+    "layers": 12,
+    "rectangle": true,
+    "ffn_dropout": 0.05
+  },
+  "parameters": 5829939,
+  "trainable_parameters": 5829939,
+  "training_data_size": 32000,
+  "epoch_draws": 32000,
+  "updates_per_epoch": 1000,
+  "batch_size": 32,
+  "shuffling": "every member exactly once per epoch; seed+epoch permutation; no sparse oversampling",
+  "initialization": "from scratch, all parameters including local graph layers trainable",
+  "loss": {
+    "reference": 1.0,
+    "overlap": 0.08975162861857286,
+    "task": 0.3336832108335229,
+    "shape_within_reference": 0.25
+  },
+  "no_recalibration": true,
+  "no_new_terms": true,
+  "lr_levels": [
+    0.001,
+    0.00025,
+    0.0001,
+    5e-05
+  ],
+  "scheduler_start_epoch": 15,
+  "patience": 3,
+  "meaningful_relative_delta": 0.001,
+  "meaningful_absolute_delta": 1e-05,
+  "lowest_lr_full_epochs": 2,
+  "maximum_hours": 2,
+  "maximum_epochs": 200,
+  "global_cap_seconds": 64800,
+  "preserve_all_prior_charges": true,
+  "optimizer": "fresh AdamW decay.0003; clip1; E74 joint per-module relative step cap.005 on all trainable modules",
+  "numerical_guards": "finite Loss and gradient; total<1000, preclip norm<10000, checked before Adam",
+  "execution": "prepare plus max5-case checks only; formal training not launched; command is train-only",
+  "future_evaluation": "after explicit request: unique own-Loss best; full dev2000; flash500 4 workers*2 threads; saved same100 reference/current/E74 drafts; tests sealed",
+  "comparison_limit": "Same E74 data/architecture, but new Loss, random initialization and all-trainable optimization differ from old E42-warm-start graph-frozen E74. Not a pure isolated Loss ablation. 2h is a resource ceiling, not a convergence claim.",
+  "test_read": false,
+  "optimizer_preflight_reason": "Plain first step changed same-panel Loss15.582273->91.798668; retain original E74 displacement protection for from-scratch training"
+}

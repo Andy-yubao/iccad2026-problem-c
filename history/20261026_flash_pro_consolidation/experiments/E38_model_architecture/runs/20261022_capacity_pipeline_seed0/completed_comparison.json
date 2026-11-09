@@ -1,0 +1,2919 @@
+{
+  "captured_utc": "2026-10-22T18:52:04.938061+00:00",
+  "completed_arms": {
+    "base96x4": {
+      "training": {
+        "status": "early_stop",
+        "elapsed_seconds": 2060.441827200004,
+        "steps": 25500,
+        "epochs": 51,
+        "best_epoch": 51,
+        "best_proxy": 0.5772945914268494,
+        "full_dev_complete": false,
+        "postprocessing_calls": 0,
+        "test_read": false,
+        "tail_test_read": false,
+        "implementation_check": false,
+        "final_postprocessed_Q": "not run; one frozen best assessment is a separate stage"
+      },
+      "frozen": {
+        "checkpoint": "experiments/E38_model_architecture/runs/20261022_capacity_base96x4_seed0/checkpoints/best.pt",
+        "checkpoint_sha256": "995897ec7a3d3cb05d0d697bbd6ce3f28fb347d6b1437961f85cc91ec9f40842",
+        "model_config": {
+          "width": 96,
+          "layers": 4
+        },
+        "registry_sha256": "1409ccf825b9c7cae1097a22e8dc4068e1283d79541c85ce54c5627d0c2b4208",
+        "sources": {
+          "datasets/__init__.py": "03c36f364366be6c8a5091d6bd3dbec0788d7871747acdeac5fa89d4974cec21",
+          "datasets/cases.py": "1fd51addaaae38164c22f1946712665beebac700054db4bb07ed4f9d44e0b168",
+          "datasets/paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+          "datasets/public_member_inputs.py": "6d525fa963d098051648b01d6bc75fb8a032dd5746529fb3c750afe2b5e8bb09",
+          "datasets/quality_layouts.py": "94f374fa9562770a9c7deadb645d73c3af1fc1a20251f98f1dce4ac575820191",
+          "datasets/reference_layouts.py": "f6aeeba298a163b7d506c67e3fba024cd3a191c3aae1116fc6b5d294431db9b5",
+          "datasets/worksets.py": "013087151ab8e1195d7d2757e777839f521486425eeaff4c45fed4e370df233c",
+          "docs/protocol.md": "f31a4e394df17e816b108e8cff21e7459c79dc50098c22fdf032688a85e106ec",
+          "experiments/E38_model_architecture/__init__.py": "5ba93f9e1f88e569fc9974a901f962d585b3b17a4822f1dc0ddb9b2d3c6ee3de",
+          "experiments/E38_model_architecture/analyze.py": "7920e111a2a3fde175d7996ea669f31c730ec4f102f23e400a55555551672ee5",
+          "experiments/E38_model_architecture/arms.py": "b15f53120396b4fafa735ba5bec1acbb87e2cee93c07d1d6179dd233c98e2ff3",
+          "experiments/E38_model_architecture/backend/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "experiments/E38_model_architecture/backend/conic_geometry.py": "0b1a0295426c37a61f4abc13946b5dadf2c6f107375a02890e90ffe404be40e4",
+          "experiments/E38_model_architecture/backend/frozen/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "experiments/E38_model_architecture/backend/frozen/canonical_geometry.py": "04924bc4150f82862ed4da6cb67fc08779bbf98fcf24e24abd41b1c64d4e2521",
+          "experiments/E38_model_architecture/backend/frozen/feasible.py": "9cfe70894d80fbe54ccaa1c3de60ef4ab111ac9b4472286d1ae6a0c5a1fdc756",
+          "experiments/E38_model_architecture/backend/frozen/global_refine.py": "088021ede3290fcd6cf60726a054f7958309e4267d4353a699b80697078ab716",
+          "experiments/E38_model_architecture/backend/frozen/packing.py": "3c0500b7fee120807e6bd3fa8e9f115e476782af1a3e7620859c6651a089ef30",
+          "experiments/E38_model_architecture/backend/frozen/postprocess.py": "da0e1572a822a589968a19e67e2d36dd5133c7d17b7ea9443bd743ee4653a272",
+          "experiments/E38_model_architecture/backend/frozen/shape_lp.py": "2988df542aa80602f091963e1506da8085152ea0eca4846f6dc6c0a25ef13c94",
+          "experiments/E38_model_architecture/backend/frozen/solver.py": "cb5b0b6af3b8511d8a21b14178be188e31c61b58cba065c8c23847c2f9200325",
+          "experiments/E38_model_architecture/backend/frozen/topology_mip.py": "e392857196dbde4b3c1f3668862c9779e9c686f17ca89a820078421573b46df5",
+          "experiments/E38_model_architecture/backend/guard.py": "4e4adfb1dedede451a4d530103681f97ca6c05516e2dbe96b84d63c136faa87f",
+          "experiments/E38_model_architecture/backend/observe.py": "6fb401b9a7ebccec7063de8e9feeaf28bee310ac8a39b221b78d40e438432ec3",
+          "experiments/E38_model_architecture/backend/optimizer.py": "6373f5e7477f528e09e599c9a478b712bfbeb0ec29037bed1595d8c82af2ca36",
+          "experiments/E38_model_architecture/backend/reduction.py": "4587a5c9c486c59719e76ef64396398edb92e6011d8c0c0cd4f538cad52c4b50",
+          "experiments/E38_model_architecture/backend/rescue.py": "b928986f58fb3215140fe05acc36ddde92ce7aad99197fb2a975b7743a8c2e59",
+          "experiments/E38_model_architecture/backend/robust.py": "ceea8f18d0e2979279f4cf711b7702436912fbae77095d9559e603401176c99b",
+          "experiments/E38_model_architecture/backend/selection.py": "c21486a437531fed9a6717bcde6ce2ca062153ea717f9ae135b5b72e05500350",
+          "experiments/E38_model_architecture/backend/stable.py": "dc5a1e0afbec79e33f1ca6603a7d3186045a52ccc543ac756b508dbf8159bcce",
+          "experiments/E38_model_architecture/batches.py": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92",
+          "experiments/E38_model_architecture/cache.py": "a527b8f098383b24ce20e7f1b09b740a4524ba731ac04ed3342b4a1e127936d0",
+          "experiments/E38_model_architecture/canonical.py": "57a3738b35d16a091a250f4bac36bdcef5f7edeec6e084e103ecb6e9967eac2d",
+          "experiments/E38_model_architecture/canonical_native.py": "469ed606532daa9750bb9dd6c98e0f79c27e246bf79ca4e89d483f0b6920e5eb",
+          "experiments/E38_model_architecture/canonical_py.py": "b5b99c1f77756aa318fe5cb0e7fa82935844752b4fa815ab80367adb34e00195",
+          "experiments/E38_model_architecture/certify_polish.py": "7148ff8dd958d5b8ecd2adbcd29ead999904b185ad12c77ffcdc0e7ec1f31462",
+          "experiments/E38_model_architecture/check.py": "b4a54efaefceb99c2989f9a6e21f8f2f49fc8a2817ddd970bef6098ea0555dac",
+          "experiments/E38_model_architecture/data.py": "f42fed522beb7e3c69c43ec991d257245eafc48faeb7800316dd4e4fbd5b28cb",
+          "experiments/E38_model_architecture/diagnostics.py": "095bd88919541c7247d1f105a1f371be63d9287b755b3d3972e2b1fa55f6d4e0",
+          "experiments/E38_model_architecture/fast_geometry.py": "3c15f72702b0581d8ee1a68fa321543837c1e1322ead00eb4d259c90125b1377",
+          "experiments/E38_model_architecture/features.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+          "experiments/E38_model_architecture/final.py": "2ad586307d148054c6ad260b17644191d860bd452af3a56e753e5aed8aec828c",
+          "experiments/E38_model_architecture/freeze.py": "0eee5b40d537abc4fb4880a8173d7b92e39e3dbfaefdac8b30939289adf79227",
+          "experiments/E38_model_architecture/inference.py": "b202f111d9b5feeb5f3ccbc473fb29e732d8088c5fb43472ab7d49f445378838",
+          "experiments/E38_model_architecture/io.py": "2291a69c6306f5629a2f03dd314fc699d02ea58355f0967a37a9c888e62ec038",
+          "experiments/E38_model_architecture/launch.ps1": "fbdad5430b9325b62f16e2aedb8447c2561ed6bec9b8ad62a44ec15c08509c66",
+          "experiments/E38_model_architecture/legal_seed.py": "c5adf19f570678ba721dd1bc7ca888d2af41cf8148b68a3320903ca82083bfc9",
+          "experiments/E38_model_architecture/loss.py": "14b18ef89e62f731c23ebf0efa9ca98829fecc7ecf9b0b721782df8c37f62771",
+          "experiments/E38_model_architecture/losses.py": "f6503136dc719f6742c66b31da7ebe1076726fac38edb64fa9ae6106ab9d6557",
+          "experiments/E38_model_architecture/model.py": "b8a85ffdc181f67c89b30ac7a8b79e26170803e4c5ddb18fa8d47e33ac3be5ab",
+          "experiments/E38_model_architecture/occupancy.py": "ca5c7fa041d427d88594afac3fbaa5eaf71641367cf42128ba2a1b47a043bdc0",
+          "experiments/E38_model_architecture/pipeline.py": "198e8f7e3ba69bfe4c441a7cea3b80843e8cec09bd22d26773fa99121875a197",
+          "experiments/E38_model_architecture/projection.py": "591f9bfbdf099b12dd9cd36f936e7c1f267b86456c67958c3957aa0ddc9d9028",
+          "experiments/E38_model_architecture/provenance.json": "abe8b7592587b9ccaba8a7edff4f70c18b39868ef0854244574a8de3a94eb2c6",
+          "experiments/E38_model_architecture/requirements-native.txt": "eddfdc929bf37a85b9b17d7c68af80a8ec5138dd8585c1afe0efc312435473b6",
+          "experiments/E38_model_architecture/solver.py": "13efe19cdb44ebd13e36d4d8d5ce44b0f9801f469e070981bc8be3354e9ecef6",
+          "experiments/E38_model_architecture/train.py": "0100e00de9b81238ca6edfcbbbbf2db81a3be0a5a83c04c8d5937168d9b752cd",
+          "scoring/__init__.py": "933bf2be947e20bae164511f26afaa84c2f331d0dbdebc417d235db8358a9247",
+          "scoring/checks.py": "738f6b57e20dce58516f3f10d83689f8df273a84a02b2dce99c6ccc1f904763a",
+          "scoring/evaluation.py": "356e0d1c788c6f25154b33fb1c2455388317d2cc0dd96ca50d7357c58612c611",
+          "scoring/official.py": "478fbc228a56ec4b336b5d8687a44b22b749f30aae09372f57c08e7124270e03",
+          "third_party/FloorSet/cost.py": "b60561556f79aa41c196c8fcaddea57840aab41059c76dbc3f80b4fdde6b48c3",
+          "third_party/FloorSet/iccad2026contest/iccad2026_evaluate.py": "64db37865b42baf11add62bdbf035690dca086cd4be7b5b4e58db756f20d8498",
+          "third_party/FloorSet/utils.py": "9299d9257f5bd932001896307f2296b51cc5567f44150db5514f357ed93c121e"
+        },
+        "baseline": false,
+        "count": 500,
+        "panel": "v5 dev_monitor500",
+        "workers": 2,
+        "threads_per_worker": 2,
+        "selection": "E17 arithmetic geometry+occupancy; no terminal-Q selection",
+        "implementation_check": false,
+        "test_read": false
+      },
+      "full_dev": {
+        "total": 0.4223387305736542,
+        "mse": 0.06168982768058777,
+        "center_mse": 0.0021713267471641304,
+        "shape_mse": 0.19362554800510406,
+        "center_local": 0.20440669476985932,
+        "shape": 0.19362554800510406,
+        "relative_local": 0.26164381456375124,
+        "overlap": 0.10126113951206207,
+        "contact": 0.10011391228437423,
+        "boundary": 0.009050204493105412,
+        "mib": 0.011403603069484234,
+        "bbox": 0.0002425779040204361,
+        "local": 0.31822403621673584,
+        "geometry": 0.4223387327194214,
+        "overlap_area": 0.10749902355670929,
+        "crowding": 0.01775983162969351,
+        "void": 0.15834633958339692,
+        "compactness": 0.0015991779817268253,
+        "occupancy": 0.1517654438018799,
+        "repair": 0.5741041674613953,
+        "supervision": 0.31822403621673584,
+        "quality_proxy": 0.4223387327194214,
+        "selection_proxy": 0.5741041674613953,
+        "batched_inference_seconds_per_case": 0.008520780400082003,
+        "count": 2000,
+        "raw_hard_legal": 0,
+        "raw_hard_legal_rate": 0.0,
+        "draft_diagnostics": {
+          "overlap_pairs": {
+            "mean": 81.7065,
+            "p95": 136.0,
+            "max": 166.0
+          },
+          "overlap_area_fraction": {
+            "mean": 0.10749903705550946,
+            "p95": 0.1738894892163812,
+            "max": 0.25656745932120134
+          },
+          "penetration_squared_per_block": {
+            "mean": 0.048957124707651366,
+            "p95": 0.0943731065669147,
+            "max": 0.15569553301986166
+          },
+          "max_local_penetration": {
+            "mean": 0.5925741081528463,
+            "p95": 0.8164772643328889,
+            "max": 0.9285505169457845
+          },
+          "largest_conflict_cluster": {
+            "mean": 58.73,
+            "p95": 102.0,
+            "max": 114.0
+          },
+          "largest_conflict_cluster_fraction": {
+            "mean": 0.8316770626193345,
+            "p95": 0.9643015170670038,
+            "max": 1.0
+          }
+        }
+      },
+      "best_monitor": {
+        "total": 0.42415821719169616,
+        "mse": 0.06232207018136978,
+        "center_mse": 0.0021594496183097362,
+        "shape_mse": 0.1955716713666916,
+        "center_local": 0.2037040797472,
+        "shape": 0.1955716713666916,
+        "relative_local": 0.2602557153701782,
+        "overlap": 0.1014650439620018,
+        "contact": 0.10474868911504745,
+        "boundary": 0.008724971495568752,
+        "mib": 0.011871064610779285,
+        "bbox": 0.00022063857119064778,
+        "local": 0.31766092920303346,
+        "geometry": 0.42415821719169616,
+        "overlap_area": 0.10874034690856933,
+        "crowding": 0.017281166091561318,
+        "void": 0.15935745561122894,
+        "compactness": 0.0015758864907547832,
+        "occupancy": 0.1531363831758499,
+        "repair": 0.5772945914268494,
+        "supervision": 0.31766092920303346,
+        "quality_proxy": 0.42415821719169616,
+        "count": 500,
+        "selection_proxy": 0.5772945914268494,
+        "raw_hard_legal": 0,
+        "raw_hard_legal_rate": 0.0,
+        "batched_inference_seconds_per_case": 0.0007174915994983167,
+        "draft_diagnostics": {
+          "overlap_pairs": {
+            "mean": 81.476,
+            "p95": 136.0,
+            "max": 166.0
+          },
+          "overlap_area_fraction": {
+            "mean": 0.10874031786928956,
+            "p95": 0.17335764482157073,
+            "max": 0.25656745932120134
+          },
+          "penetration_squared_per_block": {
+            "mean": 0.04905712960725509,
+            "p95": 0.09592305348802777,
+            "max": 0.14860911113731554
+          },
+          "max_local_penetration": {
+            "mean": 0.5943610339138813,
+            "p95": 0.8103411460539419,
+            "max": 0.9274456241006238
+          },
+          "largest_conflict_cluster": {
+            "mean": 58.274,
+            "p95": 103.0,
+            "max": 111.0
+          },
+          "largest_conflict_cluster_fraction": {
+            "mean": 0.8276362494813474,
+            "p95": 0.9629629629629629,
+            "max": 1.0
+          }
+        }
+      },
+      "best_train_monitor": {
+        "total": 0.3828324036598206,
+        "mse": 0.05935012799501419,
+        "center_mse": 0.0016596280671656131,
+        "shape_mse": 0.18706388223171233,
+        "center_local": 0.18779001224040986,
+        "shape": 0.18706388223171233,
+        "relative_local": 0.24565746641159059,
+        "overlap": 0.09253389549255371,
+        "contact": 0.07483171534538269,
+        "boundary": 0.007909866452217102,
+        "mib": 0.011812680758535862,
+        "bbox": 0.00020514058391563595,
+        "local": 0.2959703538417816,
+        "geometry": 0.3828324036598206,
+        "overlap_area": 0.10486692851781845,
+        "crowding": 0.013681230857968331,
+        "void": 0.15566352450847626,
+        "compactness": 0.0014933189544826745,
+        "occupancy": 0.14742711436748504,
+        "repair": 0.530259515285492,
+        "supervision": 0.2959703538417816,
+        "quality_proxy": 0.3828324036598206,
+        "count": 500,
+        "selection_proxy": 0.530259515285492,
+        "raw_hard_legal": 0,
+        "raw_hard_legal_rate": 0.0,
+        "batched_inference_seconds_per_case": 0.0007035823995247484,
+        "draft_diagnostics": {
+          "overlap_pairs": {
+            "mean": 82.13,
+            "p95": 138.0,
+            "max": 153.0
+          },
+          "overlap_area_fraction": {
+            "mean": 0.10486693523639441,
+            "p95": 0.16224101011114142,
+            "max": 0.22740990910449493
+          },
+          "penetration_squared_per_block": {
+            "mean": 0.0452422147480759,
+            "p95": 0.08210833852315434,
+            "max": 0.1270933915532371
+          },
+          "max_local_penetration": {
+            "mean": 0.5646075114538606,
+            "p95": 0.7875686041719745,
+            "max": 0.9524054818579477
+          },
+          "largest_conflict_cluster": {
+            "mean": 58.56,
+            "p95": 101.0,
+            "max": 114.0
+          },
+          "largest_conflict_cluster_fraction": {
+            "mean": 0.8331559924968313,
+            "p95": 0.9646475434848947,
+            "max": 1.0
+          }
+        }
+      },
+      "common_epoch42": {
+        "epoch": 42,
+        "train_proxy": 0.537148708820343,
+        "dev_proxy": 0.5795454535484313
+      },
+      "terminal": {
+        "count": 500,
+        "hard_legal": 500,
+        "mean_Q": 1.0648696069314374,
+        "weighted_Q": 1.0404011225363554,
+        "p95_Q": 1.2289572353521911,
+        "max_Q": 2.525082328162355,
+        "worst5pct_mean_Q": 1.3451911574313695,
+        "seconds_mean": 0.26438817000109704,
+        "seconds_p95": 0.6762826449237763,
+        "row_fallbacks": 0,
+        "rescue_cases": 11,
+        "errors": 0,
+        "hpwl_gap_mean_returned": 0.0275451942685038,
+        "area_gap_mean_returned": 0.034369770406400844,
+        "boundary_violations_mean_returned": 0.35,
+        "grouping_violations_mean_returned": 0.284,
+        "mib_violations_mean_returned": 0.002,
+        "inference_seconds_mean_returned": 0.02165778499748558,
+        "postprocess_seconds_mean_returned": 0.24259123619901948,
+        "mean_center_move_local_mean_returned": 0.5148989896918389,
+        "max_center_move_local_mean_returned": 2.124124365868385
+      },
+      "full_dev_relative_vs_control": {
+        "total": 0.0,
+        "mse": 0.0,
+        "center_mse": 0.0,
+        "shape_mse": 0.0,
+        "center_local": 0.0,
+        "shape": 0.0,
+        "relative_local": 0.0,
+        "overlap": 0.0,
+        "contact": 0.0,
+        "boundary": 0.0,
+        "mib": 0.0,
+        "bbox": 0.0,
+        "local": 0.0,
+        "geometry": 0.0,
+        "overlap_area": 0.0,
+        "crowding": 0.0,
+        "void": 0.0,
+        "compactness": 0.0,
+        "occupancy": 0.0,
+        "repair": 0.0,
+        "supervision": 0.0,
+        "quality_proxy": 0.0,
+        "selection_proxy": 0.0,
+        "batched_inference_seconds_per_case": 0.0,
+        "count": 0.0
+      },
+      "raw_draft_relative_vs_control": {
+        "overlap_pairs": {
+          "mean": 0.0,
+          "p95": 0.0,
+          "max": 0.0
+        },
+        "overlap_area_fraction": {
+          "mean": 0.0,
+          "p95": 0.0,
+          "max": 0.0
+        },
+        "penetration_squared_per_block": {
+          "mean": 0.0,
+          "p95": 0.0,
+          "max": 0.0
+        },
+        "max_local_penetration": {
+          "mean": 0.0,
+          "p95": 0.0,
+          "max": 0.0
+        },
+        "largest_conflict_cluster": {
+          "mean": 0.0,
+          "p95": 0.0,
+          "max": 0.0
+        },
+        "largest_conflict_cluster_fraction": {
+          "mean": 0.0,
+          "p95": 0.0,
+          "max": 0.0
+        }
+      },
+      "paired_vs_retrained_control": {
+        "weighted_Q_delta": 0.0,
+        "case_bootstrap95_Q_delta": [
+          0.0,
+          0.0
+        ],
+        "mean_seconds_delta": 0.0,
+        "case_bootstrap95_mean_seconds_delta": [
+          0.0,
+          0.0
+        ],
+        "Q_better_equal_worse": [
+          0,
+          500,
+          0
+        ],
+        "largest_absolute_weighted_contributions": [
+          {
+            "index": 499,
+            "member": [
+              "worker_3/layouts_1456.th",
+              100
+            ],
+            "n": 32,
+            "Q_delta": 0.0,
+            "weighted_contribution": 0.0
+          },
+          {
+            "index": 170,
+            "member": [
+              "worker_92/layouts_3920.th",
+              62
+            ],
+            "n": 81,
+            "Q_delta": 0.0,
+            "weighted_contribution": 0.0
+          },
+          {
+            "index": 157,
+            "member": [
+              "worker_43/layouts_6720.th",
+              37
+            ],
+            "n": 39,
+            "Q_delta": 0.0,
+            "weighted_contribution": 0.0
+          },
+          {
+            "index": 158,
+            "member": [
+              "worker_68/layouts_8736.th",
+              100
+            ],
+            "n": 111,
+            "Q_delta": 0.0,
+            "weighted_contribution": 0.0
+          },
+          {
+            "index": 159,
+            "member": [
+              "worker_43/layouts_6720.th",
+              96
+            ],
+            "n": 39,
+            "Q_delta": 0.0,
+            "weighted_contribution": 0.0
+          }
+        ],
+        "uncertainty_limit": "Paired case bootstrap measures case sampling only, not timed-solver run variability or training-seed uncertainty."
+      },
+      "paired_vs_initial_E25": {
+        "weighted_Q_delta": -0.02076773225728381,
+        "case_bootstrap95_Q_delta": [
+          -0.06298728774142298,
+          0.0003530330734461498
+        ],
+        "mean_seconds_delta": -0.009421248602215201,
+        "case_bootstrap95_mean_seconds_delta": [
+          -0.022582806781725955,
+          0.0009651327467872653
+        ],
+        "Q_better_equal_worse": [
+          71,
+          349,
+          80
+        ],
+        "largest_absolute_weighted_contributions": [
+          {
+            "index": 21,
+            "member": [
+              "worker_17/layouts_6608.th",
+              68
+            ],
+            "n": 120,
+            "Q_delta": -1.1586503109335826,
+            "weighted_contribution": -0.018567641760571008
+          },
+          {
+            "index": 398,
+            "member": [
+              "worker_63/layouts_8624.th",
+              63
+            ],
+            "n": 114,
+            "Q_delta": -0.23824413153386614,
+            "weighted_contribution": -0.0023156842227920593
+          },
+          {
+            "index": 401,
+            "member": [
+              "worker_5/layouts_0.th",
+              27
+            ],
+            "n": 85,
+            "Q_delta": 0.17138242486028532,
+            "weighted_contribution": 0.0001486203946669741
+          },
+          {
+            "index": 241,
+            "member": [
+              "worker_32/layouts_0.th",
+              29
+            ],
+            "n": 89,
+            "Q_delta": 0.10997284109557448,
+            "weighted_contribution": 0.00013309520185954393
+          },
+          {
+            "index": 45,
+            "member": [
+              "worker_34/layouts_5264.th",
+              29
+            ],
+            "n": 99,
+            "Q_delta": -0.04183304957664413,
+            "weighted_contribution": -0.00011649533853391728
+          }
+        ],
+        "uncertainty_limit": "Paired case bootstrap measures case sampling only, not timed-solver run variability or training-seed uncertainty."
+      },
+      "paired_vs_completed_arms": {
+        "deep96x8": {
+          "weighted_Q_delta": 0.003570805326064697,
+          "case_bootstrap95_Q_delta": [
+            -0.00425887005660627,
+            0.01211105076576008
+          ],
+          "mean_seconds_delta": 0.008662481206236408,
+          "case_bootstrap95_mean_seconds_delta": [
+            -0.005149774958123453,
+            0.02384667236312524
+          ],
+          "Q_better_equal_worse": [
+            181,
+            36,
+            283
+          ],
+          "largest_absolute_weighted_contributions": [
+            {
+              "index": 21,
+              "member": [
+                "worker_17/layouts_6608.th",
+                68
+              ],
+              "n": 120,
+              "Q_delta": 0.12941684438026435,
+              "weighted_contribution": 0.002073935148129487
+            },
+            {
+              "index": 456,
+              "member": [
+                "worker_65/layouts_6720.th",
+                90
+              ],
+              "n": 116,
+              "Q_delta": 0.13765180997243642,
+              "weighted_contribution": 0.0015805981337201854
+            },
+            {
+              "index": 37,
+              "member": [
+                "worker_13/layouts_6160.th",
+                85
+              ],
+              "n": 115,
+              "Q_delta": 0.14268966207177525,
+              "weighted_contribution": 0.0015074427977492244
+            },
+            {
+              "index": 447,
+              "member": [
+                "worker_4/layouts_5264.th",
+                107
+              ],
+              "n": 119,
+              "Q_delta": -0.09653635029631924,
+              "weighted_contribution": -0.0014233248592664769
+            },
+            {
+              "index": 165,
+              "member": [
+                "worker_4/layouts_5264.th",
+                87
+              ],
+              "n": 119,
+              "Q_delta": -0.0693562245034165,
+              "weighted_contribution": -0.0010225830806485684
+            }
+          ],
+          "uncertainty_limit": "Paired case bootstrap measures case sampling only, not timed-solver run variability or training-seed uncertainty."
+        },
+        "deep96x12": {
+          "weighted_Q_delta": 0.003617281154407719,
+          "case_bootstrap95_Q_delta": [
+            -0.009650284890377017,
+            0.01577976232199831
+          ],
+          "mean_seconds_delta": -0.008610452000284567,
+          "case_bootstrap95_mean_seconds_delta": [
+            -0.026180429601960348,
+            0.010275933453778268
+          ],
+          "Q_better_equal_worse": [
+            152,
+            35,
+            313
+          ],
+          "largest_absolute_weighted_contributions": [
+            {
+              "index": 462,
+              "member": [
+                "worker_17/layouts_2576.th",
+                59
+              ],
+              "n": 117,
+              "Q_delta": -0.3703210079163963,
+              "weighted_contribution": -0.004621778151163672
+            },
+            {
+              "index": 37,
+              "member": [
+                "worker_13/layouts_6160.th",
+                85
+              ],
+              "n": 115,
+              "Q_delta": 0.2680453705669439,
+              "weighted_contribution": 0.0028317613025666227
+            },
+            {
+              "index": 83,
+              "member": [
+                "worker_91/layouts_1120.th",
+                49
+              ],
+              "n": 111,
+              "Q_delta": -0.29245014716103634,
+              "weighted_contribution": -0.002213784532026643
+            },
+            {
+              "index": 447,
+              "member": [
+                "worker_4/layouts_5264.th",
+                107
+              ],
+              "n": 119,
+              "Q_delta": 0.10812693283531383,
+              "weighted_contribution": 0.0015942155570242932
+            },
+            {
+              "index": 456,
+              "member": [
+                "worker_65/layouts_6720.th",
+                90
+              ],
+              "n": 116,
+              "Q_delta": 0.11103162009400958,
+              "weighted_contribution": 0.0012749296325247144
+            }
+          ],
+          "uncertainty_limit": "Paired case bootstrap measures case sampling only, not timed-solver run variability or training-seed uncertainty."
+        },
+        "wide160x4": {
+          "weighted_Q_delta": -0.00391191607215544,
+          "case_bootstrap95_Q_delta": [
+            -0.01719048143601755,
+            0.007860275837467977
+          ],
+          "mean_seconds_delta": -0.005498709797626361,
+          "case_bootstrap95_mean_seconds_delta": [
+            -0.026059388818033036,
+            0.013937449708004708
+          ],
+          "Q_better_equal_worse": [
+            236,
+            27,
+            237
+          ],
+          "largest_absolute_weighted_contributions": [
+            {
+              "index": 392,
+              "member": [
+                "worker_71/layouts_5600.th",
+                49
+              ],
+              "n": 117,
+              "Q_delta": -0.33231537913492026,
+              "weighted_contribution": -0.004147450254640127
+            },
+            {
+              "index": 37,
+              "member": [
+                "worker_13/layouts_6160.th",
+                85
+              ],
+              "n": 115,
+              "Q_delta": 0.2670136792212452,
+              "weighted_contribution": 0.0028208620147976786
+            },
+            {
+              "index": 21,
+              "member": [
+                "worker_17/layouts_6608.th",
+                68
+              ],
+              "n": 120,
+              "Q_delta": 0.09501451688703932,
+              "weighted_contribution": 0.0015226298176114672
+            },
+            {
+              "index": 398,
+              "member": [
+                "worker_63/layouts_8624.th",
+                63
+              ],
+              "n": 114,
+              "Q_delta": -0.1322406040715054,
+              "weighted_contribution": -0.001285351620160879
+            },
+            {
+              "index": 456,
+              "member": [
+                "worker_65/layouts_6720.th",
+                90
+              ],
+              "n": 116,
+              "Q_delta": 0.10996150077723077,
+              "weighted_contribution": 0.0012626419001999655
+            }
+          ],
+          "uncertainty_limit": "Paired case bootstrap measures case sampling only, not timed-solver run variability or training-seed uncertainty."
+        }
+      }
+    },
+    "deep96x8": {
+      "training": {
+        "status": "early_stop",
+        "elapsed_seconds": 2529.5600101000164,
+        "steps": 21500,
+        "epochs": 43,
+        "best_epoch": 40,
+        "best_proxy": 0.5242584655284882,
+        "full_dev_complete": false,
+        "postprocessing_calls": 0,
+        "test_read": false,
+        "tail_test_read": false,
+        "implementation_check": false,
+        "final_postprocessed_Q": "not run; one frozen best assessment is a separate stage"
+      },
+      "frozen": {
+        "checkpoint": "experiments/E38_model_architecture/runs/20261022_capacity_deep96x8_seed0/checkpoints/best.pt",
+        "checkpoint_sha256": "d41434ac1f365e625a467ac1230f51be65ad8ef1aff23f6b11b664bd05b84619",
+        "model_config": {
+          "width": 96,
+          "layers": 8
+        },
+        "registry_sha256": "1409ccf825b9c7cae1097a22e8dc4068e1283d79541c85ce54c5627d0c2b4208",
+        "sources": {
+          "datasets/__init__.py": "03c36f364366be6c8a5091d6bd3dbec0788d7871747acdeac5fa89d4974cec21",
+          "datasets/cases.py": "1fd51addaaae38164c22f1946712665beebac700054db4bb07ed4f9d44e0b168",
+          "datasets/paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+          "datasets/public_member_inputs.py": "6d525fa963d098051648b01d6bc75fb8a032dd5746529fb3c750afe2b5e8bb09",
+          "datasets/quality_layouts.py": "94f374fa9562770a9c7deadb645d73c3af1fc1a20251f98f1dce4ac575820191",
+          "datasets/reference_layouts.py": "f6aeeba298a163b7d506c67e3fba024cd3a191c3aae1116fc6b5d294431db9b5",
+          "datasets/worksets.py": "013087151ab8e1195d7d2757e777839f521486425eeaff4c45fed4e370df233c",
+          "docs/protocol.md": "f31a4e394df17e816b108e8cff21e7459c79dc50098c22fdf032688a85e106ec",
+          "experiments/E38_model_architecture/__init__.py": "5ba93f9e1f88e569fc9974a901f962d585b3b17a4822f1dc0ddb9b2d3c6ee3de",
+          "experiments/E38_model_architecture/analyze.py": "7920e111a2a3fde175d7996ea669f31c730ec4f102f23e400a55555551672ee5",
+          "experiments/E38_model_architecture/arms.py": "b15f53120396b4fafa735ba5bec1acbb87e2cee93c07d1d6179dd233c98e2ff3",
+          "experiments/E38_model_architecture/backend/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "experiments/E38_model_architecture/backend/conic_geometry.py": "0b1a0295426c37a61f4abc13946b5dadf2c6f107375a02890e90ffe404be40e4",
+          "experiments/E38_model_architecture/backend/frozen/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "experiments/E38_model_architecture/backend/frozen/canonical_geometry.py": "04924bc4150f82862ed4da6cb67fc08779bbf98fcf24e24abd41b1c64d4e2521",
+          "experiments/E38_model_architecture/backend/frozen/feasible.py": "9cfe70894d80fbe54ccaa1c3de60ef4ab111ac9b4472286d1ae6a0c5a1fdc756",
+          "experiments/E38_model_architecture/backend/frozen/global_refine.py": "088021ede3290fcd6cf60726a054f7958309e4267d4353a699b80697078ab716",
+          "experiments/E38_model_architecture/backend/frozen/packing.py": "3c0500b7fee120807e6bd3fa8e9f115e476782af1a3e7620859c6651a089ef30",
+          "experiments/E38_model_architecture/backend/frozen/postprocess.py": "da0e1572a822a589968a19e67e2d36dd5133c7d17b7ea9443bd743ee4653a272",
+          "experiments/E38_model_architecture/backend/frozen/shape_lp.py": "2988df542aa80602f091963e1506da8085152ea0eca4846f6dc6c0a25ef13c94",
+          "experiments/E38_model_architecture/backend/frozen/solver.py": "cb5b0b6af3b8511d8a21b14178be188e31c61b58cba065c8c23847c2f9200325",
+          "experiments/E38_model_architecture/backend/frozen/topology_mip.py": "e392857196dbde4b3c1f3668862c9779e9c686f17ca89a820078421573b46df5",
+          "experiments/E38_model_architecture/backend/guard.py": "4e4adfb1dedede451a4d530103681f97ca6c05516e2dbe96b84d63c136faa87f",
+          "experiments/E38_model_architecture/backend/observe.py": "6fb401b9a7ebccec7063de8e9feeaf28bee310ac8a39b221b78d40e438432ec3",
+          "experiments/E38_model_architecture/backend/optimizer.py": "6373f5e7477f528e09e599c9a478b712bfbeb0ec29037bed1595d8c82af2ca36",
+          "experiments/E38_model_architecture/backend/reduction.py": "4587a5c9c486c59719e76ef64396398edb92e6011d8c0c0cd4f538cad52c4b50",
+          "experiments/E38_model_architecture/backend/rescue.py": "b928986f58fb3215140fe05acc36ddde92ce7aad99197fb2a975b7743a8c2e59",
+          "experiments/E38_model_architecture/backend/robust.py": "ceea8f18d0e2979279f4cf711b7702436912fbae77095d9559e603401176c99b",
+          "experiments/E38_model_architecture/backend/selection.py": "c21486a437531fed9a6717bcde6ce2ca062153ea717f9ae135b5b72e05500350",
+          "experiments/E38_model_architecture/backend/stable.py": "dc5a1e0afbec79e33f1ca6603a7d3186045a52ccc543ac756b508dbf8159bcce",
+          "experiments/E38_model_architecture/batches.py": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92",
+          "experiments/E38_model_architecture/cache.py": "a527b8f098383b24ce20e7f1b09b740a4524ba731ac04ed3342b4a1e127936d0",
+          "experiments/E38_model_architecture/canonical.py": "57a3738b35d16a091a250f4bac36bdcef5f7edeec6e084e103ecb6e9967eac2d",
+          "experiments/E38_model_architecture/canonical_native.py": "469ed606532daa9750bb9dd6c98e0f79c27e246bf79ca4e89d483f0b6920e5eb",
+          "experiments/E38_model_architecture/canonical_py.py": "b5b99c1f77756aa318fe5cb0e7fa82935844752b4fa815ab80367adb34e00195",
+          "experiments/E38_model_architecture/certify_polish.py": "7148ff8dd958d5b8ecd2adbcd29ead999904b185ad12c77ffcdc0e7ec1f31462",
+          "experiments/E38_model_architecture/check.py": "b4a54efaefceb99c2989f9a6e21f8f2f49fc8a2817ddd970bef6098ea0555dac",
+          "experiments/E38_model_architecture/data.py": "f42fed522beb7e3c69c43ec991d257245eafc48faeb7800316dd4e4fbd5b28cb",
+          "experiments/E38_model_architecture/diagnostics.py": "095bd88919541c7247d1f105a1f371be63d9287b755b3d3972e2b1fa55f6d4e0",
+          "experiments/E38_model_architecture/fast_geometry.py": "3c15f72702b0581d8ee1a68fa321543837c1e1322ead00eb4d259c90125b1377",
+          "experiments/E38_model_architecture/features.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+          "experiments/E38_model_architecture/final.py": "2ad586307d148054c6ad260b17644191d860bd452af3a56e753e5aed8aec828c",
+          "experiments/E38_model_architecture/freeze.py": "0eee5b40d537abc4fb4880a8173d7b92e39e3dbfaefdac8b30939289adf79227",
+          "experiments/E38_model_architecture/inference.py": "b202f111d9b5feeb5f3ccbc473fb29e732d8088c5fb43472ab7d49f445378838",
+          "experiments/E38_model_architecture/io.py": "2291a69c6306f5629a2f03dd314fc699d02ea58355f0967a37a9c888e62ec038",
+          "experiments/E38_model_architecture/launch.ps1": "fbdad5430b9325b62f16e2aedb8447c2561ed6bec9b8ad62a44ec15c08509c66",
+          "experiments/E38_model_architecture/legal_seed.py": "c5adf19f570678ba721dd1bc7ca888d2af41cf8148b68a3320903ca82083bfc9",
+          "experiments/E38_model_architecture/loss.py": "14b18ef89e62f731c23ebf0efa9ca98829fecc7ecf9b0b721782df8c37f62771",
+          "experiments/E38_model_architecture/losses.py": "f6503136dc719f6742c66b31da7ebe1076726fac38edb64fa9ae6106ab9d6557",
+          "experiments/E38_model_architecture/model.py": "b8a85ffdc181f67c89b30ac7a8b79e26170803e4c5ddb18fa8d47e33ac3be5ab",
+          "experiments/E38_model_architecture/occupancy.py": "ca5c7fa041d427d88594afac3fbaa5eaf71641367cf42128ba2a1b47a043bdc0",
+          "experiments/E38_model_architecture/pipeline.py": "198e8f7e3ba69bfe4c441a7cea3b80843e8cec09bd22d26773fa99121875a197",
+          "experiments/E38_model_architecture/projection.py": "591f9bfbdf099b12dd9cd36f936e7c1f267b86456c67958c3957aa0ddc9d9028",
+          "experiments/E38_model_architecture/provenance.json": "abe8b7592587b9ccaba8a7edff4f70c18b39868ef0854244574a8de3a94eb2c6",
+          "experiments/E38_model_architecture/requirements-native.txt": "eddfdc929bf37a85b9b17d7c68af80a8ec5138dd8585c1afe0efc312435473b6",
+          "experiments/E38_model_architecture/solver.py": "13efe19cdb44ebd13e36d4d8d5ce44b0f9801f469e070981bc8be3354e9ecef6",
+          "experiments/E38_model_architecture/train.py": "0100e00de9b81238ca6edfcbbbbf2db81a3be0a5a83c04c8d5937168d9b752cd",
+          "scoring/__init__.py": "933bf2be947e20bae164511f26afaa84c2f331d0dbdebc417d235db8358a9247",
+          "scoring/checks.py": "738f6b57e20dce58516f3f10d83689f8df273a84a02b2dce99c6ccc1f904763a",
+          "scoring/evaluation.py": "356e0d1c788c6f25154b33fb1c2455388317d2cc0dd96ca50d7357c58612c611",
+          "scoring/official.py": "478fbc228a56ec4b336b5d8687a44b22b749f30aae09372f57c08e7124270e03",
+          "third_party/FloorSet/cost.py": "b60561556f79aa41c196c8fcaddea57840aab41059c76dbc3f80b4fdde6b48c3",
+          "third_party/FloorSet/iccad2026contest/iccad2026_evaluate.py": "64db37865b42baf11add62bdbf035690dca086cd4be7b5b4e58db756f20d8498",
+          "third_party/FloorSet/utils.py": "9299d9257f5bd932001896307f2296b51cc5567f44150db5514f357ed93c121e"
+        },
+        "baseline": false,
+        "count": 500,
+        "panel": "v5 dev_monitor500",
+        "workers": 2,
+        "threads_per_worker": 2,
+        "selection": "E17 arithmetic geometry+occupancy; no terminal-Q selection",
+        "implementation_check": false,
+        "test_read": false
+      },
+      "full_dev": {
+        "total": 0.3906239197254181,
+        "mse": 0.057718486666679385,
+        "center_mse": 0.002122688582167029,
+        "shape_mse": 0.18087948024272918,
+        "center_local": 0.19591075706481934,
+        "shape": 0.18087948024272918,
+        "relative_local": 0.25048544120788574,
+        "overlap": 0.07546953052282333,
+        "contact": 0.09202734071016312,
+        "boundary": 0.007937211617827416,
+        "mib": 0.011215184591710567,
+        "bbox": 0.0001767125813057646,
+        "local": 0.3037519874572754,
+        "geometry": 0.39062391567230226,
+        "overlap_area": 0.08879294586181641,
+        "crowding": 0.008222832702100277,
+        "void": 0.14289386653900146,
+        "compactness": 0.0013935394268482925,
+        "occupancy": 0.12678115022182465,
+        "repair": 0.5174050693511962,
+        "supervision": 0.3037519874572754,
+        "quality_proxy": 0.39062391567230226,
+        "selection_proxy": 0.5174050693511962,
+        "batched_inference_seconds_per_case": 0.008707786550221499,
+        "count": 2000,
+        "raw_hard_legal": 0,
+        "raw_hard_legal_rate": 0.0,
+        "draft_diagnostics": {
+          "overlap_pairs": {
+            "mean": 80.493,
+            "p95": 134.0,
+            "max": 153.0
+          },
+          "overlap_area_fraction": {
+            "mean": 0.08879295477541785,
+            "p95": 0.13639797401018872,
+            "max": 0.19498146931992702
+          },
+          "penetration_squared_per_block": {
+            "mean": 0.03687809545344011,
+            "p95": 0.06801965356971669,
+            "max": 0.1413604398425136
+          },
+          "max_local_penetration": {
+            "mean": 0.5341963087170344,
+            "p95": 0.7689168001171082,
+            "max": 0.9198715126647189
+          },
+          "largest_conflict_cluster": {
+            "mean": 58.451,
+            "p95": 102.0,
+            "max": 116.0
+          },
+          "largest_conflict_cluster_fraction": {
+            "mean": 0.8325900093591124,
+            "p95": 0.9615384615384616,
+            "max": 1.0
+          }
+        }
+      },
+      "best_monitor": {
+        "total": 0.3959786174297333,
+        "mse": 0.05849287015199661,
+        "center_mse": 0.002191888298839331,
+        "shape_mse": 0.18310832917690278,
+        "center_local": 0.19777494239807128,
+        "shape": 0.18310832917690278,
+        "relative_local": 0.2522549895048142,
+        "overlap": 0.07633023619651795,
+        "contact": 0.09617885953187942,
+        "boundary": 0.007598683975636959,
+        "mib": 0.011923242464661598,
+        "bbox": 0.00016300844552461058,
+        "local": 0.3066157701015472,
+        "geometry": 0.3959786174297333,
+        "overlap_area": 0.09008198410272598,
+        "crowding": 0.008198640406131745,
+        "void": 0.14375956463813783,
+        "compactness": 0.0013888127878308296,
+        "occupancy": 0.12827986043691636,
+        "repair": 0.5242584655284882,
+        "supervision": 0.3066157701015472,
+        "quality_proxy": 0.3959786174297333,
+        "count": 500,
+        "selection_proxy": 0.5242584655284882,
+        "raw_hard_legal": 0,
+        "raw_hard_legal_rate": 0.0,
+        "batched_inference_seconds_per_case": 0.001103641799883917,
+        "draft_diagnostics": {
+          "overlap_pairs": {
+            "mean": 80.0,
+            "p95": 133.0,
+            "max": 145.0
+          },
+          "overlap_area_fraction": {
+            "mean": 0.09008196083815392,
+            "p95": 0.14219683786178883,
+            "max": 0.19498146931992702
+          },
+          "penetration_squared_per_block": {
+            "mean": 0.03707151507980867,
+            "p95": 0.06955744996515456,
+            "max": 0.10320637753609704
+          },
+          "max_local_penetration": {
+            "mean": 0.5371053402558083,
+            "p95": 0.7668582608617079,
+            "max": 0.9162675174943661
+          },
+          "largest_conflict_cluster": {
+            "mean": 57.82,
+            "p95": 99.04999999999995,
+            "max": 112.0
+          },
+          "largest_conflict_cluster_fraction": {
+            "mean": 0.8292964427180384,
+            "p95": 0.961063936063936,
+            "max": 1.0
+          }
+        }
+      },
+      "best_train_monitor": {
+        "total": 0.3272806534767151,
+        "mse": 0.05304052835702896,
+        "center_mse": 0.001359489120543003,
+        "shape_mse": 0.1674148600101471,
+        "center_local": 0.16680889689922332,
+        "shape": 0.1674148600101471,
+        "relative_local": 0.2166871747970581,
+        "overlap": 0.0661888707280159,
+        "contact": 0.05720000857114792,
+        "boundary": 0.006565522309392691,
+        "mib": 0.010966463826596736,
+        "bbox": 0.00013778500049374998,
+        "local": 0.2628344008922577,
+        "geometry": 0.3272806458473206,
+        "overlap_area": 0.08462795794010163,
+        "crowding": 0.005838616278022527,
+        "void": 0.13888211369514467,
+        "compactness": 0.0012859089691191912,
+        "occupancy": 0.12100102734565735,
+        "repair": 0.4482816882133484,
+        "supervision": 0.2628344008922577,
+        "quality_proxy": 0.3272806458473206,
+        "count": 500,
+        "selection_proxy": 0.4482816882133484,
+        "raw_hard_legal": 0,
+        "raw_hard_legal_rate": 0.0,
+        "batched_inference_seconds_per_case": 0.0010935765996109693,
+        "draft_diagnostics": {
+          "overlap_pairs": {
+            "mean": 81.064,
+            "p95": 134.0,
+            "max": 150.0
+          },
+          "overlap_area_fraction": {
+            "mean": 0.0846279644949723,
+            "p95": 0.12589851188405451,
+            "max": 0.1770157135496659
+          },
+          "penetration_squared_per_block": {
+            "mean": 0.03253516774876943,
+            "p95": 0.05898870131208929,
+            "max": 0.08979321300136747
+          },
+          "max_local_penetration": {
+            "mean": 0.4982884809460459,
+            "p95": 0.7363783675994713,
+            "max": 0.9100380773067432
+          },
+          "largest_conflict_cluster": {
+            "mean": 58.01,
+            "p95": 100.0,
+            "max": 111.0
+          },
+          "largest_conflict_cluster_fraction": {
+            "mean": 0.82992814345213,
+            "p95": 0.9619576719576719,
+            "max": 1.0
+          }
+        }
+      },
+      "common_epoch42": {
+        "epoch": 42,
+        "train_proxy": 0.44468787240982055,
+        "dev_proxy": 0.5249758076667785
+      },
+      "terminal": {
+        "count": 500,
+        "hard_legal": 500,
+        "mean_Q": 1.0534753800107863,
+        "weighted_Q": 1.0368303172102906,
+        "p95_Q": 1.198638547724707,
+        "max_Q": 1.7190326415382373,
+        "worst5pct_mean_Q": 1.3085131728240773,
+        "seconds_mean": 0.25572568879486063,
+        "seconds_p95": 0.5714138150156938,
+        "row_fallbacks": 0,
+        "rescue_cases": 5,
+        "errors": 0,
+        "hpwl_gap_mean_returned": 0.018993398215840975,
+        "area_gap_mean_returned": 0.024891813691438648,
+        "boundary_violations_mean_returned": 0.334,
+        "grouping_violations_mean_returned": 0.25,
+        "mib_violations_mean_returned": 0.002,
+        "inference_seconds_mean_returned": 0.034926176799461243,
+        "postprocess_seconds_mean_returned": 0.22067131480108945,
+        "mean_center_move_local_mean_returned": 0.4566543381550749,
+        "max_center_move_local_mean_returned": 1.8791196483594395
+      },
+      "full_dev_relative_vs_control": {
+        "total": -0.07509330438427586,
+        "mse": -0.06437594597395946,
+        "center_mse": -0.022400205340179835,
+        "shape_mse": -0.06582843996412546,
+        "center_local": -0.04156389160641494,
+        "shape": -0.06582843996412546,
+        "relative_local": -0.0426471895560393,
+        "overlap": -0.2547039181419293,
+        "contact": -0.08077370457006161,
+        "boundary": -0.12297985930880251,
+        "mib": -0.016522714498707014,
+        "bbox": -0.27152235064708385,
+        "local": -0.045477547615554226,
+        "geometry": -0.07509331868026592,
+        "overlap_area": -0.1740116056498393,
+        "crowding": -0.5369982737701111,
+        "void": -0.09758655037464281,
+        "compactness": -0.12859016146312874,
+        "occupancy": -0.16462438980951843,
+        "repair": -0.0987609937773386,
+        "supervision": -0.045477547615554226,
+        "quality_proxy": -0.07509331868026592,
+        "selection_proxy": -0.0987609937773386,
+        "batched_inference_seconds_per_case": 0.021947068385625323,
+        "count": 0.0
+      },
+      "raw_draft_relative_vs_control": {
+        "overlap_pairs": {
+          "mean": -0.014851939564171857,
+          "p95": -0.014705882352941124,
+          "max": -0.07831325301204817
+        },
+        "overlap_area_fraction": {
+          "mean": -0.17401162645235901,
+          "p95": -0.21560541338723194,
+          "max": -0.24003819566289475
+        },
+        "penetration_squared_per_block": {
+          "mean": -0.24672668843077417,
+          "p95": -0.2792474885682845,
+          "max": -0.09207131957677539
+        },
+        "max_local_penetration": {
+          "mean": -0.0985156094953007,
+          "p95": -0.05825081272120969,
+          "max": -0.009346830487599989
+        },
+        "largest_conflict_cluster": {
+          "mean": -0.004750553379873956,
+          "p95": 0.0,
+          "max": 0.01754385964912286
+        },
+        "largest_conflict_cluster_fraction": {
+          "mean": 0.0010977178292048695,
+          "p95": -0.0028653439610323295,
+          "max": 0.0
+        }
+      },
+      "paired_vs_retrained_control": {
+        "weighted_Q_delta": -0.003570805326064697,
+        "case_bootstrap95_Q_delta": [
+          -0.012111050765760087,
+          0.004258870056606259
+        ],
+        "mean_seconds_delta": -0.008662481206236408,
+        "case_bootstrap95_mean_seconds_delta": [
+          -0.023846672363125255,
+          0.005149774958123446
+        ],
+        "Q_better_equal_worse": [
+          283,
+          36,
+          181
+        ],
+        "largest_absolute_weighted_contributions": [
+          {
+            "index": 21,
+            "member": [
+              "worker_17/layouts_6608.th",
+              68
+            ],
+            "n": 120,
+            "Q_delta": -0.12941684438026435,
+            "weighted_contribution": -0.002073935148129487
+          },
+          {
+            "index": 456,
+            "member": [
+              "worker_65/layouts_6720.th",
+              90
+            ],
+            "n": 116,
+            "Q_delta": -0.13765180997243642,
+            "weighted_contribution": -0.0015805981337201854
+          },
+          {
+            "index": 37,
+            "member": [
+              "worker_13/layouts_6160.th",
+              85
+            ],
+            "n": 115,
+            "Q_delta": -0.14268966207177525,
+            "weighted_contribution": -0.0015074427977492244
+          },
+          {
+            "index": 447,
+            "member": [
+              "worker_4/layouts_5264.th",
+              107
+            ],
+            "n": 119,
+            "Q_delta": 0.09653635029631924,
+            "weighted_contribution": 0.0014233248592664769
+          },
+          {
+            "index": 165,
+            "member": [
+              "worker_4/layouts_5264.th",
+              87
+            ],
+            "n": 119,
+            "Q_delta": 0.0693562245034165,
+            "weighted_contribution": 0.0010225830806485684
+          }
+        ],
+        "uncertainty_limit": "Paired case bootstrap measures case sampling only, not timed-solver run variability or training-seed uncertainty."
+      },
+      "paired_vs_initial_E25": {
+        "weighted_Q_delta": -0.024338537583348505,
+        "case_bootstrap95_Q_delta": [
+          -0.07196623410004747,
+          0.002294020177120041
+        ],
+        "mean_seconds_delta": -0.018083729808451608,
+        "case_bootstrap95_mean_seconds_delta": [
+          -0.03969870739203179,
+          0.00011213264684192496
+        ],
+        "Q_better_equal_worse": [
+          288,
+          34,
+          178
+        ],
+        "largest_absolute_weighted_contributions": [
+          {
+            "index": 21,
+            "member": [
+              "worker_17/layouts_6608.th",
+              68
+            ],
+            "n": 120,
+            "Q_delta": -1.288067155313847,
+            "weighted_contribution": -0.020641576908700495
+          },
+          {
+            "index": 398,
+            "member": [
+              "worker_63/layouts_8624.th",
+              63
+            ],
+            "n": 114,
+            "Q_delta": -0.253555424844109,
+            "weighted_contribution": -0.0024645068616574823
+          },
+          {
+            "index": 456,
+            "member": [
+              "worker_65/layouts_6720.th",
+              90
+            ],
+            "n": 116,
+            "Q_delta": -0.13765180997243642,
+            "weighted_contribution": -0.0015805981337201854
+          },
+          {
+            "index": 37,
+            "member": [
+              "worker_13/layouts_6160.th",
+              85
+            ],
+            "n": 115,
+            "Q_delta": -0.14268966207177525,
+            "weighted_contribution": -0.0015074427977492244
+          },
+          {
+            "index": 447,
+            "member": [
+              "worker_4/layouts_5264.th",
+              107
+            ],
+            "n": 119,
+            "Q_delta": 0.09653635029631924,
+            "weighted_contribution": 0.0014233248592664769
+          }
+        ],
+        "uncertainty_limit": "Paired case bootstrap measures case sampling only, not timed-solver run variability or training-seed uncertainty."
+      },
+      "paired_vs_completed_arms": {
+        "base96x4": {
+          "weighted_Q_delta": -0.003570805326064697,
+          "case_bootstrap95_Q_delta": [
+            -0.012111050765760087,
+            0.004258870056606259
+          ],
+          "mean_seconds_delta": -0.008662481206236408,
+          "case_bootstrap95_mean_seconds_delta": [
+            -0.023846672363125255,
+            0.005149774958123446
+          ],
+          "Q_better_equal_worse": [
+            283,
+            36,
+            181
+          ],
+          "largest_absolute_weighted_contributions": [
+            {
+              "index": 21,
+              "member": [
+                "worker_17/layouts_6608.th",
+                68
+              ],
+              "n": 120,
+              "Q_delta": -0.12941684438026435,
+              "weighted_contribution": -0.002073935148129487
+            },
+            {
+              "index": 456,
+              "member": [
+                "worker_65/layouts_6720.th",
+                90
+              ],
+              "n": 116,
+              "Q_delta": -0.13765180997243642,
+              "weighted_contribution": -0.0015805981337201854
+            },
+            {
+              "index": 37,
+              "member": [
+                "worker_13/layouts_6160.th",
+                85
+              ],
+              "n": 115,
+              "Q_delta": -0.14268966207177525,
+              "weighted_contribution": -0.0015074427977492244
+            },
+            {
+              "index": 447,
+              "member": [
+                "worker_4/layouts_5264.th",
+                107
+              ],
+              "n": 119,
+              "Q_delta": 0.09653635029631924,
+              "weighted_contribution": 0.0014233248592664769
+            },
+            {
+              "index": 165,
+              "member": [
+                "worker_4/layouts_5264.th",
+                87
+              ],
+              "n": 119,
+              "Q_delta": 0.0693562245034165,
+              "weighted_contribution": 0.0010225830806485684
+            }
+          ],
+          "uncertainty_limit": "Paired case bootstrap measures case sampling only, not timed-solver run variability or training-seed uncertainty."
+        },
+        "deep96x12": {
+          "weighted_Q_delta": 4.6475828343019615e-05,
+          "case_bootstrap95_Q_delta": [
+            -0.014547959677687084,
+            0.012572650654660157
+          ],
+          "mean_seconds_delta": -0.017272933206520975,
+          "case_bootstrap95_mean_seconds_delta": [
+            -0.03241982329782913,
+            -0.003105039070622312
+          ],
+          "Q_better_equal_worse": [
+            186,
+            42,
+            272
+          ],
+          "largest_absolute_weighted_contributions": [
+            {
+              "index": 462,
+              "member": [
+                "worker_17/layouts_2576.th",
+                59
+              ],
+              "n": 117,
+              "Q_delta": -0.39811695108148215,
+              "weighted_contribution": -0.004968684429946493
+            },
+            {
+              "index": 447,
+              "member": [
+                "worker_4/layouts_5264.th",
+                107
+              ],
+              "n": 119,
+              "Q_delta": 0.20466328313163307,
+              "weighted_contribution": 0.00301754041629077
+            },
+            {
+              "index": 83,
+              "member": [
+                "worker_91/layouts_1120.th",
+                49
+              ],
+              "n": 111,
+              "Q_delta": -0.29855292460995675,
+              "weighted_contribution": -0.0022599812409357404
+            },
+            {
+              "index": 37,
+              "member": [
+                "worker_13/layouts_6160.th",
+                85
+              ],
+              "n": 115,
+              "Q_delta": 0.12535570849516864,
+              "weighted_contribution": 0.0013243185048173983
+            },
+            {
+              "index": 21,
+              "member": [
+                "worker_17/layouts_6608.th",
+                68
+              ],
+              "n": 120,
+              "Q_delta": -0.07605813067759448,
+              "weighted_contribution": -0.001218849302566858
+            }
+          ],
+          "uncertainty_limit": "Paired case bootstrap measures case sampling only, not timed-solver run variability or training-seed uncertainty."
+        },
+        "wide160x4": {
+          "weighted_Q_delta": -0.007482721398220137,
+          "case_bootstrap95_Q_delta": [
+            -0.01991427553669845,
+            0.0021065371140768694
+          ],
+          "mean_seconds_delta": -0.014161191003862768,
+          "case_bootstrap95_mean_seconds_delta": [
+            -0.03507531364749884,
+            0.0036598098423215393
+          ],
+          "Q_better_equal_worse": [
+            286,
+            28,
+            186
+          ],
+          "largest_absolute_weighted_contributions": [
+            {
+              "index": 392,
+              "member": [
+                "worker_71/layouts_5600.th",
+                49
+              ],
+              "n": 117,
+              "Q_delta": -0.333741636642231,
+              "weighted_contribution": -0.004165250610667214
+            },
+            {
+              "index": 398,
+              "member": [
+                "worker_63/layouts_8624.th",
+                63
+              ],
+              "n": 114,
+              "Q_delta": -0.14755189738174823,
+              "weighted_contribution": -0.0014341742590263022
+            },
+            {
+              "index": 37,
+              "member": [
+                "worker_13/layouts_6160.th",
+                85
+              ],
+              "n": 115,
+              "Q_delta": 0.12432401714946995,
+              "weighted_contribution": 0.0013134192170484542
+            },
+            {
+              "index": 228,
+              "member": [
+                "worker_88/layouts_0.th",
+                90
+              ],
+              "n": 120,
+              "Q_delta": -0.07792956940186113,
+              "weighted_contribution": -0.0012488395450767356
+            },
+            {
+              "index": 165,
+              "member": [
+                "worker_4/layouts_5264.th",
+                87
+              ],
+              "n": 119,
+              "Q_delta": 0.07063693593356524,
+              "weighted_contribution": 0.0010414657959209204
+            }
+          ],
+          "uncertainty_limit": "Paired case bootstrap measures case sampling only, not timed-solver run variability or training-seed uncertainty."
+        }
+      }
+    },
+    "deep96x12": {
+      "training": {
+        "status": "early_stop",
+        "elapsed_seconds": 3737.3909055000404,
+        "steps": 24500,
+        "epochs": 49,
+        "best_epoch": 47,
+        "best_proxy": 0.49720888304710387,
+        "full_dev_complete": false,
+        "postprocessing_calls": 0,
+        "test_read": false,
+        "tail_test_read": false,
+        "implementation_check": false,
+        "final_postprocessed_Q": "not run; one frozen best assessment is a separate stage"
+      },
+      "frozen": {
+        "checkpoint": "experiments/E38_model_architecture/runs/20261022_capacity_deep96x12_seed0/checkpoints/best.pt",
+        "checkpoint_sha256": "b42fed70cb30e45c23ab928556422930a2b182fc7c13fcefd42f2bac32923551",
+        "model_config": {
+          "width": 96,
+          "layers": 12
+        },
+        "registry_sha256": "1409ccf825b9c7cae1097a22e8dc4068e1283d79541c85ce54c5627d0c2b4208",
+        "sources": {
+          "datasets/__init__.py": "03c36f364366be6c8a5091d6bd3dbec0788d7871747acdeac5fa89d4974cec21",
+          "datasets/cases.py": "1fd51addaaae38164c22f1946712665beebac700054db4bb07ed4f9d44e0b168",
+          "datasets/paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+          "datasets/public_member_inputs.py": "6d525fa963d098051648b01d6bc75fb8a032dd5746529fb3c750afe2b5e8bb09",
+          "datasets/quality_layouts.py": "94f374fa9562770a9c7deadb645d73c3af1fc1a20251f98f1dce4ac575820191",
+          "datasets/reference_layouts.py": "f6aeeba298a163b7d506c67e3fba024cd3a191c3aae1116fc6b5d294431db9b5",
+          "datasets/worksets.py": "013087151ab8e1195d7d2757e777839f521486425eeaff4c45fed4e370df233c",
+          "docs/protocol.md": "f31a4e394df17e816b108e8cff21e7459c79dc50098c22fdf032688a85e106ec",
+          "experiments/E38_model_architecture/__init__.py": "5ba93f9e1f88e569fc9974a901f962d585b3b17a4822f1dc0ddb9b2d3c6ee3de",
+          "experiments/E38_model_architecture/analyze.py": "7920e111a2a3fde175d7996ea669f31c730ec4f102f23e400a55555551672ee5",
+          "experiments/E38_model_architecture/arms.py": "b15f53120396b4fafa735ba5bec1acbb87e2cee93c07d1d6179dd233c98e2ff3",
+          "experiments/E38_model_architecture/backend/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "experiments/E38_model_architecture/backend/conic_geometry.py": "0b1a0295426c37a61f4abc13946b5dadf2c6f107375a02890e90ffe404be40e4",
+          "experiments/E38_model_architecture/backend/frozen/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "experiments/E38_model_architecture/backend/frozen/canonical_geometry.py": "04924bc4150f82862ed4da6cb67fc08779bbf98fcf24e24abd41b1c64d4e2521",
+          "experiments/E38_model_architecture/backend/frozen/feasible.py": "9cfe70894d80fbe54ccaa1c3de60ef4ab111ac9b4472286d1ae6a0c5a1fdc756",
+          "experiments/E38_model_architecture/backend/frozen/global_refine.py": "088021ede3290fcd6cf60726a054f7958309e4267d4353a699b80697078ab716",
+          "experiments/E38_model_architecture/backend/frozen/packing.py": "3c0500b7fee120807e6bd3fa8e9f115e476782af1a3e7620859c6651a089ef30",
+          "experiments/E38_model_architecture/backend/frozen/postprocess.py": "da0e1572a822a589968a19e67e2d36dd5133c7d17b7ea9443bd743ee4653a272",
+          "experiments/E38_model_architecture/backend/frozen/shape_lp.py": "2988df542aa80602f091963e1506da8085152ea0eca4846f6dc6c0a25ef13c94",
+          "experiments/E38_model_architecture/backend/frozen/solver.py": "cb5b0b6af3b8511d8a21b14178be188e31c61b58cba065c8c23847c2f9200325",
+          "experiments/E38_model_architecture/backend/frozen/topology_mip.py": "e392857196dbde4b3c1f3668862c9779e9c686f17ca89a820078421573b46df5",
+          "experiments/E38_model_architecture/backend/guard.py": "4e4adfb1dedede451a4d530103681f97ca6c05516e2dbe96b84d63c136faa87f",
+          "experiments/E38_model_architecture/backend/observe.py": "6fb401b9a7ebccec7063de8e9feeaf28bee310ac8a39b221b78d40e438432ec3",
+          "experiments/E38_model_architecture/backend/optimizer.py": "6373f5e7477f528e09e599c9a478b712bfbeb0ec29037bed1595d8c82af2ca36",
+          "experiments/E38_model_architecture/backend/reduction.py": "4587a5c9c486c59719e76ef64396398edb92e6011d8c0c0cd4f538cad52c4b50",
+          "experiments/E38_model_architecture/backend/rescue.py": "b928986f58fb3215140fe05acc36ddde92ce7aad99197fb2a975b7743a8c2e59",
+          "experiments/E38_model_architecture/backend/robust.py": "ceea8f18d0e2979279f4cf711b7702436912fbae77095d9559e603401176c99b",
+          "experiments/E38_model_architecture/backend/selection.py": "c21486a437531fed9a6717bcde6ce2ca062153ea717f9ae135b5b72e05500350",
+          "experiments/E38_model_architecture/backend/stable.py": "dc5a1e0afbec79e33f1ca6603a7d3186045a52ccc543ac756b508dbf8159bcce",
+          "experiments/E38_model_architecture/batches.py": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92",
+          "experiments/E38_model_architecture/cache.py": "a527b8f098383b24ce20e7f1b09b740a4524ba731ac04ed3342b4a1e127936d0",
+          "experiments/E38_model_architecture/canonical.py": "57a3738b35d16a091a250f4bac36bdcef5f7edeec6e084e103ecb6e9967eac2d",
+          "experiments/E38_model_architecture/canonical_native.py": "469ed606532daa9750bb9dd6c98e0f79c27e246bf79ca4e89d483f0b6920e5eb",
+          "experiments/E38_model_architecture/canonical_py.py": "b5b99c1f77756aa318fe5cb0e7fa82935844752b4fa815ab80367adb34e00195",
+          "experiments/E38_model_architecture/certify_polish.py": "7148ff8dd958d5b8ecd2adbcd29ead999904b185ad12c77ffcdc0e7ec1f31462",
+          "experiments/E38_model_architecture/check.py": "b4a54efaefceb99c2989f9a6e21f8f2f49fc8a2817ddd970bef6098ea0555dac",
+          "experiments/E38_model_architecture/data.py": "f42fed522beb7e3c69c43ec991d257245eafc48faeb7800316dd4e4fbd5b28cb",
+          "experiments/E38_model_architecture/diagnostics.py": "095bd88919541c7247d1f105a1f371be63d9287b755b3d3972e2b1fa55f6d4e0",
+          "experiments/E38_model_architecture/fast_geometry.py": "3c15f72702b0581d8ee1a68fa321543837c1e1322ead00eb4d259c90125b1377",
+          "experiments/E38_model_architecture/features.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+          "experiments/E38_model_architecture/final.py": "2ad586307d148054c6ad260b17644191d860bd452af3a56e753e5aed8aec828c",
+          "experiments/E38_model_architecture/freeze.py": "0eee5b40d537abc4fb4880a8173d7b92e39e3dbfaefdac8b30939289adf79227",
+          "experiments/E38_model_architecture/inference.py": "b202f111d9b5feeb5f3ccbc473fb29e732d8088c5fb43472ab7d49f445378838",
+          "experiments/E38_model_architecture/io.py": "2291a69c6306f5629a2f03dd314fc699d02ea58355f0967a37a9c888e62ec038",
+          "experiments/E38_model_architecture/launch.ps1": "fbdad5430b9325b62f16e2aedb8447c2561ed6bec9b8ad62a44ec15c08509c66",
+          "experiments/E38_model_architecture/legal_seed.py": "c5adf19f570678ba721dd1bc7ca888d2af41cf8148b68a3320903ca82083bfc9",
+          "experiments/E38_model_architecture/loss.py": "14b18ef89e62f731c23ebf0efa9ca98829fecc7ecf9b0b721782df8c37f62771",
+          "experiments/E38_model_architecture/losses.py": "f6503136dc719f6742c66b31da7ebe1076726fac38edb64fa9ae6106ab9d6557",
+          "experiments/E38_model_architecture/model.py": "b8a85ffdc181f67c89b30ac7a8b79e26170803e4c5ddb18fa8d47e33ac3be5ab",
+          "experiments/E38_model_architecture/occupancy.py": "ca5c7fa041d427d88594afac3fbaa5eaf71641367cf42128ba2a1b47a043bdc0",
+          "experiments/E38_model_architecture/pipeline.py": "198e8f7e3ba69bfe4c441a7cea3b80843e8cec09bd22d26773fa99121875a197",
+          "experiments/E38_model_architecture/projection.py": "591f9bfbdf099b12dd9cd36f936e7c1f267b86456c67958c3957aa0ddc9d9028",
+          "experiments/E38_model_architecture/provenance.json": "abe8b7592587b9ccaba8a7edff4f70c18b39868ef0854244574a8de3a94eb2c6",
+          "experiments/E38_model_architecture/requirements-native.txt": "eddfdc929bf37a85b9b17d7c68af80a8ec5138dd8585c1afe0efc312435473b6",
+          "experiments/E38_model_architecture/solver.py": "13efe19cdb44ebd13e36d4d8d5ce44b0f9801f469e070981bc8be3354e9ecef6",
+          "experiments/E38_model_architecture/train.py": "0100e00de9b81238ca6edfcbbbbf2db81a3be0a5a83c04c8d5937168d9b752cd",
+          "scoring/__init__.py": "933bf2be947e20bae164511f26afaa84c2f331d0dbdebc417d235db8358a9247",
+          "scoring/checks.py": "738f6b57e20dce58516f3f10d83689f8df273a84a02b2dce99c6ccc1f904763a",
+          "scoring/evaluation.py": "356e0d1c788c6f25154b33fb1c2455388317d2cc0dd96ca50d7357c58612c611",
+          "scoring/official.py": "478fbc228a56ec4b336b5d8687a44b22b749f30aae09372f57c08e7124270e03",
+          "third_party/FloorSet/cost.py": "b60561556f79aa41c196c8fcaddea57840aab41059c76dbc3f80b4fdde6b48c3",
+          "third_party/FloorSet/iccad2026contest/iccad2026_evaluate.py": "64db37865b42baf11add62bdbf035690dca086cd4be7b5b4e58db756f20d8498",
+          "third_party/FloorSet/utils.py": "9299d9257f5bd932001896307f2296b51cc5567f44150db5514f357ed93c121e"
+        },
+        "baseline": false,
+        "count": 500,
+        "panel": "v5 dev_monitor500",
+        "workers": 2,
+        "threads_per_worker": 2,
+        "selection": "E17 arithmetic geometry+occupancy; no terminal-Q selection",
+        "implementation_check": false,
+        "test_read": false
+      },
+      "full_dev": {
+        "total": 0.37506837320327757,
+        "mse": 0.056048813700675965,
+        "center_mse": 0.002066027143970132,
+        "shape_mse": 0.17562587285041809,
+        "center_local": 0.1907871264219284,
+        "shape": 0.17562587285041809,
+        "relative_local": 0.24368431329727172,
+        "overlap": 0.06461693811416626,
+        "contact": 0.08792216140031815,
+        "boundary": 0.008162930518388747,
+        "mib": 0.011206335715949535,
+        "bbox": 0.00022783244785387068,
+        "local": 0.29561467123031615,
+        "geometry": 0.37506837606430055,
+        "overlap_area": 0.07970036888122559,
+        "crowding": 0.006472929369658232,
+        "void": 0.13824048733711242,
+        "compactness": 0.0015656680474057793,
+        "occupancy": 0.11611357307434082,
+        "repair": 0.4911819462776184,
+        "supervision": 0.29561467123031615,
+        "quality_proxy": 0.37506837606430055,
+        "selection_proxy": 0.4911819462776184,
+        "batched_inference_seconds_per_case": 0.009044275799882599,
+        "count": 2000,
+        "raw_hard_legal": 0,
+        "raw_hard_legal_rate": 0.0,
+        "draft_diagnostics": {
+          "overlap_pairs": {
+            "mean": 79.2415,
+            "p95": 133.0,
+            "max": 152.0
+          },
+          "overlap_area_fraction": {
+            "mean": 0.07970038230783874,
+            "p95": 0.1253849411144287,
+            "max": 0.1986211207462213
+          },
+          "penetration_squared_per_block": {
+            "mean": 0.031593429207715,
+            "p95": 0.06135659890097224,
+            "max": 0.11712319438760488
+          },
+          "max_local_penetration": {
+            "mean": 0.5081248259632741,
+            "p95": 0.7517744439801013,
+            "max": 0.8880185880842851
+          },
+          "largest_conflict_cluster": {
+            "mean": 57.8905,
+            "p95": 101.04999999999995,
+            "max": 113.0
+          },
+          "largest_conflict_cluster_fraction": {
+            "mean": 0.8247035643105847,
+            "p95": 0.9571489621489622,
+            "max": 1.0
+          }
+        }
+      },
+      "best_monitor": {
+        "total": 0.3799898533821106,
+        "mse": 0.05689259439706802,
+        "center_mse": 0.002153293956071138,
+        "shape_mse": 0.17805224120616914,
+        "center_local": 0.192655721783638,
+        "shape": 0.17805224120616914,
+        "relative_local": 0.24535429203510284,
+        "overlap": 0.06454200172424317,
+        "contact": 0.09199875324964524,
+        "boundary": 0.007939186278730631,
+        "mib": 0.01205638886243105,
+        "bbox": 0.00021684172796085477,
+        "local": 0.298507351398468,
+        "geometry": 0.37998985600471497,
+        "overlap_area": 0.08076097059249877,
+        "crowding": 0.0060681913420557974,
+        "void": 0.1388257474899292,
+        "compactness": 0.0015638673715293407,
+        "occupancy": 0.11721903413534164,
+        "repair": 0.49720888304710387,
+        "supervision": 0.298507351398468,
+        "quality_proxy": 0.37998985600471497,
+        "count": 500,
+        "selection_proxy": 0.49720888304710387,
+        "raw_hard_legal": 0,
+        "raw_hard_legal_rate": 0.0,
+        "batched_inference_seconds_per_case": 0.001461065800394863,
+        "draft_diagnostics": {
+          "overlap_pairs": {
+            "mean": 78.94,
+            "p95": 133.0,
+            "max": 149.0
+          },
+          "overlap_area_fraction": {
+            "mean": 0.08076094826468239,
+            "p95": 0.128340592360351,
+            "max": 0.1986211207462213
+          },
+          "penetration_squared_per_block": {
+            "mean": 0.031646603112703474,
+            "p95": 0.06017771264018269,
+            "max": 0.0950643133768363
+          },
+          "max_local_penetration": {
+            "mean": 0.5083845044584916,
+            "p95": 0.7563756161577287,
+            "max": 0.8667169172602877
+          },
+          "largest_conflict_cluster": {
+            "mean": 57.492,
+            "p95": 100.0,
+            "max": 113.0
+          },
+          "largest_conflict_cluster_fraction": {
+            "mean": 0.8195363455239681,
+            "p95": 0.9545454545454546,
+            "max": 1.0
+          }
+        }
+      },
+      "best_train_monitor": {
+        "total": 0.2924204001426697,
+        "mse": 0.04937884646654129,
+        "center_mse": 0.0011995136132463813,
+        "shape_mse": 0.15604876732826234,
+        "center_local": 0.15107684302330018,
+        "shape": 0.15604876732826234,
+        "relative_local": 0.19777342355251312,
+        "overlap": 0.05409788754582405,
+        "contact": 0.04598098948597908,
+        "boundary": 0.006758947163820267,
+        "mib": 0.011410642258822918,
+        "bbox": 0.0001776930260239169,
+        "local": 0.23953238844871522,
+        "geometry": 0.292420401096344,
+        "overlap_area": 0.0751623673439026,
+        "crowding": 0.003969232335686684,
+        "void": 0.13323138546943664,
+        "compactness": 0.0014208999201655388,
+        "occupancy": 0.10967565733194351,
+        "repair": 0.4020960600376129,
+        "supervision": 0.23953238844871522,
+        "quality_proxy": 0.292420401096344,
+        "count": 500,
+        "selection_proxy": 0.4020960600376129,
+        "raw_hard_legal": 0,
+        "raw_hard_legal_rate": 0.0,
+        "batched_inference_seconds_per_case": 0.0014191283995751292,
+        "draft_diagnostics": {
+          "overlap_pairs": {
+            "mean": 79.662,
+            "p95": 132.0,
+            "max": 148.0
+          },
+          "overlap_area_fraction": {
+            "mean": 0.07516237327289477,
+            "p95": 0.11359094956387258,
+            "max": 0.15899737831467847
+          },
+          "penetration_squared_per_block": {
+            "mean": 0.026709353766843556,
+            "p95": 0.04877592665104684,
+            "max": 0.0796049164546839
+          },
+          "max_local_penetration": {
+            "mean": 0.46989658561592534,
+            "p95": 0.7583645365918594,
+            "max": 0.8641505386971565
+          },
+          "largest_conflict_cluster": {
+            "mean": 56.61,
+            "p95": 100.04999999999995,
+            "max": 113.0
+          },
+          "largest_conflict_cluster_fraction": {
+            "mean": 0.8066695717733885,
+            "p95": 0.9500409836065573,
+            "max": 1.0
+          }
+        }
+      },
+      "common_epoch42": {
+        "epoch": 42,
+        "train_proxy": 0.4231952140331268,
+        "dev_proxy": 0.49896968150138854
+      },
+      "terminal": {
+        "count": 500,
+        "hard_legal": 500,
+        "mean_Q": 1.0441347460936108,
+        "weighted_Q": 1.0367838413819477,
+        "p95_Q": 1.1586015172428916,
+        "max_Q": 1.673976081561568,
+        "worst5pct_mean_Q": 1.2480078124211227,
+        "seconds_mean": 0.2729986220013816,
+        "seconds_p95": 0.592343174945563,
+        "row_fallbacks": 0,
+        "rescue_cases": 7,
+        "errors": 0,
+        "hpwl_gap_mean_returned": 0.017108129690961593,
+        "area_gap_mean_returned": 0.019408752296400614,
+        "boundary_violations_mean_returned": 0.248,
+        "grouping_violations_mean_returned": 0.234,
+        "mib_violations_mean_returned": 0.0,
+        "inference_seconds_mean_returned": 0.05024483640282415,
+        "postprocess_seconds_mean_returned": 0.22261914039729164,
+        "mean_center_move_local_mean_returned": 0.43130483077159754,
+        "max_center_move_local_mean_returned": 1.7724365181441677
+      },
+      "full_dev_relative_vs_control": {
+        "total": -0.11192522482172129,
+        "mse": -0.09144155838981038,
+        "center_mse": -0.048495512401127705,
+        "shape_mse": -0.0929612612598597,
+        "center_local": -0.06662975673700477,
+        "shape": -0.0929612612598597,
+        "relative_local": -0.06864103130595345,
+        "overlap": -0.3618782247016963,
+        "contact": -0.12177878784144736,
+        "boundary": -0.09803910788895476,
+        "mib": -0.017298686418030562,
+        "bbox": -0.06078647693040984,
+        "local": -0.07104857714462809,
+        "geometry": -0.11192522255950577,
+        "overlap_area": -0.25859448537985086,
+        "crowding": -0.6355298009224462,
+        "void": -0.12697389973890283,
+        "compactness": -0.020954474551269975,
+        "occupancy": -0.23491428506004508,
+        "repair": -0.14443758795628814,
+        "supervision": -0.07104857714462809,
+        "quality_proxy": -0.11192522255950577,
+        "selection_proxy": -0.14443758795628814,
+        "batched_inference_seconds_per_case": 0.06143749459797809,
+        "count": 0.0
+      },
+      "raw_draft_relative_vs_control": {
+        "overlap_pairs": {
+          "mean": -0.030168958406001978,
+          "p95": -0.022058823529411797,
+          "max": -0.08433734939759041
+        },
+        "overlap_area_fraction": {
+          "mean": -0.2585944535793031,
+          "p95": -0.2789389302397419,
+          "max": -0.2258522523795038
+        },
+        "penetration_squared_per_block": {
+          "mean": -0.3546714723061064,
+          "p95": -0.3498508088480937,
+          "max": -0.24774210206362324
+        },
+        "max_local_penetration": {
+          "mean": -0.14251260901832996,
+          "p95": -0.07924632219325023,
+          "max": -0.04365075256736506
+        },
+        "largest_conflict_cluster": {
+          "mean": -0.014294227822237215,
+          "p95": -0.00931372549019649,
+          "max": -0.00877192982456143
+        },
+        "largest_conflict_cluster_fraction": {
+          "mean": -0.008384863094320627,
+          "p95": -0.007417342803521354,
+          "max": 0.0
+        }
+      },
+      "paired_vs_retrained_control": {
+        "weighted_Q_delta": -0.003617281154407719,
+        "case_bootstrap95_Q_delta": [
+          -0.015779762321998334,
+          0.009650284890377009
+        ],
+        "mean_seconds_delta": 0.008610452000284567,
+        "case_bootstrap95_mean_seconds_delta": [
+          -0.010275933453778271,
+          0.026180429601960348
+        ],
+        "Q_better_equal_worse": [
+          313,
+          35,
+          152
+        ],
+        "largest_absolute_weighted_contributions": [
+          {
+            "index": 462,
+            "member": [
+              "worker_17/layouts_2576.th",
+              59
+            ],
+            "n": 117,
+            "Q_delta": 0.3703210079163963,
+            "weighted_contribution": 0.004621778151163672
+          },
+          {
+            "index": 37,
+            "member": [
+              "worker_13/layouts_6160.th",
+              85
+            ],
+            "n": 115,
+            "Q_delta": -0.2680453705669439,
+            "weighted_contribution": -0.0028317613025666227
+          },
+          {
+            "index": 83,
+            "member": [
+              "worker_91/layouts_1120.th",
+              49
+            ],
+            "n": 111,
+            "Q_delta": 0.29245014716103634,
+            "weighted_contribution": 0.002213784532026643
+          },
+          {
+            "index": 447,
+            "member": [
+              "worker_4/layouts_5264.th",
+              107
+            ],
+            "n": 119,
+            "Q_delta": -0.10812693283531383,
+            "weighted_contribution": -0.0015942155570242932
+          },
+          {
+            "index": 456,
+            "member": [
+              "worker_65/layouts_6720.th",
+              90
+            ],
+            "n": 116,
+            "Q_delta": -0.11103162009400958,
+            "weighted_contribution": -0.0012749296325247144
+          }
+        ],
+        "uncertainty_limit": "Paired case bootstrap measures case sampling only, not timed-solver run variability or training-seed uncertainty."
+      },
+      "paired_vs_initial_E25": {
+        "weighted_Q_delta": -0.02438501341169153,
+        "case_bootstrap95_Q_delta": [
+          -0.07230862310346706,
+          0.005236987005730825
+        ],
+        "mean_seconds_delta": -0.0008107966019306332,
+        "case_bootstrap95_mean_seconds_delta": [
+          -0.02401307678101584,
+          0.020646681725600483
+        ],
+        "Q_better_equal_worse": [
+          311,
+          33,
+          156
+        ],
+        "largest_absolute_weighted_contributions": [
+          {
+            "index": 21,
+            "member": [
+              "worker_17/layouts_6608.th",
+              68
+            ],
+            "n": 120,
+            "Q_delta": -1.2120090246362525,
+            "weighted_contribution": -0.019422727606133637
+          },
+          {
+            "index": 462,
+            "member": [
+              "worker_17/layouts_2576.th",
+              59
+            ],
+            "n": 117,
+            "Q_delta": 0.3703210079163963,
+            "weighted_contribution": 0.004621778151163672
+          },
+          {
+            "index": 37,
+            "member": [
+              "worker_13/layouts_6160.th",
+              85
+            ],
+            "n": 115,
+            "Q_delta": -0.2680453705669439,
+            "weighted_contribution": -0.0028317613025666227
+          },
+          {
+            "index": 83,
+            "member": [
+              "worker_91/layouts_1120.th",
+              49
+            ],
+            "n": 111,
+            "Q_delta": 0.29245014716103634,
+            "weighted_contribution": 0.002213784532026643
+          },
+          {
+            "index": 398,
+            "member": [
+              "worker_63/layouts_8624.th",
+              63
+            ],
+            "n": 114,
+            "Q_delta": -0.21012808139102068,
+            "weighted_contribution": -0.002042401966881539
+          }
+        ],
+        "uncertainty_limit": "Paired case bootstrap measures case sampling only, not timed-solver run variability or training-seed uncertainty."
+      },
+      "paired_vs_completed_arms": {
+        "base96x4": {
+          "weighted_Q_delta": -0.003617281154407719,
+          "case_bootstrap95_Q_delta": [
+            -0.015779762321998334,
+            0.009650284890377009
+          ],
+          "mean_seconds_delta": 0.008610452000284567,
+          "case_bootstrap95_mean_seconds_delta": [
+            -0.010275933453778271,
+            0.026180429601960348
+          ],
+          "Q_better_equal_worse": [
+            313,
+            35,
+            152
+          ],
+          "largest_absolute_weighted_contributions": [
+            {
+              "index": 462,
+              "member": [
+                "worker_17/layouts_2576.th",
+                59
+              ],
+              "n": 117,
+              "Q_delta": 0.3703210079163963,
+              "weighted_contribution": 0.004621778151163672
+            },
+            {
+              "index": 37,
+              "member": [
+                "worker_13/layouts_6160.th",
+                85
+              ],
+              "n": 115,
+              "Q_delta": -0.2680453705669439,
+              "weighted_contribution": -0.0028317613025666227
+            },
+            {
+              "index": 83,
+              "member": [
+                "worker_91/layouts_1120.th",
+                49
+              ],
+              "n": 111,
+              "Q_delta": 0.29245014716103634,
+              "weighted_contribution": 0.002213784532026643
+            },
+            {
+              "index": 447,
+              "member": [
+                "worker_4/layouts_5264.th",
+                107
+              ],
+              "n": 119,
+              "Q_delta": -0.10812693283531383,
+              "weighted_contribution": -0.0015942155570242932
+            },
+            {
+              "index": 456,
+              "member": [
+                "worker_65/layouts_6720.th",
+                90
+              ],
+              "n": 116,
+              "Q_delta": -0.11103162009400958,
+              "weighted_contribution": -0.0012749296325247144
+            }
+          ],
+          "uncertainty_limit": "Paired case bootstrap measures case sampling only, not timed-solver run variability or training-seed uncertainty."
+        },
+        "deep96x8": {
+          "weighted_Q_delta": -4.6475828343019615e-05,
+          "case_bootstrap95_Q_delta": [
+            -0.012572650654660162,
+            0.014547959677687083
+          ],
+          "mean_seconds_delta": 0.017272933206520975,
+          "case_bootstrap95_mean_seconds_delta": [
+            0.003105039070622297,
+            0.032419823297829116
+          ],
+          "Q_better_equal_worse": [
+            272,
+            42,
+            186
+          ],
+          "largest_absolute_weighted_contributions": [
+            {
+              "index": 462,
+              "member": [
+                "worker_17/layouts_2576.th",
+                59
+              ],
+              "n": 117,
+              "Q_delta": 0.39811695108148215,
+              "weighted_contribution": 0.004968684429946493
+            },
+            {
+              "index": 447,
+              "member": [
+                "worker_4/layouts_5264.th",
+                107
+              ],
+              "n": 119,
+              "Q_delta": -0.20466328313163307,
+              "weighted_contribution": -0.00301754041629077
+            },
+            {
+              "index": 83,
+              "member": [
+                "worker_91/layouts_1120.th",
+                49
+              ],
+              "n": 111,
+              "Q_delta": 0.29855292460995675,
+              "weighted_contribution": 0.0022599812409357404
+            },
+            {
+              "index": 37,
+              "member": [
+                "worker_13/layouts_6160.th",
+                85
+              ],
+              "n": 115,
+              "Q_delta": -0.12535570849516864,
+              "weighted_contribution": -0.0013243185048173983
+            },
+            {
+              "index": 21,
+              "member": [
+                "worker_17/layouts_6608.th",
+                68
+              ],
+              "n": 120,
+              "Q_delta": 0.07605813067759448,
+              "weighted_contribution": 0.001218849302566858
+            }
+          ],
+          "uncertainty_limit": "Paired case bootstrap measures case sampling only, not timed-solver run variability or training-seed uncertainty."
+        },
+        "wide160x4": {
+          "weighted_Q_delta": -0.007529197226563157,
+          "case_bootstrap95_Q_delta": [
+            -0.022696046024509333,
+            0.007295163071401161
+          ],
+          "mean_seconds_delta": 0.0031117422026582064,
+          "case_bootstrap95_mean_seconds_delta": [
+            -0.020785093128017615,
+            0.026262838654610078
+          ],
+          "Q_better_equal_worse": [
+            318,
+            27,
+            155
+          ],
+          "largest_absolute_weighted_contributions": [
+            {
+              "index": 462,
+              "member": [
+                "worker_17/layouts_2576.th",
+                59
+              ],
+              "n": 117,
+              "Q_delta": 0.37023534793398505,
+              "weighted_contribution": 0.004620709074803772
+            },
+            {
+              "index": 392,
+              "member": [
+                "worker_71/layouts_5600.th",
+                49
+              ],
+              "n": 117,
+              "Q_delta": -0.33503349899650914,
+              "weighted_contribution": -0.004181373652773056
+            },
+            {
+              "index": 83,
+              "member": [
+                "worker_91/layouts_1120.th",
+                49
+              ],
+              "n": 111,
+              "Q_delta": 0.3108056005233153,
+              "weighted_contribution": 0.002352731354677323
+            },
+            {
+              "index": 447,
+              "member": [
+                "worker_4/layouts_5264.th",
+                107
+              ],
+              "n": 119,
+              "Q_delta": -0.1409973071357702,
+              "weighted_contribution": -0.0020788539417532143
+            },
+            {
+              "index": 268,
+              "member": [
+                "worker_6/layouts_5040.th",
+                93
+              ],
+              "n": 119,
+              "Q_delta": -0.0803005090407114,
+              "weighted_contribution": -0.0011839448081325987
+            }
+          ],
+          "uncertainty_limit": "Paired case bootstrap measures case sampling only, not timed-solver run variability or training-seed uncertainty."
+        }
+      }
+    },
+    "wide160x4": {
+      "training": {
+        "status": "early_stop",
+        "elapsed_seconds": 1690.6823218000354,
+        "steps": 21000,
+        "epochs": 42,
+        "best_epoch": 39,
+        "best_proxy": 0.5786315903663636,
+        "full_dev_complete": false,
+        "postprocessing_calls": 0,
+        "test_read": false,
+        "tail_test_read": false,
+        "implementation_check": false,
+        "final_postprocessed_Q": "not run; one frozen best assessment is a separate stage"
+      },
+      "frozen": {
+        "checkpoint": "experiments/E38_model_architecture/runs/20261022_capacity_wide160x4_seed0/checkpoints/best.pt",
+        "checkpoint_sha256": "bd74a5d3b4e1238767531e6b708bef6428491afcfba662571a418455b5db6296",
+        "model_config": {
+          "width": 160,
+          "layers": 4
+        },
+        "registry_sha256": "1409ccf825b9c7cae1097a22e8dc4068e1283d79541c85ce54c5627d0c2b4208",
+        "sources": {
+          "datasets/__init__.py": "03c36f364366be6c8a5091d6bd3dbec0788d7871747acdeac5fa89d4974cec21",
+          "datasets/cases.py": "1fd51addaaae38164c22f1946712665beebac700054db4bb07ed4f9d44e0b168",
+          "datasets/paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+          "datasets/public_member_inputs.py": "6d525fa963d098051648b01d6bc75fb8a032dd5746529fb3c750afe2b5e8bb09",
+          "datasets/quality_layouts.py": "94f374fa9562770a9c7deadb645d73c3af1fc1a20251f98f1dce4ac575820191",
+          "datasets/reference_layouts.py": "f6aeeba298a163b7d506c67e3fba024cd3a191c3aae1116fc6b5d294431db9b5",
+          "datasets/worksets.py": "013087151ab8e1195d7d2757e777839f521486425eeaff4c45fed4e370df233c",
+          "docs/protocol.md": "f31a4e394df17e816b108e8cff21e7459c79dc50098c22fdf032688a85e106ec",
+          "experiments/E38_model_architecture/__init__.py": "5ba93f9e1f88e569fc9974a901f962d585b3b17a4822f1dc0ddb9b2d3c6ee3de",
+          "experiments/E38_model_architecture/analyze.py": "7920e111a2a3fde175d7996ea669f31c730ec4f102f23e400a55555551672ee5",
+          "experiments/E38_model_architecture/arms.py": "b15f53120396b4fafa735ba5bec1acbb87e2cee93c07d1d6179dd233c98e2ff3",
+          "experiments/E38_model_architecture/backend/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "experiments/E38_model_architecture/backend/conic_geometry.py": "0b1a0295426c37a61f4abc13946b5dadf2c6f107375a02890e90ffe404be40e4",
+          "experiments/E38_model_architecture/backend/frozen/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "experiments/E38_model_architecture/backend/frozen/canonical_geometry.py": "04924bc4150f82862ed4da6cb67fc08779bbf98fcf24e24abd41b1c64d4e2521",
+          "experiments/E38_model_architecture/backend/frozen/feasible.py": "9cfe70894d80fbe54ccaa1c3de60ef4ab111ac9b4472286d1ae6a0c5a1fdc756",
+          "experiments/E38_model_architecture/backend/frozen/global_refine.py": "088021ede3290fcd6cf60726a054f7958309e4267d4353a699b80697078ab716",
+          "experiments/E38_model_architecture/backend/frozen/packing.py": "3c0500b7fee120807e6bd3fa8e9f115e476782af1a3e7620859c6651a089ef30",
+          "experiments/E38_model_architecture/backend/frozen/postprocess.py": "da0e1572a822a589968a19e67e2d36dd5133c7d17b7ea9443bd743ee4653a272",
+          "experiments/E38_model_architecture/backend/frozen/shape_lp.py": "2988df542aa80602f091963e1506da8085152ea0eca4846f6dc6c0a25ef13c94",
+          "experiments/E38_model_architecture/backend/frozen/solver.py": "cb5b0b6af3b8511d8a21b14178be188e31c61b58cba065c8c23847c2f9200325",
+          "experiments/E38_model_architecture/backend/frozen/topology_mip.py": "e392857196dbde4b3c1f3668862c9779e9c686f17ca89a820078421573b46df5",
+          "experiments/E38_model_architecture/backend/guard.py": "4e4adfb1dedede451a4d530103681f97ca6c05516e2dbe96b84d63c136faa87f",
+          "experiments/E38_model_architecture/backend/observe.py": "6fb401b9a7ebccec7063de8e9feeaf28bee310ac8a39b221b78d40e438432ec3",
+          "experiments/E38_model_architecture/backend/optimizer.py": "6373f5e7477f528e09e599c9a478b712bfbeb0ec29037bed1595d8c82af2ca36",
+          "experiments/E38_model_architecture/backend/reduction.py": "4587a5c9c486c59719e76ef64396398edb92e6011d8c0c0cd4f538cad52c4b50",
+          "experiments/E38_model_architecture/backend/rescue.py": "b928986f58fb3215140fe05acc36ddde92ce7aad99197fb2a975b7743a8c2e59",
+          "experiments/E38_model_architecture/backend/robust.py": "ceea8f18d0e2979279f4cf711b7702436912fbae77095d9559e603401176c99b",
+          "experiments/E38_model_architecture/backend/selection.py": "c21486a437531fed9a6717bcde6ce2ca062153ea717f9ae135b5b72e05500350",
+          "experiments/E38_model_architecture/backend/stable.py": "dc5a1e0afbec79e33f1ca6603a7d3186045a52ccc543ac756b508dbf8159bcce",
+          "experiments/E38_model_architecture/batches.py": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92",
+          "experiments/E38_model_architecture/cache.py": "a527b8f098383b24ce20e7f1b09b740a4524ba731ac04ed3342b4a1e127936d0",
+          "experiments/E38_model_architecture/canonical.py": "57a3738b35d16a091a250f4bac36bdcef5f7edeec6e084e103ecb6e9967eac2d",
+          "experiments/E38_model_architecture/canonical_native.py": "469ed606532daa9750bb9dd6c98e0f79c27e246bf79ca4e89d483f0b6920e5eb",
+          "experiments/E38_model_architecture/canonical_py.py": "b5b99c1f77756aa318fe5cb0e7fa82935844752b4fa815ab80367adb34e00195",
+          "experiments/E38_model_architecture/certify_polish.py": "7148ff8dd958d5b8ecd2adbcd29ead999904b185ad12c77ffcdc0e7ec1f31462",
+          "experiments/E38_model_architecture/check.py": "b4a54efaefceb99c2989f9a6e21f8f2f49fc8a2817ddd970bef6098ea0555dac",
+          "experiments/E38_model_architecture/data.py": "f42fed522beb7e3c69c43ec991d257245eafc48faeb7800316dd4e4fbd5b28cb",
+          "experiments/E38_model_architecture/diagnostics.py": "095bd88919541c7247d1f105a1f371be63d9287b755b3d3972e2b1fa55f6d4e0",
+          "experiments/E38_model_architecture/fast_geometry.py": "3c15f72702b0581d8ee1a68fa321543837c1e1322ead00eb4d259c90125b1377",
+          "experiments/E38_model_architecture/features.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+          "experiments/E38_model_architecture/final.py": "2ad586307d148054c6ad260b17644191d860bd452af3a56e753e5aed8aec828c",
+          "experiments/E38_model_architecture/freeze.py": "0eee5b40d537abc4fb4880a8173d7b92e39e3dbfaefdac8b30939289adf79227",
+          "experiments/E38_model_architecture/inference.py": "b202f111d9b5feeb5f3ccbc473fb29e732d8088c5fb43472ab7d49f445378838",
+          "experiments/E38_model_architecture/io.py": "2291a69c6306f5629a2f03dd314fc699d02ea58355f0967a37a9c888e62ec038",
+          "experiments/E38_model_architecture/launch.ps1": "fbdad5430b9325b62f16e2aedb8447c2561ed6bec9b8ad62a44ec15c08509c66",
+          "experiments/E38_model_architecture/legal_seed.py": "c5adf19f570678ba721dd1bc7ca888d2af41cf8148b68a3320903ca82083bfc9",
+          "experiments/E38_model_architecture/loss.py": "14b18ef89e62f731c23ebf0efa9ca98829fecc7ecf9b0b721782df8c37f62771",
+          "experiments/E38_model_architecture/losses.py": "f6503136dc719f6742c66b31da7ebe1076726fac38edb64fa9ae6106ab9d6557",
+          "experiments/E38_model_architecture/model.py": "b8a85ffdc181f67c89b30ac7a8b79e26170803e4c5ddb18fa8d47e33ac3be5ab",
+          "experiments/E38_model_architecture/occupancy.py": "ca5c7fa041d427d88594afac3fbaa5eaf71641367cf42128ba2a1b47a043bdc0",
+          "experiments/E38_model_architecture/pipeline.py": "198e8f7e3ba69bfe4c441a7cea3b80843e8cec09bd22d26773fa99121875a197",
+          "experiments/E38_model_architecture/projection.py": "591f9bfbdf099b12dd9cd36f936e7c1f267b86456c67958c3957aa0ddc9d9028",
+          "experiments/E38_model_architecture/provenance.json": "abe8b7592587b9ccaba8a7edff4f70c18b39868ef0854244574a8de3a94eb2c6",
+          "experiments/E38_model_architecture/requirements-native.txt": "eddfdc929bf37a85b9b17d7c68af80a8ec5138dd8585c1afe0efc312435473b6",
+          "experiments/E38_model_architecture/solver.py": "13efe19cdb44ebd13e36d4d8d5ce44b0f9801f469e070981bc8be3354e9ecef6",
+          "experiments/E38_model_architecture/train.py": "0100e00de9b81238ca6edfcbbbbf2db81a3be0a5a83c04c8d5937168d9b752cd",
+          "scoring/__init__.py": "933bf2be947e20bae164511f26afaa84c2f331d0dbdebc417d235db8358a9247",
+          "scoring/checks.py": "738f6b57e20dce58516f3f10d83689f8df273a84a02b2dce99c6ccc1f904763a",
+          "scoring/evaluation.py": "356e0d1c788c6f25154b33fb1c2455388317d2cc0dd96ca50d7357c58612c611",
+          "scoring/official.py": "478fbc228a56ec4b336b5d8687a44b22b749f30aae09372f57c08e7124270e03",
+          "third_party/FloorSet/cost.py": "b60561556f79aa41c196c8fcaddea57840aab41059c76dbc3f80b4fdde6b48c3",
+          "third_party/FloorSet/iccad2026contest/iccad2026_evaluate.py": "64db37865b42baf11add62bdbf035690dca086cd4be7b5b4e58db756f20d8498",
+          "third_party/FloorSet/utils.py": "9299d9257f5bd932001896307f2296b51cc5567f44150db5514f357ed93c121e"
+        },
+        "baseline": false,
+        "count": 500,
+        "panel": "v5 dev_monitor500",
+        "workers": 2,
+        "threads_per_worker": 2,
+        "selection": "E17 arithmetic geometry+occupancy; no terminal-Q selection",
+        "implementation_check": false,
+        "test_read": false
+      },
+      "full_dev": {
+        "total": 0.4198354082107544,
+        "mse": 0.06064622136950493,
+        "center_mse": 0.0021498426869511604,
+        "shape_mse": 0.1902791428565979,
+        "center_local": 0.2015240466594696,
+        "shape": 0.1902791428565979,
+        "relative_local": 0.2586133651733398,
+        "overlap": 0.10435356724262237,
+        "contact": 0.10070498710870743,
+        "boundary": 0.009590980760753156,
+        "mib": 0.011341985359787941,
+        "bbox": 0.00027014442265499384,
+        "local": 0.3137471752166748,
+        "geometry": 0.41983541345596315,
+        "overlap_area": 0.10720377743244171,
+        "crowding": 0.01950832453370094,
+        "void": 0.1576651465892792,
+        "compactness": 0.001620669317431748,
+        "occupancy": 0.1517402446269989,
+        "repair": 0.571575662612915,
+        "supervision": 0.3137471752166748,
+        "quality_proxy": 0.41983541345596315,
+        "selection_proxy": 0.571575662612915,
+        "batched_inference_seconds_per_case": 0.008655538849940058,
+        "count": 2000,
+        "raw_hard_legal": 0,
+        "raw_hard_legal_rate": 0.0,
+        "draft_diagnostics": {
+          "overlap_pairs": {
+            "mean": 81.145,
+            "p95": 135.0,
+            "max": 157.0
+          },
+          "overlap_area_fraction": {
+            "mean": 0.10720378304389089,
+            "p95": 0.174937609299784,
+            "max": 0.25808953527627
+          },
+          "penetration_squared_per_block": {
+            "mean": 0.0500798629254918,
+            "p95": 0.09834136878891807,
+            "max": 0.16590345640967089
+          },
+          "max_local_penetration": {
+            "mean": 0.6007520281497517,
+            "p95": 0.8185619207018987,
+            "max": 0.9604751861847175
+          },
+          "largest_conflict_cluster": {
+            "mean": 57.1675,
+            "p95": 101.0,
+            "max": 117.0
+          },
+          "largest_conflict_cluster_fraction": {
+            "mean": 0.8125742172344189,
+            "p95": 0.9615384615384616,
+            "max": 1.0
+          }
+        }
+      },
+      "best_monitor": {
+        "total": 0.4246520667076111,
+        "mse": 0.06086257180571556,
+        "center_mse": 0.0022070057820528744,
+        "shape_mse": 0.1907370548248291,
+        "center_local": 0.2032132180929184,
+        "shape": 0.1907370548248291,
+        "relative_local": 0.25973679280281065,
+        "overlap": 0.10586775487661362,
+        "contact": 0.10467450827360153,
+        "boundary": 0.009432039469480515,
+        "mib": 0.011666379176080226,
+        "bbox": 0.0002461436660960317,
+        "local": 0.31583167624473574,
+        "geometry": 0.4246520712375641,
+        "overlap_area": 0.10895600473880768,
+        "crowding": 0.0203407841026783,
+        "void": 0.15879492032527923,
+        "compactness": 0.0015971841914579272,
+        "occupancy": 0.15397950768470764,
+        "repair": 0.5786315903663636,
+        "supervision": 0.31583167624473574,
+        "quality_proxy": 0.4246520712375641,
+        "count": 500,
+        "selection_proxy": 0.5786315903663636,
+        "raw_hard_legal": 0,
+        "raw_hard_legal_rate": 0.0,
+        "batched_inference_seconds_per_case": 0.0006863244003616273,
+        "draft_diagnostics": {
+          "overlap_pairs": {
+            "mean": 81.13,
+            "p95": 135.0,
+            "max": 157.0
+          },
+          "overlap_area_fraction": {
+            "mean": 0.10895597776963438,
+            "p95": 0.1827956828896772,
+            "max": 0.256305906711883
+          },
+          "penetration_squared_per_block": {
+            "mean": 0.050796493115760614,
+            "p95": 0.10132292872007725,
+            "max": 0.15472091867628862
+          },
+          "max_local_penetration": {
+            "mean": 0.6088536245987076,
+            "p95": 0.8333546437096033,
+            "max": 0.9254357175405247
+          },
+          "largest_conflict_cluster": {
+            "mean": 57.106,
+            "p95": 101.04999999999995,
+            "max": 111.0
+          },
+          "largest_conflict_cluster_fraction": {
+            "mean": 0.8139641173124289,
+            "p95": 0.9655559860519178,
+            "max": 1.0
+          }
+        }
+      },
+      "best_train_monitor": {
+        "total": 0.3499272780418396,
+        "mse": 0.05518950107693672,
+        "center_mse": 0.001466484789736569,
+        "shape_mse": 0.17412530434131623,
+        "center_local": 0.17269115459918977,
+        "shape": 0.17412530434131623,
+        "relative_local": 0.22819956350326537,
+        "overlap": 0.08725269329547881,
+        "contact": 0.059789849400520324,
+        "boundary": 0.007779871311038733,
+        "mib": 0.011690101467072963,
+        "bbox": 0.0001964501756010577,
+        "local": 0.27327237033843993,
+        "geometry": 0.3499272677898407,
+        "overlap_area": 0.1008583322763443,
+        "crowding": 0.012330655291676521,
+        "void": 0.15141653430461882,
+        "compactness": 0.0014335865071043372,
+        "occupancy": 0.14201017022132872,
+        "repair": 0.491937433719635,
+        "supervision": 0.27327237033843993,
+        "quality_proxy": 0.3499272677898407,
+        "count": 500,
+        "selection_proxy": 0.491937433719635,
+        "raw_hard_legal": 0,
+        "raw_hard_legal_rate": 0.0,
+        "batched_inference_seconds_per_case": 0.00068911839928478,
+        "draft_diagnostics": {
+          "overlap_pairs": {
+            "mean": 81.698,
+            "p95": 136.04999999999995,
+            "max": 149.0
+          },
+          "overlap_area_fraction": {
+            "mean": 0.10085834091327033,
+            "p95": 0.1568768754242542,
+            "max": 0.21567824321569296
+          },
+          "penetration_squared_per_block": {
+            "mean": 0.04271623289324366,
+            "p95": 0.07699693429518668,
+            "max": 0.12205176049922649
+          },
+          "max_local_penetration": {
+            "mean": 0.5595038972602151,
+            "p95": 0.8045060566218608,
+            "max": 0.9083172760810869
+          },
+          "largest_conflict_cluster": {
+            "mean": 57.068,
+            "p95": 101.0,
+            "max": 110.0
+          },
+          "largest_conflict_cluster_fraction": {
+            "mean": 0.8198706735481553,
+            "p95": 0.960551948051948,
+            "max": 1.0
+          }
+        }
+      },
+      "common_epoch42": {
+        "epoch": 42,
+        "train_proxy": 0.48745036220550536,
+        "dev_proxy": 0.578667754650116
+      },
+      "terminal": {
+        "count": 500,
+        "hard_legal": 500,
+        "mean_Q": 1.0623447644420463,
+        "weighted_Q": 1.0443130386085109,
+        "p95_Q": 1.2232504813574396,
+        "max_Q": 1.9552463931889523,
+        "worst5pct_mean_Q": 1.3529056163969322,
+        "seconds_mean": 0.2698868797987234,
+        "seconds_p95": 0.6804547400388401,
+        "row_fallbacks": 0,
+        "rescue_cases": 11,
+        "errors": 0,
+        "hpwl_gap_mean_returned": 0.028795130628837047,
+        "area_gap_mean_returned": 0.03296856093090968,
+        "boundary_violations_mean_returned": 0.314,
+        "grouping_violations_mean_returned": 0.298,
+        "mib_violations_mean_returned": 0.0,
+        "inference_seconds_mean_returned": 0.025940923996502534,
+        "postprocess_seconds_mean_returned": 0.24380457279738038,
+        "mean_center_move_local_mean_returned": 0.5066585945573383,
+        "max_center_move_local_mean_returned": 2.096686886916136
+      },
+      "full_dev_relative_vs_control": {
+        "total": -0.005927285805636617,
+        "mse": -0.016916991833505146,
+        "center_mse": -0.009894439075569528,
+        "shape_mse": -0.017282869863939454,
+        "center_local": -0.014102513196230015,
+        "shape": -0.017282869863939454,
+        "relative_local": -0.011582346769650198,
+        "overlap": 0.030539136192437644,
+        "contact": 0.005904022836049405,
+        "boundary": 0.05975293354528244,
+        "mib": -0.00540335447672502,
+        "bbox": 0.11363985827924128,
+        "local": -0.014068267919937871,
+        "geometry": -0.005927278436764438,
+        "overlap_area": -0.002746500521577544,
+        "crowding": 0.09845211038397705,
+        "void": -0.004301918161859097,
+        "compactness": 0.013438989249786815,
+        "occupancy": -0.00016604026746624978,
+        "repair": -0.00440426144206707,
+        "supervision": -0.014068267919937871,
+        "quality_proxy": -0.005927278436764438,
+        "selection_proxy": -0.00440426144206707,
+        "batched_inference_seconds_per_case": 0.01581527084734624,
+        "count": 0.0
+      },
+      "raw_draft_relative_vs_control": {
+        "overlap_pairs": {
+          "mean": -0.006872158273821705,
+          "p95": -0.007352941176470562,
+          "max": -0.054216867469879526
+        },
+        "overlap_area_fraction": {
+          "mean": -0.0027465735480599607,
+          "p95": 0.0060275068270432275,
+          "max": 0.005932459085402408
+        },
+        "penetration_squared_per_block": {
+          "mean": 0.022933091445727083,
+          "p95": 0.042048655240459754,
+          "max": 0.06556336711668553
+        },
+        "max_local_penetration": {
+          "mean": 0.01380067047208211,
+          "p95": 0.002553232600681188,
+          "max": 0.03438118729817807
+        },
+        "largest_conflict_cluster": {
+          "mean": -0.026604801634598996,
+          "p95": -0.009803921568627416,
+          "max": 0.026315789473684292
+        },
+        "largest_conflict_cluster_fraction": {
+          "mean": -0.02296906605161375,
+          "p95": -0.0028653439610323295,
+          "max": 0.0
+        }
+      },
+      "paired_vs_retrained_control": {
+        "weighted_Q_delta": 0.00391191607215544,
+        "case_bootstrap95_Q_delta": [
+          -0.007860275837467979,
+          0.017190481436017542
+        ],
+        "mean_seconds_delta": 0.005498709797626361,
+        "case_bootstrap95_mean_seconds_delta": [
+          -0.013937449708004715,
+          0.02605938881803301
+        ],
+        "Q_better_equal_worse": [
+          237,
+          27,
+          236
+        ],
+        "largest_absolute_weighted_contributions": [
+          {
+            "index": 392,
+            "member": [
+              "worker_71/layouts_5600.th",
+              49
+            ],
+            "n": 117,
+            "Q_delta": 0.33231537913492026,
+            "weighted_contribution": 0.004147450254640127
+          },
+          {
+            "index": 37,
+            "member": [
+              "worker_13/layouts_6160.th",
+              85
+            ],
+            "n": 115,
+            "Q_delta": -0.2670136792212452,
+            "weighted_contribution": -0.0028208620147976786
+          },
+          {
+            "index": 21,
+            "member": [
+              "worker_17/layouts_6608.th",
+              68
+            ],
+            "n": 120,
+            "Q_delta": -0.09501451688703932,
+            "weighted_contribution": -0.0015226298176114672
+          },
+          {
+            "index": 398,
+            "member": [
+              "worker_63/layouts_8624.th",
+              63
+            ],
+            "n": 114,
+            "Q_delta": 0.1322406040715054,
+            "weighted_contribution": 0.001285351620160879
+          },
+          {
+            "index": 456,
+            "member": [
+              "worker_65/layouts_6720.th",
+              90
+            ],
+            "n": 116,
+            "Q_delta": -0.10996150077723077,
+            "weighted_contribution": -0.0012626419001999655
+          }
+        ],
+        "uncertainty_limit": "Paired case bootstrap measures case sampling only, not timed-solver run variability or training-seed uncertainty."
+      },
+      "paired_vs_initial_E25": {
+        "weighted_Q_delta": -0.016855816185128363,
+        "case_bootstrap95_Q_delta": [
+          -0.06329315923958981,
+          0.01235741580480746
+        ],
+        "mean_seconds_delta": -0.00392253880458884,
+        "case_bootstrap95_mean_seconds_delta": [
+          -0.025665263682033403,
+          0.018493689486844208
+        ],
+        "Q_better_equal_worse": [
+          238,
+          26,
+          236
+        ],
+        "largest_absolute_weighted_contributions": [
+          {
+            "index": 21,
+            "member": [
+              "worker_17/layouts_6608.th",
+              68
+            ],
+            "n": 120,
+            "Q_delta": -1.253664827820622,
+            "weighted_contribution": -0.020090271578182474
+          },
+          {
+            "index": 392,
+            "member": [
+              "worker_71/layouts_5600.th",
+              49
+            ],
+            "n": 117,
+            "Q_delta": 0.33231537913492026,
+            "weighted_contribution": 0.004147450254640127
+          },
+          {
+            "index": 37,
+            "member": [
+              "worker_13/layouts_6160.th",
+              85
+            ],
+            "n": 115,
+            "Q_delta": -0.2670136792212452,
+            "weighted_contribution": -0.0028208620147976786
+          },
+          {
+            "index": 456,
+            "member": [
+              "worker_65/layouts_6720.th",
+              90
+            ],
+            "n": 116,
+            "Q_delta": -0.10996150077723077,
+            "weighted_contribution": -0.0012626419001999655
+          },
+          {
+            "index": 228,
+            "member": [
+              "worker_88/layouts_0.th",
+              90
+            ],
+            "n": 120,
+            "Q_delta": 0.07764393730825425,
+            "weighted_contribution": 0.0012442622240857791
+          }
+        ],
+        "uncertainty_limit": "Paired case bootstrap measures case sampling only, not timed-solver run variability or training-seed uncertainty."
+      },
+      "paired_vs_completed_arms": {
+        "base96x4": {
+          "weighted_Q_delta": 0.00391191607215544,
+          "case_bootstrap95_Q_delta": [
+            -0.007860275837467979,
+            0.017190481436017542
+          ],
+          "mean_seconds_delta": 0.005498709797626361,
+          "case_bootstrap95_mean_seconds_delta": [
+            -0.013937449708004715,
+            0.02605938881803301
+          ],
+          "Q_better_equal_worse": [
+            237,
+            27,
+            236
+          ],
+          "largest_absolute_weighted_contributions": [
+            {
+              "index": 392,
+              "member": [
+                "worker_71/layouts_5600.th",
+                49
+              ],
+              "n": 117,
+              "Q_delta": 0.33231537913492026,
+              "weighted_contribution": 0.004147450254640127
+            },
+            {
+              "index": 37,
+              "member": [
+                "worker_13/layouts_6160.th",
+                85
+              ],
+              "n": 115,
+              "Q_delta": -0.2670136792212452,
+              "weighted_contribution": -0.0028208620147976786
+            },
+            {
+              "index": 21,
+              "member": [
+                "worker_17/layouts_6608.th",
+                68
+              ],
+              "n": 120,
+              "Q_delta": -0.09501451688703932,
+              "weighted_contribution": -0.0015226298176114672
+            },
+            {
+              "index": 398,
+              "member": [
+                "worker_63/layouts_8624.th",
+                63
+              ],
+              "n": 114,
+              "Q_delta": 0.1322406040715054,
+              "weighted_contribution": 0.001285351620160879
+            },
+            {
+              "index": 456,
+              "member": [
+                "worker_65/layouts_6720.th",
+                90
+              ],
+              "n": 116,
+              "Q_delta": -0.10996150077723077,
+              "weighted_contribution": -0.0012626419001999655
+            }
+          ],
+          "uncertainty_limit": "Paired case bootstrap measures case sampling only, not timed-solver run variability or training-seed uncertainty."
+        },
+        "deep96x8": {
+          "weighted_Q_delta": 0.007482721398220137,
+          "case_bootstrap95_Q_delta": [
+            -0.0021065371140768707,
+            0.01991427553669844
+          ],
+          "mean_seconds_delta": 0.014161191003862768,
+          "case_bootstrap95_mean_seconds_delta": [
+            -0.003659809842321556,
+            0.03507531364749881
+          ],
+          "Q_better_equal_worse": [
+            186,
+            28,
+            286
+          ],
+          "largest_absolute_weighted_contributions": [
+            {
+              "index": 392,
+              "member": [
+                "worker_71/layouts_5600.th",
+                49
+              ],
+              "n": 117,
+              "Q_delta": 0.333741636642231,
+              "weighted_contribution": 0.004165250610667214
+            },
+            {
+              "index": 398,
+              "member": [
+                "worker_63/layouts_8624.th",
+                63
+              ],
+              "n": 114,
+              "Q_delta": 0.14755189738174823,
+              "weighted_contribution": 0.0014341742590263022
+            },
+            {
+              "index": 37,
+              "member": [
+                "worker_13/layouts_6160.th",
+                85
+              ],
+              "n": 115,
+              "Q_delta": -0.12432401714946995,
+              "weighted_contribution": -0.0013134192170484542
+            },
+            {
+              "index": 228,
+              "member": [
+                "worker_88/layouts_0.th",
+                90
+              ],
+              "n": 120,
+              "Q_delta": 0.07792956940186113,
+              "weighted_contribution": 0.0012488395450767356
+            },
+            {
+              "index": 165,
+              "member": [
+                "worker_4/layouts_5264.th",
+                87
+              ],
+              "n": 119,
+              "Q_delta": -0.07063693593356524,
+              "weighted_contribution": -0.0010414657959209204
+            }
+          ],
+          "uncertainty_limit": "Paired case bootstrap measures case sampling only, not timed-solver run variability or training-seed uncertainty."
+        },
+        "deep96x12": {
+          "weighted_Q_delta": 0.007529197226563157,
+          "case_bootstrap95_Q_delta": [
+            -0.007295163071401169,
+            0.02269604602450933
+          ],
+          "mean_seconds_delta": -0.0031117422026582064,
+          "case_bootstrap95_mean_seconds_delta": [
+            -0.026262838654610095,
+            0.020785093128017598
+          ],
+          "Q_better_equal_worse": [
+            155,
+            27,
+            318
+          ],
+          "largest_absolute_weighted_contributions": [
+            {
+              "index": 462,
+              "member": [
+                "worker_17/layouts_2576.th",
+                59
+              ],
+              "n": 117,
+              "Q_delta": -0.37023534793398505,
+              "weighted_contribution": -0.004620709074803772
+            },
+            {
+              "index": 392,
+              "member": [
+                "worker_71/layouts_5600.th",
+                49
+              ],
+              "n": 117,
+              "Q_delta": 0.33503349899650914,
+              "weighted_contribution": 0.004181373652773056
+            },
+            {
+              "index": 83,
+              "member": [
+                "worker_91/layouts_1120.th",
+                49
+              ],
+              "n": 111,
+              "Q_delta": -0.3108056005233153,
+              "weighted_contribution": -0.002352731354677323
+            },
+            {
+              "index": 447,
+              "member": [
+                "worker_4/layouts_5264.th",
+                107
+              ],
+              "n": 119,
+              "Q_delta": 0.1409973071357702,
+              "weighted_contribution": 0.0020788539417532143
+            },
+            {
+              "index": 268,
+              "member": [
+                "worker_6/layouts_5040.th",
+                93
+              ],
+              "n": 119,
+              "Q_delta": 0.0803005090407114,
+              "weighted_contribution": 0.0011839448081325987
+            }
+          ],
+          "uncertainty_limit": "Paired case bootstrap measures case sampling only, not timed-solver run variability or training-seed uncertainty."
+        }
+      }
+    }
+  },
+  "source_sha256": {
+    "20261022_capacity_base96x4_seed0/terminal/results.json": "0a7e2e1b50b85ac10dac85bb318cd7e8e1b35ddc3a8456aa2d7fc2e16d8efaff",
+    "20261022_capacity_base96x4_seed0/results.json": "d6d8da5587eb5bca56895e31c478e2d8115c5cfb5c5ae7c1e30f7a5591129aec",
+    "20261022_capacity_base96x4_seed0/full_dev.json": "fc31814bc2877b1d808b0d59c043e0ae7ffc89af79865d2cc555cc65fb96bd49",
+    "20261022_capacity_base96x4_seed0/progress.json": "3913765c6646de5e3af872045cc6eb54a18b561c8e7ae7fbf6be1e87f8c23f80",
+    "20261022_capacity_base96x4_seed0/frozen.json": "9245ea6afd1430eb8fff66707cf9ff31f128f8f765e9ad03dc2e4e12898e6572",
+    "20261022_capacity_deep96x8_seed0/terminal/results.json": "8734f07b17cb4ee3feb4c26b1876b3d4a38b99cbd711f391d3a59d68aed573d7",
+    "20261022_capacity_deep96x8_seed0/results.json": "429a9c39b5e0f3202668356091665126a0200b2d1d8953124f8d4e314ec0f983",
+    "20261022_capacity_deep96x8_seed0/full_dev.json": "dda2fa7aa77b07fc5e9b04424c9276b91b25dd3f187c101e6013babaf549a3f1",
+    "20261022_capacity_deep96x8_seed0/progress.json": "bea006838db11939e0fadb0df0e06e76b9c1bbce1bf0a9884a54b60dd678ccd5",
+    "20261022_capacity_deep96x8_seed0/frozen.json": "a7b2b01ca651ad8acc768b59bd9a5aaa8b17f9976f909476f78eca5e965342c9",
+    "20261022_capacity_deep96x12_seed0/terminal/results.json": "24baad455aeb310ff1ed0559ebdddba1d901b1cc0938e20dec705eb29ab5044c",
+    "20261022_capacity_deep96x12_seed0/results.json": "0f16cddbd3d695193de143f72e5a8081b7f6d2a90ef63215de722e5103d971f2",
+    "20261022_capacity_deep96x12_seed0/full_dev.json": "04a5d55bd393ec1874953e66c68dd60983870475eb9dae9f3b402708d82f1828",
+    "20261022_capacity_deep96x12_seed0/progress.json": "6c04d1d59305e2836fafaa81921f46bb52150f8b51d11db74c18d5334acaf854",
+    "20261022_capacity_deep96x12_seed0/frozen.json": "85893e9cf1fa0f7d402ef84e470799c06be48a606aa7e60ac3d07cc2e3028308",
+    "20261022_capacity_wide160x4_seed0/terminal/results.json": "e52a7f689329b399d3b38536d90fb4125f69a1d4bc0ebc6c695a36b4bccd7277",
+    "20261022_capacity_wide160x4_seed0/results.json": "2644fb08325776ddb96c3b139224c1a5e85a5638f7294f01ee018fb0384a126d",
+    "20261022_capacity_wide160x4_seed0/full_dev.json": "7b1c2828e0294ece78a57ffd6ae4a095afcb0124300c443296ebf637a61c2772",
+    "20261022_capacity_wide160x4_seed0/progress.json": "ce9b02f0403f5b3da8adf064cb29ff4076b2f0d066fb9fcad25f1085ad5a21bf",
+    "20261022_capacity_wide160x4_seed0/frozen.json": "82713d8e033f623d4f7feed289215b4b4ba30261f0c5386f6a5176e812004128",
+    "20261022_capacity_e25_reference/terminal/results.json": "826a7a8f0720373d05b5cbeb5019329a470f9b0ba4835c1bb51c574b74cbf981"
+  },
+  "test_read": false,
+  "scope": "Seed0 adaptive development; completed-arm comparison only. No checkpoint selection from terminal Q.",
+  "limitations": [
+    "Complete all four capacity arms before selecting the next trunk.",
+    "Case bootstrap excludes timed-solver variability documented in same_model_runtime_variation.json.",
+    "A lower raw proxy does not establish that a lightweight repair can resolve every draft."
+  ]
+}

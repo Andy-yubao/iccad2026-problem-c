@@ -1,0 +1,101 @@
+{
+  "experiment": "E85_cooperative_space_refinement",
+  "registered_utc": "2026-10-30T03:04:53.599688+00:00",
+  "authorization": "2026-10-30 user: 先研究E74上的协同空间修正问题吧。你可以自行后台启动长训练。 Follow-up permits warm post-training and later from-scratch if valuable.",
+  "hypothesis": "Fixed bounded collective contact-pressure relaxation propagates collision pressure to nearby modules and improves weak-port/sparse spatial allocation beyond matched independent F81 continuation.",
+  "arms": [
+    "control",
+    "cooperative"
+  ],
+  "source": "Frozen E74 own-Loss best42",
+  "initial_F": "Same F81 own-Loss best26 in both arms; all 241547 F parameters trainable; no added parameters",
+  "changed_factor": "Eight simultaneous true pair-intersection area gradient steps following final F81 center proposal; four fixed backtracking scales; per-layout accept only smaller true area; no reference or new Loss.",
+  "data": "Existing frozen v6 nested32k; same v5 dev2000 and train/dev_monitor500; no data increase or member changes",
+  "loss": "Identical single-source E81 L=G+4I+5E+.25A; weights/normalization/functions fixed backward/monitoring/full-dev/selection",
+  "initial_function": "Control equals previously frozen E74+F81. Cooperative differs by operator at epoch0; measure immediate effect separately.",
+  "optimization": {
+    "seed": 0,
+    "batch_size": 32,
+    "precision": "FP32",
+    "optimizer": "AdamW",
+    "weight_decay": 0.0003,
+    "clip_norm": 1.0,
+    "lr_levels": [
+      0.001,
+      0.00025,
+      0.0001,
+      5e-05
+    ],
+    "lr_protection_epochs": 14,
+    "plateau": 3,
+    "min_delta": "max(1e-5,abs(best)*.001)",
+    "lowest_lr_min_completed_epochs": 2,
+    "max_epochs": 200
+  },
+  "budget": {
+    "max_new_training_candidates": 2,
+    "max_hours_per_arm": 2,
+    "max_new_training_seconds": 14400,
+    "previous_global_charged_seconds": 34604.39659300004,
+    "global_cap_seconds": 64800,
+    "preserve_all_historical_charges": true
+  },
+  "preflight_train_ids": [
+    1683,
+    10027,
+    5474,
+    18140,
+    25001
+  ],
+  "monitoring": "Original train/dev500 every epoch; train500 all old16k, do not mislabel added-half coverage",
+  "primary_analysis": [
+    "Same100 four-stage human draft inspection, no rating controls",
+    "Weak-port<=.3 and sparse at same exact N using existing E69 masks; no new thresholds",
+    "Full-dev overlap, original G, bbox, legality, no-port pair errors/order, displacement saturation",
+    "Paired same-worker uncertainty, counterexamples and negative results"
+  ],
+  "secondary_analysis": "One flash500 per new unique own-Loss best; never re-evaluate old terminals or choose by Q",
+  "frozen_operator_analysis": "Both arms epoch0 fixed500; cooperative and control zero-training full-dev raw diagnostics, no zero-training Q",
+  "comparison_limits": [
+    "Single seed adaptive development",
+    "Own-Loss selection/LR policy and operator may change training duration",
+    "Finite bounded true-area descent cannot guarantee successful global topology changes; complete containment can have a flat area gradient",
+    "Bounded relaxation cannot certify feasibility; report walls/saturation",
+    "No isolated from-scratch claim or new label correction"
+  ],
+  "stop_rule": "Stop after these two candidates; no automatic extra model/Loss search; failures stop controller",
+  "test_read": false,
+  "baseline_promoted": false,
+  "automation": "No scheduler change requested; detached controller completes authorized stages itself",
+  "preflight_revision": {
+    "registered_utc": "2026-10-30T03:10:19.911741+00:00",
+    "rejected_before_formal_training": "v1 unconditional constraints on near neighbours; 4/5 training cases overlap worsened, original metrics preserved",
+    "evidence": "runs/preflight_v1_unconditional_neighbor/results.json",
+    "mechanistic_correction": "Only actual collisions can exert forces, recalculate least-movement separation axes from current proposal at every step; no unconditional old-axis targets",
+    "no_Loss_or_parameter_change": true
+  },
+  "preflight_revision_v3": {
+    "registered_utc": "2026-10-30T03:13:28.531388+00:00",
+    "v2_rejected_before_formal_training": "Actual-collision penetration force still increased I in 4/5 cases",
+    "evidence": "runs/preflight_v2_penetration_force/results.json",
+    "mechanistic_correction": "Use analytic gradient of existing exact intersection I, plus predeclared powers-of-two backtracking and strict per-layout geometric acceptance; no Loss/parameter tuning",
+    "gradient": "Ordinary through selected coordinates/continuous analytic area gradient; no STE through branch decisions",
+    "containment_plateau_limitation": true,
+    "no_formal_weights_or_budget_reset": true
+  },
+  "operator_step_normalization": "Divide analytic area gradient by valid N (all possible neighbours), not only current collision degree; fixed powers-of-two fallback, no search over Loss weights.",
+  "gradient_correctness_diagnostic": {
+    "train_cases": [
+      1683,
+      10027,
+      5474,
+      18140,
+      25001
+    ],
+    "analytic_autograd_max_abs_error": 2.9802322387695312e-08,
+    "finding": "v3 current-collision-degree normalization overshot all five and fallback rejected every step; smaller diagnostic steps strictly decreased I in all five",
+    "source_of_fix": "Use potential all-neighbour count N as conservative common step scale",
+    "rejected_v3": "runs/preflight_v3_oversized_step/results.json",
+    "recorded_utc": "2026-10-30T03:16:51.360636+00:00"
+  }
+}

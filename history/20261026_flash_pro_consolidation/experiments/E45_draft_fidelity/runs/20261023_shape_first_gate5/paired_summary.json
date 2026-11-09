@@ -1,0 +1,60 @@
+{
+  "finished": true,
+  "stage": "gate",
+  "comparisons": {
+    "budget_control": {
+      "count": 5,
+      "weighted_Q_control": 1.0065784446114565,
+      "weighted_Q_candidate": 1.010159006901191,
+      "weighted_Q_delta": 0.003580562289734468,
+      "relative_excess_Q_reduction": -0.5442870619445266,
+      "mean_Q_delta": 0.11644786022916227,
+      "complete_time_control": 0.9448260400211439,
+      "complete_time_candidate": 0.6995624600443989,
+      "complete_time_delta": -0.24526357997674494,
+      "time_ratio": 0.7404140343430243,
+      "wins_ties_losses": [
+        1,
+        3,
+        1
+      ],
+      "CVaR95_control": 1.927279344928993,
+      "CVaR95_candidate": 2.509532241861233,
+      "max_Q_control": 1.927279344928993,
+      "max_Q_candidate": 2.509532241861233,
+      "severe_regression_indices": [
+        164
+      ],
+      "candidate_hard_legal": 5,
+      "eligible_for_later_confirmation": false
+    },
+    "draft_reset_shape_first": {
+      "count": 5,
+      "weighted_Q_control": 1.0065784446114565,
+      "weighted_Q_candidate": 1.0076820182496735,
+      "weighted_Q_delta": 0.0011035736382170036,
+      "relative_excess_Q_reduction": -0.16775601276555627,
+      "mean_Q_delta": -0.011252906119922735,
+      "complete_time_control": 0.9448260400211439,
+      "complete_time_candidate": 0.6570836400147527,
+      "complete_time_delta": -0.2877424000063911,
+      "time_ratio": 0.6954546257002486,
+      "wins_ties_losses": [
+        1,
+        3,
+        1
+      ],
+      "CVaR95_control": 1.927279344928993,
+      "CVaR95_candidate": 2.156313678745269,
+      "max_Q_control": 1.927279344928993,
+      "max_Q_candidate": 2.156313678745269,
+      "severe_regression_indices": [
+        164
+      ],
+      "candidate_hard_legal": 5,
+      "eligible_for_later_confirmation": false
+    }
+  },
+  "test_read": false,
+  "interval_scope": "paired case variation only; one timing run does not measure machine-state uncertainty"
+}

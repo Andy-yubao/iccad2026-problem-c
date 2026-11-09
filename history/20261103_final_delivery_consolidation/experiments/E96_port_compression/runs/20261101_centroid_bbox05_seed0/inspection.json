@@ -1,0 +1,203 @@
+{
+  "integrity": "passed: counts/members, same trained sources, selected checkpoint hash, all gallery hashes, official weighted score recomputed, all500 independent legal",
+  "raw_distributions": {
+    "placer": {
+      "N5": {
+        "mean": 45.3185,
+        "median": 44.0,
+        "p95": 78.0,
+        "max": 97.0
+      },
+      "N10": {
+        "mean": 28.229,
+        "median": 25.0,
+        "p95": 55.0,
+        "max": 79.0
+      },
+      "max_covered_fraction": {
+        "mean": 0.43207356695450894,
+        "median": 0.3951134360563155,
+        "p95": 0.7804729478460714,
+        "max": 1.0
+      },
+      "bbox_over_A": {
+        "mean": 1.0294518787336733,
+        "median": 1.0295524427273608,
+        "p95": 1.0442828660716286,
+        "max": 1.0809696047378916
+      },
+      "exact_bbox_void_fraction": {
+        "mean": 0.08109318139208162,
+        "median": 0.0785139329509908,
+        "p95": 0.11603772641396606,
+        "max": 0.1558583778631546
+      },
+      "overlap_area_fraction": {
+        "mean": 0.05442034250162526,
+        "median": 0.05162973503649675,
+        "p95": 0.08779225530088251,
+        "max": 0.1299539381917302
+      },
+      "largest_conflict_cluster": {
+        "mean": 56.779,
+        "median": 55.0,
+        "p95": 99.0,
+        "max": 116.0
+      }
+    },
+    "corrected": {
+      "N5": {
+        "mean": 8.342,
+        "median": 7.0,
+        "p95": 21.0,
+        "max": 52.0
+      },
+      "N10": {
+        "mean": 1.354,
+        "median": 0.0,
+        "p95": 6.0,
+        "max": 23.0
+      },
+      "max_covered_fraction": {
+        "mean": 0.11782966550258873,
+        "median": 0.09837309549553297,
+        "p95": 0.23825571380170932,
+        "max": 0.9188905791451012
+      },
+      "bbox_over_A": {
+        "mean": 1.1079014395818367,
+        "median": 1.101326117176919,
+        "p95": 1.1703165780054976,
+        "max": 1.249062141799726
+      },
+      "exact_bbox_void_fraction": {
+        "mean": 0.10630106418932397,
+        "median": 0.10174354160282373,
+        "p95": 0.1603762819702922,
+        "max": 0.21259643726172972
+      },
+      "overlap_area_fraction": {
+        "mean": 0.01085448060433628,
+        "median": 0.009935241527623338,
+        "p95": 0.019191985440482603,
+        "max": 0.041600076911191324
+      },
+      "largest_conflict_cluster": {
+        "mean": 19.987,
+        "median": 18.0,
+        "p95": 42.0,
+        "max": 81.0
+      }
+    }
+  },
+  "counts": {
+    "placer": {
+      "N5_zero": 0,
+      "N10_zero": 0,
+      "bbox_under_one": 2
+    },
+    "corrected": {
+      "N5_zero": 80,
+      "N10_zero": 1034,
+      "bbox_under_one": 0
+    }
+  },
+  "vs_early_normalized_E95": {
+    "N5": {
+      "improved": 38,
+      "worsened": 1859
+    },
+    "bbox_over_A": {
+      "improved": 2000,
+      "worsened": 0
+    },
+    "overlap_area_fraction": {
+      "improved": 17,
+      "worsened": 1983
+    }
+  },
+  "terminal_vs_E90": {
+    "better": 236,
+    "worse": 177,
+    "tied": 87,
+    "size_strata": {
+      "n_le_60": {
+        "count": 204,
+        "mean_delta": -0.010829451008433395,
+        "weighted_delta": -0.013434038839708439
+      },
+      "n_61_80": {
+        "count": 95,
+        "mean_delta": -0.0013397033203167209,
+        "weighted_delta": -0.005107243746485623
+      },
+      "n_gt_80": {
+        "count": 201,
+        "mean_delta": 0.0016368076473433416,
+        "weighted_delta": 0.004549635323667919
+      }
+    }
+  },
+  "training_last_rounds": [
+    {
+      "epoch": 15,
+      "step": 7500,
+      "train": 0.6176891841888428,
+      "dev": 0.6379911098480224,
+      "lr": 0.001
+    },
+    {
+      "epoch": 16,
+      "step": 8000,
+      "train": 0.6173748397827148,
+      "dev": 0.6374823780059814,
+      "lr": 0.001
+    },
+    {
+      "epoch": 17,
+      "step": 8500,
+      "train": 0.6108433322906495,
+      "dev": 0.6286004905700684,
+      "lr": 0.001
+    },
+    {
+      "epoch": 18,
+      "step": 9000,
+      "train": 0.6191559600830078,
+      "dev": 0.6358744869232178,
+      "lr": 0.001
+    },
+    {
+      "epoch": 19,
+      "step": 9500,
+      "train": 0.6145282516479492,
+      "dev": 0.6275519428253173,
+      "lr": 0.001
+    }
+  ],
+  "selected_gallery_images": [
+    {
+      "index": 0,
+      "image": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E96_port_compression\\runs\\20261101_centroid_bbox05_seed0\\evaluation\\gallery\\000.png",
+      "N5": 6,
+      "overlap_fraction": 0.006647991019152915,
+      "bbox_over_A": 1.0847822721199964
+    },
+    {
+      "index": 1,
+      "image": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E96_port_compression\\runs\\20261101_centroid_bbox05_seed0\\evaluation\\gallery\\001.png",
+      "N5": 7,
+      "overlap_fraction": 0.009121709429003757,
+      "bbox_over_A": 1.082636049639139
+    },
+    {
+      "index": 63,
+      "image": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E96_port_compression\\runs\\20261101_centroid_bbox05_seed0\\evaluation\\gallery\\063.png",
+      "N5": 32,
+      "overlap_fraction": 0.016738451286620524,
+      "bbox_over_A": 1.1702640694139947
+    }
+  ],
+  "no_new_inference_or_scoring_runs": true,
+  "test_read": false
+}

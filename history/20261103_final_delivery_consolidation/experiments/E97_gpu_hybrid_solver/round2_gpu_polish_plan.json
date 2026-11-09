@@ -1,0 +1,12 @@
+{
+  "revision": "E97.round2.bounded_GPU_rigid_certificate.v1",
+  "status": "registered_before_five_train_implementation_probe",
+  "source": "original C3 unique own-Loss best, original full E85 one-thread repair; no new trained parameters or CPU optimization solver calls",
+  "mechanism": "At most4 accepted rounds. CPU enumerates public boundary/group-component rigid translation targets, keeps deterministic max256 proposals (boundary first, then shortest group shifts). GPU FP64 batches all proposals,8 fixed blocker-propagation rounds preserving existing same-group contact components; rejects unfinished collision closure/preplaced displacement/negative coordinates. GPU optimistic1e-6 contacts rank candidates only. At most4 ranked candidates per round undergo existing exact dyadic canonicalization, unchanged hard_valid and exact public Objective check. Only strictly fewer soft violations and max(1,Anew/Aold,Wnew/Wold)*exp(2*dsoft/Nsoft)<1-1e-10 can be accepted. Exact CPU checks determine acceptance, optimistic GPU counts are never reported as final validity or score.",
+  "relation_to_goal": "Fixed GPU geometry operator, no stronger CPU conic solver or extra shape iterations. Quality-preserving baseline first; no claim of learned-input improvement. If useful, further finite decoder reduction needs separate registration/control.",
+  "probe": "original five train IDs only, one C3 draft/full solve then changed GPU operator; compare batch arithmetic against independent CPU reference and audit each accepted certificate, final independent hard checks. No dev/Q/optimizer in probe. Existing identical old panels not rerun.",
+  "formal_panel_if_probe_passes": "one new complete C3+full repair+GPU operator dev500, same100 gallery; old current C3 control/raw2000 reused. Full timing includes public features/transfers,NN,original full repair,new operator/canonicalization and independent hard checks; loading/prewarm separate. No coefficient grid/checkpoint reselection.",
+  "bounds": {"rounds":4,"proposal_limit":256,"blocker_rounds":8,"CPU_certificates_per_round":4},
+  "cpu_threads":1,"single_gpu":true,"test_read":false,
+  "deadline_utc":"2026-11-02T09:04:02+00:00"
+}

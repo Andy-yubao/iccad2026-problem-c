@@ -1,0 +1,50 @@
+
+train: E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\python.exe -u -B -m experiments.E57_capacity_data_diagnosis.train --output E:\project\ICCAD\2026\problemC\experiments\E57_capacity_data_diagnosis\runs\20261026_fit32_reference96_noreg_seed0 --arm reference96_noreg --seed 0 --dataset-size 32 --block-steps 64 --max-hours 0.5 --max-epochs 200 --batch-size 32 --engine cuda_graph --deadline 1793053607.7690234
+Prepared tensor cache loaded: train, 16000 cases
+Prepared tensor cache loaded: dev, 2000 cases
+GPU resident inputs: 0.193 GiB; max_nodes=120
+FP32 CUDA training graph captured; weights and optimizer not advanced during warmup.
+epoch=0 step=0 train_loss=8.735673 dev_loss=8.489114 supervision=8.489114 lr=0.001 (same fixed Loss; no postprocessing)
+epoch=1 step=64 train_loss=1.072271 dev_loss=1.073634 supervision=1.073634 lr=0.001 (same fixed Loss; no postprocessing)
+step=100 epoch=2 draws=1152/2048 total=1.05359
+epoch=2 step=128 train_loss=0.894162 dev_loss=0.902262 supervision=0.902262 lr=0.001 (same fixed Loss; no postprocessing)
+epoch=3 step=192 train_loss=0.822181 dev_loss=0.828776 supervision=0.828776 lr=0.001 (same fixed Loss; no postprocessing)
+step=200 epoch=4 draws=256/2048 total=0.34710
+epoch=4 step=256 train_loss=0.801831 dev_loss=0.829696 supervision=0.829696 lr=0.001 (same fixed Loss; no postprocessing)
+step=300 epoch=5 draws=1408/2048 total=0.32688
+epoch=5 step=320 train_loss=0.813189 dev_loss=0.839934 supervision=0.839934 lr=0.001 (same fixed Loss; no postprocessing)
+epoch=6 step=384 train_loss=0.810779 dev_loss=0.841256 supervision=0.841256 lr=0.001 (same fixed Loss; no postprocessing)
+step=400 epoch=7 draws=512/2048 total=0.23943
+epoch=7 step=448 train_loss=0.877491 dev_loss=0.911036 supervision=0.911036 lr=0.001 (same fixed Loss; no postprocessing)
+step=500 epoch=8 draws=1664/2048 total=0.21042
+epoch=8 step=512 train_loss=0.841828 dev_loss=0.874307 supervision=0.874307 lr=0.001 (same fixed Loss; no postprocessing)
+epoch=9 step=576 train_loss=0.839425 dev_loss=0.881569 supervision=0.881569 lr=0.001 (same fixed Loss; no postprocessing)
+step=600 epoch=10 draws=768/2048 total=0.14611
+epoch=10 step=640 train_loss=0.856670 dev_loss=0.902202 supervision=0.902202 lr=0.001 (same fixed Loss; no postprocessing)
+step=700 epoch=11 draws=1920/2048 total=0.10477
+epoch=11 step=704 train_loss=0.857682 dev_loss=0.907427 supervision=0.907427 lr=0.001 (same fixed Loss; no postprocessing)
+epoch=12 step=768 train_loss=0.868804 dev_loss=0.922100 supervision=0.922100 lr=0.001 (same fixed Loss; no postprocessing)
+step=800 epoch=13 draws=1024/2048 total=0.20699
+epoch=13 step=832 train_loss=0.864151 dev_loss=0.912149 supervision=0.912149 lr=0.001 (same fixed Loss; no postprocessing)
+epoch=14 step=896 train_loss=0.891557 dev_loss=0.946302 supervision=0.946302 lr=0.001 (same fixed Loss; no postprocessing)
+step=900 epoch=15 draws=128/2048 total=0.11285
+epoch=15 step=960 train_loss=0.882499 dev_loss=0.935499 supervision=0.935499 lr=0.001 (same fixed Loss; no postprocessing)
+step=1000 epoch=16 draws=1280/2048 total=0.10957
+epoch=16 step=1024 train_loss=0.909806 dev_loss=0.963994 supervision=0.963994 lr=0.001 (same fixed Loss; no postprocessing)
+epoch=17 step=1088 train_loss=0.926291 dev_loss=0.981795 supervision=0.981795 lr=0.001 (same fixed Loss; no postprocessing)
+step=1100 epoch=18 draws=384/2048 total=0.09262
+epoch=18 step=1152 train_loss=0.928256 dev_loss=0.990945 supervision=0.990945 lr=0.00025 (same fixed Loss; no postprocessing)
+step=1200 epoch=19 draws=1536/2048 total=0.02074
+epoch=19 step=1216 train_loss=0.921598 dev_loss=0.985637 supervision=0.985637 lr=0.00025 (same fixed Loss; no postprocessing)
+epoch=20 step=1280 train_loss=0.926218 dev_loss=0.990933 supervision=0.990933 lr=0.00025 (same fixed Loss; no postprocessing)
+step=1300 epoch=21 draws=640/2048 total=0.01761
+epoch=21 step=1344 train_loss=0.931475 dev_loss=0.996827 supervision=0.996827 lr=0.0001 (same fixed Loss; no postprocessing)
+step=1400 epoch=22 draws=1792/2048 total=0.01070
+epoch=22 step=1408 train_loss=0.929331 dev_loss=0.994853 supervision=0.994853 lr=0.0001 (same fixed Loss; no postprocessing)
+epoch=23 step=1472 train_loss=0.932530 dev_loss=0.998564 supervision=0.998564 lr=0.0001 (same fixed Loss; no postprocessing)
+step=1500 epoch=24 draws=896/2048 total=0.00888
+epoch=24 step=1536 train_loss=0.935427 dev_loss=1.001874 supervision=1.001874 lr=5e-05 (same fixed Loss; no postprocessing)
+step=1600 epoch=25 draws=2048/2048 total=0.00692
+epoch=25 step=1600 train_loss=0.940335 dev_loss=1.007744 supervision=1.007744 lr=5e-05 (same fixed Loss; no postprocessing)
+epoch=26 step=1664 train_loss=0.944759 dev_loss=1.012787 supervision=1.012787 lr=5e-05 (same fixed Loss; no postprocessing)
+Stopped: early_stop wall hours: 0.08604039947222594 best epoch: 3

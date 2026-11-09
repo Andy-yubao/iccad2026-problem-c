@@ -1,0 +1,96 @@
+{
+  "experiment": "E103_offline_loss_alignment",
+  "status": "authorized_preparing_offline_background_pipeline",
+  "authorization": "User accepted five-model selection and authorized autonomous research continuation; long tasks background, four parallel independent tasks. User explicitly requires E98 postprocessor.",
+  "objective": "Learn and validate differentiable draft Loss aligned with final quality after one frozen fixed-depth postprocessor; offline within-problem ranking, local direction checks, then limited matched-start training only after objective registration.",
+  "database": {
+    "planned_cases": 1000,
+    "drafts_per_case": 5,
+    "planned_core_drafts": 5000,
+    "population": "Frozen panel.json uniformly sampled1000 from original train16000",
+    "source_model_ids": [
+      "e42",
+      "e68",
+      "e70",
+      "e71",
+      "e98_generalization"
+    ],
+    "draft_rule": "Exactly one unperturbed neural draft from each of five distinct completed model weights for every case; do not use five checkpoints from one run or perturbations to fill quota",
+    "perturbations": "Optional later explicitly registered auxiliary checks; not used to replace any of the five core model drafts",
+    "all_models_completed_normal_early_stop": true,
+    "convergence_scope": "Operational validation-based stopping; does not claim global convergence or flat training Loss",
+    "sampling_started": true
+  },
+  "scope": {
+    "current_stage": "authorized database, offline mathematical analysis and local direction research",
+    "database_generation_started": false,
+    "inference_calls": 0,
+    "postprocessing_calls": 0,
+    "loss_fitting_started": false,
+    "formal_training_started": false,
+    "test_read": false,
+    "dev_postprocessing_Q_for_weight_fitting": false,
+    "automatic_wakeups": false
+  },
+  "public_task": "Public MIB mean-area transform from protocol, same IDs and scale for all sources; reference used only for Loss/supervision, never network inputs",
+  "archived_port_representation": "For historical E68/E70/E71 frozen inference only, retain their original public full-port readers and14-dimensional input; compressing their inputs would change the selected function. New trainable architecture is not introduced here.",
+  "evaluation": "Later stage will freeze an independent local fixed-depth evaluator copied with provenance; regenerate all5000 Q labels with that one evaluator rather than mixing historical clock/depth Q",
+  "analysis": "Store actual independent Loss terms; fit nonnegative scale-constrained regularized within-case ranking weights. Split by case and examine leave-one-model-source-out behavior; mixed-Q objective includes equal and official size weighting.",
+  "decision": "Check unseen-case ranking/regret and local Loss-descent/Q direction before actual training; fixed own-Loss controls within-phase monitoring/best/LR/earlystop; Q is the outer alignment criterion, not hidden checkpoint selection.",
+  "protection": "All E98 STOPs and historical evidence remain; no E98 restarts; original model paths remain unchanged; E101/E102 untouched.",
+  "next_stage": "Launch database1000x5 -> offline fits -> local descent checks -> report; inspect evidence to register subsequent finite neural training comparison. Do not start unsupported long training.",
+  "numerical_path": "New registered CPU FP32 deterministic inference for all five frozen models; four single-thread workers with original source public-input and decoder semantics. No historical draft/Q reuse.",
+  "inference_reproduction": "CPU and dynamic exact-n padding may differ numerically from original GPU training/evaluation; original weights and mathematical graph preserved, not claiming historical bitwise draft reproduction.",
+  "parallelism": {
+    "worker_processes": 4,
+    "threads_per_worker": 1,
+    "backend": "Windows spawn ProcessPoolExecutor",
+    "unit": "one case with five frozen source models; independent cases run concurrently",
+    "offline_fits": "four regularization fits concurrently; five source holdouts at most4 concurrently"
+  },
+  "analysis_registration": {
+    "case_splits": {
+      "fit": 600,
+      "tune": 200,
+      "check": 200
+    },
+    "terms": 10,
+    "objective": "case-weighted within-case logistic ranking with nonnegative simplex scaled weights; fit-only75th percentile absolute pair-difference scales; original coefficient prior; same total physical coefficient sum",
+    "regularization_grid": [
+      0.0001,
+      0.01,
+      1.0,
+      10.0
+    ],
+    "minimum_Q_pair_gap": 0.0001,
+    "selection": "tune200 mixed regret only, tie by ranking accuracy then stronger regularization; freeze proposal before finalcheck200 and source-holdout reports",
+    "source_holdout": "5 leave-one-source-out fits using the already selected regularization; source-involving pairs on check200 descriptive only",
+    "case_weights": "half equal-case plus half official exp(n/12), normalized on each analysis panel",
+    "network_training_case_aggregation": "not yet registered; must be fixed before any new neural training"
+  },
+  "direction_registration": {
+    "cases": 40,
+    "source_split": "first40 internally randomized tune cases, chosen before Q",
+    "model": "e98_generalization",
+    "losses": [
+      "original",
+      "learned"
+    ],
+    "steps": [
+      0.002,
+      0.01
+    ],
+    "additional_postprocessing_evaluations": 160,
+    "step_rule": "RMS-normalized gradient in per-module sqrt(area) center units and log-aspect; mask fixed channels, clamp normalized gradient components to[-3,3]; original area/spec decoder",
+    "gate": "both step sizes improve mixedQ >.0001 and outperform original-Loss local steps; layout-space evidence only, not neural training proof"
+  },
+  "postprocessor_registration": {
+    "source": "experiments/E98_loss_weight_learning/depth_evaluation",
+    "copy": "experiments/E103_offline_loss_alignment/postprocessor",
+    "version": "E98 fixed-depth v1 unmodified, main shape-call caps4/4/7/8, all original hard guards",
+    "Q": "official neutral-runtime cost; mixedQ=(official size-weightedQ+meanQ)/2",
+    "runtime": "concurrent CPU timings are throughput diagnostics, not deployment latency or contest score"
+  },
+  "stop": "Create current RUN/STOP or experiment STOP. Workers finish the active fixed-depth solve and stop before following draft/case; no later analysis/stages.",
+  "terminal": "Offline stage reports numerical evidence and finite next-step recommendation. No dev postprocessingQ or test payloads; no automatic retry on numerical/error cases."
+}

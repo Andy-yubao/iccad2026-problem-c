@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-08",
+  "status": "proposal_only",
+  "core": "Four independent hidden-state attention blocks; no intermediate predicted coordinates, shapes, decoded rectangles or state feedback; one final draft readout.",
+  "node_width": 64,
+  "heads": 4,
+  "blocks": 4,
+  "swiglu_hidden": 128,
+  "node_input_dimensions": 16,
+  "persistent_edge_state": false,
+  "independent_pair_vector_messages": false,
+  "intermediate_predictions": 0,
+  "prediction_heads": 1,
+  "single_block": {
+    "two_node_layernorms": 256,
+    "qkv_64_192": 12480,
+    "attention_output_64_64": 4160,
+    "wire_group_local_128_64": 8256,
+    "two_public_relation_coefficients_per_head": 8,
+    "swiglu_two_inputs_64_128": 16640,
+    "swiglu_output_128_64": 8256,
+    "total": 50056
+  },
+  "components": {
+    "input_encoder_16_64_silu_layernorm": 1216,
+    "four_independent_blocks": 200224,
+    "global_context_readout_128_64_3": 8451
+  },
+  "total": 209891,
+  "original_e114_four_block_prefix_total": 207987,
+  "difference": 1904,
+  "difference_percent": 0.9154418304990308,
+  "verification": "Static arithmetic using complete Linear and LayerNorm definitions; no new model implementation or measured performance.",
+  "prior_pair_candidate": "output/first_draft_generator_budget_20261108.json remains withdrawn",
+  "training_started": false,
+  "new_architecture_implemented": false,
+  "dataset_payloads_read": 0,
+  "checkpoints_read": 0,
+  "q_evaluation": false,
+  "test_read": false
+}

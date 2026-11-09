@@ -1,0 +1,44 @@
+{
+  "scope": "post-hoc saved dev_monitor500 three-state diagnosis",
+  "interpretation": "A reference-valid unsigned axis may inherit a different current order. Different order can also describe a valid alternative layout; this is not a causal ablation.",
+  "candidate_override_mask": "confidence and clearance heuristic, not a replay of the exact full-relation callback",
+  "pairs_counted_in_both_directions": true,
+  "arms": {
+    "replay": {
+      "checkpoint_sha256": "4485564d076cdd460e420fd9992d0d26d8079394a598e15f993e45bc67e104d7",
+      "counts": {
+        "learned_near_pairs": 703482,
+        "learned_near_axis_correct": 614480,
+        "learned_near_axis_correct_order_matches": 605406,
+        "learned_near_axis_correct_order_differs": 9074,
+        "heuristic_near_pairs": 703482,
+        "heuristic_near_axis_correct": 604126,
+        "heuristic_near_axis_correct_order_matches": 595462,
+        "heuristic_near_axis_correct_order_differs": 8664,
+        "candidate_override_pairs": 5896,
+        "candidate_override_axis_correct": 5386,
+        "candidate_override_axis_correct_order_matches": 5360,
+        "candidate_override_axis_correct_order_differs": 26
+      }
+    },
+    "draft_only": {
+      "checkpoint_sha256": "ea62618fe93665b2f500bd5c2efb7e8d0205b6b94f0cabf64fb66905808ef125",
+      "counts": {
+        "learned_near_pairs": 703482,
+        "learned_near_axis_correct": 606044,
+        "learned_near_axis_correct_order_matches": 597486,
+        "learned_near_axis_correct_order_differs": 8558,
+        "heuristic_near_pairs": 703482,
+        "heuristic_near_axis_correct": 604126,
+        "heuristic_near_axis_correct_order_matches": 595462,
+        "heuristic_near_axis_correct_order_differs": 8664,
+        "candidate_override_pairs": 4140,
+        "candidate_override_axis_correct": 3446,
+        "candidate_override_axis_correct_order_matches": 3418,
+        "candidate_override_axis_correct_order_differs": 28
+      }
+    }
+  },
+  "postprocessing_calls": 0,
+  "test_read": false
+}

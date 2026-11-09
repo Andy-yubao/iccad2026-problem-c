@@ -1,0 +1,181 @@
+{
+  "config": {
+    "stage": "gate",
+    "policies": [
+      "control",
+      "draft_static",
+      "oracle_full",
+      "oracle_hybrid",
+      "oracle_hybrid_contacts",
+      "shuffle_hybrid"
+    ],
+    "panel": [
+      50,
+      368,
+      316,
+      443,
+      164
+    ],
+    "members": [
+      [
+        "worker_92/layouts_3808.th",
+        46
+      ],
+      [
+        "worker_43/layouts_2576.th",
+        93
+      ],
+      [
+        "worker_57/layouts_4704.th",
+        88
+      ],
+      [
+        "worker_29/layouts_5040.th",
+        1
+      ],
+      [
+        "worker_79/layouts_5040.th",
+        16
+      ]
+    ],
+    "steady": {
+      "relaxed": false,
+      "mode": 0,
+      "adaptive": true,
+      "fast_budget": false,
+      "late_extension": true,
+      "plateau": true,
+      "robust_seeds": true,
+      "certified": true,
+      "quick_project": true,
+      "quadratic_project": true,
+      "incumbent_project": true,
+      "snap": 0.0001
+    },
+    "threads": 4,
+    "workers": 1,
+    "budget_mode": "native",
+    "checkpoint_sha256": "12878108e9a58b8c195b314ba6586686c2a6e2796c1f4b6443e102b4db4224a6",
+    "registry_sha256": "1409ccf825b9c7cae1097a22e8dc4068e1283d79541c85ce54c5627d0c2b4208",
+    "wall_seconds": 300.0,
+    "privileged_arms": [
+      "oracle_full",
+      "oracle_hybrid",
+      "oracle_hybrid_contacts",
+      "shuffle_hybrid"
+    ],
+    "oracle_scope": "saved dev witness chosen before current run; diagnostics only, no deployment or upper-bound claim",
+    "witnesses": {
+      "50": {
+        "Q": 1.0,
+        "member": [
+          "worker_92/layouts_3808.th",
+          46
+        ],
+        "source": "experiments/E46_global_draft_refinement/runs/20261024_global_mechanisms_gate5/results_local.json",
+        "policy": "native_area",
+        "sha256": "1f7fd97d95c5cb5aa3fb0bc60279217e2e32720f6e6e471d78f162966e37fb19"
+      },
+      "368": {
+        "Q": 1.1732427014508988,
+        "member": [
+          "worker_43/layouts_2576.th",
+          93
+        ],
+        "source": "experiments/E46_global_draft_refinement/runs/20261024_coupled_screen100/results_local.json",
+        "policy": "large_area_fast",
+        "sha256": "3c7fe3cb23e47ac73b737482a7161c13b43f262da8c53f6a56cceaebb1e0c79b"
+      },
+      "316": {
+        "Q": 1.0,
+        "member": [
+          "worker_57/layouts_4704.th",
+          88
+        ],
+        "source": "experiments/E46_global_draft_refinement/runs/20261024_global_mechanisms_gate5/results_local.json",
+        "policy": "relative",
+        "sha256": "1f7fd97d95c5cb5aa3fb0bc60279217e2e32720f6e6e471d78f162966e37fb19"
+      },
+      "443": {
+        "Q": 1.288966602883642,
+        "member": [
+          "worker_29/layouts_5040.th",
+          1
+        ],
+        "source": "experiments/E46_global_draft_refinement/runs/20261024_shape_memory_gate5/results_local.json",
+        "policy": "shape_trust",
+        "sha256": "39b5357324ab5b3618b97d21263348e5f27b9ef2bdc16acb029c1ebdd6801ccf"
+      },
+      "164": {
+        "Q": 1.7802217908972526,
+        "member": [
+          "worker_79/layouts_5040.th",
+          16
+        ],
+        "source": "experiments/E46_global_draft_refinement/runs/20261024_global_mechanisms_gate5/results_local.json",
+        "policy": "relative",
+        "sha256": "1f7fd97d95c5cb5aa3fb0bc60279217e2e32720f6e6e471d78f162966e37fb19"
+      }
+    },
+    "test_read": false
+  },
+  "sources": {
+    "datasets/__init__.py": "03c36f364366be6c8a5091d6bd3dbec0788d7871747acdeac5fa89d4974cec21",
+    "datasets/cases.py": "1fd51addaaae38164c22f1946712665beebac700054db4bb07ed4f9d44e0b168",
+    "datasets/paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+    "datasets/public_member_inputs.py": "6d525fa963d098051648b01d6bc75fb8a032dd5746529fb3c750afe2b5e8bb09",
+    "datasets/quality_layouts.py": "94f374fa9562770a9c7deadb645d73c3af1fc1a20251f98f1dce4ac575820191",
+    "datasets/reference_layouts.py": "f6aeeba298a163b7d506c67e3fba024cd3a191c3aae1116fc6b5d294431db9b5",
+    "datasets/worksets.py": "013087151ab8e1195d7d2757e777839f521486425eeaff4c45fed4e370df233c",
+    "docs/protocol.md": "f31a4e394df17e816b108e8cff21e7459c79dc50098c22fdf032688a85e106ec",
+    "experiments/E47_draft_topology_confidence/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "experiments/E47_draft_topology_confidence/backend/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/E47_draft_topology_confidence/backend/conic_geometry.py": "0b1a0295426c37a61f4abc13946b5dadf2c6f107375a02890e90ffe404be40e4",
+    "experiments/E47_draft_topology_confidence/backend/frozen/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/E47_draft_topology_confidence/backend/frozen/canonical_geometry.py": "04924bc4150f82862ed4da6cb67fc08779bbf98fcf24e24abd41b1c64d4e2521",
+    "experiments/E47_draft_topology_confidence/backend/frozen/feasible.py": "9cfe70894d80fbe54ccaa1c3de60ef4ab111ac9b4472286d1ae6a0c5a1fdc756",
+    "experiments/E47_draft_topology_confidence/backend/frozen/global_refine.py": "088021ede3290fcd6cf60726a054f7958309e4267d4353a699b80697078ab716",
+    "experiments/E47_draft_topology_confidence/backend/frozen/packing.py": "3c0500b7fee120807e6bd3fa8e9f115e476782af1a3e7620859c6651a089ef30",
+    "experiments/E47_draft_topology_confidence/backend/frozen/postprocess.py": "da0e1572a822a589968a19e67e2d36dd5133c7d17b7ea9443bd743ee4653a272",
+    "experiments/E47_draft_topology_confidence/backend/frozen/shape_lp.py": "2988df542aa80602f091963e1506da8085152ea0eca4846f6dc6c0a25ef13c94",
+    "experiments/E47_draft_topology_confidence/backend/frozen/solver.py": "cb5b0b6af3b8511d8a21b14178be188e31c61b58cba065c8c23847c2f9200325",
+    "experiments/E47_draft_topology_confidence/backend/frozen/topology_mip.py": "e392857196dbde4b3c1f3668862c9779e9c686f17ca89a820078421573b46df5",
+    "experiments/E47_draft_topology_confidence/backend/guard.py": "4e4adfb1dedede451a4d530103681f97ca6c05516e2dbe96b84d63c136faa87f",
+    "experiments/E47_draft_topology_confidence/backend/observe.py": "6fb401b9a7ebccec7063de8e9feeaf28bee310ac8a39b221b78d40e438432ec3",
+    "experiments/E47_draft_topology_confidence/backend/optimizer.py": "6373f5e7477f528e09e599c9a478b712bfbeb0ec29037bed1595d8c82af2ca36",
+    "experiments/E47_draft_topology_confidence/backend/reduction.py": "4587a5c9c486c59719e76ef64396398edb92e6011d8c0c0cd4f538cad52c4b50",
+    "experiments/E47_draft_topology_confidence/backend/rescue.py": "b928986f58fb3215140fe05acc36ddde92ce7aad99197fb2a975b7743a8c2e59",
+    "experiments/E47_draft_topology_confidence/backend/robust.py": "ceea8f18d0e2979279f4cf711b7702436912fbae77095d9559e603401176c99b",
+    "experiments/E47_draft_topology_confidence/backend/selection.py": "c21486a437531fed9a6717bcde6ce2ca062153ea717f9ae135b5b72e05500350",
+    "experiments/E47_draft_topology_confidence/backend/stable.py": "dc5a1e0afbec79e33f1ca6603a7d3186045a52ccc543ac756b508dbf8159bcce",
+    "experiments/E47_draft_topology_confidence/canonical.py": "57a3738b35d16a091a250f4bac36bdcef5f7edeec6e084e103ecb6e9967eac2d",
+    "experiments/E47_draft_topology_confidence/canonical_native.py": "469ed606532daa9750bb9dd6c98e0f79c27e246bf79ca4e89d483f0b6920e5eb",
+    "experiments/E47_draft_topology_confidence/canonical_py.py": "b5b99c1f77756aa318fe5cb0e7fa82935844752b4fa815ab80367adb34e00195",
+    "experiments/E47_draft_topology_confidence/certify_polish.py": "7148ff8dd958d5b8ecd2adbcd29ead999904b185ad12c77ffcdc0e7ec1f31462",
+    "experiments/E47_draft_topology_confidence/checks.py": "82d27c9cdc9e688bff6cd97e0e071de569355bb4affbad5defee6b7ba5aa71c1",
+    "experiments/E47_draft_topology_confidence/confidence.py": "1e4f9b92c939768ca5f4955a3167b5ce9374b5a1cc97e71d9d41bb4e5f34b24e",
+    "experiments/E47_draft_topology_confidence/diagnostics.py": "9c8f95ceb72eaf0b26f56b03ac5b5190e5349d784558d81540efd62ddfb245d9",
+    "experiments/E47_draft_topology_confidence/fast_geometry.py": "816e0b553af62a278441264f8d6c1554141add8d9d644e5688093c5ae2d22a78",
+    "experiments/E47_draft_topology_confidence/features.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+    "experiments/E47_draft_topology_confidence/global_information.py": "7520d3598855dc06552f83bcce3715fa5615d9ad53117171c3985d766fb435d7",
+    "experiments/E47_draft_topology_confidence/inference.py": "b202f111d9b5feeb5f3ccbc473fb29e732d8088c5fb43472ab7d49f445378838",
+    "experiments/E47_draft_topology_confidence/io.py": "2372d8aed18f9ab60c7f8160970932448c8109f3d40b4b66bff0959352e9417c",
+    "experiments/E47_draft_topology_confidence/legal_seed.py": "c5adf19f570678ba721dd1bc7ca888d2af41cf8148b68a3320903ca82083bfc9",
+    "experiments/E47_draft_topology_confidence/model.py": "0d71c96c75976dc57d589d5709639291d1a30addffa8a5f0f2c53e2cb88a9089",
+    "experiments/E47_draft_topology_confidence/projection.py": "3c2a11e3dac86677dc67091d4ed1873997ee577ae57700db9a428097f747b14e",
+    "experiments/E47_draft_topology_confidence/report.py": "daeec5e29101485c7225cf3ecb9d63c926e7e850136717e269fbf322fd9c0635",
+    "experiments/E47_draft_topology_confidence/run.py": "3773185eb07ea1405baf3a923bbc4c9ae72223941635a6c4421a613856d5b422",
+    "experiments/E47_draft_topology_confidence/solver.py": "16d839b3300f4b93b27e623536f4a484c2a0c027e36698e093174f5467042042",
+    "experiments/E47_draft_topology_confidence/witnesses.py": "35d422d5cb069d4626754d1da82640a6f0b85b08f1f6c0902acac4850124759f",
+    "protocol/paths.json": "7a28cd42de0f10809500c43c48836576361e67a72e723f7b32a404186df9b419",
+    "protocol/reference_workset_v5.json": "1409ccf825b9c7cae1097a22e8dc4068e1283d79541c85ce54c5627d0c2b4208",
+    "protocol/split_v1.json": "a1f23edae03194c1155d260415482d892e4cb5ad66170abc93af04aafc8cefbd",
+    "scoring/__init__.py": "933bf2be947e20bae164511f26afaa84c2f331d0dbdebc417d235db8358a9247",
+    "scoring/checks.py": "738f6b57e20dce58516f3f10d83689f8df273a84a02b2dce99c6ccc1f904763a",
+    "scoring/evaluation.py": "356e0d1c788c6f25154b33fb1c2455388317d2cc0dd96ca50d7357c58612c611",
+    "scoring/official.py": "478fbc228a56ec4b336b5d8687a44b22b749f30aae09372f57c08e7124270e03",
+    "third_party/FloorSet/cost.py": "b60561556f79aa41c196c8fcaddea57840aab41059c76dbc3f80b4fdde6b48c3",
+    "third_party/FloorSet/iccad2026contest/iccad2026_evaluate.py": "64db37865b42baf11add62bdbf035690dca086cd4be7b5b4e58db756f20d8498",
+    "third_party/FloorSet/utils.py": "9299d9257f5bd932001896307f2296b51cc5567f44150db5514f357ed93c121e"
+  }
+}

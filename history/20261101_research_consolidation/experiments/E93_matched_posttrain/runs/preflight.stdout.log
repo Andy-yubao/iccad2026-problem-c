@@ -1,0 +1,28 @@
+Verified archived cache loaded: train 5 cases
+{
+  "status": "passed",
+  "test_read": false,
+  "schedule": {
+    "baseline_epoch": 0,
+    "drop_epoch": 3,
+    "earliest_stop_epoch": 5,
+    "protection": 0,
+    "recovery": true
+  },
+  "matched_initialization": "bit-identical P36 model and Adam moments/step36000; common terminal39 RNG; only LR reset1e-4",
+  "five_case_initial_loss": {
+    "C": 0.4099297523498535,
+    "G": 0.49339568614959717
+  },
+  "actual_updates": "C6 equals C2+restore+4 bit-exact model/Adam/RNG/projection/progress; G6 differs as intended; C/G RNG identical after equal steps",
+  "guards": "per-case finite explosion and nonfinite rejected before inherited Adam; all states/counters unchanged",
+  "train_cases": [
+    1032,
+    8047,
+    27988,
+    1799,
+    75
+  ],
+  "parameters": 5829939,
+  "elapsed_seconds": 49.61496620008256
+}

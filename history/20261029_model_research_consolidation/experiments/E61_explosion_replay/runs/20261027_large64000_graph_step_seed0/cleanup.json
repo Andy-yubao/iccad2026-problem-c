@@ -1,0 +1,65 @@
+{
+  "status": "complete",
+  "scope": "E61 inactive implementation-only redundant checkpoints and empty attempt logs only",
+  "remove": [
+    {
+      "path": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E61_explosion_replay\\runs\\20261027_preflight_projected_resume\\checkpoints\\best.pt",
+      "relative_path": "runs/20261027_preflight_projected_resume/checkpoints/best.pt",
+      "bytes": 16532897,
+      "sha256": "b86db2673cdccda329b2413a69619b34c9fe0e52d0bf2b2a22cb38b37c49b41d",
+      "reason": "Implementation-only initial/error or duplicate direct-run checkpoint; successful projected-step resume/latest and source evidence retained."
+    },
+    {
+      "path": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E61_explosion_replay\\runs\\20261027_preflight_projected_resume\\checkpoints\\latest.pt",
+      "relative_path": "runs/20261027_preflight_projected_resume/checkpoints/latest.pt",
+      "bytes": 16597493,
+      "sha256": "37269ca8fa0fb9a5872f4686cb137989655d45914e039cd4857597dbddef675c",
+      "reason": "Implementation-only initial/error or duplicate direct-run checkpoint; successful projected-step resume/latest and source evidence retained."
+    },
+    {
+      "path": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E61_explosion_replay\\runs\\20261027_preflight_projected_resume_r2\\checkpoints\\best.pt",
+      "relative_path": "runs/20261027_preflight_projected_resume_r2/checkpoints/best.pt",
+      "bytes": 16533025,
+      "sha256": "a8d81e66705542d81029848180e8358be43b45a1994b3ef957ccecfd2a954551",
+      "reason": "Implementation-only initial/error or duplicate direct-run checkpoint; successful projected-step resume/latest and source evidence retained."
+    },
+    {
+      "path": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E61_explosion_replay\\runs\\20261027_preflight_projected_resume_r2_direct\\checkpoints\\best.pt",
+      "relative_path": "runs/20261027_preflight_projected_resume_r2_direct/checkpoints/best.pt",
+      "bytes": 16533025,
+      "sha256": "ae7eadc22590bd146a4329e3aea7b62740313a24c083218751ec6ab0bdbf3db2",
+      "reason": "Implementation-only initial/error or duplicate direct-run checkpoint; successful projected-step resume/latest and source evidence retained."
+    },
+    {
+      "path": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E61_explosion_replay\\runs\\20261027_preflight_projected_resume_r2_direct\\checkpoints\\latest.pt",
+      "relative_path": "runs/20261027_preflight_projected_resume_r2_direct/checkpoints/latest.pt",
+      "bytes": 49255771,
+      "sha256": "75d46cdd82c808cf7decc6796ed8c6c5e40ef5a819f8cfccedb5484eca873371",
+      "reason": "Implementation-only initial/error or duplicate direct-run checkpoint; successful projected-step resume/latest and source evidence retained."
+    },
+    {
+      "path": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E61_explosion_replay\\runs\\20261027_control\\seed0_stdout.log",
+      "relative_path": "runs/20261027_control/seed0_stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Empty non-persistent startup-attempt log; actual replay trace and launch record retained."
+    },
+    {
+      "path": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E61_explosion_replay\\runs\\20261027_control\\seed0_stderr.log",
+      "relative_path": "runs/20261027_control/seed0_stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Empty non-persistent startup-attempt log; actual replay trace and launch record retained."
+    }
+  ],
+  "protected_E61_checkpoints": [
+    "runs/20261027_preflight_projected_resume_r2/checkpoints/latest.pt",
+    "runs/20261027_seed0_replay/previous_update_before.pt",
+    "runs/20261027_seed0_replay/first_abnormal_before_update.pt",
+    "runs/20261027_graph_step_projection_seed0/latest.pt",
+    "runs/20261027_large64000_graph_step_seed0/checkpoints/best.pt",
+    "runs/20261027_large64000_graph_step_seed0/checkpoints/latest.pt"
+  ],
+  "formal_models_and_original_data_unchanged": true,
+  "test_read": false
+}

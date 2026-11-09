@@ -1,0 +1,31 @@
+{
+  "status": "reviewed",
+  "reviewed_utc": "2026-10-28T05:49:42.653696+00:00",
+  "decision": "Current combined E68 candidate failed to improve; preserve evidence, do not promote or automatically retrain.",
+  "train_status": "early_stop",
+  "epochs": 57,
+  "best_epoch": 54,
+  "training_seconds": 4237.44251980001,
+  "relative_G_vs_E65": 0.11456343471777464,
+  "relative_overlap_vs_E65": 0.35027079360040037,
+  "reviewed_gallery_cases": [
+    29,
+    346,
+    459
+  ],
+  "AI_review_is_user_acceptance": false,
+  "checks": {
+    "unique_G_best_matches_raw_and_flash_sha256": true,
+    "current_sources_match_frozen": true,
+    "protected_checkpoints_unchanged": true,
+    "saved_gallery_count": 100
+  },
+  "interpretation": "Train and dev both worse; insufficient evidence to isolate full-port data, removal of summaries or new aggregation as the cause. Do not infer full port information inherently useless.",
+  "notes": [
+    "Low-sparse no-pin center error is nearly unchanged/slightly lower, but overall subgroup G, overlap and near-pair errors did not improve.",
+    "Gallery image title retains copied geometry-message wording; frozen model_config confirms actual port-reader model, not the E65 pair-message branch."
+  ],
+  "test_read": false,
+  "new_inference": false,
+  "new_training": false
+}

@@ -1,0 +1,8 @@
+{
+  "revision":"E99.R22.saved_attraction_repulsion_conflict_audit.v1",
+  "scope":"Read current best R15 strong-attraction train500 all20 rounds, no new trajectory or planner solve, dev/test sealed.",
+  "question":"How often do a module's net attraction and repulsion oppose, and what fraction of pair attraction currently involves an endpoint still in overlap? Reconstruct pair attraction magnitudes and verify against module logs, not just subjective draft plots.",
+  "candidate_under_consideration":"Temporarily suppress attraction for a pair if either endpoint has any active repulsive overlap in the same snapshot; preserve every repulsion, equal/opposite pair forces, area inertia, old angular shape,20 rounds,caps and original planner. Recompute active-degree damping after gate. This is one activation rule, no added group/boundary/MIB force or coefficients.",
+  "decision":"Register candidate only after audit; evaluate finalQ on same train500. Reduced force cancellation does not prove final quality improvement.",
+  "test_read":false,"new_training":false
+}

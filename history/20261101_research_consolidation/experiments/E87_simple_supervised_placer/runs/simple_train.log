@@ -1,0 +1,114 @@
+Verified archived cache loaded: train 16000 cases
+Verified archived cache loaded: dev_monitor500 500 cases
+GPU resident inputs: 7.351 GiB; max_nodes=120
+FP32 CUDA training graph captured; weights and optimizer not advanced during warmup.
+epoch=0 step=0 train_loss=0.239966 dev_loss=0.257976 supervision=0.219787 lr=0.001 (same fixed Loss; no postprocessing)
+step=100 epoch=1 samples=3200/16000 total=0.27032
+step=200 epoch=1 samples=6400/16000 total=0.20873
+step=300 epoch=1 samples=9600/16000 total=0.23666
+step=400 epoch=1 samples=12800/16000 total=0.24558
+step=500 epoch=1 samples=16000/16000 total=0.27143
+epoch=1 step=500 train_loss=0.251818 dev_loss=0.267163 supervision=0.225773 lr=0.001 (same fixed Loss; no postprocessing)
+step=600 epoch=2 samples=3200/16000 total=0.27975
+Stopped: user_stop wall hours: 0.7367171303055592 best epoch: 0
+Traceback (most recent call last):
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "E:\project\ICCAD\2026\problemC\experiments\E87_simple_supervised_placer\train.py", line 440, in <module>
+    if __name__=='__main__':run(parser().parse_args())
+  File "E:\project\ICCAD\2026\problemC\experiments\E87_simple_supervised_placer\train.py", line 220, in run
+    try:return _run(args, **kwargs)
+  File "E:\project\ICCAD\2026\problemC\experiments\E87_simple_supervised_placer\train.py", line 274, in _run
+    args.output.mkdir(parents=True, exist_ok=False)
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\pathlib.py", line 1175, in mkdir
+    self._accessor.mkdir(self, mode)
+FileExistsError: [WinError 183] 当文件已存在时，无法创建该文件。: 'E:\\project\\ICCAD\\2026\\problemC\\experiments\\E87_simple_supervised_placer\\runs\\20261030_simple_seed0'
+Verified archived cache loaded: train 16000 cases
+Verified archived cache loaded: dev_monitor500 500 cases
+GPU resident inputs: 7.351 GiB; max_nodes=120
+FP32 CUDA training graph captured; weights and optimizer not advanced during warmup.
+Stopped: user_stop wall hours: 0.7901090738888888 best epoch: 0
+Verified archived cache loaded: train 16000 cases
+Verified archived cache loaded: dev_monitor500 500 cases
+GPU resident inputs: 7.351 GiB; max_nodes=120
+FP32 CUDA training graph captured; weights and optimizer not advanced during warmup.
+step=700 epoch=2 samples=6400/16000 total=0.22315
+step=800 epoch=2 samples=9600/16000 total=0.21946
+step=900 epoch=2 samples=12800/16000 total=0.28311
+step=1000 epoch=2 samples=16000/16000 total=0.23337
+epoch=2 step=1000 train_loss=0.252533 dev_loss=0.270343 supervision=0.228924 lr=0.001 (same fixed Loss; no postprocessing)
+step=1100 epoch=3 samples=3200/16000 total=0.24720
+step=1200 epoch=3 samples=6400/16000 total=0.27689
+step=1300 epoch=3 samples=9600/16000 total=0.26482
+step=1400 epoch=3 samples=12800/16000 total=0.28464
+step=1500 epoch=3 samples=16000/16000 total=0.28689
+epoch=3 step=1500 train_loss=0.266271 dev_loss=0.280122 supervision=0.236444 lr=0.00025 (same fixed Loss; no postprocessing)
+step=1600 epoch=4 samples=3200/16000 total=0.25736
+step=1700 epoch=4 samples=6400/16000 total=0.24091
+step=1800 epoch=4 samples=9600/16000 total=0.25043
+step=1900 epoch=4 samples=12800/16000 total=0.26169
+step=2000 epoch=4 samples=16000/16000 total=0.25640
+epoch=4 step=2000 train_loss=0.241601 dev_loss=0.261618 supervision=0.221150 lr=0.00025 (same fixed Loss; no postprocessing)
+step=2100 epoch=5 samples=3200/16000 total=0.21800
+step=2200 epoch=5 samples=6400/16000 total=0.23200
+step=2300 epoch=5 samples=9600/16000 total=0.26625
+step=2400 epoch=5 samples=12800/16000 total=0.23509
+step=2500 epoch=5 samples=16000/16000 total=0.26293
+epoch=5 step=2500 train_loss=0.240347 dev_loss=0.261793 supervision=0.222075 lr=0.00025 (same fixed Loss; no postprocessing)
+step=2600 epoch=6 samples=3200/16000 total=0.21495
+step=2700 epoch=6 samples=6400/16000 total=0.21307
+step=2800 epoch=6 samples=9600/16000 total=0.24852
+step=2900 epoch=6 samples=12800/16000 total=0.20738
+step=3000 epoch=6 samples=16000/16000 total=0.24625
+epoch=6 step=3000 train_loss=0.240970 dev_loss=0.262902 supervision=0.221347 lr=0.0001 (same fixed Loss; no postprocessing)
+step=3100 epoch=7 samples=3200/16000 total=0.20807
+step=3200 epoch=7 samples=6400/16000 total=0.21080
+step=3300 epoch=7 samples=9600/16000 total=0.24167
+step=3400 epoch=7 samples=12800/16000 total=0.23376
+step=3500 epoch=7 samples=16000/16000 total=0.25092
+epoch=7 step=3500 train_loss=0.229600 dev_loss=0.255573 supervision=0.216221 lr=0.0001 (same fixed Loss; no postprocessing)
+step=3600 epoch=8 samples=3200/16000 total=0.26525
+step=3700 epoch=8 samples=6400/16000 total=0.22135
+step=3800 epoch=8 samples=9600/16000 total=0.25590
+step=3900 epoch=8 samples=12800/16000 total=0.21530
+step=4000 epoch=8 samples=16000/16000 total=0.23936
+epoch=8 step=4000 train_loss=0.228846 dev_loss=0.255142 supervision=0.216490 lr=0.0001 (same fixed Loss; no postprocessing)
+step=4100 epoch=9 samples=3200/16000 total=0.22239
+step=4200 epoch=9 samples=6400/16000 total=0.23814
+step=4300 epoch=9 samples=9600/16000 total=0.21009
+step=4400 epoch=9 samples=12800/16000 total=0.22173
+step=4500 epoch=9 samples=16000/16000 total=0.24174
+epoch=9 step=4500 train_loss=0.226245 dev_loss=0.254747 supervision=0.215474 lr=0.0001 (same fixed Loss; no postprocessing)
+step=4600 epoch=10 samples=3200/16000 total=0.19864
+step=4700 epoch=10 samples=6400/16000 total=0.20673
+step=4800 epoch=10 samples=9600/16000 total=0.27373
+step=4900 epoch=10 samples=12800/16000 total=0.23946
+step=5000 epoch=10 samples=16000/16000 total=0.22512
+epoch=10 step=5000 train_loss=0.226868 dev_loss=0.255315 supervision=0.216362 lr=0.0001 (same fixed Loss; no postprocessing)
+step=5100 epoch=11 samples=3200/16000 total=0.20262
+step=5200 epoch=11 samples=6400/16000 total=0.23795
+step=5300 epoch=11 samples=9600/16000 total=0.18737
+step=5400 epoch=11 samples=12800/16000 total=0.24198
+step=5500 epoch=11 samples=16000/16000 total=0.21251
+epoch=11 step=5500 train_loss=0.225053 dev_loss=0.253813 supervision=0.215031 lr=0.0001 (same fixed Loss; no postprocessing)
+step=5600 epoch=12 samples=3200/16000 total=0.23101
+step=5700 epoch=12 samples=6400/16000 total=0.22096
+step=5800 epoch=12 samples=9600/16000 total=0.23527
+step=5900 epoch=12 samples=12800/16000 total=0.22316
+step=6000 epoch=12 samples=16000/16000 total=0.22161
+epoch=12 step=6000 train_loss=0.224171 dev_loss=0.254221 supervision=0.215319 lr=0.0001 (same fixed Loss; no postprocessing)
+step=6100 epoch=13 samples=3200/16000 total=0.20829
+step=6200 epoch=13 samples=6400/16000 total=0.26012
+step=6300 epoch=13 samples=9600/16000 total=0.24470
+step=6400 epoch=13 samples=12800/16000 total=0.17663
+step=6500 epoch=13 samples=16000/16000 total=0.27508
+epoch=13 step=6500 train_loss=0.224237 dev_loss=0.255099 supervision=0.215913 lr=0.0001 (same fixed Loss; no postprocessing)
+step=6600 epoch=14 samples=3200/16000 total=0.23070
+step=6700 epoch=14 samples=6400/16000 total=0.23130
+step=6800 epoch=14 samples=9600/16000 total=0.22400
+step=6900 epoch=14 samples=12800/16000 total=0.24145
+step=7000 epoch=14 samples=16000/16000 total=0.24934
+epoch=14 step=7000 train_loss=0.224336 dev_loss=0.256534 supervision=0.217464 lr=5e-05 (same fixed Loss; no postprocessing)
+Stopped: user_stop wall hours: 1.1917799574722205 best epoch: 11

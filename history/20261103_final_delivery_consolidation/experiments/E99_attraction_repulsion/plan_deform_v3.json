@@ -1,0 +1,22 @@
+{
+  "revision": "E99.central_force.area_mass.deformation.v3",
+  "authorization": "用户先明确要求10轮、单轮短边3%、累计小于20%；随后要求直接加入形变，细节合理自定。沿用已授权固定100例开发检查。",
+  "migration": "New independent deformation.py and run, old v1/v2 modules, parameters, saved coordinates, plans and evidence retained. No model/teacher/training changes.",
+  "config": {"iterations": 10, "step_size": 0.5, "step_fraction": 0.03, "total_fraction": 0.1999, "attraction_range": 0.5, "attraction_strength": 0.25, "repulsion_strength": 1.0, "mass_weighted": true, "shape_enabled": true, "shape_step_size": 0.5, "shape_step_fraction": 0.015, "shape_total_fraction": 0.15},
+  "translation": "Same rectangle central pair law, initial area/median area mass and global safety scaling. Budget applies to physical centers: per step<=3% original shortest side, cumulative path/displacement<=19.99%, strictly below20%. No displacement hidden in shape/domain projection.",
+  "shape": "q=log(w/w0), w=w0*exp(q), h=h0*exp(-q). Pair anisotropic stress on each endpoint = scalar_force * radial_surface_distance * (ux^2-uy^2). Sum then multiply .5/(initial area * global active degree). This produces compression transverse to repulsion and stretch along attraction even when net force is zero. No rotation.",
+  "shape_budget": "|dq|<=log(1.015) per round, sum|dq|<=log(1.15). Dimensions bounded to original/[1.15]..original*1.15; area preserved to roundoff. Fixed-shape and preplaced dimensions locked; preplaced positions locked. Clip q to fit XY>=0 at proposed center, rather than introducing an unbudgeted center shift. MIB/group/bbox/wire/edge preferences excluded here.",
+  "panel": "Exactly frozen v5 dev_monitor500 indices0..99 in original order; same exposed C3 draft and public mean-area task as v2. No new memberships, no test.",
+  "arms": ["translation_only_10: identical config with shape_enabled=false", "deformation_10: registered full config"],
+  "controls": "Matched 10-round translation-only arm isolates added shape mechanism. Existing no-preprocessor C3 full-planner output and completed v2 4-round results reused without repeat solves. Two fixed arms are mechanism controls, not a coefficient sweep; no additional settings selected from dev.",
+  "source_draft": "experiments/E97_gpu_hybrid_solver/runs/20261102_fullrepair_singlethread_dev500/C3/terminal/{index:04d}.json",
+  "previous_v2": "runs/20261102_area_mass_v2_dev100",
+  "source_model": "E97 C3 own-Loss best d784e96f46decf7a487c25bde2ab16db8cf6ebae1bc0632434cc5e2f78173fce",
+  "downstream": "Existing experiment-local planner and planner_config.json unchanged, single-thread sequential requests; alternate arm order by fixed index parity. One final solve per arm/member=200 calls.",
+  "evaluation": "No new Loss/Q correlation study. Exact raw pair intersection, true void fraction, per-module union coverage strictly below10% and worst module; original official neutral-runtime final Q and independent hard checks. Labels/reference/denominators only in scoring/drawing after solver return.",
+  "timing": "Each arm: resident CPU draft->preprocessor->same full planner->required returned hard checks. NN/feature construction/transfers excluded. Preprocessor mean/P95 and CPU-stage wall time separate; no full request speedup or throughput claim. Other user jobs not stopped or isolated.",
+  "visualization": "Shared visualization: same100 reference / C3 draft / v3 deformed draft / final planner, common module IDs/scale, no score controls or automatic UI. Rendering after all timed solves. Translation-only and oldv2 arrays retained in per-case NPZ.",
+  "stopping": "STOP at case/arm boundaries, preserve progress and failure, no automatic retry or extra variants. No training, full dev500 or automation.",
+  "output": "runs/20261102_deform_v3_dev100",
+  "test_read": false
+}

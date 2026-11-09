@@ -1,0 +1,10 @@
+{
+  "fix": "replace list indexing with equivalent stack of tensor slices",
+  "actual_updates": 0,
+  "resume_tests": 0,
+  "status": "error",
+  "stage": "minimal_preflight_cuda_capture",
+  "error": "CUDA capture rejects host list indexing at raw.transpose(1,2)[...,[1,0,3,2]]",
+  "test_read": false,
+  "unique_train_members": 5
+}

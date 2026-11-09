@@ -1,0 +1,44 @@
+{
+  "metric_version": "E42.feedback_geometry.v1",
+  "feedback_revision": 30,
+  "count": 1,
+  "rated_count": 1,
+  "cases": [
+    "case_0602"
+  ],
+  "budgets_max_center_L1_over_sqrt_area": [
+    0.0,
+    0.02,
+    0.05,
+    0.1,
+    0.2
+  ],
+  "mean_move_cap": "one quarter of maximum per-block cap; averages include all blocks",
+  "shape_log_width_caps": [
+    0.0,
+    0.05
+  ],
+  "shape_rule": "width=w0*exp(z); height=h0*exp(-z); exact unchanged module area",
+  "HPWL_increase_cap_relative": 0.001,
+  "strong_graph_thresholds": [
+    0.02,
+    0.05,
+    0.1,
+    0.2
+  ],
+  "primary_strong_threshold": 0.1,
+  "threads": "4 processes, each solver and Torch/BLAS use one thread",
+  "search": "three convex directions per budget: normalized width+height, width, height; conservative overlap endpoint constraints; exact final guards",
+  "status": "exploratory metrics defined after visual feedback; no held-out validation or threshold fitting",
+  "source_sha256": "4c221bd8d617378cfc22336dd58df71cb0470e1e6436838c10dab284951b48d4",
+  "budget_seconds": 1100,
+  "test_scope": "Only the 23 previously reviewed/annotated members inside exposed test1000; no remaining sealed cases",
+  "implementation_checks": {
+    "passed": true,
+    "checks": [
+      "shallow_connected_chain_vs_deep_cluster",
+      "isolated_pair_vs_complex_cluster",
+      "scale_and_translation_invariance"
+    ]
+  }
+}

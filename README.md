@@ -1,43 +1,65 @@
 # ICCAD 2026 Problem C
 
-2026-10-29一期六个候选已完成并保留账本；用户新授权“长任务继续”，第二阶段研究进行中，已恢复30分钟跟进。二期先限3个新候选/6小时、每组2小时，旧预算继续计入18小时总上限。已归档15个历史实验并核对5,746个文件，只清理72个可重建编译缓存，保护全部权重与张量缓存。
+2026-11-08当前展示：[E114 4+12三倍预算后处理最差10例](visualization/E114_supervision/20261108_budget3x_worst10/index.html)，左reference／中间滑块1–12层真实draft／右固定本次后处理，编号与G分组色、F/P及边界状态统一、无MIB。新评价已500/500硬合法，混合Q1.021638，完整均时341.8ms/P95 1027.3ms，82例超过500ms；原结果和权重保留。[全量对照报告](experiments/E114_supervision_placement/evaluation_budget500ms/output/comparison_report.md)。
 
-当前开发候选[E77](experiments/E77_compact_refinement/runs/completion/inspection.md)：完整dev2000草稿交面积6.302%→2.205%，1999/2000例改善；500例均满足E74公开预测外框限制，精确空白继续下降。flash500加权Q1.017483，相对E42的worker配对区间[-0.013842,-0.003141]。最差单例Q2.163867劣于E42的1.927279，不能声称全指标占优或正式未见成绩，不自动替换冻结E42/E50。[100例reference／E77／E42图](experiments/E77_compact_refinement/runs/20261029_e76_compact_corrector_seed0/draft_comparison100/index.html)。
+2026-11-08 E116已完成：[首稿结构对照复核](experiments/E116_first_draft_comparison/result_review.md)。原四层/新版均正常早停，best dev500 Loss为0.468609/0.470894；新版高0.488%，记录训练更新更快，但重叠惩罚较高。仅既有训练日志，无新增Q/后处理/test，不自动续训；E114主基线及E101交付保持。
 
-[E76已完成复核](experiments/E76_bounded_refinement/runs/completion/inspection.md)：30轮早停/best29，flash500加权Q1.017693，相对E42的worker配对区间[-0.012021,-0.004259]，完整dev2000交面积降至2.733%。但相对E74有499/500外框扩大、均值约增加1.31%；保留其收益证据，不按Q直接升级基线。
+2026-11-08最新：用户选择E114 staged（4+12、best48）作为后续主要研究基线，替代E109 A的主要地位；旧身份保留，E101交付不变，未来默认16k不改，不启动新训练。见 `protocol/research_baseline_v2.json`。当前展示改为左reference／中间滑块切换1–12层真实draft／右固定后处理结果，固定5个训练例＋已完成dev评价最终Q最差5例，同色同尺度，不自动读test或重评整套；见 `protocol/three_phase_display_v2.json`。E114/E115已实际使用轴交换P=.5、Dropout .1/.05及AdamW decay .0003，不能记录为“未做增强”。
 
-[E77](experiments/E77_compact_refinement/README.md)已完成40轮、own-Loss best38；固定E76与E74预测外框，只学新增局部修正器。原预算保留；恢复训练阶段实测35.94分钟，另保守计入首次未知中断77.16分钟。训练、完整dev、一次flash500和100图已完成；最后报告的整数序列化错误仅通过保存结果汇总修复，冻结源码与终末评价不变。[完成状态](experiments/E77_compact_refinement/state.json)，[一期总账](experiments/E72_topology_posttrain/study.json)。一期结束时的关闭记录保留，本次新授权另开下述二期；测试封存。
 
-新授权的[E78](experiments/E78_connectivity_posttrain/README.md)从E77优秀权重继续训练既有最后修正器，源E76和E74预测框不变。保存结果否定了简单压低原始分组/线长代理的充分性；新组合提前协调相容等面积MIB组形状，并加入固定模块间通道过填压力。五例初始形状协调增加4例重叠，负面证据保留；固定Loss/CUDA/公开规格/框/真实Dropout Adam恢复预检已通过，进入正式训练。[二期账本](experiments/E78_connectivity_posttrain/study.json)。一期结束记录不追溯改写，E77终末不重跑，测试封存。
+2026-11-07最新：用户确认本次两组均用36k，已授权E114已有4+12恢复→[E115九层1+9大首头](experiments/E115_first_head_supervision/README.md)串行后台训练。原4+12累计预算保留，前两组已完成模型不重训；未来默认16k规则不变。[本轮队列](experiments/E115_first_head_supervision/queue_state.json)。
 
-[E78完成复核](experiments/E78_connectivity_posttrain/runs/completion/inspection.md)：MIB准备突变499→5例，flash加权Q1.015401、最大1.751561，但草稿交面积2.723%较E77的2.205%退化，不能只按Q升级。下一组[E79](experiments/E79_center_refinement/README.md)冻结完整E78及其尺寸，只新增中心修正器，以更强交面积项和一侧源次序保护尝试追回几何质量。五例预检通过；二期第二候选，每组2小时，旧预算保持。
 
-## 冻结基线
+2026-11-07最新：E114训练已按用户要求暂停。末层/密集监督已正常早停（best59/best52），第4/12层组在数据准备阶段step0保存退出；只验证前两组冻结best，测试封存。[暂停核验](experiments/E114_supervision_placement/pause_verification_20261107.json) · [两模型同五例逐层查看](visualization/E114_supervision/20261107_two_models/index.html)。以下后台启动说明为历史阶段。
 
-| 基线 | 实现 | 同dev500结果 |
+2026-11-07数据更新：E114第4/12层监督之后的新实验默认训练 **16000**，从当前36000训练池中固定随机无放回抽取、冻结后复用。当前E114三组继续36k。[规则](protocol/research_training16k_v1.json) · [数据处理入口与说明](docs/datasets.md#后续16k训练子集)。开发集及封存测试不变，本次仅准备数据入口，不启动新实验。
+
+2026-11-07最新：用户已授权后台启动[E114三组小模型监督位置训练](experiments/E114_supervision_placement/README.md)，terminal→dense→staged串行；实时状态见该实验queue_state.json。以下“仅准备”记录为此前阶段；E112/E113暂停不变。
+
+
+2026-11-07最新：用户要求仅准备 [E114小模型监督位置对照](experiments/E114_supervision_placement/README.md)，不启动训练。三组64维/12图块、612307参数，末层/密集/4与12层监督；采用新random40k、无MIB和全模块预测。五例计算检查通过、零参数更新，训练开关关闭、STOP保持。E112/E113仍暂停。
+
+
+公开问题 → 布局网络 L → 可选神经修正 F → 几何后处理 → 独立硬检查与质量评价。项目已完成多轮布局、修正、Loss、结构和后处理研究；竞赛交付方法保留 **E97 第二轮 C5＋原完整后处理（E101）**。后续独立研究不自动替换交付。
+
+## 接手阅读顺序
+
+1. [接手导读](docs/START_HERE.md)：任务、核心判断、最值得读的证据与常见误判。
+2. [执行协议](docs/protocol.md)：当前数据、信息、训练、评价和授权边界。
+3. [工作区结构](docs/workspace_structure.md)：源码、权重、有效缓存与历史路径。
+4. [有价值的历史研究](docs/research_history.md)：按研究问题组织的结果、反例和未决问题。
+5. [当前状态](docs/current_status.md) · [全部实验目录索引](docs/experiment_catalog.md)：按需进入原始报告。
+
+## 后续实验新约定（2026-11-06）
+
+2026-11-07：用户已选 **E109方案A：共享预测头＋逐层监督（best epoch61）** 为后续架构研究的重要基线。[冻结身份](protocol/research_baseline_v1.json) · [同五例逐层对比](visualization/layer_comparisons/20261107_same_train5/index.html)。其中关键子网络加深已获本次明确授权并登记为E112/E113：8图块、总参数接近A，两组串行训练后自动验证和五例展示。[后台队列](experiments/E112_deep_geometry_budget/queue_state.json) · [自动更新展示](visualization/critical_budget/20261107_pair/index.html)。E101竞赛交付不变，其余未选提案不自动实施。
+
+后续新实验保留原始面积与全部题目规格，**不再施加MIB约束，也不对MIB软违规罚分**；不做平均面积或同形变换，其他约束照常保留。原始数据、官方规则、历史实验和E101交付口径不改；新研究分数单独标注。详见[新协议](protocol/research_no_mib_v1.json)。
+
+新研究数据基底为独立随机 **40,000张（36,000训练／2,000验证／2,000测试）**，从原始全量重新划分、抽样，不沿用旧MIB筛选或旧split；后续默认训练改为上述固定16k视图。E108数据准备已完成；训练授权按各实验登记，测试继续封存。[数据准备记录](experiments/E108_random_reference40k/runs/20261106_random40k_v1/state.json)。
+
+## 当前状态
+
+核对截点：**2026-11-05 15:58（北京时间）**。当时未发现 python/pythonw/conda 进程；这是快照，后续执行前须再核查。[原始核查](history/20261105_workspace_handoff/process_snapshot.json)。
+
+| 研究 | 已核实的状态 | 入口 |
 |---|---|---|
-| draft＋flash | [E42](experiments/E42_joint_regularization/README.md)，96×12 best51、原steady | 加权Q1.025860 |
-| pro | [E50](experiments/E50_anytime_quality/README.md)，共用E42 draft、质量优先5秒 | 加权Q1.012043，12例较flash回退 |
+| E101 交付 | 原 C5、首次64k暖启动、历史链路重跑均有完成报告；另一个三阶段64k链路已按用户要求停止 | [交付与各权重身份](experiments/E101_final_c5_solver/README.md) |
+| E98 | 调权搜索已停止并放弃；固定基线和增强best71仍是证据/来源模型 | [停止边界与基线](experiments/E98_loss_weight_learning/README.md) |
+| E102 | 2026-11-06 22:25用户停止于25614步，完整状态已保存，进程退出；全部STOP保留，不自动恢复 | [续训登记](experiments/E102_reference_image_generation/runs/20261106_semantic_v21_bf16_b4_resume5_seed0_launch/README.md) · [后台状态](experiments/E102_reference_image_generation/runs/20261106_semantic_v21_bf16_b4_resume5_seed0_launch/state.json) |
+| E103 | 离线拟合、全局统计、两个续训候选及固定dev500评价已完成 | [结果导航](experiments/E103_offline_loss_alignment/README.md) |
+| E104 / E105 | 正常早停，唯一Loss-best及固定dev500评价完成 | [E104](experiments/E104_scaling32k/README.md) · [E105](experiments/E105_gated_prenorm_placer/README.md) |
+| E106 | 25000草稿标签及单个代理训练完成；方向检查不支持直接用作布局Loss | [完成检查](experiments/E106_postprocessor_aware_loss/runs/20261105_bank25000_seed0/result_review/report.md) |
+| E107 | 22次更新后第23批触发相对单例Loss门禁；STOP保留，未做终末后处理 | [停止与诊断](experiments/E107_geometry_posttrain/README.md) |
 
-质量/时间预算分别比较；这些是MIB派生任务的自适应开发中性时间Q，不是正式比赛或独立盲测成绩。E42共享权重SHA256 `12878108e9a58b8c195b314ba6586686c2a6e2796c1f4b6443e102b4db4224a6`，唯一原路径和v5缓存保持原位。E74不自动替换冻结E42/E50。
+**2026-11-05整理本身不新增实验、不恢复旧运行、不开放测试；2026-11-06新增授权仅为上述E108数据准备。** 已完成授权不变成永久运行许可；历史文档中的“启动”“下一阶段”“自动唤醒”和命令只记录当时语境。
 
-## 保留的近期研究
+## 阅读结果时必须保留的区别
 
-| 实验 | 状态与用途 |
-|---|---|
-| [E69](experiments/E69_case_loss_statistics/README.md) | 固定dev案例难度、弱端口/稀疏子群和位置错配诊断 |
-| [E71](experiments/E71_density_reference_curriculum/runs/inspection.md) | 紧凑草稿取舍对照；Q未胜出 |
-| [E72](experiments/E72_topology_posttrain/README.md) | 首轮扩大模型的数值失败证据，5575步安全保存；长期研究总账 |
-| [E73](experiments/E73_wide_robust_posttrain/runs/inspection.md) | 稳定宽模型完成；泛化差距和Loss/Q错位诊断 |
-| [E74](experiments/E74_collision_32k_posttrain/runs/completion/inspection.md) | 当前草稿与flash均值更好的候选，预算停止、非收敛 |
-| [E75](experiments/E75_collision_box_finetune/README.md) | 3374步数值保护失败，主干其他路径漂移证据 |
-| [E76](experiments/E76_bounded_refinement/runs/completion/inspection.md) | Q/重叠改善，但外框扩大；完成并保留 |
-| [E77](experiments/E77_compact_refinement/runs/completion/inspection.md) | 已完成复核：紧凑、重叠和Q均值改善，仍有尾部反例 |
-| [E78](experiments/E78_connectivity_posttrain/README.md) | 二期：同形组协调＋锚点通道后训练，五例预检通过 |
-| [E79](experiments/E79_center_refinement/README.md) | 当前：固定E78同形尺寸＋中心修正，五例预检通过 |
+- 草稿Loss、草稿几何、最终硬合法、最终Q和完整耗时是不同结果；更少重叠不保证更低Q。
+- E101的历史完整后处理与E98固定计算深度 `E98.depth_budget.v1` 分开比较；不能拼成无条件排行榜。
+- 大多数成绩来自多次暴露的开发面板和单seed。E101已登记test2000曾重复评价，不称全新未见测试；其他实验不因此获得测试权限。
+- 历史主线使用公开MIB平均面积派生任务，历史E102使用原始面积；后续新实验使用原始面积且忽略MIB，数据与评分身份分开。自由reference和评分分母不作网络输入。
+- Q<1.01及逐例250ms的原目标未被整体实现；均值小于250ms不代表尾部达标，也不代表正式比赛成绩。
 
-归档E61/E65/E68/E70等对照与恢复方法见[迁移说明](history/20261029_model_research_consolidation/README.md)。[朱老师交付材料](output/2026-10-24_朱老师交付报告/README.md)保持原位。
-
-先读[执行协议](docs/protocol.md)、[结构规范](docs/workspace_structure.md)与[AGENTS.md](AGENTS.md)。本聊天长训练授权记录在实验方案，不改写通用协议。独立环境`.conda/envs/iccad2026`，数据由[paths.json](protocol/paths.json)解析；冻结成员保持原件，checkpoint/数据/环境不入Git，布局图统一visualization，不自动启动评分界面。
-
-[实验索引](experiments/README.md) · [Git约定](docs/git.md) · [官方题目](references/official/problem_statement.md)
+独立环境：`.conda/envs/iccad2026`；数据位置由 [protocol/paths.json](protocol/paths.json) 解析。[数据版本](docs/datasets.md) · [GPU工程](docs/gpu_training.md) · [Git约定](docs/git.md) · [本次整理清单](history/20261105_workspace_handoff/README.md)。

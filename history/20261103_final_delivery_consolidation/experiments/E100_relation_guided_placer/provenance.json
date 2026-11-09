@@ -1,0 +1,97 @@
+{
+  "experiment": "E100",
+  "copied_sources": {
+    "__init__.py": {
+      "source": "experiments/E98_loss_weight_learning/__init__.py",
+      "source_sha256": "ed2916b29a76baefa65194c54beb9e9a5478e2de37f47dc71a7a4f0e3400cbb8"
+    },
+    "features.py": {
+      "source": "experiments/E98_loss_weight_learning/features.py",
+      "source_sha256": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73"
+    },
+    "batches.py": {
+      "source": "experiments/E98_loss_weight_learning/batches.py",
+      "source_sha256": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92"
+    },
+    "data.py": {
+      "source": "experiments/E98_loss_weight_learning/data.py",
+      "source_sha256": "1e43fe61a6d4dde4007295f817db927d75cd61439239423621ef65bf826e0d66"
+    },
+    "dataset_view.py": {
+      "source": "experiments/E98_loss_weight_learning/dataset_view.py",
+      "source_sha256": "4f0bcb1e15171d57ed1d0198560744a1ca2fd14b9bed46deac9def45d46752ee"
+    },
+    "cache.py": {
+      "source": "experiments/E98_loss_weight_learning/cache.py",
+      "source_sha256": "ac3e95aa991fa434967583f472931375960241d1e97a0c0e6c7072c2e70e74bb"
+    },
+    "ports.py": {
+      "source": "experiments/E98_loss_weight_learning/ports.py",
+      "source_sha256": "431b54476e7de8a94c12cf935a30a3b49b911e208305fbe6bb7b23d72e37dbef"
+    },
+    "resident.py": {
+      "source": "experiments/E98_loss_weight_learning/resident.py",
+      "source_sha256": "a70da9f834fd05091ab011459e34fcff214bd41cb753f98ee9c088975c0a3c81"
+    },
+    "simple_loss.py": {
+      "source": "experiments/E98_loss_weight_learning/simple_loss.py",
+      "source_sha256": "e96cc9272aa1e3b13a6f93b3674674df280e709c4ecde7098ad0dc1b73b8bfd3"
+    },
+    "group_tree.py": {
+      "source": "experiments/E98_loss_weight_learning/group_tree.py",
+      "source_sha256": "867ca3b84848ae78da25dd2a2db16018d722102c7bb5a34644492451efef65fd"
+    },
+    "loss_config.py": {
+      "source": "experiments/E98_loss_weight_learning/loss_config.py",
+      "source_sha256": "f3e0a1219b87262a6ea9c9a6a9af5aee31eed4fd6c878ecfb5170f061f0349e1"
+    },
+    "io.py": {
+      "source": "experiments/E98_loss_weight_learning/io.py",
+      "source_sha256": "8744d4dc2f0faaf9de18deb38051e5e334cac43529eaa97357941fcede3730c1"
+    },
+    "schedule.py": {
+      "source": "experiments/E98_loss_weight_learning/schedule.py",
+      "source_sha256": "4b784b3d501dcc7d84b1b4a77f5e40809b89293ceb1c455814cc9c9e251c62e8"
+    },
+    "captured_projection.py": {
+      "source": "experiments/E98_loss_weight_learning/captured_projection.py",
+      "source_sha256": "dd031332127edd706c0e09f49a07f5e6133f5a9cd0f7fcd69d2246644cbb74c9"
+    },
+    "step_control.py": {
+      "source": "experiments/E98_loss_weight_learning/step_control.py",
+      "source_sha256": "795ddb45dd257e123f1880eea28b58502711807ee643bfcb51a7e72d484952da"
+    },
+    "cuda_step.py": {
+      "source": "experiments/E98_loss_weight_learning/cuda_step.py",
+      "source_sha256": "57a1bc1ea04df1d43281bd4ed0421b731e8d49da6ff6537302dcd64b72569133"
+    },
+    "train.py": {
+      "source": "experiments/E98_loss_weight_learning/train.py",
+      "source_sha256": "d3f01fab5628fb3b8175be3de7e6e0ed97c1fd2c96c3c6a8067f8e21c73677b5"
+    },
+    "launch.ps1": {
+      "source": "experiments/E98_loss_weight_learning/launch.ps1",
+      "source_sha256": "8f66eb9a25aafd0c0eac1bc43122bae5f19dd924a9dce3f2b95579fad745f178"
+    },
+    "base_model.py": {
+      "source": "experiments/E98_loss_weight_learning/model.py",
+      "source_sha256": "0d71c96c75976dc57d589d5709639291d1a30addffa8a5f0f2c53e2cb88a9089"
+    }
+  },
+  "policy": "copied locally and maintained independently; no cross-experiment private imports",
+  "new_files": [
+    "model.py",
+    "loss.py",
+    "preflight.py",
+    "prepare.py"
+  ],
+  "source_checkpoint": null,
+  "initialization": "all random seed0 in actual training",
+  "preserved_input_semantics": [
+    "features.py",
+    "batches.py"
+  ],
+  "parameters": 1476847,
+  "minimal_checks": "five train members, one actual update; no restore checks",
+  "test_read": false
+}

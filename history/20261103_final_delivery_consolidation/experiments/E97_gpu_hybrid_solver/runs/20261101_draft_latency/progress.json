@@ -1,0 +1,2357 @@
+{
+  "records": [
+    {
+      "model": "L74",
+      "device": "cpu",
+      "path": "eager",
+      "train_id": 1683,
+      "n": 24,
+      "ports": 92,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 29.342650000035064,
+          "median_ms": 29.35790000083216,
+          "p95_ms": 31.942929998695035,
+          "max_ms": 32.73009999975329,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 33.366425000895106,
+          "median_ms": 33.74280000025465,
+          "p95_ms": 36.79895000223041,
+          "max_ms": 37.19510000155424,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      }
+    },
+    {
+      "model": "E85_full_draft",
+      "device": "cpu",
+      "path": "eager",
+      "train_id": 1683,
+      "n": 24,
+      "ports": 92,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 45.697194999411295,
+          "median_ms": 45.88915000022098,
+          "p95_ms": 51.405854998665745,
+          "max_ms": 51.448700000037206,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 45.91683499966166,
+          "median_ms": 45.64599999866914,
+          "p95_ms": 49.62471499693493,
+          "max_ms": 51.90500000026077,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      },
+      "stage_trace_ms": {
+        "L_neural": 28.03480000147829,
+        "F1_neural": 1.7393000016454607,
+        "frame1_fixed": 0.6785000005038455,
+        "F2_neural": 1.5984999990905635,
+        "frame2_MIB_fixed": 1.1669000014080666,
+        "F3_neural": 1.6400999993493315,
+        "eight_steps_fixed": 7.5576999988697935
+      }
+    },
+    {
+      "model": "L90",
+      "device": "cpu",
+      "path": "eager",
+      "train_id": 1683,
+      "n": 24,
+      "ports": 92,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 28.20596499950625,
+          "median_ms": 28.063249999831896,
+          "p95_ms": 30.837815001541458,
+          "max_ms": 31.045200001244666,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 33.1982000003336,
+          "median_ms": 32.9120000005787,
+          "p95_ms": 37.22008500026277,
+          "max_ms": 38.006399998266716,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      }
+    },
+    {
+      "model": "E96_full_draft",
+      "device": "cpu",
+      "path": "eager",
+      "train_id": 1683,
+      "n": 24,
+      "ports": 92,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 54.54336999955558,
+          "median_ms": 54.66264999995474,
+          "p95_ms": 58.63519000067754,
+          "max_ms": 59.030199998233,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 47.04930999978387,
+          "median_ms": 42.62210000160849,
+          "p95_ms": 59.283699998195516,
+          "max_ms": 59.28940000012517,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      }
+    },
+    {
+      "model": "L74",
+      "device": "cpu",
+      "path": "eager",
+      "train_id": 10027,
+      "n": 46,
+      "ports": 172,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 41.21062499980326,
+          "median_ms": 40.84744999818213,
+          "p95_ms": 43.6315899976762,
+          "max_ms": 43.68650000105845,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 45.315614999890386,
+          "median_ms": 47.24584999894432,
+          "p95_ms": 50.81993500152748,
+          "max_ms": 51.97770000086166,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      }
+    },
+    {
+      "model": "E85_full_draft",
+      "device": "cpu",
+      "path": "eager",
+      "train_id": 10027,
+      "n": 46,
+      "ports": 172,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 63.759200000458804,
+          "median_ms": 63.617949999752454,
+          "p95_ms": 68.69546000070841,
+          "max_ms": 70.18619999871589,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 60.02584999987448,
+          "median_ms": 58.31989999933285,
+          "p95_ms": 67.39166000133991,
+          "max_ms": 68.62780000301427,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      },
+      "stage_trace_ms": {
+        "L_neural": 34.984199999598786,
+        "F1_neural": 2.0981999987270683,
+        "frame1_fixed": 0.5823999999847729,
+        "F2_neural": 2.1452000000863336,
+        "frame2_MIB_fixed": 1.3539999999920838,
+        "F3_neural": 2.6527000009082258,
+        "eight_steps_fixed": 9.794800000236137
+      }
+    },
+    {
+      "model": "L90",
+      "device": "cpu",
+      "path": "eager",
+      "train_id": 10027,
+      "n": 46,
+      "ports": 172,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 36.40024499964056,
+          "median_ms": 36.63974999835773,
+          "p95_ms": 37.65757999954076,
+          "max_ms": 37.73509999882663,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 44.493790000524314,
+          "median_ms": 45.05115000210935,
+          "p95_ms": 48.58494000181963,
+          "max_ms": 48.671200001990655,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      }
+    },
+    {
+      "model": "E96_full_draft",
+      "device": "cpu",
+      "path": "eager",
+      "train_id": 10027,
+      "n": 46,
+      "ports": 172,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 67.2131849996731,
+          "median_ms": 64.89849999888975,
+          "p95_ms": 77.0435649990759,
+          "max_ms": 79.91000000038184,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 67.49355499978265,
+          "median_ms": 66.69994999901974,
+          "p95_ms": 71.56199000055494,
+          "max_ms": 74.63979999738513,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      }
+    },
+    {
+      "model": "L74",
+      "device": "cpu",
+      "path": "eager",
+      "train_id": 5474,
+      "n": 75,
+      "ports": 207,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 60.40816500026267,
+          "median_ms": 59.90245000066352,
+          "p95_ms": 70.33058499928302,
+          "max_ms": 70.43100000009872,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 56.65932499960036,
+          "median_ms": 54.64314999881026,
+          "p95_ms": 67.17667500070093,
+          "max_ms": 73.74259999778587,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      }
+    },
+    {
+      "model": "E85_full_draft",
+      "device": "cpu",
+      "path": "eager",
+      "train_id": 5474,
+      "n": 75,
+      "ports": 207,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 88.21658000051684,
+          "median_ms": 85.61975000156963,
+          "p95_ms": 100.22165999816934,
+          "max_ms": 101.40270000192686,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 93.43853999980638,
+          "median_ms": 92.95600000041304,
+          "p95_ms": 96.34300500238169,
+          "max_ms": 99.57120000035502,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      },
+      "stage_trace_ms": {
+        "L_neural": 65.16429999828688,
+        "F1_neural": 4.4483999990916345,
+        "frame1_fixed": 0.8401999984926078,
+        "F2_neural": 4.083899999386631,
+        "frame2_MIB_fixed": 1.278799998544855,
+        "F3_neural": 3.9058999973349273,
+        "eight_steps_fixed": 15.61050000236719
+      }
+    },
+    {
+      "model": "L90",
+      "device": "cpu",
+      "path": "eager",
+      "train_id": 5474,
+      "n": 75,
+      "ports": 207,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 63.836185000036494,
+          "median_ms": 62.73605000023963,
+          "p95_ms": 69.34485500023584,
+          "max_ms": 69.4048000004841,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 55.4225600000791,
+          "median_ms": 54.48109999997541,
+          "p95_ms": 60.218980000718155,
+          "max_ms": 69.68250000136322,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      }
+    },
+    {
+      "model": "E96_full_draft",
+      "device": "cpu",
+      "path": "eager",
+      "train_id": 5474,
+      "n": 75,
+      "ports": 207,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 102.20327500010171,
+          "median_ms": 96.04405000027327,
+          "p95_ms": 123.33015499789326,
+          "max_ms": 124.6422000003804,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 109.70788499998889,
+          "median_ms": 109.51234999993176,
+          "p95_ms": 113.18586000252253,
+          "max_ms": 117.86670000219601,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      }
+    },
+    {
+      "model": "L74",
+      "device": "cpu",
+      "path": "eager",
+      "train_id": 10140,
+      "n": 73,
+      "ports": 151,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 61.55239999970945,
+          "median_ms": 60.85834999976214,
+          "p95_ms": 67.4713199987309,
+          "max_ms": 68.12150000041584,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 66.66241499951866,
+          "median_ms": 67.77864999821759,
+          "p95_ms": 78.16248500093936,
+          "max_ms": 91.64460000101826,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      }
+    },
+    {
+      "model": "E85_full_draft",
+      "device": "cpu",
+      "path": "eager",
+      "train_id": 10140,
+      "n": 73,
+      "ports": 151,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 85.16064500017819,
+          "median_ms": 79.8770000001241,
+          "p95_ms": 100.21927500056336,
+          "max_ms": 101.57540000000154,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 84.31144999976823,
+          "median_ms": 81.65739999822108,
+          "p95_ms": 91.86383999967802,
+          "max_ms": 95.73299999829032,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      },
+      "stage_trace_ms": {
+        "L_neural": 57.1724000001268,
+        "F1_neural": 3.936100001737941,
+        "frame1_fixed": 0.6433999988075811,
+        "F2_neural": 4.251700000168057,
+        "frame2_MIB_fixed": 1.3644999999087304,
+        "F3_neural": 4.300600001442945,
+        "eight_steps_fixed": 15.967399998771725
+      }
+    },
+    {
+      "model": "L90",
+      "device": "cpu",
+      "path": "eager",
+      "train_id": 10140,
+      "n": 73,
+      "ports": 151,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 61.76317499957804,
+          "median_ms": 60.41480000021693,
+          "p95_ms": 70.45694000080402,
+          "max_ms": 75.5687000018952,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 63.44789499999024,
+          "median_ms": 63.30399999933434,
+          "p95_ms": 72.61385500023607,
+          "max_ms": 73.2836999995925,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      }
+    },
+    {
+      "model": "E96_full_draft",
+      "device": "cpu",
+      "path": "eager",
+      "train_id": 10140,
+      "n": 73,
+      "ports": 151,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 109.71980000012991,
+          "median_ms": 108.33810000076483,
+          "p95_ms": 119.22629000000597,
+          "max_ms": 119.29260000033537,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 107.93642999979056,
+          "median_ms": 107.70409999895492,
+          "p95_ms": 110.20544499933749,
+          "max_ms": 118.87790000037057,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      }
+    },
+    {
+      "model": "L74",
+      "device": "cpu",
+      "path": "eager",
+      "train_id": 15001,
+      "n": 46,
+      "ports": 109,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 42.84363500028121,
+          "median_ms": 41.76675000053365,
+          "p95_ms": 49.73863000013807,
+          "max_ms": 50.10779999793158,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 45.256370000061,
+          "median_ms": 47.23955000190472,
+          "p95_ms": 50.27186500319658,
+          "max_ms": 52.467599998635706,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      }
+    },
+    {
+      "model": "E85_full_draft",
+      "device": "cpu",
+      "path": "eager",
+      "train_id": 15001,
+      "n": 46,
+      "ports": 109,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 64.17145999967033,
+          "median_ms": 62.11329999860027,
+          "p95_ms": 72.40791499916668,
+          "max_ms": 74.45069999812404,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 66.2261799996486,
+          "median_ms": 65.79684999996971,
+          "p95_ms": 69.71764499830897,
+          "max_ms": 71.37339999826509,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      },
+      "stage_trace_ms": {
+        "L_neural": 42.18819999732659,
+        "F1_neural": 4.050899999128887,
+        "frame1_fixed": 0.8831000013742596,
+        "F2_neural": 2.9606000025523826,
+        "frame2_MIB_fixed": 1.4362999972945545,
+        "F3_neural": 2.340299997740658,
+        "eight_steps_fixed": 10.312099999282509
+      }
+    },
+    {
+      "model": "L90",
+      "device": "cpu",
+      "path": "eager",
+      "train_id": 15001,
+      "n": 46,
+      "ports": 109,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 41.75158499965619,
+          "median_ms": 41.60620000038762,
+          "p95_ms": 43.983425002443255,
+          "max_ms": 44.11120000077062,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 45.18457000031049,
+          "median_ms": 47.03220000192232,
+          "p95_ms": 50.2236050018837,
+          "max_ms": 52.72219999824301,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      }
+    },
+    {
+      "model": "E96_full_draft",
+      "device": "cpu",
+      "path": "eager",
+      "train_id": 15001,
+      "n": 46,
+      "ports": 109,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 68.91362499991374,
+          "median_ms": 64.63580000126967,
+          "p95_ms": 81.7688499990254,
+          "max_ms": 84.5380999999179,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 67.48215500010701,
+          "median_ms": 67.30860000061512,
+          "p95_ms": 71.74884999876667,
+          "max_ms": 72.28179999947315,
+          "repetitions": 20
+        },
+        "cuda_stream": null
+      }
+    },
+    {
+      "model": "L74",
+      "device": "cuda",
+      "path": "eager",
+      "train_id": 1683,
+      "n": 24,
+      "ports": 92,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 36.00723499948799,
+          "median_ms": 36.53959999974177,
+          "p95_ms": 38.11215499881655,
+          "max_ms": 38.821899997856235,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 35.96305885314941,
+          "median_ms": 36.5087833404541,
+          "p95_ms": 38.078288078308105,
+          "max_ms": 38.79849624633789,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 40.07007499985775,
+          "median_ms": 39.65969999990193,
+          "p95_ms": 40.78759999883915,
+          "max_ms": 46.02589999922202,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 40.03922252655029,
+          "median_ms": 39.62606239318848,
+          "p95_ms": 40.73760967254639,
+          "max_ms": 46.0079345703125,
+          "repetitions": 20
+        }
+      }
+    },
+    {
+      "model": "L74",
+      "device": "cuda",
+      "path": "cuda_graph",
+      "train_id": 1683,
+      "n": 24,
+      "ports": 92,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 2.473325000028126,
+          "median_ms": 2.398399999947287,
+          "p95_ms": 2.7792150001914706,
+          "max_ms": 2.779500002361601,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 2.4636687874794005,
+          "median_ms": 2.389407992362976,
+          "p95_ms": 2.75237922668457,
+          "max_ms": 2.7699201107025146,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 4.723244999877352,
+          "median_ms": 4.700499999671592,
+          "p95_ms": 4.903174999344628,
+          "max_ms": 5.119299999932991,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 4.69566240310669,
+          "median_ms": 4.675583839416504,
+          "p95_ms": 4.859941005706787,
+          "max_ms": 5.083168029785156,
+          "repetitions": 20
+        }
+      },
+      "capture_seconds_excluded": 0.2390769999983604
+    },
+    {
+      "model": "E85_full_draft",
+      "device": "cuda",
+      "path": "eager",
+      "train_id": 1683,
+      "n": 24,
+      "ports": 92,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 84.1206000000966,
+          "median_ms": 83.35545000045386,
+          "p95_ms": 89.08761499860702,
+          "max_ms": 89.2855000020063,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 84.03589248657227,
+          "median_ms": 83.26567840576172,
+          "p95_ms": 88.97350959777832,
+          "max_ms": 89.2033920288086,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 84.0191599998434,
+          "median_ms": 83.68379999956232,
+          "p95_ms": 86.66576000068744,
+          "max_ms": 90.13440000126138,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 83.94753303527833,
+          "median_ms": 83.60898971557617,
+          "p95_ms": 86.60040855407715,
+          "max_ms": 90.07734680175781,
+          "repetitions": 20
+        }
+      },
+      "stage_trace_ms": {
+        "L_neural": 39.44259262084961,
+        "F1_neural": 2.959199905395508,
+        "frame1_fixed": 2.606208086013794,
+        "F2_neural": 3.4879679679870605,
+        "frame2_MIB_fixed": 4.422815799713135,
+        "F3_neural": 2.9398720264434814,
+        "eight_steps_fixed": 26.671104431152344
+      }
+    },
+    {
+      "model": "E85_full_draft",
+      "device": "cuda",
+      "path": "cuda_graph",
+      "train_id": 1683,
+      "n": 24,
+      "ports": 92,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 4.685909999534488,
+          "median_ms": 4.6351000000868225,
+          "p95_ms": 4.87461499942583,
+          "max_ms": 5.228299996815622,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 4.673503994941711,
+          "median_ms": 4.626159906387329,
+          "p95_ms": 4.863219356536866,
+          "max_ms": 5.204063892364502,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 7.255904999692575,
+          "median_ms": 7.20760000149312,
+          "p95_ms": 7.6478749981106375,
+          "max_ms": 7.692999999562744,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 7.224470376968384,
+          "median_ms": 7.178447961807251,
+          "p95_ms": 7.613892960548401,
+          "max_ms": 7.66323184967041,
+          "repetitions": 20
+        }
+      },
+      "capture_seconds_excluded": 0.4288680000026943
+    },
+    {
+      "model": "L90",
+      "device": "cuda",
+      "path": "eager",
+      "train_id": 1683,
+      "n": 24,
+      "ports": 92,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 38.89454500058491,
+          "median_ms": 38.89675000209536,
+          "p95_ms": 42.02121500256908,
+          "max_ms": 42.13929999968968,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 38.82451972961426,
+          "median_ms": 38.83339309692383,
+          "p95_ms": 41.9490104675293,
+          "max_ms": 42.06790542602539,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 39.4315950003147,
+          "median_ms": 39.39305000130844,
+          "p95_ms": 40.59361000126955,
+          "max_ms": 40.77809999944293,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 39.38028144836426,
+          "median_ms": 39.338815689086914,
+          "p95_ms": 40.539665412902835,
+          "max_ms": 40.709632873535156,
+          "repetitions": 20
+        }
+      }
+    },
+    {
+      "model": "L90",
+      "device": "cuda",
+      "path": "cuda_graph",
+      "train_id": 1683,
+      "n": 24,
+      "ports": 92,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 2.6596799998515053,
+          "median_ms": 2.621499999804655,
+          "p95_ms": 3.0104650011708145,
+          "max_ms": 3.125699997326592,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 2.6470016121864317,
+          "median_ms": 2.609488010406494,
+          "p95_ms": 2.9976559162139895,
+          "max_ms": 3.1057279109954834,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 5.367515000398271,
+          "median_ms": 5.334450001100777,
+          "p95_ms": 5.774774999372312,
+          "max_ms": 5.884499998501269,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 5.342249608039856,
+          "median_ms": 5.30947208404541,
+          "p95_ms": 5.746627402305603,
+          "max_ms": 5.855519771575928,
+          "repetitions": 20
+        }
+      },
+      "capture_seconds_excluded": 0.2287861000004341
+    },
+    {
+      "model": "E96_full_draft",
+      "device": "cuda",
+      "path": "eager",
+      "train_id": 1683,
+      "n": 24,
+      "ports": 92,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 56.394544999966456,
+          "median_ms": 56.65554999904998,
+          "p95_ms": 58.98551999962365,
+          "max_ms": 59.12270000044373,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 56.327843475341794,
+          "median_ms": 56.58627128601074,
+          "p95_ms": 58.91505107879639,
+          "max_ms": 59.053279876708984,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 61.02827499980776,
+          "median_ms": 61.27819999892381,
+          "p95_ms": 62.32892500011076,
+          "max_ms": 63.072299999475945,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 60.97330207824707,
+          "median_ms": 61.22867202758789,
+          "p95_ms": 62.266971015930174,
+          "max_ms": 62.99769592285156,
+          "repetitions": 20
+        }
+      }
+    },
+    {
+      "model": "E96_full_draft",
+      "device": "cuda",
+      "path": "cuda_graph",
+      "train_id": 1683,
+      "n": 24,
+      "ports": 92,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 9.483420000287879,
+          "median_ms": 10.167350001211162,
+          "p95_ms": 10.238944999764499,
+          "max_ms": 10.291099999449216,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 9.473518443107604,
+          "median_ms": 10.15828800201416,
+          "p95_ms": 10.231363153457641,
+          "max_ms": 10.275808334350586,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 7.115094999426219,
+          "median_ms": 7.088199999998324,
+          "p95_ms": 7.550660000742937,
+          "max_ms": 7.593599999381695,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 7.072456002235413,
+          "median_ms": 7.042511940002441,
+          "p95_ms": 7.501582384109497,
+          "max_ms": 7.5371198654174805,
+          "repetitions": 20
+        }
+      },
+      "capture_seconds_excluded": 0.3278013000017381
+    },
+    {
+      "model": "L74",
+      "device": "cuda",
+      "path": "eager",
+      "train_id": 10027,
+      "n": 46,
+      "ports": 172,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 36.47381000027963,
+          "median_ms": 36.51334999995015,
+          "p95_ms": 38.04270000091492,
+          "max_ms": 38.09019999971497,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 36.40770587921143,
+          "median_ms": 36.446672439575195,
+          "p95_ms": 37.97508697509765,
+          "max_ms": 38.019168853759766,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 38.900754999849596,
+          "median_ms": 38.88580000057118,
+          "p95_ms": 39.68574999762495,
+          "max_ms": 40.241500002593966,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 38.843340682983396,
+          "median_ms": 38.831695556640625,
+          "p95_ms": 39.618622589111325,
+          "max_ms": 40.17433547973633,
+          "repetitions": 20
+        }
+      }
+    },
+    {
+      "model": "L74",
+      "device": "cuda",
+      "path": "cuda_graph",
+      "train_id": 10027,
+      "n": 46,
+      "ports": 172,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 2.5089050004680757,
+          "median_ms": 2.4548500005039386,
+          "p95_ms": 2.6311549998354167,
+          "max_ms": 2.814600000419887,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 2.49974240064621,
+          "median_ms": 2.4462718963623047,
+          "p95_ms": 2.620920050144196,
+          "max_ms": 2.7995200157165527,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 4.8498949994609575,
+          "median_ms": 4.7992499985412,
+          "p95_ms": 5.040874998121581,
+          "max_ms": 5.217100002482766,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 4.81723039150238,
+          "median_ms": 4.7709760665893555,
+          "p95_ms": 5.013025617599488,
+          "max_ms": 5.188159942626953,
+          "repetitions": 20
+        }
+      },
+      "capture_seconds_excluded": 0.227478600001632
+    },
+    {
+      "model": "E85_full_draft",
+      "device": "cuda",
+      "path": "eager",
+      "train_id": 10027,
+      "n": 46,
+      "ports": 172,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 69.60409000021173,
+          "median_ms": 68.90264999856299,
+          "p95_ms": 73.7205850022292,
+          "max_ms": 74.35299999997369,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 69.53017921447754,
+          "median_ms": 68.83524703979492,
+          "p95_ms": 73.64547691345214,
+          "max_ms": 74.2748794555664,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 77.15969000000769,
+          "median_ms": 77.01410000117903,
+          "p95_ms": 79.40419999940787,
+          "max_ms": 81.89700000002631,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 77.10071830749511,
+          "median_ms": 76.95412826538086,
+          "p95_ms": 79.3395191192627,
+          "max_ms": 81.83229064941406,
+          "repetitions": 20
+        }
+      },
+      "stage_trace_ms": {
+        "L_neural": 35.6602897644043,
+        "F1_neural": 2.8011839389801025,
+        "frame1_fixed": 2.1275839805603027,
+        "F2_neural": 2.744447946548462,
+        "frame2_MIB_fixed": 4.14899206161499,
+        "F3_neural": 2.6364479064941406,
+        "eight_steps_fixed": 23.9355525970459
+      }
+    },
+    {
+      "model": "E85_full_draft",
+      "device": "cuda",
+      "path": "cuda_graph",
+      "train_id": 10027,
+      "n": 46,
+      "ports": 172,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 5.159925000043586,
+          "median_ms": 5.148449999978766,
+          "p95_ms": 5.265084997336089,
+          "max_ms": 5.618200000753859,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 5.1488159656524655,
+          "median_ms": 5.138351917266846,
+          "p95_ms": 5.252438235282898,
+          "max_ms": 5.601247787475586,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 7.137455000338377,
+          "median_ms": 7.142300002669799,
+          "p95_ms": 7.24197499876027,
+          "max_ms": 7.3802000006253365,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 7.108676767349243,
+          "median_ms": 7.114991903305054,
+          "p95_ms": 7.213723278045655,
+          "max_ms": 7.343743801116943,
+          "repetitions": 20
+        }
+      },
+      "capture_seconds_excluded": 0.36566619999939576
+    },
+    {
+      "model": "L90",
+      "device": "cuda",
+      "path": "eager",
+      "train_id": 10027,
+      "n": 46,
+      "ports": 172,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 37.41166500039981,
+          "median_ms": 37.45150000031572,
+          "p95_ms": 38.923999999860825,
+          "max_ms": 39.0798000007635,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 37.34791984558105,
+          "median_ms": 37.39119911193848,
+          "p95_ms": 38.8517578125,
+          "max_ms": 39.00825500488281,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 38.807824999821605,
+          "median_ms": 38.571150000279886,
+          "p95_ms": 40.23845500105381,
+          "max_ms": 41.7271999976947,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 38.75401268005371,
+          "median_ms": 38.51355171203613,
+          "p95_ms": 40.181542587280276,
+          "max_ms": 41.6736946105957,
+          "repetitions": 20
+        }
+      }
+    },
+    {
+      "model": "L90",
+      "device": "cuda",
+      "path": "cuda_graph",
+      "train_id": 10027,
+      "n": 46,
+      "ports": 172,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 2.606030000060855,
+          "median_ms": 2.594199999293778,
+          "p95_ms": 2.785135000158334,
+          "max_ms": 2.897900001698872,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 2.5960544109344483,
+          "median_ms": 2.5841439962387085,
+          "p95_ms": 2.775636875629425,
+          "max_ms": 2.886687994003296,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 5.183495000164839,
+          "median_ms": 5.180850001124782,
+          "p95_ms": 5.294594999031688,
+          "max_ms": 5.368599999201251,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 5.153867268562317,
+          "median_ms": 5.150496006011963,
+          "p95_ms": 5.265985774993896,
+          "max_ms": 5.340191841125488,
+          "repetitions": 20
+        }
+      },
+      "capture_seconds_excluded": 0.23581449999983306
+    },
+    {
+      "model": "E96_full_draft",
+      "device": "cuda",
+      "path": "eager",
+      "train_id": 10027,
+      "n": 46,
+      "ports": 172,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 62.434255000152916,
+          "median_ms": 59.86805000065942,
+          "p95_ms": 83.62419000168302,
+          "max_ms": 89.31260000099428,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 62.35779037475586,
+          "median_ms": 59.795536041259766,
+          "p95_ms": 83.56527366638184,
+          "max_ms": 89.24323272705078,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 62.597859999368666,
+          "median_ms": 62.68534999981057,
+          "p95_ms": 63.64909999902011,
+          "max_ms": 63.979700000345474,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 62.542443466186526,
+          "median_ms": 62.62270545959473,
+          "p95_ms": 63.58410530090332,
+          "max_ms": 63.91625595092773,
+          "repetitions": 20
+        }
+      }
+    },
+    {
+      "model": "E96_full_draft",
+      "device": "cuda",
+      "path": "cuda_graph",
+      "train_id": 10027,
+      "n": 46,
+      "ports": 172,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 9.706309999819496,
+          "median_ms": 10.71964999937336,
+          "p95_ms": 10.803159999341005,
+          "max_ms": 10.865100000955863,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 9.696649622917175,
+          "median_ms": 10.70956802368164,
+          "p95_ms": 10.787102651596069,
+          "max_ms": 10.855775833129883,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 6.999425000503834,
+          "median_ms": 6.959800000913674,
+          "p95_ms": 7.248824999805947,
+          "max_ms": 7.368999999016523,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 6.960916781425476,
+          "median_ms": 6.918815851211548,
+          "p95_ms": 7.218774509429932,
+          "max_ms": 7.33897590637207,
+          "repetitions": 20
+        }
+      },
+      "capture_seconds_excluded": 0.31030769999779295
+    },
+    {
+      "model": "L74",
+      "device": "cuda",
+      "path": "eager",
+      "train_id": 5474,
+      "n": 75,
+      "ports": 207,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 35.760819999995874,
+          "median_ms": 35.81239999948593,
+          "p95_ms": 38.167469998916204,
+          "max_ms": 39.02949999974226,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 35.69377727508545,
+          "median_ms": 35.743967056274414,
+          "p95_ms": 38.08543586730957,
+          "max_ms": 38.95420837402344,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 39.067720000457484,
+          "median_ms": 38.98950000075274,
+          "p95_ms": 39.824674999726994,
+          "max_ms": 40.7627999993565,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 39.01714553833008,
+          "median_ms": 38.94057655334473,
+          "p95_ms": 39.765332984924314,
+          "max_ms": 40.71788787841797,
+          "repetitions": 20
+        }
+      }
+    },
+    {
+      "model": "L74",
+      "device": "cuda",
+      "path": "cuda_graph",
+      "train_id": 5474,
+      "n": 75,
+      "ports": 207,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 2.7941000002101646,
+          "median_ms": 2.742700000453624,
+          "p95_ms": 3.0494300001009833,
+          "max_ms": 3.1183999999484513,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 2.7828831672668457,
+          "median_ms": 2.7307839393615723,
+          "p95_ms": 3.0320288062095644,
+          "max_ms": 3.1073598861694336,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 5.7974399998784065,
+          "median_ms": 5.790299999716808,
+          "p95_ms": 6.065210001725063,
+          "max_ms": 6.213600001501618,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 5.761571216583252,
+          "median_ms": 5.756863832473755,
+          "p95_ms": 6.023843050003052,
+          "max_ms": 6.178944110870361,
+          "repetitions": 20
+        }
+      },
+      "capture_seconds_excluded": 0.22902700000122422
+    },
+    {
+      "model": "E85_full_draft",
+      "device": "cuda",
+      "path": "eager",
+      "train_id": 5474,
+      "n": 75,
+      "ports": 207,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 74.10850499945809,
+          "median_ms": 73.62054999975953,
+          "p95_ms": 78.95787999950699,
+          "max_ms": 79.04299999790965,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 74.02471542358398,
+          "median_ms": 73.54702377319336,
+          "p95_ms": 78.88271217346191,
+          "max_ms": 78.96227264404297,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 83.64515499997651,
+          "median_ms": 83.75615000113612,
+          "p95_ms": 86.78756000008434,
+          "max_ms": 86.92549999977928,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 83.5793441772461,
+          "median_ms": 83.69195175170898,
+          "p95_ms": 86.72376441955566,
+          "max_ms": 86.86339569091797,
+          "repetitions": 20
+        }
+      },
+      "stage_trace_ms": {
+        "L_neural": 37.181312561035156,
+        "F1_neural": 2.942431926727295,
+        "frame1_fixed": 2.4215359687805176,
+        "F2_neural": 2.848191976547241,
+        "frame2_MIB_fixed": 4.383488178253174,
+        "F3_neural": 2.756351947784424,
+        "eight_steps_fixed": 25.305471420288086
+      }
+    },
+    {
+      "model": "E85_full_draft",
+      "device": "cuda",
+      "path": "cuda_graph",
+      "train_id": 5474,
+      "n": 75,
+      "ports": 207,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 5.963989999690966,
+          "median_ms": 6.101349998061778,
+          "p95_ms": 6.38618999710161,
+          "max_ms": 6.653899999946589,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 5.953571248054504,
+          "median_ms": 6.089872121810913,
+          "p95_ms": 6.376153731346131,
+          "max_ms": 6.64415979385376,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 8.576314999845636,
+          "median_ms": 8.293200000480283,
+          "p95_ms": 9.45742500025517,
+          "max_ms": 9.701099999801954,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 8.544929575920104,
+          "median_ms": 8.271967887878418,
+          "p95_ms": 9.424305391311647,
+          "max_ms": 9.670271873474121,
+          "repetitions": 20
+        }
+      },
+      "capture_seconds_excluded": 0.3698767999994743
+    },
+    {
+      "model": "L90",
+      "device": "cuda",
+      "path": "eager",
+      "train_id": 5474,
+      "n": 75,
+      "ports": 207,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 36.84484500063263,
+          "median_ms": 37.13355000036245,
+          "p95_ms": 39.74649500341911,
+          "max_ms": 40.46080000262009,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 36.7803150177002,
+          "median_ms": 37.0711669921875,
+          "p95_ms": 39.692451858520506,
+          "max_ms": 40.39478302001953,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 41.38756500051386,
+          "median_ms": 41.57880000093428,
+          "p95_ms": 44.020155000907835,
+          "max_ms": 44.15990000052261,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 41.33102722167969,
+          "median_ms": 41.516639709472656,
+          "p95_ms": 43.96272487640381,
+          "max_ms": 44.10627365112305,
+          "repetitions": 20
+        }
+      }
+    },
+    {
+      "model": "L90",
+      "device": "cuda",
+      "path": "cuda_graph",
+      "train_id": 5474,
+      "n": 75,
+      "ports": 207,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 2.8153450002719183,
+          "median_ms": 2.7797500006272458,
+          "p95_ms": 2.9753100001471466,
+          "max_ms": 2.9792999994242564,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 2.8067376017570496,
+          "median_ms": 2.771232008934021,
+          "p95_ms": 2.9682543158531187,
+          "max_ms": 2.970047950744629,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 5.745054999169952,
+          "median_ms": 5.710549998184433,
+          "p95_ms": 6.126149999363406,
+          "max_ms": 6.294299997534836,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 5.714639949798584,
+          "median_ms": 5.680863857269287,
+          "p95_ms": 6.091678261756897,
+          "max_ms": 6.257023811340332,
+          "repetitions": 20
+        }
+      },
+      "capture_seconds_excluded": 0.24586400000043795
+    },
+    {
+      "model": "E96_full_draft",
+      "device": "cuda",
+      "path": "eager",
+      "train_id": 5474,
+      "n": 75,
+      "ports": 207,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 59.544424999876355,
+          "median_ms": 59.377400000812486,
+          "p95_ms": 61.36131500006741,
+          "max_ms": 63.64539999776753,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 59.476403427124026,
+          "median_ms": 59.307857513427734,
+          "p95_ms": 61.290401458740234,
+          "max_ms": 63.57712173461914,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 64.19686999979604,
+          "median_ms": 64.27854999856208,
+          "p95_ms": 66.23619499932829,
+          "max_ms": 66.4108999990276,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 64.13660125732422,
+          "median_ms": 64.20164489746094,
+          "p95_ms": 66.16991691589355,
+          "max_ms": 66.34623718261719,
+          "repetitions": 20
+        }
+      }
+    },
+    {
+      "model": "E96_full_draft",
+      "device": "cuda",
+      "path": "cuda_graph",
+      "train_id": 5474,
+      "n": 75,
+      "ports": 207,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 9.65448499937338,
+          "median_ms": 11.41644999916025,
+          "p95_ms": 11.479284999950323,
+          "max_ms": 11.486600000353064,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 9.642916822433472,
+          "median_ms": 11.405648231506348,
+          "p95_ms": 11.459347581863403,
+          "max_ms": 11.468223571777344,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 8.23283999980049,
+          "median_ms": 8.222700000260375,
+          "p95_ms": 8.675649998440349,
+          "max_ms": 8.75830000222777,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 8.198513627052307,
+          "median_ms": 8.189103603363037,
+          "p95_ms": 8.64248948097229,
+          "max_ms": 8.72323226928711,
+          "repetitions": 20
+        }
+      },
+      "capture_seconds_excluded": 0.31479159999798867
+    },
+    {
+      "model": "L74",
+      "device": "cuda",
+      "path": "eager",
+      "train_id": 10140,
+      "n": 73,
+      "ports": 151,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 37.7519650000977,
+          "median_ms": 37.460850000570645,
+          "p95_ms": 40.366795000227285,
+          "max_ms": 42.998199998692144,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 37.67746067047119,
+          "median_ms": 37.3897590637207,
+          "p95_ms": 40.2932731628418,
+          "max_ms": 42.92700958251953,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 42.076204999830225,
+          "median_ms": 41.899499999999534,
+          "p95_ms": 43.74709999992774,
+          "max_ms": 44.357000002491986,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 42.02429256439209,
+          "median_ms": 41.84766387939453,
+          "p95_ms": 43.69895706176758,
+          "max_ms": 44.30723190307617,
+          "repetitions": 20
+        }
+      }
+    },
+    {
+      "model": "L74",
+      "device": "cuda",
+      "path": "cuda_graph",
+      "train_id": 10140,
+      "n": 73,
+      "ports": 151,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 2.9859050000595744,
+          "median_ms": 2.9207499992480734,
+          "p95_ms": 3.2481349977388168,
+          "max_ms": 3.84920000215061,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 2.974110412597656,
+          "median_ms": 2.907807946205139,
+          "p95_ms": 3.2364559412002567,
+          "max_ms": 3.8385279178619385,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 5.63029999993887,
+          "median_ms": 5.623049999485374,
+          "p95_ms": 5.958464999457647,
+          "max_ms": 6.126899999799207,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 5.598174428939819,
+          "median_ms": 5.59220814704895,
+          "p95_ms": 5.928598356246948,
+          "max_ms": 6.096223831176758,
+          "repetitions": 20
+        }
+      },
+      "capture_seconds_excluded": 0.23936160000084783
+    },
+    {
+      "model": "E85_full_draft",
+      "device": "cuda",
+      "path": "eager",
+      "train_id": 10140,
+      "n": 73,
+      "ports": 151,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 75.15563499982818,
+          "median_ms": 74.8239000004105,
+          "p95_ms": 80.73752999880526,
+          "max_ms": 81.97690000088187,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 75.0756217956543,
+          "median_ms": 74.74425888061523,
+          "p95_ms": 80.6637809753418,
+          "max_ms": 81.88956451416016,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 82.95221999997011,
+          "median_ms": 82.33230000041658,
+          "p95_ms": 87.21377999881952,
+          "max_ms": 89.28060000107507,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 82.88792915344239,
+          "median_ms": 82.27428817749023,
+          "p95_ms": 87.15586166381836,
+          "max_ms": 89.20703887939453,
+          "repetitions": 20
+        }
+      },
+      "stage_trace_ms": {
+        "L_neural": 36.69267272949219,
+        "F1_neural": 2.829184055328369,
+        "frame1_fixed": 2.2919681072235107,
+        "F2_neural": 2.869503974914551,
+        "frame2_MIB_fixed": 4.3882880210876465,
+        "F3_neural": 2.798624038696289,
+        "eight_steps_fixed": 25.379615783691406
+      }
+    },
+    {
+      "model": "E85_full_draft",
+      "device": "cuda",
+      "path": "cuda_graph",
+      "train_id": 10140,
+      "n": 73,
+      "ports": 151,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 6.272114999956102,
+          "median_ms": 6.635750001805718,
+          "p95_ms": 6.764735002616362,
+          "max_ms": 6.829999998444691,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 6.261041593551636,
+          "median_ms": 6.625151872634888,
+          "p95_ms": 6.751991939544678,
+          "max_ms": 6.8199357986450195,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 8.959045000301558,
+          "median_ms": 8.56374999966647,
+          "p95_ms": 10.342690000106813,
+          "max_ms": 10.350100001232931,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 8.922406435012817,
+          "median_ms": 8.532848358154297,
+          "p95_ms": 10.285918521881104,
+          "max_ms": 10.30777645111084,
+          "repetitions": 20
+        }
+      },
+      "capture_seconds_excluded": 0.37103230000138865
+    },
+    {
+      "model": "L90",
+      "device": "cuda",
+      "path": "eager",
+      "train_id": 10140,
+      "n": 73,
+      "ports": 151,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 37.357705000067654,
+          "median_ms": 37.43465000115975,
+          "p95_ms": 39.459730000999116,
+          "max_ms": 40.868200001568766,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 37.29117603302002,
+          "median_ms": 37.377376556396484,
+          "p95_ms": 39.39171829223633,
+          "max_ms": 40.797569274902344,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 42.33882499993342,
+          "median_ms": 42.25209999822255,
+          "p95_ms": 44.35797500264016,
+          "max_ms": 47.78889999943203,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 42.28525810241699,
+          "median_ms": 42.20105743408203,
+          "p95_ms": 44.299572753906254,
+          "max_ms": 47.72662353515625,
+          "repetitions": 20
+        }
+      }
+    },
+    {
+      "model": "L90",
+      "device": "cuda",
+      "path": "cuda_graph",
+      "train_id": 10140,
+      "n": 73,
+      "ports": 151,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 2.744889999485167,
+          "median_ms": 2.727549999690382,
+          "p95_ms": 2.802699999665492,
+          "max_ms": 2.859699998225551,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 2.737867200374603,
+          "median_ms": 2.7199519872665405,
+          "p95_ms": 2.796846354007721,
+          "max_ms": 2.8457601070404053,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 6.020090000492928,
+          "median_ms": 6.000400000630179,
+          "p95_ms": 6.307879999440047,
+          "max_ms": 6.5431000002718065,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 5.991119980812073,
+          "median_ms": 5.971487998962402,
+          "p95_ms": 6.28009443283081,
+          "max_ms": 6.50867223739624,
+          "repetitions": 20
+        }
+      },
+      "capture_seconds_excluded": 0.22930770000311895
+    },
+    {
+      "model": "E96_full_draft",
+      "device": "cuda",
+      "path": "eager",
+      "train_id": 10140,
+      "n": 73,
+      "ports": 151,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 58.66901499975938,
+          "median_ms": 58.4830999996484,
+          "p95_ms": 60.621180000271124,
+          "max_ms": 61.133800001698546,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 58.601715660095216,
+          "median_ms": 58.42848014831543,
+          "p95_ms": 60.55385208129883,
+          "max_ms": 61.065120697021484,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 64.13298999977997,
+          "median_ms": 64.64684999991732,
+          "p95_ms": 66.30799500107969,
+          "max_ms": 66.36300000172923,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 64.06866931915283,
+          "median_ms": 64.57550430297852,
+          "p95_ms": 66.23911819458007,
+          "max_ms": 66.29952239990234,
+          "repetitions": 20
+        }
+      }
+    },
+    {
+      "model": "E96_full_draft",
+      "device": "cuda",
+      "path": "cuda_graph",
+      "train_id": 10140,
+      "n": 73,
+      "ports": 151,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 9.959529999468941,
+          "median_ms": 11.501499999212683,
+          "p95_ms": 11.571200000253157,
+          "max_ms": 11.671899999782909,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 9.950644707679748,
+          "median_ms": 11.492176055908203,
+          "p95_ms": 11.56271800994873,
+          "max_ms": 11.65510368347168,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 8.287580000433081,
+          "median_ms": 8.248600001024897,
+          "p95_ms": 8.530095003334282,
+          "max_ms": 8.702900002390379,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 8.253848028182983,
+          "median_ms": 8.212000370025635,
+          "p95_ms": 8.500567722320557,
+          "max_ms": 8.664575576782227,
+          "repetitions": 20
+        }
+      },
+      "capture_seconds_excluded": 0.30023119999896153
+    },
+    {
+      "model": "L74",
+      "device": "cuda",
+      "path": "eager",
+      "train_id": 15001,
+      "n": 46,
+      "ports": 109,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 36.39214499980881,
+          "median_ms": 36.24130000025616,
+          "p95_ms": 38.50581499791588,
+          "max_ms": 41.12430000168388,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 36.321295738220215,
+          "median_ms": 36.175071716308594,
+          "p95_ms": 38.4341516494751,
+          "max_ms": 41.05356979370117,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 38.3715249994566,
+          "median_ms": 38.25784999935422,
+          "p95_ms": 38.98897000144643,
+          "max_ms": 40.120800000295276,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 38.304184150695804,
+          "median_ms": 38.194223403930664,
+          "p95_ms": 38.924407958984375,
+          "max_ms": 40.04841613769531,
+          "repetitions": 20
+        }
+      }
+    },
+    {
+      "model": "L74",
+      "device": "cuda",
+      "path": "cuda_graph",
+      "train_id": 15001,
+      "n": 46,
+      "ports": 109,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 2.4459300000671647,
+          "median_ms": 2.4217999998654705,
+          "p95_ms": 2.512395001213008,
+          "max_ms": 2.5597999992896803,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 2.4394000291824343,
+          "median_ms": 2.416656017303467,
+          "p95_ms": 2.506056046485901,
+          "max_ms": 2.5518081188201904,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 5.046360000051209,
+          "median_ms": 5.042150000008405,
+          "p95_ms": 5.35084499988443,
+          "max_ms": 5.384000000049127,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 5.01787838935852,
+          "median_ms": 5.015232086181641,
+          "p95_ms": 5.323326253890992,
+          "max_ms": 5.354911804199219,
+          "repetitions": 20
+        }
+      },
+      "capture_seconds_excluded": 0.23867190000237315
+    },
+    {
+      "model": "E85_full_draft",
+      "device": "cuda",
+      "path": "eager",
+      "train_id": 15001,
+      "n": 46,
+      "ports": 109,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 70.18982000008691,
+          "median_ms": 69.82279999829188,
+          "p95_ms": 74.39718499917944,
+          "max_ms": 76.10120000026654,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 70.11840057373047,
+          "median_ms": 69.75846481323242,
+          "p95_ms": 74.31974220275879,
+          "max_ms": 76.02086639404297,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 70.85336500058474,
+          "median_ms": 70.96855000054347,
+          "p95_ms": 71.76589500013506,
+          "max_ms": 71.92919999943115,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 70.79498023986817,
+          "median_ms": 70.90356826782227,
+          "p95_ms": 71.71158370971679,
+          "max_ms": 71.87519836425781,
+          "repetitions": 20
+        }
+      },
+      "stage_trace_ms": {
+        "L_neural": 33.07001495361328,
+        "F1_neural": 2.5974080562591553,
+        "frame1_fixed": 1.9038079977035522,
+        "F2_neural": 2.5707199573516846,
+        "frame2_MIB_fixed": 3.6412479877471924,
+        "F3_neural": 2.779423952102661,
+        "eight_steps_fixed": 22.54662322998047
+      }
+    },
+    {
+      "model": "E85_full_draft",
+      "device": "cuda",
+      "path": "cuda_graph",
+      "train_id": 15001,
+      "n": 46,
+      "ports": 109,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 4.941635000068345,
+          "median_ms": 4.9022999992303085,
+          "p95_ms": 5.058520000966382,
+          "max_ms": 5.435099999886006,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 4.931656002998352,
+          "median_ms": 4.892319917678833,
+          "p95_ms": 5.04856812953949,
+          "max_ms": 5.4199042320251465,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 7.221355000001495,
+          "median_ms": 7.207650000054855,
+          "p95_ms": 7.472699997924792,
+          "max_ms": 7.476500002667308,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 7.192916822433472,
+          "median_ms": 7.176432132720947,
+          "p95_ms": 7.445756793022156,
+          "max_ms": 7.465151786804199,
+          "repetitions": 20
+        }
+      },
+      "capture_seconds_excluded": 0.3506495999972685
+    },
+    {
+      "model": "L90",
+      "device": "cuda",
+      "path": "eager",
+      "train_id": 15001,
+      "n": 46,
+      "ports": 109,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 37.2432750004009,
+          "median_ms": 37.00310000022,
+          "p95_ms": 41.04667500068899,
+          "max_ms": 41.226700002880534,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 37.17544803619385,
+          "median_ms": 36.93764877319336,
+          "p95_ms": 40.97843685150146,
+          "max_ms": 41.209598541259766,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 38.655450000260316,
+          "median_ms": 38.72725000110222,
+          "p95_ms": 39.82535499981168,
+          "max_ms": 40.11329999775626,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 38.60209312438965,
+          "median_ms": 38.679840087890625,
+          "p95_ms": 39.758491897583006,
+          "max_ms": 40.07030487060547,
+          "repetitions": 20
+        }
+      }
+    },
+    {
+      "model": "L90",
+      "device": "cuda",
+      "path": "cuda_graph",
+      "train_id": 15001,
+      "n": 46,
+      "ports": 109,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 2.748825000526267,
+          "median_ms": 2.6953500000672648,
+          "p95_ms": 3.040595001402835,
+          "max_ms": 3.3198000019183382,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 2.737243187427521,
+          "median_ms": 2.684159994125366,
+          "p95_ms": 3.0299776554107667,
+          "max_ms": 3.3125760555267334,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 5.538449999585282,
+          "median_ms": 5.536350001420942,
+          "p95_ms": 5.803009998635389,
+          "max_ms": 6.0064999997848645,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 5.509153580665588,
+          "median_ms": 5.507727861404419,
+          "p95_ms": 5.787966179847717,
+          "max_ms": 5.978847980499268,
+          "repetitions": 20
+        }
+      },
+      "capture_seconds_excluded": 0.22353930000099353
+    },
+    {
+      "model": "E96_full_draft",
+      "device": "cuda",
+      "path": "eager",
+      "train_id": 15001,
+      "n": 46,
+      "ports": 109,
+      "resident_forward": {
+        "wall": {
+          "mean_ms": 56.481910000002244,
+          "median_ms": 56.30850000125065,
+          "p95_ms": 59.64408500094578,
+          "max_ms": 60.04469999970752,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 56.414193344116214,
+          "median_ms": 56.25179100036621,
+          "p95_ms": 59.56446495056152,
+          "max_ms": 59.96607971191406,
+          "repetitions": 20
+        }
+      },
+      "public_to_draft": {
+        "wall": {
+          "mean_ms": 65.94209499980934,
+          "median_ms": 62.52975000097649,
+          "p95_ms": 80.40602500132083,
+          "max_ms": 106.75759999867296,
+          "repetitions": 20
+        },
+        "cuda_stream": {
+          "mean_ms": 65.87566375732422,
+          "median_ms": 62.462385177612305,
+          "p95_ms": 80.34060401916506,
+          "max_ms": 106.69241333007812,
+          "repetitions": 20
+        }
+      }
+    }
+  ],
+  "CPU_GPU_parity": [
+    {
+      "model": "L74",
+      "train_id": 1683,
+      "CPU_GPU_max_abs": 3.0517578125e-05,
+      "normalized_max_abs": 3.830591332214545e-07
+    },
+    {
+      "model": "E85_full_draft",
+      "train_id": 1683,
+      "CPU_GPU_max_abs": 2.288818359375e-05,
+      "normalized_max_abs": 2.872943499160909e-07
+    },
+    {
+      "model": "L90",
+      "train_id": 1683,
+      "CPU_GPU_max_abs": 2.288818359375e-05,
+      "normalized_max_abs": 2.872943499160909e-07
+    },
+    {
+      "model": "E96_full_draft",
+      "train_id": 1683,
+      "CPU_GPU_max_abs": 2.288818359375e-05,
+      "normalized_max_abs": 2.872943499160909e-07
+    },
+    {
+      "model": "L74",
+      "train_id": 10027,
+      "CPU_GPU_max_abs": 8.0108642578125e-05,
+      "normalized_max_abs": 6.421856918459114e-07
+    },
+    {
+      "model": "E85_full_draft",
+      "train_id": 10027,
+      "CPU_GPU_max_abs": 0.0001220703125,
+      "normalized_max_abs": 9.785686732890079e-07
+    },
+    {
+      "model": "L90",
+      "train_id": 10027,
+      "CPU_GPU_max_abs": 6.4849853515625e-05,
+      "normalized_max_abs": 5.198646076847854e-07
+    },
+    {
+      "model": "E96_full_draft",
+      "train_id": 10027,
+      "CPU_GPU_max_abs": 9.72747802734375e-05,
+      "normalized_max_abs": 7.797969115271781e-07
+    },
+    {
+      "model": "L74",
+      "train_id": 5474,
+      "CPU_GPU_max_abs": 9.1552734375e-05,
+      "normalized_max_abs": 5.929750248802437e-07
+    },
+    {
+      "model": "E85_full_draft",
+      "train_id": 5474,
+      "CPU_GPU_max_abs": 0.000446319580078125,
+      "normalized_max_abs": 2.8907532462911883e-06
+    },
+    {
+      "model": "L90",
+      "train_id": 5474,
+      "CPU_GPU_max_abs": 9.1552734375e-05,
+      "normalized_max_abs": 5.929750248802437e-07
+    },
+    {
+      "model": "E96_full_draft",
+      "train_id": 5474,
+      "CPU_GPU_max_abs": 9.72747802734375e-05,
+      "normalized_max_abs": 6.30035963935259e-07
+    },
+    {
+      "model": "L74",
+      "train_id": 10140,
+      "CPU_GPU_max_abs": 9.1552734375e-05,
+      "normalized_max_abs": 6.371208255047112e-07
+    },
+    {
+      "model": "E85_full_draft",
+      "train_id": 10140,
+      "CPU_GPU_max_abs": 7.62939453125e-05,
+      "normalized_max_abs": 5.30934021253926e-07
+    },
+    {
+      "model": "L90",
+      "train_id": 10140,
+      "CPU_GPU_max_abs": 9.1552734375e-05,
+      "normalized_max_abs": 6.371208255047112e-07
+    },
+    {
+      "model": "E96_full_draft",
+      "train_id": 10140,
+      "CPU_GPU_max_abs": 4.9591064453125e-05,
+      "normalized_max_abs": 3.451071138150519e-07
+    },
+    {
+      "model": "L74",
+      "train_id": 15001,
+      "CPU_GPU_max_abs": 8.392333984375e-05,
+      "normalized_max_abs": 7.266702995777583e-07
+    },
+    {
+      "model": "E85_full_draft",
+      "train_id": 15001,
+      "CPU_GPU_max_abs": 0.00014495849609375,
+      "normalized_max_abs": 1.2551577901797644e-06
+    },
+    {
+      "model": "L90",
+      "train_id": 15001,
+      "CPU_GPU_max_abs": 9.1552734375e-05,
+      "normalized_max_abs": 7.927312359030091e-07
+    },
+    {
+      "model": "E96_full_draft",
+      "train_id": 15001,
+      "CPU_GPU_max_abs": 0.0001373291015625,
+      "normalized_max_abs": 1.1890968538545136e-06
+    }
+  ],
+  "finished": false,
+  "test_read": false
+}

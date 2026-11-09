@@ -1,0 +1,69 @@
+{
+  "checkpoint_sha256": "e7fbf4b2bdab35336dd787976066ed335eb602f96dca2db8b881a4de4dbae9f2",
+  "losses": {
+    "total": 0.37154422330856324,
+    "mse": 0.054066339045763016,
+    "center_mse": 0.0020914819296449423,
+    "shape_mse": 0.1691668781042099,
+    "center_local": 0.1893044822216034,
+    "shape": 0.1691668781042099,
+    "relative_local": 0.2389509873390198,
+    "overlap": 0.040369108259677884,
+    "contact": 0.0831961024403572,
+    "boundary": 0.009475054908543825,
+    "mib": 0.013279688879847526,
+    "bbox": 0.0003498765220865607,
+    "local": 0.2913339457511902,
+    "geometry": 0.35684827613830566,
+    "overlap_area": 0.058783799827098845,
+    "crowding": 0.003472410436719656,
+    "void": 0.12784616065025328,
+    "compactness": 0.0018595597250387072,
+    "occupancy": 0.0918923767209053,
+    "repair": 0.4487406511306763,
+    "base_objective": 0.356848272562027,
+    "weighted_area_objective": 0.014695949956774711,
+    "supervision": 0.2913339457511902,
+    "quality_proxy": 0.35684827613830566,
+    "selection_proxy": 0.4487406511306763,
+    "batched_inference_seconds_per_case": 0.0025067763000843116,
+    "count": 2000,
+    "raw_hard_legal": 0,
+    "raw_hard_legal_rate": 0.0,
+    "draft_diagnostics": {
+      "overlap_pairs": {
+        "mean": 75.475,
+        "p95": 127.0,
+        "max": 158.0
+      },
+      "overlap_area_fraction": {
+        "mean": 0.058783812143484125,
+        "p95": 0.09864520520226581,
+        "max": 0.14082272702636492
+      },
+      "penetration_squared_per_block": {
+        "mean": 0.019767344906458106,
+        "p95": 0.041289001616381646,
+        "max": 0.08452509281837044
+      },
+      "max_local_penetration": {
+        "mean": 0.4580359356698699,
+        "p95": 0.7362007530833329,
+        "max": 0.9269684769219653
+      },
+      "largest_conflict_cluster": {
+        "mean": 54.1665,
+        "p95": 96.04999999999995,
+        "max": 113.0
+      },
+      "largest_conflict_cluster_fraction": {
+        "mean": 0.776782094243888,
+        "p95": 0.9294324045407637,
+        "max": 1.0
+      }
+    }
+  },
+  "count": 2000,
+  "postprocessing_calls": 0,
+  "test_read": false
+}

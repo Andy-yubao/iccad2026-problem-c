@@ -1,0 +1,162 @@
+{
+  "identity": {
+    "revision": "E97.candidate5.admissible_relations.v1",
+    "source_sha256": {
+      "docs/protocol.md": "2b09c5dc656a829e710e47fcaca85e34bb0a64e6453c84a6d0b6c87e5a8d014a",
+      "experiments/E97_gpu_hybrid_solver/candidate5.py": "22eedbb5748f5c28df30096389de31b0745431ae52d6daa29a28ea54437b24c1",
+      "experiments/E97_gpu_hybrid_solver/candidate5_pipeline.py": "528c7cd03340e70c3d0b05597595a67c10a1161ac23fbb281fc8c1e01da9abe8",
+      "experiments/E97_gpu_hybrid_solver/candidate5_plan.json": "6ffe6ffca4a2cd33d88e4fa0d00a7722d9d446b9843dc522c9752d9404cde48d",
+      "experiments/E97_gpu_hybrid_solver/candidate_packer.py": "9a985a89ca762a332ab7ad519059abd9c50b8ff1a83cd9f518b8d60e1f45c6d1",
+      "experiments/E97_gpu_hybrid_solver/evaluate_candidate5.py": "e2b857543c1929134725076d0dd22b24bb79b20f7c7078d57f0f4baacbcf29b7",
+      "experiments/E97_gpu_hybrid_solver/latency.py": "33a8ab53337eadd6a664d13836e5e4a953b05029fdb35f1ec0578f09e7057465",
+      "experiments/E97_gpu_hybrid_solver/nn85/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "experiments/E97_gpu_hybrid_solver/nn85/base_model.py": "0d71c96c75976dc57d589d5709639291d1a30addffa8a5f0f2c53e2cb88a9089",
+      "experiments/E97_gpu_hybrid_solver/nn85/center_corrector.py": "13a3734a5845f7230d309a34bbe7c2232fd2142492c96c714546e6e56c4ed072",
+      "experiments/E97_gpu_hybrid_solver/nn85/cooperation.py": "e69f2e58d5f89a7864344b4d0ea1474e89374688a2a6cb13ffa83741d56bf2d3",
+      "experiments/E97_gpu_hybrid_solver/nn85/corrector.py": "c9edacd4445916572c131f2c7455daa054b8ad7c598410a2f96b90d8a9217af9",
+      "experiments/E97_gpu_hybrid_solver/nn85/features.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+      "experiments/E97_gpu_hybrid_solver/nn85/frame.py": "4e4e42ea108392d65df2f96bae7f85ce04e94f8535b57391fe62615f4c6cf987",
+      "experiments/E97_gpu_hybrid_solver/nn85/inference.py": "b202f111d9b5feeb5f3ccbc473fb29e732d8088c5fb43472ab7d49f445378838",
+      "experiments/E97_gpu_hybrid_solver/nn85/mib_projection.py": "123a3e0ea2018c6367a66a4d7412105b09ce5c01b488ea3e261f2bb4336f5526",
+      "experiments/E97_gpu_hybrid_solver/nn85/model.py": "9355ae30eda4f6cb55c9624204d95f03d4b750a347678db7cb18590a77e6fdde",
+      "experiments/E97_gpu_hybrid_solver/relation_model.py": "4ca2d6af877af8ad9ca8a387dc75b011833f8a6fe287b67cca4c9148834b95d9",
+      "experiments/E97_gpu_hybrid_solver/solver_relations.py": "8c407e01ee8f57d252af42378723ed1b99f25c23512a30c0fb1509a4c4f9bd9b",
+      "experiments/E97_gpu_hybrid_solver/student.py": "13574058f99af4a713bed14b8526bb17d3c1386b30b59beb943261fdb303d752",
+      "experiments/E97_gpu_hybrid_solver/teacher.py": "2efbe640ebbcef3a802505ebd561d72d60ef76bcf4c076d38a64393fcdfc82cc",
+      "experiments/E97_gpu_hybrid_solver/train_io/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "experiments/E97_gpu_hybrid_solver/train_io/batches.py": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92",
+      "experiments/E97_gpu_hybrid_solver/train_io/cache.py": "e9212d65b6090f1c44a87ee31d46d7aa8ec5968594b4a23b4f6ed7e52d4d42ca",
+      "experiments/E97_gpu_hybrid_solver/train_io/data.py": "f564c1ea61f690a1c2df18424e3ce7f5619a325701377176c72410332f274196",
+      "experiments/E97_gpu_hybrid_solver/train_io/dataset_view.py": "0c43289be65ccdbdc7b19cbb1ca303d1e2f5c283d6175ceeda960bb591a17e97",
+      "experiments/E97_gpu_hybrid_solver/train_io/features.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+      "experiments/E97_gpu_hybrid_solver/train_io/io.py": "ce510477d0f653c609e8273c633f71ceaef430b31c8a259f0416b1710b73dd21"
+    },
+    "teacher_config_sha256": "aac07459aa3d30bb142d7f2fe8c0d5831b6a6e92f33f999aea1cb92d94688981",
+    "teacher_manifests": {
+      "train": "5d153f7e971fd8343a6fd6d82de162aacf02233f77dbeafb1c08c1953ff7a016",
+      "dev_monitor500": "7a3a6412ef26e5f4b49906905a6ceeb90d697a8c8e55049965b1a579d47bd55c"
+    },
+    "loss": {
+      "revision": "E97.candidate5.admissible_relation_set.v1",
+      "axis_mean": 1.0,
+      "axis_max": 1.0,
+      "rank_order_max": 1.0,
+      "rank_center": 0.25,
+      "rank_margin_cap": 0.1,
+      "beta": 0.1,
+      "normalized_rank_clip": 8.0,
+      "free_area_lower": 0.99,
+      "ambiguous_axis": "sum probability of all tolerance-admissible axes",
+      "empty_set": "native max axis fallback; no pair filtered",
+      "reference": false,
+      "selection": "same dev500 arithmetic case mean for best/LR/early-stop"
+    },
+    "model_config": {
+      "width": 192,
+      "layers": 12,
+      "rectangle": true,
+      "ffn_dropout": 0.05,
+      "corrector_width": 192,
+      "message_width": 64,
+      "max_correction": 0.15,
+      "cooperative": true
+    },
+    "seed": 0,
+    "batch_size": 32,
+    "precision": "FP32 no AMP/TF32",
+    "registry_sha256": "2fe459b0a785ffb6995dd3e5966cd47337b948b15ec4bb4d4c19ffe169e404ae",
+    "max_seconds": 3600,
+    "max_epochs": 100,
+    "global_deadline": "2026-11-02T02:58:12+00:00",
+    "test_read": false
+  },
+  "plan": {
+    "candidate": 5,
+    "status": "registered_before_preflight",
+    "name": "admissible_relation_set",
+    "hypothesis": "C4 imposes one arbitrary native axis though many teacher pairs can separate on either axis; use physical disjunction labels instead of punishing valid alternatives. Same model/interface and initial weights as C4 control, no architecture/budget/weight sweep.",
+    "model": "Frozen C1 E74+threehead draft; new small public geometry relation head copied from C1 first hidden/message weights, zero rank and symmetric pair-axis readouts. Output geometry unchanged; rank scalars impose acyclic sign orders per axis, symmetric pair logits choose axis. Fixed learned graph supplied to same3 shape+1 projection solver, no added CPU iterations.",
+    "source_checkpoint": "experiments/E97_gpu_hybrid_solver/runs/20261102_candidate1_distill_seed0/checkpoints/best.pt",
+    "source_sha256": "5590e672cbb05a862f739452fe6432846287ea906c83782f84a0dfdb5d486b50",
+    "initialization": "C1 placer and all F weights frozen; new relation head hidden/message weights copied from C1 first, rank and axis readouts zero, fresh seed0 AdamW. Rank initial=decoded C1 centers; axis prior monotone native score/(1+abs(score)).",
+    "data": "v5 frozen first16000 train and same dev_monitor500; train_monitor500 reuse train labels; source has inherited32k exposure",
+    "teacher": {
+      "method": "Read-only reuse of completed16500 public-input solver labels; no regeneration",
+      "inputs": "public specs/connectivity/current frozen NN draft only, no free reference geometry or official score denominators",
+      "labels": "center/log-aspect of final public-solver geometry; stored only as supervision, never network input",
+      "usable": "strict public hard-legal, finite, not row_control fallback; all members retained, fallback labels carry zero imitation weight",
+      "panel": "train16000+dev_monitor500 only; no full dev2000 or test teacher generation",
+      "workers": 4,
+      "worker_torch_threads": 1,
+      "solver_threads": 2,
+      "wall_cap_seconds": 5400
+    },
+    "loss": {
+      "total": "usable*(axis_set_NLL_mean + axis_set_NLL_max + admissible_axis_rank_hinge_max + .25*rank_center_SmoothL1)",
+      "axis_labels": "Teacher stored centers and nominal WH define tolerance-admissible axes: abs teacher center delta>=mean lower WH; lower WH=nominalWH*sqrt(.99) for free shapes, exact public WH for locked shapes. .99 is official public area lower tolerance. If both axes admissible, probability of either accepted. If no axis admissible under finite precision/decoder mismatch, keep pair and fallback teacher native max axis. No labels filtered.",
+      "axis_loss": "logsumexp(all logits)-logsumexp(admissible logits); mean+max per case over valid distinct pairs with a free center. Both admissible yields zero axis loss for any probability allocation.",
+      "rank": "Along each admissible axis, teacher sign hinge margin=min(abs teacher center delta/mean sqrt(area),.1), normalized predicted rank delta clamp8, square hinge then max pair/axis per case. Keep .25 rank teacher-center local SmoothL1 beta.1. Teacher stored center used directly, no nominal decode center shift.",
+      "selection": "Exactly same fixed total for backward/train500/dev500/unique own-Loss best/LR/early-stop, arithmetic all-case mean.",
+      "scope": "New disjunctive target fixes a demonstrated label ambiguity, not dev coefficient scanning. Coefficients unchanged from C4; model and same3-step numerical path unchanged."
+    },
+    "optimization": {
+      "batch_size": 32,
+      "precision": "FP32 no AMP/TF32",
+      "optimizer": "AdamW",
+      "weight_decay": 0.0003,
+      "clip_norm": 1.0,
+      "seed": 0,
+      "lr_levels": [
+        0.001,
+        0.00025,
+        0.0001,
+        5e-05
+      ],
+      "protection_epochs": 0,
+      "baseline_epoch0": true,
+      "lr_bad_rounds": 3,
+      "min_delta": "max(1e-5,abs(best)*.001)",
+      "lowest_wait_epochs": 2,
+      "max_epochs": 100,
+      "max_training_seconds": 3600,
+      "no_old9872step_cap": true
+    },
+    "engine": "source cached frozen L drafts; CUDA graph for F+same Loss+backward+clip, guarded AdamW outside; graph/real update/resume checked on five train members before formal start",
+    "terminal": "Unique own-Loss best: once full single-case dev500 and same100 fourstage gallery, same frozen C1 raw2000 evidence reused; completed C4 untrained fixed-native dev500 control reused after exact model equality check. No duplicate control evaluation.",
+    "caveats": [
+      "Per-axis ranks guarantee DAGs but can still trap fixed/preplaced geometry; final hard solver check/fallback mandatory.",
+      "Oracle relations on five train examples improved two public proxies, not evidence of final learned dev quality.",
+      "Learned pair axes may be inconsistent with teacher shapes frozen from C1; same3 shape solves must accommodate them.",
+      "Teacher nominal area differs from tolerance-area geometry and9train target aspects exceed decoder clip.",
+      "Frozen C1 geometry raw overlap is reused as identical evidence, not presented as a new improved draft.",
+      "Tolerance-admissible is an overapproximation from missing teacher WH/areas, not proof of global anchored feasibility; strict dev audit found4031 pair sets empty, retained with native fallback."
+    ],
+    "preflight_ids": [
+      1683,
+      10027,
+      5474,
+      10140,
+      15001
+    ],
+    "training_start_gate": "Same-five real update/graph/resume/finite/frozen-L+F checks, exact initial model equality to existing control, toy both-axis admissible accepted/unique-axis wrong rejected, teacher/interface prior gate retained.",
+    "formal_training_started": false,
+    "test_read": false,
+    "revision": "v1",
+    "repair": {
+      "module": "solver_relations.py",
+      "source": "repair85/solver.py copied with optional fixed input graph replacing native relation extraction only",
+      "settings": "Same SLIM iterations3 seconds.18, one projection, no extension/rescue/certified",
+      "graph": "Predicted once per request, fixed during all3 shape solves/projection. Per-axis scalar ranks with ID tie-break prevent directed cycles; do not guarantee anchored feasibility."
+    },
+    "public_pair_guard": "Pairs of two public preplaced modules retain physical native axis and exact public center ranks; learned axis residual zero there. Other pairs predicted normally.",
+    "preformal_engine_fix": "Reuse C4 explicit input-finite CUDA gate; C4 failed preflight evidence retained read-only. No source or math changes to shared active/frozen relation_model.py/solver_relations.py.",
+    "control_reuse": {
+      "source": "runs/20261102_candidate4_relations_seed0/control",
+      "checkpoint": "runs/20261102_candidate4_relations_seed0/checkpoints/untrained.pt",
+      "checkpoint_sha256": "9c1133fcad11661f4f5d3f1e44c392cb5f391009ec6b96cc1edc5f4f643ba853",
+      "gate": "Initial C5 model must equal C4 untrained model tensor-for-tensor; reuse completed same500 control, no repeated solve. If C5 unique own-Loss best remains initial model, also reuse identical existing control solve as terminal rather than repeating."
+    }
+  },
+  "commit": "ccfbd6f78254a5e774d7298946c7de15b3a285d8",
+  "uncommitted_source_snapshot": true
+}

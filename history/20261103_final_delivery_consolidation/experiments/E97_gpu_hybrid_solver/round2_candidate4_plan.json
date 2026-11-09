@@ -1,0 +1,57 @@
+{
+  "round": 2,
+  "candidate": 4,
+  "name": "C3_group_axis_freedom",
+  "status": "registered_before_preflight",
+  "source_checkpoint": "experiments/E97_gpu_hybrid_solver/runs/20261102_candidate3_clearance_seed0/checkpoints/best.pt",
+  "source_sha256": "d784e96f46decf7a487c25bde2ab16db8cf6ebae1bc0632434cc5e2f78173fce",
+  "model": "student.DeploymentModel, strict original C3 retained all241547 F parameters/readouts, E74 frozen; no added model or geometry operations",
+  "data": "same v5 first16k/train_monitor500/dev_monitor500, inherited32k source exposure, test sealed",
+  "loss": {
+    "base": "C3 teacher center1+shape.25 retained. Near-relative .25 only across different public groups or ungrouped pairs, renormalized by retained near-pair count. Worst clearance uses old teacher signed axis on non-group near pairs; same-public-group pairs instead use axis-free relu(1-max(abs(decoded_center_delta)/current_halfsize_sum))^2, including all free group pairs; maximum over both types. This forbids penetration while allowing alternative legal group axes/directions.",
+    "new_term": "exact unchanged R2C2 public boundary + current-geometry MST contact term",
+    "coefficient": 3.6876450434943204,
+    "calibration": "inherited fixed R2C2 coefficient, no new gradient balance claim and no remeasurement or dev scan",
+    "aggregation": "unchanged unweighted per-case arithmetic mean, identical backward/monitor/best/LR/early-stop",
+    "teacher_input_to_NN": false,
+    "reference_input_or_scoring_denominator": false,
+    "comparison": "same C3 start/model/optimization/full repair as R2C2; semantic migration releases teacher group topology while preserving physical nonoverlap and public connectivity, coefficient unchanged. Not continuation."
+  },
+  "calibration_weights": "runs/20261102_round2_candidate2_calibration/weights.json",
+  "calibration_sha256": "802d20544848a523bae05805eaf28accc7d2bb167ef7c70bfa90982695ddc5c1",
+  "optimization": {
+    "seed": 0,
+    "batch": 32,
+    "precision": "FP32 no AMP/TF32",
+    "optimizer": "fresh AdamW",
+    "weight_decay": 0.0003,
+    "clip": 1,
+    "lr_levels": [
+      0.00025,
+      0.0001,
+      5e-05,
+      2e-05
+    ],
+    "max_training_seconds": 3600,
+    "max_epochs": 100,
+    "baseline_epoch0": true,
+    "protection": 0,
+    "lr_bad_rounds": 3,
+    "min_delta": "max(1e-5,abs(best)*.001)",
+    "lowest_wait_epochs": 2
+  },
+  "deployment": "same small C3 architecture; verified decode/scaling captured in resident GPU graph, original full E85 singlethread CPU solver unchanged",
+  "terminal": "unique own-Loss best once full dev500/new raw2000/same100. If whole initial model selected unchanged, reuse this window current-condition C3 control plus existing C3 raw2000; no duplicate solve",
+  "control": "one registered current-condition C3 full singlethread decode-captured control; old complete source results read-only",
+  "preflight": "original5 real Dropout/Adam eager-vs-CUDA-graph updates, next-step restored model/Adam/RNG/order, explicit finite teacher gate, frozen L, strict C3 warm start, labels isolated from NN, contact/boundary semantic fixtures; valid vertical contact replacing horizontal teacher must have zero new group relative/clearance and zero public contact cost; actual overlap must retain positive group clearance; non-group old behavior unchanged",
+  "caveats": [
+    "MST contact is a piecewise differentiable surrogate, not a guarantee of a globally realizable legal group. Immutable contacts may be impossible.",
+    "No learned relation head or relation input to solver; tree exists only during Loss computation.",
+    "No new teacher generation; C3 nominal teacher limitations remain; exposed adaptive dev evidence only.",
+    "Gradient interaction is local association, not proof of downstream quality. Releasing teacher group topology may reduce useful intent or worsen final native relations.",
+    "Inherited coefficient is a fixed experimental choice; no claim of equal gradient share under migrated base."
+  ],
+  "test_read": false,
+  "capture_migration": "round2_candidate2_capture_migration.json, unchanged reused public task source",
+  "rationale": "Fixed train500 original gradients: teacher relative/contact negative dot21.8% of500; teacher clearance/contact49.16% of238 active (262 zero), median cos+.1416/+.000334. Not universal conflict or causality. Explicit valid alternate-axis fixture proves old teacher-axis penalty can penalize a legal group arrangement."
+}

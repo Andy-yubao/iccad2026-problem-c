@@ -1,0 +1,10 @@
+交付说明
+
+1. report_zhu_20261018_illustrated.pdf：给朱老师的3页报告。按用户最新修改同步更新docs原稿中的隐藏测试集推测；原图2改为MIB文字说明，布局对照顺延为图2。
+2. letter_organizers_20261018.pdf：2页英文信稿，尚未发送；对应Markdown可复制为邮件正文。
+3. dataset_issues_evidence_20261018.pdf：6页英文佐证附件，含边界放大图、完整布局对照和MIB证书。
+
+Markdown源文件与assets图片均保留，使用相对图片路径。build_documents.py将这些Markdown内容排版为PDF（不修改原报告）。prepare_figures.py只读既有开发记录，重建图表，无训练和推理。
+layout_evidence.json提供3例边界平移的完整原始/修改后坐标，以及1例MIB约束与面积区间证书。evidence.json提供统计口径、来源路径和哈希。
+
+核验：更新后的报告3页均已重新渲染检查；3例平移均保持尺寸和其他模块不变、无负坐标和重叠。3份PDF均已渲染并逐页检查。布局图复用visualization/。

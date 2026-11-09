@@ -1,0 +1,116 @@
+{
+  "status": "complete",
+  "started_at": "2026-11-06T16:47:51.944397+00:00",
+  "pid": 10968,
+  "jobs": [
+    {
+      "name": "E109_deep_supervision_shared",
+      "kind": "train",
+      "run": "20261107_shared_seed0"
+    },
+    {
+      "name": "E110_deep_supervision_heads",
+      "kind": "train",
+      "run": "20261107_heads_seed0"
+    },
+    {
+      "name": "E111_progressive_depth",
+      "kind": "train",
+      "run": "20261107_depth04_seed0",
+      "depth": 4
+    },
+    {
+      "name": "E111_progressive_depth",
+      "kind": "train",
+      "run": "20261107_depth08_seed0",
+      "depth": 8
+    },
+    {
+      "name": "E111_progressive_depth",
+      "kind": "train",
+      "run": "20261107_depth12_seed0",
+      "depth": 12
+    },
+    {
+      "name": "E109_deep_supervision_shared",
+      "kind": "evaluation",
+      "run": "20261107_shared_seed0"
+    },
+    {
+      "name": "E110_deep_supervision_heads",
+      "kind": "evaluation",
+      "run": "20261107_heads_seed0"
+    },
+    {
+      "name": "E111_progressive_depth",
+      "kind": "evaluation",
+      "run": "20261107_depth12_seed0"
+    }
+  ],
+  "completed": [
+    {
+      "name": "E109_deep_supervision_shared",
+      "kind": "train",
+      "run": "20261107_shared_seed0",
+      "result": "experiments\\E109_deep_supervision_shared\\runs\\20261107_shared_seed0\\results.json",
+      "status": "early_stop"
+    },
+    {
+      "name": "E110_deep_supervision_heads",
+      "kind": "train",
+      "run": "20261107_heads_seed0",
+      "result": "experiments\\E110_deep_supervision_heads\\runs\\20261107_heads_seed0\\results.json",
+      "status": "early_stop"
+    },
+    {
+      "name": "E111_progressive_depth",
+      "kind": "train",
+      "run": "20261107_depth04_seed0",
+      "depth": 4,
+      "result": "experiments\\E111_progressive_depth\\runs\\20261107_depth04_seed0\\results.json",
+      "status": "early_stop"
+    },
+    {
+      "name": "E111_progressive_depth",
+      "kind": "train",
+      "run": "20261107_depth08_seed0",
+      "depth": 8,
+      "result": "experiments\\E111_progressive_depth\\runs\\20261107_depth08_seed0\\results.json",
+      "status": "early_stop"
+    },
+    {
+      "name": "E111_progressive_depth",
+      "kind": "train",
+      "run": "20261107_depth12_seed0",
+      "depth": 12,
+      "result": "experiments\\E111_progressive_depth\\runs\\20261107_depth12_seed0\\results.json",
+      "status": "early_stop"
+    },
+    {
+      "name": "E109_deep_supervision_shared",
+      "kind": "evaluation",
+      "run": "20261107_shared_seed0",
+      "result": "experiments\\E109_deep_supervision_shared\\runs\\20261107_shared_seed0\\evaluation_depth_dev500\\results.json",
+      "status": "complete"
+    },
+    {
+      "name": "E110_deep_supervision_heads",
+      "kind": "evaluation",
+      "run": "20261107_heads_seed0",
+      "result": "experiments\\E110_deep_supervision_heads\\runs\\20261107_heads_seed0\\evaluation_depth_dev500\\results.json",
+      "status": "complete"
+    },
+    {
+      "name": "E111_progressive_depth",
+      "kind": "evaluation",
+      "run": "20261107_depth12_seed0",
+      "result": "experiments\\E111_progressive_depth\\runs\\20261107_depth12_seed0\\evaluation_depth_dev500\\results.json",
+      "status": "complete"
+    }
+  ],
+  "active": null,
+  "scope": "Exactly three trained models, two comparison runs plus three progressive stages, then fixed dev500 each; no test or control retraining",
+  "active_started_at": "2026-11-06T23:27:35.455096+00:00",
+  "updated_at": "2026-11-06T23:32:15.972208+00:00",
+  "completed_at": "2026-11-06T23:32:15.972208+00:00"
+}

@@ -1,0 +1,174 @@
+{
+  "count": 1000,
+  "exact_same_ordered_panel": true,
+  "workers": 4,
+  "threads_per_worker": 1,
+  "E25": {
+    "status": "complete",
+    "count": 1000,
+    "hard_legal": 1000,
+    "weighted_Q": 1.045269650396299,
+    "mean_Q": 1.061030500262659,
+    "median_Q": 1.0369907975776083,
+    "p95_Q": 1.1940602005756418,
+    "CVaR95_Q": 1.3502525357800579,
+    "max_Q": 2.832076154243816,
+    "seconds_mean": 0.23135091550112702,
+    "seconds_median": 0.14722924993839115,
+    "seconds_p95": 0.5255150049575604,
+    "seconds_max": 4.3215962999965996,
+    "over_2s": 9,
+    "sum_solve_seconds": 231.35091550112702,
+    "evaluation_wall_seconds": 118.45299999997951,
+    "row_fallbacks": 0,
+    "execution_errors": 0,
+    "scoring_errors": 0,
+    "workers": 4,
+    "threads_per_worker": 1,
+    "worker_pids": [
+      22676,
+      33344,
+      51600,
+      63304
+    ],
+    "checkpoint_sha256": "3de22809e831edf11b56a85647a0bd9fe625e8b7617abb6eb1f4b27969cfe00a",
+    "test_read": true,
+    "scope": "v5 MIB mean-area derived task with original-reference denominators",
+    "time_scope": "public graph features + CPU model + decode + full steady optimization/rescue; exclude file/model loading, fixed task transformation, JIT initialization, scoring and evidence IO",
+    "official_contest_score": false,
+    "previously_exposed_100_excluded": true,
+    "by_n": {
+      "21-40": {
+        "count": 211,
+        "hard_legal": 211,
+        "weighted_Q": 1.0674750211239241,
+        "mean_Q": 1.07562237906513,
+        "seconds_mean": 0.08828690094581995
+      },
+      "41-60": {
+        "count": 206,
+        "hard_legal": 206,
+        "weighted_Q": 1.0577331097528462,
+        "mean_Q": 1.062000439483963,
+        "seconds_mean": 0.1029207800979527
+      },
+      "61-80": {
+        "count": 185,
+        "hard_legal": 185,
+        "weighted_Q": 1.0529136296767085,
+        "mean_Q": 1.0486827118564443,
+        "seconds_mean": 0.16665848648880383
+      },
+      "81-100": {
+        "count": 199,
+        "hard_legal": 199,
+        "weighted_Q": 1.074109998462232,
+        "mean_Q": 1.0790622060071275,
+        "seconds_mean": 0.36241467487670703
+      },
+      "101-120": {
+        "count": 199,
+        "hard_legal": 199,
+        "weighted_Q": 1.0394708154434413,
+        "mean_Q": 1.03800204551437,
+        "seconds_mean": 0.4450671276406399
+      }
+    }
+  },
+  "E42_regular": {
+    "status": "complete",
+    "count": 1000,
+    "hard_legal": 1000,
+    "weighted_Q": 1.0283850300343096,
+    "mean_Q": 1.041447997330943,
+    "median_Q": 1.0149392460109161,
+    "p95_Q": 1.1456415025355786,
+    "CVaR95_Q": 1.3042599264419084,
+    "max_Q": 3.2522510530643385,
+    "seconds_mean": 0.22252202850277536,
+    "seconds_median": 0.1585428500548005,
+    "seconds_p95": 0.5513493399892468,
+    "seconds_max": 3.969368900055997,
+    "over_2s": 9,
+    "sum_solve_seconds": 222.52202850277536,
+    "evaluation_wall_seconds": 109.14000000001397,
+    "row_fallbacks": 0,
+    "execution_errors": 0,
+    "scoring_errors": 0,
+    "workers": 4,
+    "threads_per_worker": 1,
+    "worker_pids": [
+      10772,
+      24988,
+      29144,
+      68888
+    ],
+    "checkpoint_sha256": "12878108e9a58b8c195b314ba6586686c2a6e2796c1f4b6443e102b4db4224a6",
+    "test_read": true,
+    "scope": "v5 MIB mean-area derived task with original-reference denominators",
+    "time_scope": "public graph features + CPU model + decode + full steady optimization/rescue; exclude file/model loading, fixed task transformation, JIT initialization, scoring and evidence IO",
+    "official_contest_score": false,
+    "previously_exposed_100_excluded": true,
+    "by_n": {
+      "21-40": {
+        "count": 211,
+        "hard_legal": 211,
+        "weighted_Q": 1.0529243745595016,
+        "mean_Q": 1.0617997637420662,
+        "seconds_mean": 0.086715227015034
+      },
+      "41-60": {
+        "count": 206,
+        "hard_legal": 206,
+        "weighted_Q": 1.0344408829949443,
+        "mean_Q": 1.035824380679138,
+        "seconds_mean": 0.0906058980612021
+      },
+      "61-80": {
+        "count": 185,
+        "hard_legal": 185,
+        "weighted_Q": 1.0344046787837406,
+        "mean_Q": 1.03405533463078,
+        "seconds_mean": 0.1797232286532636
+      },
+      "81-100": {
+        "count": 199,
+        "hard_legal": 199,
+        "weighted_Q": 1.0504861909860672,
+        "mean_Q": 1.0510726104693835,
+        "seconds_mean": 0.32365840804136015
+      },
+      "101-120": {
+        "count": 199,
+        "hard_legal": 199,
+        "weighted_Q": 1.0239499717228426,
+        "mean_Q": 1.0229383837756936,
+        "seconds_mean": 0.44172603065784477
+      }
+    }
+  },
+  "weighted_Q_delta_E42_minus_E25": -0.01688462036198962,
+  "seconds_mean_delta_E42_minus_E25": -0.008828886998351663,
+  "Q_excess_over1_reduction_fraction": 0.3729788106198813,
+  "mean_time_reduction_fraction": 0.03816231709836759,
+  "Q_wins_ties_losses_E42": [
+    694,
+    77,
+    229
+  ],
+  "weighted_Q_delta_worker_cluster_bootstrap95": [
+    -0.02910966786624592,
+    -0.007884572998674684
+  ],
+  "seconds_delta_worker_cluster_bootstrap95": [
+    -0.023231668695781787,
+    0.005216260058380296
+  ],
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 20261024,
+  "E42_dominates_E25_aggregate_point_estimates": true,
+  "E42_meets_Q_lt1_04_and_mean_time_lt0_25": true,
+  "inference_or_rescoring_repeated": false,
+  "exposure": "User requested the frozen E42 comparison after seeing E25 test results; this is an already exposed shared panel, not a new blind test.",
+  "time_uncertainty": "Separate single CPU runs; cluster intervals cover case sampling, not repeated-run frequency/load/solver-time noise."
+}

@@ -1,0 +1,50 @@
+{
+  "finished": true,
+  "stop_reason": "panel_complete",
+  "cumulative_pipeline_seconds": 11.448913399945013,
+  "variants": {
+    "control": {
+      "count": 5,
+      "hard_legal": 5,
+      "weighted_Q": 1.007082689456413,
+      "mean_Q": 1.3900681534045116,
+      "p95_Q": 1.9603062628953964,
+      "CVaR95_Q": 2.0092791164923223,
+      "max_Q": 2.0092791164923223,
+      "complete_seconds_mean": 0.9574570399941876,
+      "complete_seconds_p95": 2.727379619982093,
+      "complete_seconds_max": 3.2349352999590337,
+      "over_2s": 1,
+      "mean_center_move": 1.6989251904051343,
+      "mean_abs_log_ratio_change": 0.5897059729063742,
+      "rescue_cases": 1
+    },
+    "draft_reset_fast": {
+      "count": 5,
+      "hard_legal": 5,
+      "weighted_Q": 1.006105482190486,
+      "mean_Q": 1.2851531131020741,
+      "p95_Q": 1.8061913596549615,
+      "CVaR95_Q": 1.927279344928993,
+      "max_Q": 1.927279344928993,
+      "complete_seconds_mean": 0.8356932599563152,
+      "complete_seconds_p95": 2.503359880018979,
+      "complete_seconds_max": 2.964278900064528,
+      "over_2s": 1,
+      "mean_center_move": 1.1961861486033238,
+      "mean_abs_log_ratio_change": 0.394569765735721,
+      "rescue_cases": 2
+    }
+  },
+  "implementation_checks": {
+    "quadratic_gradient_error": 2.708033450260494e-14,
+    "positive_semidefinite": true,
+    "projection_gradient_parity": true,
+    "original_draft_read_only": true,
+    "rescue_keeps_original_target": true,
+    "simulated_released_blocks": 24,
+    "untouched_blocks_preserved": true
+  },
+  "test_read": false,
+  "scope": "adaptive development mechanism gate"
+}

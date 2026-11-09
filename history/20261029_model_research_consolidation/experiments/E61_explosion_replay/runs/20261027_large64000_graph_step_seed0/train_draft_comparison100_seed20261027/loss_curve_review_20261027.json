@@ -1,0 +1,101 @@
+{
+  "scope": "Read-only saved curves; endpoint comparisons are not causal gradient evidence",
+  "rows": {
+    "E42": {
+      "source": "experiments/E42_joint_regularization/runs/20261023_rectangle_w96d12_ab_seed0/progress.json",
+      "from_epoch": 51,
+      "to_epoch": 54,
+      "same_lr": true,
+      "lr": 5e-05,
+      "panels": {
+        "train_monitor": {
+          "G_from": 0.28560421776771544,
+          "G_to": 0.28033454513549805,
+          "overlap_from": 0.035784725815057754,
+          "overlap_to": 0.03570144158601761,
+          "overlap_relative_change": -0.002327368091922022,
+          "area_from": 0.05971036006608851,
+          "area_to": 0.060566948338353965,
+          "weighted_component_deltas": {
+            "center_local": -0.0026536549329757853,
+            "shape": -0.0004985477030277213,
+            "relative_local": -0.0008552071750164009,
+            "overlap": -4.1642114520071966e-05,
+            "contact": -0.0012122643589973468,
+            "boundary": 1.4735786244273342e-05,
+            "mib": -1.692664623260485e-05,
+            "bbox": -6.160506699234246e-06
+          }
+        },
+        "dev_monitor": {
+          "G_from": 0.3571999523639679,
+          "G_to": 0.3581269855499268,
+          "overlap_from": 0.041381653875112535,
+          "overlap_to": 0.04306162893772125,
+          "overlap_relative_change": 0.040597098116928576,
+          "area_from": 0.06384552316597669,
+          "area_to": 0.0655307253777187,
+          "weighted_component_deltas": {
+            "center_local": -0.0007167513370513745,
+            "shape": -0.00010405793786048834,
+            "relative_local": -0.00014990288019180176,
+            "overlap": 0.0008399875313043585,
+            "contact": 0.001019459515810013,
+            "boundary": 3.348924219608333e-05,
+            "mib": 1.2369805574417165e-05,
+            "bbox": -7.548392162425445e-06
+          }
+        }
+      }
+    },
+    "E61": {
+      "source": "experiments/E61_explosion_replay/runs/20261027_large64000_graph_step_seed0/progress.json",
+      "from_epoch": 60,
+      "to_epoch": 63,
+      "same_lr": true,
+      "lr": 5e-05,
+      "panels": {
+        "train_monitor": {
+          "G_from": 0.3215897271633148,
+          "G_to": 0.3194709441661835,
+          "overlap_from": 0.04360401806235313,
+          "overlap_to": 0.043615516275167465,
+          "overlap_relative_change": 0.00026369617584087734,
+          "area_from": 0.065428550251242,
+          "area_to": 0.06491783655032168,
+          "weighted_component_deltas": {
+            "center_local": -0.0015237820148468195,
+            "shape": -0.0001261197626590757,
+            "relative_local": -0.0003310320377349907,
+            "overlap": 5.749106407167137e-06,
+            "contact": -0.00026724049448967335,
+            "boundary": 0.00013463228102773427,
+            "mib": -1.282525062561036e-05,
+            "bbox": 1.8484417232684798e-06
+          }
+        },
+        "dev_monitor": {
+          "G_from": 0.3415274729728699,
+          "G_to": 0.34338629484176636,
+          "overlap_from": 0.04462108874320984,
+          "overlap_to": 0.043206689834594726,
+          "overlap_relative_change": -0.0316979918790159,
+          "area_from": 0.06652580058695924,
+          "area_to": 0.06533590983081147,
+          "weighted_component_deltas": {
+            "center_local": 0.0009435423612594585,
+            "shape": 8.856293559074413e-05,
+            "relative_local": 0.0004268220663070643,
+            "overlap": -0.0007071994543075555,
+            "contact": 0.0010702165961265567,
+            "boundary": 6.0160558670759035e-05,
+            "mib": -2.4805877357721336e-05,
+            "bbox": 1.5232755686156453e-06
+          }
+        }
+      }
+    }
+  },
+  "test_read": false,
+  "new_training": false
+}

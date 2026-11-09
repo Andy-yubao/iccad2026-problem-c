@@ -1,0 +1,334 @@
+{
+  "status": "completed_review",
+  "training": {
+    "status": "early_stop",
+    "elapsed_seconds": 5536.343827799981,
+    "steps": 35000,
+    "epochs": 70,
+    "best_epoch": 67,
+    "best_loss": 0.28051231217384337,
+    "full_dev_complete": false,
+    "postprocessing_calls": 0,
+    "test_read": false,
+    "tail_test_read": false,
+    "implementation_check": false,
+    "final_postprocessed_Q": "not run; one frozen best assessment is a separate stage"
+  },
+  "checkpoint_sha256": "c151dcd017f62654fb01f492097057a1893d1f6f275f69e274f6fde90dd50f14",
+  "checks": {
+    "source_identity_matches_before_documentation_update": true,
+    "selected_and_latest_identity_match": true,
+    "best_matches_full_dev_and_terminal": true,
+    "early_stop_after_three_drops_and_16_lowest_epochs": true,
+    "position_schedule_matches_all_records": true,
+    "no_pre_epoch16_selection": true,
+    "all_train_monitor_seen_after_epoch1": true,
+    "raw_dev_count": 2000,
+    "terminal_count": 500,
+    "terminal_hard_legal": 500,
+    "gallery_count": 100,
+    "gallery_complete": true,
+    "viewed_first_three_image_hashes_match": true,
+    "protected_checkpoints_unchanged": {
+      "experiments/E42_joint_regularization/runs/20261023_rectangle_w96d12_ab_seed0/checkpoints/best.pt": "12878108e9a58b8c195b314ba6586686c2a6e2796c1f4b6443e102b4db4224a6",
+      "experiments/E42_joint_regularization/runs/20261023_rectangle_w96d12_ab_seed0/checkpoints/latest.pt": "94abb24266e61c681ed33a44bc2a8f5a819a7678bb23963145af0ec8baf41fcb",
+      "experiments/E64_e42_unified_retrain/runs/20261027_e42_fixedG_scratch_seed0/checkpoints/best.pt": "c403214356e393097d8589c01ecea1b41b4736c7519ccb20ad5db653b0d1a447",
+      "experiments/E64_e42_unified_retrain/runs/20261027_e42_fixedG_scratch_seed0/checkpoints/latest.pt": "458c46d1425463e9a94969de25e815b2665f3aee5c5251b54ef3592ec5991d11",
+      "experiments/E65_geometry_messages/runs/20261027_geometry_message_seed0/checkpoints/best.pt": "caca625a1b8894250f965de1f57c8d5e81a907c2603bd04fc0e529114dd195a3",
+      "experiments/E68_port_tokens/runs/20261028_full_ports_nosummary_v2_seed0/checkpoints/best.pt": "6ba07f27ec94274dc0601532693e8a405c803eb6e201b8ec50c20876cc587aad",
+      "experiments/E70_reference_task_loss/runs/20261028_full_ports_taskloss_v1_seed0/checkpoints/best.pt": "613e79ad60210124344d8d9055a83b9aad9b221a1371389d5439446080d0d8a5",
+      "experiments/E70_reference_task_loss/runs/20261028_full_ports_taskloss_v1_seed0/checkpoints/latest.pt": "e6550f60a6c3b46ee91b51676e5df9095a8645fe1f5fa231443177a8d6b851bc"
+    }
+  },
+  "best_train500": {
+    "penetration": 0.010983634665608406,
+    "intersection_area": 0.05883917263150215,
+    "actual_wirelength": 0.30154598045349124,
+    "compactness": 0.032684259265661236,
+    "density": 6.794916419312358e-05,
+    "group_connectivity": 0.008160511970520019,
+    "boundary": 0.0030635830592364074,
+    "mib": 0.014225200593471527,
+    "parameter_domain": 0.00025952388090081513,
+    "position": 0.2382134141921997,
+    "shape": 0.19864469623565673,
+    "task_total": 0.16788003170490265,
+    "supervision": 0.10921452754735947,
+    "total": 0.2770945584774017,
+    "old_G": 0.4705541734695435,
+    "terminal_total_diagnostic": 0.2770945584774017,
+    "count": 500,
+    "selection_loss": 0.2770945584774017,
+    "raw_hard_legal": 0,
+    "raw_hard_legal_rate": 0.0,
+    "batched_inference_seconds_per_case": 0.001954121999791823
+  },
+  "best_dev500": {
+    "penetration": 0.011301556281745433,
+    "intersection_area": 0.05998240849375725,
+    "actual_wirelength": 0.30206521916389467,
+    "compactness": 0.03348645256459713,
+    "density": 7.522393309045583e-05,
+    "group_connectivity": 0.010435461334884167,
+    "boundary": 0.0031949243489652873,
+    "mib": 0.01401459162682295,
+    "parameter_domain": 0.0002772184235509485,
+    "position": 0.23333829998970032,
+    "shape": 0.20460395526885986,
+    "task_total": 0.1710267539024353,
+    "supervision": 0.10948556381464004,
+    "total": 0.28051231217384337,
+    "old_G": 0.4642462861537933,
+    "terminal_total_diagnostic": 0.28051231217384337,
+    "count": 500,
+    "selection_loss": 0.28051231217384337,
+    "raw_hard_legal": 0,
+    "raw_hard_legal_rate": 0.0,
+    "batched_inference_seconds_per_case": 0.0023432251998456196
+  },
+  "full_dev2000": {
+    "penetration": 0.011341229498386384,
+    "intersection_area": 0.0596101793050766,
+    "actual_wirelength": 0.30223223543167116,
+    "compactness": 0.03338822239637375,
+    "density": 7.059543638024479e-05,
+    "group_connectivity": 0.01030116918683052,
+    "boundary": 0.0033593850824981926,
+    "mib": 0.014132967442274094,
+    "parameter_domain": 0.000269880392588675,
+    "position": 0.2322824010848999,
+    "shape": 0.2007489080429077,
+    "task_total": 0.17066959095001222,
+    "supervision": 0.10825782698392868,
+    "total": 0.27892742013931277,
+    "old_G": 0.45948331665992737,
+    "terminal_total_diagnostic": 0.27892742013931277,
+    "selection_loss": 0.27892742013931277,
+    "batched_inference_seconds_per_case": 0.00337673089990858,
+    "count": 2000,
+    "raw_hard_legal": 0,
+    "raw_hard_legal_rate": 0.0
+  },
+  "same_E70_objective_diagnostic": {
+    "train_monitor": {
+      "E70_objective_on_E71_saved_components": 0.2688895190788898,
+      "E70_objective_on_E70": 0.27375644707679747,
+      "relative_change": -0.017778313715995697,
+      "old_G_E71": 0.4705541734695435,
+      "old_G_E70": 0.5164261722564697,
+      "density_weighted": 3.397458209656179e-05,
+      "density_fraction_of_total": 0.0001226100659762056
+    },
+    "dev_monitor": {
+      "E70_objective_on_E71_saved_components": 0.2721030870661489,
+      "E70_objective_on_E70": 0.27543058824539185,
+      "relative_change": -0.01208108801727703,
+      "old_G_E71": 0.4642462861537933,
+      "old_G_E70": 0.5077987325191498,
+      "density_weighted": 3.761196654522792e-05,
+      "density_fraction_of_total": 0.00013408312189134306
+    }
+  },
+  "raw2000_overlap_pair_counts_vs_E70": {
+    "overlap_better": 160,
+    "overlap_worse": 1840
+  },
+  "geometry500_vs_E70": {
+    "current": {
+      "count": 500,
+      "B_over_A": 1.033486439352929,
+      "empty_over_A": 0.08362254521875434,
+      "empty_over_B": 0.08086348496455391,
+      "redundant_over_A": 0.05013610586582544
+    },
+    "reference": {
+      "count": 500,
+      "B_over_A": 1.0677449792374896,
+      "empty_over_A": 0.1065541893939128,
+      "empty_over_B": 0.09962466773357948,
+      "redundant_over_A": 0.03880921015642318
+    },
+    "bbox_relative_change_mean": -0.031953575689895215,
+    "bbox_larger": 1,
+    "workers": 4,
+    "scope": "Matched saved drafts, exact union; no new inference"
+  },
+  "geometry100_vs_E42": {
+    "current": {
+      "count": 100,
+      "B_over_A": 1.0336804548435725,
+      "empty_over_A": 0.08410076926355799,
+      "empty_over_B": 0.08132744676484766,
+      "redundant_over_A": 0.050420314419985506
+    },
+    "reference": {
+      "count": 100,
+      "B_over_A": 1.0404556424905937,
+      "empty_over_A": 0.10340364415579796,
+      "empty_over_B": 0.09932789916474041,
+      "redundant_over_A": 0.06294800166520415
+    },
+    "bbox_relative_change_mean": -0.006471162600959781,
+    "bbox_larger": 22,
+    "workers": 4,
+    "scope": "Matched saved drafts, exact union; no new inference"
+  },
+  "gallery100_E71_pair_overlap": 0.050649513308453124,
+  "gallery100_E42_summary": {
+    "B_over_A": {
+      "mean": 1.0404556424905937,
+      "median": 1.040259743648992,
+      "p95": 1.0510630678571238
+    },
+    "U_over_A": {
+      "mean": 0.937051998334796,
+      "median": 0.9391553665055807,
+      "p95": 0.962617002222589
+    },
+    "empty_over_A": {
+      "mean": 0.10340364415579793,
+      "median": 0.1020931667711345,
+      "p95": 0.1458871573149293
+    },
+    "empty_over_B": {
+      "mean": 0.09932789916474041,
+      "median": 0.09833686177165142,
+      "p95": 0.1373627206137513
+    },
+    "redundant_over_A": {
+      "mean": 0.06294800166520416,
+      "median": 0.0608446334944193,
+      "p95": 0.10315797658185924
+    },
+    "pair_overlap_over_A": {
+      "mean": 0.0636554732913369,
+      "median": 0.06110502363560767,
+      "p95": 0.10428710697461811
+    },
+    "bbox_over_reference": {
+      "mean": 1.012432779509029,
+      "median": 1.0115686882824781,
+      "p95": 1.027280935905629
+    },
+    "raw_hpwl_gap": {
+      "mean": -0.010906173808866694,
+      "median": -0.003998039600118166,
+      "p95": 0.011155476255665642
+    }
+  },
+  "terminal": {
+    "checkpoint_sha256": "c151dcd017f62654fb01f492097057a1893d1f6f275f69e274f6fde90dd50f14",
+    "count": 500,
+    "hard_legal": 500,
+    "mean_Q": 1.0467178407592992,
+    "weighted_Q": 1.038751277341978,
+    "p95_Q": 1.14403592668941,
+    "max_Q": 3.7928317374080294,
+    "worst5pct_mean_Q": 1.3662160828283292,
+    "seconds_mean": 0.25799744300125166,
+    "seconds_p95": 0.5802431849646381,
+    "row_fallbacks": 0,
+    "rescue_cases": 8,
+    "errors": 0,
+    "hpwl_gap_mean_returned": 0.018409808615330172,
+    "area_gap_mean_returned": 0.018698910336006725,
+    "boundary_violations_mean_returned": 0.254,
+    "grouping_violations_mean_returned": 0.234,
+    "mib_violations_mean_returned": 0.0,
+    "inference_seconds_mean_returned": 0.06206807899975684,
+    "postprocess_seconds_mean_returned": 0.19577618200029245,
+    "mean_center_move_local_mean_returned": 0.4061085003245038,
+    "max_center_move_local_mean_returned": 1.6557523639279137,
+    "test_read": false,
+    "neutral_runtime_development_only": true
+  },
+  "worst_case": {
+    "index": 450,
+    "member": [
+      "worker_92/layouts_3584.th",
+      33
+    ],
+    "n": 97,
+    "metrics": {
+      "is_feasible": true,
+      "overlap_violations": 0,
+      "area_violations": 0,
+      "dimension_violations": 0,
+      "hpwl_b2b": 172.04020071000014,
+      "hpwl_p2b": 77.77544386027189,
+      "hpwl_total": 249.815644570272,
+      "hpwl_baseline": 139.26536178588867,
+      "hpwl_gap": 0.7938103299106574,
+      "bbox_area": 54950.33116723052,
+      "bbox_area_baseline": 29524.0,
+      "area_gap": 0.8612088865746688,
+      "fixed_violations": 0,
+      "preplaced_violations": 0,
+      "boundary_violations": 13,
+      "grouping_violations": 10,
+      "mib_violations": 0,
+      "total_soft_violations": 23,
+      "max_possible_violations": 63,
+      "violations_relative": 0.36507936507936506,
+      "runtime_seconds": 4.072760000010021,
+      "cost": 3.7928317374080294,
+      "official_is_feasible_before_nonnegative_check": true,
+      "nonnegative_coordinate_violations": 0
+    },
+    "raw_metrics": {
+      "is_feasible": false,
+      "overlap_violations": 108,
+      "area_violations": 0,
+      "dimension_violations": 0,
+      "hpwl_b2b": 104.40146321273055,
+      "hpwl_p2b": 35.51435479728802,
+      "hpwl_total": 139.91581801001857,
+      "hpwl_baseline": 139.26536178588867,
+      "hpwl_gap": 0.004670624596013549,
+      "bbox_area": 29586.791102807325,
+      "bbox_area_baseline": 29524.0,
+      "area_gap": 0.002126781696495222,
+      "fixed_violations": 0,
+      "preplaced_violations": 0,
+      "boundary_violations": 15,
+      "grouping_violations": 9,
+      "mib_violations": 5,
+      "total_soft_violations": 29,
+      "max_possible_violations": 63,
+      "violations_relative": 0.4603174603174603,
+      "runtime_seconds": 0.06762099999468774,
+      "cost": 10.0,
+      "official_is_feasible_before_nonnegative_check": false,
+      "nonnegative_coordinate_violations": 0
+    },
+    "draft_diagnostics": {
+      "overlap_pairs": 108,
+      "overlap_area_fraction": 0.04842624413010036,
+      "penetration_squared_per_block": 0.012894260134269378,
+      "max_local_penetration": 0.3699125589654432,
+      "largest_conflict_cluster": 75,
+      "largest_conflict_cluster_fraction": 0.7731958762886598,
+      "bbox_over_public_area": 1.0367870180624297,
+      "module_load_mean": 0.12496927541243313,
+      "module_load_p95": 0.3779088905569082,
+      "module_load_max": 1.1368139610214194,
+      "module_load_gt05_fraction": 0.7010309278350515,
+      "module_load_gt50_fraction": 0.020618556701030927,
+      "module_soft_count_mean": 0.8876537511590661,
+      "module_neighbors_mean": 2.2268041237113403,
+      "module_load_small_mean": 0.16926662150609226,
+      "module_load_small_gt05_fraction": 0.7575757575757576,
+      "module_load_middle_mean": 0.13259332191186735,
+      "module_load_middle_gt05_fraction": 0.75,
+      "module_load_large_mean": 0.07166359075391301,
+      "module_load_large_gt05_fraction": 0.59375
+    }
+  },
+  "visual_review": {
+    "sampling": "First three fixed-gallery cases, without reselection:0217/0194/0399",
+    "observation": "Large-block structure is broadly retained; local overlaps, gaps, changed neighbor order and boundary/group errors remain. Three images do not establish overall human preference."
+  },
+  "scope": "Saved outputs and checkpoint/source identity only; no new inference, training, postprocessing or model selection",
+  "test_read": false,
+  "baseline_promoted": false
+}

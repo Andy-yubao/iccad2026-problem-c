@@ -1,0 +1,52 @@
+{
+  "revision": "E70.reference_position_shape_plus_public_task.v1.proposal",
+  "status": "implemented_fixed_candidate_preflight_required",
+  "reference_read_allowlist": [
+    "position",
+    "shape"
+  ],
+  "weights": {
+    "position": 0.25,
+    "shape": 0.25,
+    "penetration": 1.0,
+    "intersection_area": 1.0,
+    "actual_wirelength": 0.25,
+    "compactness": 0.25,
+    "group_connectivity": 0.5,
+    "boundary": 0.25,
+    "mib": 0.1,
+    "parameter_domain": 0.1
+  },
+  "normalization": {
+    "area": "Public effective areas; sum A; physical scale S=sqrt(A)",
+    "local": "s_i=sqrt(a_i); reference-position and boundary scale t_i=max(s_i,0.5*median(s))",
+    "pair": "s_ij=(s_i+s_j)/2",
+    "penetration": "sum over unique i<j of (minimum-axis translation depth/s_ij)^2, divided by N",
+    "intersection_area": "0.5*sum(I_ij)/A + 0.5*sum(I_ij/min(a_i,a_j))/N, unique i<j",
+    "wire": "Exact weighted centroid Manhattan b2b+p2b sum divided by S*(sum b2b weights+sum p2b weights); zero if no positive weights",
+    "compactness": "relu(predicted bbox area/A-1); never reads reference bbox",
+    "group": "Sum of predicted-geometry MST contact costs across public groups divided by sum(|g|-1)",
+    "boundary": "Equal constrained-block mean, then mean over required edges within each block",
+    "mib": "Within-group logWH variance, groups weighted by |g|-1",
+    "cases": "Arithmetic mean across cases, identical for backward and all monitors"
+  },
+  "constants": {
+    "position_huber_beta": 0.1,
+    "reference_local_scale_floor_median_fraction": 0.5,
+    "minimum_group_contact_fraction": 0.01,
+    "current_decoder_log_aspect_limit": 5.0
+  },
+  "removed_reference_dependencies": [
+    "reference-derived neighbor mask and target relative deltas",
+    "reference contact pairs and contact directions",
+    "reference bbox or reference optimal area/wirelength as normalization outside position/shape"
+  ],
+  "hard_specs": "Public areas, fixed dimensions and preplaced XYWH remain enforced by decoding; nonnegative output retained; soft losses do not guarantee zero overlap",
+  "validation_before_freeze": "At most five relevant short cases; include containment, point-contact, alternate group topology, label-independence and finite gradients. Training-only magnitude/gradient sanity, no dev/Q coefficient search",
+  "fixed_objective_policy": "Freeze all formulas/weights before formal training; no stages, ramps, adaptive difficulty weights or alternate selector",
+  "seed": 0,
+  "multi_seed_confirmation": false,
+  "current_E68_modified": false,
+  "training_started": false,
+  "test_read": false
+}

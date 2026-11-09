@@ -1,0 +1,70 @@
+{
+  "status": "complete_audited",
+  "stage": "complete_audited",
+  "controller_pid": null,
+  "child_pid": null,
+  "updated_utc": "2026-10-29T17:24:34.368733+00:00",
+  "output": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E84_loss_control\\runs\\20261029_same_initialization_G_only_seed0",
+  "events": [
+    {
+      "utc": "2026-10-29T15:56:17.519602+00:00",
+      "status": "running",
+      "stage": "train"
+    },
+    {
+      "utc": "2026-10-29T17:06:29.297340+00:00",
+      "status": "stage_complete",
+      "stage": "train"
+    },
+    {
+      "utc": "2026-10-29T17:06:29.316068+00:00",
+      "status": "running",
+      "stage": "final"
+    },
+    {
+      "utc": "2026-10-29T17:12:08.393482+00:00",
+      "status": "stage_complete",
+      "stage": "final"
+    },
+    {
+      "utc": "2026-10-29T17:12:08.413422+00:00",
+      "status": "running",
+      "stage": "draft100"
+    },
+    {
+      "utc": "2026-10-29T17:12:55.275344+00:00",
+      "status": "stage_complete",
+      "stage": "draft100"
+    },
+    {
+      "utc": "2026-10-29T17:12:55.300334+00:00",
+      "status": "running",
+      "stage": "report"
+    },
+    {
+      "utc": "2026-10-29T17:13:01.772074+00:00",
+      "status": "stage_complete",
+      "stage": "report"
+    },
+    {
+      "utc": "2026-10-29T17:13:01.774097+00:00",
+      "status": "complete",
+      "stage": "complete"
+    }
+  ],
+  "test_read": false,
+  "baseline_promoted": false,
+  "report": "runs/completion/inspection.md",
+  "strategy_report": "runs/completion/strategy_attribution.md",
+  "automation_status": "DELETED",
+  "closure": {
+    "utc": "2026-10-29T17:24:34.368733+00:00",
+    "reason": "Predeclared modular phase third/final training candidate completed and audited",
+    "training_run_stop": "early_stop",
+    "no_more_candidates": true,
+    "research_goal_fully_resolved": false,
+    "historical_exec_session": 99826,
+    "historical_controller_pid": 9708,
+    "automation_delete_confirmed": true
+  }
+}

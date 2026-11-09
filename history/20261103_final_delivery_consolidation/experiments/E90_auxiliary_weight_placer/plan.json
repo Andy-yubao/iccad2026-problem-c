@@ -1,0 +1,35 @@
+{
+  "status": "preparing_fixed_weight_ablation",
+  "question": "Are the two fixed E87 auxiliary weights too weak at the same E74 initialization?",
+  "user_request": "优先尝试提高辅助权重。准备好训练",
+  "formal_training_started": false,
+  "arm": "simple",
+  "output": "runs/20261031_aux3_seed0",
+  "base_coefficients": "experiments/E87_simple_supervised_placer/runs/registered_loss.json",
+  "auxiliary_multiplier": 3.0,
+  "gradient_target_fractions_at_original_calibration": {
+    "overlap": 0.9,
+    "task": 0.6
+  },
+  "reference_weight": 1.0,
+  "position_shape_weights": [
+    1.0,
+    0.25
+  ],
+  "no_recalibration": true,
+  "no_new_loss_terms": true,
+  "initialization": "same frozen E74 best42 with Adam moments/steps and RNG as original E87; new-stage LR 1e-3",
+  "data": "unchanged v5 original train16k via verified v6 prefix; fixed train/dev500; dev2000; tests sealed",
+  "maximum_hours": 1,
+  "maximum_epochs": 14,
+  "batch_size": 32,
+  "scheduler_start_epoch": 0,
+  "selection": "same fixed own total for backward, monitors, best, LR, early stop; no Q selection",
+  "budget_allocation": "Replace the unstarted 1h E87 legacy control slot; do not automatically execute that arm. No increase to 18h global cap or planned 7h stage cap.",
+  "comparison": "Compare at common completed update counts to E87 history, through epoch14/step7000; own best and differing resource/early-stop horizons separately reported. Different weighted totals are not comparable.",
+  "comparison_limit": "Single seed, adaptive development evidence; both auxiliaries changed together, so no attribution to either one alone. Original E87 user stopped after 4290s; candidate cap3600s does not imply equal updates.",
+  "postprocessing": "Training command does not start Q or gallery. Later explicit assessment uses one unique own-Loss best, dev500, total2 threads, frozen solver.",
+  "execution": "Prepare and max5-case short checks only; formal training remains user-run; no automated launch",
+  "test_read": false,
+  "maximum_updates": 7000
+}

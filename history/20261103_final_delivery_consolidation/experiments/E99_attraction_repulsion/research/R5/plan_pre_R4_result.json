@@ -1,0 +1,14 @@
+{
+  "revision": "E99.R5.dual_conflict_topology_repair.v1",
+  "registered_utc": "2026-11-02T16:50:00Z",
+  "evidence": "R3 hard physical topology preserves much more quality than unconditional construction but weightedQ1.28822 remains poor. R4 implementation still declares the same3 difficult raw topologies infeasible after removing the local area tangent, so tangent removal alone is not their cause. Clarabel already exposes a dual infeasibility ray mapped to up to8 separation edges.",
+  "hypothesis": "Repair at most2 movable-pair disjunctions implicated by the infeasibility ray between solves, instead of repeating identical infeasible topology or greedily rebuilding all modules. Preserve original conservative shape objective for feasible C3 drafts; axis flips follow current center order to preserve per-axis DAG direction.",
+  "arms": ["conservative_control", "dual_route"],
+  "backend": {"seconds": 0.18, "maximum_shape_solves": 4, "shape_cap_seconds": 0.045, "projection_and_polish_reserve_seconds": 0.033, "elastic": 0, "conservative": true, "topology": "mode0 plus persistent selected overrides until legal solve", "maximum_edge_flips_per_failure": 2, "preplaced_preplaced_flips": false, "seed": "last recovery only after failed relation repairs", "deep_recovery": false, "field": false},
+  "implementation_panel": [0,4,43,95,135],
+  "control_reuse": "R3 raw_hard_control source result/record hashes and coordinates read-only; no repeated control500, historical timing clearly labeled",
+  "calibration_panel": "v5.train_monitor500 new dual_route arm once only after R4 completes and preflight passes; cached frozen C3/public inputs; CPU timing diagnostic",
+  "promotion": "Freeze and assess final quality/hard checks/tail failures before fresh complete dev500 acceptance; no dev coefficient sweep",
+  "test_read": false,
+  "new_training": false
+}

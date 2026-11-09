@@ -1,0 +1,119 @@
+{
+  "date": "2026-10-28",
+  "scope": "Read saved training/evaluation results only; no training/inference/postprocessing or test access",
+  "run": "experiments/E70_reference_task_loss/runs/20261028_full_ports_taskloss_v1_seed0",
+  "checkpoint_sha256": "613e79ad60210124344d8d9055a83b9aad9b221a1371389d5439446080d0d8a5",
+  "checkpoint_matches_frozen_full_dev_terminal": true,
+  "source_identity_before_documentation_update": "All frozen sources matched (verified before adding inspection/README outcome); only documentation updated afterward",
+  "checkpoints_exist": {
+    "best.pt": true,
+    "latest.pt": true
+  },
+  "training": {
+    "status": "early_stop",
+    "finished": true,
+    "epoch": 74,
+    "step": 37000,
+    "best_epoch": 71,
+    "best_loss": 0.27543058824539185,
+    "elapsed_seconds": 9211.342710099998,
+    "lr_drops": 3,
+    "lr_tier": 4,
+    "lowest_lr_validated": true
+  },
+  "best_train_dev500": {
+    "train_monitor": 0.27375644707679747,
+    "dev_monitor": 0.27543058824539185
+  },
+  "lr_transitions": [
+    {
+      "epoch": 18,
+      "from": 0.001,
+      "to": 0.00025
+    },
+    {
+      "epoch": 43,
+      "from": 0.00025,
+      "to": 0.0001
+    },
+    {
+      "epoch": 61,
+      "from": 0.0001,
+      "to": 5e-05
+    }
+  ],
+  "full_dev": {
+    "count": 2000,
+    "loss": 0.27369377756118773,
+    "old_G": 0.5000229716300965,
+    "raw_hard_legal": 0
+  },
+  "paired_saved_comparisons": {
+    "E65_geometry": {
+      "same_raw_members": true,
+      "same_terminal_members": true,
+      "overlap_lower_equal_higher": [
+        1887,
+        0,
+        113
+      ],
+      "terminal_Q_lower_equal_higher": [
+        182,
+        42,
+        276
+      ]
+    },
+    "E68_full_ports": {
+      "same_raw_members": true,
+      "same_terminal_members": true,
+      "overlap_lower_equal_higher": [
+        2000,
+        0,
+        0
+      ],
+      "terminal_Q_lower_equal_higher": [
+        249,
+        31,
+        220
+      ]
+    }
+  },
+  "terminal_summary": {
+    "checkpoint_sha256": "613e79ad60210124344d8d9055a83b9aad9b221a1371389d5439446080d0d8a5",
+    "count": 500,
+    "hard_legal": 500,
+    "mean_Q": 1.0477546716603485,
+    "weighted_Q": 1.0383521463640493,
+    "p95_Q": 1.144729537481169,
+    "max_Q": 2.9057256471921664,
+    "worst5pct_mean_Q": 1.3447101720141534,
+    "seconds_mean": 0.2732997281998978,
+    "seconds_p95": 0.620821244989929,
+    "row_fallbacks": 0,
+    "rescue_cases": 10,
+    "errors": 0,
+    "hpwl_gap_mean_returned": 0.022565716550011224,
+    "area_gap_mean_returned": 0.020384366507366716,
+    "boundary_violations_mean_returned": 0.21,
+    "grouping_violations_mean_returned": 0.258,
+    "mib_violations_mean_returned": 0.0,
+    "inference_seconds_mean_returned": 0.06156612760038115,
+    "postprocess_seconds_mean_returned": 0.21157633299968437,
+    "mean_center_move_local_mean_returned": 0.4307600994626977,
+    "max_center_move_local_mean_returned": 1.7870996363093692,
+    "test_read": false,
+    "neutral_runtime_development_only": true
+  },
+  "gallery": {
+    "count": 100,
+    "rating_ui": false,
+    "all_images_exist": true,
+    "visually_inspected_ids": [
+      217,
+      194,
+      399
+    ]
+  },
+  "baseline_promoted": false,
+  "test_read": false
+}

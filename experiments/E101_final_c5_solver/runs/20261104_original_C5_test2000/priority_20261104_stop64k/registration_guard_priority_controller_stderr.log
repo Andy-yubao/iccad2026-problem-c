@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "E:\project\ICCAD\2026\problemC\experiments\E101_final_c5_solver\runs\20261104_original_C5_test2000\controller.py", line 39, in <module>
+    try:main()
+  File "E:\project\ICCAD\2026\problemC\experiments\E101_final_c5_solver\runs\20261104_original_C5_test2000\controller.py", line 14, in main
+    assert all(hashlib.sha256((BUNDLE/n).read_bytes()).hexdigest()==h for n,h in expected.items())
+AssertionError

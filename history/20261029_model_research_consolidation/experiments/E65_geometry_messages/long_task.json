@@ -1,0 +1,116 @@
+{
+  "status": "stopped_by_user",
+  "authorization": "User authorized all proposed architecture/generalization experiments and any necessary background training, hourly wakeups, in this chat on 2026-10-27",
+  "started_utc": "2026-10-27T15:36:50.004388+00:00",
+  "deadline_utc": "2026-10-30T15:36:50.004388+00:00",
+  "max_formal_runs": 10,
+  "max_cumulative_training_seconds": 64800,
+  "max_hours_per_run": 3,
+  "max_epochs_per_run": 200,
+  "current_stage": "E67_multiscale_tokens",
+  "stages": [
+    {
+      "experiment": "E65_geometry_messages",
+      "status": "complete"
+    },
+    {
+      "experiment": "E66_shared_refinement",
+      "status": "complete"
+    },
+    {
+      "experiment": "E67_multiscale_tokens",
+      "status": "stopped_by_user"
+    },
+    {
+      "experiment": "E68_pin_nodes",
+      "status": "not_started_user_stop"
+    },
+    {
+      "experiment": "axis_swap_augmentation",
+      "status": "not_started_user_stop"
+    }
+  ],
+  "run_ledger": [
+    {
+      "output": "experiments/E65_geometry_messages/runs/20261027_geometry_message_seed0",
+      "elapsed_seconds": 3934.6919964999834,
+      "status": "early_stop",
+      "registered_utc": "2026-10-27T15:46:54.514584+00:00",
+      "updated_utc": "2026-10-27T17:53:21.452507+00:00"
+    },
+    {
+      "output": "experiments/E65_geometry_messages/runs/20261027_feature_message_seed0",
+      "elapsed_seconds": 3612.046788900014,
+      "status": "early_stop",
+      "registered_utc": "2026-10-27T17:59:12.333967+00:00",
+      "updated_utc": "2026-10-27T18:59:21.649705+00:00"
+    },
+    {
+      "output": "experiments/E66_shared_refinement/runs/20261028_unshared_residual_seed0",
+      "elapsed_seconds": 2089.833171999984,
+      "status": "early_stop",
+      "registered_utc": "2026-10-27T19:35:24.975416+00:00",
+      "updated_utc": "2026-10-27T20:10:12.108141+00:00"
+    },
+    {
+      "output": "experiments/E66_shared_refinement/runs/20261028_shared_residual_seed0",
+      "elapsed_seconds": 1830.1600480999914,
+      "status": "early_stop",
+      "registered_utc": "2026-10-27T20:16:14.415832+00:00",
+      "updated_utc": "2026-10-27T20:46:41.783339+00:00"
+    },
+    {
+      "output": "experiments/E67_multiscale_tokens/runs/20261028_group_tokens_seed0",
+      "elapsed_seconds": 3030.065511599998,
+      "status": "early_stop",
+      "registered_utc": "2026-10-27T21:29:25.511531+00:00",
+      "updated_utc": "2026-10-27T22:19:52.788333+00:00"
+    },
+    {
+      "output": "experiments/E67_multiscale_tokens/runs/20261028_global_tokens_seed0",
+      "elapsed_seconds": 2185.2316682999954,
+      "status": "user_stop",
+      "registered_utc": "2026-10-27T22:25:40.070896+00:00",
+      "updated_utc": "2026-10-27T23:02:02.507765+00:00"
+    }
+  ],
+  "heartbeat_id": null,
+  "test_read": false,
+  "baseline_promoted": false,
+  "seed_policy": "All formal runs seed0; user explicitly prohibits multi-seed confirmation",
+  "controller_exec_session": 17021,
+  "controller_pid": 32148,
+  "next_action": "No training, evaluation continuation or new experiments until user explicitly authorizes again. Preserve all checkpoints and evidence.",
+  "cumulative_training_seconds": 16682.029185399966,
+  "pause": {
+    "requested_utc": "2026-10-27T16:25:38.727186+00:00",
+    "resume_not_before_utc": "2026-10-27T17:25:38.727186+00:00",
+    "reason": "User explicitly requested stopping current training and resuming in one hour",
+    "stop_file": "experiments/E65_geometry_messages/runs/STOP",
+    "resume_authorized": false,
+    "stopped_utc": "2026-10-27T16:25:43.548512+00:00",
+    "saved_step": 15129,
+    "saved_epoch": 30,
+    "saved_cursor": 4128,
+    "checkpoint": "experiments/E65_geometry_messages/runs/20261027_geometry_message_seed0/checkpoints/latest.pt",
+    "controller_exited": true,
+    "resumed_utc": "2026-10-27T17:26:22.964389+00:00",
+    "resume_from_step": 15129,
+    "resumed_controller_pid": 30228
+  },
+  "E65_stage_decision": "Retain geometry candidate; small explicit-geometry raw benefit beyond feature branch, no E42 promotion, no multi-seed",
+  "current_stage_state": "experiments/E67_multiscale_tokens/state.json",
+  "E66_stage_decision": "Stop current bounded-residual/shared implementation: both train and dev worse; preserve evidence, do not infer that all recurrent models fail.",
+  "stop_request": {
+    "requested_utc": "2026-10-27T23:02:05.614397+00:00",
+    "reason": "User explicitly said 中止训练; stop training and automatic continuation, no scheduled resume",
+    "resume_authorized": false,
+    "confirmed_utc": "2026-10-27T23:02:58.430516+00:00",
+    "saved_step": 18500,
+    "saved_epoch": 37,
+    "controller_exited": true,
+    "checkpoint_preserved": true,
+    "automation_deleted": true
+  },
+  "deleted_heartbeat_id": "loss"
+}

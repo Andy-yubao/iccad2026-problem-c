@@ -1,0 +1,50 @@
+{
+  "source": "experiments/E114_supervision_placement",
+  "source_sha256": {
+    "augmentation.py": "dba0658829115b08184fadec488ef0b56fe0adf0e8452cb240029d5c5c4de87c",
+    "batches.py": "7d8aaccb6b27ee4ea261d7a9c9bebfedfe484181ee00e5d7f6ccb27d0639be54",
+    "captured_projection.py": "7f19baba25bc52a686e08a1af32236bffa8b47300cac96c52914b3b81d88131a",
+    "cuda_step.py": "cd5eddd01dc44b33da1c57c13261b27e1f7ef232b81c425e57080501a25ce7f1",
+    "data.py": "5055f1a6f97b1ea6cfe77952fccbb56ac3a57d63e7c24e391d0ba29160ec6ce5",
+    "features.py": "097a04bd1259a76b9fce23e5e533f7a22beece7a2f7af0435c3f560696c32dd1",
+    "group_tree.py": "867ca3b84848ae78da25dd2a2db16018d722102c7bb5a34644492451efef65fd",
+    "inspect.py": "3f40c625b361712222d06b9d08ea124d9d6128adc2bb37b5112baf79eef883b8",
+    "io.py": "d4aef673463486cf495aeb2947ba2b51089fdbe4b6930ea0157a3a738f2ac708",
+    "loss.py": "e814051b85d63379eebe9b5fbe259d80b371a38a44d275429ccc58b41f4a7d9c",
+    "loss_config.py": "70130eb80100b0aed6ce7de9bbe1c005c48014189ac26fb8610985b0c16daa50",
+    "model.py": "0d5f7a0f897653155d5405e07aab9357b46b52bca4ddedd4b2cb11f05151dc82",
+    "ports.py": "431b54476e7de8a94c12cf935a30a3b49b911e208305fbe6bb7b23d72e37dbef",
+    "resident.py": "f76073f5756a59187ecfc1b90752f4db063e81555bad51835712a731d529cd27",
+    "run_queue.py": "918caf31fc95480bfcacd406c15acd6e8bd8578c5f0de8ef5b84d513b4b2dd4e",
+    "schedule.py": "8d5dfd1a04a0b02965f91ed3be47c94371a28147705f02fa52e144c9d57c597a",
+    "simple_loss.py": "fcd0827c829ee2466298eb61c1213b1fb12ae7f54afaef0f8e53a86033478238",
+    "step_control.py": "795ddb45dd257e123f1880eea28b58502711807ee643bfcb51a7e72d484952da",
+    "train.py": "fcde062f1a3cf66001eb4b4f9e47b5c1cd59db16b09a506484857f5fb0b0eb0f",
+    "__init__.py": "e88603c7289d0636a073fae6a35658f4829f4459cad9a1e7d1d91874c3e78960"
+  },
+  "copied_unchanged": [
+    "__init__.py",
+    "augmentation.py",
+    "batches.py",
+    "captured_projection.py",
+    "cuda_step.py",
+    "data.py",
+    "features.py",
+    "group_tree.py",
+    "io.py",
+    "ports.py",
+    "resident.py",
+    "schedule.py",
+    "simple_loss.py",
+    "step_control.py"
+  ],
+  "ownership": "Local independent algorithm copies; no imports of another experiment private model/loss/engine",
+  "changes": [
+    "nine graph blocks",
+    "independent large head after block1",
+    "1+9 .2/.8 supervision",
+    "exact retained common initialization"
+  ],
+  "data": "Explicit36k comparison exception; no subset change",
+  "old_sources_modified": false
+}

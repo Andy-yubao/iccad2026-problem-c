@@ -1,0 +1,14 @@
+{
+  "policy_version": "research.original_no_mib.v1",
+  "effective_date": "2026-11-06",
+  "scope": "new research runs; historical runs and E101 delivery retain their registered identities",
+  "original_areas_and_specifications": "preserve byte-equivalent numeric values; no MIB mean-area or shape coordination",
+  "mib_input_metadata": "retain in raw archive for provenance; ignore in new model features, losses, repair, and selection",
+  "mib_penalty": 0,
+  "soft_normalization": "exclude MIB from both violation numerator and maximum-possible denominator",
+  "other_constraints": "unchanged",
+  "scoring_entrypoint": "scoring.research_no_mib.evaluate_case",
+  "score_label": "local research Q without MIB; not official contest score",
+  "default_dataset": "protocol/random_reference40k_v1.json",
+  "training_authorized_by_this_file": false
+}

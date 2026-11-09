@@ -1,0 +1,48 @@
+{
+  "status": "frozen_before_terminal",
+  "baseline": {
+    "experiment": "E90",
+    "checkpoint_sha256": "00e75ab87cbc2cc461a89198c5931ae54e1495736320fd621a3f875ff344c58b",
+    "dev500_F_loss": 0.32910041260719297,
+    "weighted_Q": 1.0223475171670156,
+    "max_Q": 1.8419663187374198,
+    "p95_Q": 1.145570827221716,
+    "worst5pct_mean_Q": 1.274665676966712,
+    "module_pass10_pooled": 0.5993158494868871,
+    "worst_module_coverage_p95": 0.7504313615478709,
+    "source_files": {
+      "experiments\\E90_auxiliary_weight_placer\\runs\\20261031_aux3_seed0\\results.json": "404f573b56f145afed10144997475c981a48611a97374abc03467719be4c185d",
+      "experiments\\E90_auxiliary_weight_placer\\runs\\20261031_aux3_seed0\\terminal\\summary.json": "1a9ac3e24933988df79ca29a08d77f37f9b1b8151ac197a7afd788e41aea29fd",
+      "experiments\\E90_auxiliary_weight_placer\\runs\\20261031_aux3_seed0\\terminal\\results.json": "1c7f3c961930b53f5a2bbc2f950de45e337769ddd1aacb849dafebeef54aa931",
+      "experiments\\E90_auxiliary_weight_placer\\runs\\20261031_aux3_seed0\\inspection500.json": "91de3d0af552c0a52dce0922dc0f29845f88d5cd1f596243ab3b0cfe84f99a83"
+    }
+  },
+  "qualification": {
+    "status": "registered_before_new_terminal",
+    "selection": "unique F own-Loss best only; no Q reselect; no phase switch by Q",
+    "panel": "same fixed v6 dev_monitor500 and same E90 flash parameters; dev2000 draft corroboration",
+    "workers": 4,
+    "threads_per_worker": 2,
+    "terminal_runs_per_frozen_candidate": 1,
+    "gates": {
+      "dev500_F_loss_lte": 0.33568242085933686,
+      "weighted_Q_lte": 1.0233475171670154,
+      "hard_legal_count": 500,
+      "max_Q_lte": 1.934064634674291,
+      "module_pass10_pooled_gte": 0.5793158494868871,
+      "worst_module_coverage_p95_lte": 0.780431361547871,
+      "numerical_stability_pass": true,
+      "F_phase_checkpoint_exists": true
+    },
+    "interpretation": "Exploratory engineering near-parity: Loss within2%, weightedQ tolerance+.001; maxQ+5%, coverage pass-2pp and worst coverage p95+3pp guards. Report worker-paired uncertainty; passing a point tolerance does not prove statistical equivalence. Tolerances must not change after seeing new terminal.",
+    "if_fail": "Stop all new work in this task, preserve evidence, close heartbeat; do not start corrector or retrain to chase Q",
+    "if_pass": "Freeze qualified layout model/hash/data/config, then begin corrector design and registered training"
+  },
+  "final_target": {
+    "weighted_Q_lt": 1.01,
+    "hard_legal_count": 500,
+    "quality_basis": "same fixed development panel neutral runtime; not official unseen contest score"
+  },
+  "authorization": "用户：总预算至少2h。这是一个长任务，每隔1h唤醒一次。当前训练方式布局模型基本持平或超过E90；未达成则终止；达成后冻结布局模型，自主研究可复用修正模型，期望最终Q<1.01，Loss尽量复用非reference部分。",
+  "test_read": false
+}

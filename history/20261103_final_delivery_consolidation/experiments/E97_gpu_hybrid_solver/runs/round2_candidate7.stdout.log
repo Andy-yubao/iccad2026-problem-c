@@ -1,0 +1,75 @@
+Verified archived cache loaded: train 5 cases
+{
+  "status": "passed",
+  "ids": [
+    1683,
+    10027,
+    5474,
+    10140,
+    15001
+  ],
+  "model_config": {
+    "width": 192,
+    "layers": 12,
+    "rectangle": true,
+    "ffn_dropout": 0.05,
+    "corrector_width": 192,
+    "message_width": 64,
+    "max_correction": 0.15,
+    "cooperative": true
+  },
+  "loss": {
+    "revision": "E97.round2.candidate7.dynamic_MST.v1",
+    "base": "registered group-aware C3 migration",
+    "public_soft": 3.6876450434943204,
+    "calibration_sha256": "802d20544848a523bae05805eaf28accc7d2bb167ef7c70bfa90982695ddc5c1",
+    "teacher_labels_NN_input": false,
+    "reference": false,
+    "count_weight": "exp((publicN-120)/12)/0.12578465955104443",
+    "selection": "same public-count-weighted per-case total for backward/monitor/best/LR/early-stop"
+  },
+  "initial_loss": 0.024808991700410843,
+  "eager_graph_update_max_abs": 0.0,
+  "eager_graph_Adam_moment_max_abs": 0.0,
+  "capture_no_Adam_or_parameter_update": true,
+  "restored_next_model_Adam_RNG_bit_exact": true,
+  "nonfinite_rejected_before_Adam": true,
+  "nonfinite_exactWH_rejected_before_Adam": true,
+  "frozen_L_unchanged": true,
+  "warm_start_exact_C5": true,
+  "teacher_labels_excluded_from_NN": true,
+  "exactWH_excluded_from_NN": true,
+  "public_contact_boundary_fixtures_passed": true,
+  "dynamic_Prim_five_exact_CPU_MST_comparisons": true,
+  "alternative_group_axis_allowed_overlap_rejected_nongroup_prior_retained": true,
+  "fixed_public_count_weight_independently_checked": true,
+  "weighted_subterms_bit_exact": true,
+  "formal_training_started": false,
+  "seconds": 18.14584029999969,
+  "test_read": false
+}
+Verified archived cache loaded: train 4000 cases
+Verified archived cache loaded: dev_monitor500 500 cases
+Round2Candidate7 public-soft engine ready; trainable241547; teacher train/dev 4000 500
+epoch 0 trainLoss 0.640560601234436 devLoss 0.4955488405227661 lr 0.0001
+epoch 1 trainLoss 0.626757848739624 devLoss 0.4905598773956299 lr 0.0001
+step 250 Loss 0.3428511619567871
+epoch 2 trainLoss 0.6204623246192932 devLoss 0.48689376735687256 lr 0.0001
+epoch 3 trainLoss 0.6174183645248413 devLoss 0.48618669605255127 lr 0.0001
+step 500 Loss 0.19698846340179443
+epoch 4 trainLoss 0.6077354130744934 devLoss 0.48839764404296876 lr 0.0001
+epoch 5 trainLoss 0.6005949301719665 devLoss 0.49142209243774415 lr 0.0001
+step 750 Loss 0.2789897620677948
+epoch 6 trainLoss 0.6007994079589843 devLoss 0.4867461881637573 lr 5e-05
+epoch 7 trainLoss 0.5971356048583984 devLoss 0.4872605047225952 lr 5e-05
+step 1000 Loss 0.20245623588562012
+epoch 8 trainLoss 0.5958314514160157 devLoss 0.48668592834472657 lr 5e-05
+epoch 9 trainLoss 0.5934705762863159 devLoss 0.4865321893692017 lr 2e-05
+step 1250 Loss 0.24343235790729523
+epoch 10 trainLoss 0.5936176519393921 devLoss 0.4866182928085327 lr 2e-05
+epoch 11 trainLoss 0.5932511224746704 devLoss 0.48723587608337404 lr 2e-05
+step 1500 Loss 0.1595245599746704
+epoch 12 trainLoss 0.5921792831420899 devLoss 0.486226092338562 lr 1e-05
+epoch 13 trainLoss 0.5915875840187073 devLoss 0.48680440521240237 lr 1e-05
+step 1750 Loss 0.20623749494552612
+epoch 14 trainLoss 0.5915327548980713 devLoss 0.4862076292037964 lr 1e-05

@@ -1,0 +1,32 @@
+{
+  "cases": [
+    "case_0019",
+    "case_0524",
+    "case_0088",
+    "case_0538",
+    "case_0743"
+  ],
+  "arms": {
+    "bbox_only": {
+      "span_gain": 0.1
+    },
+    "wire_only": {
+      "wire_gain": 0.1
+    },
+    "boundary_only": {
+      "protect_boundary": false
+    },
+    "larger_move_control": {
+      "max_move": 2.0
+    }
+  },
+  "reason": "No primary small-budget full legal witness; separate individual constraints without changing original results",
+  "scope": "five predefined rated cases, no grade-based tuning after solver outcomes",
+  "source_sha256": "1142132483307a050381072a11a375a1b6030b64b68f37ff592e8d77e8be2817",
+  "current_solver_source_sha256": "f3b87db2dd9ce17915110467c7f667d95c34a68f92faaa159864b870d325ade4",
+  "primary_source_snapshot": "source_snapshot.zip",
+  "numerics": "tiny negative coordinates in[-1e-7,0) are snapped to0, then all hard checks repeated",
+  "budget_seconds": 120,
+  "threads": "4 processes x 1 solver thread",
+  "each_MIP_seconds": 2
+}

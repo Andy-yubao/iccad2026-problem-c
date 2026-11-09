@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "unique_cases": 5,
+  "same_cases_as_preflight": true,
+  "no_optimizer_mutation": true,
+  "guards": {
+    "nonfinite": "Nonfinite loss or gradient; optimizer not advanced",
+    "finite_explosive": "Finite-but-explosive numerical guard; optimizer not advanced: {'total': 2500001141882880.0, 'grad_norm': 2062100608.0, 'state_hidden_max': [3.7549033164978027, 23.0970458984375]}"
+  },
+  "test_read": false
+}

@@ -1,0 +1,78 @@
+{
+  "experiment": "E98_loss_weight_learning",
+  "run": "20261104_generalization96_seed0",
+  "authorization": "User explicitly authorized preparing and background-starting one generalization-enhanced scratch baseline first, then preparing other changes.",
+  "scope": "one generalization baseline only; no solver feedback, Q evaluation, test access, or automatic next-stage training",
+  "architecture": {
+    "width": 96,
+    "layers": 12,
+    "rectangle": true,
+    "ffn_dropout": 0.1,
+    "residual_dropout": 0.05
+  },
+  "parameters": 1471539,
+  "trainable_parameters": 1471539,
+  "initialization": "all parameters random, seed0, fresh AdamW; no parent weights or state",
+  "data": "reference_workset_v5 original16k, MIB public mean-area transform E14.mean_area.v1; no new members; validated v6 cache prefix only",
+  "train_count": 16000,
+  "train_monitor_count": 500,
+  "dev_monitor_count": 500,
+  "batch_size": 32,
+  "precision": "FP32, deterministic algorithms, no AMP or numerical-path changes inside run",
+  "cublas_workspace_config": ":4096:8, set at package import before CUDA initialization",
+  "seed": 0,
+  "threads": 4,
+  "maximum_seconds": 14400,
+  "maximum_epochs": 200,
+  "lr_levels": [
+    0.001,
+    0.00025,
+    0.0001,
+    5e-05
+  ],
+  "protection_epochs": 14,
+  "scheduler_baseline_epoch": 15,
+  "patience": 3,
+  "minimum_meaningful_absolute": 1e-05,
+  "minimum_meaningful_relative": 0.001,
+  "best_minimum_absolute_improvement": 1e-05,
+  "minimum_lowest_lr_complete_epochs": 2,
+  "optimizer": "AdamW weight_decay0.0003, global gradient clip1; per-module joint proposed-update bound0.005",
+  "loss": "ten existing terms, fixed E90/E94 F coefficients, shared soft denominator unchanged; explicit vector in loss_config.py",
+  "selection": "same fixed per-case total for backward/train500/dev500; best, LR and early stop use dev500 arithmetic mean per current protocol; train plateau reported independently, dev early-stop is not proof of train convergence",
+  "engine": "CPU verified read-only cache, pinned batches, FP32 CUDA graph for model/loss/backward/clip and update projection, AdamW outside graph",
+  "network_ports": "per-module total weight and weighted centroid only; full port edges used only in loss",
+  "stop": "STOP file or SIGINT: finish accepted update, save exact latest and exit; no next phase; budget exhaustion distinct from convergence",
+  "preflight_train_indices": [
+    1683,
+    10027,
+    5474,
+    10140,
+    15001
+  ],
+  "numerical_guards": "nonfinite, per-case loss>=1000, mean loss>=1000 or unclipped gradient norm>=10000 rejected before Adam; no skip or retry",
+  "test_read": false,
+  "postprocessing_calls": 0,
+  "future_weight_learning": "prepared separately; old stopped run remains stopped; no automatic transition",
+  "augmentation": {
+    "axis_swap_probability": 0.5,
+    "seed_rule": "SeedSequence([20261104,seed,epoch]); member-index flags; independent sampling and Dropout streams",
+    "monitoring": "unaugmented original train500/dev500, eval mode; same fixed per-case Loss"
+  },
+  "revision": "E98.generalization96.axis_swap.scratch.v1",
+  "numerical_path": "new registered Dropout and exact axis-swap objectives inside existing FP32 backward CUDA graph, original AdamW and update projection",
+  "source_copies": {
+    "model.py": {
+      "source": "experiments/E98_loss_weight_learning/model.py",
+      "sha256": "0d71c96c75976dc57d589d5709639291d1a30addffa8a5f0f2c53e2cb88a9089"
+    },
+    "cuda_step.py": {
+      "source": "experiments/E98_loss_weight_learning/cuda_step.py",
+      "sha256": "57a1bc1ea04df1d43281bd4ed0421b731e8d49da6ff6537302dcd64b72569133"
+    },
+    "train.py": {
+      "source": "experiments/E98_loss_weight_learning/train.py",
+      "sha256": "d3f01fab5628fb3b8175be3de7e6e0ed97c1fd2c96c3c6a8067f8e21c73677b5"
+    }
+  }
+}

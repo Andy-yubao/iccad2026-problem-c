@@ -1,0 +1,16 @@
+{
+  "revision": "E63.predeclared.v1",
+  "authorization": "2026-10-27 user explicitly requested running E42 post-training with modest center relaxation; implementation choices delegated. No zero-center arm.",
+  "hypothesis": "Center gradients partly resist local overlap repair. A modest fixed relaxation can reduce overlap while retaining coarse layout structure.",
+  "arms": ["control", "weight075", "softband005"],
+  "seed": 0,
+  "initialization": "E42 best51 weights only; fresh AdamW/scheduler shared by all three arms",
+  "data": "original frozen reference_workset_v5 train16000, train_monitor500, dev_monitor500; no v6 members",
+  "architecture": "unchanged 96x12 rectangle, FFN dropout .05; no graph input prenorm; no graph-step projection",
+  "training": {"batch_size": 32, "precision": "FP32", "engine": "cuda_graph", "weight_decay": 0.0003, "clip_norm": 1.0, "lr_levels": [0.001, 0.00025, 0.0001, 0.00005], "scheduler_start_epoch": 15, "plateau_patience": 3, "minimum_lowest_lr_completed_epochs": 2, "max_hours_per_arm": 2, "max_epochs_per_arm": 200, "max_training_hours_total": 6},
+  "selection": "one best per arm using that arm fixed dev500 Loss only, including epoch0 E42 starting point; best improvement threshold 1e-5",
+  "evaluation": "once per completed own-Loss best: full raw dev2000, unchanged flash dev500, same100 unscored reference/current/E42 images",
+  "interpretation": "Own Loss totals cannot be compared across arms. Compare common original G/components, real intersection area and penetration, relative structure and shape. Compare each candidate against restart control and frozen E42 initial state. Q is auxiliary, never a reselection rule. Single-seed adaptive dev evidence, no automatic baseline promotion.",
+  "failure_policy": "nonfinite loss/gradient prevents Adam update and saves latest. Pipeline stops on child failure, source mismatch, STOP or incomplete evaluation. No automatic grid expansion.",
+  "test_read": false
+}

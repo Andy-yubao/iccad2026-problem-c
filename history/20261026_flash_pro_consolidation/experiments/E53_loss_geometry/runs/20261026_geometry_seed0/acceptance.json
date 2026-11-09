@@ -1,0 +1,205 @@
+{
+  "summary": {
+    "count": 500,
+    "hard_legal": 500,
+    "mean_Q": 1.04164252867016,
+    "weighted_Q": 1.0552171091346898,
+    "p95_Q": 1.129217252105948,
+    "max_Q": 2.8794900286736764,
+    "worst5pct_mean_Q": 1.347990042749472,
+    "seconds_mean": 0.2706203300000634,
+    "seconds_p95": 0.5935203500041096,
+    "row_fallbacks": 0,
+    "rescue_cases": 7,
+    "errors": 0,
+    "hpwl_gap_mean_returned": 0.017445342535702967,
+    "area_gap_mean_returned": 0.016011468603689214,
+    "boundary_violations_mean_returned": 0.246,
+    "grouping_violations_mean_returned": 0.174,
+    "mib_violations_mean_returned": 0.0,
+    "inference_seconds_mean_returned": 0.05726406240020879,
+    "postprocess_seconds_mean_returned": 0.21318336720013759,
+    "mean_center_move_local_mean_returned": 0.38793138240240466,
+    "max_center_move_local_mean_returned": 1.6348345859961546
+  },
+  "targets": {
+    "weighted_Q_lt": 1.013,
+    "hard_legal": 500,
+    "p95_Q_max": 1.1484278633170526,
+    "worst5pct_mean_Q_max": 1.2037164391358908,
+    "max_Q_max": 1.9272793619183735
+  },
+  "checks": {
+    "weighted_Q": false,
+    "hard_legal": true,
+    "p95": true,
+    "worst5pct": false,
+    "max_Q": false
+  },
+  "numerical_pass": false,
+  "paired_E42": {
+    "weighted_Q_delta": 0.029357475119454333,
+    "case_bootstrap_95": [
+      -0.003224295026326628,
+      0.09085328156852959
+    ],
+    "worker_cluster_bootstrap_95": [
+      -0.0032925274965330408,
+      0.08629416387264054
+    ],
+    "Q_better_equal_worse": [
+      240,
+      56,
+      204
+    ],
+    "limitation": "One seed and one timed repair run; intervals do not cover training seeds or inter-run timing."
+  },
+  "raw_full_dev": {
+    "total": 0.2722509257793427,
+    "mse": 0.06777080768346787,
+    "center_mse": 0.002721089694648981,
+    "shape_mse": 0.21180250906944276,
+    "center_local": 0.23558702659606934,
+    "shape": 0.21180250906944276,
+    "relative_local": 0.2807619035243988,
+    "overlap": 0.0165868062376976,
+    "contact": 0.07718535250425339,
+    "boundary": 0.007071087397634983,
+    "mib": 0.003264803059399128,
+    "bbox": 0.00430528911203146,
+    "local": 0.35872812747955324,
+    "geometry": 0.40813898968696594,
+    "module_overlap_base": 0.03296300813555717,
+    "module_overlap_counted": 0.050226411879062655,
+    "module_count_extra": 0.017263403326272964,
+    "module_load_mean": 0.07245906019210815,
+    "module_load_max": 0.505431134223938,
+    "module_load_gt05_fraction": 0.4007096767425537,
+    "module_soft_count_mean": 0.5607199487686158,
+    "module_count_factor_mean": 1.2837552366256715,
+    "module_overlap": 0.050226411879062655,
+    "center_objective": 0.2355870215892792,
+    "shape_objective": 0.21180250906944276,
+    "relative_objective": 0.280761905670166,
+    "compactness_objective": 0.008219447001814843,
+    "clearance_objective": 0.09407901614904404,
+    "wire_guard_objective": 0.0013316486026160419,
+    "weighted_module_objective": 0.03766980880498886,
+    "supervision": 0.35872812747955324,
+    "selection_proxy": 0.2722509257793427,
+    "batched_inference_seconds_per_case": 0.009861883500023396,
+    "count": 2000,
+    "raw_hard_legal": 0,
+    "raw_hard_legal_rate": 0.0,
+    "draft_diagnostics": {
+      "overlap_pairs": {
+        "mean": 57.186,
+        "p95": 102.0,
+        "max": 129.0
+      },
+      "overlap_area_fraction": {
+        "mean": 0.03070296867076033,
+        "p95": 0.05502004766372871,
+        "max": 0.09668870802721699
+      },
+      "penetration_squared_per_block": {
+        "mean": 0.008161817989029024,
+        "p95": 0.017892138087944,
+        "max": 0.040494987480873726
+      },
+      "max_local_penetration": {
+        "mean": 0.3234560953646186,
+        "p95": 0.5945195252682888,
+        "max": 0.9288714189242846
+      },
+      "largest_conflict_cluster": {
+        "mean": 39.325,
+        "p95": 77.0,
+        "max": 98.0
+      },
+      "largest_conflict_cluster_fraction": {
+        "mean": 0.5580893097481576,
+        "p95": 0.8019974671885793,
+        "max": 0.9666666666666667
+      },
+      "module_load_mean": {
+        "mean": 0.0724590616197869,
+        "p95": 0.12377840740423397,
+        "max": 0.20514693939747247
+      },
+      "module_load_p95": {
+        "mean": 0.26371489043669133,
+        "p95": 0.46643752589674115,
+        "max": 0.7962348510999092
+      },
+      "module_load_max": {
+        "mean": 0.50543114224917,
+        "p95": 0.9907092218408269,
+        "max": 1.6498632739487422
+      },
+      "module_load_gt05_fraction": {
+        "mean": 0.4007096760286868,
+        "p95": 0.5769562334217506,
+        "max": 0.8
+      },
+      "module_load_gt50_fraction": {
+        "mean": 0.012127513189152951,
+        "p95": 0.05,
+        "max": 0.1346153846153846
+      },
+      "module_soft_count_mean": {
+        "mean": 0.5607199602355566,
+        "p95": 0.7925147973116009,
+        "max": 1.0526861316541176
+      },
+      "module_neighbors_mean": {
+        "mean": 1.5851234989059153,
+        "p95": 1.9655607070414371,
+        "max": 2.3333333333333335
+      },
+      "module_load_small_mean": {
+        "mean": 0.0944825914199252,
+        "p95": 0.17382706360496405,
+        "max": 0.2953399914770155
+      },
+      "module_load_small_gt05_fraction": {
+        "mean": 0.44789976825395955,
+        "p95": 0.675,
+        "max": 0.9
+      },
+      "module_load_middle_mean": {
+        "mean": 0.06974529901525542,
+        "p95": 0.12894299646802082,
+        "max": 0.2533565355298089
+      },
+      "module_load_middle_gt05_fraction": {
+        "mean": 0.4130402400902634,
+        "p95": 0.6486486486486487,
+        "max": 1.0
+      },
+      "module_load_large_mean": {
+        "mean": 0.05245253274502464,
+        "p95": 0.1025728651481806,
+        "max": 0.24411884550048835
+      },
+      "module_load_large_gt05_fraction": {
+        "mean": 0.33930441435110537,
+        "p95": 0.6112007168458781,
+        "max": 0.9
+      }
+    }
+  },
+  "draft_visual_status": "agent_inspected_5_cases; human assessment pending",
+  "test_read": false,
+  "single_seed": true,
+  "scope": "adaptive exposed development500, not hidden or blind test; no checkpoint selection by Q",
+  "visual_cases": [
+    217,
+    194,
+    450,
+    283,
+    21
+  ],
+  "overall_pass": false,
+  "visual_observation": "Overlap is visibly reduced in inspected cases, but gaps, deformation and local congestion remain. Cases21/283/450 show that lower overlap does not ensure easy repair. AI observation only, no human rating."
+}

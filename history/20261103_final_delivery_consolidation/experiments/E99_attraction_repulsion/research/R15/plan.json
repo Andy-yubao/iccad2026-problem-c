@@ -1,0 +1,11 @@
+{
+  "revision":"E99.R15.AR_before_unchanged_full_planner.v1",
+  "user_authorization":"2026-11-03 resume long research; investigate area-dependent source attraction, attraction strength, motion/deformation allowance, and every operation log. Freeze original full planner; do not continue R1-R14 planner changes.",
+  "pipeline":"Frozen C3 -> pure finite-range central pair attraction/repulsion with initial-area mobility and area-preserving shape -> original E99 planner with unchanged planner_config.json -> unchanged necessary hard checks",
+  "stages":["Read all existing V3 and relaxed20 per-operation logs without repeat solves or coefficient changes","Registered train_monitor500 trajectory replay of the frozen20-round baseline, logging each module/round forces, cancellations, mass, limits, movement and shape; no downstream solve in diagnostic stage","Register a small mechanism-controlled training comparison only after diagnostics; original train500 full-planner control reused for quality, timings labeled historical","Freeze candidate before fresh complete C3 dev500 acceptance and four-stage fixed100 gallery"],
+  "specific_questions":["Is large area only inertia or also source charge? Compare symmetric bounded pair coupling against equal-force law, without asymmetric pair forces.","Does weak attraction or global damping dominate actual motion? Inspect pre/post force-to-motion and actual cap utilization.","Do path/shape budgets actually bind? Increase only a limiting allowance and retain all trajectories.","Does common global safety scaling freeze unrelated modules? Inspect limiter IDs and components before redesign."],
+  "boundaries":"Pure module-pair forces only: no added grouping/boundary/wire/MIB objective in the new operator. Preserve fixed shape and preplaced geometry. All updates synchronous from current snapshot. No NN training, no test, no dev coefficient sweep, no source changes to original planner.",
+  "implementation_panel":[0,4,43,95,135],
+  "development_panel":"v5 train_monitor500, original frozen order; first5 implementation checks only; historical exposed dev100 logs read-only diagnostic evidence",
+  "test_read":false,"new_training":false,"candidate_coefficients_not_yet_selected":true
+}

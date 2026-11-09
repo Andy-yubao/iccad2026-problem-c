@@ -1,0 +1,232 @@
+"""One frozen dev-Loss best, one fixed-depth repair per fixed dev500 case."""
+import json
+import os
+import signal
+import threading
+import time
+import traceback
+import zipfile
+from pathlib import Path
+import numpy as np
+import torch
+from threadpoolctl import threadpool_limits
+from ..io import ROOT,HERE,save,sha,exclusive
+from ..generalization_baseline.data import load_rows
+from ..dataset_view import ReferenceLayouts
+from ..qualification import evaluate as original_evaluator
+from ..qualification.metrics import module_overlap
+from ..depth_evaluation.solver import optimize
+from ..depth_evaluation.preflight import sources as depth_sources
+from ..depth_evaluation.repair.canonical_native import warmup
+from ..dynamic_weight_learning_v2.evaluation import Predictor,model_hash,input_hash
+from ..dynamic_weight_learning_v2.common import q_summary
+from scoring.evaluation import evaluate_case
+from scoring.checks import independent_hard_checks
+from datasets.reference_layouts import public_hard_reference
+
+OWNER=Path(__file__).resolve().parent
+TRAIN=HERE/'runs/20261104_generalization96_seed0'
+OUT=TRAIN/'evaluation_depth_dev500'
+CHECKPOINT=TRAIN/'checkpoints/best.pt'
+
+class Halt(Exception):
+    pass
+
+def read(path):
+    return json.loads(Path(path).read_text(encoding='utf-8-sig'))
+
+def sources():
+    files=list(OWNER.glob('*.py'))
+    files += [HERE/p for p in ('generalization_baseline/model.py','generalization_baseline/data.py',
+        'generalization_baseline/io.py','features.py','batches.py','cache.py','data.py','ports.py',
+        'dataset_view.py','qualification/evaluate.py','qualification/metrics.py',
+        'qualification/plan.json','dynamic_weight_learning_v2/evaluation.py',
+        'dynamic_weight_learning_v2/common.py','dynamic_weight_learning_v2/plan.json','io.py')]
+    files += list((ROOT/'datasets').glob('*.py'))+[ROOT/'datasets/expanded_reference/__init__.py']
+    files += list((ROOT/'scoring').glob('*.py'))
+    files += [ROOT/p for p in ('visualization/layouts.py','protocol/paths.json',
+        'protocol/reference_workset_v5.json','protocol/reference_workset_v6.json','protocol/split_v1.json',
+        'third_party/FloorSet/iccad2026contest/iccad2026_evaluate.py',
+        'third_party/FloorSet/cost.py','third_party/FloorSet/utils.py')]
+    return {**{p.relative_to(ROOT).as_posix():sha(p) for p in sorted(set(files))},**depth_sources()}
+
+def full_work(info):
+    total=dict(info.get('work',{}))
+    def walk(trace):
+        for event in trace:
+            if 'work' in event:
+                for key,value in event['work'].items():
+                    total[key]=total.get(key,0)+value
+            if 'trace' in event:
+                walk(event['trace'])
+    walk(info['trace'])
+    return total
+
+def main():
+    training=read(TRAIN/'results.json')
+    assert training['status']=='early_stop' and not training['error']
+    progress=read(TRAIN/'progress.json')
+    assert progress['finished'] and progress['best_epoch']==training['best_epoch']
+    depth_gate=read(HERE/'depth_evaluation/preflight.json')
+    assert depth_gate['status']=='passed' and depth_gate['sources']==depth_sources()
+    checkpoint_sha=sha(CHECKPOINT)
+    saved=torch.load(CHECKPOINT,map_location='cpu',weights_only=False)
+    assert saved['progress']['best_epoch']==training['best_epoch']
+    assert saved['progress']['epoch']==training['best_epoch']
+    mh=model_hash(saved['model'])
+    model_config=saved['model_config']
+    best_history=next(h for h in progress['history'] if h['epoch']==training['best_epoch'])
+    current_sources=sources()
+    members=[r['member'] for r in ReferenceLayouts('dev_monitor500').records]
+    assert len(members)==500 and len({tuple(m) for m in members})==500
+    frozen=dict(authorization='User: training finished; run500 validation. Only this frozen best is evaluated; no coefficient selection, training, or test access.',
+        checkpoint=CHECKPOINT.relative_to(ROOT).as_posix(),checkpoint_sha256=checkpoint_sha,
+        model_hash=mh,model_config=model_config,best_epoch=training['best_epoch'],
+        fixed_loss=training['best_fixed_loss'],train_monitor_loss=best_history['train_monitor']['total'],
+        dev_monitor_loss=best_history['dev_monitor']['total'],
+        training_results_sha256=sha(TRAIN/'results.json'),sources=current_sources,
+        evaluator='E98.depth_budget.v1; main steps4/4/7/8, fixed solver iterations, one repeat',
+        members=members,panel='original frozen v5 dev_monitor500',test_read=False,
+        interpretation='development panel used for Loss monitoring/earlystop; not untouched generalization evidence; no Q reselection')
+    with exclusive(OUT/'evaluation.lock'):
+        if (OUT/'frozen.json').exists():
+            assert read(OUT/'frozen.json')==frozen,'Frozen evaluation identity changed'
+            if (OUT/'results.json').exists():
+                print('Existing completed evaluation reused:',OUT/'report.md',flush=True)
+                return
+            if (OUT/'error.json').exists():
+                raise RuntimeError('Existing error needs diagnosis; no automatic retry')
+        else:
+            save(OUT/'frozen.json',frozen)
+            with zipfile.ZipFile(OUT/'source_snapshot.zip','w',zipfile.ZIP_DEFLATED) as archive:
+                for name in current_sources:
+                    archive.write(ROOT/name,name)
+        started=time.perf_counter()
+        prior=read(OUT/'state.json').get('elapsed_seconds',0) if (OUT/'state.json').exists() else 0.
+        requested=[False]
+        old_signal=signal.signal(signal.SIGINT,lambda *_:requested.__setitem__(0,True))
+        closed=threading.Event()
+        lock=threading.RLock()
+        state=dict(status='running',stage='initializing',completed=0,total=500,pid=os.getpid(),test_read=False)
+        def check():
+            if requested[0] or (OUT/'STOP').exists():
+                raise Halt()
+        def beat(**fields):
+            with lock:
+                state.update(fields)
+                save(OUT/'state.json',dict(**state,elapsed_seconds=prior+time.perf_counter()-started,
+                    updated_utc=time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())))
+        def log(text):
+            print(text,flush=True)
+            with (OUT/'run.log').open('a',encoding='utf-8') as stream:
+                stream.write(text+'\n')
+        def heartbeat():
+            while not closed.wait(5):beat()
+        worker=threading.Thread(target=heartbeat,daemon=True)
+        worker.start()
+        try:
+            check()
+            original_evaluator.setup()
+            beat(stage='loading_fixed_dev500')
+            rows=load_rows('dev_monitor500')
+            assert [list(r['member']) for r in rows]==members
+            for row in rows:
+                case=row['case']
+                case.reference_positions=public_hard_reference(case.solver_inputs[1],case.solver_inputs[5],case.solver_inputs[6])
+            init=time.perf_counter()
+            with torch.inference_mode(),threadpool_limits(limits=1):
+                warmup()
+                predictor=Predictor(CHECKPOINT,rows[0]['case'].solver_inputs)
+                initialization_threads=original_evaluator.thread_check()
+            save(OUT/'initialization.json',dict(seconds=time.perf_counter()-init,
+                threads=initialization_threads,model_config=model_config,test_read=False))
+            records=[]
+            with torch.inference_mode(),threadpool_limits(limits=1):
+                for i,row in enumerate(rows):
+                    check()
+                    path=OUT/f'cases/{i:04d}.json'
+                    if path.exists():
+                        record=read(path)
+                        assert record['checkpoint_sha256']==checkpoint_sha and record['member']==members[i]
+                    else:
+                        inputs=row['case'].solver_inputs
+                        torch.cuda.synchronize();begin=time.perf_counter()
+                        draft=predictor.predict(inputs)
+                        draft_seconds=time.perf_counter()-begin
+                        final,info=optimize(draft,inputs)
+                        hard=independent_hard_checks(final.tolist(),np.asarray(inputs[1]),np.asarray(inputs[5]),
+                            public_hard_reference(inputs[1],inputs[5],inputs[6]))
+                        complete_seconds=time.perf_counter()-begin
+                        if not hard['is_feasible']:
+                            raise RuntimeError(f'Independent hard legality failed at dev index{i}')
+                        scored=evaluate_case(row['case'],final,complete_seconds)
+                        raw=evaluate_case(row['case'],draft,draft_seconds)
+                        assert scored['metrics']['is_feasible']
+                        record=dict(index=i,member=members[i],n=int(row['case'].block_count),
+                            checkpoint_sha256=checkpoint_sha,model_hash=mh,input_hash=input_hash(inputs),
+                            metrics=scored['metrics'],independent_hard_checks=hard,raw_metrics=raw['metrics'],
+                            raw_overlap=module_overlap(draft),draft_positions=draft.tolist(),positions=final.tolist(),
+                            complete_seconds=complete_seconds,draft_seconds=draft_seconds,
+                            repair_seconds=info['seconds'],fallback=info['row_retained'],
+                            trace=info['trace'],root_work=info['work'],complete_work=full_work(info),
+                            evaluator_revision=info['evaluator_revision'],test_read=False)
+                        save(path,record)
+                    records.append(record)
+                    if (i+1)%10==0:
+                        beat(stage='evaluating',completed=i+1)
+                        log(f'dev500 {i+1}/500 hard_legal={sum(r["metrics"]["is_feasible"] for r in records)}')
+            result=q_summary(records)
+            result.update(status='complete',checkpoint_sha256=checkpoint_sha,model_hash=mh,
+                best_epoch=training['best_epoch'],raw_hard_legal=sum(r['raw_metrics']['is_feasible'] for r in records),
+                mean_draft_module_pass10=float(np.mean([r['raw_overlap']['module_pass10_fraction'] for r in records])),
+                train_monitor_loss=frozen['train_monitor_loss'],dev_monitor_loss=frozen['dev_monitor_loss'],
+                relative_loss_gap=frozen['dev_monitor_loss']/frozen['train_monitor_loss']-1,
+                elapsed_seconds=prior+time.perf_counter()-started,test_read=False,
+                quality_scope='official neutral-time Q; mixedQ=(weightedQ+meanQ)/2; complete per-case timing includes public input construction, transfer, model, repair and independent hard checks; initialization/scoring/disk/plots separate',
+                comparison_limit='Historical E98 Q used wall-budget repair; not directly comparable to this depth-budget result',
+                selection_frozen_before_Q=True)
+            # All timed solves finish before plotting.
+            beat(stage='rendering_same100',completed=500)
+            from visualization.layouts import plot_case,geometry_details
+            gallery=OUT/'gallery'
+            gallery.mkdir(exist_ok=True)
+            for i,row in enumerate(rows[:100]):
+                check()
+                record=records[i]
+                c=np.asarray(row['case'].solver_inputs[5]).tolist()
+                reference=(row['graph']['reference']*row['graph']['scale']).numpy().tolist()
+                variants={k:dict(positions=p,soft_details=geometry_details(p,c)) for k,p in
+                    [('reference',reference),('raw',record['draft_positions']),('final',record['positions'])]}
+                path=gallery/f'{i:03d}.png'
+                if not path.exists():
+                    plot_case(dict(case_id=f'dev500:{i}',panel='E98 generalization best71 / depth repair',
+                        constraints=c,variants=variants),path,
+                        stages=(('reference','Reference'),('raw','L'),('final','Depth repair')),show_metrics=False)
+            (gallery/'index.html').write_text('<!doctype html><meta charset="utf-8"><style>img{width:100%}</style>'+''.join(
+                f'<p>{i}</p><img loading="lazy" src="{i:03d}.png">' for i in range(100)),encoding='utf-8')
+            assert sha(CHECKPOINT)==checkpoint_sha
+            save(OUT/'results.json',result)
+            lines=['# E98泛化增强基线：冻结best71固定深度dev500评价','',
+                f'- 加权Q：{result["weighted_Q"]:.9f}',f'- 平均Q：{result["mean_Q"]:.9f}',
+                f'- 混合Q：{result["mixed_Q"]:.9f}',f'- 硬合法：{result["hard_legal"]}/500；回退：{result["fallbacks"]}',
+                f'- 逐例完整耗时：均值{result["mean_complete_seconds"]*1000:.3f}ms / P95 {result["p95_complete_seconds"]*1000:.3f}ms / 最大{result["max_complete_seconds"]*1000:.3f}ms',
+                f'- 超250ms：{result["over250ms"]}/500',
+                f'- train500 Loss={result["train_monitor_loss"]:.9f}；dev500 Loss={result["dev_monitor_loss"]:.9f}；相对差距={result["relative_loss_gap"]:.2%}',
+                '', '模型在Q评价前按固定验证Loss冻结，未按Q重选。dev已用于训练监测，本结果不是未见测试或正式比赛成绩。',
+                '历史E98使用时间预算后处理，本次使用计算深度版本，不能直接据两者Q差异归因于泛化增强。',
+                '测试未读取，调权未启动。初始化单列；评分、磁盘和绘图不冒充逐例求解耗时。',
+                '', '[同100例reference/L/最终布局](gallery/index.html)','', '```json',json.dumps(result,ensure_ascii=False,indent=2),'```','']
+            (OUT/'report.md').write_text('\n'.join(lines),encoding='utf-8')
+            beat(status='complete',stage='complete',completed=500)
+            log(json.dumps(result,ensure_ascii=False))
+        except Halt:
+            beat(status='user_stop',stage='stopped_no_next_stage')
+        except BaseException as exc:
+            save(OUT/'error.json',dict(error=repr(exc),traceback=traceback.format_exc(),test_read=False))
+            beat(status='error',stage='failed_no_retry')
+            raise
+        finally:
+            closed.set();worker.join(timeout=6)
+            signal.signal(signal.SIGINT,old_signal)
+
+if __name__=='__main__':main()

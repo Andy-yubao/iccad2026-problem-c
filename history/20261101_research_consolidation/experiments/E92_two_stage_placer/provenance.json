@@ -1,0 +1,17 @@
+{
+  "experiment": "E92_two_stage_placer",
+  "user_request": "准备训练，并在后台启动；前训练降LR一次，第二次触发改切后训练Loss",
+  "initialization": "random PyTorch constructor seed0; no historical weights/Adam/RNG loaded",
+  "model_source": "experiments/E74_collision_32k_posttrain/model.py",
+  "model_source_sha256": "0d71c96c75976dc57d589d5709639291d1a30addffa8a5f0f2c53e2cb88a9089",
+  "data": "frozen reference_workset_v6 first32000; exact E74 members; same dev/monitors",
+  "loss_source": "E87 P coefficients and E90 F coefficients; exact unchanged simple_loss.py",
+  "independent_copy": "Independent E91 model/data/CUDA projection copies; new phase controller and resumable trainer; no historical weight load",
+  "no_cross_experiment_private_algorithm_imports": true,
+  "protected_checkpoints_sha256": {
+    "experiments/E74_collision_32k_posttrain/runs/20261029_e42_topology_seed0/checkpoints/best.pt": "5a26012c7e7f2f46f0f042040598a965b6037cc458a3991b8f1ba2db5cd63576",
+    "experiments/E90_auxiliary_weight_placer/runs/20261031_aux3_seed0/checkpoints/best.pt": "00e75ab87cbc2cc461a89198c5931ae54e1495736320fd621a3f875ff344c58b",
+    "experiments/E42_joint_regularization/runs/20261023_rectangle_w96d12_ab_seed0/checkpoints/best.pt": "12878108e9a58b8c195b314ba6586686c2a6e2796c1f4b6443e102b4db4224a6"
+  },
+  "test_read": false
+}

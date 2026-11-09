@@ -1,0 +1,103 @@
+{
+  "status": "complete",
+  "arm": "all",
+  "stage": "complete",
+  "updated_utc": "2026-10-27T20:52:15.952382+00:00",
+  "controller_pid": 15368,
+  "child_pid": null,
+  "outputs": {
+    "unshared_residual": "runs\\20261028_unshared_residual_seed0",
+    "shared_residual": "runs\\20261028_shared_residual_seed0"
+  },
+  "events": [
+    {
+      "status": "running",
+      "arm": "unshared_residual",
+      "stage": "train",
+      "utc": "2026-10-27T19:35:18.798751+00:00"
+    },
+    {
+      "status": "stage_complete",
+      "arm": "unshared_residual",
+      "stage": "train",
+      "utc": "2026-10-27T20:10:19.881797+00:00"
+    },
+    {
+      "status": "running",
+      "arm": "unshared_residual",
+      "stage": "final",
+      "utc": "2026-10-27T20:10:19.920521+00:00"
+    },
+    {
+      "status": "stage_complete",
+      "arm": "unshared_residual",
+      "stage": "final",
+      "utc": "2026-10-27T20:15:15.893976+00:00"
+    },
+    {
+      "status": "running",
+      "arm": "unshared_residual",
+      "stage": "draft100",
+      "utc": "2026-10-27T20:15:15.903949+00:00"
+    },
+    {
+      "status": "stage_complete",
+      "arm": "unshared_residual",
+      "stage": "draft100",
+      "utc": "2026-10-27T20:16:08.325896+00:00"
+    },
+    {
+      "status": "running",
+      "arm": "shared_residual",
+      "stage": "train",
+      "utc": "2026-10-27T20:16:08.341113+00:00"
+    },
+    {
+      "status": "stage_complete",
+      "arm": "shared_residual",
+      "stage": "train",
+      "utc": "2026-10-27T20:46:49.610205+00:00"
+    },
+    {
+      "status": "running",
+      "arm": "shared_residual",
+      "stage": "final",
+      "utc": "2026-10-27T20:46:49.622206+00:00"
+    },
+    {
+      "status": "stage_complete",
+      "arm": "shared_residual",
+      "stage": "final",
+      "utc": "2026-10-27T20:51:20.033990+00:00"
+    },
+    {
+      "status": "running",
+      "arm": "shared_residual",
+      "stage": "draft100",
+      "utc": "2026-10-27T20:51:20.044977+00:00"
+    },
+    {
+      "status": "stage_complete",
+      "arm": "shared_residual",
+      "stage": "draft100",
+      "utc": "2026-10-27T20:52:10.428825+00:00"
+    },
+    {
+      "status": "running",
+      "arm": "all",
+      "stage": "report",
+      "utc": "2026-10-27T20:52:10.439829+00:00"
+    },
+    {
+      "status": "complete",
+      "arm": "all",
+      "stage": "complete",
+      "utc": "2026-10-27T20:52:15.952382+00:00"
+    }
+  ],
+  "failures": {},
+  "test_read": false,
+  "report": "runs/review.md",
+  "baseline_promoted": false,
+  "next_action": "Hourly continuation: review E66, then implement E67 under long_task.md; all seed0"
+}

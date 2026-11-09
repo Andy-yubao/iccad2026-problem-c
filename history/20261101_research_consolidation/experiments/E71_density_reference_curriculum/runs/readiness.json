@@ -1,0 +1,31 @@
+{
+  "status": "ready_for_user_execution",
+  "source_identity_matches_preflight": true,
+  "preflight_seconds": 92.56512450001901,
+  "unique_train_cases": 5,
+  "model_parameters": 1532883,
+  "formal_training_started": false,
+  "formal_output": "experiments/E71_density_reference_curriculum/runs/20261028_full_ports_density_curriculum_v1_seed0",
+  "components": [
+    "position .375 to .25 by epoch15",
+    "compactness .5",
+    "density .5 with bands4/8"
+  ],
+  "capacity": "96x12 unchanged; 16k unchanged",
+  "max_training_hours": 3,
+  "max_epochs": 200,
+  "test_read": false,
+  "protected_checkpoints_unchanged": {
+    "experiments/E42_joint_regularization/runs/20261023_rectangle_w96d12_ab_seed0/checkpoints/best.pt": "12878108e9a58b8c195b314ba6586686c2a6e2796c1f4b6443e102b4db4224a6",
+    "experiments/E42_joint_regularization/runs/20261023_rectangle_w96d12_ab_seed0/checkpoints/latest.pt": "94abb24266e61c681ed33a44bc2a8f5a819a7678bb23963145af0ec8baf41fcb",
+    "experiments/E64_e42_unified_retrain/runs/20261027_e42_fixedG_scratch_seed0/checkpoints/best.pt": "c403214356e393097d8589c01ecea1b41b4736c7519ccb20ad5db653b0d1a447",
+    "experiments/E64_e42_unified_retrain/runs/20261027_e42_fixedG_scratch_seed0/checkpoints/latest.pt": "458c46d1425463e9a94969de25e815b2665f3aee5c5251b54ef3592ec5991d11",
+    "experiments/E65_geometry_messages/runs/20261027_geometry_message_seed0/checkpoints/best.pt": "caca625a1b8894250f965de1f57c8d5e81a907c2603bd04fc0e529114dd195a3",
+    "experiments/E68_port_tokens/runs/20261028_full_ports_nosummary_v2_seed0/checkpoints/best.pt": "6ba07f27ec94274dc0601532693e8a405c803eb6e201b8ec50c20876cc587aad",
+    "experiments/E70_reference_task_loss/runs/20261028_full_ports_taskloss_v1_seed0/checkpoints/best.pt": "613e79ad60210124344d8d9055a83b9aad9b221a1371389d5439446080d0d8a5",
+    "experiments/E70_reference_task_loss/runs/20261028_full_ports_taskloss_v1_seed0/checkpoints/latest.pt": "e6550f60a6c3b46ee91b51676e5df9095a8645fe1f5fa231443177a8d6b851bc"
+  },
+  "command": "Set-Location 'E:\\project\\ICCAD\\2026\\problemC'\n& '.\\.conda\\envs\\iccad2026\\python.exe' -u -B -m experiments.E71_density_reference_curriculum.pipeline --resume",
+  "timing_context": "Current machine is on battery with capped GPU clocks; connect power before formal run. See runtime_probe.json.",
+  "attribution": "Combined candidate; no single-component causal claim. No model/data scaling experiment run."
+}

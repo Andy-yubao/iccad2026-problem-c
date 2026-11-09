@@ -1,0 +1,1187 @@
+{
+  "checkpoint_sha256": "613e79ad60210124344d8d9055a83b9aad9b221a1371389d5439446080d0d8a5",
+  "selection": "Five predeclared 10/30/50/70/90% quantiles of saved bbox increase versus E68",
+  "records": [
+    {
+      "index": 423,
+      "member": [
+        "worker_60/layouts_2688.th",
+        42
+      ],
+      "n": 102,
+      "max_saved_prediction_difference": 0.000457763671875,
+      "gradients": {
+        "position": {
+          "weighted_value": 0.017860842868685722,
+          "weighted_state_gradient_norm": 0.18055182695388794,
+          "nonzero_center_gradient_blocks": 98,
+          "movable_blocks": 98,
+          "radial_expansion_derivative": 0.06127581000328064
+        },
+        "shape": {
+          "weighted_value": 0.04739844799041748,
+          "weighted_state_gradient_norm": 0.02389697916805744,
+          "nonzero_center_gradient_blocks": 0,
+          "movable_blocks": 98,
+          "radial_expansion_derivative": 0.0
+        },
+        "penetration": {
+          "weighted_value": 0.009951744228601456,
+          "weighted_state_gradient_norm": 0.2981473505496979,
+          "nonzero_center_gradient_blocks": 88,
+          "movable_blocks": 98,
+          "radial_expansion_derivative": -0.07468879222869873
+        },
+        "intersection_area": {
+          "weighted_value": 0.04777027666568756,
+          "weighted_state_gradient_norm": 0.8070887923240662,
+          "nonzero_center_gradient_blocks": 88,
+          "movable_blocks": 98,
+          "radial_expansion_derivative": -0.2656995952129364
+        },
+        "actual_wirelength": {
+          "weighted_value": 0.07977930456399918,
+          "weighted_state_gradient_norm": 0.01833488419651985,
+          "nonzero_center_gradient_blocks": 97,
+          "movable_blocks": 98,
+          "radial_expansion_derivative": 0.04743902385234833
+        },
+        "compactness": {
+          "weighted_value": 0.011894077062606812,
+          "weighted_state_gradient_norm": 0.4591180384159088,
+          "nonzero_center_gradient_blocks": 2,
+          "movable_blocks": 98,
+          "radial_expansion_derivative": 0.22737745940685272
+        },
+        "group_connectivity": {
+          "weighted_value": 0.010672771371901035,
+          "weighted_state_gradient_norm": 0.6833334565162659,
+          "nonzero_center_gradient_blocks": 16,
+          "movable_blocks": 98,
+          "radial_expansion_derivative": 0.023768693208694458
+        },
+        "boundary": {
+          "weighted_value": 0.0003099464811384678,
+          "weighted_state_gradient_norm": 0.16625334322452545,
+          "nonzero_center_gradient_blocks": 15,
+          "movable_blocks": 98,
+          "radial_expansion_derivative": 0.004150445107370615
+        },
+        "mib": {
+          "weighted_value": 0.0011802192311733961,
+          "weighted_state_gradient_norm": 0.004435122478753328,
+          "nonzero_center_gradient_blocks": 0,
+          "movable_blocks": 98,
+          "radial_expansion_derivative": 0.0
+        },
+        "parameter_domain": {
+          "weighted_value": 3.0551960662705824e-05,
+          "weighted_state_gradient_norm": 0.0026042526587843895,
+          "nonzero_center_gradient_blocks": 18,
+          "movable_blocks": 98,
+          "radial_expansion_derivative": 0.0036836860235780478
+        }
+      },
+      "counterfactuals": [
+        {
+          "center_scale": 1.0,
+          "terms": {
+            "penetration": 0.009951744228601456,
+            "intersection_area": 0.04777027666568756,
+            "actual_wirelength": 0.3191172182559967,
+            "compactness": 0.047576308250427246,
+            "group_connectivity": 0.02134554274380207,
+            "boundary": 0.0012397859245538712,
+            "mib": 0.011802191846072674,
+            "parameter_domain": 0.0003055195847991854,
+            "position": 0.07144337147474289,
+            "shape": 0.18959379196166992,
+            "task_total": 0.1615888923406601,
+            "supervision": 0.06525929272174835,
+            "total": 0.22684818506240845
+          },
+          "geometry": {
+            "A": 30093.999309191055,
+            "B": 31525.76007746393,
+            "U": 28965.85660917474,
+            "B_over_A": 1.0475762876699342,
+            "U_over_A": 0.9625127026678783,
+            "empty_over_A": 0.08506358500205598,
+            "empty_over_B": 0.08120037271104923,
+            "redundant_over_A": 0.0374872973321218,
+            "width": 104.85414123535156,
+            "height": 300.6629943847656
+          }
+        },
+        {
+          "center_scale": 0.99,
+          "terms": {
+            "penetration": 0.010953495278954506,
+            "intersection_area": 0.053733184933662415,
+            "actual_wirelength": 0.31704676151275635,
+            "compactness": 0.03850066661834717,
+            "group_connectivity": 0.020087936893105507,
+            "boundary": 0.0031422297470271587,
+            "mib": 0.011802191846072674,
+            "parameter_domain": 0.000116865208838135,
+            "position": 0.07411960512399673,
+            "shape": 0.18959379196166992,
+            "task_total": 0.16559496521949768,
+            "supervision": 0.06592834740877151,
+            "total": 0.2315233051776886
+          },
+          "geometry": {
+            "A": 30093.999309191055,
+            "B": 31252.640264328802,
+            "U": 28810.493142965897,
+            "B_over_A": 1.0385007304357812,
+            "U_over_A": 0.9573500965080052,
+            "empty_over_A": 0.08115063392777593,
+            "empty_over_B": 0.07814210577755017,
+            "redundant_over_A": 0.04264990349199482,
+            "width": 104.44713592529297,
+            "height": 299.2196960449219
+          }
+        },
+        {
+          "center_scale": 0.98,
+          "terms": {
+            "penetration": 0.012320559471845627,
+            "intersection_area": 0.062531016767025,
+            "actual_wirelength": 0.3148086965084076,
+            "compactness": 0.029464125633239746,
+            "group_connectivity": 0.018646882846951485,
+            "boundary": 0.01240487303584814,
+            "mib": 0.011802191846072674,
+            "parameter_domain": 4.5809971197741106e-05,
+            "position": 0.08613301068544388,
+            "shape": 0.18959379196166992,
+            "task_total": 0.17452923953533173,
+            "supervision": 0.0689316987991333,
+            "total": 0.24346093833446503
+          },
+          "geometry": {
+            "A": 30093.999309191055,
+            "B": 30980.69213631749,
+            "U": 28587.341476156587,
+            "B_over_A": 1.029464107379561,
+            "U_over_A": 0.9499349415956716,
+            "empty_over_A": 0.07952916578388926,
+            "empty_over_B": 0.07725297580925476,
+            "redundant_over_A": 0.05006505840432836,
+            "width": 104.04013061523438,
+            "height": 297.7763671875
+          }
+        },
+        {
+          "center_scale": 0.95,
+          "terms": {
+            "penetration": 0.018235081806778908,
+            "intersection_area": 0.09832227230072021,
+            "actual_wirelength": 0.30748000741004944,
+            "compactness": 0.014103531837463379,
+            "group_connectivity": 0.015666186809539795,
+            "boundary": 0.06499765068292618,
+            "mib": 0.011802191846072674,
+            "parameter_domain": 3.530393399842069e-08,
+            "position": 0.1547105610370636,
+            "shape": 0.18959379196166992,
+            "task_total": 0.22221596539020538,
+            "supervision": 0.08607608824968338,
+            "total": 0.30829206109046936
+          },
+          "geometry": {
+            "A": 30093.999309191055,
+            "B": 30518.429931640625,
+            "U": 27694.675393327634,
+            "B_over_A": 1.0141034967831593,
+            "U_over_A": 0.9202723476128133,
+            "empty_over_A": 0.09383114917034585,
+            "empty_over_B": 0.09252620611997486,
+            "redundant_over_A": 0.07972765238718668,
+            "width": 104.0,
+            "height": 293.4464416503906
+          }
+        },
+        {
+          "center_scale": 0.9,
+          "terms": {
+            "penetration": 0.03538333997130394,
+            "intersection_area": 0.17906974256038666,
+            "actual_wirelength": 0.2951556146144867,
+            "compactness": 0.0,
+            "group_connectivity": 0.014536606147885323,
+            "boundary": 0.19072532653808594,
+            "mib": 0.011802191846072674,
+            "parameter_domain": 0.0,
+            "position": 0.2987162470817566,
+            "shape": 0.18959379196166992,
+            "task_total": 0.34437185525894165,
+            "supervision": 0.12207750976085663,
+            "total": 0.4664493799209595
+          },
+          "geometry": {
+            "A": 30093.999309191055,
+            "B": 29818.675415039062,
+            "U": 25771.810075075613,
+            "B_over_A": 0.9908512028819013,
+            "U_over_A": 0.8563770408276911,
+            "empty_over_A": 0.13447416205421026,
+            "empty_over_B": 0.13571579835911862,
+            "redundant_over_A": 0.143622959172309,
+            "width": 104.0,
+            "height": 286.71803283691406
+          }
+        }
+      ]
+    },
+    {
+      "index": 48,
+      "member": [
+        "worker_65/layouts_6720.th",
+        59
+      ],
+      "n": 116,
+      "max_saved_prediction_difference": 0.0001220703125,
+      "gradients": {
+        "position": {
+          "weighted_value": 0.027681803330779076,
+          "weighted_state_gradient_norm": 0.19814901053905487,
+          "nonzero_center_gradient_blocks": 114,
+          "movable_blocks": 114,
+          "radial_expansion_derivative": 0.01695818267762661
+        },
+        "shape": {
+          "weighted_value": 0.041398048400878906,
+          "weighted_state_gradient_norm": 0.02055307850241661,
+          "nonzero_center_gradient_blocks": 0,
+          "movable_blocks": 114,
+          "radial_expansion_derivative": 0.0
+        },
+        "penetration": {
+          "weighted_value": 0.00726952962577343,
+          "weighted_state_gradient_norm": 0.2681756317615509,
+          "nonzero_center_gradient_blocks": 88,
+          "movable_blocks": 114,
+          "radial_expansion_derivative": -0.06583992391824722
+        },
+        "intersection_area": {
+          "weighted_value": 0.044817373156547546,
+          "weighted_state_gradient_norm": 0.8492975234985352,
+          "nonzero_center_gradient_blocks": 88,
+          "movable_blocks": 114,
+          "radial_expansion_derivative": -0.35777416825294495
+        },
+        "actual_wirelength": {
+          "weighted_value": 0.07299448549747467,
+          "weighted_state_gradient_norm": 0.017563290894031525,
+          "nonzero_center_gradient_blocks": 114,
+          "movable_blocks": 114,
+          "radial_expansion_derivative": 0.0368228405714035
+        },
+        "compactness": {
+          "weighted_value": 0.012802720069885254,
+          "weighted_state_gradient_norm": 0.4430273473262787,
+          "nonzero_center_gradient_blocks": 2,
+          "movable_blocks": 114,
+          "radial_expansion_derivative": 0.22459512948989868
+        },
+        "group_connectivity": {
+          "weighted_value": 0.0019193781772628427,
+          "weighted_state_gradient_norm": 0.19441534578800201,
+          "nonzero_center_gradient_blocks": 35,
+          "movable_blocks": 114,
+          "radial_expansion_derivative": 0.02141301892697811
+        },
+        "boundary": {
+          "weighted_value": 0.0006118824239820242,
+          "weighted_state_gradient_norm": 0.12981456518173218,
+          "nonzero_center_gradient_blocks": 16,
+          "movable_blocks": 114,
+          "radial_expansion_derivative": -0.003514086827635765
+        },
+        "mib": {
+          "weighted_value": 0.0007860871846787632,
+          "weighted_state_gradient_norm": 0.003619592869654298,
+          "nonzero_center_gradient_blocks": 0,
+          "movable_blocks": 114,
+          "radial_expansion_derivative": 0.0
+        },
+        "parameter_domain": {
+          "weighted_value": 9.961015166481957e-06,
+          "weighted_state_gradient_norm": 0.0018018075497820973,
+          "nonzero_center_gradient_blocks": 18,
+          "movable_blocks": 114,
+          "radial_expansion_derivative": 0.0017322383355349302
+        }
+      },
+      "counterfactuals": [
+        {
+          "center_scale": 1.0,
+          "terms": {
+            "penetration": 0.00726952962577343,
+            "intersection_area": 0.044817373156547546,
+            "actual_wirelength": 0.2919779419898987,
+            "compactness": 0.051210880279541016,
+            "group_connectivity": 0.0038387563545256853,
+            "boundary": 0.0024475296959280968,
+            "mib": 0.007860871963202953,
+            "parameter_domain": 9.961015166481957e-05,
+            "position": 0.1107272133231163,
+            "shape": 0.16559219360351562,
+            "task_total": 0.1412114053964615,
+            "supervision": 0.06907985359430313,
+            "total": 0.21029126644134521
+          },
+          "geometry": {
+            "A": 33247.0004208945,
+            "B": 34949.60997491592,
+            "U": 32057.733741795688,
+            "B_over_A": 1.0512109222626709,
+            "U_over_A": 0.9642293541058398,
+            "empty_over_A": 0.0869815681568312,
+            "empty_over_B": 0.08274416324519192,
+            "redundant_over_A": 0.03577064589416028,
+            "width": 115.93293952941895,
+            "height": 301.4640197753906
+          }
+        },
+        {
+          "center_scale": 0.99,
+          "terms": {
+            "penetration": 0.008213923312723637,
+            "intersection_area": 0.051253460347652435,
+            "actual_wirelength": 0.29031863808631897,
+            "compactness": 0.03852128982543945,
+            "group_connectivity": 0.003595989430323243,
+            "boundary": 0.0022400650195777416,
+            "mib": 0.007860871963202953,
+            "parameter_domain": 1.0875999578274786e-05,
+            "position": 0.1128392219543457,
+            "shape": 0.16559219360351562,
+            "task_total": 0.14482253789901733,
+            "supervision": 0.06960785388946533,
+            "total": 0.21443039178848267
+          },
+          "geometry": {
+            "A": 33247.0004208945,
+            "B": 34527.71942066193,
+            "U": 31894.63378467022,
+            "B_over_A": 1.0385213397766417,
+            "U_over_A": 0.9593236496795551,
+            "empty_over_A": 0.07919769009708666,
+            "empty_over_B": 0.07626005076999184,
+            "redundant_over_A": 0.0406763503204449,
+            "width": 115.4660587310791,
+            "height": 299.02916753292084
+          }
+        },
+        {
+          "center_scale": 0.98,
+          "terms": {
+            "penetration": 0.00963591318577528,
+            "intersection_area": 0.060764070600271225,
+            "actual_wirelength": 0.2884816527366638,
+            "compactness": 0.0247420072555542,
+            "group_connectivity": 0.0032933822367340326,
+            "boundary": 0.0036538681015372276,
+            "mib": 0.007860871963202953,
+            "parameter_domain": 1.1194702054240224e-08,
+            "position": 0.12007100880146027,
+            "shape": 0.16559219360351562,
+            "task_total": 0.1520521491765976,
+            "supervision": 0.07141579687595367,
+            "total": 0.22346794605255127
+          },
+          "geometry": {
+            "A": 33247.0004208945,
+            "B": 34069.59782361984,
+            "U": 31637.76427303597,
+            "B_over_A": 1.0247420035585637,
+            "U_over_A": 0.9515975538398589,
+            "empty_over_A": 0.07314444971870473,
+            "empty_over_B": 0.07137840496895817,
+            "redundant_over_A": 0.04840244616014106,
+            "width": 115.0,
+            "height": 296.257372379303
+          }
+        },
+        {
+          "center_scale": 0.95,
+          "terms": {
+            "penetration": 0.016221126541495323,
+            "intersection_area": 0.0980934202671051,
+            "actual_wirelength": 0.282880961894989,
+            "compactness": 0.0,
+            "group_connectivity": 0.003776393597945571,
+            "boundary": 0.030520182102918625,
+            "mib": 0.007860871963202953,
+            "parameter_domain": 0.0,
+            "position": 0.17086361348628998,
+            "shape": 0.16559219360351562,
+            "task_total": 0.1953391134738922,
+            "supervision": 0.0841139554977417,
+            "total": 0.2794530689716339
+          },
+          "geometry": {
+            "A": 33247.0004208945,
+            "B": 33103.93327770987,
+            "U": 30630.622378019096,
+            "B_over_A": 0.9956968405758878,
+            "U_over_A": 0.9213048392410429,
+            "empty_over_A": 0.07439200133484489,
+            "empty_over_B": 0.07471350545997342,
+            "redundant_over_A": 0.07869516075895709,
+            "width": 113.64610481262207,
+            "height": 291.28964281082153
+          }
+        },
+        {
+          "center_scale": 0.9,
+          "terms": {
+            "penetration": 0.03367935121059418,
+            "intersection_area": 0.18157163262367249,
+            "actual_wirelength": 0.2738625407218933,
+            "compactness": 0.0,
+            "group_connectivity": 0.009447057731449604,
+            "boundary": 0.10430122166872025,
+            "mib": 0.007860871963202953,
+            "parameter_domain": 0.0,
+            "position": 0.3108031153678894,
+            "shape": 0.16559219360351562,
+            "task_total": 0.3153015375137329,
+            "supervision": 0.11909882724285126,
+            "total": 0.43440037965774536
+          },
+          "geometry": {
+            "A": 33247.0004208945,
+            "B": 31659.315225544036,
+            "U": 28512.842827306682,
+            "B_over_A": 0.9522457612641451,
+            "U_over_A": 0.8576064747599733,
+            "empty_over_A": 0.09463928650417178,
+            "empty_over_B": 0.09938535864789176,
+            "redundant_over_A": 0.14239352524002674,
+            "width": 111.35689783096313,
+            "height": 284.304931640625
+          }
+        }
+      ]
+    },
+    {
+      "index": 474,
+      "member": [
+        "worker_90/layouts_5600.th",
+        18
+      ],
+      "n": 22,
+      "max_saved_prediction_difference": 5.340576171875e-05,
+      "gradients": {
+        "position": {
+          "weighted_value": 0.0797952264547348,
+          "weighted_state_gradient_norm": 0.19471189379692078,
+          "nonzero_center_gradient_blocks": 21,
+          "movable_blocks": 21,
+          "radial_expansion_derivative": 0.049308210611343384
+        },
+        "shape": {
+          "weighted_value": 0.047024860978126526,
+          "weighted_state_gradient_norm": 0.051112543791532516,
+          "nonzero_center_gradient_blocks": 0,
+          "movable_blocks": 21,
+          "radial_expansion_derivative": 0.0
+        },
+        "penetration": {
+          "weighted_value": 0.006388556677848101,
+          "weighted_state_gradient_norm": 0.2064850926399231,
+          "nonzero_center_gradient_blocks": 14,
+          "movable_blocks": 21,
+          "radial_expansion_derivative": -0.07554326206445694
+        },
+        "intersection_area": {
+          "weighted_value": 0.02823818475008011,
+          "weighted_state_gradient_norm": 0.7968143224716187,
+          "nonzero_center_gradient_blocks": 14,
+          "movable_blocks": 21,
+          "radial_expansion_derivative": -0.4107511639595032
+        },
+        "actual_wirelength": {
+          "weighted_value": 0.09412186592817307,
+          "weighted_state_gradient_norm": 0.07718311250209808,
+          "nonzero_center_gradient_blocks": 20,
+          "movable_blocks": 21,
+          "radial_expansion_derivative": 0.06927411258220673
+        },
+        "compactness": {
+          "weighted_value": 0.022107452154159546,
+          "weighted_state_gradient_norm": 0.37161827087402344,
+          "nonzero_center_gradient_blocks": 2,
+          "movable_blocks": 21,
+          "radial_expansion_derivative": 0.19682100415229797
+        },
+        "group_connectivity": {
+          "weighted_value": 0.003797392826527357,
+          "weighted_state_gradient_norm": 0.2330256700515747,
+          "nonzero_center_gradient_blocks": 8,
+          "movable_blocks": 21,
+          "radial_expansion_derivative": -0.027686676010489464
+        },
+        "boundary": {
+          "weighted_value": 0.0032519474625587463,
+          "weighted_state_gradient_norm": 0.30135446786880493,
+          "nonzero_center_gradient_blocks": 12,
+          "movable_blocks": 21,
+          "radial_expansion_derivative": -0.10094887018203735
+        },
+        "mib": {
+          "weighted_value": 0.0004931928124278784,
+          "weighted_state_gradient_norm": 0.004054598044604063,
+          "nonzero_center_gradient_blocks": 0,
+          "movable_blocks": 21,
+          "radial_expansion_derivative": 0.0
+        },
+        "parameter_domain": {
+          "weighted_value": 4.2330568248871714e-05,
+          "weighted_state_gradient_norm": 0.0030462045688182116,
+          "nonzero_center_gradient_blocks": 3,
+          "movable_blocks": 21,
+          "radial_expansion_derivative": 0.002107079606503248
+        }
+      },
+      "counterfactuals": [
+        {
+          "center_scale": 1.0,
+          "terms": {
+            "penetration": 0.006388556677848101,
+            "intersection_area": 0.02823818475008011,
+            "actual_wirelength": 0.37648746371269226,
+            "compactness": 0.08842980861663818,
+            "group_connectivity": 0.007594785653054714,
+            "boundary": 0.013007789850234985,
+            "mib": 0.004931928124278784,
+            "parameter_domain": 0.0004233056679368019,
+            "position": 0.3191809058189392,
+            "shape": 0.1880994439125061,
+            "task_total": 0.15844093263149261,
+            "supervision": 0.12682008743286133,
+            "total": 0.28526103496551514
+          },
+          "geometry": {
+            "A": 4043.00000569687,
+            "B": 4400.521960641436,
+            "U": 3946.204269723068,
+            "B_over_A": 1.0884298675342052,
+            "U_over_A": 0.9760584378339328,
+            "empty_over_A": 0.1123714297002726,
+            "empty_over_B": 0.10324177335820968,
+            "redundant_over_A": 0.023941562166067295,
+            "width": 71.06621265411377,
+            "height": 61.92143630981445
+          }
+        },
+        {
+          "center_scale": 0.99,
+          "terms": {
+            "penetration": 0.007209403440356255,
+            "intersection_area": 0.032355308532714844,
+            "actual_wirelength": 0.3737165033817291,
+            "compactness": 0.08057129383087158,
+            "group_connectivity": 0.007999633438885212,
+            "boundary": 0.0180988609790802,
+            "mib": 0.004931928124278784,
+            "parameter_domain": 0.00024496758123859763,
+            "position": 0.31769225001335144,
+            "shape": 0.1880994439125061,
+            "task_total": 0.1621789038181305,
+            "supervision": 0.1264479160308838,
+            "total": 0.2886268198490143
+          },
+          "geometry": {
+            "A": 4043.00000569687,
+            "B": 4368.749279174062,
+            "U": 3933.6911723403823,
+            "B_over_A": 1.0805711780900789,
+            "U_over_A": 0.9729634347755468,
+            "empty_over_A": 0.10760774331453196,
+            "empty_over_B": 0.0995841324444076,
+            "redundant_over_A": 0.027036565224453146,
+            "width": 70.7843828201294,
+            "height": 61.719112396240234
+          }
+        },
+        {
+          "center_scale": 0.98,
+          "terms": {
+            "penetration": 0.008171751163899899,
+            "intersection_area": 0.03671761602163315,
+            "actual_wirelength": 0.3708253502845764,
+            "compactness": 0.07274067401885986,
+            "group_connectivity": 0.008583305403590202,
+            "boundary": 0.024851448833942413,
+            "mib": 0.004931928124278784,
+            "parameter_domain": 0.0001296192640438676,
+            "position": 0.3170750141143799,
+            "shape": 0.1880994439125061,
+            "task_total": 0.16679155826568604,
+            "supervision": 0.1262936145067215,
+            "total": 0.29308515787124634
+          },
+          "geometry": {
+            "A": 4043.00000569687,
+            "B": 4337.090101644844,
+            "U": 3920.3772890835758,
+            "B_over_A": 1.072740562832941,
+            "U_over_A": 0.9696703644718005,
+            "empty_over_A": 0.10307019836114048,
+            "empty_over_B": 0.09608119794496081,
+            "redundant_over_A": 0.03032963552819946,
+            "width": 70.50255298614502,
+            "height": 61.516780853271484
+          }
+        },
+        {
+          "center_scale": 0.95,
+          "terms": {
+            "penetration": 0.012103787623345852,
+            "intersection_area": 0.05876699835062027,
+            "actual_wirelength": 0.36209729313850403,
+            "compactness": 0.04941833019256592,
+            "group_connectivity": 0.011370979249477386,
+            "boundary": 0.05255354568362236,
+            "mib": 0.004931928124278784,
+            "parameter_domain": 8.216050417786391e-08,
+            "position": 0.3199882507324219,
+            "shape": 0.1880994439125061,
+            "task_total": 0.1930667757987976,
+            "supervision": 0.127021923661232,
+            "total": 0.3200886845588684
+          },
+          "geometry": {
+            "A": 4043.00000569687,
+            "B": 4242.7979087216045,
+            "U": 3848.3529785240867,
+            "B_over_A": 1.0494182297163506,
+            "U_over_A": 0.9518557934952975,
+            "empty_over_A": 0.097562436221053,
+            "empty_over_B": 0.09296811648433376,
+            "redundant_over_A": 0.048144206504702504,
+            "width": 69.6570634841919,
+            "height": 60.9098014831543
+          }
+        },
+        {
+          "center_scale": 0.9,
+          "terms": {
+            "penetration": 0.02348424308001995,
+            "intersection_area": 0.11773636937141418,
+            "actual_wirelength": 0.34626710414886475,
+            "compactness": 0.0,
+            "group_connectivity": 0.019749540835618973,
+            "boundary": 0.08530208468437195,
+            "mib": 0.004931928124278784,
+            "parameter_domain": 0.0,
+            "position": 0.34038084745407104,
+            "shape": 0.1880994439125061,
+            "task_total": 0.25948089361190796,
+            "supervision": 0.1321200728416443,
+            "total": 0.39160096645355225
+          },
+          "geometry": {
+            "A": 4043.00000569687,
+            "B": 4006.8402878797087,
+            "U": 3655.057308495378,
+            "B_over_A": 0.9910562162339328,
+            "U_over_A": 0.9040458331301376,
+            "empty_over_A": 0.08701038310379516,
+            "empty_over_B": 0.0877956080376947,
+            "redundant_over_A": 0.09595416686986241,
+            "width": 66.89420580863953,
+            "height": 59.89816665649414
+          }
+        }
+      ]
+    },
+    {
+      "index": 107,
+      "member": [
+        "worker_90/layouts_4816.th",
+        45
+      ],
+      "n": 40,
+      "max_saved_prediction_difference": 9.72747802734375e-05,
+      "gradients": {
+        "position": {
+          "weighted_value": 0.1228436529636383,
+          "weighted_state_gradient_norm": 0.21428823471069336,
+          "nonzero_center_gradient_blocks": 38,
+          "movable_blocks": 38,
+          "radial_expansion_derivative": 0.0560830719769001
+        },
+        "shape": {
+          "weighted_value": 0.06903761625289917,
+          "weighted_state_gradient_norm": 0.045061275362968445,
+          "nonzero_center_gradient_blocks": 0,
+          "movable_blocks": 38,
+          "radial_expansion_derivative": 0.0
+        },
+        "penetration": {
+          "weighted_value": 0.011865600943565369,
+          "weighted_state_gradient_norm": 0.244081050157547,
+          "nonzero_center_gradient_blocks": 31,
+          "movable_blocks": 38,
+          "radial_expansion_derivative": -0.03759125620126724
+        },
+        "intersection_area": {
+          "weighted_value": 0.05615925043821335,
+          "weighted_state_gradient_norm": 0.7634042501449585,
+          "nonzero_center_gradient_blocks": 32,
+          "movable_blocks": 38,
+          "radial_expansion_derivative": -0.3416106700897217
+        },
+        "actual_wirelength": {
+          "weighted_value": 0.06935866922140121,
+          "weighted_state_gradient_norm": 0.04150701314210892,
+          "nonzero_center_gradient_blocks": 37,
+          "movable_blocks": 38,
+          "radial_expansion_derivative": 0.025512419641017914
+        },
+        "compactness": {
+          "weighted_value": 0.019065648317337036,
+          "weighted_state_gradient_norm": 0.3964310884475708,
+          "nonzero_center_gradient_blocks": 2,
+          "movable_blocks": 38,
+          "radial_expansion_derivative": 0.23166382312774658
+        },
+        "group_connectivity": {
+          "weighted_value": 0.0038810402620583773,
+          "weighted_state_gradient_norm": 0.3606841266155243,
+          "nonzero_center_gradient_blocks": 13,
+          "movable_blocks": 38,
+          "radial_expansion_derivative": 0.004502796567976475
+        },
+        "boundary": {
+          "weighted_value": 0.004441229160875082,
+          "weighted_state_gradient_norm": 0.266925573348999,
+          "nonzero_center_gradient_blocks": 9,
+          "movable_blocks": 38,
+          "radial_expansion_derivative": -0.031137851998209953
+        },
+        "mib": {
+          "weighted_value": 0.0014492643531411886,
+          "weighted_state_gradient_norm": 0.006950453855097294,
+          "nonzero_center_gradient_blocks": 0,
+          "movable_blocks": 38,
+          "radial_expansion_derivative": 0.0
+        },
+        "parameter_domain": {
+          "weighted_value": 4.64664917672053e-05,
+          "weighted_state_gradient_norm": 0.0034473270643502474,
+          "nonzero_center_gradient_blocks": 11,
+          "movable_blocks": 38,
+          "radial_expansion_derivative": 0.0045424713753163815
+        }
+      },
+      "counterfactuals": [
+        {
+          "center_scale": 1.0,
+          "terms": {
+            "penetration": 0.011865600943565369,
+            "intersection_area": 0.05615925043821335,
+            "actual_wirelength": 0.27743467688560486,
+            "compactness": 0.07626259326934814,
+            "group_connectivity": 0.0077620805241167545,
+            "boundary": 0.017764916643500328,
+            "mib": 0.014492643065750599,
+            "parameter_domain": 0.000464664917672053,
+            "position": 0.4913746118545532,
+            "shape": 0.2761504650115967,
+            "task_total": 0.16626715660095215,
+            "supervision": 0.19188126921653748,
+            "total": 0.3581484258174896
+          },
+          "geometry": {
+            "A": 12403.999867414834,
+            "B": 13349.960038307563,
+            "U": 11811.14783763275,
+            "B_over_A": 1.0762625105614323,
+            "U_over_A": 0.9522047697420976,
+            "empty_over_A": 0.1240577408193348,
+            "empty_over_B": 0.1152671765502824,
+            "redundant_over_A": 0.04779523025790244,
+            "width": 86.90485000610352,
+            "height": 153.61582279205322
+          }
+        },
+        {
+          "center_scale": 0.99,
+          "terms": {
+            "penetration": 0.012397692538797855,
+            "intersection_area": 0.05978746712207794,
+            "actual_wirelength": 0.27633965015411377,
+            "compactness": 0.06727373600006104,
+            "group_connectivity": 0.007808457128703594,
+            "boundary": 0.01927221566438675,
+            "mib": 0.014492643065750599,
+            "parameter_domain": 0.00015218605403788388,
+            "position": 0.49022915959358215,
+            "shape": 0.2761504650115967,
+            "task_total": 0.16827525198459625,
+            "supervision": 0.1915948987007141,
+            "total": 0.35987013578414917
+          },
+          "geometry": {
+            "A": 12403.999867414834,
+            "B": 13238.463452842,
+            "U": 11763.030490874706,
+            "B_over_A": 1.0672737499473288,
+            "U_over_A": 0.9483255898588046,
+            "empty_over_A": 0.11894816008852427,
+            "empty_over_B": 0.11145046909885538,
+            "redundant_over_A": 0.05167441014119544,
+            "width": 86.55398941040039,
+            "height": 152.95035552978516
+          }
+        },
+        {
+          "center_scale": 0.98,
+          "terms": {
+            "penetration": 0.013328109867870808,
+            "intersection_area": 0.06505076587200165,
+            "actual_wirelength": 0.2751362919807434,
+            "compactness": 0.05858504772186279,
+            "group_connectivity": 0.007278763689100742,
+            "boundary": 0.022754991427063942,
+            "mib": 0.014492643065750599,
+            "parameter_domain": 4.0983235521707684e-05,
+            "position": 0.49138209223747253,
+            "shape": 0.2761504650115967,
+            "task_total": 0.1725906878709793,
+            "supervision": 0.1918831467628479,
+            "total": 0.364473819732666
+          },
+          "geometry": {
+            "A": 12403.999867414834,
+            "B": 13130.688768902386,
+            "U": 11702.726344220522,
+            "B_over_A": 1.058585045892862,
+            "U_over_A": 0.9434639204538732,
+            "empty_over_A": 0.11512112543898884,
+            "empty_over_B": 0.10875000160416029,
+            "redundant_over_A": 0.05653607954612682,
+            "width": 86.20312881469727,
+            "height": 152.32264709472656
+          }
+        },
+        {
+          "center_scale": 0.95,
+          "terms": {
+            "penetration": 0.01809501089155674,
+            "intersection_area": 0.0915362685918808,
+            "actual_wirelength": 0.27082711458206177,
+            "compactness": 0.03273212909698486,
+            "group_connectivity": 0.006281375885009766,
+            "boundary": 0.05403447896242142,
+            "mib": 0.014492643065750599,
+            "parameter_domain": 0.0,
+            "position": 0.5074804425239563,
+            "shape": 0.2761504650115967,
+            "task_total": 0.20361965894699097,
+            "supervision": 0.19590772688388824,
+            "total": 0.399527370929718
+          },
+          "geometry": {
+            "A": 12403.999867414834,
+            "B": 12810.00952389033,
+            "U": 11421.724112892016,
+            "B_over_A": 1.032732155821936,
+            "U_over_A": 0.9208097577376435,
+            "empty_over_A": 0.11192239808429251,
+            "empty_over_B": 0.10837504909026015,
+            "redundant_over_A": 0.07919024226235644,
+            "width": 85.15054702758789,
+            "height": 150.43954467773438
+          }
+        },
+        {
+          "center_scale": 0.9,
+          "terms": {
+            "penetration": 0.03161066025495529,
+            "intersection_area": 0.15497486293315887,
+            "actual_wirelength": 0.2642267346382141,
+            "compactness": 0.008500099182128906,
+            "group_connectivity": 0.008893173187971115,
+            "boundary": 0.1414514183998108,
+            "mib": 0.014492643065750599,
+            "parameter_domain": 0.0,
+            "position": 0.5633183717727661,
+            "shape": 0.2761504650115967,
+            "task_total": 0.29602596163749695,
+            "supervision": 0.2098672091960907,
+            "total": 0.5058931708335876
+          },
+          "geometry": {
+            "A": 12403.999867414834,
+            "B": 12509.43546295166,
+            "U": 10788.035219136744,
+            "B_over_A": 1.008500128721688,
+            "U_over_A": 0.8697222939736391,
+            "empty_over_A": 0.13877783474804892,
+            "empty_over_B": 0.13760814777877625,
+            "redundant_over_A": 0.13027770602636096,
+            "width": 83.39623641967773,
+            "height": 150.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 449,
+      "member": [
+        "worker_30/layouts_4256.th",
+        86
+      ],
+      "n": 52,
+      "max_saved_prediction_difference": 0.0002288818359375,
+      "gradients": {
+        "position": {
+          "weighted_value": 0.1403813362121582,
+          "weighted_state_gradient_norm": 0.20665587484836578,
+          "nonzero_center_gradient_blocks": 51,
+          "movable_blocks": 51,
+          "radial_expansion_derivative": 0.19934013485908508
+        },
+        "shape": {
+          "weighted_value": 0.07902994006872177,
+          "weighted_state_gradient_norm": 0.04057655856013298,
+          "nonzero_center_gradient_blocks": 0,
+          "movable_blocks": 51,
+          "radial_expansion_derivative": 0.0
+        },
+        "penetration": {
+          "weighted_value": 0.0157722607254982,
+          "weighted_state_gradient_norm": 0.4695758521556854,
+          "nonzero_center_gradient_blocks": 41,
+          "movable_blocks": 51,
+          "radial_expansion_derivative": -0.0600186251103878
+        },
+        "intersection_area": {
+          "weighted_value": 0.06828740984201431,
+          "weighted_state_gradient_norm": 0.8263079524040222,
+          "nonzero_center_gradient_blocks": 43,
+          "movable_blocks": 51,
+          "radial_expansion_derivative": -0.5906042456626892
+        },
+        "actual_wirelength": {
+          "weighted_value": 0.07788840681314468,
+          "weighted_state_gradient_norm": 0.05271699279546738,
+          "nonzero_center_gradient_blocks": 49,
+          "movable_blocks": 51,
+          "radial_expansion_derivative": 0.044122569262981415
+        },
+        "compactness": {
+          "weighted_value": 0.0224837064743042,
+          "weighted_state_gradient_norm": 0.4242371618747711,
+          "nonzero_center_gradient_blocks": 2,
+          "movable_blocks": 51,
+          "radial_expansion_derivative": 0.22647488117218018
+        },
+        "group_connectivity": {
+          "weighted_value": 0.0035826279781758785,
+          "weighted_state_gradient_norm": 0.37814751267433167,
+          "nonzero_center_gradient_blocks": 11,
+          "movable_blocks": 51,
+          "radial_expansion_derivative": -0.049559637904167175
+        },
+        "boundary": {
+          "weighted_value": 0.001710750861093402,
+          "weighted_state_gradient_norm": 0.1979954093694687,
+          "nonzero_center_gradient_blocks": 12,
+          "movable_blocks": 51,
+          "radial_expansion_derivative": -0.009601954370737076
+        },
+        "mib": {
+          "weighted_value": 0.0012534653069451451,
+          "weighted_state_gradient_norm": 0.005597912706434727,
+          "nonzero_center_gradient_blocks": 0,
+          "movable_blocks": 51,
+          "radial_expansion_derivative": 0.0
+        },
+        "parameter_domain": {
+          "weighted_value": 5.025314385420643e-05,
+          "weighted_state_gradient_norm": 0.0040254308842122555,
+          "nonzero_center_gradient_blocks": 14,
+          "movable_blocks": 51,
+          "radial_expansion_derivative": 0.00594346784055233
+        }
+      },
+      "counterfactuals": [
+        {
+          "center_scale": 1.0,
+          "terms": {
+            "penetration": 0.0157722607254982,
+            "intersection_area": 0.06828740984201431,
+            "actual_wirelength": 0.31155362725257874,
+            "compactness": 0.0899348258972168,
+            "group_connectivity": 0.007165255956351757,
+            "boundary": 0.006843003444373608,
+            "mib": 0.012534652836620808,
+            "parameter_domain": 0.0005025314167141914,
+            "position": 0.5615253448486328,
+            "shape": 0.3161197602748871,
+            "task_total": 0.191028892993927,
+            "supervision": 0.21941128373146057,
+            "total": 0.4104401767253876
+          },
+          "geometry": {
+            "A": 16263.999983321115,
+            "B": 17726.69940749261,
+            "U": 15313.655987021653,
+            "B_over_A": 1.0899347900683416,
+            "U_over_A": 0.9415676342059734,
+            "empty_over_A": 0.14836715586236823,
+            "empty_over_B": 0.13612480050578551,
+            "redundant_over_A": 0.05843236579402658,
+            "width": 90.19195175170898,
+            "height": 196.5441379547119
+          }
+        },
+        {
+          "center_scale": 0.99,
+          "terms": {
+            "penetration": 0.016692714765667915,
+            "intersection_area": 0.07502226531505585,
+            "actual_wirelength": 0.30934399366378784,
+            "compactness": 0.08141899108886719,
+            "group_connectivity": 0.00872754491865635,
+            "boundary": 0.010278853587806225,
+            "mib": 0.012534652836620808,
+            "parameter_domain": 0.0002229902456747368,
+            "position": 0.5559879541397095,
+            "shape": 0.3161197602748871,
+            "task_total": 0.19761498272418976,
+            "supervision": 0.21802693605422974,
+            "total": 0.4156419038772583
+          },
+          "geometry": {
+            "A": 16263.999983321115,
+            "B": 17588.198157819817,
+            "U": 15225.714134929412,
+            "B_over_A": 1.0814189729375725,
+            "U_over_A": 0.9361604863836402,
+            "empty_over_A": 0.14525848655393228,
+            "empty_over_B": 0.13432211768890212,
+            "redundant_over_A": 0.06383951361635971,
+            "width": 89.8713150024414,
+            "height": 195.70424842834473
+          }
+        },
+        {
+          "center_scale": 0.98,
+          "terms": {
+            "penetration": 0.018617261201143265,
+            "intersection_area": 0.08360886573791504,
+            "actual_wirelength": 0.3065735995769501,
+            "compactness": 0.07311201095581055,
+            "group_connectivity": 0.0110203567892313,
+            "boundary": 0.02414884977042675,
+            "mib": 0.012534652836620808,
+            "parameter_domain": 0.00012846406025346369,
+            "position": 0.553589403629303,
+            "shape": 0.3161197602748871,
+            "task_total": 0.20996122062206268,
+            "supervision": 0.21742728352546692,
+            "total": 0.4273884892463684
+          },
+          "geometry": {
+            "A": 16263.999983321115,
+            "B": 17453.095168864093,
+            "U": 15112.766105301162,
+            "B_over_A": 1.0731120995303989,
+            "U_over_A": 0.929215821495293,
+            "empty_over_A": 0.1438962780351058,
+            "empty_over_B": 0.13409249424927347,
+            "redundant_over_A": 0.070784178504707,
+            "width": 89.56535339355469,
+            "height": 194.86435890197754
+          }
+        },
+        {
+          "center_scale": 0.95,
+          "terms": {
+            "penetration": 0.02824232168495655,
+            "intersection_area": 0.11243017017841339,
+            "actual_wirelength": 0.2976222038269043,
+            "compactness": 0.034159064292907715,
+            "group_connectivity": 0.014234283939003944,
+            "boundary": 0.039558954536914825,
+            "mib": 0.012534652836620808,
+            "parameter_domain": 1.2433677511580754e-05,
+            "position": 0.5555272102355957,
+            "shape": 0.3161197602748871,
+            "task_total": 0.2418793886899948,
+            "supervision": 0.2179117500782013,
+            "total": 0.4597911238670349
+          },
+          "geometry": {
+            "A": 16263.999983321115,
+            "B": 16819.56475363695,
+            "U": 14738.096116221932,
+            "B_over_A": 1.0341591718449072,
+            "U_over_A": 0.9061790538204616,
+            "empty_over_A": 0.12798011802444567,
+            "empty_over_B": 0.12375282404171224,
+            "redundant_over_A": 0.09382094617953836,
+            "width": 88.6474609375,
+            "height": 189.7354371547699
+          }
+        },
+        {
+          "center_scale": 0.9,
+          "terms": {
+            "penetration": 0.04503871873021126,
+            "intersection_area": 0.1712447702884674,
+            "actual_wirelength": 0.2824404537677765,
+            "compactness": 0.0,
+            "group_connectivity": 0.007904333993792534,
+            "boundary": 0.07494714856147766,
+            "mib": 0.012534652836620808,
+            "parameter_domain": 0.0,
+            "position": 0.5850502252578735,
+            "shape": 0.3161197602748871,
+            "task_total": 0.3108360171318054,
+            "supervision": 0.22529250383377075,
+            "total": 0.5361285209655762
+          },
+          "geometry": {
+            "A": 16263.999983321115,
+            "B": 15777.608576857965,
+            "U": 13950.316478743129,
+            "B_over_A": 0.9700939862910755,
+            "U_over_A": 0.8577420372017529,
+            "empty_over_A": 0.11235194908932253,
+            "empty_over_B": 0.11581552991465661,
+            "redundant_over_A": 0.14225796279824707,
+            "width": 87.11763000488281,
+            "height": 181.10695362091064
+          }
+        }
+      ]
+    }
+  ],
+  "weights": {
+    "position": 0.25,
+    "shape": 0.25,
+    "penetration": 1.0,
+    "intersection_area": 1.0,
+    "actual_wirelength": 0.25,
+    "compactness": 0.25,
+    "group_connectivity": 0.5,
+    "boundary": 0.25,
+    "mib": 0.1,
+    "parameter_domain": 0.1
+  },
+  "threads": 4,
+  "test_read": false,
+  "training_updates": 0,
+  "limits": "Output-state gradients and center-only compression; WH, preplaced geometry preserved by decode. Not an optimizer update or trained alternative; five adaptive dev cases only."
+}

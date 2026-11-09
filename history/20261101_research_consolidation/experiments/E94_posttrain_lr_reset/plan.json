@@ -1,0 +1,57 @@
+{
+  "status": "authorized_training_and_once_dev500",
+  "arms": [
+    "F"
+  ],
+  "execution_order": [
+    "F"
+  ],
+  "architecture": {
+    "width": 192,
+    "layers": 12,
+    "rectangle": true,
+    "ffn_dropout": 0.05
+  },
+  "parameters": 5829939,
+  "trainable_parameters": 5829939,
+  "training_data_size": 32000,
+  "draws_per_epoch": 32000,
+  "updates_per_epoch": 1000,
+  "batch_size": 32,
+  "seed": 0,
+  "maximum_hours_per_arm": 2,
+  "maximum_phase_epochs": 64,
+  "maximum_formal_training_seconds": 7200,
+  "reference_weight": 1.0,
+  "task_weight": 0.3336832108335229,
+  "overlap_weights": {
+    "F": 0.08975162861857286
+  },
+  "parent_model_epoch": 36,
+  "parent_model_step": 36000,
+  "data_epoch_offset": 39,
+  "parent_rng_step": 39000,
+  "optimizer": "same P best36 AdamW moments/step; only LR reset1e-3; all trainable",
+  "lr_levels": [
+    0.001,
+    0.00025,
+    0.0001,
+    5e-05
+  ],
+  "scheduler_baseline_epoch": 0,
+  "protection_epochs": 0,
+  "patience": 3,
+  "meaningful_relative_delta": 0.001,
+  "meaningful_absolute_delta": 1e-05,
+  "required_lr_drops": 3,
+  "lowest_lr_complete_epochs": 2,
+  "branch_initialization": "same P36 model/Adam/projection and P39 RNG as E93 C; new registered schedule/counters only",
+  "precision": "FP32; original deterministic kernels and .005 joint step bound",
+  "data_transfer": "unchanged CPU cache rows and pinned minibatch",
+  "selection": "same fixed F Loss for backward/train/dev/best/LR/early-stop; no Q selection",
+  "evaluation": "automatic own-best dev500 Loss and once flash500,4process x2threads,same100 gallery; no dev2000; sealed tests",
+  "automation": "no automatic wakeup recreation",
+  "budget": "new single candidate2h/64 epochs; preflight and <=1h evaluation separate; all old charges preserved",
+  "authorization": "用户：请开始一个新的训练，后训练阶段lr从1e-3开始。训练完后自动验证500例子",
+  "test_read": false
+}

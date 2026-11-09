@@ -1,0 +1,67 @@
+{
+  "metric_version": "E42.feedback_geometry.v1",
+  "feedback_revision": 30,
+  "count": 23,
+  "rated_count": 22,
+  "cases": [
+    "case_0602",
+    "case_0180",
+    "case_0743",
+    "case_0076",
+    "case_0315",
+    "case_0664",
+    "case_0019",
+    "case_0196",
+    "case_0538",
+    "case_0887",
+    "case_0786",
+    "case_0063",
+    "case_0760",
+    "case_0670",
+    "case_0572",
+    "case_0088",
+    "case_0346",
+    "case_0898",
+    "case_0524",
+    "case_0872",
+    "case_0952",
+    "case_0666",
+    "case_0515"
+  ],
+  "budgets_max_center_L1_over_sqrt_area": [
+    0.0,
+    0.02,
+    0.05,
+    0.1,
+    0.2
+  ],
+  "mean_move_cap": "one quarter of maximum per-block cap; averages include all blocks",
+  "shape_log_width_caps": [
+    0.0,
+    0.05
+  ],
+  "shape_rule": "width=w0*exp(z); height=h0*exp(-z); exact unchanged module area",
+  "HPWL_increase_cap_relative": 0.001,
+  "strong_graph_thresholds": [
+    0.02,
+    0.05,
+    0.1,
+    0.2
+  ],
+  "primary_strong_threshold": 0.1,
+  "threads": "4 processes, each solver and Torch/BLAS use one thread",
+  "search": "three convex directions per budget: normalized width+height, width, height; conservative overlap endpoint constraints; protect initially satisfied boundary blocks; exact final guards",
+  "primary_whitespace": "bbox contraction while occupied union cannot shrink; empty reduction from de-overlap alone is a separate quantity",
+  "status": "exploratory metrics defined after visual feedback; no held-out validation or threshold fitting",
+  "source_sha256": "25b3d514bf3860a9c1d927a262058bb45b40dca01fb6b0ed8369cc5f110b2d4a",
+  "budget_seconds": 1100,
+  "test_scope": "Only the 23 previously reviewed/annotated members inside exposed test1000; no remaining sealed cases",
+  "implementation_checks": {
+    "passed": true,
+    "checks": [
+      "shallow_connected_chain_vs_deep_cluster",
+      "isolated_pair_vs_complex_cluster",
+      "scale_and_translation_invariance"
+    ]
+  }
+}

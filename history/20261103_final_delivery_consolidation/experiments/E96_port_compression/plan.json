@@ -1,0 +1,70 @@
+{
+  "status": "authorized_pending_preflight",
+  "authorization": "2026-11-01 用户：好的，现在启动后台训练",
+  "training_authorized": true,
+  "execution_order": [
+    "centroid"
+  ],
+  "default_arm": "centroid",
+  "automatic_next_arm": false,
+  "formal_objective_registered": true,
+  "loss": "overlap+0.5*B/A+.05*wirelength+.2*soft+.1*intent",
+  "box_weight": 0.5,
+  "network_input_modes": {
+    "centroid": "per-module existing port total weight and weighted mean; zero independent port tokens"
+  },
+  "full_original_ports_for_Loss_and_scoring": true,
+  "source": "frozen E90 best12; compatible copied encoder, zero output head, fresh AdamW seed0; no E95 F state inherited",
+  "model": {
+    "width": 192,
+    "layers": 12,
+    "heads": 4,
+    "dropout": 0.05,
+    "normalize_local": true,
+    "attention_backend": "efficient"
+  },
+  "batch_size": 32,
+  "precision": "FP32; no AMP/TF32",
+  "seed": 0,
+  "train_count": 16000,
+  "dev_count": 2000,
+  "monitor_count": 500,
+  "preflight_train_ids": [
+    1683,
+    10027,
+    5474,
+    10140,
+    15001
+  ],
+  "max_optimizer_steps": 9872,
+  "max_epochs": 200,
+  "proposed_training_window_seconds_per_arm": 7200,
+  "evaluation_window_seconds_per_arm": 3600,
+  "budget_status": "authorized single centroid run: 7200 seconds including setup/monitor/save, max9872 updates or200 epochs, first cap wins; terminal evaluation separately <=3600 seconds",
+  "selection": "one call; same total for backprop/train-dev500 arithmetic means/best/LR/early-stop",
+  "lr_levels": [
+    0.001,
+    0.00025,
+    0.0001,
+    5e-05
+  ],
+  "warm_start_protection_epochs": 0,
+  "auxiliary_calls": [
+    2,
+    4,
+    8
+  ],
+  "auxiliary_count": 100,
+  "terminal": "unique best, dev2000 raw + dev500 flash + same100 four-stage gallery; no extra candidates",
+  "history_comparison": "E95 and earlier E96 preparation are historical diagnostics; representation and objective both change, not a strict coefficient-only trained control",
+  "formal_training_started": false,
+  "test_read": false,
+  "revision": "E96.centroid_bbox05.v2",
+  "disabled_arms": [
+    "regional32"
+  ],
+  "min_delta": "max(1e-5,abs(scheduler_best)*0.001); any smaller devLoss still saves best; 3 bad rounds per LR drop, lowest tier wait>=2 epochs after drop and early_bad>=3",
+  "run_directory": "runs/20261101_centroid_bbox05_seed0",
+  "preflight_revision": "preflight_bbox05_cuda_centroid",
+  "no_automatic_wakeup": true
+}

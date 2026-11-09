@@ -1,0 +1,24 @@
+{
+  "utc": "2026-10-30T06:27:00.221363+00:00",
+  "status": "superseded_by_user_independent_global_neural_requirement",
+  "priority": "draft quality first; eliminate modules exceeding 5% own-area overlap before optimizing Q",
+  "Q_target": {
+    "panel": "fixed dev_monitor500",
+    "aggregation": "existing official N-weighted neutral-runtime Q",
+    "threshold": 1.01,
+    "user_confirmed": true
+  },
+  "draft_N5_target": {
+    "stage": "corrected draft before final postprocessing",
+    "definition": "covered-area union / own area > .05",
+    "definition_status": "recommended; separate union/pair-sum question not explicitly answered",
+    "goal_each_dev2000_case": 0,
+    "user_priority_confirmed": true
+  },
+  "training_started": false,
+  "new_model_forward_calls": 0,
+  "new_solver_calls": 0,
+  "test_read": false,
+  "read_only_saved_baseline_prepared": true,
+  "successor": "experiments/E86_independent_global_corrector/README.md"
+}

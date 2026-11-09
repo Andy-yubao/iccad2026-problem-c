@@ -1,0 +1,83 @@
+{
+  "passed": true,
+  "pileup_checks": {
+    "passed": true,
+    "checks": [
+      "shallow_connected_chain_vs_deep_cluster",
+      "isolated_pair_vs_complex_cluster",
+      "scale_and_translation_invariance"
+    ]
+  },
+  "same_empty_area_different_removability": [
+    {
+      "anchored": false,
+      "initial_empty_fraction": 0.3197278911564626,
+      "bbox_reduction_fraction": 0.07016077376496077,
+      "witness": {
+        "accepted": true,
+        "geometric_accepted": true,
+        "reasons": [],
+        "soft_regressions": [],
+        "empty_reduction_over_bbox": 0.07016077376496066,
+        "empty_reduction_over_old_empty": 0.21943901581806843,
+        "bbox_reduction_fraction": 0.07016077376496077,
+        "removable_whitespace_over_old_empty": 0.21943901581806874,
+        "union_change_over_bbox": -1.0070050109978743e-16,
+        "max_center_move_local": 0.08083200365310828,
+        "mean_center_move_local": 0.05000000003544006,
+        "max_center_move_chip_diagonal": 0.027217551376064242,
+        "max_abs_log_width_change": 0.0,
+        "HPWL_relative_change": -1.0,
+        "metrics": {
+          "hpwl_total": 0.0,
+          "boundary_violations": 0,
+          "grouping_violations": 0,
+          "mib_violations": 0,
+          "area_violations": 0,
+          "dimension_violations": 0
+        }
+      },
+      "solver": {
+        "status": "Solved",
+        "seconds": 0.0003585,
+        "primal_residual": 1.62917618499883e-11,
+        "threads": 1
+      }
+    },
+    {
+      "anchored": true,
+      "initial_empty_fraction": 0.3197278911564626,
+      "bbox_reduction_fraction": 0.0,
+      "witness": {
+        "accepted": true,
+        "geometric_accepted": true,
+        "reasons": [],
+        "soft_regressions": [],
+        "empty_reduction_over_bbox": 0.0,
+        "empty_reduction_over_old_empty": 0.0,
+        "bbox_reduction_fraction": 0.0,
+        "removable_whitespace_over_old_empty": 0.0,
+        "union_change_over_bbox": 0.0,
+        "max_center_move_local": 0.0,
+        "mean_center_move_local": 0.0,
+        "max_center_move_chip_diagonal": 0.0,
+        "max_abs_log_width_change": 0.0,
+        "HPWL_relative_change": -1.0,
+        "metrics": {
+          "hpwl_total": 0.0,
+          "boundary_violations": 0,
+          "grouping_violations": 0,
+          "mib_violations": 0,
+          "area_violations": 0,
+          "dimension_violations": 0
+        }
+      },
+      "solver": {
+        "status": "Solved",
+        "seconds": 0.0002857,
+        "primal_residual": 1.3449551382263261e-11,
+        "threads": 1
+      }
+    }
+  ]
+}

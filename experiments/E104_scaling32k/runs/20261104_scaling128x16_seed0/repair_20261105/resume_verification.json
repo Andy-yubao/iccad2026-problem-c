@@ -1,0 +1,36 @@
+{
+  "status": "repaired_and_resumed",
+  "verified_utc": "2026-11-04T16:57:38.213487+00:00",
+  "heartbeat": {
+    "status": "running",
+    "activity": "training",
+    "pid": 34924,
+    "monitor_completed": 500,
+    "monitor_count": 500,
+    "epoch": 20,
+    "step": 20723,
+    "cursor": 23136,
+    "elapsed_seconds": 3364.288751799947,
+    "utc": "2026-11-04T16:57:36Z",
+    "test_read": false,
+    "postprocessing_calls": 0
+  },
+  "additional_accepted_updates": 373,
+  "original_rejected_batch_passed_without_skipping": true,
+  "repair_monitor_baseline": {
+    "train": 0.9858442537784576,
+    "dev": 0.9357407727837562
+  },
+  "latest_logged_batch": {
+    "step": 20700,
+    "epoch": 21,
+    "seconds_per_step": 0.15320790700000544,
+    "samples_per_second": 208.86650452054582,
+    "total": 0.5144022107124329,
+    "gradient_norm": 15.172141075134277,
+    "elapsed_seconds": 3360.5299573999464
+  },
+  "old_best_protected": true,
+  "automatic_fixed_dev500_after_normal_early_stop": true,
+  "test_read": false
+}

@@ -1,0 +1,32 @@
+{
+  "revision": "E99.R16.update_limiting_mass_and_horizon.v3",
+  "status": "registered_before_any_numerical_R16_run; R15 timed controls now complete",
+  "evidence": "R15 all-module logs: own step bound active only0.831% original/0.853% budget-gated updates; common scaling suppresses41.674%/23.052% other updates that are not individually limited. Limiter mass median0.139 of median module mass. Only0.943% gated modules use40% cumulative path, shape cumulative budget virtually unused.",
+  "hypothesis": "Separate collateral common-scale suppression from a genuinely too-small per-step limit. Keep initial-area mobility, force law0.25 attraction,20 rounds,40% cumulative center path,1.03 step/1.5 total shape factors; compare per-module step capping with doubling only common per-step limit5%\u219210%.",
+  "arms": [
+    "local_step_limits",
+    "double_step_limit",
+    "balanced_area_source",
+    "longer_relaxation"
+  ],
+  "control": {
+    "local_step_limits": "R15 budget_gate",
+    "double_step_limit": "R15 budget_gate",
+    "balanced_area_source": "R15 bounded_area_source (same attraction1, same harmonic source, add same source scale to repulsion)",
+    "longer_relaxation": "R15 budget_gate20 rounds"
+  },
+  "mass_boundary": "Force construction still equal/opposite and raw mobility still1/initial area. Per-module cap preserves those raw responses but can alter inverse-mass displacement ratios when different modules saturate; do not claim exact inverse ratios after a binding cap. Preplaced modules remain locked, fixed-shape dimensions unchanged.",
+  "implementation_panel": [
+    0,
+    4,
+    43,
+    95,
+    135
+  ],
+  "stages": "After R15 completes: five-case compare unchanged common-cap branch to R15 budget_gate and check local-cap budgets/area/locks, then registered train500 trajectories, review diagnostics before original full-planner controls. No automatic launch from mere file preparation.",
+  "test_read": false,
+  "new_training": false,
+  "additional_hypothesis": "R15 attraction-only harmonic source increases raw worst coverage. Scale both attraction and contact repulsion by the same bounded symmetric reduced-mass coupling. In an isolated1D near-contact pair C*(1/mi+1/mj)=2 removes mass-ratio stiffness on both sides of contact; this is not a global2D stability proof. Keep common caps,20 rounds and all40%/shape allowances for this arm.",
+  "amendment_before_any_run": "Add one physical-law control before native preflight; all work remains prepared until R15 timed runs end. No dev coefficient choice.",
+  "time_horizon_hypothesis": "R15 fewer than1.6% modules exhaust40% path and almost none exhaust shape factor1.5, so before expanding total draft movement, compare80 vs20 cheap synchronous rounds at identical per-step/cumulative allowances and force coefficients. Operator native cost is measured; full original-planner result decides benefit."
+}

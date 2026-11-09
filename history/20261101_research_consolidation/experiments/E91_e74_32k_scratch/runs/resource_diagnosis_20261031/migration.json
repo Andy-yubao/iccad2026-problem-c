@@ -1,0 +1,44 @@
+{
+  "status": "verified_resumable",
+  "changed_identity_fields": [
+    "additional_training_budget_seconds",
+    "calibration",
+    "data_transfer",
+    "gpu_resident_inputs",
+    "max_seconds",
+    "preserved_prior_training_seconds",
+    "sources"
+  ],
+  "changed_sources": [
+    "experiments/E91_e74_32k_scratch/plan.json",
+    "experiments/E91_e74_32k_scratch/preflight.py",
+    "experiments/E91_e74_32k_scratch/resident.py",
+    "experiments/E91_e74_32k_scratch/train.py"
+  ],
+  "old_checkpoint_sha256": "fb07c9255045cfa2baaa22e4c86bd3e691fec85a1d204c1f771721ab8fb163ba",
+  "new_checkpoint_sha256": "45bbbdddb57158c42fb92f38cefcc7ea6b281e98ced896f195b769f7d0789a30",
+  "preserved": [
+    "model",
+    "optimizer",
+    "scheduler",
+    "RNG",
+    "progress/order/cursor/seen",
+    "graph step control",
+    "all32000 members",
+    "batch32",
+    "fixed Loss and coefficients"
+  ],
+  "epoch": 0,
+  "step": 0,
+  "pending_monitor": true,
+  "charged_seconds": 3870.768777,
+  "cap_seconds": 11070.768777,
+  "remaining_seconds": 7200.0,
+  "budget_authorization": "用户要求修复后自行后台重启，并恢复完整2h；保留先前费用，累计18h不变",
+  "intermediate_checkpoint_sha256": "164803eaf80641744b91c0897fdcb9a8f9481b64dbc6f5ff553c29c242b59844",
+  "first_attempt_note": "Host identity written before NumPy audit exception; all tensors/Adam/RNG/progress now verified before and after final binding",
+  "original_run_config_and_snapshot_preserved": true,
+  "host_batch_bit_exact": true,
+  "formal_update_performed_during_migration": false,
+  "test_read": false
+}

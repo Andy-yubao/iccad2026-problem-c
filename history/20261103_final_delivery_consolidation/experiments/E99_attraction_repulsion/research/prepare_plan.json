@@ -1,0 +1,16 @@
+{
+  "revision": "E99.research.prepare_frozen_C3.v1",
+  "purpose": "Create reusable fixed train_monitor500 public inputs/C3 drafts and one full-planner training control before developing new numerical methods. Formal dev500 candidates not started by this preparation.",
+  "preflight": {"role": "train", "indices": [1683,10027,5474,10140,15001], "count": 5, "checks": "Frozen checkpoint/code, padded eager vs captured identical physical C3, finite geometry/public locks, model states unchanged, actual input-to-draft timing, no solver/optimizer/test"},
+  "panel": "v5.train_monitor500 in frozen order, exactly500, original16k train membership and original split unchanged",
+  "checkpoint": "experiments/E97_gpu_hybrid_solver/runs/20261102_candidate3_clearance_seed0/checkpoints/best.pt",
+  "checkpoint_sha256": "d784e96f46decf7a487c25bde2ab16db8cf6ebae1bc0632434cc5e2f78173fce",
+  "input_boundary": "Public solver tuple only to C3/geometry. Reference coordinates/denominators only to scoring after timer. Port inputs remain per-module total weight/weighted center.",
+  "control": "One existing E99 independent complete old full planner with planner_config.json, no new force coefficients or altered numerical objectives, one solve per training member. Actual full public-to-final wall timing diagnostic on train, cold startup separate.",
+  "threading": "one process, one CPU math thread, batch1 GPU; no overlapping timed numerical jobs",
+  "output": "runs/research/20261102_frozen_C3_train500_control",
+  "preflight_output": "runs/research/20261102_frozen_C3_preflight5",
+  "stopping": "STOP at case boundaries; persist completed single-copy public inputs/raw/final/trace; explicit same-identity resume missing cases only. Failures preserved, no automatic retry, no subsequent method or dev launch.",
+  "test_read": false,
+  "new_training": false
+}

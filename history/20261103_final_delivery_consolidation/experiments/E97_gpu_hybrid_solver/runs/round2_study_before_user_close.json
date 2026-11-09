@@ -1,0 +1,158 @@
+{
+  "revision": "E97.round2.full_quality_first.v1",
+  "status": "candidate8_preflight",
+  "authorization": "用户2026-11-02：进行继续研究，恢复长任务设定，时间预算4h。恢复后台训练/每30分钟唤醒，沿用单线程串行、最多8候选；新窗口独立登记，不覆盖旧窗口。",
+  "start_utc": "2026-11-02T05:04:02+00:00",
+  "deadline_utc": "2026-11-02T09:45:00+00:00",
+  "max_wall_seconds": 16858.0,
+  "includes": [
+    "engineering",
+    "training",
+    "evaluation",
+    "rendering",
+    "waiting",
+    "wakeup elapsed"
+  ],
+  "max_formal_training_candidates": 8,
+  "formal_candidates_started": 7,
+  "candidate_ledger": [
+    {
+      "candidate": 1,
+      "name": "C3_public_boundary_group_contact",
+      "status": "complete",
+      "formal_training_started": true,
+      "plan": "round2_candidate1_plan.json",
+      "output": "runs/20261102_round2_candidate1_publicsoft_seed0"
+    },
+    {
+      "candidate": 2,
+      "name": "C3_current_geometry_group_MST",
+      "status": "complete",
+      "formal_training_started": true,
+      "plan": "round2_candidate2_plan.json",
+      "output": "runs/20261102_round2_candidate2_dynamicmst_seed0"
+    },
+    {
+      "candidate": 3,
+      "name": "C3_joint_normalized_global_capacity",
+      "status": "complete",
+      "formal_training_started": true,
+      "plan": "round2_candidate3_plan.json",
+      "output": "runs/20261102_round2_candidate3_jointcapacity_seed0"
+    },
+    {
+      "candidate": 4,
+      "name": "C3_group_axis_freedom",
+      "status": "complete",
+      "formal_training_started": true,
+      "plan": "round2_candidate4_plan.json",
+      "output": "runs/20261102_round2_candidate4_groupfreedom_seed0"
+    },
+    {
+      "candidate": 5,
+      "name": "C3_public_count_weighted_group_task",
+      "status": "complete",
+      "formal_training_started": true,
+      "plan": "round2_candidate5_plan.json",
+      "output": "runs/20261102_round2_candidate5_countweighted_seed0"
+    },
+    {
+      "candidate": 6,
+      "name": "C5_joint_Llast4_F",
+      "status": "complete",
+      "formal_training_started": true,
+      "plan": "round2_candidate6_plan.json",
+      "output": "runs/20261102_round2_candidate6_jointplacer_seed0"
+    },
+    {
+      "candidate": 7,
+      "name": "C5_new_full_teacher_exactWH_4000",
+      "status": "complete",
+      "formal_training_started": true,
+      "plan": "round2_candidate7_plan.json",
+      "output": "runs/20261102_round2_candidate7_exactteacher_seed0",
+      "evaluation_dir": "evaluation_v2",
+      "evaluation_migration": "round2_candidate7_evaluation_migration.json"
+    },
+    {
+      "candidate": 8,
+      "name": "C5_bounded_public_area_head",
+      "status": "registered_not_started",
+      "formal_training_started": false,
+      "plan": "round2_candidate8_plan.json",
+      "output": "runs/20261102_round2_candidate8_areahead_seed0"
+    }
+  ],
+  "priority": "Hard legal and fixed dev500 neutral weighted Q<1.01 first; resident complete latency target .25sec, mean/P95. Full E85 singlethread quality baseline retained; simplify only after quality-preserving evidence.",
+  "cpu_threads": 1,
+  "single_process": true,
+  "single_gpu": true,
+  "port_representation": "fully compressed per-module mass/centroid; full ports Loss/exact wire only",
+  "test_read": false,
+  "heartbeat_id": "problem-c-gpu",
+  "old_study": "study.json (closed; never reset)",
+  "current_stage": "C7 full v2 complete not promoted; final bounded area-head candidate registered before preflight",
+  "initial_baselines": {
+    "E85": 1.015922066858077,
+    "C3": 1.0133320503232655,
+    "C6": 1.013264773775944
+  },
+  "diagnostic_plan": {
+    "saved_panel": "all existing full dev500 native-arm records; no new inference, solver or Q calls; decompose quality/soft violation contributions, weighted tail and public features",
+    "latency_panel": "original five train inputs only, E85/C3 same small architecture; one registered staged CPU feature/H2D/GPU-event/decode diagnostic, max5 repetitions and3 warmups, CPU1. Not a full dev result or coefficient scan",
+    "saved_contact_gap": "Existing full500 E85/C3/C6 final geometry + public constraints only; classify exact boundary violation distances and group-component MST gaps in fixed absolute/local bins, no geometry mutation/solve/scorer or coefficient scan.",
+    "latency_paths": "Original5 C3 own-best, old model-only graph with external decode vs model+identical decode/scaling captured;5 repetitions/3 warmups, CPU1, exact physical output check, staged feature/copy/GPU events/return. Not a final-service speed claim. Only output capture changes, no model/solver/math/power setting change."
+  },
+  "training_gate": "Diagnose remaining full-solver gap; register fixed objective/source/data/LR/stopping before actual Adam/graph/resume/finite/frozen checks on original5. Use original full solver at terminal; keep readouts when warm-starting; no early decoder downgrading.",
+  "evaluation": "Each unique own-Loss best once full dev500+new raw2000+same100. Identical initial selected model reuses existing completed evidence, no Q checkpoint selection. Finite controls before extra decoder change; no dev coefficient sweep.",
+  "stopping": "Global deadline/user STOP or8 candidates started/completed; preserve diagnostics/state, do not reset budgets. Close heartbeat at completion/exhaustion/deadline. No subagents.",
+  "next_actions": [
+    "Monitor existing teacher7 and waiting candidate7 pipeline; one compute worker only, no duplicate labels or training.",
+    "After full teacher completion manifests validate, original5 actual-update/resume/exactWH gates; formal candidate7 only then.",
+    "Unique own-Loss full terminal/raw/gallery or exact-C5 reuse, preserve09:45UTC extended deadline and8-candidate cap."
+  ],
+  "reports": [
+    "runs/20261102_round2_saved_diagnosis/results.json",
+    "runs/20261102_round2_contact_gap_diagnosis_v2/results.json",
+    "runs/20261102_round2_decode_latency/results.json",
+    "runs/20261102_round2_current_control/results.json",
+    "runs/round2_candidate1_start_report.md",
+    "runs/round2_candidate1_result_report.md",
+    "runs/round2_candidate1_saved_audit.json",
+    "runs/round2_candidate2_start_report.md",
+    "runs/round2_candidate2_result_report.md",
+    "runs/round2_candidate2_saved_audit.json",
+    "runs/round2_candidate3_start_report.md",
+    "runs/round2_candidate3_result_report.md",
+    "runs/round2_candidate3_saved_audit.json",
+    "runs/20261102_round2_saved_source_oracle/results.json",
+    "runs/20261102_round2_gpu_polish_probe/results.json",
+    "runs/20261102_round2_group_gradient_conflict/results.json",
+    "runs/round2_candidate4_start_report.md",
+    "runs/round2_candidate4_result_report.md",
+    "runs/round2_candidate4_saved_audit.json",
+    "runs/round2_candidate5_start_report.md",
+    "runs/20261102_round2_public_count_inventory/results.json",
+    "runs/round2_candidate5_result_report.md",
+    "runs/round2_candidate5_saved_audit.json",
+    "runs/round2_candidate6_start_report.md",
+    "runs/round2_candidate6_result_report.md",
+    "runs/round2_candidate7_registration_report.md"
+  ],
+  "last_completed_stage": "C5 Q1.012685893 improved but unmet; final C6 joint Llast4/F preflight passed; before-start cap1200->600 to reserve terminal, hidden pipeline launched",
+  "last_updated_utc": "2026-11-02T09:28:01.156226+00:00",
+  "spent_wall_seconds": 14406.577223,
+  "no_additional_candidates_after": 8,
+  "authorization_changes": [
+    {
+      "timestamp_utc": "2026-11-02T08:47:07.212962+00:00",
+      "user_instruction": "时间预算扩大到17:45",
+      "previous_deadline_utc": "2026-11-02T09:04:02+00:00",
+      "new_deadline_utc": "2026-11-02T09:45:00+00:00",
+      "original_start_unchanged": true,
+      "candidate_cap_unchanged": 8,
+      "active_candidate6_local_budget_unchanged_seconds": 600,
+      "active_candidate6_source_and_identity_unchanged": true
+    }
+  ]
+}

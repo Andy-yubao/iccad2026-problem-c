@@ -1,0 +1,21 @@
+{
+  "revision":"E69.preanalysis.v1",
+  "request":"2026-10-28 user asks statistics of per-case Loss differences and how differences arise, after judging E65 and E42 draft appearance similar and insufficient. No training restart.",
+  "user_feedback_verbatim":"感觉在draft的观感上，E65和E42并没有很大差别，仍然没有达到要求。",
+  "feedback_boundary":"Round-level qualitative feedback; no invented individual ratings, visual ranking or causal interpretation.",
+  "scope":"Frozen v5 dev2000, nested same dev_monitor500 with saved flash outcomes, seven completed models (E42,E64,E65 geometry/feature,E66 unshared/shared,E67 group). E67 incomplete global omitted. Tests sealed, no training, optimizer, new postprocessing or checkpoint reselection.",
+  "new_computation":"Frozen E42 and E65 eval/no_grad forwards on dev2000 only to obtain missing E42 per-case terms and unsaved module-level diagnostics; verify E65 stored terms and E42 stored aggregate. Reference-target-state G as a diagnostic, never a lower bound or candidate. Other models use saved per-case records.",
+  "questions":[
+    "How much balanced-panel Loss variation is shared case difficulty versus model main effect and interaction?",
+    "Which terms and modules dominate high-Loss cases, including mechanical local-area normalization?",
+    "Which public task features and reference structure associate with Loss after controlling module count?",
+    "Does G rank overlap and saved flash outcomes across cases and within the same case?",
+    "Are gains concentrated on some task strata, and which concrete cases contradict simple interpretations?"
+  ],
+  "methods":"Distribution/tail concentration, weighted-term decomposition, descriptive two-way sums of squares, Spearman and N-adjusted partial-rank association, worker-cluster bootstrap for key paired/ranking summaries, fixed ridge regression on log G with five worker-held-out folds. Input-only versus label-assisted explanatory features explicitly separated; no causal claims or independent test/generalization claims.",
+  "resources":{"cpu_workers":4,"library_threads_per_worker":1,"inference_batch":32,"precision":"FP32 eval","device":"cuda","max_execution_seconds":900},
+  "case_validation":"At most five unique dev cases for implementation validation, distinct from the requested full descriptive analysis. Reuse existing quality outcomes; no repeated terminal scoring.",
+  "reference_state_note":"Setting raw state to original supervised centers/log-ratios and decoding with transformed public areas may have nonzero G. This diagnostic is not an optimum/lower bound and is never used as network input.",
+  "interpretation":"Single-seed adaptively exposed development evidence. Case statistics describe saved candidates and this distribution. Regression association, local-area denominators and reference structure do not establish causal generation mechanisms. No human-quality calibration without case ratings.",
+  "test_read":false
+}

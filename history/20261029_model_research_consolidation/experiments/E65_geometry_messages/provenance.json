@@ -1,0 +1,23 @@
+{
+  "experiment": "E65_geometry_messages",
+  "source_experiment": "experiments/E64_e42_unified_retrain",
+  "copy_note": "Independent copied runtime, base architecture and unchanged flash. New model adds low-rank pair message values; no private cross-experiment imports.",
+  "comparison_checkpoint": "experiments/E42_joint_regularization/runs/20261023_rectangle_w96d12_ab_seed0/checkpoints/best.pt",
+  "comparison_sha256": "12878108e9a58b8c195b314ba6586686c2a6e2796c1f4b6443e102b4db4224a6",
+  "frozen_E64_sources": {
+    "model.py": "0d71c96c75976dc57d589d5709639291d1a30addffa8a5f0f2c53e2cb88a9089",
+    "features.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+    "batches.py": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92",
+    "loss.py": "8d635795fa6049e1275cfd1f247420188fb5a35e269398b42f67faebbc21e0aa",
+    "losses.py": "fa8d7bc5a43d969a89d01fefc32f209c36f692b98bb28f3e94ddf566850eb316",
+    "loss_reference.py": "f6503136dc719f6742c66b31da7ebe1076726fac38edb64fa9ae6106ab9d6557",
+    "loss_config.py": "455ff272bc8afb9a5f13bb9d9cfc169a576be878de8a3dd2ee1c3252f3c01804"
+  },
+  "protected_checkpoints_sha256": {
+    "experiments/E42_joint_regularization/runs/20261023_rectangle_w96d12_ab_seed0/checkpoints/best.pt": "12878108e9a58b8c195b314ba6586686c2a6e2796c1f4b6443e102b4db4224a6",
+    "experiments/E42_joint_regularization/runs/20261023_rectangle_w96d12_ab_seed0/checkpoints/latest.pt": "94abb24266e61c681ed33a44bc2a8f5a819a7678bb23963145af0ec8baf41fcb",
+    "experiments/E64_e42_unified_retrain/runs/20261027_e42_fixedG_scratch_seed0/checkpoints/best.pt": "c403214356e393097d8589c01ecea1b41b4736c7519ccb20ad5db653b0d1a447",
+    "experiments/E64_e42_unified_retrain/runs/20261027_e42_fixedG_scratch_seed0/checkpoints/latest.pt": "458c46d1425463e9a94969de25e815b2665f3aee5c5251b54ef3592ec5991d11"
+  },
+  "test_read": false
+}

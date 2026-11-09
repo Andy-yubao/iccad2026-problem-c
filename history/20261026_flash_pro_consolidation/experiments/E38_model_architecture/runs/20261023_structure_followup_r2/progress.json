@@ -1,0 +1,83 @@
+{
+  "stages": [
+    {
+      "kind": "E39 train",
+      "command": [
+        "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+        "-u",
+        "-B",
+        "-m",
+        "experiments.E39_rectangular_attention.pipeline",
+        "--arm",
+        "rectangle",
+        "--stage",
+        "train",
+        "--tag",
+        "20261023_rectangle_w96d12_r2",
+        "--seed",
+        "0",
+        "--max-hours",
+        "4",
+        "--max-epochs",
+        "200",
+        "--resume"
+      ],
+      "returncode": 0,
+      "seconds": 5193.529358599917
+    },
+    {
+      "kind": "E39 final",
+      "command": [
+        "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+        "-u",
+        "-B",
+        "-m",
+        "experiments.E39_rectangular_attention.final",
+        "--output",
+        "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E39_rectangular_attention\\runs\\20261023_rectangle_w96d12_r2_rectangle_seed0"
+      ],
+      "returncode": 0,
+      "seconds": 220.8179039999377
+    },
+    {
+      "kind": "E40 train",
+      "command": [
+        "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+        "-u",
+        "-B",
+        "-m",
+        "experiments.E40_endpoint_constraint_tokens.pipeline",
+        "--arm",
+        "full_tokens",
+        "--stage",
+        "train",
+        "--tag",
+        "20261023_tokens_w96d12_r2",
+        "--seed",
+        "0",
+        "--max-hours",
+        "4",
+        "--max-epochs",
+        "200",
+        "--resume"
+      ],
+      "returncode": 0,
+      "seconds": 7701.10967939999
+    },
+    {
+      "kind": "E40 final",
+      "command": [
+        "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+        "-u",
+        "-B",
+        "-m",
+        "experiments.E40_endpoint_constraint_tokens.final",
+        "--output",
+        "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E40_endpoint_constraint_tokens\\runs\\20261023_tokens_w96d12_r2_full_tokens_seed0"
+      ],
+      "returncode": 0,
+      "seconds": 231.71366170002148
+    }
+  ],
+  "test_read": false
+}

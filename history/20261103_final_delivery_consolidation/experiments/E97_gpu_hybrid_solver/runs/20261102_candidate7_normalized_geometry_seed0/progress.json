@@ -1,0 +1,1356 @@
+{
+  "epoch": 28,
+  "step": 14000,
+  "cursor": 0,
+  "pending_monitor": false,
+  "best_loss": 0.1529908142089844,
+  "best_epoch": 20,
+  "history": [
+    {
+      "epoch": 0,
+      "step": 0,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.6049124598503113,
+            "max_abs": 2.1744744777679443,
+            "positive_fraction": 0.5179709792137146
+          },
+          {
+            "rms": 0.5794176459312439,
+            "max_abs": 2.107149124145508,
+            "positive_fraction": 0.4980413615703583
+          },
+          {
+            "rms": 0.6047047972679138,
+            "max_abs": 2.159925699234009,
+            "positive_fraction": 0.5630038380622864
+          },
+          {
+            "rms": 0.5684804320335388,
+            "max_abs": 1.9943879842758179,
+            "positive_fraction": 0.4897376298904419
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher_center": 0.13097549533843994,
+        "teacher_shape": 0.11818929958343506,
+        "teacher_relative": 0.06944819569587707,
+        "total": 0.17788487148284912,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.12956012535095215,
+        "teacher_shape": 0.10935607433319092,
+        "teacher_relative": 0.07096011781692504,
+        "total": 0.17463917207717897,
+        "count": 500
+      },
+      "lr": 0.001,
+      "lr_next": 0.001,
+      "train_monitor_seen_count": 0
+    },
+    {
+      "epoch": 1,
+      "step": 500,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.40223830938339233,
+            "max_abs": 2.8658268451690674,
+            "positive_fraction": 0.5665463805198669
+          },
+          {
+            "rms": 0.3373899459838867,
+            "max_abs": 1.9635165929794312,
+            "positive_fraction": 0.6683828234672546
+          },
+          {
+            "rms": 0.45363131165504456,
+            "max_abs": 4.609753608703613,
+            "positive_fraction": 0.3384535014629364
+          },
+          {
+            "rms": 0.6195144057273865,
+            "max_abs": 5.8477301597595215,
+            "positive_fraction": 0.16018931567668915
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher_center": 0.11970209789276123,
+        "teacher_shape": 0.11648242592811585,
+        "teacher_relative": 0.07159986352920532,
+        "total": 0.16672266960144044,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.12051520299911499,
+        "teacher_shape": 0.10747126865386963,
+        "teacher_relative": 0.07285260486602783,
+        "total": 0.1655961742401123,
+        "count": 500
+      },
+      "lr": 0.001,
+      "lr_next": 0.001,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 2,
+      "step": 1000,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.4436124265193939,
+            "max_abs": 6.038344383239746,
+            "positive_fraction": 0.5706462860107422
+          },
+          {
+            "rms": 0.32321369647979736,
+            "max_abs": 2.370969533920288,
+            "positive_fraction": 0.6846911311149597
+          },
+          {
+            "rms": 0.40570107102394104,
+            "max_abs": 4.916766166687012,
+            "positive_fraction": 0.3673071563243866
+          },
+          {
+            "rms": 0.5493212342262268,
+            "max_abs": 4.920475006103516,
+            "positive_fraction": 0.07683078944683075
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher_center": 0.11627295923233032,
+        "teacher_shape": 0.1165137128829956,
+        "teacher_relative": 0.06990241980552674,
+        "total": 0.16287699699401856,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.11586092567443848,
+        "teacher_shape": 0.10764179277420044,
+        "teacher_relative": 0.07132214665412903,
+        "total": 0.16060191011428834,
+        "count": 500
+      },
+      "lr": 0.001,
+      "lr_next": 0.001,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 3,
+      "step": 1500,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.47188612818717957,
+            "max_abs": 6.669899940490723,
+            "positive_fraction": 0.43577754497528076
+          },
+          {
+            "rms": 0.4010385572910309,
+            "max_abs": 2.453589677810669,
+            "positive_fraction": 0.7524750828742981
+          },
+          {
+            "rms": 0.39533287286758423,
+            "max_abs": 4.727964878082275,
+            "positive_fraction": 0.2783781886100769
+          },
+          {
+            "rms": 0.4576413333415985,
+            "max_abs": 4.8894524574279785,
+            "positive_fraction": 0.10116259008646011
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher_center": 0.11386188888549804,
+        "teacher_shape": 0.11636284923553467,
+        "teacher_relative": 0.06982300734519958,
+        "total": 0.16040835428237915,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.11457981586456299,
+        "teacher_shape": 0.10778189754486084,
+        "teacher_relative": 0.0713456130027771,
+        "total": 0.15936169147491455,
+        "count": 500
+      },
+      "lr": 0.001,
+      "lr_next": 0.001,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 4,
+      "step": 2000,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.43757250905036926,
+            "max_abs": 6.961289405822754,
+            "positive_fraction": 0.46720388531684875
+          },
+          {
+            "rms": 0.38853245973587036,
+            "max_abs": 4.159491062164307,
+            "positive_fraction": 0.746048092842102
+          },
+          {
+            "rms": 0.4075703024864197,
+            "max_abs": 5.967036724090576,
+            "positive_fraction": 0.3000837564468384
+          },
+          {
+            "rms": 0.4154382348060608,
+            "max_abs": 6.214056491851807,
+            "positive_fraction": 0.130271315574646
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher_center": 0.11289419937133789,
+        "teacher_shape": 0.11606184434890747,
+        "teacher_relative": 0.06990585923194885,
+        "total": 0.15938611936569214,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.11281719732284545,
+        "teacher_shape": 0.1072866415977478,
+        "teacher_relative": 0.07118717980384827,
+        "total": 0.15743565654754638,
+        "count": 500
+      },
+      "lr": 0.001,
+      "lr_next": 0.001,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 5,
+      "step": 2500,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.4308844208717346,
+            "max_abs": 7.271236419677734,
+            "positive_fraction": 0.38455072045326233
+          },
+          {
+            "rms": 0.3445071876049042,
+            "max_abs": 5.991959095001221,
+            "positive_fraction": 0.7019913792610168
+          },
+          {
+            "rms": 0.38084128499031067,
+            "max_abs": 5.619396686553955,
+            "positive_fraction": 0.287119597196579
+          },
+          {
+            "rms": 0.3638428747653961,
+            "max_abs": 3.588350296020508,
+            "positive_fraction": 0.2575322389602661
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher_center": 0.11232452917098999,
+        "teacher_shape": 0.11665940928459168,
+        "teacher_relative": 0.06905299544334412,
+        "total": 0.15875263738632203,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.11161450386047363,
+        "teacher_shape": 0.10796364784240722,
+        "teacher_relative": 0.07044087433815002,
+        "total": 0.15621563148498535,
+        "count": 500
+      },
+      "lr": 0.001,
+      "lr_next": 0.001,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 6,
+      "step": 3000,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.4251376688480377,
+            "max_abs": 6.846768379211426,
+            "positive_fraction": 0.37326493859291077
+          },
+          {
+            "rms": 0.34753644466400146,
+            "max_abs": 3.9476470947265625,
+            "positive_fraction": 0.650651216506958
+          },
+          {
+            "rms": 0.3690910339355469,
+            "max_abs": 5.81810188293457,
+            "positive_fraction": 0.42621421813964844
+          },
+          {
+            "rms": 0.32884085178375244,
+            "max_abs": 5.339939594268799,
+            "positive_fraction": 0.2628728449344635
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher_center": 0.11062220907211304,
+        "teacher_shape": 0.11592593812942505,
+        "teacher_relative": 0.06911425828933716,
+        "total": 0.156882257938385,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.1107938995361328,
+        "teacher_shape": 0.1070927243232727,
+        "teacher_relative": 0.07054443311691284,
+        "total": 0.1552031865119934,
+        "count": 500
+      },
+      "lr": 0.001,
+      "lr_next": 0.001,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 7,
+      "step": 3500,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.43494048714637756,
+            "max_abs": 7.03802490234375,
+            "positive_fraction": 0.2837282121181488
+          },
+          {
+            "rms": 0.3549594283103943,
+            "max_abs": 4.7047200202941895,
+            "positive_fraction": 0.6850060224533081
+          },
+          {
+            "rms": 0.37460386753082275,
+            "max_abs": 6.0929789543151855,
+            "positive_fraction": 0.32371649146080017
+          },
+          {
+            "rms": 0.2971809506416321,
+            "max_abs": 3.8709774017333984,
+            "positive_fraction": 0.3588522672653198
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher_center": 0.11097366333007813,
+        "teacher_shape": 0.11611424231529235,
+        "teacher_relative": 0.06894275093078614,
+        "total": 0.15723791313171387,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.11103783559799195,
+        "teacher_shape": 0.10719898176193238,
+        "teacher_relative": 0.07042217016220093,
+        "total": 0.1554431266784668,
+        "count": 500
+      },
+      "lr": 0.001,
+      "lr_next": 0.001,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 8,
+      "step": 4000,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.423244446516037,
+            "max_abs": 6.9324951171875,
+            "positive_fraction": 0.2779499292373657
+          },
+          {
+            "rms": 0.35285842418670654,
+            "max_abs": 4.422101974487305,
+            "positive_fraction": 0.602881908416748
+          },
+          {
+            "rms": 0.3646105229854584,
+            "max_abs": 5.550561904907227,
+            "positive_fraction": 0.4139271080493927
+          },
+          {
+            "rms": 0.2749409079551697,
+            "max_abs": 2.9740347862243652,
+            "positive_fraction": 0.4968290328979492
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher_center": 0.11101518821716308,
+        "teacher_shape": 0.115770432472229,
+        "teacher_relative": 0.06860106039047241,
+        "total": 0.1571080641746521,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.11129305696487427,
+        "teacher_shape": 0.10707742166519164,
+        "teacher_relative": 0.0701671736240387,
+        "total": 0.15560420656204224,
+        "count": 500
+      },
+      "lr": 0.001,
+      "lr_next": 0.001,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 9,
+      "step": 4500,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.4381135106086731,
+            "max_abs": 6.72852897644043,
+            "positive_fraction": 0.19672952592372894
+          },
+          {
+            "rms": 0.3531351387500763,
+            "max_abs": 5.3084893226623535,
+            "positive_fraction": 0.573420524597168
+          },
+          {
+            "rms": 0.3391762375831604,
+            "max_abs": 6.213726043701172,
+            "positive_fraction": 0.5507230162620544
+          },
+          {
+            "rms": 0.28791794180870056,
+            "max_abs": 2.784973621368408,
+            "positive_fraction": 0.5981836915016174
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher_center": 0.10990843200683593,
+        "teacher_shape": 0.11606355595588684,
+        "teacher_relative": 0.06864031624794006,
+        "total": 0.1560843963623047,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.11026568126678467,
+        "teacher_shape": 0.10749432563781738,
+        "teacher_relative": 0.07020477056503296,
+        "total": 0.15469045162200928,
+        "count": 500
+      },
+      "lr": 0.001,
+      "lr_next": 0.001,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 10,
+      "step": 5000,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.4286099374294281,
+            "max_abs": 7.3470330238342285,
+            "positive_fraction": 0.22531867027282715
+          },
+          {
+            "rms": 0.37556540966033936,
+            "max_abs": 5.165422439575195,
+            "positive_fraction": 0.3902817666530609
+          },
+          {
+            "rms": 0.34666141867637634,
+            "max_abs": 5.486384868621826,
+            "positive_fraction": 0.5278050899505615
+          },
+          {
+            "rms": 0.3026372790336609,
+            "max_abs": 3.7994697093963623,
+            "positive_fraction": 0.7313016653060913
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher_center": 0.10881438922882081,
+        "teacher_shape": 0.1157448718547821,
+        "teacher_relative": 0.06868688750267028,
+        "total": 0.15492232799530029,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.11011696815490722,
+        "teacher_shape": 0.10724792909622193,
+        "teacher_relative": 0.07019899725914001,
+        "total": 0.15447869539260864,
+        "count": 500
+      },
+      "lr": 0.001,
+      "lr_next": 0.001,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 11,
+      "step": 5500,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.43345969915390015,
+            "max_abs": 7.096800804138184,
+            "positive_fraction": 0.17507746815681458
+          },
+          {
+            "rms": 0.32158657908439636,
+            "max_abs": 3.7201297283172607,
+            "positive_fraction": 0.2999105751514435
+          },
+          {
+            "rms": 0.322810560464859,
+            "max_abs": 5.222751617431641,
+            "positive_fraction": 0.7050994038581848
+          },
+          {
+            "rms": 0.2714543640613556,
+            "max_abs": 3.0355231761932373,
+            "positive_fraction": 0.7454781532287598
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher_center": 0.1085012936592102,
+        "teacher_shape": 0.11563313698768615,
+        "teacher_relative": 0.06866985154151917,
+        "total": 0.15457703971862793,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.10978687572479248,
+        "teacher_shape": 0.10715261125564575,
+        "teacher_relative": 0.07019613909721374,
+        "total": 0.15412406396865844,
+        "count": 500
+      },
+      "lr": 0.001,
+      "lr_next": 0.001,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 12,
+      "step": 6000,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.486255943775177,
+            "max_abs": 6.5409979820251465,
+            "positive_fraction": 0.08005844801664352
+          },
+          {
+            "rms": 0.3728901743888855,
+            "max_abs": 6.482733249664307,
+            "positive_fraction": 0.23593057692050934
+          },
+          {
+            "rms": 0.3310368061065674,
+            "max_abs": 6.3332200050354,
+            "positive_fraction": 0.741904079914093
+          },
+          {
+            "rms": 0.26667320728302,
+            "max_abs": 2.039475440979004,
+            "positive_fraction": 0.8551334142684937
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher_center": 0.1081343870162964,
+        "teacher_shape": 0.11554205226898194,
+        "teacher_relative": 0.06828845071792602,
+        "total": 0.15409201288223268,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.11047878742218017,
+        "teacher_shape": 0.10705093955993653,
+        "teacher_relative": 0.06978110647201538,
+        "total": 0.15468680429458617,
+        "count": 500
+      },
+      "lr": 0.001,
+      "lr_next": 0.001,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 13,
+      "step": 6500,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.46366968750953674,
+            "max_abs": 7.402436256408691,
+            "positive_fraction": 0.08786150068044662
+          },
+          {
+            "rms": 0.3286948502063751,
+            "max_abs": 3.882359504699707,
+            "positive_fraction": 0.2727164030075073
+          },
+          {
+            "rms": 0.3123198449611664,
+            "max_abs": 5.571531772613525,
+            "positive_fraction": 0.7188979983329773
+          },
+          {
+            "rms": 0.27489641308784485,
+            "max_abs": 2.696650743484497,
+            "positive_fraction": 0.8728933930397034
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher_center": 0.10723424053192139,
+        "teacher_shape": 0.11534333634376526,
+        "teacher_relative": 0.06819953894615173,
+        "total": 0.1531199607849121,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.10990315198898315,
+        "teacher_shape": 0.10697420835494995,
+        "teacher_relative": 0.06971050047874451,
+        "total": 0.1540743284225464,
+        "count": 500
+      },
+      "lr": 0.001,
+      "lr_next": 0.001,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 14,
+      "step": 7000,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.47612446546554565,
+            "max_abs": 5.9204020500183105,
+            "positive_fraction": 0.09532446414232254
+          },
+          {
+            "rms": 0.37124302983283997,
+            "max_abs": 6.350001335144043,
+            "positive_fraction": 0.1794828176498413
+          },
+          {
+            "rms": 0.3216337561607361,
+            "max_abs": 5.874536037445068,
+            "positive_fraction": 0.8098297119140625
+          },
+          {
+            "rms": 0.26034584641456604,
+            "max_abs": 2.3244619369506836,
+            "positive_fraction": 0.8787031769752502
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher_center": 0.10779024457931519,
+        "teacher_shape": 0.11529636335372925,
+        "teacher_relative": 0.06815237212181091,
+        "total": 0.15365243196487427,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.10983264780044556,
+        "teacher_shape": 0.10699883890151977,
+        "teacher_relative": 0.06953528666496277,
+        "total": 0.15396617937088014,
+        "count": 500
+      },
+      "lr": 0.001,
+      "lr_next": 0.001,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 15,
+      "step": 7500,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.47673678398132324,
+            "max_abs": 6.1637444496154785,
+            "positive_fraction": 0.07988525182008743
+          },
+          {
+            "rms": 0.30594828724861145,
+            "max_abs": 3.7722079753875732,
+            "positive_fraction": 0.24356359243392944
+          },
+          {
+            "rms": 0.31489765644073486,
+            "max_abs": 5.390552043914795,
+            "positive_fraction": 0.8574824929237366
+          },
+          {
+            "rms": 0.2781338095664978,
+            "max_abs": 2.44679856300354,
+            "positive_fraction": 0.8387841582298279
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher_center": 0.1076033763885498,
+        "teacher_shape": 0.11515313076972962,
+        "teacher_relative": 0.0681984760761261,
+        "total": 0.1534412817955017,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.10967522048950196,
+        "teacher_shape": 0.10704820775985718,
+        "teacher_relative": 0.0699082338809967,
+        "total": 0.15391433095932006,
+        "count": 500
+      },
+      "lr": 0.001,
+      "lr_next": 0.001,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 16,
+      "step": 8000,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.49758821725845337,
+            "max_abs": 5.98539400100708,
+            "positive_fraction": 0.0806315541267395
+          },
+          {
+            "rms": 0.36902639269828796,
+            "max_abs": 6.503866195678711,
+            "positive_fraction": 0.18894536793231964
+          },
+          {
+            "rms": 0.33695146441459656,
+            "max_abs": 5.315389156341553,
+            "positive_fraction": 0.8748961091041565
+          },
+          {
+            "rms": 0.2817291021347046,
+            "max_abs": 2.6394598484039307,
+            "positive_fraction": 0.8267993330955505
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher_center": 0.1067701997756958,
+        "teacher_shape": 0.11424693894386291,
+        "teacher_relative": 0.06796819043159485,
+        "total": 0.15232398462295532,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.10967015838623047,
+        "teacher_shape": 0.10608027172088623,
+        "teacher_relative": 0.06963246750831605,
+        "total": 0.1535983409881592,
+        "count": 500
+      },
+      "lr": 0.001,
+      "lr_next": 0.001,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 17,
+      "step": 8500,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.50662761926651,
+            "max_abs": 5.661025524139404,
+            "positive_fraction": 0.06538756936788559
+          },
+          {
+            "rms": 0.36398571729660034,
+            "max_abs": 7.473738193511963,
+            "positive_fraction": 0.13952916860580444
+          },
+          {
+            "rms": 0.35772326588630676,
+            "max_abs": 6.639858245849609,
+            "positive_fraction": 0.8714291453361511
+          },
+          {
+            "rms": 0.287921667098999,
+            "max_abs": 3.2388792037963867,
+            "positive_fraction": 0.8603480458259583
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher_center": 0.10607271909713745,
+        "teacher_shape": 0.11344861292839051,
+        "teacher_relative": 0.06812917399406433,
+        "total": 0.1514671654701233,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.10973588752746583,
+        "teacher_shape": 0.10545751142501832,
+        "teacher_relative": 0.0700045759677887,
+        "total": 0.15360140657424926,
+        "count": 500
+      },
+      "lr": 0.001,
+      "lr_next": 0.001,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 18,
+      "step": 9000,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.5524402856826782,
+            "max_abs": 5.812023639678955,
+            "positive_fraction": 0.04241611436009407
+          },
+          {
+            "rms": 0.3585297167301178,
+            "max_abs": 6.419491767883301,
+            "positive_fraction": 0.16095764935016632
+          },
+          {
+            "rms": 0.3512866497039795,
+            "max_abs": 5.481428623199463,
+            "positive_fraction": 0.9063130021095276
+          },
+          {
+            "rms": 0.2746317684650421,
+            "max_abs": 3.4621641635894775,
+            "positive_fraction": 0.7005239725112915
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher_center": 0.10570811486244201,
+        "teacher_shape": 0.11331328797340393,
+        "teacher_relative": 0.0678894965648651,
+        "total": 0.15100881195068358,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.11003375148773194,
+        "teacher_shape": 0.10552808046340942,
+        "teacher_relative": 0.06948253774642944,
+        "total": 0.15378640937805177,
+        "count": 500
+      },
+      "lr": 0.001,
+      "lr_next": 0.001,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 19,
+      "step": 9500,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.5424909591674805,
+            "max_abs": 5.391045570373535,
+            "positive_fraction": 0.05365465208888054
+          },
+          {
+            "rms": 0.3879334330558777,
+            "max_abs": 3.853288412094116,
+            "positive_fraction": 0.15227605402469635
+          },
+          {
+            "rms": 0.3879324793815613,
+            "max_abs": 6.593703269958496,
+            "positive_fraction": 0.9263055324554443
+          },
+          {
+            "rms": 0.26361456513404846,
+            "max_abs": 3.4302096366882324,
+            "positive_fraction": 0.7553091049194336
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher_center": 0.10558914637565613,
+        "teacher_shape": 0.11281527137756348,
+        "teacher_relative": 0.06867777347564698,
+        "total": 0.15096240997314453,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.11120019006729126,
+        "teacher_shape": 0.10520199155807496,
+        "teacher_relative": 0.07042932343482972,
+        "total": 0.15510801744461059,
+        "count": 500
+      },
+      "lr": 0.001,
+      "lr_next": 0.00025,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 20,
+      "step": 10000,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.5491868853569031,
+            "max_abs": 5.86397647857666,
+            "positive_fraction": 0.049079254269599915
+          },
+          {
+            "rms": 0.35127294063568115,
+            "max_abs": 3.9705796241760254,
+            "positive_fraction": 0.15995314717292786
+          },
+          {
+            "rms": 0.38566917181015015,
+            "max_abs": 6.668238639831543,
+            "positive_fraction": 0.9231156706809998
+          },
+          {
+            "rms": 0.27832597494125366,
+            "max_abs": 3.6676244735717773,
+            "positive_fraction": 0.7712301015853882
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher_center": 0.10192906069755554,
+        "teacher_shape": 0.11172748565673828,
+        "teacher_relative": 0.0676687695980072,
+        "total": 0.14677812433242798,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.10937153577804565,
+        "teacher_shape": 0.10467753267288207,
+        "teacher_relative": 0.06979956436157227,
+        "total": 0.1529908142089844,
+        "count": 500
+      },
+      "lr": 0.00025,
+      "lr_next": 0.00025,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 21,
+      "step": 10500,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.5514675378799438,
+            "max_abs": 6.072450637817383,
+            "positive_fraction": 0.050137292593717575
+          },
+          {
+            "rms": 0.35586991906166077,
+            "max_abs": 3.817089319229126,
+            "positive_fraction": 0.1825687736272812
+          },
+          {
+            "rms": 0.3756259083747864,
+            "max_abs": 6.237688064575195,
+            "positive_fraction": 0.9254270195960999
+          },
+          {
+            "rms": 0.2812345325946808,
+            "max_abs": 4.042438507080078,
+            "positive_fraction": 0.7292138934135437
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher_center": 0.10087937092781067,
+        "teacher_shape": 0.11144357585906982,
+        "teacher_relative": 0.0675556926727295,
+        "total": 0.1456291871070862,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.11031275367736816,
+        "teacher_shape": 0.10492873096466064,
+        "teacher_relative": 0.06984318590164185,
+        "total": 0.15400573348999022,
+        "count": 500
+      },
+      "lr": 0.00025,
+      "lr_next": 0.00025,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 22,
+      "step": 11000,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.5561432242393494,
+            "max_abs": 5.425144672393799,
+            "positive_fraction": 0.04816291481256485
+          },
+          {
+            "rms": 0.3713282346725464,
+            "max_abs": 4.021603107452393,
+            "positive_fraction": 0.15714429318904877
+          },
+          {
+            "rms": 0.39311841130256653,
+            "max_abs": 6.813969135284424,
+            "positive_fraction": 0.9253954887390137
+          },
+          {
+            "rms": 0.28864091634750366,
+            "max_abs": 4.292773723602295,
+            "positive_fraction": 0.7440075874328613
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher_center": 0.10085808920860291,
+        "teacher_shape": 0.11125975155830384,
+        "teacher_relative": 0.0680646870136261,
+        "total": 0.1456891984939575,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.11152742862701416,
+        "teacher_shape": 0.10523147106170655,
+        "teacher_relative": 0.07031995391845704,
+        "total": 0.15541528367996216,
+        "count": 500
+      },
+      "lr": 0.00025,
+      "lr_next": 0.00025,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 23,
+      "step": 11500,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.5724778175354004,
+            "max_abs": 5.556556701660156,
+            "positive_fraction": 0.050420697778463364
+          },
+          {
+            "rms": 0.3697121739387512,
+            "max_abs": 3.7864620685577393,
+            "positive_fraction": 0.19153378903865814
+          },
+          {
+            "rms": 0.3926076292991638,
+            "max_abs": 7.09041690826416,
+            "positive_fraction": 0.925216019153595
+          },
+          {
+            "rms": 0.29630258679389954,
+            "max_abs": 4.510235786437988,
+            "positive_fraction": 0.6757230162620544
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher_center": 0.09961010909080506,
+        "teacher_shape": 0.11096179127693176,
+        "teacher_relative": 0.06748469877243042,
+        "total": 0.14422173070907593,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.11026864385604858,
+        "teacher_shape": 0.10498538446426392,
+        "teacher_relative": 0.07000652503967285,
+        "total": 0.1540166234970093,
+        "count": 500
+      },
+      "lr": 0.00025,
+      "lr_next": 0.0001,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 24,
+      "step": 12000,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.5782625079154968,
+            "max_abs": 5.627319812774658,
+            "positive_fraction": 0.050130996853113174
+          },
+          {
+            "rms": 0.37414833903312683,
+            "max_abs": 3.990499496459961,
+            "positive_fraction": 0.1745453029870987
+          },
+          {
+            "rms": 0.3959726393222809,
+            "max_abs": 6.990633487701416,
+            "positive_fraction": 0.9283649325370789
+          },
+          {
+            "rms": 0.2993519604206085,
+            "max_abs": 4.738410949707031,
+            "positive_fraction": 0.6783649325370789
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher_center": 0.09839236974716187,
+        "teacher_shape": 0.1107033987045288,
+        "teacher_relative": 0.06750871586799621,
+        "total": 0.142945396900177,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.11103503656387329,
+        "teacher_shape": 0.1050544228553772,
+        "teacher_relative": 0.07021765255928039,
+        "total": 0.15485306024551393,
+        "count": 500
+      },
+      "lr": 0.0001,
+      "lr_next": 0.0001,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 25,
+      "step": 12500,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.5824133157730103,
+            "max_abs": 5.599977016448975,
+            "positive_fraction": 0.0495421439409256
+          },
+          {
+            "rms": 0.38114893436431885,
+            "max_abs": 3.7326273918151855,
+            "positive_fraction": 0.18675370514392853
+          },
+          {
+            "rms": 0.39818283915519714,
+            "max_abs": 7.186260223388672,
+            "positive_fraction": 0.9243028163909912
+          },
+          {
+            "rms": 0.300243079662323,
+            "max_abs": 4.6811323165893555,
+            "positive_fraction": 0.6968460083007812
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher_center": 0.09829225659370422,
+        "teacher_shape": 0.11034491562843322,
+        "teacher_relative": 0.06740225839614868,
+        "total": 0.14272905111312867,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.11062327194213867,
+        "teacher_shape": 0.10494398069381713,
+        "teacher_relative": 0.06997408652305603,
+        "total": 0.15435279035568236,
+        "count": 500
+      },
+      "lr": 0.0001,
+      "lr_next": 0.0001,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 26,
+      "step": 13000,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.595500648021698,
+            "max_abs": 5.509451389312744,
+            "positive_fraction": 0.04998299479484558
+          },
+          {
+            "rms": 0.3839871287345886,
+            "max_abs": 3.511314630508423,
+            "positive_fraction": 0.20203547179698944
+          },
+          {
+            "rms": 0.38974520564079285,
+            "max_abs": 6.562967300415039,
+            "positive_fraction": 0.9260032773017883
+          },
+          {
+            "rms": 0.305844247341156,
+            "max_abs": 4.808438301086426,
+            "positive_fraction": 0.701575756072998
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher_center": 0.09813823199272156,
+        "teacher_shape": 0.10976704931259156,
+        "teacher_relative": 0.06739129948616028,
+        "total": 0.14242782163619996,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.11075609827041626,
+        "teacher_shape": 0.10505514287948609,
+        "teacher_relative": 0.07007936692237854,
+        "total": 0.15453972721099854,
+        "count": 500
+      },
+      "lr": 0.0001,
+      "lr_next": 5e-05,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 27,
+      "step": 13500,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.5959495902061462,
+            "max_abs": 5.5657830238342285,
+            "positive_fraction": 0.05152597278356552
+          },
+          {
+            "rms": 0.3895505666732788,
+            "max_abs": 4.065328121185303,
+            "positive_fraction": 0.20927171409130096
+          },
+          {
+            "rms": 0.392194926738739,
+            "max_abs": 6.992282867431641,
+            "positive_fraction": 0.9250239133834839
+          },
+          {
+            "rms": 0.31303396821022034,
+            "max_abs": 4.906637191772461,
+            "positive_fraction": 0.7026746869087219
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher_center": 0.0974750325679779,
+        "teacher_shape": 0.1097142424583435,
+        "teacher_relative": 0.06752105474472046,
+        "total": 0.1417838568687439,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.11136614608764649,
+        "teacher_shape": 0.10524830532073974,
+        "teacher_relative": 0.07025340723991394,
+        "total": 0.15524158000946045,
+        "count": 500
+      },
+      "lr": 5e-05,
+      "lr_next": 5e-05,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 28,
+      "step": 14000,
+      "activation_diagnostic": {
+        "scope": "original5 train repeated batch32, eval/no_grad, no optimizer or RNG mutation",
+        "readout_pre_SiLU": [
+          {
+            "rms": 0.5952799916267395,
+            "max_abs": 5.526752471923828,
+            "positive_fraction": 0.05188495293259621
+          },
+          {
+            "rms": 0.3914389908313751,
+            "max_abs": 3.994819164276123,
+            "positive_fraction": 0.208314448595047
+          },
+          {
+            "rms": 0.39228421449661255,
+            "max_abs": 6.967545986175537,
+            "positive_fraction": 0.9244665503501892
+          },
+          {
+            "rms": 0.31505030393600464,
+            "max_abs": 5.014098644256592,
+            "positive_fraction": 0.6925981044769287
+          }
+        ]
+      },
+      "train_monitor": {
+        "teacher_center": 0.09720821595191956,
+        "teacher_shape": 0.10977378964424134,
+        "teacher_relative": 0.06741968393325806,
+        "total": 0.1415065851211548,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.11105759859085083,
+        "teacher_shape": 0.1050127305984497,
+        "teacher_relative": 0.0701572687625885,
+        "total": 0.15485009670257568,
+        "count": 500
+      },
+      "lr": 5e-05,
+      "lr_next": 5e-05,
+      "train_monitor_seen_count": 500
+    }
+  ],
+  "status": "early_stop",
+  "finished": true,
+  "seen_count": 16000,
+  "scheduler": {
+    "best": 0.1529908142089844,
+    "bad": 2,
+    "early_bad": 8,
+    "drops": 3,
+    "last_drop": 26
+  },
+  "elapsed_seconds": 925.8095518000046,
+  "test_read": false
+}

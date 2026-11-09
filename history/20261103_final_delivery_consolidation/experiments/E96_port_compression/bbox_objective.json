@@ -1,0 +1,17 @@
+{
+  "revision": "E96.direct_bbox05.v2",
+  "box_weight": 0.5,
+  "box_definition": "B/A; no clipping, subtraction or draft budget",
+  "calibration": "experiments/E96_port_compression/weight_design_proposal.md",
+  "other_effective_weights": {
+    "overlap": 1,
+    "wirelength": 0.05,
+    "soft": 0.2,
+    "intent": 0.1
+  },
+  "test_read": false,
+  "inherited_without_recalibration": false,
+  "coefficient_rule": "floor(10*0.5*min_five_train_endpoint_break_even)/10 = 0.5; explicit 50% design margin, not an optimum",
+  "previous_box_weight": 8.46,
+  "source_evidence": "experiments/E95_single_pass_corrector/runs/20261101_bbox_preparation/calibration.json"
+}

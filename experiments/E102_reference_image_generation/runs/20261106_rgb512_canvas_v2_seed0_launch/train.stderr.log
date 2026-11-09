@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "E:\project\ICCAD\2026\problemC\experiments\E102_reference_image_generation\train.py", line 259, in <module>
+    main()
+  File "E:\project\ICCAD\2026\problemC\experiments\E102_reference_image_generation\train.py", line 204, in main
+    atomic_json(args.run / "heartbeat.json", {"epoch": state["epoch"], "steps": state["steps"],
+  File "E:\project\ICCAD\2026\problemC\experiments\E102_reference_image_generation\train.py", line 27, in atomic_json
+    temporary.replace(path)
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\pathlib.py", line 1247, in replace
+    self._accessor.replace(self, target)
+PermissionError: [WinError 5] ¾Ü¾ø·ÃÎÊ¡£: 'E:\\project\\ICCAD\\2026\\problemC\\experiments\\E102_reference_image_generation\\runs\\20261106_rgb512_canvas_v2_seed0\\heartbeat.json.tmp' -> 'E:\\project\\ICCAD\\2026\\problemC\\experiments\\E102_reference_image_generation\\runs\\20261106_rgb512_canvas_v2_seed0\\heartbeat.json'

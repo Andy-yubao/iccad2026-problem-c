@@ -1,0 +1,16 @@
+{
+  "formal_training_affected": false,
+  "issues": [
+    {
+      "issue": "FP32 exact-widening tolerance3e-6 too strict for new reduction order",
+      "observed_max_absolute_difference": 9.298324584960938e-06,
+      "resolution": "Explicit numerical tolerance rtol5e-5/atol2e-5; no model change to hide mismatch"
+    },
+    {
+      "issue": "Deterministic gather backward synchronizes to CPU during CUDA capture",
+      "resolution": "Equivalent two-axis torch.where preserving reference-axis selection and first-axis ties; fixed Loss unchanged"
+    }
+  ],
+  "verification": "Five fixed training cases; CUDA forward/backward, finite protection and true Dropout Adam checkpoint next update bit exact passed",
+  "test_read": false
+}

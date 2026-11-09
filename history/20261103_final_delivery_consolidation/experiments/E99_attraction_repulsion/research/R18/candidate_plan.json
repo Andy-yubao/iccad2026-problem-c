@@ -1,0 +1,19 @@
+{
+  "revision": "E99.R18.rectangle_face_sign_only.v1",
+  "status": "registered_after_completed_R17_before_R18_candidate_runs",
+  "single_hypothesis": "Separate strain direction from strain magnitude. At each pair retain absolute old radial_i*(ux^2-uy^2) coefficient, but choose its sign from the active joint rectangle contact-face derivative. Keep all center forces, initial-area mobility, damping,20 rounds and all caps identical to R15 attraction_equal_slope.",
+  "evidence": "R17 exact face derivative reduces raw overlap to1.64955% but final trainQ worsens1.01084845->1.01275279; all500 legal. Mean total log-shape path increases0.02413694->0.03259589 (about35%). Largest weighted regressions include increased final group/boundary violations. Correct frozen-direction geometry is not proof of final-layout objective benefit.",
+  "equation": "coefficient=sign(active_joint_face_dr_dqi)*abs(radial_i*(ux^2-uy^2)); active-face derivative x positive,y negative, at relative1e-11 tie average derivative and use its sign, zero derivative gives0. This is a controlled heuristic direction ablation, not an exact potential gradient.",
+  "configuration": {"iterations":20,"step_size":0.5,"step_fraction":0.05,"total_fraction":0.4,"attraction_range":0.5,"attraction_strength":1.0,"repulsion_strength":1.0,"shape_step_size":0.5,"shape_step_fraction":0.03,"shape_total_fraction":0.5,"exclude_exhausted":true,"area_attraction":false,"rectangle_faces":true,"rectangle_face_sign_only":true},
+  "control": "Frozen R15 attraction_equal_slope same500 Q1.010848448528; R17 full derivative same500 also retained for read-only mechanism comparison. No repeated control solves.",
+  "panel": "v5.train_monitor500 same frozen C3 drafts and public inputs, original order; no dev or test access",
+  "pipeline": "pureAR -> unchanged original full planner/config -> unchanged hard checks; labels/denominators only scoring outside timer",
+  "preflight": {"indices":[0,4,43,95,135],"checks":"old branch trajectory bit-exact to R15; candidate logging/production bit-exact; area/locks/budgets; full official+independent hard legality. Same5 final records reused in full500."},
+  "trajectory_logging": "Every module every round raw/applied force response, shape stress/dq, path/caps and coordinates; capture and serialization outside CPU production timing; production prefix exact vs logged trajectory.",
+  "timing": "Cached-draft CPU AR+original planner+hard only. No new C3 and no full250ms acceptance; control timings historical/unpaired.",
+  "execution": "Single math-thread numerical worker, sharedOS lock, source-bound atomic records, STOP percase; failures preserved, no automatic retry or automatic dev launch.",
+  "preflight_output": "runs/research/20261103_R18_face_sign_preflight5",
+  "output": "runs/research/20261103_R18_face_sign_train500",
+  "after": "Review all500 finalQ, geometry, soft violations, shape paths and timing before another mechanism or dev freeze. Keep all bad and timed-out members.",
+  "test_read": false,"new_training": false
+}

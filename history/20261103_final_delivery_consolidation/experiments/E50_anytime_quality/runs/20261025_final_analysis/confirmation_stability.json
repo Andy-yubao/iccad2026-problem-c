@@ -1,0 +1,157 @@
+{
+  "confirmation": {
+    "count": 100,
+    "hard_legal": 100,
+    "weighted_Q": 1.0052827279046472,
+    "baseline_weighted_Q": 1.017490454144641,
+    "pair_win_tie_loss": [
+      79,
+      16,
+      5
+    ],
+    "max_Q": 1.1522723603767182,
+    "p95_Q": 1.0797343358798461,
+    "Q_gt1_2": 0,
+    "mean_seconds": 4.5011337460100185,
+    "max_seconds": 4.920428100042045,
+    "over5s": 0,
+    "regressions": [
+      {
+        "index": 444,
+        "baseline_Q": 1.0065213026759154,
+        "selected_Q": 1.0068523815737755,
+        "delta": 0.00033107889786010425
+      },
+      {
+        "index": 274,
+        "baseline_Q": 1.0000125429418238,
+        "selected_Q": 1.000114630750704,
+        "delta": 0.00010208780888021352
+      },
+      {
+        "index": 250,
+        "baseline_Q": 1.0208324512547469,
+        "selected_Q": 1.0222802001988636,
+        "delta": 0.0014477489441167002
+      },
+      {
+        "index": 417,
+        "baseline_Q": 1.0027134017752737,
+        "selected_Q": 1.005815651526902,
+        "delta": 0.0031022497516284275
+      },
+      {
+        "index": 152,
+        "baseline_Q": 1.0040415057101006,
+        "selected_Q": 1.004144546954138,
+        "delta": 0.00010304124403726078
+      }
+    ]
+  },
+  "stability": {
+    "cases": 5,
+    "repeats": 3,
+    "runs": 15,
+    "hard_legal": 15,
+    "regressions": 0,
+    "max_Q": 1.1552400576833495,
+    "over1_2": 0,
+    "max_seconds": 4.8399022000376135,
+    "over5s": 0,
+    "per_case": [
+      {
+        "index": 164,
+        "Q_runs": [
+          1.1552400576833495,
+          1.1552400576833495,
+          1.1552400576833495
+        ],
+        "min_Q": 1.1552400576833495,
+        "max_Q": 1.1552400576833495,
+        "baseline_Q": 1.9272793619183735,
+        "seconds_runs": [
+          4.8399022000376135,
+          4.6227909999433905,
+          4.798931900062598
+        ],
+        "all_hard_legal": true,
+        "all_no_regression": true
+      },
+      {
+        "index": 443,
+        "Q_runs": [
+          1.0208815493909467,
+          1.0208815493909467,
+          1.0208815493909467
+        ],
+        "min_Q": 1.0208815493909467,
+        "max_Q": 1.0208815493909467,
+        "baseline_Q": 1.7643778487540673,
+        "seconds_runs": [
+          4.478578299982473,
+          4.476331600104459,
+          4.484879900002852
+        ],
+        "all_hard_legal": true,
+        "all_no_regression": true
+      },
+      {
+        "index": 246,
+        "Q_runs": [
+          1.1410140288572628,
+          1.1410140288572628,
+          1.1410140288572628
+        ],
+        "min_Q": 1.1410140288572628,
+        "max_Q": 1.1410140288572628,
+        "baseline_Q": 1.3070366537396683,
+        "seconds_runs": [
+          4.59717720001936,
+          4.620618999935687,
+          4.597172299982049
+        ],
+        "all_hard_legal": true,
+        "all_no_regression": true
+      },
+      {
+        "index": 21,
+        "Q_runs": [
+          1.0421349060474494,
+          1.0421349060474494,
+          1.0421349060474494
+        ],
+        "min_Q": 1.0421349060474494,
+        "max_Q": 1.0421349060474494,
+        "baseline_Q": 1.1477014965565053,
+        "seconds_runs": [
+          4.603704700013623,
+          4.619114000000991,
+          4.599032299942337
+        ],
+        "all_hard_legal": true,
+        "all_no_regression": true
+      },
+      {
+        "index": 259,
+        "Q_runs": [
+          1.0257282242950985,
+          1.016027832009022,
+          1.0257282242950985
+        ],
+        "min_Q": 1.016027832009022,
+        "max_Q": 1.0257282242950985,
+        "baseline_Q": 1.0320381993475871,
+        "seconds_runs": [
+          4.567962000030093,
+          4.620168600114994,
+          4.617559600039385
+        ],
+        "all_hard_legal": true,
+        "all_no_regression": true
+      }
+    ]
+  },
+  "scope": "primary100 adaptive gate passed; separate development100 frozen before results, no test opened; three repetitions measure timing/numeric variation on five hard cases, not a universal guarantee",
+  "search_and_selection_changed_after_confirmation_started": false,
+  "solver_or_inference_calls": 0
+}

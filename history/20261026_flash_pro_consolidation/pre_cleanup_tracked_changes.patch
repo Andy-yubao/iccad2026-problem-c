@@ -1,0 +1,777 @@
+diff --git a/.gitignore b/.gitignore
+index 21314ec..fdeecda 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -103,3 +103,131 @@ experiments/E37_radial_draft_expansion/runs/**/source_snapshot.zip
+ # Authorized visual inspection of100 local-test drafts: images/coordinates local.
+ experiments/E25_integrated_baseline/runs/20261022_test100_draft_gallery/images/
+ experiments/E25_integrated_baseline/runs/20261022_test100_draft_gallery/drafts_local.json
++# Final sealed evaluation: full coordinates and recoverable source snapshot stay local.
++experiments/E25_integrated_baseline/runs/20261024_final_test1000_seed20261024/cases/
++experiments/E25_integrated_baseline/runs/20261024_final_test1000_seed20261024/source_snapshot.zip
++# E38 retains full output coordinates and reproducibility snapshots locally.
++experiments/E38_model_architecture/runs/**/terminal/results.json
++experiments/E38_model_architecture/runs/**/terminal/partial.json
++experiments/E38_model_architecture/runs/**/full_dev_partial.json
++experiments/E38_model_architecture/runs/**/source_snapshot.zip
++experiments/E39_rectangular_attention/runs/**/terminal/results.json
++experiments/E39_rectangular_attention/runs/**/terminal/partial.json
++experiments/E39_rectangular_attention/runs/**/full_dev_partial.json
++experiments/E39_rectangular_attention/runs/**/source_snapshot.zip
++experiments/E40_endpoint_constraint_tokens/runs/**/terminal/results.json
++experiments/E40_endpoint_constraint_tokens/runs/**/terminal/partial.json
++experiments/E40_endpoint_constraint_tokens/runs/**/full_dev_partial.json
++experiments/E40_endpoint_constraint_tokens/runs/**/source_snapshot.zip
++
++# E39 diagnostic galleries retain layout pixels locally.
++experiments/E39_rectangular_attention/runs/20261023_failure_mode_audit/examples/
++
++# E41 keeps full layouts and numerical source snapshots local.
++experiments/E41_rectangular_depth/runs/**/terminal/results.json
++experiments/E41_rectangular_depth/runs/**/terminal/partial.json
++experiments/E41_rectangular_depth/runs/**/full_dev_partial.json
++experiments/E41_rectangular_depth/runs/**/source_snapshot.zip
++
++# E42 full layouts and numerical source snapshots remain local.
++experiments/E42_joint_regularization/runs/**/terminal/results.json
++experiments/E42_joint_regularization/runs/**/terminal/partial.json
++experiments/E42_joint_regularization/runs/**/full_dev_partial.json
++experiments/E42_joint_regularization/runs/**/source_snapshot.zip
++experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/cases/
++
++# E43 full layouts and numerical source snapshots remain local.
++experiments/E43_overlap_area_loss/runs/**/terminal/results.json
++experiments/E43_overlap_area_loss/runs/**/terminal/partial.json
++experiments/E43_overlap_area_loss/runs/**/full_dev_partial.json
++experiments/E43_overlap_area_loss/runs/**/source_snapshot.zip
++
++# E44 stage-A full coordinates and reconstructible source snapshots stay local.
++experiments/E44_near_limit_proposals/runs/**/results_local.json
++experiments/E44_near_limit_proposals/runs/**/source_snapshot.zip
++
++# E45 keeps full drafts/layouts, resumable payloads and snapshots local.
++experiments/E45_draft_fidelity/runs/**/results_local.json
++experiments/E45_draft_fidelity/runs/**/source_snapshot.zip
++
++# E46 full drafts, coordinates, resumable payloads and numerical snapshots local.
++experiments/E46_global_draft_refinement/runs/**/results_local.json
++experiments/E46_global_draft_refinement/runs/**/source_snapshot.zip
++experiments/E46_global_draft_refinement/runs/**/images/
++
++# E47 full layouts, caches, head weights and source snapshots stay local.
++experiments/E47_draft_topology_confidence/runs/**/results_local.json
++experiments/E47_draft_topology_confidence/runs/**/source_snapshot.zip
++experiments/E47_draft_topology_confidence/runs/**/cache/
++experiments/E47_draft_topology_confidence/runs/**/checkpoints/
++experiments/E47_draft_topology_confidence/runs/**/images/
++experiments/E47_draft_topology_confidence/runs/**/cases/
++
++# Human review: generated layouts, pixels and transactional rating database local.
++**/runs/**/drafts_local/
++**/runs/**/image_meta/
++**/runs/**/ratings.sqlite3*
++experiments/E42_joint_regularization/runs/*visual_review*/images/
++experiments/E42_joint_regularization/runs/*visual_review*/manifest.json
++**/runs/*visual_review*/frontend_preview.png
++
++# Feedback-derived geometric diagnosis: raw annotations and layout witnesses local.
++experiments/E42_joint_regularization/runs/*feedback_geometry*/cases_local/
++experiments/E42_joint_regularization/runs/*feedback_geometry*/feedback_snapshot.json
++experiments/E42_joint_regularization/runs/*feedback_geometry*/metrics_local.csv
++experiments/E42_joint_regularization/runs/*feedback_geometry*/initial_probe_case*.json
++experiments/E42_joint_regularization/runs/*feedback_geometry*/images/
++
++# Four-angle orderliness diagnosis: detailed layouts, gradients and human feedback local.
++experiments/E42_joint_regularization/runs/*orderliness*/repair_local/
++experiments/E42_joint_regularization/runs/*orderliness*/layers_local/
++experiments/E42_joint_regularization/runs/*orderliness*/relaxation_local/
++experiments/E42_joint_regularization/runs/*orderliness*/counterfactual_local/
++experiments/E42_joint_regularization/runs/*orderliness*/comparison_review/
++
++# E48 retains the full candidate database and rendered layouts locally.
++experiments/E48_quality_potential/runs/**/cases/
++experiments/E48_quality_potential/runs/**/images/
++experiments/E48_quality_potential/runs/**/source_snapshot.zip
++experiments/E49_monotone_quality/runs/**/cases/
++experiments/E49_monotone_quality/runs/**/images/
++experiments/E49_monotone_quality/runs/**/source_snapshot.zip
++experiments/E50_anytime_quality/runs/**/cases/
++experiments/E50_anytime_quality/runs/**/images/
++experiments/E50_anytime_quality/runs/**/source_snapshot.zip
++
++# E51 saved draft/final coordinates, review pixels and source snapshots stay local.
++experiments/E51_module_overlap/runs/**/terminal/results.json
++experiments/E51_module_overlap/runs/**/terminal/partial.json
++experiments/E51_module_overlap/runs/**/full_dev_partial.json
++experiments/E51_module_overlap/runs/**/source_snapshot.zip
++experiments/E51_module_overlap/runs/**/visual_review100/
++experiments/E51_module_overlap/runs/**/cases/
++experiments/E51_module_overlap/runs/*reference_E51_E42*/images/
++experiments/E51_module_overlap/runs/*reference_E51_E42*/image_meta/
++experiments/E51_module_overlap/runs/*reference_E51_E42*/e42_drafts_local/
++
++# E52 local layouts, tensor traces and source snapshots.
++experiments/E52_training_throughput/runs/**/terminal/results.json
++experiments/E52_training_throughput/runs/**/terminal/partial.json
++experiments/E52_training_throughput/runs/**/full_dev_partial.json
++experiments/E52_training_throughput/runs/**/source_snapshot.zip
++experiments/E52_training_throughput/runs/**/visual_review100/
++experiments/E52_training_throughput/runs/**/cases/
++
++# E53 layouts, checkpoint payloads, snapshots and generated images stay local.
++experiments/E53_loss_geometry/runs/**/terminal/results.json
++experiments/E53_loss_geometry/runs/**/terminal/partial.json
++experiments/E53_loss_geometry/runs/**/full_dev_partial.json
++experiments/E53_loss_geometry/runs/**/source_snapshot.zip
++experiments/E53_loss_geometry/runs/**/draft_comparison100/images/
++experiments/E53_loss_geometry/runs/**/checkpoints/
++experiments/E53_loss_geometry/runs/**/failure_examples/
++
++# E54 branch checkpoints, coordinate payloads and rendered comparisons stay local.
++experiments/E54_reference_extremes/runs/**/checkpoints/
++experiments/E54_reference_extremes/runs/**/terminal/results.json
++experiments/E54_reference_extremes/runs/**/terminal/partial.json
++experiments/E54_reference_extremes/runs/**/full_dev_partial.json
++experiments/E54_reference_extremes/runs/**/source_snapshot.zip
++experiments/E54_reference_extremes/runs/**/draft_comparison100/images/
+diff --git a/AGENTS.md b/AGENTS.md
+index 2aa03be..300b9d6 100644
+--- a/AGENTS.md
++++ b/AGENTS.md
+@@ -8,6 +8,7 @@
+ - 固定使用 protocol/split_v1.json 的 80/10/10 划分，保持冻结文件原件；本地测试封存，公开验证只作兼容与公开对照。
+ - 原始 protocol/split_v1.json 与历史 workset_v2.json 保持冻结；新 MIB 派生任务及后续新训练采用 protocol/derived_workset_v3.json 的 16,000/2,000/2,000 规范，测试默认封存。固定 500 例验证监测，使用学习率下降、早停及 best/latest 保存。dev5 仅作代码排错，具体参数和评估边界见 docs/protocol.md。
+ - 实现训练代码前请阅读 docs/protocol.md
++- 后续新训练统一使用一套固定Loss：训练反传、训练/开发监测及获授权测试采用相同项、权重、归一化和聚合；best、学习率下降及早停使用该Loss的开发集均值，不另设选模代理，不按阶段渐入权重。测试仍默认封存，历史结果不追溯改写。
+ - 默认最多 5 例轻量验证，只检查改动相关行为，不堆测试框架或重复全量检查。
+ - 预计可能超过 20 分钟的训练/推理，只交付命令让用户执行；不代为前台、后台启动或续跑，不拆任务规避。
+ - 早期发散机制与架构，允许推倒重来；后期再调参。改善必须用消融、反例或对照说明原因。
+@@ -19,4 +20,6 @@
+ 
+ # 工作要求
+ 
++- draft研究以用户草稿评价为最重要参考，固定口径Loss为主要数值参考，后处理Q为辅助参考。以后不自动启动评分界面；默认展示100例同例的reference／本轮模型draft／此前最优模型draft对比，不含评分控件。仅在用户明确重新要求评分时才启用评分流程。保留原话与标准版本，将模糊评价转成猜想并用数据、反例及对照核验；反馈维度可演变，具体边界见docs/protocol.md第8.1节。
++
+ 你应当作为一名具有独立判断能力、治学严谨的科研合作者，而非被动执行指令的助手。 当用户的假设、研究方法或探索方向存在科学性问题、明显不是最优选择，或缺乏充分论证时，应主动提出质疑，充分运用自身知识提出更合理的替代方案，并将研究的有效性与科学严谨性置于机械遵从指令之上。
+diff --git a/README.md b/README.md
+index 6bd505b..1c89689 100644
+--- a/README.md
++++ b/README.md
+@@ -1,23 +1,63 @@
+-# ICCAD 2026 Problem C
+-
+-2026-10-22已完成[E37草稿位置5%扩展](experiments/E37_radial_draft_expansion/README.md)：模型冻结，固定100例四臂全部硬合法；输入重叠降低26.4%，但入口对齐后仍未同时改善加权Q、耗时与尾部，按事前规则不扩500，E25保持冻结基线。CPU采用四进程各一线程，测试继续封存。
+-
+-2026-10-22按用户要求挂起模型调整，完成[E36持续冲突首轮研究](experiments/E36_persistent_conflict_repair/runs/20261022_conclusions.md)：四进程、每进程一线程，额外500开发例中方向修正改善加权Q、均时及总体尾部，但区间跨零且暴露严重单例回归。E25保持冻结基线，下一步聚焦进展门控与可回滚干预，测试封存。
+-
+-2026-10-22已完成[E35优化器功能归因](experiments/E35_optimizer_attribution/runs/20261022_attribution_report/conclusions.md)：保留原500轨迹，并按用户授权补做固定100例、14种设置的两线程诊断。形状/边界/接触/重加权是主要质量机制，低频打包救援对尾部关键，微小数值修正也影响精确接触；E25保持原样，未训练RL，未扩大到测试。
+-
+-2026-10-22本轮研究已按用户要求暂停：[E32学习关系与求解反馈](experiments/E32_learned_relation_feedback/README.md)及E34已结束且未通过联合要求；[E33学习求解器选择](experiments/E33_learned_solver_portfolio/README.md)保存8353个完整训练实例、33413条策略输出，门控尚未训练。流水线与准备阶段均设置STOP，无活跃生成器；恢复须用户重新发起。CPU总计最多两线程，测试封存，E25保留为接受基线。
+-
+-2026-10-22已完成[E30两线程研究](experiments/E30_stable_fast_geometry/runs/20261022_research_summary/analysis.md)：普通几何微调在固定监测面板改善Q与均时，但三种子及一次额外500例确认没有支持尾部稳定升级，**保留E25**。额外确认Q1.051866→1.046393、均时0.247792→0.241181秒，最差5%均值与最大Q恶化。独立[E31工作区复用检查](experiments/E31_conic_workspace_reuse/README.md)真实流程零命中，五例后停止。该轮数值任务已结束，未耗尽8小时上限；CPU总计最多两线程，测试封存。
+-
+-FloorSet研究工作区。先读[执行协议](docs/protocol.md)、[结构规范](docs/workspace_structure.md)与[AGENTS.md](AGENTS.md)。
+-
+-当前最佳整合为[E25基线](experiments/E25_integrated_baseline/README.md)：冻结E17 best51模型，采用E24 steady原生快速后处理。固定v5开发500例全部硬合法，加权Q **1.039578**、平均求解 **0.259487秒**；两项目标尚未同时达成。模型、数值求解代码及最佳结果保持冻结。
+-
+-日常实验区保留E25及[无训练baseline](experiments/baseline/README.md)，当前E32/E33/E34方向见[实验索引](experiments/README.md)，E30/E31保留上一轮必要证据。原E29方案已按用户要求删除，编号29可供后续新实验复用；测试继续封存。已结束的E23/E26/E27/E28源码、权重与必要证据归入[20261021归档](history/20261021_E29_consolidation/README.md)，早期整合见[20261020归档](history/20261020_E25_consolidation/README.md)。历史记录保持原样，迁移路径由清单恢复；数据、缓存与权重只保留本机。
+-
+-独立环境`.conda/envs/iccad2026`；实际数据位置由[paths.json](protocol/paths.json)解析。原始划分与各版工作集均冻结，当前训练使用[reference_workset_v5.json](protocol/reference_workset_v5.json)，测试继续封存。数据、环境、缓存及权重留本机，不入Git。
+-
+-数据处理复用[datasets](docs/datasets.md)，评分复用[scoring](scoring/README.md)，布局图统一使用[visualization](visualization/README.md)。上述Q是MIB派生任务的开发中性时间指标，不是正式比赛分数。
+-
+-[实验索引](experiments/README.md) · [Git约定](docs/git.md) · [质量目标](docs/aim.md) · [题目全文](references/official/problem_statement.md)
++# ICCAD 2026 Problem C
++
++2026-10-26，[E54两极端参考消融](experiments/E54_reference_extremes/README.md)已按用户要求取消。无reference支线失稳，停止于epoch24/step12080，best0；仅reference支线未启动。保留失败证据，不再续训或优化，原自主研究保持暂停，测试封存。
++
++2026-10-26，[E53固定Loss首轮验证](experiments/E53_loss_geometry/runs/20261026_geometry_seed0/analysis.md)完成：用户自行续训至63轮/best62，同500例flash全硬合法、加权Q1.055217，P95改善但最差5%和最大Q变差，未通过。草稿重叠下降，紧凑性/连线退让与严重救援仍在；无评分三列图已生成。自主研究及定时任务按用户要求继续暂停，未启动下一组。冻结96×12与flash、测试封存；训练吞吐优化见[protocol](docs/protocol.md)。
++
++2026-10-25，新增[E52训练吞吐优化](experiments/E52_training_throughput/README.md)：保留E51模型与统一Loss、FP32和batch32，短基准约2.55倍单步加速，Dropout更新与恢复核验通过。只准备入口，完整训练未启动；E51总墙钟还包含约55分钟异常长间隔，不能全部归因于模型参数。
++
++2026-10-25，[E51逐模块重叠损失](experiments/E51_module_overlap/README.md)的unified_v2已由用户完成：52轮早停、best52，统一开发Loss0.377453166。按用户要求后台运行[固定开发100例flash评价](experiments/E51_module_overlap/runs/20261025_flash100_seed20261025/)，含三相图准备；状态以progress.json为准，未读封存测试。训练、开发与未来获授权测试采用同一固定Loss。
++
++2026-10-25，E50的[完整500例开发检查与35例三相图](experiments/E50_anytime_quality/runs/20261025_full500_review/analysis.md)完成：500/500硬合法、全部5秒内，加权Q **1.012043**（常规1.025860），395胜/93平/12负；Q>1.2为3/500。质量与尾部门槛通过，严格逐例不退化仍未通过。326例比常规结果更接近draft，但改形仍普遍，不能将最终解的变化视为必要的最小修复。图集与候选质量—距离—发现时间前沿均从已保存结果生成，无重跑推理或求解。
++
++2026-10-25，[E50重写的质量优先后处理](experiments/E50_anytime_quality/README.md)通过[原固定100例验收](experiments/E50_anytime_quality/runs/20261025_final_analysis/analysis.md)：**100/100硬合法，76胜/24平/0负，加权Q1.007596，最差Q1.155240，完整均时4.528869秒、最大4.898213秒**，2+2数值线程；67例比常规结果更接近draft。达到用户新目标Q<1.015、逐例不退化、最多1例Q>1.2。[另100开发确认](experiments/E50_anytime_quality/runs/20261025_final_analysis/confirmation_stability.md)加权Q1.005283，全合法、全5秒内，但5例小回退；五难例三次重复全不退化。[帕累托与稳定性研究](experiments/E50_anytime_quality/frontier_research.md)保留这些限制，不宣称未知案例普遍逐例支配。E42模型/Loss/原常规快轨及封存数据保持原样。
++
++2026-10-24，新增[E48质量优先draft潜力求解器](experiments/E48_quality_potential/README.md)，按单例5秒、最多4线程设计。[固定100例](experiments/E48_quality_potential/runs/20261024_screen100_frozen_v4/analysis.md)全硬合法，Q<1.03为75/100（常规63/100），加权Q1.027597略差于常规1.024238，77例离draft更近；仍有25例未达标、2例超时。后加外部截止保护的五例全合法、最大4.960943秒，新版100未重跑。未达到权威评分器要求，E42常规后处理仍为当前结果呈现。
++
++2026-10-24，按用户授权依次检验“整齐且容易微调合法”的四个角度：[前三项报告](experiments/E42_joint_regularization/runs/20261024_orderliness_four_checks/analysis.md)已完成；第四项5组A/B被用户反馈为布局均不理想、差异太小，展示设计未取得有效比较信息，不要求继续补评。小预算完整合法化未取得合格见证；5开发例有目标梯度折中线索，原E42模型/Loss未改。入口见[E42说明](experiments/E42_joint_regularization/README.md)。
++
++2026-10-24，继续draft模型研究，新增[可复用人工评分前端](visualization/README.md#可复用草稿评分前端)。首轮从E42＋常规后处理已暴露测试1000例随机抽100张三相图，按用户要求结束于22张评分＋1仅标签；已完成[复杂堆积与低代价可消除留白诊断](experiments/E42_joint_regularization/runs/20261024_feedback_geometry23/analysis.md)，原模型和Loss未改。后续以用户反馈为最重要参考、Loss为主要数值参考、后处理Q为辅助参考；模糊评价先保留，再以数据和对照核验，见[研究原则](docs/protocol.md#81-草稿模型的人类反馈研究原则2026-10-24)。入口及本轮状态见[E42说明](experiments/E42_joint_regularization/README.md#2026-10-24首轮人工草稿评分)。
++
++2026-10-24，[朱老师交付报告与材料包](output/2026-10-24_朱老师交付报告/README.md)修订v2：以官方Beta为成绩参照，解释网络输入与12轮更新，附E42三相图、factbase、源证据及复现说明。三例草稿为图示补生成，1000例最终求解与成绩不重跑。
++
++2026-10-24，按用户要求完成冻结E42＋常规steady的[同1000例最终比较](experiments/E42_joint_regularization/runs/20261024_final_test1000_seed20261024/analysis.md)：**1000/1000硬合法，加权Q1.028385，平均完整求解0.222522秒/例**，4进程×1线程，零执行/评分错误。相同面板下均值点估计同时优于E25，原Q<1.04/均时<0.25秒目标均通过，当前结果呈现采用E42。Q改善的配对区间支持下降，时间差区间跨零，最大Q有所退化；完整限制见报告。该面板已在E25测试中暴露，属于用户追加的冻结候选比较，不是新的盲测，也不是正式比赛成绩。
++
++2026-10-24，完成冻结E25的[最终1000例本地留出测试](experiments/E25_integrated_baseline/runs/20261024_final_test1000_seed20261024/analysis.md)：**1000/1000硬合法，加权Q1.045270，平均完整求解0.231351秒/例**，CPU4进程×1线程，零执行/评分错误。排除此前已检查草稿的100例，事前按模块数分层抽样；剩余900例继续封存。按原Q<1.04/均时<0.25秒目标，时间通过、质量略未过。属于MIB派生任务的本地中性时间Q，不是正式比赛成绩。
++
++2026-10-24，[E47完整draft＋全局关系与置信度](experiments/E47_draft_topology_confidence/README.md)的[唯一终末500已完成](experiments/E47_draft_topology_confidence/runs/20261024_reference_probe_terminal500/summary.json)：best24辅助候选未通过质量/时间联合要求，没有升级工程基线。机制、来源、原生500及2秒100对照保留；参考辅助成绩不作为部署结果。
++
++2026-10-24，完成[E46全局布局保持与后处理优化](experiments/E46_global_draft_refinement/runs/final_report/analysis.md)：固定E42 AB，比较全局目标、结构/形状先验与压缩。最终候选100例通过，但冻结后400例确认失败；合并500全硬合法，加权Q1.026362→1.025415、完整均时0.284168→0.276181秒，3例严重退化、尾部略差，未升级。443例证明形状参考可明显抑制膨胀，但统一应用不稳。未训练或读测试，E25保持原样。
++
++2026-10-23，按用户授权完成[E45固定100例配对筛查](experiments/E45_draft_fidelity/runs/20261023_paired100_v6/analysis.md)：原draft冲突重启候选两组均100/100硬合法，但加权Q1.018737→1.020759，完整均时0.246989→0.249868秒，4例严重退化，平均草稿中心位移反增。候选未通过，停止扩大；本面板均低于2秒不代表所有案例达标，既有五例慢例仍保留。E25/E42不变，测试封存。
++
++2026-10-23，按用户要求[深入审计草稿结构的保留与破坏](experiments/E44_near_limit_proposals/runs/20261023_draft_structure_audit/analysis.md)：E25/E42当前后处理已利用完整几何，偏好围绕当前状态而非永久锚定原草稿。只读既存开发记录，区分大位移、局部邻居丢失与整体关系翻转；不默认改用纯结构预测，模型及后处理未改。E44质量优先、单例2秒目标保留。
++
++2026-10-23，用户将[E44调整为质量优先](experiments/E44_near_limit_proposals/quality_first.md)：目标加权Q≤1.01、全硬合法，单例完整预算放宽为2秒。[同五例同算法对照](experiments/E44_near_limit_proposals/runs/20261023_stageA_quality2s_check5/analysis.md)确认120块已知可行结构约0.29秒可兑现，旧速度前提解除；当前启发式质量仍差，下一步聚焦模型结构/形状表示与监督。预测器尚未训练，E25/E42及冻结数据保持原样，测试封存。
++
++2026-10-23，按用户确认准备[E43重叠面积训练](experiments/E43_overlap_area_loss/README.md)：保留E42矩形96×12联合AB，仅增加0.25×重叠面积梯度，原选模代理不变。唯一seed0、从头初始化，尚未启动；训练与评价由用户执行，旧队列及定时任务不恢复。
++
++2026-10-23，用户完成[E42联合正则化AB](experiments/E42_joint_regularization/runs/20261023_rectangle_w96d12_ab_seed0/analysis.md)：矩形96×12、FFN Dropout .05＋AdamW decay 3e-4，无增强；完整开发代理0.453814改善3.04%，泛化差距缩小34.4%。终末500全硬合法、加权Q1.025860，但P95/最大Q变差，保留为原始代理更好的研究候选，不升级E25。本轮只读检查，无续训或重评，原Loss/MIB面积处理及旧结果保持冻结。
++
++2026-10-23，用户自行完成[E41矩形96×16](experiments/E41_rectangular_depth/runs/20261023_rectangle_w96d16_seed0/analysis.md)：完整开发代理较矩形12层回退2.54%，共同轮数训练更好而验证更差；终末加权Q略差、最坏尾部有所改善，不作整体升级。保留E39矩形12层作为固定开发代理参照，[碰撞与预放置障碍审计](experiments/E39_rectangular_attention/runs/20261023_failure_mode_audit/analysis.md)指导后续问题。未续训或重评，MIB平均面积处理、E25与冻结数据不变，旧队列及定时任务保持关闭。
++
++2026-10-22已完成[E37草稿位置5%扩展](experiments/E37_radial_draft_expansion/README.md)：模型冻结，固定100例四臂全部硬合法；输入重叠降低26.4%，但入口对齐后仍未同时改善加权Q、耗时与尾部，按事前规则不扩500，E25保持冻结基线。CPU采用四进程各一线程，测试继续封存。
++
++2026-10-22按用户要求挂起模型调整，完成[E36持续冲突首轮研究](experiments/E36_persistent_conflict_repair/runs/20261022_conclusions.md)：四进程、每进程一线程，额外500开发例中方向修正改善加权Q、均时及总体尾部，但区间跨零且暴露严重单例回归。E25保持冻结基线，下一步聚焦进展门控与可回滚干预，测试封存。
++
++2026-10-22已完成[E35优化器功能归因](experiments/E35_optimizer_attribution/runs/20261022_attribution_report/conclusions.md)：保留原500轨迹，并按用户授权补做固定100例、14种设置的两线程诊断。形状/边界/接触/重加权是主要质量机制，低频打包救援对尾部关键，微小数值修正也影响精确接触；E25保持原样，未训练RL，未扩大到测试。
++
++2026-10-22本轮研究已按用户要求暂停：[E32学习关系与求解反馈](experiments/E32_learned_relation_feedback/README.md)及E34已结束且未通过联合要求；[E33学习求解器选择](experiments/E33_learned_solver_portfolio/README.md)保存8353个完整训练实例、33413条策略输出，门控尚未训练。流水线与准备阶段均设置STOP，无活跃生成器；恢复须用户重新发起。CPU总计最多两线程，测试封存，E25保留为接受基线。
++
++2026-10-22已完成[E30两线程研究](experiments/E30_stable_fast_geometry/runs/20261022_research_summary/analysis.md)：普通几何微调在固定监测面板改善Q与均时，但三种子及一次额外500例确认没有支持尾部稳定升级，**保留E25**。额外确认Q1.051866→1.046393、均时0.247792→0.241181秒，最差5%均值与最大Q恶化。独立[E31工作区复用检查](experiments/E31_conic_workspace_reuse/README.md)真实流程零命中，五例后停止。该轮数值任务已结束，未耗尽8小时上限；CPU总计最多两线程，测试封存。
++
++FloorSet研究工作区。先读[执行协议](docs/protocol.md)、[结构规范](docs/workspace_structure.md)与[AGENTS.md](AGENTS.md)。
++
++当前结果呈现采用[E42＋常规后处理](experiments/E42_joint_regularization/README.md)：冻结矩形96×12联合正则化best51模型，采用原版steady。同1000例全部硬合法，加权Q **1.028385**、平均完整求解 **0.222522秒**，达到原均值目标；尾部与耗时不确定性见配对报告。[E25](experiments/E25_integrated_baseline/README.md)继续保留冻结历史参照，原模型、数值代码及运行证据不改写。
++
++日常实验区保留E25及[无训练baseline](experiments/baseline/README.md)，研究状态见[实验索引](experiments/README.md)，E30/E31保留上一轮必要证据。原E29方案已按用户要求删除，编号29可供后续新实验复用；未使用的900例v5测试继续封存。已结束的E23/E26/E27/E28源码、权重与必要证据归入[20261021归档](history/20261021_E29_consolidation/README.md)，早期整合见[20261020归档](history/20261020_E25_consolidation/README.md)。历史记录保持原样，迁移路径由清单恢复；数据、缓存与权重只保留本机。
++
++独立环境`.conda/envs/iccad2026`；实际数据位置由[paths.json](protocol/paths.json)解析。原始划分与各版工作集均冻结，当前工作集为[reference_workset_v5.json](protocol/reference_workset_v5.json)；v5测试暴露范围见最终评价记录，其余继续封存。数据、环境、缓存及权重留本机，不入Git。
++
++数据处理复用[datasets](docs/datasets.md)，评分复用[scoring](scoring/README.md)，布局图统一使用[visualization](visualization/README.md)。上述Q是MIB派生任务的开发中性时间指标，不是正式比赛分数。
++
++[实验索引](experiments/README.md) · [Git约定](docs/git.md) · [质量目标](docs/aim.md) · [题目全文](references/official/problem_statement.md)
+diff --git a/docs/protocol.md b/docs/protocol.md
+index e44389e..003236a 100644
+--- a/docs/protocol.md
++++ b/docs/protocol.md
+@@ -1,133 +1,168 @@
+-# 研究与工程约定
+-
+-更新于2026-10-20。本文件保存当前执行规范；实验进度、具体超参数和已结束任务的授权说明归所属实验与历史记录。协议改变须说明原因和影响，不按实验结果临时更换数据、指标或预算。历史授权不自动续期。
+-
+-## 1. 数据划分与使用边界
+-
+-官方隐藏测试集未公开。本地自建测试不能称为官方隐藏集；公开验证集已用于开发诊断，只作接口兼容与公开对照，不再视作独立未见测试。
+-
+-原始数据按完整分片固定划分为80%训练、10%开发、10%本地测试，唯一索引是[split_v1.json](../protocol/split_v1.json)：7,200/900/900个分片。每个worker分配72/9/9个分片，同一分片的112个布局不拆分。worker编号不是模块数，worker均衡不代表模块数或生成家族已经独立分层。
+-
+-- 原始数据与冻结索引保留原件，路径统一由[paths.json](../protocol/paths.json)解析。不得静默重切分、迁移成员或覆盖旧版本。
+-- 训练梯度只使用所选版本的train成员；验证只用于监测与选择。先按冻结索引筛选，不能用shuffle代替划分。
+-- 自由块参考位置、标签及参考评分不能作为求解器或网络输入。固定/预放置的公开规格属于合法输入；标签和评分分母仅用于监督、计分或明确标注的诊断。
+-- 测试默认封存。模型、权重、流程和停止条件冻结后，仍须由用户明确发起测试；制定索引、准备代码或历史测试许可不等于新的读取授权。
+-- 测试反馈一旦用于改模型、调参或选择候选，后续结果须披露为自适应反馈后的结果，不能再宣称独立未见泛化。
+-
+-### 1.1 数据版本与当前工作集
+-
+-| 索引 | 作用与边界 |
+-|---|---|
+-| [split_v1.json](../protocol/split_v1.json) | 原始80/10/10完整分片归属，始终冻结 |
+-| [workset_v2.json](../protocol/workset_v2.json) | 历史原始任务的20,000/2,500/2,500工作集，仅用于对应旧实验与复现，不再作为新训练默认值 |
+-| [derived_workset_v3.json](../protocol/derived_workset_v3.json) | MIB平均面积派生任务，目标16,000/2,000/2,000，分别来自原同名分片池 |
+-| [distillation_workset_v4.json](../protocol/distillation_workset_v4.json) | 历史E15优质布局训练工作集，学生train16,000/dev2,000/test2,000，另有tail_test1,000 |
+-| [reference_workset_v5.json](../protocol/reference_workset_v5.json) | 当前E16已冻结原参考监督新工作集，在原三分片池内重抽16,000/2,000/2,000，按实际模块数尽量等量且三组比例一致 |
+-
+-v3的MIB面积修正规则只使用公开输入：组内取算术平均面积，保持组总面积及固定/预放置规格；仍不兼容则拒绝。记录修改、拒绝、覆盖与分布变化。局部兼容不保证所有几何和软约束可以同时满足。面积改变后的Q沿用原参考分母时，只作派生任务的反事实诊断，不能把任务变化的收益称为模型提升或正式比赛成绩。
+-
+-v4从完整25,000例布局库按未舍入Q及固定哈希平局规则选取最好20,000例；均来自原split_v1的train来源，再按原始完整分片隔离学生train/dev/test。它只改变本轮学生数据角色，不改写原划分，也不开放原local_test。主评价只代表这一选优分布，不代表完整未筛选分布。
+-
+-全库Q最差1,000例事先冻结为tail_test，与主20,000例样本不交叉，但允许共享原始分片，因此是尾部压力测试，不是分片独立的泛化测试。主test2,000与train/dev按分片隔离。生成布局的旧模型可能见过这些原train来源，须区分生成器暴露与本轮学生留出。
+-
+-2026-10-19用户明确要求E16重新选取成员，并确认保留原split_v1三分片池边界，要求实际模块数各档尽量等量、三组分布一致。v5使用新种子重新排名所有公开兼容候选，各模块数档严格分配8:1:1，保留MIB平均面积规则及原参考中心/长宽比监督，不按教师Q筛选。成员版本变更不覆盖旧冻结文件；数据、Loss和选模身份均登记差异，不能称为沿用旧v3成员。具体算法、配额与命令归[E16](../history/20261020_E25_consolidation/experiments/E16_reference_curriculum/README.md)。
+-
+-本次重新处理允许为local_test确定成员而读取公开面积、约束及固定/预放置宽高；原文件容器同时包含标签，筛选不得索引自由坐标或评分。旧v2测试面板2,500例全部保守排除，以覆盖已暴露前缀及可能在途成员。此授权仅限新成员准备，测试模型推理、自由标签分析、计分仍封存，不因准备完成自动开放。
+-
+-当前训练使用完整train16,000，固定train_monitor500和dev_monitor500，监测面板严格嵌套于对应新集合。成员冻结后不得按学生成绩重切。其他任务须显式声明版本，不混用成员、输入面积和标签版本；旧v4规则见[E14数据说明](../history/20261020_E25_consolidation/experiments/E14_stable_teacher/distillation_dataset.md)。
+-
+-### 1.2 训练与拟合判断的基本要求
+-
+-- 训练与验证明确分开；固定面板使用eval模式、不反向传播。分别记录中心误差、形状误差、质量代理与监督损失，不用不同mini-batch的即时loss判断收敛。
+-- 启动前固定验证频率、选模指标、min_delta、学习率下降规则、最低学习率和早停patience；下降学习率后留出观察机会。阶段性损失权重变化时，不能直接用随权重变化的总loss跨阶段选best。
+-- 分别保存best和可恢复的latest，保留模型、优化器、调度器、早停计数、数据排列/游标、随机状态、已见成员与累计预算。从头重训使用新目录，不覆盖旧权重或混为续训。
+-- 兼容的已有成果优先续用。修改代码、数据接口或选模规则时，明确登记差异和可复用状态，保留原始证据，不能直接绕过身份校验或重置预算。
+-- 固定训练/验证曲线注明监测训练样本实际见过与未见过的数量；必要时分开统计。最佳模型在完整dev上核对监测面板的代表性；未完成则明确标为待评。
+-- 监督误差、原始布局质量与后处理质量分开报告。降低坐标误差或代理损失，不保证实际Q改善；修复后硬合法也不代表网络草稿硬合法。
+-- 时间或步数上限是资源保护，不是收敛判据；早停不保证全局最优。欠拟合、过拟合、容量不足与目标不对齐的判断须有固定面板及对照证据。
+-
+-#### ML训练的学习率与早停规则
+-
+-- 每轮结束后在固定验证面板上评价一次，使用预先固定的主指标与min_delta判断是否有明显改善，不以单个训练batch的loss判断。
+-- 第1～14轮为学习率保护期；**第15轮起可以降低学习率**。保护期内仍保存验证曲线和best，但不累积用于触发学习率下降或早停的停滞计数。
+-- 保护期结束后，**连续3轮无明显改善，学习率切换至下一指定档位**，不再使用统一减半系数。出现明显改善时，连续无改善计数清零；一次下降后重置调度器的停滞计数，重新观察下一组3轮。这里的明显改善指的是至少能看到一定程度的优化，不能把极小的优化认为是可以不下调学习率的证据。
+-- **学习率固定采用4个档位：`1e-3 → 2.5e-4 → 1e-4 → 5e-5`，到第四档不再降低；早停前实际降低3次。** 2026-10-20用户明确指定这四个数值，替代此前以`1e-4`起步的设置；用于后续新训练。已有运行、日志和checkpoint保留实际学习率，续训如需采用新档位，须显式登记配置与优化器/调度器状态迁移，不静默改写或清零累计预算。
+-- **训练batch size固定为32。** 2026-10-20用户明确要求，后续训练入口与运行配置须一致使用`batch_size=32`；不能仍以16启动，或将梯度累积未经说明地视为相同配置。已有运行保留其实际batch；更改已有断点的batch时显式登记配置迁移，保留原样本游标、已见成员与累计预算。如实际显存不足，记录失败并协商调整，不静默减小batch。
+-- **连续3轮无明显改善时进入早停判断**；学习率下降不清空这项连续计数。实际停止须同时满足：连续无改善至少3轮、已完成3次下降，且第三次下降后的最低学习率档位已有至少二轮完整训练和验证。不能在刚进入第四档、尚未训练时立即停止。
+-- 3次下降是早停的前置条件，不强迫已有改善的模型人为降学习率凑次数。若第三次下降晚于连续停滞的第8轮，则等待上述条件满足后再早停；时间、步数上限或用户停止请求仍可优先终止，记录为资源停止或用户停止，不冒称早停或收敛。
+-- 当前E15后两组把明显改善固定为相对监测基准改善超过0.1%，且绝对改善超过1e-5，两者取较大门槛；小幅真实改善仍可保存best，但不重置停滞计数。调度基准只在明显改善时更新，允许多轮小幅改善积累后达到门槛。
+-- 恢复训练须保存并恢复实际下降次数、当前档位及其训练/验证完成状态、调度停滞计数和早停连续计数。既有运行更改这些规则时显式登记配置迁移，不静默改写旧运行或清零累计预算。
+-
+-<a id="13-本次冻结模型的测试授权"></a>
+-
+-### 1.3 历史测试暴露与已撤销安排
+-
+-旧v2冻结评价已停止，完成957/2,500例，覆盖worker_0..38，共39/100个worker；这是顺序前缀，不是事前均衡抽样，不补跑。已访问及中断时可能在途的成员按已暴露处理，不再把整套旧面板称为完全未见测试。原始结果与范围见[运行分析](../history/20261018_E10_consolidation/experiments/graph_proposal/runs/20261016_frozen_best_test2500_seed0/analysis.md)。
+-
+-E7已终止，其旧test50未读取；其他历史单次测试、图集及反馈范围以各自运行记录为准，见[E7结题报告](../history/20261018_E10_consolidation/experiments/repair_friendly_draft/conclusion.md)。这些记录不授权恢复已结束的训练、测试或未完成组合。新实验须披露有关历史暴露，不能因更换目录或数据角色将其视作未见。
+-
+-### 1.4 当前训练与最终评价约定
+-
+-当前保留基线为[E25](../experiments/E25_integrated_baseline/README.md)，没有待运行的新实验。原E29方案已按用户要求删除，编号29可复用，不自动恢复其计划。E23/E26/E27/E28已归入[20261021历史](../history/20261021_E29_consolidation/README.md)，E17及其他退役实验保持既有归档，不自动续跑。以下是通用训练/评价边界，历史运行保留发生时规则，不构成新启动授权：
+-
+-- 使用共享预处理缓存，首次校验、转换并持久化后，后续训练和恢复直接复用。缓存绑定数据、成员与预处理版本，支持中断恢复和并发写入保护；不能以提速为由混用版本或关闭必要校验。
+-- 训练及训练中的验证完全不执行求解器后处理。固定dev_monitor500的原始布局代理用于best选择、学习率调整和早停，指标在各配置和各阶段保持可比。
+-- 每组训练结束后，只允许对一个冻结best执行一次固定500例后处理评价。它不参与选模；不得根据终末Q更换checkpoint、调参或续训后再择优评价。
+-- 最终评价完成后复用已有结果；中断只能恢复同一冻结权重、同一面板的未完成部分，不能重复整轮或更换候选。学生主测试、尾部测试与原local_test继续封存。
+-- E17单组训练预算最多4小时或200轮，数据准备和终末500例评价另计；用户于2026-10-20明确授权后台依次执行准备、训练和终末评价，确认启动后不持续监测。历史E16三组每组2小时40分钟及后续延后衰减组每组4小时保留实际规则，不自动续跑。以上为累计训练阶段墙钟保护；源码/数据/设备及预算身份在恢复时核对，不清零累计预算。
+-
+-## 2. 策略阶段先发散，再调优
+-
+-先建立可运行且满足硬约束的简单参照，让比较有意义。早期保留3–5个机制不同、可证伪的假设，允许推翻表示、目标函数、模型结构或求解流程，不默认只在现有网络加层或反复调同一参数。
+-
+-每条路线写清为什么可能有效、什么观察会推翻它、停止投入的条件。先以小预算检验机制，仅调整让方法正常工作的必要参数；后期固定表示、架构与流程后再系统调优。保留无训练baseline参照，不自动恢复用户已明确删除的方向。
+-
+-## 3. 必须解释改善来自哪里
+-
+-实验前固定假设、主指标、对照、预算和种子；实现后记录实际变化与结果，不倒推假设。策略探索允许同时改变多项，但胜出后须用必要消融、对照或反例区分模型、数据、损失、约束处理、后处理、更多算力和实现加速的贡献。
+-
+-比较使用相同输入信息、面板、计分、后处理及时间口径。默认初筛seed=0，有足以影响取舍的结果再扩展固定3个种子。线程、硬件或预算变化须单独说明，不用增加资源换取未披露的优势。
+-
+-报告至少包括硬合法率、HPWL gap、bbox面积gap、边界/分组/MIB违反、质量尾部、回退情况、耗时与资源预算。不可行例计入主指标，条件于可行例的统计另标。算术Q与模块数加权Q分别报告，本地中性时间质量分、实际耗时与正式比赛分数分开说明。
+-
+-## 4. 时间、并行与运行权限
+-
+-**预计超过20分钟，或无法可靠排除超过20分钟的训练、推理及全量数据准备任务，只交付命令由用户执行，不代为前台、后台启动或续跑，也不拆分规避。** 用户在当前会话明确授权助手执行的特定长任务，仅在该次范围内有效，不扩展成后续自动执行权限，也不包含默认封存测试读取权。
+-
+-**执行大规模CPU任务时（>=100例），优先采用四线程，而不是默认单线程。** 适用于批量数据处理、缓存构建、评分和CPU推理等。显式配置线程数并确认实际生效；同时协调线程池与BLAS/OpenMP、PyTorch及求解器的库内线程，避免嵌套并行使线程数意外相乘。确因串行依赖、并发安全或实测性能需要采用其他线程数时，说明原因并记录配置。该要求用于后续任务，不静默改变已有冻结运行的资源口径。
+-
+-交付长任务须提供环境、完整命令、预计时间与资源、输出位置、停止和恢复方式；估计未经全量测量时明确注明。采用可复用缓存和可恢复进度，避免各配置重复预处理。用户执行后可按其请求读取状态和汇总，不自动续跑下一阶段。
+-
+-助手的短检查默认最多5例，累计训练/推理预算低于20分钟；不把长任务拆成多个短调用。用预估和首例计时控制预算，超出预期时在边界前保存并停止。训练循环保留batch/epoch预算检查、轻量checkpoint与原子写入，累计预算不因重启或恢复清零。
+-
+-## 5. 测试保持轻量
+-
+-- 只做改动相关的语法/导入、一个批次或最多5例功能检查及直接行为验证；dev5不承担正式选模或泛化结论。
+-- 原始任务优先使用固定dev_smoke_panel，公开接口兼容检查可用索引[0,19,39,69,99]，用途分开报告。派生数据接口检查仅取相应版本的train/dev样本，不碰封存测试。
+-- 复用已有校验器、输出和失败实例。数据接口变化时覆盖实际存在的主要格式，新约束处理包含实际违反例或针对性反例，不为每个脚本堆测试框架。
+-- 数据和版本不变不重复下载、解压或全量哈希；必要的首次完整性核验与日常增量检查分开。
+-- 通过相关检查后推进工作；没有新失败或未解决风险，不反复扩测。检查覆盖范围与结果声明相符。
+-
+-## 6. 工程与记录
+-
+-目录与复用边界见[结构规范](workspace_structure.md)。使用独立conda环境；官方原件保留在third_party/references，原始数据不覆盖。
+-
+-实验代码、设计、入口和结论归experiments/En_xxx，每次运行归其runs。通常只保存实际config、results、必要日志和唯一坐标结果。项目状态归根README，实验进度归实验索引和实验README，核心docs只保留可复用约定，AGENTS不记进度。
+-
+-datasets复用数据处理，scoring复用未修改的官方输出评分，visualization只负责展示。模型、Loss、代理目标、构造、搜索和合法化在各实验独立维护，允许复制但不跨实验导入私有算法。绘图不运行求解算法，训练Loss不放入评分模块。
+-
+-运行记录解析后的数据路径、实际命令、源码版本、种子、线程/设备、面板与标签版本、预算及停止原因。源码使用本地Git和GitHub origin管理，必要时补充源码快照；哈希不能代替可恢复源码。数据、环境、缓存、checkpoint和凭据不入Git。
+-
+-## 7. 整理与保留证据
+-
+-阶段结束和交接时整理，有效参照留在原实验，淘汰路线保留必要说明、源码和证据后归档history；确认可读再清除散落副本。结构迁移记录旧新路径、必要完整性证据和恢复方法，不批量改写历史JSON、日志、命令、哈希或冻结协议。
+-
+-清理前检查运行状态和引用，保护活跃输出、原始数据、有效环境、唯一checkpoint及唯一复现证据。可清理已核实的重复结果、空日志和可重建缓存，不把垃圾全部归档。不明用途先核实；删除唯一复现证据须由用户明确决定。
+-
+-用户明确要求删除废弃方向时，以该请求为准，覆盖相关代码、权重、结果、设计及旧源码归档中的实现，避免误用；保留通用规则、官方原件和指定基线。
+-
+-## 8. 研究判断
+-
+-作为独立科研合作者，主动质疑缺乏论证的假设和方法，用对照与证据提出更合理的替代方案。先解决合法性和测量正确性，保留独立硬约束复核，不为数字好看改变评分定义。
+-
+-基线异常时先检查输入、标签、协议和实现支持范围，完成最小反例后再投入长任务。算法质量、执行效率与设备利用率分别测量；安装CUDA不等于GPU加速，一次跑完不等于收敛，一次胜出不等于机制被证实。
++# 研究与工程约定
++
++更新于2026-10-20。本文件保存当前执行规范；实验进度、具体超参数和已结束任务的授权说明归所属实验与历史记录。协议改变须说明原因和影响，不按实验结果临时更换数据、指标或预算。历史授权不自动续期。
++
++## 1. 数据划分与使用边界
++
++官方隐藏测试集未公开。本地自建测试不能称为官方隐藏集；公开验证集已用于开发诊断，只作接口兼容与公开对照，不再视作独立未见测试。
++
++原始数据按完整分片固定划分为80%训练、10%开发、10%本地测试，唯一索引是[split_v1.json](../protocol/split_v1.json)：7,200/900/900个分片。每个worker分配72/9/9个分片，同一分片的112个布局不拆分。worker编号不是模块数，worker均衡不代表模块数或生成家族已经独立分层。
++
++- 原始数据与冻结索引保留原件，路径统一由[paths.json](../protocol/paths.json)解析。不得静默重切分、迁移成员或覆盖旧版本。
++- 训练梯度只使用所选版本的train成员；验证只用于监测与选择。先按冻结索引筛选，不能用shuffle代替划分。
++- 自由块参考位置、标签及参考评分不能作为求解器或网络输入。固定/预放置的公开规格属于合法输入；标签和评分分母仅用于监督、计分或明确标注的诊断。
++- 测试默认封存。模型、权重、流程和停止条件冻结后，仍须由用户明确发起测试；制定索引、准备代码或历史测试许可不等于新的读取授权。
++- 测试反馈一旦用于改模型、调参或选择候选，后续结果须披露为自适应反馈后的结果，不能再宣称独立未见泛化。
++
++### 1.1 数据版本与当前工作集
++
++| 索引 | 作用与边界 |
++|---|---|
++| [split_v1.json](../protocol/split_v1.json) | 原始80/10/10完整分片归属，始终冻结 |
++| [workset_v2.json](../protocol/workset_v2.json) | 历史原始任务的20,000/2,500/2,500工作集，仅用于对应旧实验与复现，不再作为新训练默认值 |
++| [derived_workset_v3.json](../protocol/derived_workset_v3.json) | MIB平均面积派生任务，目标16,000/2,000/2,000，分别来自原同名分片池 |
++| [distillation_workset_v4.json](../protocol/distillation_workset_v4.json) | 历史E15优质布局训练工作集，学生train16,000/dev2,000/test2,000，另有tail_test1,000 |
++| [reference_workset_v5.json](../protocol/reference_workset_v5.json) | 当前E16已冻结原参考监督新工作集，在原三分片池内重抽16,000/2,000/2,000，按实际模块数尽量等量且三组比例一致 |
++
++v3的MIB面积修正规则只使用公开输入：组内取算术平均面积，保持组总面积及固定/预放置规格；仍不兼容则拒绝。记录修改、拒绝、覆盖与分布变化。局部兼容不保证所有几何和软约束可以同时满足。面积改变后的Q沿用原参考分母时，只作派生任务的反事实诊断，不能把任务变化的收益称为模型提升或正式比赛成绩。
++
++v4从完整25,000例布局库按未舍入Q及固定哈希平局规则选取最好20,000例；均来自原split_v1的train来源，再按原始完整分片隔离学生train/dev/test。它只改变本轮学生数据角色，不改写原划分，也不开放原local_test。主评价只代表这一选优分布，不代表完整未筛选分布。
++
++全库Q最差1,000例事先冻结为tail_test，与主20,000例样本不交叉，但允许共享原始分片，因此是尾部压力测试，不是分片独立的泛化测试。主test2,000与train/dev按分片隔离。生成布局的旧模型可能见过这些原train来源，须区分生成器暴露与本轮学生留出。
++
++2026-10-19用户明确要求E16重新选取成员，并确认保留原split_v1三分片池边界，要求实际模块数各档尽量等量、三组分布一致。v5使用新种子重新排名所有公开兼容候选，各模块数档严格分配8:1:1，保留MIB平均面积规则及原参考中心/长宽比监督，不按教师Q筛选。成员版本变更不覆盖旧冻结文件；数据、Loss和选模身份均登记差异，不能称为沿用旧v3成员。具体算法、配额与命令归[E16](../history/20261020_E25_consolidation/experiments/E16_reference_curriculum/README.md)。
++
++本次重新处理允许为local_test确定成员而读取公开面积、约束及固定/预放置宽高；原文件容器同时包含标签，筛选不得索引自由坐标或评分。旧v2测试面板2,500例全部保守排除，以覆盖已暴露前缀及可能在途成员。此授权仅限新成员准备，测试模型推理、自由标签分析、计分仍封存，不因准备完成自动开放。
++
++当前训练使用完整train16,000，固定train_monitor500和dev_monitor500，监测面板严格嵌套于对应新集合。成员冻结后不得按学生成绩重切。其他任务须显式声明版本，不混用成员、输入面积和标签版本；旧v4规则见[E14数据说明](../history/20261020_E25_consolidation/experiments/E14_stable_teacher/distillation_dataset.md)。
++
++### 1.2 训练与拟合判断的基本要求
++
++- **2026-10-25用户明确更新：后续新训练必须采用唯一一套固定Loss。**训练集反向传播、固定训练/开发监测、完整开发评价及未来获授权测试，共用相同函数、损失项、权重、归一化和每例/跨例聚合；不使用“训练优化一套、开发选模另一套”的代理，也不在早期渐入或后期改变权重。best、学习率下降和早停统一使用该Loss在固定dev_monitor500上的算术均值。分项和后处理Q保留解释性作用，不成为第二套选择标准。此变更使优化与模型选择目标一致，旧Loss数值不得直接与新总Loss比较，历史结果保留原定义；E51旧规则训练按用户指示舍弃后从头开始。
++- 相同Loss不等于数据混用：训练更新只用train；开发监测保持eval/no_grad，训练Dropout与监测eval模式的差异不改变Loss定义。测试仍须用户明确发起且保持封存，测试Loss不用于调参或选择checkpoint。
++- 训练与验证明确分开；固定面板使用eval模式、不反向传播。分别记录中心误差、形状误差、质量代理与监督损失，不用不同mini-batch的即时loss判断收敛。
++- 启动前固定验证频率、统一总Loss、min_delta、学习率下降规则、最低学习率和早停patience；下降学习率后留出观察机会。后续新训练不再使用阶段性损失权重变化，历史阶段性目标不得跨阶段直接比较总loss。
++- 分别保存best和可恢复的latest，保留模型、优化器、调度器、早停计数、数据排列/游标、随机状态、已见成员与累计预算。从头重训使用新目录，不覆盖旧权重或混为续训。
++- 兼容的已有成果优先续用。修改代码、数据接口或选模规则时，明确登记差异和可复用状态，保留原始证据，不能直接绕过身份校验或重置预算。
++- 固定训练/验证曲线注明监测训练样本实际见过与未见过的数量；必要时分开统计。最佳模型在完整dev上核对监测面板的代表性；未完成则明确标为待评。
++- 监督误差、原始布局质量与后处理质量分开报告。降低坐标误差或代理损失，不保证实际Q改善；修复后硬合法也不代表网络草稿硬合法。
++- 时间或步数上限是资源保护，不是收敛判据；早停不保证全局最优。欠拟合、过拟合、容量不足与目标不对齐的判断须有固定面板及对照证据。
++
++#### ML训练的学习率与早停规则
++
++- 每轮结束后在固定验证面板上评价一次，使用预先固定的主指标与min_delta判断是否有明显改善，不以单个训练batch的loss判断。
++- 第1～14轮为学习率保护期；**第15轮起可以降低学习率**。保护期内仍保存验证曲线和best，但不累积用于触发学习率下降或早停的停滞计数。
++- 保护期结束后，**连续3轮无明显改善，学习率切换至下一指定档位**，不再使用统一减半系数。出现明显改善时，连续无改善计数清零；一次下降后重置调度器的停滞计数，重新观察下一组3轮。这里的明显改善指的是至少能看到一定程度的优化，不能把极小的优化认为是可以不下调学习率的证据。
++- **学习率固定采用4个档位：`1e-3 → 2.5e-4 → 1e-4 → 5e-5`，到第四档不再降低；早停前实际降低3次。** 2026-10-20用户明确指定这四个数值，替代此前以`1e-4`起步的设置；用于后续新训练。已有运行、日志和checkpoint保留实际学习率，续训如需采用新档位，须显式登记配置与优化器/调度器状态迁移，不静默改写或清零累计预算。
++- **训练batch size固定为32。** 2026-10-20用户明确要求，后续训练入口与运行配置须一致使用`batch_size=32`；不能仍以16启动，或将梯度累积未经说明地视为相同配置。已有运行保留其实际batch；更改已有断点的batch时显式登记配置迁移，保留原样本游标、已见成员与累计预算。如实际显存不足，记录失败并协商调整，不静默减小batch。
++- **连续3轮无明显改善时进入早停判断**；学习率下降不清空这项连续计数。实际停止须同时满足：连续无改善至少3轮、已完成3次下降，且第三次下降后的最低学习率档位已有至少二轮完整训练和验证。不能在刚进入第四档、尚未训练时立即停止。
++- 3次下降是早停的前置条件，不强迫已有改善的模型人为降学习率凑次数。若第三次下降晚于连续停滞的第8轮，则等待上述条件满足后再早停；时间、步数上限或用户停止请求仍可优先终止，记录为资源停止或用户停止，不冒称早停或收敛。
++- 当前E15后两组把明显改善固定为相对监测基准改善超过0.1%，且绝对改善超过1e-5，两者取较大门槛；小幅真实改善仍可保存best，但不重置停滞计数。调度基准只在明显改善时更新，允许多轮小幅改善积累后达到门槛。
++- 恢复训练须保存并恢复实际下降次数、当前档位及其训练/验证完成状态、调度停滞计数和早停连续计数。既有运行更改这些规则时显式登记配置迁移，不静默改写旧运行或清零累计预算。
++
++<a id="13-本次冻结模型的测试授权"></a>
++
++#### 不改变模型和Loss的训练吞吐优化（2026-10-26）
++
++后续模型实验可独立复制[E52快速执行路径](../experiments/E52_training_throughput/README.md)，保持样本/顺序、batch32、FP32、确定性算法、优化器、固定监测成员及统一Loss定义。模型参数量小也可能因大量细碎CUDA调用而慢，先分解数据搬运、训练步、监测和存盘，不凭总墙钟判断模型过大。
++
++- 将已校验的train/dev张量一次打包为GPU常驻输入，以公开最大模块数统一padding；不得改变有效mask、成员、监督或public-only输入边界。启动时记录实际显存，不因显存不足静默改batch/精度/引擎。
++- 固定形状下，用CUDA graph重放前向、同一Loss、反向与裁剪；检查有限性后再执行原AdamW。预热/捕获不更新参数或优化器，保存并恢复随机状态。恢复checkpoint时重建图，核对模型/优化器/随机状态、游标和累计预算，不能将捕获预热当作训练进度。
++- 固定GPU常量预先创建；避免在捕获路径中调用`.item()`或发生CPU分支。等价算子替换须核对前向、梯度、实际一步更新及恢复后下一步；例如PyTorch2.7.1的prod反向含CPU零计数分支，E52将相同分支和原乘除顺序移到GPU，不能只凭数学等价忽略浮点更新差异。
++- 监测标量合并传回CPU；可取消不参与优化的重复分项反向诊断，不能省略总Loss梯度。预算心跳可每5秒写入，周期latest可每30秒写入；epoch边界、best、停止与异常仍立即保存。记录硬终止可能回退的进度范围，不重置已登记预算。
++- 首次接入或更改Loss后，最多五个相关train/dev实例做短检查，覆盖Loss一致性、padding、Dropout实际更新、保存/恢复和非有限值保护。短基准与完整训练分开：E52同条件微基准171.3→67.1ms/步约2.55倍，不直接宣称完整训练同倍加速；新Loss若不支持捕获应修复或显式登记引擎改变。
++- 用户已确认E51约55分钟异常间隔属于硬件问题，后续不再以该异常估计正常训练速度；保留原始运行时间记录。正常速度与GPU功耗/系统负载仍按实际日志记录。
++
++### 1.3 历史测试暴露与已撤销安排
++
++旧v2冻结评价已停止，完成957/2,500例，覆盖worker_0..38，共39/100个worker；这是顺序前缀，不是事前均衡抽样，不补跑。已访问及中断时可能在途的成员按已暴露处理，不再把整套旧面板称为完全未见测试。原始结果与范围见[运行分析](../history/20261018_E10_consolidation/experiments/graph_proposal/runs/20261016_frozen_best_test2500_seed0/analysis.md)。
++
++E7已终止，其旧test50未读取；其他历史单次测试、图集及反馈范围以各自运行记录为准，见[E7结题报告](../history/20261018_E10_consolidation/experiments/repair_friendly_draft/conclusion.md)。这些记录不授权恢复已结束的训练、测试或未完成组合。新实验须披露有关历史暴露，不能因更换目录或数据角色将其视作未见。
++
++### 1.4 当前训练与最终评价约定
++
++当前保留基线为[E25](../experiments/E25_integrated_baseline/README.md)，没有待运行的新实验。原E29方案已按用户要求删除，编号29可复用，不自动恢复其计划。E23/E26/E27/E28已归入[20261021历史](../history/20261021_E29_consolidation/README.md)，E17及其他退役实验保持既有归档，不自动续跑。以下是通用训练/评价边界，历史运行保留发生时规则，不构成新启动授权：
++
++- 使用共享预处理缓存，首次校验、转换并持久化后，后续训练和恢复直接复用。缓存绑定数据、成员与预处理版本，支持中断恢复和并发写入保护；不能以提速为由混用版本或关闭必要校验。
++- 训练及训练中的验证完全不执行求解器后处理。后续新训练固定dev_monitor500与训练相同的总Loss用于best选择、学习率调整和早停；禁止另设原始布局选模代理，指标在各阶段保持固定。历史运行沿用其发生时定义。
++- 每组训练结束后，只允许对一个冻结best执行一次固定500例后处理评价。它不参与选模；不得根据终末Q更换checkpoint、调参或续训后再择优评价。
++- 最终评价完成后复用已有结果；中断只能恢复同一冻结权重、同一面板的未完成部分，不能重复整轮或更换候选。学生主测试、尾部测试与原local_test继续封存。
++- E17单组训练预算最多4小时或200轮，数据准备和终末500例评价另计；用户于2026-10-20明确授权后台依次执行准备、训练和终末评价，确认启动后不持续监测。历史E16三组每组2小时40分钟及后续延后衰减组每组4小时保留实际规则，不自动续跑。以上为累计训练阶段墙钟保护；源码/数据/设备及预算身份在恢复时核对，不清零累计预算。
++
++## 2. 策略阶段先发散，再调优
++
++先建立可运行且满足硬约束的简单参照，让比较有意义。早期保留3–5个机制不同、可证伪的假设，允许推翻表示、目标函数、模型结构或求解流程，不默认只在现有网络加层或反复调同一参数。
++
++每条路线写清为什么可能有效、什么观察会推翻它、停止投入的条件。先以小预算检验机制，仅调整让方法正常工作的必要参数；后期固定表示、架构与流程后再系统调优。保留无训练baseline参照，不自动恢复用户已明确删除的方向。
++
++## 3. 必须解释改善来自哪里
++
++实验前固定假设、主指标、对照、预算和种子；实现后记录实际变化与结果，不倒推假设。策略探索允许同时改变多项，但胜出后须用必要消融、对照或反例区分模型、数据、损失、约束处理、后处理、更多算力和实现加速的贡献。
++
++比较使用相同输入信息、面板、计分、后处理及时间口径。默认初筛seed=0，有足以影响取舍的结果再扩展固定3个种子。线程、硬件或预算变化须单独说明，不用增加资源换取未披露的优势。
++
++报告至少包括硬合法率、HPWL gap、bbox面积gap、边界/分组/MIB违反、质量尾部、回退情况、耗时与资源预算。不可行例计入主指标，条件于可行例的统计另标。算术Q与模块数加权Q分别报告，本地中性时间质量分、实际耗时与正式比赛分数分开说明。
++
++## 4. 时间、并行与运行权限
++
++**预计超过20分钟，或无法可靠排除超过20分钟的训练、推理及全量数据准备任务，只交付命令由用户执行，不代为前台、后台启动或续跑，也不拆分规避。** 用户在当前会话明确授权助手执行的特定长任务，仅在该次范围内有效，不扩展成后续自动执行权限，也不包含默认封存测试读取权。
++
++**执行大规模CPU任务时（>=100例），优先采用四线程，而不是默认单线程。** 适用于批量数据处理、缓存构建、评分和CPU推理等。显式配置线程数并确认实际生效；同时协调线程池与BLAS/OpenMP、PyTorch及求解器的库内线程，避免嵌套并行使线程数意外相乘。确因串行依赖、并发安全或实测性能需要采用其他线程数时，说明原因并记录配置。该要求用于后续任务，不静默改变已有冻结运行的资源口径。
++
++交付长任务须提供环境、完整命令、预计时间与资源、输出位置、停止和恢复方式；估计未经全量测量时明确注明。采用可复用缓存和可恢复进度，避免各配置重复预处理。用户执行后可按其请求读取状态和汇总，不自动续跑下一阶段。
++
++助手的短检查默认最多5例，累计训练/推理预算低于20分钟；不把长任务拆成多个短调用。用预估和首例计时控制预算，超出预期时在边界前保存并停止。训练循环保留batch/epoch预算检查、轻量checkpoint与原子写入，累计预算不因重启或恢复清零。
++
++## 5. 测试保持轻量
++
++- 只做改动相关的语法/导入、一个批次或最多5例功能检查及直接行为验证；dev5不承担正式选模或泛化结论。
++- 原始任务优先使用固定dev_smoke_panel，公开接口兼容检查可用索引[0,19,39,69,99]，用途分开报告。派生数据接口检查仅取相应版本的train/dev样本，不碰封存测试。
++- 复用已有校验器、输出和失败实例。数据接口变化时覆盖实际存在的主要格式，新约束处理包含实际违反例或针对性反例，不为每个脚本堆测试框架。
++- 数据和版本不变不重复下载、解压或全量哈希；必要的首次完整性核验与日常增量检查分开。
++- 通过相关检查后推进工作；没有新失败或未解决风险，不反复扩测。检查覆盖范围与结果声明相符。
++
++## 6. 工程与记录
++
++目录与复用边界见[结构规范](workspace_structure.md)。使用独立conda环境；官方原件保留在third_party/references，原始数据不覆盖。
++
++实验代码、设计、入口和结论归experiments/En_xxx，每次运行归其runs。通常只保存实际config、results、必要日志和唯一坐标结果。项目状态归根README，实验进度归实验索引和实验README，核心docs只保留可复用约定，AGENTS不记进度。
++
++datasets复用数据处理，scoring复用未修改的官方输出评分，visualization只负责展示。模型、Loss、代理目标、构造、搜索和合法化在各实验独立维护，允许复制但不跨实验导入私有算法。绘图不运行求解算法，训练Loss不放入评分模块。
++
++运行记录解析后的数据路径、实际命令、源码版本、种子、线程/设备、面板与标签版本、预算及停止原因。源码使用本地Git和GitHub origin管理，必要时补充源码快照；哈希不能代替可恢复源码。数据、环境、缓存、checkpoint和凭据不入Git。
++
++## 7. 整理与保留证据
++
++阶段结束和交接时整理，有效参照留在原实验，淘汰路线保留必要说明、源码和证据后归档history；确认可读再清除散落副本。结构迁移记录旧新路径、必要完整性证据和恢复方法，不批量改写历史JSON、日志、命令、哈希或冻结协议。
++
++清理前检查运行状态和引用，保护活跃输出、原始数据、有效环境、唯一checkpoint及唯一复现证据。可清理已核实的重复结果、空日志和可重建缓存，不把垃圾全部归档。不明用途先核实；删除唯一复现证据须由用户明确决定。
++
++用户明确要求删除废弃方向时，以该请求为准，覆盖相关代码、权重、结果、设计及旧源码归档中的实现，避免误用；保留通用规则、官方原件和指定基线。
++
++## 8. 研究判断
++
++### 8.1 草稿模型的人类反馈研究原则（2026-10-24）
++
++2026-10-25用户更新展示要求：**以后不自动启动评分界面。** 默认用无评分控件的看图页面，按同例展示reference／当前模型draft／此前最优模型draft；当前轮对应E51 best52与冻结E42 best51，复用同一固定开发100例。此前最优由既有已接受结果确定，不在本轮按图或Q重新择优。原始参考若在MIB面积变换之前须注明；当前已保存draft复用，缺失的旧模型draft可用冻结权重补生成并记来源，不重跑后处理。下文三档评分流程仅在用户明确重新要求评分时启用，历史评分记录保持原样。
++
++后续继续调整draft模型时，**用户对草稿的评分及评价是最重要的研究参考，固定口径的Loss是主要数值参考，经过既定后处理器的Q是辅助参考**。硬合法性仍独立记录，不因参考顺序变化而放弃。旧实验的实际Loss、选模规则、成绩和结论保持原样；新训练事前登记Loss定义、选模规则及反馈使用方式，不能事后按Q或主观偏好改称原来的选模依据。
++
++仅当用户明确要求评分时，一轮训练及其既定后处理完成后准备100例随机顺序的“原参考—网络草稿—最终布局”三相图，通过可复用的本地评分前端逐张展示。评分只针对网络草稿：1分差、2分一般、3分好。参考与最终布局辅助观察，评分含义在该轮开始前固定。使用冻结模型及已完成后处理结果，缺失草稿可补生成，但必须标明重建来源，不将补生成耗时冒充原运行耗时。不能按Q、外观好坏或评价筛掉失败例；缺失最终布局要明确标注，不能悄悄替换。随机种子、候选池、实际100例成员和展示顺序在评分前保存；评分、改分历史、逐例原话、自由标签、整体评价及评分标准版本持久保存，可断点继续和导出。
++
++默认优先使用开发集。用户可明确选择已暴露测试样本，但须记录本轮成员及其参与后续自适应研究的事实；不得再将利用这些反馈的后续比较称为独立未见测试，不据此读取尚封存样本。本轮用户明确选择从E42已暴露的1000例测试结果随机抽100例，作为后续draft研究反馈。原始冻结划分及历史测试记录不改写。
++
++用户评分之后的口头或文字评价可能模糊：**不直接相信，也不直接否定**。先保留原话，再提出可检验的猜想，把猜想转成能计算或能重复标注的观察维度；检查评分分组、约束/规模分层、几何诊断、反例和配对对照是否支持它。探索后提出的维度与事前假设分开登记；披露样本量、缺失、分歧及多次探索，不将小样本相关性宣称为因果。必要确认使用获授权开发数据，不自动扩展到封存测试。
++
++反馈维度允许随着研究不断扩展或改变，不预设为永久固定的奖励向量。新维度注明提出时间、动机、定义、适用范围和版本；旧分数不自动解释成新维度的标签，不覆盖原话或追溯篡改旧标准。如需按新维度重标，新增一轮标注。三档分数先作为有序评价，主报分布、典型反例和分歧，不擅自假定1→2与2→3的效用距离相等。跨轮比较须核对成员、标准、显示信息和后处理版本；不同随机面板的均分不能直接证明模型改进，需同例配对或说明抽样不确定性。
++
++2026-10-25用户澄清“尊重原草稿”的核心含义：优先保留草稿表达的拓扑意图，例如A在B左侧且意图相邻；最终关系保持，即使中心移动或改形较多，也可以视为尊重草稿。“意图相邻”须从带重叠、间隙和形状误差的草稿推断，不能要求原矩形恰好接触。后续将相对方向与意图邻接的保留作为核心研究维度，位移/改形作为辅助描述，不再用位移大直接判定不尊重草稿。原有D及近邻方向变化只是几何代理，未经人类反馈校准，尤其不能把中心最近邻、方向关系代理直接等同于完整意图邻接。用户观察E50广泛保留了拓扑意图，并认为最差10例草稿普遍较差；保留这一观察，通过同例预算对照等检验修复潜力，不能仅凭有限预算未改善就证明草稿不可修复。历史指标与结论不追溯重定义。
++
++可以将这条路线理解为研究者参与的迭代反馈过程，但当前评分入口仅收集反馈，**不等于已实现强化学习，也不会自动把分数接入训练**。在数据证据支持之前，不凭模糊印象或表面关联启动新架构；下一项模型修改须先形成可证伪的假设、对照与验收标准，再按授权开展。训练/推理超过20分钟仍只交付用户运行命令。
++
++可复用评分入口与清单接口见[visualization说明](../visualization/README.md)，实验专用的抽样、读数据和模型补生成仍归所属实验。
++
++### 8.2 独立判断与证据
++
++作为独立科研合作者，主动质疑缺乏论证的假设和方法，用对照与证据提出更合理的替代方案。先解决合法性和测量正确性，保留独立硬约束复核，不为数字好看改变评分定义。
++
++基线异常时先检查输入、标签、协议和实现支持范围，完成最小反例后再投入长任务。算法质量、执行效率与设备利用率分别测量；安装CUDA不等于GPU加速，一次跑完不等于收敛，一次胜出不等于机制被证实。
+diff --git a/docs/workspace_structure.md b/docs/workspace_structure.md
+index 082e0c8..76df34f 100644
+--- a/docs/workspace_structure.md
++++ b/docs/workspace_structure.md
+@@ -4,6 +4,8 @@
+ 
+ **每个实验的代码、说明、配置与运行证据放在一起；复用数据集处理、官方输出评分和纯展示绘图。模型训练 Loss 不属于评分模块。**
+ 
++2026-10-25起，新训练的唯一固定Loss保存在实验内，由训练反传、训练/开发监测和未来获授权测试共同调用；不再维护独立选模代理。best、LR和早停统一使用开发集该Loss，具体边界见[执行协议1.2](protocol.md#12-训练与拟合判断的基本要求)。
++
+ ## 1. 目录职责
+ 
+ ```text
+@@ -58,6 +60,8 @@ problemC/
+ 
+ 2026-10-17用户明确要求统一布局图：`visualization/` 保存从既有E6生成代码提取的纯展示模块，布局图统一调用；实验负责数据选择与读取，输出仍归各自runs。该模块不包含模型、Loss、构造、搜索、合法化或官方评分，不跨实验导入私有算法。
+ 
++2026-10-24新增可复用的本地人类评分入口`visualization/review.py`与`review_web/`：只读取实验提供的不可变展示清单和图片，保存三档草稿评分、自由观察、整轮评价与修改历史。实验专用抽样、数据读取及缺失草稿补生成继续放在所属实验；图片、清单、评分数据库和导出证据均归该实验`runs/<评分轮次>/`，不在visualization下堆实验输出。研究原则与反馈维度演变见[执行协议8.1](protocol.md#81-草稿模型的人类反馈研究原则2026-10-24)。
++
+ 其余代码以实验独立为优先：模型、Loss、几何构造、合法化、搜索、训练和日志按需复制到各实验，分别维护，不再提取泛用公共目录。两条路线都需要矩形构造时，各自持有自己的 `packing.py`；修改一份不改变另一条路线。
+ 
+ 同一实验的多次运行继续使用一套实验代码，通过配置和源码版本区分，不为每个 seed 复制代码。跨实验复制时在说明或源码快照中记录来源即可，不建立复杂的代码同步机制。
+diff --git a/experiments/E25_integrated_baseline/README.md b/experiments/E25_integrated_baseline/README.md
+index 1cc9fa8..66e8b47 100644
+--- a/experiments/E25_integrated_baseline/README.md
++++ b/experiments/E25_integrated_baseline/README.md
+@@ -1,29 +1,41 @@
+-# E25：当前最佳整合基线
+-
+-模型研究历史与各训练配置的实际完成状态见[2026-10-22完整盘点](runs/20261022_model_training_review/review.md)；区分原始draft、最终求解结果、教师准备与正式训练。
+-
+-冻结E17的497,299参数best51模型，采用E24 `steady`原生快速后处理。当前比较基准为加权Q **1.039577677**、平均求解 **0.259486889秒**、硬合法 **500/500**，最大Q **2.525082328**。Q已达目标，时间仍超0.25秒约9.49毫秒，不宣称同时达标。
+-
+-继承的完整[500例结果](runs/20261020_controls_steady_monitor500/results.json)及源码快照保持原字节，不因整合重跑；其中历史命令与路径按发生时保留。计时包含公开特征、CPU推理、解码、全部后处理及救援，加载和评分除外，首次原生编译另列。2进程×2库线程。结果属于自适应开发面板、MIB派生任务的中性时间Q，不是正式比赛分数；额外确认500未使用，测试封存。
+-
+-模型、特征及数值求解代码独立复制自E24；只调整资源路径并将运行入口限于steady。[来源登记](provenance.json)与[迁移清单](../../history/20261020_E25_consolidation/manifest.json)保存来源。模型[训练账本](runs/20261020_e10_geometry_v5_seed0/results.json)、best/latest和原参考张量缓存同盘移入本实验，只保存一份；源训练目录已归档。best SHA256为`3de22809e831edf11b56a85647a0bd9fe625e8b7617abb6eb1f4b27969cfe00a`。
+-
+-需要用户明确发起新的固定面板评价时，可使用新的tag（不覆盖旧结果）：
+-
+-```powershell
+-& .\.conda\envs\iccad2026\python.exe -u -B -m experiments.E25_integrated_baseline.run --tag YYYYMMDD_frozen --configs steady --count 500 --direct
+-```
+-
+-本目录保留唯一共享缓存`runs/prepared_v5_e10_cache_v1`，仅train/dev，无测试张量；退役E23/E27/E28的历史复用关系保持原记录。[迁移缓存登记](runs/cache_migration.json)注明原整合时公开草稿缓存仅更新资源路径对应的源码身份，原始几何不重算。[原迁移检查](runs/20261020_migration_check/results.json)记录最多五例功能检查，不作为新的性能结果。
+-
+-2026-10-21按用户要求保留本最佳组合，其他已结束实验归入[本次归档](../../history/20261021_E29_consolidation/README.md)。原E29后续已于2026-10-22按用户要求删除，编号29可复用。本模型、数值求解代码、缓存和最佳结果均未改变；依赖“E23尚未训练”这一历史前提的旧迁移检查脚本移为[历史辅助脚本](../../history/20261021_E29_consolidation/legacy_E25_migration_check.py)，不作为当前运行入口。不启动训练、推理或重评分。
+-
+-## 2026-10-22：用户授权的测试draft图集
+-
+-按用户明确要求，仅对v5 local_test冻结顺序前100例运行best51模型，生成[独立图片文件夹](runs/20261022_test100_draft_gallery/images/)中的100张PNG。只展示draft，无扩展、后处理、参考布局或Q评分；4进程各1线程。图中颜色表示分组，纹理表示MIB，F/P为固定形状/预放置，红框表示几何重叠。模型、特征及原后处理未修改；共享绘图仅增加不显示评分的选项。
+-
+-[配置及明确暴露成员](runs/20261022_test100_draft_gallery/config.json)、[100张图片完整性验收](runs/20261022_test100_draft_gallery/summary.json)、[离线验收入口](runs/20261022_test100_draft_gallery/verify_images.py)。图片和部分已保存draft坐标只留本机。**这100例已因可视检查模型输出而暴露；今后使用它们指导研究时须披露，不能再称作未见测试。其余测试保持封存。** 原始划分文件不变。
+-
+-运行命令为`python -u -B -m experiments.E25_integrated_baseline.export_test_drafts`，该入口固定只取上述100例；公开输入由`datasets/public_member_inputs.py`读取，仅索引固定宽高和预放置坐标，不索引自由块参考几何及参考分数。容器反序列化会载入原始文件的打包内容，但算法不使用其中自由标签。
+-
+-100张图已全部渲染；主进程汇总到38例时Windows文件锁阻止JSON原子替换，最终通过离线逐张解码、命名/成员及源码核验确认100图齐全，未重复推理。38例坐标记录恢复，其他只保存图片；详细记录见summary。不要为补齐坐标重复运行模型。复查图片仅运行`runs/20261022_test100_draft_gallery/verify_images.py`。
++# E25：冻结整合参照
++
++2026-10-24追加的[同1000例E42常规后处理比较](../E42_joint_regularization/runs/20261024_final_test1000_seed20261024/analysis.md)已完成：E42加权Q1.028385、均时0.222522秒，本版本为1.045270、0.231351秒。按均值点估计，E25不在这两者的质量/时间帕累托前沿；最终呈现改用E42，本目录保留原始证据。E42最大Q更差、时间差区间跨零的限制见配对报告。
++
++## 2026-10-24：最终1000例本地留出测试
++
++用户明确发起，冻结本版本一次评价；CPU **4进程×1线程**。在v5 local_test2000中排除此前草稿图已暴露100例，从其余1900例按实际模块数分层、固定种子20261024抽取1000例，覆盖100个worker、463个原测试分片。名单在测试张量读取前冻结，未按成绩筛选。
++
++结果：**1000/1000硬合法，加权Q1.045269650，平均完整求解0.231350916秒/例**；P95 Q1.194060201、最大Q2.832076154；P95耗时0.525515秒、最大4.321596秒，9例超过2秒。执行/评分错误均为0。按原Q<1.04、均时<0.25秒目标，耗时通过，质量未过，不宣称联合达标。
++
++[最终报告](runs/20261024_final_test1000_seed20261024/analysis.md) · [精确汇总](runs/20261024_final_test1000_seed20261024/summary.json) · [冻结身份与成员](runs/20261024_final_test1000_seed20261024/config.json) · [离线证据验收](runs/20261024_final_test1000_seed20261024/audit.json) · [评价入口](final_test.py)。完整坐标及源码快照只保留本机，逐例坐标不重复保存。模型/原数值代码保持原样；进程内资源适配将库线程固定为1，不能将与历史2进程×2线程的计时差直接归因为算法改善。
++
++本轮为MIB平均面积派生任务、原参考分母的本地中性时间Q，**不是正式比赛成绩**。此前100例与本轮1000例已暴露，剩余900例继续封存；测试结果不用于换权重、调参或重新挑选版本。计时包含公开图特征、CPU推理、解码及完整后处理/救援，读取、初始化、评分与写盘另列。
++
++模型研究历史与各训练配置的实际完成状态见[2026-10-22完整盘点](runs/20261022_model_training_review/review.md)；区分原始draft、最终求解结果、教师准备与正式训练。
++
++冻结E17的497,299参数best51模型，采用E24 `steady`原生快速后处理。当前比较基准为加权Q **1.039577677**、平均求解 **0.259486889秒**、硬合法 **500/500**，最大Q **2.525082328**。Q已达目标，时间仍超0.25秒约9.49毫秒，不宣称同时达标。
++
++继承的完整[500例结果](runs/20261020_controls_steady_monitor500/results.json)及源码快照保持原字节，不因整合重跑；其中历史命令与路径按发生时保留。计时包含公开特征、CPU推理、解码、全部后处理及救援，加载和评分除外，首次原生编译另列。2进程×2库线程。结果属于自适应开发面板、MIB派生任务的中性时间Q，不是正式比赛分数；额外确认500未使用，测试封存。
++
++模型、特征及数值求解代码独立复制自E24；只调整资源路径并将运行入口限于steady。[来源登记](provenance.json)与[迁移清单](../../history/20261020_E25_consolidation/manifest.json)保存来源。模型[训练账本](runs/20261020_e10_geometry_v5_seed0/results.json)、best/latest和原参考张量缓存同盘移入本实验，只保存一份；源训练目录已归档。best SHA256为`3de22809e831edf11b56a85647a0bd9fe625e8b7617abb6eb1f4b27969cfe00a`。
++
++需要用户明确发起新的固定面板评价时，可使用新的tag（不覆盖旧结果）：
++
++```powershell
++& .\.conda\envs\iccad2026\python.exe -u -B -m experiments.E25_integrated_baseline.run --tag YYYYMMDD_frozen --configs steady --count 500 --direct
++```
++
++本目录保留唯一共享缓存`runs/prepared_v5_e10_cache_v1`，仅train/dev，无测试张量；退役E23/E27/E28的历史复用关系保持原记录。[迁移缓存登记](runs/cache_migration.json)注明原整合时公开草稿缓存仅更新资源路径对应的源码身份，原始几何不重算。[原迁移检查](runs/20261020_migration_check/results.json)记录最多五例功能检查，不作为新的性能结果。
++
++2026-10-21按用户要求保留本最佳组合，其他已结束实验归入[本次归档](../../history/20261021_E29_consolidation/README.md)。原E29后续已于2026-10-22按用户要求删除，编号29可复用。本模型、数值求解代码、缓存和最佳结果均未改变；依赖“E23尚未训练”这一历史前提的旧迁移检查脚本移为[历史辅助脚本](../../history/20261021_E29_consolidation/legacy_E25_migration_check.py)，不作为当前运行入口。不启动训练、推理或重评分。
++
++## 2026-10-22：用户授权的测试draft图集
++
++按用户明确要求，仅对v5 local_test冻结顺序前100例运行best51模型，生成[独立图片文件夹](runs/20261022_test100_draft_gallery/images/)中的100张PNG。只展示draft，无扩展、后处理、参考布局或Q评分；4进程各1线程。图中颜色表示分组，纹理表示MIB，F/P为固定形状/预放置，红框表示几何重叠。模型、特征及原后处理未修改；共享绘图仅增加不显示评分的选项。
++
++[配置及明确暴露成员](runs/20261022_test100_draft_gallery/config.json)、[100张图片完整性验收](runs/20261022_test100_draft_gallery/summary.json)、[离线验收入口](runs/20261022_test100_draft_gallery/verify_images.py)。图片和部分已保存draft坐标只留本机。**这100例已因可视检查模型输出而暴露；今后使用它们指导研究时须披露，不能再称作未见测试。其余测试保持封存。** 原始划分文件不变。
++
++运行命令为`python -u -B -m experiments.E25_integrated_baseline.export_test_drafts`，该入口固定只取上述100例；公开输入由`datasets/public_member_inputs.py`读取，仅索引固定宽高和预放置坐标，不索引自由块参考几何及参考分数。容器反序列化会载入原始文件的打包内容，但算法不使用其中自由标签。
++
++100张图已全部渲染；主进程汇总到38例时Windows文件锁阻止JSON原子替换，最终通过离线逐张解码、命名/成员及源码核验确认100图齐全，未重复推理。38例坐标记录恢复，其他只保存图片；详细记录见summary。不要为补齐坐标重复运行模型。复查图片仅运行`runs/20261022_test100_draft_gallery/verify_images.py`。
+diff --git a/experiments/README.md b/experiments/README.md
+index e33370e..f828d79 100644
+--- a/experiments/README.md
++++ b/experiments/README.md
+@@ -1,18 +1,35 @@
+-# 当前实验
+-
+-| 实验 | 状态 |
+-|---|---|
+-| [E37_radial_draft_expansion](E37_radial_draft_expansion/README.md) | 已完成：5%位置展开降低输入重叠26.4%，100例四臂400输出全部硬合法；入口对齐后仍未通过Q/耗时/尾部联合要求，不扩500、不替换E25；四进程各一线程 |
+-| [E36_persistent_conflict_repair](E36_persistent_conflict_repair/README.md) | 首轮完成：模型冻结，四进程方向修正在额外500开发例改善Q/均时/总体尾部，但区间跨零且有严重单例回归；不替换E25，下一步为进展门控与可回滚干预 |
+-| [E35_optimizer_attribution](E35_optimizer_attribution/README.md) | 已完成：原500频次盘点＋固定100例14臂归因，两线程；低频救援/数值修正很重要，未修改E25或训练RL |
+-| [E34_sparse_contact_feedback](E34_sparse_contact_feedback/README.md) | 已结束：五例回调加速2.87倍，终末500全部硬合法；Q/时间/尾部联合要求未通过，不扩确认 |
+-| [E33_learned_solver_portfolio](E33_learned_solver_portfolio/README.md) | 已按用户要求暂停：先导通过，保存8353个完整实例/33413条输出；门控未训练，外层未评价，STOP已设置、生成器锁已释放 |
+-| [E32_learned_relation_feedback](E32_learned_relation_feedback/README.md) | 两组训练及各自终末500已结束：结构代理改善，但无学习策略通过联合要求；不扩种子/确认，保留E25 |
+-| [E31_conic_workspace_reuse](E31_conic_workspace_reuse/README.md) | 已结束：SDK复用有效，但五例实际主几何0/33命中缓存；未扩大评价 |
+-| [E30_stable_fast_geometry](E30_stable_fast_geometry/README.md) | 已结束，保留E25：四次微调、后处理对照、一次额外配对确认；平均指标改善但尾部稳定性未通过，两线程，测试封存 |
+-| [E25_integrated_baseline](E25_integrated_baseline/README.md) | 当前最佳：E17 best51＋E24 steady，500/500硬合法、加权Q1.039578、平均0.259487秒；冻结保留 |
+-| [baseline](baseline/README.md) | 无训练硬约束参照 |
+-
+-E23/E26/E27/E28见[20261021归档](../history/20261021_E29_consolidation/README.md)；此前实验见[20261020归档](../history/20261020_E25_consolidation/README.md)。更早归档保留原目录，不自动恢复历史路线。
+-
+-原E29方案已按用户要求删除，不保留待实施计划；编号29可供后续新实验复用。
++# 当前实验
++
++| 实验 | 状态 |
++|---|---|
++| [E54_reference_extremes](E54_reference_extremes/README.md) | 用户已取消，不再继续；无reference支线失稳后user_stop24轮/step12080，best0，仅reference未启动；STOP保留，失败证据保留 |
++| [E53_loss_geometry](E53_loss_geometry/README.md) | 首轮用户续训63轮/best62；固定flash500全硬合法、加权Q1.055217，P95改善但极端尾部恶化，未通过。100张三列图已生成，自主研究/定时任务保持暂停 |
++| [E52_training_throughput](E52_training_throughput/README.md) | 训练执行加速准备：相同147万参数/统一Loss/FP32/batch32，最终五例短基准171.3→67.1ms/步（约2.55倍）；GPU常驻输入＋图重放，Dropout一步/恢复核验通过，完整训练未启动 |
++| [E51_module_overlap](E51_module_overlap/README.md) | unified_v2已完成：52轮早停/best52、统一开发Loss0.377453166；用户授权后台固定开发100例flash评价及三相图准备，状态见专用runs；测试封存 |
++| [E50_anytime_quality](E50_anytime_quality/README.md) | 原100通过：76胜24平0负、Q1.007596、最差1.155240、最长4.898秒。另100确认Q1.005283但5例小回退；200例全合法/无Q>1.2/全5秒内，五难例三次重复全不退化。帕累托与普遍支配限制已记录 |
++| [E49_monotone_quality](E49_monotone_quality/README.md) | 串行v1–v14五例机制诊断未达标；截止保护通过、个别软约束修复有效，历史基线落点与局部不可行仍限制改善；转E50重写，失败证据保留 |
++| [E48_quality_potential](E48_quality_potential/README.md) | 5秒/4线程：固定100全合法、75例Q<1.03，77例更近；加权Q略差且2例超时，未达目标。后加外部截止五例通过，新版100未重跑；未升级E42 |
++| [E47_draft_topology_confidence](E47_draft_topology_confidence/README.md) | 唯一终末500完成：best24辅助候选未通过质量/时间联合要求，未升级；原生500及2秒参考辅助诊断保留 |
++| [E46_global_draft_refinement](E46_global_draft_refinement/README.md) | 已结束：最终候选400例确认未通过；合并500全硬合法、加权Q1.026362→1.025415、均时约降2.8%，但3例严重退化、尾部略差；形状先验有明确单例防膨胀证据，统一规则不稳；未升级E25 |
++| [E45_draft_fidelity](E45_draft_fidelity/README.md) | 固定100例筛查未通过：两组全硬合法，加权Q1.018737→1.020759，均时约增1.2%，4例严重退化；5个重置例全部Q退化，平均草稿位移反增；不扩500，未替换E25/E42 |
++| [E44_near_limit_proposals](E44_near_limit_proposals/README.md) | [质量优先2秒](E44_near_limit_proposals/quality_first.md)；当前先[审计完整草稿保留](E44_near_limit_proposals/runs/20261023_draft_structure_audit/analysis.md)：普通例局部五近邻保留87.8%，救援例46.4%，区分连续漂移与重建；不默认改纯结构输出，未训练或修改既有求解器 |
++| [E43_overlap_area_loss](E43_overlap_area_loss/README.md) | 已准备、未启动：保留E42矩形96×12联合AB，仅新增0.25×重叠面积训练损失；原选模代理不变，唯一seed0，用户执行命令 |
++| [E42_joint_regularization](E42_joint_regularization/README.md) | 当前结果呈现：best51＋常规steady，同1000例全硬合法、Q1.028385、均时0.222522秒。22评分＋1标签后完成整齐四角度的前三项计算；第四项A/B差异太小，用户认为无比较意义，未取得有效比较信息。小预算完整合法化尚未验证，模型/Loss未改 |
++| [E41_rectangular_depth](E41_rectangular_depth/README.md) | 用户已完成45轮/best42；完整开发代理0.479912较矩形12层回退2.54%，共同轮数泛化差距增大；终末500全硬合法、Q1.030685，最坏尾部改善，保留12层参照 |
++| [E40_endpoint_constraint_tokens](E40_endpoint_constraint_tokens/README.md) | 主干96×12、确定性CUDA batch32检查通过；完整端点/约束交互，首轮完成，完整dev代理近乎不变、碰撞/边界及耗时不利，停止扩展本实现 |
++| [E39_rectangular_attention](E39_rectangular_attention/README.md) | rectangle首轮完整dev代理低4.71%，边界/MIB退化；no_gap已完成51轮、best48，未终末评价；已完成500例失败模式与监督审计，源码冻结 |
++| [E38_model_architecture](E38_model_architecture/README.md) | 四组容量完成，12层完整dev代理较4层低14.44%；后续种子队列已取消、定时跟进关闭，尚未升级工程基线 |
++| [E37_radial_draft_expansion](E37_radial_draft_expansion/README.md) | 已完成：5%位置展开降低输入重叠26.4%，100例四臂400输出全部硬合法；入口对齐后仍未通过Q/耗时/尾部联合要求，不扩500、不替换E25；四进程各一线程 |
++| [E36_persistent_conflict_repair](E36_persistent_conflict_repair/README.md) | 首轮完成：模型冻结，四进程方向修正在额外500开发例改善Q/均时/总体尾部，但区间跨零且有严重单例回归；不替换E25，下一步为进展门控与可回滚干预 |
++| [E35_optimizer_attribution](E35_optimizer_attribution/README.md) | 已完成：原500频次盘点＋固定100例14臂归因，两线程；低频救援/数值修正很重要，未修改E25或训练RL |
++| [E34_sparse_contact_feedback](E34_sparse_contact_feedback/README.md) | 已结束：五例回调加速2.87倍，终末500全部硬合法；Q/时间/尾部联合要求未通过，不扩确认 |
++| [E33_learned_solver_portfolio](E33_learned_solver_portfolio/README.md) | 已按用户要求暂停：先导通过，保存8353个完整实例/33413条输出；门控未训练，外层未评价，STOP已设置、生成器锁已释放 |
++| [E32_learned_relation_feedback](E32_learned_relation_feedback/README.md) | 两组训练及各自终末500已结束：结构代理改善，但无学习策略通过联合要求；不扩种子/确认，保留E25 |
++| [E31_conic_workspace_reuse](E31_conic_workspace_reuse/README.md) | 已结束：SDK复用有效，但五例实际主几何0/33命中缓存；未扩大评价 |
++| [E30_stable_fast_geometry](E30_stable_fast_geometry/README.md) | 已结束，保留E25：四次微调、后处理对照、一次额外配对确认；平均指标改善但尾部稳定性未通过，两线程，测试封存 |
++| [E25_integrated_baseline](E25_integrated_baseline/README.md) | 冻结历史参照：E17 best51＋E24 steady；1000/1000硬合法、Q1.045270、均时0.231351秒；同面板均值点估计被E42常规版本支配，原证据保留 |
++| [baseline](baseline/README.md) | 无训练硬约束参照 |
++
++E23/E26/E27/E28见[20261021归档](../history/20261021_E29_consolidation/README.md)；此前实验见[20261020归档](../history/20261020_E25_consolidation/README.md)。更早归档保留原目录，不自动恢复历史路线。
++
++原E29方案已按用户要求删除，不保留待实施计划；编号29可供后续新实验复用。
+diff --git a/references/papers/README.md b/references/papers/README.md
+index 583267b..9decfae 100644
+--- a/references/papers/README.md
++++ b/references/papers/README.md
+@@ -1,5 +1,7 @@
+ # ML 布局规划论文精选
+ 
++2026-10-26新增[监督参考与任务评分共存时的训练经验](loss_training_practice_20261026.zh-CN.md)：DFL综述、LODL与作者博客、SCST、Trinity、约束优化与梯度平衡，区分原文结论、迁移边界和本项目推论。本轮只作调研，不启动实验。
++
+ 2026-10-16（北京时间）补充。**先读 [中文综述](literature_review.zh-CN.md)**：包含方法路线图、逐篇阅读卡、实验结论的适用范围，以及面向 Problem C 的候选假设。关键结论附有本地 PDF 页码。
+ 
+ 本目录共 11 篇：新增下载 10 篇，复用已有 FloorSet 原件。阅读重点是主要方法、核心实验与影响结论的附录；原文性能均未在本地复现。
+diff --git a/visualization/README.md b/visualization/README.md
+index 26e4791..3ef121c 100644
+--- a/visualization/README.md
++++ b/visualization/README.md
+@@ -24,3 +24,39 @@ plot_evaluation_case(saved_evaluation_row, 'attention_geometry', output_png)
+ 调用方负责样本选择、读取既有JSON和图集索引。模块只接收坐标、约束和已存指标，不读取数据集、不推理、不修复、不产生官方分数。E7适配器复用原gallery.py的几何状态描述代码，为徽记/连通分量/形状数提供显示信息；这些描述不回写官方评分。缺失官方指标显示n/a，缺失布局明确显示不可用，不用别的布局替代。
+ 
+ 当前接入：E6 `plot_gallery.py`、E7 `render.py`、本次test100运行入口。历史输出保留；其他历史独立脚本仅供复现，不批量重写。新布局绘图应调用本模块，模型、损失和求解算法继续按实验独立维护。
++
++## 可复用草稿评分前端
++
++2026-10-25用户更新：以后不自动启动评分界面。默认仅展示reference／当前模型draft／此前最优模型draft的同例对比；下述评分功能仅在用户明确重新要求评分时使用。历史记录保留。
++
++只浏览已保存布局、不要求评分时，可用[saved_gallery.py](saved_gallery.py)的`write_gallery(folder, manifest)`生成只读`index.html`。支持分组、逐例切换、三列/单列、缩放及原高清图；单列裁切使用`plot_case`返回的`axes_bounds`。清单仅含图片路径和展示指标，不读取数据或运行模型。首个实例为[E50的35例对照](../experiments/E50_anytime_quality/runs/20261025_full500_review/analysis.md)。可直接打开生成的HTML，也可在本地用`python -m http.server 8766 --bind 127.0.0.1 --directory <图集目录>`浏览。既有评分前端和评分数据保持独立。
++
++[review.py](review.py)及[review_web](review_web/)提供本地逐张评分：三相对照、单阶段放大、缩放、1/2/3快捷键、自动下一张、回看改分、未评分导航、自由备注/标签、整轮评价、断点恢复及JSON/CSV导出。评分只评价草稿：1差、2一般、3好。Q/Loss等辅助数值默认折叠，展开会记录；PNG不嵌入这些数值。反馈研究原则见[执行协议8.1](../docs/protocol.md#81-草稿模型的人类反馈研究原则2026-10-24)。
++
++实验先生成三相图及`runs/<round>/manifest.json`，再启动：
++
++```powershell
++& '.\.conda\envs\iccad2026\python.exe' -m visualization.review --session 'experiments/<实验>/runs/<round>' --port 8765
++```
++
++访问`http://127.0.0.1:8765/`。关闭服务不丢评分；同一目录重新启动恢复原顺序和进度。首次接入E42的抽样/补生成入口为[prepare_review.py](../experiments/E42_joint_regularization/prepare_review.py)，一键启动见[E42说明](../experiments/E42_joint_regularization/README.md)。后续实验只需产生相同展示清单，不导入E42私有算法。
++
++最小清单字段如下。`axes_bounds`来自`plot_case`返回值，是相对整幅PNG的三个绘图区`[left,bottom,width,height]`；放大功能直接裁切既有PNG，不另画布局。
++
++```json
++{
++  "schema_version": 1,
++  "session_id": "unique_round",
++  "title": "模型 / 草稿评分",
++  "display_note": "数据角色、草稿及最终布局来源与已知限制",
++  "rubric": {"version": 1, "target": "raw_draft_only", "scale": {"1": "差", "2": "一般", "3": "好"}},
++  "selection": {"seed": 20261024, "source_run": "...", "data_policy": "..."},
++  "cases": [{"id": "case_0001", "n": 20, "member": ["worker_0/layouts_0.th", 1], "image": "images/case_0001.png", "axes_bounds": [[0.035,0.3,0.3,0.5],[0.358,0.3,0.3,0.5],[0.681,0.3,0.3,0.5]], "auxiliary": {"后处理Q": 1.02}}]
++}
++```
++
++清单顺序就是展示顺序，抽样、随机化和来源验证由实验负责。评分后清单哈希与数据库绑定，变更清单须新建评分轮次。`ratings.sqlite3`使用事务和完整同步写入，记录当前分数及UTC时间的所有变更事件，含所用标准版本与看过指标的事件；多页面版本冲突明确拒绝写入，避免覆盖。自由标签支持增加观察维度，不能把旧分数自动解释为新标签。JSON导出包含不可变清单、当前状态及全部历史；CSV保留逐例分数、备注、标签，文本公式仅在CSV中加转义，JSON原话保持不变。
++
++保存备注不会自动打分；离开当前图片前会保存备注，关闭页面时对未保存文字提示。评分保存成功后才自动下一张；图片失败则禁用评分。全100例都有分数才可标记本轮完成，未完成期间不显示分数分布。整轮评价可留空并回到聊天叙述。所有反馈文件留本机；工具不调用模型、数据集、后处理或评分器，不把分数接入训练。服务仅监听127.0.0.1，仅开放清单中图片和固定资源；不开放整个工作区。
++
++2026-10-24扩展：清单可用`view_stages`指定两栏A/B或三栏名称；`rubric.target_label/prompt/instructions/scale`设置该轮评分含义。`rubric.questions`可添加可选维度，每项提供`prompt`及1/2/3的`scale`，持久保存为`ratings[id].dimensions`，未知维度拒绝写入。原单例草稿评分默认含义保持不变。E42的整齐对照使用独立会话和rubric v2，主分1=A更整齐/2=差不多/3=B更整齐，另可选可修复性/留白偏好；不能与旧“1差/2一般/3好”混为同一变量。可选维度先选择，按主分时一并保存；同一可选项再点一次可清除为未回答。CSV追加dimensions列，JSON保留原始字典及历史。
+diff --git a/visualization/layouts.py b/visualization/layouts.py
+index 0f6b442..d8d56f5 100644
+--- a/visualization/layouts.py
++++ b/visualization/layouts.py
+@@ -194,7 +194,8 @@ def plot_case(row, destination, *, stages=None, show_metrics=True):
+     fig.legend(handles=legend, loc="lower center", bbox_to_anchor=(.5, .065), ncol=legend_columns,
+                fontsize=8, frameon=True, edgecolor="#e2e8f0", title="Constraint identities are unchanged across all three stages" if columns == 3 else "Constraint key for the saved layout", title_fontsize=9)
+     fig.text(.035, .024,
+-             "Raw model draft only. No postprocessing or scoring. Red outlines indicate geometric overlaps." if not show_metrics else
++             ("Raw model draft only. No postprocessing or scoring. Red outlines indicate geometric overlaps." if columns == 1 else
++              "Saved layout comparison. Scores hidden for visual review. Red outlines indicate geometric overlaps.") if not show_metrics else
+              ("B/G/M = official boundary / grouping / MIB violation counts. Q uses neutral runtime; illegal proposals are not feasible-quality results.\n"
+               "Boundary badges show status against each layout's own bbox. Group components=1 and MIB distinct shapes=1 indicate consistency. "
+               "Overlap outlines are visual only (1e-9 span tolerance).") if columns == 3 else

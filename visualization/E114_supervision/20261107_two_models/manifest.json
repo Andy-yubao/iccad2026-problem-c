@@ -1,0 +1,51 @@
+{
+  "case_count": 5,
+  "models": {
+    "baseline": {
+      "experiment": "E114_supervision_placement",
+      "arm": "terminal",
+      "checkpoint": "experiments/E114_supervision_placement/runs/terminal_seed0/checkpoints/best.pt",
+      "checkpoint_sha256": "a5cc0d225c3c5e4b3633827d6ef72bc3a58fa6190f9a6d67767cc058917f2c70",
+      "best_epoch": 59,
+      "active_depth": 12,
+      "indices": [
+        10841,
+        12651,
+        6417,
+        4280,
+        17946
+      ],
+      "inference": "CPU FP32 eval/no_grad batch1; not a GPU timing measurement",
+      "direct_supervision": "layer12 only",
+      "test_read": false,
+      "training": false,
+      "postprocessing_calls": 0,
+      "Q_calls": 0
+    },
+    "dense": {
+      "experiment": "E114_supervision_placement",
+      "arm": "dense",
+      "checkpoint": "experiments/E114_supervision_placement/runs/dense_seed0/checkpoints/best.pt",
+      "checkpoint_sha256": "5a709e22823d3e39c44791170ec2ea40248259cdbb3d0e7833a4d3a79c1f4b7f",
+      "best_epoch": 52,
+      "active_depth": 12,
+      "indices": [
+        10841,
+        12651,
+        6417,
+        4280,
+        17946
+      ],
+      "inference": "CPU FP32 eval/no_grad batch1; not a GPU timing measurement",
+      "direct_supervision": "layers1..12, .8 terminal + .2 auxiliary mean",
+      "test_read": false,
+      "training": false,
+      "postprocessing_calls": 0,
+      "Q_calls": 0
+    }
+  },
+  "training": false,
+  "test_read": false,
+  "postprocessing_calls": 0,
+  "scale_policy": "Common axes include reference and every real readout of both models; no cropping"
+}

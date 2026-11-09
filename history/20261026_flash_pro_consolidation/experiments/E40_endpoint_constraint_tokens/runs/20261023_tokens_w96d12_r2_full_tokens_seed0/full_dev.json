@@ -1,0 +1,67 @@
+{
+  "checkpoint_sha256": "df423e0d06413fd3105346f711f205a87779dc1a42dc6df4afcfead74bafef72",
+  "losses": {
+    "total": 0.37156320667266846,
+    "mse": 0.05548261195421219,
+    "center_mse": 0.0020674769449979067,
+    "shape_mse": 0.1737963021993637,
+    "center_local": 0.18600997340679168,
+    "shape": 0.1737963021993637,
+    "relative_local": 0.23976134514808656,
+    "overlap": 0.0690269656777382,
+    "contact": 0.08804862016439438,
+    "boundary": 0.009659009955823422,
+    "mib": 0.011835817448794842,
+    "bbox": 0.0002769514720421284,
+    "local": 0.2893993833065033,
+    "geometry": 0.37156320428848266,
+    "overlap_area": 0.08211699759960174,
+    "crowding": 0.007729217782616616,
+    "void": 0.1409945194721222,
+    "compactness": 0.001679097767919302,
+    "occupancy": 0.11954979753494263,
+    "repair": 0.49111300086975096,
+    "supervision": 0.2893993833065033,
+    "quality_proxy": 0.37156320428848266,
+    "selection_proxy": 0.49111300086975096,
+    "batched_inference_seconds_per_case": 0.011555052699579392,
+    "count": 2000,
+    "raw_hard_legal": 0,
+    "raw_hard_legal_rate": 0.0,
+    "draft_diagnostics": {
+      "overlap_pairs": {
+        "mean": 78.268,
+        "p95": 130.0,
+        "max": 155.0
+      },
+      "overlap_area_fraction": {
+        "mean": 0.08211700204735796,
+        "p95": 0.12858053053612298,
+        "max": 0.20401814943726607
+      },
+      "penetration_squared_per_block": {
+        "mean": 0.033628090248342846,
+        "p95": 0.06404755999609447,
+        "max": 0.12363049942702677
+      },
+      "max_local_penetration": {
+        "mean": 0.5349579312503207,
+        "p95": 0.7696000304745932,
+        "max": 0.9033102440600553
+      },
+      "largest_conflict_cluster": {
+        "mean": 55.759,
+        "p95": 98.0,
+        "max": 114.0
+      },
+      "largest_conflict_cluster_fraction": {
+        "mean": 0.7974677019799331,
+        "p95": 0.9518359150889271,
+        "max": 1.0
+      }
+    }
+  },
+  "count": 2000,
+  "postprocessing_calls": 0,
+  "test_read": false
+}

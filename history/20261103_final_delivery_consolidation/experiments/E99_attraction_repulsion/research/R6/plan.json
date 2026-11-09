@@ -1,0 +1,13 @@
+{
+  "revision": "E99.R6.batch_dual_repair_native_recovery.v1",
+  "evidence": "R5 train500 Q1.050489175, all hard legal,11 constructive recoveries. Worst weighted errors remain recovery cases335/135/448/295. Case335 CPU geometry238.444ms includes81.206ms greedy construction after four unsuccessful shapes;135 construction54.830ms. R5 flips only2 of up to8 certified conflict edges per unsuccessful solve.",
+  "hypothesis": "Apply all up to8 identified conflict corrections from the same current snapshot between shape calls, rather than only2. Preserve per-axis center-order direction and immutable-obstacle exclusions. Compile the unchanged greedy construction equations to bound recovery overhead without changing their result.",
+  "arms": ["R5_control", "batch_dual_native"],
+  "backend": {"seconds":0.18,"maximum_shape_solves":4,"shape_cap_seconds":0.045,"projection_and_polish_reserve_seconds":0.033,"maximum_edge_flips_per_failure":8,"elastic":0,"conservative":false,"field":false},
+  "implementation_panel": [0,43,95,135,335],
+  "checks": "Only5 unique training cases: original vs native constructor coordinates, hard locks/area/nonoverlap, identical public order/cost/tie rules, FP64 no-fastmath, JIT cold separate. Native constructor speed is engineering evidence; quality change attributable to batch ray repair subject to checks.",
+  "control_reuse": "Completed R5 dual_route500 records/coordinates/source hashes read-only; historical control timing labeled, no repeated control solve",
+  "calibration_panel": "v5 train_monitor500 new arm once after preflight; same frozen C3/public inputs; CPU-only diagnostic timings",
+  "promotion": "No dev sweep. Inspect whole weightedQ and worst contributions plus geometry latency; freeze complete C3 pipeline before dev500 acceptance.",
+  "test_read":false,"new_training":false
+}

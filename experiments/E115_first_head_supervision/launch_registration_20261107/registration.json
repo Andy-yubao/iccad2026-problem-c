@@ -1,0 +1,24 @@
+{
+  "status": "ready_to_dispatch",
+  "jobs": [
+    "E114 staged --resume",
+    "E115 first9 scratch"
+  ],
+  "train_count_per_model": 36000,
+  "prior_E114_budget_seconds": 513.4100636999938,
+  "E114_prior_latest_sha256": "b115b0c844c706dbf188dcaea09b4552cfee6f873679fcd67c72faeab775c966",
+  "protected_sha256": {
+    "experiments/E114_supervision_placement/runs/terminal_seed0/checkpoints/best.pt": "a5cc0d225c3c5e4b3633827d6ef72bc3a58fa6190f9a6d67767cc058917f2c70",
+    "experiments/E114_supervision_placement/runs/dense_seed0/checkpoints/best.pt": "5a709e22823d3e39c44791170ec2ea40248259cdbb3d0e7833a4d3a79c1f4b7f",
+    "experiments/E112_deep_geometry_budget/STOP": "e6b8d9b06e8e5cd702ce3ce820355b95879b02dd3bd0b0784aecdf7acae459c8",
+    "experiments/E112_deep_geometry_budget/QUEUE_STOP": "b9ea0a6be323b87022c64d451980fc7ac6e81876b29c68ae574657c3de65c527",
+    "experiments/E113_deep_head_budget/STOP": "887e15973fae01427bf4598d75082182f5575fcccddccaaed51c00a2dcaecf6c",
+    "protocol/random_reference16k_v1.json": "ef09a04d37540cc3e8f60cc25955278aee3c0b960807f0ad7c0ba9b0cec396ea",
+    "protocol/research_training16k_v1.json": "f8f97afaaade4ef196ad3d0684d8d803e5950c6006e301f6b06652246c21b2af"
+  },
+  "E114_original_queue_STOP_preserved": true,
+  "E115_implementation_check": "passed",
+  "no_resume_rehearsal": true,
+  "no_test": true,
+  "no_automatic_Q": true
+}

@@ -1,0 +1,2071 @@
+{
+  "scope": "User paused research; saved dev2000/dev500 analysis plus deterministic reference decode, no model inference, optimizer, solver or scoring",
+  "test_read": false,
+  "model_forward_calls": 0,
+  "training_updates": 0,
+  "solver_calls": 0,
+  "new_Q_evaluations": 0,
+  "subgroup_definition": "low pin<=.3; high pin>=.8; sparse density<=median at identical n (ties included)",
+  "models": {
+    "E42": {
+      "groups": {
+        "all": {
+          "count2000": 2000,
+          "mean_overlap": 0.06302022655951652,
+          "mean_G": 0.3575172587780388,
+          "count500": 500,
+          "mean_Q": 1.046002032139471,
+          "weighted_Q": 1.0258596340152353,
+          "p95_Q": 1.1855348291463157,
+          "max_Q": 1.9272793619183735
+        },
+        "low_pin": {
+          "count2000": 324,
+          "mean_overlap": 0.08723864000032601,
+          "mean_G": 0.6035379268845769,
+          "count500": 80,
+          "mean_Q": 1.0667036303202475,
+          "weighted_Q": 1.037877328321476,
+          "p95_Q": 1.1889083922725399,
+          "max_Q": 1.271248788734692
+        },
+        "high_pin": {
+          "count2000": 808,
+          "mean_overlap": 0.046879030658641845,
+          "mean_G": 0.19490667179737894,
+          "count500": 206,
+          "mean_Q": 1.0362998263902559,
+          "weighted_Q": 1.0218326979928967,
+          "p95_Q": 1.1270818134663503,
+          "max_Q": 1.9272793619183735
+        },
+        "sparse_same_n": {
+          "count2000": 1029,
+          "mean_overlap": 0.06980380980910872,
+          "mean_G": 0.4243017299340244,
+          "count500": 268,
+          "mean_Q": 1.044447424642859,
+          "weighted_Q": 1.0322158190421669,
+          "p95_Q": 1.1918578290960171,
+          "max_Q": 1.3392155258993648
+        },
+        "low_pin_sparse": {
+          "count2000": 157,
+          "mean_overlap": 0.10237427580520408,
+          "mean_G": 0.7755620932337187,
+          "count500": 37,
+          "mean_Q": 1.0793765046902815,
+          "weighted_Q": 1.0680186780708385,
+          "p95_Q": 1.191235544951183,
+          "max_Q": 1.2202787382394615
+        },
+        "low_pin_dense": {
+          "count2000": 167,
+          "mean_overlap": 0.07300932969274604,
+          "mean_G": 0.44181460881981477,
+          "count500": 43,
+          "mean_Q": 1.0557990640018469,
+          "weighted_Q": 1.0215126786368263,
+          "p95_Q": 1.1494439177241074,
+          "max_Q": 1.271248788734692
+        },
+        "high_pin_sparse": {
+          "count2000": 409,
+          "mean_overlap": 0.05038153087265156,
+          "mean_G": 0.21578198856266304,
+          "count500": 109,
+          "mean_Q": 1.035881669418783,
+          "weighted_Q": 1.0260811209634342,
+          "p95_Q": 1.1699116447019244,
+          "max_Q": 1.3392155258993648
+        },
+        "high_pin_dense": {
+          "count2000": 399,
+          "mean_overlap": 0.043288748484381266,
+          "mean_G": 0.1735081641357218,
+          "count500": 97,
+          "mean_Q": 1.0367697141210868,
+          "weighted_Q": 1.0179753861799614,
+          "p95_Q": 1.110471453930788,
+          "max_Q": 1.9272793619183735
+        }
+      },
+      "concentration": {
+        "worst_overlap10pct": {
+          "count": 200,
+          "mean_n": 62.015,
+          "mean_pin_fraction": 0.23243627397707287,
+          "low_pin_fraction": 0.71,
+          "low_pin_sparse_fraction": 0.525,
+          "sparse_same_n_fraction": 0.765
+        },
+        "worst_postQ10pct": {
+          "count": 50,
+          "mean_n": 58.38,
+          "mean_pin_fraction": 0.46965134860058194,
+          "low_pin_fraction": 0.34,
+          "low_pin_sparse_fraction": 0.18,
+          "sparse_same_n_fraction": 0.56
+        }
+      },
+      "associations": {
+        "pin_connected_fraction": {
+          "overlap_rho": -0.690158292633335,
+          "overlap_exact_n_rank_r": -0.5365738720622297,
+          "G_rho": -0.7133518609951796
+        },
+        "connection_density": {
+          "overlap_rho": -0.4880686556091911,
+          "overlap_exact_n_rank_r": -0.3679711187542694,
+          "G_rho": -0.49396107020670066
+        },
+        "fixed_fraction": {
+          "overlap_rho": -0.06505958045399969,
+          "overlap_exact_n_rank_r": -0.0004116711740311473,
+          "G_rho": -0.09482618514421151
+        },
+        "preplaced_fraction": {
+          "overlap_rho": 0.04263355329687276,
+          "overlap_exact_n_rank_r": 0.051145330654372136,
+          "G_rho": 0.010001426334608357
+        },
+        "boundary_fraction": {
+          "overlap_rho": 0.12301484588515081,
+          "overlap_exact_n_rank_r": -0.09551823543548218,
+          "G_rho": 0.10472691267874912
+        },
+        "area_cv": {
+          "overlap_rho": -0.06410149452537363,
+          "overlap_exact_n_rank_r": -0.020387374885588595,
+          "G_rho": -0.003730955432738858
+        },
+        "mib_fraction": {
+          "overlap_rho": 0.13949911671942516,
+          "overlap_exact_n_rank_r": 0.03478965112777366,
+          "G_rho": 0.11408982294888581
+        },
+        "group_fraction": {
+          "overlap_rho": 0.12559729808880205,
+          "overlap_exact_n_rank_r": 0.0264286355322161,
+          "G_rho": 0.11986416506353657
+        },
+        "ref_area_transform_log_mismatch": {
+          "overlap_rho": 0.13170808532582606,
+          "overlap_exact_n_rank_r": 0.03969706811538576,
+          "G_rho": 0.09915851041312072
+        }
+      },
+      "worst_Q10": [
+        {
+          "index": 164,
+          "n": 57,
+          "Q": 1.9272793619183735,
+          "pin": 0.8596491228070176,
+          "density": 0.34461152882205515,
+          "sparse_same_n": false,
+          "raw_overlap": 0.03831926622371467,
+          "rescue": true,
+          "grouping": 8,
+          "boundary": 0,
+          "hpwl_gap": 0.7139212345553619,
+          "bbox_gap": 0.04799077951901495
+        },
+        {
+          "index": 443,
+          "n": 36,
+          "Q": 1.7643778487540673,
+          "pin": 0.4444444444444444,
+          "density": 0.20634920634920634,
+          "sparse_same_n": false,
+          "raw_overlap": 0.10484377314956525,
+          "rescue": false,
+          "grouping": 0,
+          "boundary": 0,
+          "hpwl_gap": 0.7527544448589775,
+          "bbox_gap": 0.7760012526491573
+        },
+        {
+          "index": 329,
+          "n": 64,
+          "Q": 1.4107030501308535,
+          "pin": 0.5625,
+          "density": 0.1840277777777778,
+          "sparse_same_n": false,
+          "raw_overlap": 0.07393062496706462,
+          "rescue": false,
+          "grouping": 0,
+          "boundary": 0,
+          "hpwl_gap": 0.369061159638688,
+          "bbox_gap": 0.4523449406230187
+        },
+        {
+          "index": 239,
+          "n": 21,
+          "Q": 1.3392155258993648,
+          "pin": 0.8095238095238095,
+          "density": 0.14285714285714285,
+          "sparse_same_n": true,
+          "raw_overlap": 0.09086588398551111,
+          "rescue": false,
+          "grouping": 1,
+          "boundary": 2,
+          "hpwl_gap": 0.020595724632449196,
+          "bbox_gap": 0.018494870842838008
+        },
+        {
+          "index": 324,
+          "n": 55,
+          "Q": 1.3257162469941342,
+          "pin": 0.8181818181818182,
+          "density": 0.663973063973064,
+          "sparse_same_n": false,
+          "raw_overlap": 0.06653298324251096,
+          "rescue": false,
+          "grouping": 3,
+          "boundary": 0,
+          "hpwl_gap": 0.106567903024002,
+          "bbox_gap": 0.17554119350428493
+        },
+        {
+          "index": 246,
+          "n": 94,
+          "Q": 1.3070366537396683,
+          "pin": 0.5638297872340425,
+          "density": 0.1832532601235415,
+          "sparse_same_n": true,
+          "raw_overlap": 0.07280947120728765,
+          "rescue": true,
+          "grouping": 2,
+          "boundary": 2,
+          "hpwl_gap": 0.17320446657333363,
+          "bbox_gap": 0.10406841958651583
+        },
+        {
+          "index": 241,
+          "n": 89,
+          "Q": 1.2842043558826264,
+          "pin": 0.6067415730337079,
+          "density": 0.3429519918283963,
+          "sparse_same_n": false,
+          "raw_overlap": 0.06667534904264087,
+          "rescue": false,
+          "grouping": 2,
+          "boundary": 3,
+          "hpwl_gap": 0.031536473749243336,
+          "bbox_gap": 0.06273321675570664
+        },
+        {
+          "index": 450,
+          "n": 97,
+          "Q": 1.2746768413610639,
+          "pin": 0.9175257731958762,
+          "density": 0.1323024054982818,
+          "sparse_same_n": true,
+          "raw_overlap": 0.055837708513393744,
+          "rescue": false,
+          "grouping": 0,
+          "boundary": 1,
+          "hpwl_gap": 0.18214292297679688,
+          "bbox_gap": 0.28755004275707075
+        },
+        {
+          "index": 435,
+          "n": 45,
+          "Q": 1.271248788734692,
+          "pin": 0.1111111111111111,
+          "density": 0.22626262626262628,
+          "sparse_same_n": false,
+          "raw_overlap": 0.10007943859762765,
+          "rescue": false,
+          "grouping": 1,
+          "boundary": 0,
+          "hpwl_gap": 0.18163699972236808,
+          "bbox_gap": 0.23050540489321145
+        },
+        {
+          "index": 202,
+          "n": 53,
+          "Q": 1.2620226146752962,
+          "pin": 0.8867924528301887,
+          "density": 0.11756168359941944,
+          "sparse_same_n": true,
+          "raw_overlap": 0.05922188360156797,
+          "rescue": false,
+          "grouping": 1,
+          "boundary": 2,
+          "hpwl_gap": 0.02786363620590249,
+          "bbox_gap": 0.1446022255537666
+        }
+      ]
+    },
+    "E74": {
+      "groups": {
+        "all": {
+          "count2000": 2000,
+          "mean_overlap": 0.050861597802509546,
+          "mean_G": 0.32711997863836584,
+          "count500": 500,
+          "mean_Q": 1.0352407895504645,
+          "weighted_Q": 1.0225108721124265,
+          "p95_Q": 1.1394199674135899,
+          "max_Q": 1.6686386204374093
+        },
+        "low_pin": {
+          "count2000": 324,
+          "mean_overlap": 0.06778180356279556,
+          "mean_G": 0.5633510782808802,
+          "count500": 80,
+          "mean_Q": 1.0496259978015723,
+          "weighted_Q": 1.0371144511790582,
+          "p95_Q": 1.155722743506297,
+          "max_Q": 1.228829807822784
+        },
+        "high_pin": {
+          "count2000": 808,
+          "mean_overlap": 0.03844204419460283,
+          "mean_G": 0.16871509819042566,
+          "count500": 206,
+          "mean_Q": 1.0268881728446522,
+          "weighted_Q": 1.0152680863533199,
+          "p95_Q": 1.108131461801575,
+          "max_Q": 1.6686386204374093
+        },
+        "sparse_same_n": {
+          "count2000": 1029,
+          "mean_overlap": 0.05621247815572361,
+          "mean_G": 0.3924923282771926,
+          "count500": 268,
+          "mean_Q": 1.0336216268103522,
+          "weighted_Q": 1.0272922831943516,
+          "p95_Q": 1.1368124327240552,
+          "max_Q": 1.4483276161718306
+        },
+        "low_pin_sparse": {
+          "count2000": 157,
+          "mean_overlap": 0.07936994357898469,
+          "mean_G": 0.7316774854994124,
+          "count500": 37,
+          "mean_Q": 1.0502503831543375,
+          "weighted_Q": 1.0572172574529606,
+          "p95_Q": 1.1411927929742536,
+          "max_Q": 1.1979696004041864
+        },
+        "low_pin_dense": {
+          "count2000": 167,
+          "mean_overlap": 0.056887564146378244,
+          "mean_G": 0.4051040966442959,
+          "count500": 43,
+          "mean_Q": 1.0490887359864016,
+          "weighted_Q": 1.026200030123387,
+          "p95_Q": 1.1615102051975132,
+          "max_Q": 1.228829807822784
+        },
+        "high_pin_sparse": {
+          "count2000": 409,
+          "mean_overlap": 0.0410062933811953,
+          "mean_G": 0.18792258951731008,
+          "count500": 109,
+          "mean_Q": 1.0266482275391846,
+          "weighted_Q": 1.0186916695741426,
+          "p95_Q": 1.110387677305318,
+          "max_Q": 1.2622485580614264
+        },
+        "high_pin_dense": {
+          "count2000": 399,
+          "mean_overlap": 0.03581352811110328,
+          "mean_G": 0.14902621610346892,
+          "count500": 97,
+          "mean_Q": 1.0271578021054355,
+          "weighted_Q": 1.0121596792827836,
+          "p95_Q": 1.1047746794743942,
+          "max_Q": 1.6686386204374093
+        }
+      },
+      "concentration": {
+        "worst_overlap10pct": {
+          "count": 200,
+          "mean_n": 61.15,
+          "mean_pin_fraction": 0.2826394013958941,
+          "low_pin_fraction": 0.59,
+          "low_pin_sparse_fraction": 0.435,
+          "sparse_same_n_fraction": 0.745
+        },
+        "worst_postQ10pct": {
+          "count": 50,
+          "mean_n": 59.4,
+          "mean_pin_fraction": 0.4862236167375098,
+          "low_pin_fraction": 0.34,
+          "low_pin_sparse_fraction": 0.16,
+          "sparse_same_n_fraction": 0.44
+        }
+      },
+      "associations": {
+        "pin_connected_fraction": {
+          "overlap_rho": -0.6506721323756578,
+          "overlap_exact_n_rank_r": -0.4931887222861571,
+          "G_rho": -0.7101294854465564
+        },
+        "connection_density": {
+          "overlap_rho": -0.4824845076606515,
+          "overlap_exact_n_rank_r": -0.3640454429047422,
+          "G_rho": -0.49103334629187795
+        },
+        "fixed_fraction": {
+          "overlap_rho": -0.07002849119114485,
+          "overlap_exact_n_rank_r": -0.015239456979412286,
+          "G_rho": -0.09341811231793275
+        },
+        "preplaced_fraction": {
+          "overlap_rho": 0.03167890296079964,
+          "overlap_exact_n_rank_r": 0.030313268274110405,
+          "G_rho": 0.001713885823683528
+        },
+        "boundary_fraction": {
+          "overlap_rho": 0.1652453020110494,
+          "overlap_exact_n_rank_r": -0.05168807161500477,
+          "G_rho": 0.0970126544468476
+        },
+        "area_cv": {
+          "overlap_rho": -0.051837176459294115,
+          "overlap_exact_n_rank_r": 0.00473884673300068,
+          "G_rho": -0.0026488791622197904
+        },
+        "mib_fraction": {
+          "overlap_rho": 0.18699855565299778,
+          "overlap_exact_n_rank_r": 0.0644844789748109,
+          "G_rho": 0.10951078950152512
+        },
+        "group_fraction": {
+          "overlap_rho": 0.16098697940793866,
+          "overlap_exact_n_rank_r": 0.03616628912253419,
+          "G_rho": 0.10802728655753312
+        },
+        "ref_area_transform_log_mismatch": {
+          "overlap_rho": 0.17925112520919181,
+          "overlap_exact_n_rank_r": 0.07998464672709558,
+          "G_rho": 0.10292332097291489
+        }
+      },
+      "worst_Q10": [
+        {
+          "index": 164,
+          "n": 57,
+          "Q": 1.6686386204374093,
+          "pin": 0.8596491228070176,
+          "density": 0.34461152882205515,
+          "sparse_same_n": false,
+          "raw_overlap": 0.0325650249760697,
+          "rescue": true,
+          "grouping": 5,
+          "boundary": 0,
+          "hpwl_gap": 0.6791744226473283,
+          "bbox_gap": 0.030482266400244564
+        },
+        {
+          "index": 443,
+          "n": 36,
+          "Q": 1.451778856561229,
+          "pin": 0.4444444444444444,
+          "density": 0.20634920634920634,
+          "sparse_same_n": false,
+          "raw_overlap": 0.08837457163666271,
+          "rescue": false,
+          "grouping": 0,
+          "boundary": 0,
+          "hpwl_gap": 0.4750014398913306,
+          "bbox_gap": 0.42855627323112727
+        },
+        {
+          "index": 99,
+          "n": 75,
+          "Q": 1.4483276161718306,
+          "pin": 0.4666666666666667,
+          "density": 0.1344144144144144,
+          "sparse_same_n": true,
+          "raw_overlap": 0.05242512359767684,
+          "rescue": true,
+          "grouping": 3,
+          "boundary": 0,
+          "hpwl_gap": 0.36106855861639897,
+          "bbox_gap": 0.20803416507288
+        },
+        {
+          "index": 246,
+          "n": 94,
+          "Q": 1.328794320764141,
+          "pin": 0.5638297872340425,
+          "density": 0.1832532601235415,
+          "sparse_same_n": true,
+          "raw_overlap": 0.05986549916555789,
+          "rescue": true,
+          "grouping": 2,
+          "boundary": 2,
+          "hpwl_gap": 0.22602389435925646,
+          "bbox_gap": 0.08915775666893816
+        },
+        {
+          "index": 450,
+          "n": 97,
+          "Q": 1.2622485580614264,
+          "pin": 0.9175257731958762,
+          "density": 0.1323024054982818,
+          "sparse_same_n": true,
+          "raw_overlap": 0.04510754203905154,
+          "rescue": false,
+          "grouping": 0,
+          "boundary": 1,
+          "hpwl_gap": 0.16735194019578764,
+          "bbox_gap": 0.2782611624345128
+        },
+        {
+          "index": 307,
+          "n": 23,
+          "Q": 1.2600204473486396,
+          "pin": 0.5652173913043478,
+          "density": 0.1857707509881423,
+          "sparse_same_n": true,
+          "raw_overlap": 0.09483730408916244,
+          "rescue": false,
+          "grouping": 0,
+          "boundary": 1,
+          "hpwl_gap": 0.15920523553949578,
+          "bbox_gap": 0.19831062401513644
+        },
+        {
+          "index": 366,
+          "n": 87,
+          "Q": 1.250837779483693,
+          "pin": 0.9540229885057471,
+          "density": 0.6573108794439989,
+          "sparse_same_n": false,
+          "raw_overlap": 0.02788096147397783,
+          "rescue": true,
+          "grouping": 2,
+          "boundary": 1,
+          "hpwl_gap": 0.1820225257860247,
+          "bbox_gap": 0.07379501961452153
+        },
+        {
+          "index": 329,
+          "n": 64,
+          "Q": 1.2411205935341094,
+          "pin": 0.5625,
+          "density": 0.1840277777777778,
+          "sparse_same_n": false,
+          "raw_overlap": 0.06271038296541241,
+          "rescue": true,
+          "grouping": 2,
+          "boundary": 0,
+          "hpwl_gap": 0.16904311142045983,
+          "bbox_gap": 0.10207658372714921
+        },
+        {
+          "index": 493,
+          "n": 24,
+          "Q": 1.228829807822784,
+          "pin": 0.041666666666666664,
+          "density": 0.14130434782608695,
+          "sparse_same_n": false,
+          "raw_overlap": 0.09553729044926232,
+          "rescue": false,
+          "grouping": 0,
+          "boundary": 0,
+          "hpwl_gap": 0.15419683387898658,
+          "bbox_gap": 0.3034627817665814
+        },
+        {
+          "index": 239,
+          "n": 21,
+          "Q": 1.2207787194502147,
+          "pin": 0.8095238095238095,
+          "density": 0.14285714285714285,
+          "sparse_same_n": true,
+          "raw_overlap": 0.08546738715386408,
+          "rescue": false,
+          "grouping": 0,
+          "boundary": 2,
+          "hpwl_gap": 0.03470969253497166,
+          "bbox_gap": 0.0009459467964255127
+        }
+      ]
+    },
+    "E78": {
+      "groups": {
+        "all": {
+          "count2000": 2000,
+          "mean_overlap": 0.02723127584660365,
+          "mean_G": 0.3304955521337688,
+          "count500": 500,
+          "mean_Q": 1.0310725393969573,
+          "weighted_Q": 1.0154008412158966,
+          "p95_Q": 1.1223104989473214,
+          "max_Q": 1.7515612715535533
+        },
+        "low_pin": {
+          "count2000": 324,
+          "mean_overlap": 0.036357359082458365,
+          "mean_G": 0.5737840193496259,
+          "count500": 80,
+          "mean_Q": 1.0405260598902797,
+          "weighted_Q": 1.0246008228913293,
+          "p95_Q": 1.1268070087680355,
+          "max_Q": 1.2154858586255444
+        },
+        "high_pin": {
+          "count2000": 808,
+          "mean_overlap": 0.02040983560602843,
+          "mean_G": 0.1661911641597969,
+          "count500": 206,
+          "mean_Q": 1.0267628573270948,
+          "weighted_Q": 1.0131244624884634,
+          "p95_Q": 1.1216775267674857,
+          "max_Q": 1.738220275469867
+        },
+        "sparse_same_n": {
+          "count2000": 1029,
+          "mean_overlap": 0.029947974534868766,
+          "mean_G": 0.397634004828302,
+          "count500": 268,
+          "mean_Q": 1.0287332085000203,
+          "weighted_Q": 1.0195854490693765,
+          "p95_Q": 1.123947279838376,
+          "max_Q": 1.2880865469391336
+        },
+        "low_pin_sparse": {
+          "count2000": 157,
+          "mean_overlap": 0.04321031415832898,
+          "mean_G": 0.747758652564067,
+          "count500": 37,
+          "mean_Q": 1.0422100912898782,
+          "weighted_Q": 1.0388897036340758,
+          "p95_Q": 1.1276099253321892,
+          "max_Q": 1.1526305927898879
+        },
+        "low_pin_dense": {
+          "count2000": 167,
+          "mean_overlap": 0.029914760597957255,
+          "mean_G": 0.41022702884263623,
+          "count500": 43,
+          "mean_Q": 1.0390770096162063,
+          "weighted_Q": 1.0168429577099356,
+          "p95_Q": 1.1200237702532116,
+          "max_Q": 1.2154858586255444
+        },
+        "high_pin_sparse": {
+          "count2000": 409,
+          "mean_overlap": 0.021458483395027633,
+          "mean_G": 0.18551548475668309,
+          "count500": 109,
+          "mean_Q": 1.0258306128639385,
+          "weighted_Q": 1.014690888241089,
+          "p95_Q": 1.1414450460815198,
+          "max_Q": 1.247229310611002
+        },
+        "high_pin_dense": {
+          "count2000": 399,
+          "mean_overlap": 0.01933490591755556,
+          "mean_G": 0.1463825247509587,
+          "count500": 97,
+          "mean_Q": 1.0278104310021878,
+          "weighted_Q": 1.0117022423842996,
+          "p95_Q": 1.1073850248311772,
+          "max_Q": 1.738220275469867
+        }
+      },
+      "concentration": {
+        "worst_overlap10pct": {
+          "count": 200,
+          "mean_n": 49.6,
+          "mean_pin_fraction": 0.35800110787286143,
+          "low_pin_fraction": 0.485,
+          "low_pin_sparse_fraction": 0.36,
+          "sparse_same_n_fraction": 0.66
+        },
+        "worst_postQ10pct": {
+          "count": 50,
+          "mean_n": 55.54,
+          "mean_pin_fraction": 0.5451828157232975,
+          "low_pin_fraction": 0.3,
+          "low_pin_sparse_fraction": 0.18,
+          "sparse_same_n_fraction": 0.58
+        }
+      },
+      "associations": {
+        "pin_connected_fraction": {
+          "overlap_rho": -0.5673258037086437,
+          "overlap_exact_n_rank_r": -0.4082383073180937,
+          "G_rho": -0.7061035518495535
+        },
+        "connection_density": {
+          "overlap_rho": -0.3972419767171961,
+          "overlap_exact_n_rank_r": -0.2863525474194667,
+          "G_rho": -0.48352654391421546
+        },
+        "fixed_fraction": {
+          "overlap_rho": -0.05001361535154963,
+          "overlap_exact_n_rank_r": 0.030074866325053257,
+          "G_rho": -0.09590751339576081
+        },
+        "preplaced_fraction": {
+          "overlap_rho": 0.058698225551320725,
+          "overlap_exact_n_rank_r": 0.0569121640376596,
+          "G_rho": -0.00019145663372229405
+        },
+        "boundary_fraction": {
+          "overlap_rho": 0.3075578386675899,
+          "overlap_exact_n_rank_r": -0.026740903029513867,
+          "G_rho": 0.10521357517142654
+        },
+        "area_cv": {
+          "overlap_rho": -0.12708463527115882,
+          "overlap_exact_n_rank_r": -0.035903038176503595,
+          "G_rho": -0.012056118014029504
+        },
+        "mib_fraction": {
+          "overlap_rho": 0.3888630200973361,
+          "overlap_exact_n_rank_r": 0.19192165999035507,
+          "G_rho": 0.12058906206683663
+        },
+        "group_fraction": {
+          "overlap_rho": 0.26617380356948694,
+          "overlap_exact_n_rank_r": 0.04288759037088594,
+          "G_rho": 0.1143488545977186
+        },
+        "ref_area_transform_log_mismatch": {
+          "overlap_rho": 0.3424387728965147,
+          "overlap_exact_n_rank_r": 0.14815908352770973,
+          "G_rho": 0.11946137987837847
+        }
+      },
+      "worst_Q10": [
+        {
+          "index": 443,
+          "n": 36,
+          "Q": 1.7515612715535533,
+          "pin": 0.4444444444444444,
+          "density": 0.20634920634920634,
+          "sparse_same_n": false,
+          "raw_overlap": 0.06151511783390438,
+          "rescue": false,
+          "grouping": 1,
+          "boundary": 0,
+          "hpwl_gap": 0.7744655542585556,
+          "bbox_gap": 0.5097853703735701
+        },
+        {
+          "index": 164,
+          "n": 57,
+          "Q": 1.738220275469867,
+          "pin": 0.8596491228070176,
+          "density": 0.34461152882205515,
+          "sparse_same_n": false,
+          "raw_overlap": 0.01748057567549878,
+          "rescue": true,
+          "grouping": 6,
+          "boundary": 0,
+          "hpwl_gap": 0.6454862093190491,
+          "bbox_gap": 0.0619684140540022
+        },
+        {
+          "index": 329,
+          "n": 64,
+          "Q": 1.4268896342038373,
+          "pin": 0.5625,
+          "density": 0.1840277777777778,
+          "sparse_same_n": false,
+          "raw_overlap": 0.03692503418125188,
+          "rescue": true,
+          "grouping": 2,
+          "boundary": 0,
+          "hpwl_gap": 0.38653280495182957,
+          "bbox_gap": 0.224524628084987
+        },
+        {
+          "index": 246,
+          "n": 94,
+          "Q": 1.2880865469391336,
+          "pin": 0.5638297872340425,
+          "density": 0.1832532601235415,
+          "sparse_same_n": true,
+          "raw_overlap": 0.03248180102603353,
+          "rescue": true,
+          "grouping": 2,
+          "boundary": 2,
+          "hpwl_gap": 0.19259087966171048,
+          "bbox_gap": 0.05166490305026094
+        },
+        {
+          "index": 307,
+          "n": 23,
+          "Q": 1.2693788553898604,
+          "pin": 0.5652173913043478,
+          "density": 0.1857707509881423,
+          "sparse_same_n": true,
+          "raw_overlap": 0.08382253704769599,
+          "rescue": false,
+          "grouping": 0,
+          "boundary": 1,
+          "hpwl_gap": 0.1629017126591107,
+          "bbox_gap": 0.2121238590781976
+        },
+        {
+          "index": 450,
+          "n": 97,
+          "Q": 1.247229310611002,
+          "pin": 0.9175257731958762,
+          "density": 0.1323024054982818,
+          "sparse_same_n": true,
+          "raw_overlap": 0.022476793463227975,
+          "rescue": false,
+          "grouping": 0,
+          "boundary": 1,
+          "hpwl_gap": 0.15951583725740923,
+          "bbox_gap": 0.2569973958410003
+        },
+        {
+          "index": 366,
+          "n": 87,
+          "Q": 1.234954699152505,
+          "pin": 0.9540229885057471,
+          "density": 0.6573108794439989,
+          "sparse_same_n": false,
+          "raw_overlap": 0.011706449641740682,
+          "rescue": true,
+          "grouping": 2,
+          "boundary": 1,
+          "hpwl_gap": 0.17053183148973144,
+          "bbox_gap": 0.05664144694528611
+        },
+        {
+          "index": 202,
+          "n": 53,
+          "Q": 1.2251453064313969,
+          "pin": 0.8867924528301887,
+          "density": 0.11756168359941944,
+          "sparse_same_n": true,
+          "raw_overlap": 0.0312039341006071,
+          "rescue": false,
+          "grouping": 0,
+          "boundary": 2,
+          "hpwl_gap": 0.048761784708028805,
+          "bbox_gap": 0.16835284687249016
+        },
+        {
+          "index": 239,
+          "n": 21,
+          "Q": 1.2193032909534185,
+          "pin": 0.8095238095238095,
+          "density": 0.14285714285714285,
+          "sparse_same_n": true,
+          "raw_overlap": 0.061873643767704496,
+          "rescue": false,
+          "grouping": 0,
+          "boundary": 2,
+          "hpwl_gap": 0.03319535370216723,
+          "bbox_gap": -0.004664820451235308
+        },
+        {
+          "index": 493,
+          "n": 24,
+          "Q": 1.2154858586255444,
+          "pin": 0.041666666666666664,
+          "density": 0.14130434782608695,
+          "sparse_same_n": false,
+          "raw_overlap": 0.05773581211933581,
+          "rescue": false,
+          "grouping": 0,
+          "boundary": 0,
+          "hpwl_gap": 0.14450467276954165,
+          "bbox_gap": 0.28646704448154703
+        }
+      ]
+    },
+    "E79": {
+      "groups": {
+        "all": {
+          "count2000": 2000,
+          "mean_overlap": 0.023583658894456887,
+          "mean_G": 0.3318701505772769,
+          "count500": 500,
+          "mean_Q": 1.0306254162789792,
+          "weighted_Q": 1.0163831551595395,
+          "p95_Q": 1.1208963086405273,
+          "max_Q": 1.738220275469867
+        },
+        "low_pin": {
+          "count2000": 324,
+          "mean_overlap": 0.03159327731577481,
+          "mean_G": 0.5761860821993998,
+          "count500": 80,
+          "mean_Q": 1.0393630623639365,
+          "weighted_Q": 1.021441997351058,
+          "p95_Q": 1.1335816176614832,
+          "max_Q": 1.1631602806501768
+        },
+        "high_pin": {
+          "count2000": 808,
+          "mean_overlap": 0.01757552369601324,
+          "mean_G": 0.16664211210416685,
+          "count500": 206,
+          "mean_Q": 1.0265950963863804,
+          "weighted_Q": 1.0131828676179828,
+          "p95_Q": 1.1181569921620582,
+          "max_Q": 1.738220275469867
+        },
+        "sparse_same_n": {
+          "count2000": 1029,
+          "mean_overlap": 0.026000981387330698,
+          "mean_G": 0.39929653868528103,
+          "count500": 268,
+          "mean_Q": 1.0276273355595649,
+          "weighted_Q": 1.0213529833396569,
+          "p95_Q": 1.1236637311924955,
+          "max_Q": 1.269754896734315
+        },
+        "low_pin_sparse": {
+          "count2000": 157,
+          "mean_overlap": 0.037689142570835034,
+          "mean_G": 0.7510611087463464,
+          "count500": 37,
+          "mean_Q": 1.04106458078127,
+          "weighted_Q": 1.0367577486235169,
+          "p95_Q": 1.1314255710116272,
+          "max_Q": 1.155257541383096
+        },
+        "low_pin_dense": {
+          "count2000": 167,
+          "mean_overlap": 0.025862433932275084,
+          "mean_G": 0.4117826141283184,
+          "count500": 43,
+          "mean_Q": 1.0378989651211143,
+          "weighted_Q": 1.0131266131258934,
+          "p95_Q": 1.1481103761325973,
+          "max_Q": 1.1631602806501768
+        },
+        "high_pin_sparse": {
+          "count2000": 409,
+          "mean_overlap": 0.018491764678759293,
+          "mean_G": 0.18601323726124752,
+          "count500": 109,
+          "mean_Q": 1.024413194078212,
+          "weighted_Q": 1.0134961904222075,
+          "p95_Q": 1.1242780357527273,
+          "max_Q": 1.243172847122084
+        },
+        "high_pin_dense": {
+          "count2000": 399,
+          "mean_overlap": 0.016636319280115656,
+          "mean_G": 0.14678549508851274,
+          "count500": 97,
+          "mean_Q": 1.0290469247532912,
+          "weighted_Q": 1.0128983894098615,
+          "p95_Q": 1.103146553516587,
+          "max_Q": 1.738220275469867
+        }
+      },
+      "concentration": {
+        "worst_overlap10pct": {
+          "count": 200,
+          "mean_n": 49.135,
+          "mean_pin_fraction": 0.3684806457413924,
+          "low_pin_fraction": 0.48,
+          "low_pin_sparse_fraction": 0.35,
+          "sparse_same_n_fraction": 0.65
+        },
+        "worst_postQ10pct": {
+          "count": 50,
+          "mean_n": 53.86,
+          "mean_pin_fraction": 0.5200218099719958,
+          "low_pin_fraction": 0.32,
+          "low_pin_sparse_fraction": 0.18,
+          "sparse_same_n_fraction": 0.54
+        }
+      },
+      "associations": {
+        "pin_connected_fraction": {
+          "overlap_rho": -0.5505123104085277,
+          "overlap_exact_n_rank_r": -0.38825702307805193,
+          "G_rho": -0.7052658247487058
+        },
+        "connection_density": {
+          "overlap_rho": -0.38791719521099516,
+          "overlap_exact_n_rank_r": -0.2772961389153785,
+          "G_rho": -0.48191350988471676
+        },
+        "fixed_fraction": {
+          "overlap_rho": -0.043317146770551825,
+          "overlap_exact_n_rank_r": 0.03629567517707949,
+          "G_rho": -0.09660602995035215
+        },
+        "preplaced_fraction": {
+          "overlap_rho": 0.06117016233971421,
+          "overlap_exact_n_rank_r": 0.06099215710854451,
+          "G_rho": -0.0003978673832189994
+        },
+        "boundary_fraction": {
+          "overlap_rho": 0.30728211928096405,
+          "overlap_exact_n_rank_r": -0.020061306145913716,
+          "G_rho": 0.10558021100451011
+        },
+        "area_cv": {
+          "overlap_rho": -0.12754452488613122,
+          "overlap_exact_n_rank_r": -0.03909179485665359,
+          "G_rho": -0.01264029916007479
+        },
+        "mib_fraction": {
+          "overlap_rho": 0.3876400062112346,
+          "overlap_exact_n_rank_r": 0.19760754937065406,
+          "G_rho": 0.12124294098093706
+        },
+        "group_fraction": {
+          "overlap_rho": 0.2600806819879679,
+          "overlap_exact_n_rank_r": 0.04091910236607914,
+          "G_rho": 0.11446734126193431
+        },
+        "ref_area_transform_log_mismatch": {
+          "overlap_rho": 0.3492002025498571,
+          "overlap_exact_n_rank_r": 0.16159319731908237,
+          "G_rho": 0.1214805191967662
+        }
+      },
+      "worst_Q10": [
+        {
+          "index": 164,
+          "n": 57,
+          "Q": 1.738220275469867,
+          "pin": 0.8596491228070176,
+          "density": 0.34461152882205515,
+          "sparse_same_n": false,
+          "raw_overlap": 0.014558092670605415,
+          "rescue": true,
+          "grouping": 6,
+          "boundary": 0,
+          "hpwl_gap": 0.6454862093190491,
+          "bbox_gap": 0.0619684140540022
+        },
+        {
+          "index": 443,
+          "n": 36,
+          "Q": 1.7321198080960822,
+          "pin": 0.4444444444444444,
+          "density": 0.20634920634920634,
+          "sparse_same_n": false,
+          "raw_overlap": 0.05597171323276631,
+          "rescue": false,
+          "grouping": 1,
+          "boundary": 0,
+          "hpwl_gap": 0.8065889863715263,
+          "bbox_gap": 0.44120837801501966
+        },
+        {
+          "index": 329,
+          "n": 64,
+          "Q": 1.4701962942191367,
+          "pin": 0.5625,
+          "density": 0.1840277777777778,
+          "sparse_same_n": false,
+          "raw_overlap": 0.03259524937595923,
+          "rescue": true,
+          "grouping": 2,
+          "boundary": 0,
+          "hpwl_gap": 0.3533243311260408,
+          "bbox_gap": 0.3369797190438796
+        },
+        {
+          "index": 307,
+          "n": 23,
+          "Q": 1.269754896734315,
+          "pin": 0.5652173913043478,
+          "density": 0.1857707509881423,
+          "sparse_same_n": true,
+          "raw_overlap": 0.07658418012608481,
+          "rescue": false,
+          "grouping": 0,
+          "boundary": 1,
+          "hpwl_gap": 0.16289473539257257,
+          "bbox_gap": 0.21283441495353156
+        },
+        {
+          "index": 450,
+          "n": 97,
+          "Q": 1.243172847122084,
+          "pin": 0.9175257731958762,
+          "density": 0.1323024054982818,
+          "sparse_same_n": true,
+          "raw_overlap": 0.019993463445784426,
+          "rescue": false,
+          "grouping": 0,
+          "boundary": 1,
+          "hpwl_gap": 0.1567620003600824,
+          "bbox_gap": 0.2518918137708975
+        },
+        {
+          "index": 219,
+          "n": 30,
+          "Q": 1.2367086435910044,
+          "pin": 0.9,
+          "density": 0.12413793103448276,
+          "sparse_same_n": false,
+          "raw_overlap": 0.07743120872450779,
+          "rescue": false,
+          "grouping": 0,
+          "boundary": 2,
+          "hpwl_gap": 0.03509388841803021,
+          "bbox_gap": 0.11964527216427626
+        },
+        {
+          "index": 366,
+          "n": 87,
+          "Q": 1.23641474162059,
+          "pin": 0.9540229885057471,
+          "density": 0.6573108794439989,
+          "sparse_same_n": false,
+          "raw_overlap": 0.009270790766542955,
+          "rescue": true,
+          "grouping": 2,
+          "boundary": 1,
+          "hpwl_gap": 0.15228240048948313,
+          "bbox_gap": 0.07752398470850373
+        },
+        {
+          "index": 239,
+          "n": 21,
+          "Q": 1.2193066235722978,
+          "pin": 0.8095238095238095,
+          "density": 0.14285714285714285,
+          "sparse_same_n": true,
+          "raw_overlap": 0.05538743328028591,
+          "rescue": false,
+          "grouping": 0,
+          "boundary": 2,
+          "hpwl_gap": 0.03320091086359803,
+          "bbox_gap": -0.0046709801867557705
+        },
+        {
+          "index": 202,
+          "n": 53,
+          "Q": 1.2125995432204233,
+          "pin": 0.8867924528301887,
+          "density": 0.11756168359941944,
+          "sparse_same_n": true,
+          "raw_overlap": 0.027672011454507754,
+          "rescue": false,
+          "grouping": 0,
+          "boundary": 2,
+          "hpwl_gap": 0.04298696344128624,
+          "bbox_gap": 0.15142391615701734
+        },
+        {
+          "index": 496,
+          "n": 46,
+          "Q": 1.2055046815683608,
+          "pin": 0.5869565217391305,
+          "density": 0.2038647342995169,
+          "sparse_same_n": false,
+          "raw_overlap": 0.052078763605403464,
+          "rescue": false,
+          "grouping": 0,
+          "boundary": 1,
+          "hpwl_gap": 0.16034756187390453,
+          "bbox_gap": 0.13013708512174524
+        }
+      ]
+    },
+    "E80": {
+      "groups": {
+        "all": {
+          "count2000": 2000,
+          "mean_overlap": 0.02784877391673398,
+          "mean_G": 0.3568181163538247,
+          "count500": 500,
+          "mean_Q": 1.0344942102412906,
+          "weighted_Q": 1.0173292491225494,
+          "p95_Q": 1.1297273766563587,
+          "max_Q": 2.2009462942210782
+        },
+        "low_pin": {
+          "count2000": 324,
+          "mean_overlap": 0.039903872354580046,
+          "mean_G": 0.6121400408906701,
+          "count500": 80,
+          "mean_Q": 1.046138491345389,
+          "weighted_Q": 1.0220945061920579,
+          "p95_Q": 1.1460856419820253,
+          "max_Q": 1.1878599717162368
+        },
+        "high_pin": {
+          "count2000": 808,
+          "mean_overlap": 0.019390599758789626,
+          "mean_G": 0.18771366414955198,
+          "count500": 206,
+          "mean_Q": 1.0287471810671194,
+          "weighted_Q": 1.0152401749271833,
+          "p95_Q": 1.1061672509605085,
+          "max_Q": 2.2009462942210782
+        },
+        "sparse_same_n": {
+          "count2000": 1029,
+          "mean_overlap": 0.031036969980071556,
+          "mean_G": 0.4251181941960945,
+          "count500": 268,
+          "mean_Q": 1.0304505762698792,
+          "weighted_Q": 1.0198398208465005,
+          "p95_Q": 1.128254953244057,
+          "max_Q": 1.2686762087123464
+        },
+        "low_pin_sparse": {
+          "count2000": 157,
+          "mean_overlap": 0.04793126453467183,
+          "mean_G": 0.789225491084111,
+          "count500": 37,
+          "mean_Q": 1.056161411277613,
+          "weighted_Q": 1.041597662719016,
+          "p95_Q": 1.1684824579195778,
+          "max_Q": 1.1878599717162368
+        },
+        "low_pin_dense": {
+          "count2000": 167,
+          "mean_overlap": 0.03235716234096083,
+          "mean_G": 0.4456585098704892,
+          "count500": 43,
+          "mean_Q": 1.0375141183804524,
+          "weighted_Q": 1.011505653106097,
+          "p95_Q": 1.1197640277390053,
+          "max_Q": 1.1453449307834274
+        },
+        "high_pin_sparse": {
+          "count2000": 409,
+          "mean_overlap": 0.02062400604426434,
+          "mean_G": 0.2089057686239991,
+          "count500": 109,
+          "mean_Q": 1.025314242358969,
+          "weighted_Q": 1.0158396019893414,
+          "p95_Q": 1.1147411518517236,
+          "max_Q": 1.2008168771942875
+        },
+        "high_pin_dense": {
+          "count2000": 399,
+          "mean_overlap": 0.01812628103508246,
+          "mean_G": 0.16599042923714882,
+          "count500": 97,
+          "mean_Q": 1.032604813223701,
+          "weighted_Q": 1.0146959313092832,
+          "p95_Q": 1.0949782571908562,
+          "max_Q": 2.2009462942210782
+        }
+      },
+      "concentration": {
+        "worst_overlap10pct": {
+          "count": 200,
+          "mean_n": 55.62,
+          "mean_pin_fraction": 0.31255079449209494,
+          "low_pin_fraction": 0.57,
+          "low_pin_sparse_fraction": 0.415,
+          "sparse_same_n_fraction": 0.685
+        },
+        "worst_postQ10pct": {
+          "count": 50,
+          "mean_n": 55.02,
+          "mean_pin_fraction": 0.5495746552771769,
+          "low_pin_fraction": 0.26,
+          "low_pin_sparse_fraction": 0.18,
+          "sparse_same_n_fraction": 0.52
+        }
+      },
+      "associations": {
+        "pin_connected_fraction": {
+          "overlap_rho": -0.6209206349228893,
+          "overlap_exact_n_rank_r": -0.45682847678937955,
+          "G_rho": -0.7078745358690067
+        },
+        "connection_density": {
+          "overlap_rho": -0.41442938027300935,
+          "overlap_exact_n_rank_r": -0.2944848326068112,
+          "G_rho": -0.48484483210809515
+        },
+        "fixed_fraction": {
+          "overlap_rho": -0.05485589448084695,
+          "overlap_exact_n_rank_r": 0.03540372096667867,
+          "G_rho": -0.10468347575045443
+        },
+        "preplaced_fraction": {
+          "overlap_rho": 0.07307537931782844,
+          "overlap_exact_n_rank_r": 0.07925656600835115,
+          "G_rho": 0.0008134823725466463
+        },
+        "boundary_fraction": {
+          "overlap_rho": 0.2453402650516965,
+          "overlap_exact_n_rank_r": -0.05831513234334066,
+          "G_rho": 0.11879724832878642
+        },
+        "area_cv": {
+          "overlap_rho": -0.10910100777525193,
+          "overlap_exact_n_rank_r": -0.03360004724083971,
+          "G_rho": -0.014927306987424489
+        },
+        "mib_fraction": {
+          "overlap_rho": 0.31020016479944695,
+          "overlap_exact_n_rank_r": 0.15320266803168667,
+          "G_rho": 0.13083947451668246
+        },
+        "group_fraction": {
+          "overlap_rho": 0.22126259076477375,
+          "overlap_exact_n_rank_r": 0.035612417972892725,
+          "G_rho": 0.12779909281224336
+        },
+        "ref_area_transform_log_mismatch": {
+          "overlap_rho": 0.2755970568305716,
+          "overlap_exact_n_rank_r": 0.1087425078980779,
+          "G_rho": 0.12109040588235821
+        }
+      },
+      "worst_Q10": [
+        {
+          "index": 164,
+          "n": 57,
+          "Q": 2.2009462942210782,
+          "pin": 0.8596491228070176,
+          "density": 0.34461152882205515,
+          "sparse_same_n": false,
+          "raw_overlap": 0.015851810474775716,
+          "rescue": true,
+          "grouping": 1,
+          "boundary": 10,
+          "hpwl_gap": 0.2728753938000225,
+          "bbox_gap": 0.510602672877882
+        },
+        {
+          "index": 443,
+          "n": 36,
+          "Q": 1.6042617888275932,
+          "pin": 0.4444444444444444,
+          "density": 0.20634920634920634,
+          "sparse_same_n": false,
+          "raw_overlap": 0.06979563357079846,
+          "rescue": false,
+          "grouping": 0,
+          "boundary": 0,
+          "hpwl_gap": 0.6567070508855077,
+          "bbox_gap": 0.5518165267696785
+        },
+        {
+          "index": 329,
+          "n": 64,
+          "Q": 1.3971740388318197,
+          "pin": 0.5625,
+          "density": 0.1840277777777778,
+          "sparse_same_n": false,
+          "raw_overlap": 0.03883364895636951,
+          "rescue": false,
+          "grouping": 0,
+          "boundary": 0,
+          "hpwl_gap": 0.3477296574290184,
+          "bbox_gap": 0.44661842023462095
+        },
+        {
+          "index": 130,
+          "n": 67,
+          "Q": 1.2900637317448453,
+          "pin": 0.5074626865671642,
+          "density": 0.20714608774310267,
+          "sparse_same_n": false,
+          "raw_overlap": 0.035778855827019306,
+          "rescue": true,
+          "grouping": 1,
+          "boundary": 1,
+          "hpwl_gap": 0.23867254497554513,
+          "bbox_gap": 0.14682431485806796
+        },
+        {
+          "index": 246,
+          "n": 94,
+          "Q": 1.2686762087123464,
+          "pin": 0.5638297872340425,
+          "density": 0.1832532601235415,
+          "sparse_same_n": true,
+          "raw_overlap": 0.029984196675587042,
+          "rescue": true,
+          "grouping": 1,
+          "boundary": 2,
+          "hpwl_gap": 0.2098213030048559,
+          "bbox_gap": 0.07816687418856176
+        },
+        {
+          "index": 307,
+          "n": 23,
+          "Q": 1.2334070633262952,
+          "pin": 0.5652173913043478,
+          "density": 0.1857707509881423,
+          "sparse_same_n": true,
+          "raw_overlap": 0.08535777394575725,
+          "rescue": false,
+          "grouping": 0,
+          "boundary": 1,
+          "hpwl_gap": 0.15527448739436642,
+          "bbox_gap": 0.15244735886380156
+        },
+        {
+          "index": 496,
+          "n": 46,
+          "Q": 1.2038852435640854,
+          "pin": 0.5869565217391305,
+          "density": 0.2038647342995169,
+          "sparse_same_n": false,
+          "raw_overlap": 0.049217206342323086,
+          "rescue": false,
+          "grouping": 0,
+          "boundary": 1,
+          "hpwl_gap": 0.12193977128795885,
+          "bbox_gap": 0.1654679089051
+        },
+        {
+          "index": 368,
+          "n": 22,
+          "Q": 1.2015917634285274,
+          "pin": 0.4090909090909091,
+          "density": 0.22943722943722944,
+          "sparse_same_n": false,
+          "raw_overlap": 0.0681545024606604,
+          "rescue": false,
+          "grouping": 1,
+          "boundary": 0,
+          "hpwl_gap": 0.15221284275291352,
+          "bbox_gap": 0.06620515425592031
+        },
+        {
+          "index": 239,
+          "n": 21,
+          "Q": 1.2008168771942875,
+          "pin": 0.8095238095238095,
+          "density": 0.14285714285714285,
+          "sparse_same_n": true,
+          "raw_overlap": 0.03634927853535129,
+          "rescue": false,
+          "grouping": 1,
+          "boundary": 1,
+          "hpwl_gap": -0.003947208339691812,
+          "bbox_gap": 0.002369150869326017
+        },
+        {
+          "index": 267,
+          "n": 39,
+          "Q": 1.197472230627276,
+          "pin": 0.9743589743589743,
+          "density": 0.09716599190283401,
+          "sparse_same_n": true,
+          "raw_overlap": 0.04446281390491164,
+          "rescue": false,
+          "grouping": 2,
+          "boundary": 1,
+          "hpwl_gap": 0.02062167529424884,
+          "bbox_gap": 0.03281309195699578
+        }
+      ]
+    },
+    "E81": {
+      "groups": {
+        "all": {
+          "count2000": 2000,
+          "mean_overlap": 0.024910366620204585,
+          "mean_G": 0.3601462666336447,
+          "count500": 500,
+          "mean_Q": 1.03197386684636,
+          "weighted_Q": 1.016242023201916,
+          "p95_Q": 1.1230209926319334,
+          "max_Q": 1.8257730769575755
+        },
+        "low_pin": {
+          "count2000": 324,
+          "mean_overlap": 0.03566636355222238,
+          "mean_G": 0.6183466796107866,
+          "count500": 80,
+          "mean_Q": 1.0379301522269766,
+          "weighted_Q": 1.0250653588522614,
+          "p95_Q": 1.1082748586426023,
+          "max_Q": 1.2434121451295033
+        },
+        "high_pin": {
+          "count2000": 808,
+          "mean_overlap": 0.017175626060007918,
+          "mean_G": 0.18880300613876322,
+          "count500": 206,
+          "mean_Q": 1.026241724245198,
+          "weighted_Q": 1.0127953095908562,
+          "p95_Q": 1.11338066487847,
+          "max_Q": 1.8257730769575755
+        },
+        "sparse_same_n": {
+          "count2000": 1029,
+          "mean_overlap": 0.027740321965519617,
+          "mean_G": 0.4294405091260682,
+          "count500": 268,
+          "mean_Q": 1.0284056535025843,
+          "weighted_Q": 1.0186141128115132,
+          "p95_Q": 1.1101187488519626,
+          "max_Q": 1.2725068689700998
+        },
+        "low_pin_sparse": {
+          "count2000": 157,
+          "mean_overlap": 0.04275844163172791,
+          "mean_G": 0.7990711734742876,
+          "count500": 37,
+          "mean_Q": 1.0457362154844656,
+          "weighted_Q": 1.050693403051904,
+          "p95_Q": 1.1287567985959126,
+          "max_Q": 1.2434121451295033
+        },
+        "low_pin_dense": {
+          "count2000": 167,
+          "mean_overlap": 0.028998960806818977,
+          "mean_G": 0.44844401172713605,
+          "count500": 43,
+          "mean_Q": 1.03121330709844,
+          "weighted_Q": 1.011151119147759,
+          "p95_Q": 1.0822209385769168,
+          "max_Q": 1.1416722305133593
+        },
+        "high_pin_sparse": {
+          "count2000": 409,
+          "mean_overlap": 0.01815597846414541,
+          "mean_G": 0.20997061159616578,
+          "count500": 109,
+          "mean_Q": 1.0240124510254593,
+          "weighted_Q": 1.012304595270336,
+          "p95_Q": 1.1077100741815866,
+          "max_Q": 1.2209491584840162
+        },
+        "high_pin_dense": {
+          "count2000": 399,
+          "mean_overlap": 0.016170703420177755,
+          "mean_G": 0.16710488425385683,
+          "count500": 97,
+          "mean_Q": 1.0287467838426363,
+          "weighted_Q": 1.013240848596375,
+          "p95_Q": 1.1132683347493633,
+          "max_Q": 1.8257730769575755
+        }
+      },
+      "concentration": {
+        "worst_overlap10pct": {
+          "count": 200,
+          "mean_n": 58.005,
+          "mean_pin_fraction": 0.31333779576405335,
+          "low_pin_fraction": 0.56,
+          "low_pin_sparse_fraction": 0.405,
+          "sparse_same_n_fraction": 0.71
+        },
+        "worst_postQ10pct": {
+          "count": 50,
+          "mean_n": 57.2,
+          "mean_pin_fraction": 0.5673509749040062,
+          "low_pin_fraction": 0.18,
+          "low_pin_sparse_fraction": 0.14,
+          "sparse_same_n_fraction": 0.5
+        }
+      },
+      "associations": {
+        "pin_connected_fraction": {
+          "overlap_rho": -0.6119361872482783,
+          "overlap_exact_n_rank_r": -0.4474594413379957,
+          "G_rho": -0.70905859107443
+        },
+        "connection_density": {
+          "overlap_rho": -0.39957754384585886,
+          "overlap_exact_n_rank_r": -0.28132531657638105,
+          "G_rho": -0.4824156051273543
+        },
+        "fixed_fraction": {
+          "overlap_rho": -0.038479000316110096,
+          "overlap_exact_n_rank_r": 0.04121285864467374,
+          "G_rho": -0.10365081251869226
+        },
+        "preplaced_fraction": {
+          "overlap_rho": 0.07966068273473632,
+          "overlap_exact_n_rank_r": 0.09652382792545681,
+          "G_rho": 0.001955988292879145
+        },
+        "boundary_fraction": {
+          "overlap_rho": 0.21025416759074114,
+          "overlap_exact_n_rank_r": -0.05304650648683806,
+          "G_rho": 0.11798773340506001
+        },
+        "area_cv": {
+          "overlap_rho": -0.09059799014949754,
+          "overlap_exact_n_rank_r": -0.03213853376243763,
+          "G_rho": -0.014554881638720409
+        },
+        "mib_fraction": {
+          "overlap_rho": 0.2735174779163489,
+          "overlap_exact_n_rank_r": 0.16242662913471925,
+          "G_rho": 0.13237174385333259
+        },
+        "group_fraction": {
+          "overlap_rho": 0.19009166095051283,
+          "overlap_exact_n_rank_r": 0.02778337442525805,
+          "G_rho": 0.12779367768826072
+        },
+        "ref_area_transform_log_mismatch": {
+          "overlap_rho": 0.2489796963377846,
+          "overlap_exact_n_rank_r": 0.11640438158788274,
+          "G_rho": 0.12293473360612756
+        }
+      },
+      "worst_Q10": [
+        {
+          "index": 164,
+          "n": 57,
+          "Q": 1.8257730769575755,
+          "pin": 0.8596491228070176,
+          "density": 0.34461152882205515,
+          "sparse_same_n": false,
+          "raw_overlap": 0.013661725586861382,
+          "rescue": true,
+          "grouping": 6,
+          "boundary": 1,
+          "hpwl_gap": 0.6419076761848734,
+          "bbox_gap": 0.08586120398099698
+        },
+        {
+          "index": 443,
+          "n": 36,
+          "Q": 1.551091753008305,
+          "pin": 0.4444444444444444,
+          "density": 0.20634920634920634,
+          "sparse_same_n": false,
+          "raw_overlap": 0.05722946377172848,
+          "rescue": false,
+          "grouping": 0,
+          "boundary": 0,
+          "hpwl_gap": 0.6454618453616116,
+          "bbox_gap": 0.4567216606549988
+        },
+        {
+          "index": 329,
+          "n": 64,
+          "Q": 1.4269384684395252,
+          "pin": 0.5625,
+          "density": 0.1840277777777778,
+          "sparse_same_n": false,
+          "raw_overlap": 0.038167921515371864,
+          "rescue": true,
+          "grouping": 2,
+          "boundary": 0,
+          "hpwl_gap": 0.46900200846894446,
+          "bbox_gap": 0.1421447860650923
+        },
+        {
+          "index": 130,
+          "n": 67,
+          "Q": 1.3612821183316008,
+          "pin": 0.5074626865671642,
+          "density": 0.20714608774310267,
+          "sparse_same_n": false,
+          "raw_overlap": 0.034034774918450666,
+          "rescue": true,
+          "grouping": 1,
+          "boundary": 1,
+          "hpwl_gap": 0.21730924927829925,
+          "bbox_gap": 0.29987973814914953
+        },
+        {
+          "index": 246,
+          "n": 94,
+          "Q": 1.2725068689700998,
+          "pin": 0.5638297872340425,
+          "density": 0.1832532601235415,
+          "sparse_same_n": true,
+          "raw_overlap": 0.026093678489125804,
+          "rescue": true,
+          "grouping": 2,
+          "boundary": 2,
+          "hpwl_gap": 0.1660404586102008,
+          "bbox_gap": 0.051070577921569923
+        },
+        {
+          "index": 255,
+          "n": 84,
+          "Q": 1.2434121451295033,
+          "pin": 0.11904761904761904,
+          "density": 0.1333907056798623,
+          "sparse_same_n": true,
+          "raw_overlap": 0.07119904058647004,
+          "rescue": false,
+          "grouping": 1,
+          "boundary": 3,
+          "hpwl_gap": 0.03722654987245059,
+          "bbox_gap": 0.08190532332206868
+        },
+        {
+          "index": 307,
+          "n": 23,
+          "Q": 1.2337996447709716,
+          "pin": 0.5652173913043478,
+          "density": 0.1857707509881423,
+          "sparse_same_n": true,
+          "raw_overlap": 0.06636349802244784,
+          "rescue": false,
+          "grouping": 0,
+          "boundary": 1,
+          "hpwl_gap": 0.15557817923145953,
+          "bbox_gap": 0.15287819239408537
+        },
+        {
+          "index": 239,
+          "n": 21,
+          "Q": 1.2209491584840162,
+          "pin": 0.8095238095238095,
+          "density": 0.14285714285714285,
+          "sparse_same_n": true,
+          "raw_overlap": 0.027279645718717445,
+          "rescue": false,
+          "grouping": 1,
+          "boundary": 1,
+          "hpwl_gap": 0.03593984741496914,
+          "bbox_gap": -0.001542454790131908
+        },
+        {
+          "index": 99,
+          "n": 75,
+          "Q": 1.21896503435675,
+          "pin": 0.4666666666666667,
+          "density": 0.1344144144144144,
+          "sparse_same_n": true,
+          "raw_overlap": 0.03245336630484106,
+          "rescue": true,
+          "grouping": 2,
+          "boundary": 0,
+          "hpwl_gap": 0.16893628701138635,
+          "bbox_gap": 0.08155681076553957
+        },
+        {
+          "index": 366,
+          "n": 87,
+          "Q": 1.215114198393186,
+          "pin": 0.9540229885057471,
+          "density": 0.6573108794439989,
+          "sparse_same_n": false,
+          "raw_overlap": 0.008589240007585522,
+          "rescue": true,
+          "grouping": 2,
+          "boundary": 1,
+          "hpwl_gap": 0.13989250885936932,
+          "bbox_gap": 0.05149951124103107
+        }
+      ]
+    },
+    "E82": {
+      "groups": {
+        "all": {
+          "count2000": 2000,
+          "mean_overlap": 0.024448869739853173,
+          "mean_G": 0.36136664915643635,
+          "count500": 500,
+          "mean_Q": 1.0325096248061558,
+          "weighted_Q": 1.0180352829147272,
+          "p95_Q": 1.1252322627472275,
+          "max_Q": 2.056040033465631
+        },
+        "low_pin": {
+          "count2000": 324,
+          "mean_overlap": 0.03519011773036731,
+          "mean_G": 0.6194402332429165,
+          "count500": 80,
+          "mean_Q": 1.0432779003992205,
+          "weighted_Q": 1.0395395766787205,
+          "p95_Q": 1.1136861265158768,
+          "max_Q": 1.229872435416547
+        },
+        "high_pin": {
+          "count2000": 808,
+          "mean_overlap": 0.01668676931729489,
+          "mean_G": 0.18952505566677688,
+          "count500": 206,
+          "mean_Q": 1.0275972141835787,
+          "weighted_Q": 1.0137754147272096,
+          "p95_Q": 1.0967252702210997,
+          "max_Q": 2.056040033465631
+        },
+        "sparse_same_n": {
+          "count2000": 1029,
+          "mean_overlap": 0.027278985592833368,
+          "mean_G": 0.4307743765565814,
+          "count500": 268,
+          "mean_Q": 1.029083694401486,
+          "weighted_Q": 1.021194780281822,
+          "p95_Q": 1.1135471656009555,
+          "max_Q": 1.2325671884738743
+        },
+        "low_pin_sparse": {
+          "count2000": 157,
+          "mean_overlap": 0.0423375663422406,
+          "mean_G": 0.7999550764727744,
+          "count500": 37,
+          "mean_Q": 1.0530181316503884,
+          "weighted_Q": 1.09157539046779,
+          "p95_Q": 1.1925302187843634,
+          "max_Q": 1.229872435416547
+        },
+        "low_pin_dense": {
+          "count2000": 167,
+          "mean_overlap": 0.028470660053336733,
+          "mean_G": 0.4497346620627506,
+          "count500": 43,
+          "mean_Q": 1.0348967711830996,
+          "weighted_Q": 1.0112877607914177,
+          "p95_Q": 1.100553311375606,
+          "max_Q": 1.1486102849399833
+        },
+        "high_pin_sparse": {
+          "count2000": 409,
+          "mean_overlap": 0.017629343907456057,
+          "mean_G": 0.21075211419817289,
+          "count500": 109,
+          "mean_Q": 1.0245689859153992,
+          "weighted_Q": 1.0120301314704119,
+          "p95_Q": 1.1077155996927464,
+          "max_Q": 1.219472662271049
+        },
+        "high_pin_dense": {
+          "count2000": 399,
+          "mean_overlap": 0.015720571303821415,
+          "mean_G": 0.16776599065589726,
+          "count500": 97,
+          "mean_Q": 1.0310000686292653,
+          "weighted_Q": 1.015360026657342,
+          "p95_Q": 1.0831671662756672,
+          "max_Q": 2.056040033465631
+        }
+      },
+      "concentration": {
+        "worst_overlap10pct": {
+          "count": 200,
+          "mean_n": 58.76,
+          "mean_pin_fraction": 0.30723448433545036,
+          "low_pin_fraction": 0.575,
+          "low_pin_sparse_fraction": 0.42,
+          "sparse_same_n_fraction": 0.71
+        },
+        "worst_postQ10pct": {
+          "count": 50,
+          "mean_n": 57.06,
+          "mean_pin_fraction": 0.5483715507120056,
+          "low_pin_fraction": 0.22,
+          "low_pin_sparse_fraction": 0.16,
+          "sparse_same_n_fraction": 0.52
+        }
+      },
+      "associations": {
+        "pin_connected_fraction": {
+          "overlap_rho": -0.6092430073870627,
+          "overlap_exact_n_rank_r": -0.4466356252711274,
+          "G_rho": -0.7088667773297216
+        },
+        "connection_density": {
+          "overlap_rho": -0.39563955894282765,
+          "overlap_exact_n_rank_r": -0.2774957495517952,
+          "G_rho": -0.4828235558244965
+        },
+        "fixed_fraction": {
+          "overlap_rho": -0.03441177322965964,
+          "overlap_exact_n_rank_r": 0.04616815981356718,
+          "G_rho": -0.1038031874657539
+        },
+        "preplaced_fraction": {
+          "overlap_rho": 0.08018142017744795,
+          "overlap_exact_n_rank_r": 0.10015510485412629,
+          "G_rho": 0.0017297512269825609
+        },
+        "boundary_fraction": {
+          "overlap_rho": 0.2012091774372306,
+          "overlap_exact_n_rank_r": -0.045616393099462624,
+          "G_rho": 0.11857639527052173
+        },
+        "area_cv": {
+          "overlap_rho": -0.08568044892011221,
+          "overlap_exact_n_rank_r": -0.02892025155747144,
+          "G_rho": -0.015354257338564336
+        },
+        "mib_fraction": {
+          "overlap_rho": 0.26323004380791526,
+          "overlap_exact_n_rank_r": 0.16015393835752803,
+          "G_rho": 0.13310585234275776
+        },
+        "group_fraction": {
+          "overlap_rho": 0.183674554318431,
+          "overlap_exact_n_rank_r": 0.0263687575700927,
+          "G_rho": 0.12828120703590054
+        },
+        "ref_area_transform_log_mismatch": {
+          "overlap_rho": 0.24194484210747316,
+          "overlap_exact_n_rank_r": 0.1169653665593906,
+          "G_rho": 0.12379570534849112
+        }
+      },
+      "worst_Q10": [
+        {
+          "index": 164,
+          "n": 57,
+          "Q": 2.056040033465631,
+          "pin": 0.8596491228070176,
+          "density": 0.34461152882205515,
+          "sparse_same_n": false,
+          "raw_overlap": 0.01337100450140439,
+          "rescue": true,
+          "grouping": 9,
+          "boundary": 1,
+          "hpwl_gap": 0.6580705200957004,
+          "bbox_gap": 0.052779734662747164
+        },
+        {
+          "index": 443,
+          "n": 36,
+          "Q": 1.5527279080918799,
+          "pin": 0.4444444444444444,
+          "density": 0.20634920634920634,
+          "sparse_same_n": false,
+          "raw_overlap": 0.056366487524169,
+          "rescue": false,
+          "grouping": 0,
+          "boundary": 0,
+          "hpwl_gap": 0.6549940686306872,
+          "bbox_gap": 0.4504617475530723
+        },
+        {
+          "index": 329,
+          "n": 64,
+          "Q": 1.356422398834984,
+          "pin": 0.5625,
+          "density": 0.1840277777777778,
+          "sparse_same_n": false,
+          "raw_overlap": 0.03838840440752463,
+          "rescue": true,
+          "grouping": 1,
+          "boundary": 0,
+          "hpwl_gap": 0.4377739998774136,
+          "bbox_gap": 0.15714001382005333
+        },
+        {
+          "index": 366,
+          "n": 87,
+          "Q": 1.2384422120557579,
+          "pin": 0.9540229885057471,
+          "density": 0.6573108794439989,
+          "sparse_same_n": false,
+          "raw_overlap": 0.008376950773705748,
+          "rescue": true,
+          "grouping": 2,
+          "boundary": 1,
+          "hpwl_gap": 0.15430563383143578,
+          "bbox_gap": 0.07915718344387482
+        },
+        {
+          "index": 307,
+          "n": 23,
+          "Q": 1.2325671884738743,
+          "pin": 0.5652173913043478,
+          "density": 0.1857707509881423,
+          "sparse_same_n": true,
+          "raw_overlap": 0.06677486156591023,
+          "rescue": false,
+          "grouping": 0,
+          "boundary": 1,
+          "hpwl_gap": 0.1508241005781138,
+          "bbox_gap": 0.1553263280980699
+        },
+        {
+          "index": 255,
+          "n": 84,
+          "Q": 1.229872435416547,
+          "pin": 0.11904761904761904,
+          "density": 0.1333907056798623,
+          "sparse_same_n": true,
+          "raw_overlap": 0.07091879269234883,
+          "rescue": false,
+          "grouping": 1,
+          "boundary": 3,
+          "hpwl_gap": 0.02444767111940699,
+          "bbox_gap": 0.07160864300250921
+        },
+        {
+          "index": 239,
+          "n": 21,
+          "Q": 1.219472662271049,
+          "pin": 0.8095238095238095,
+          "density": 0.14285714285714285,
+          "sparse_same_n": true,
+          "raw_overlap": 0.02783512607038021,
+          "rescue": false,
+          "grouping": 1,
+          "boundary": 1,
+          "hpwl_gap": 0.03347778136279255,
+          "bbox_gap": -0.00045936394932697463
+        },
+        {
+          "index": 83,
+          "n": 111,
+          "Q": 1.2143943471683147,
+          "pin": 0.1891891891891892,
+          "density": 0.11564291564291564,
+          "sparse_same_n": true,
+          "raw_overlap": 0.0633377087479238,
+          "rescue": true,
+          "grouping": 3,
+          "boundary": 0,
+          "hpwl_gap": 0.16102009944270843,
+          "bbox_gap": 0.07095214938258369
+        },
+        {
+          "index": 246,
+          "n": 94,
+          "Q": 1.2130390901124393,
+          "pin": 0.5638297872340425,
+          "density": 0.1832532601235415,
+          "sparse_same_n": true,
+          "raw_overlap": 0.02613021750418013,
+          "rescue": true,
+          "grouping": 1,
+          "boundary": 2,
+          "hpwl_gap": 0.1455041870164504,
+          "bbox_gap": 0.042145488756737015
+        },
+        {
+          "index": 368,
+          "n": 22,
+          "Q": 1.2014690533195032,
+          "pin": 0.4090909090909091,
+          "density": 0.22943722943722944,
+          "sparse_same_n": false,
+          "raw_overlap": 0.055628160686976964,
+          "rescue": false,
+          "grouping": 1,
+          "boundary": 0,
+          "hpwl_gap": 0.1518123353019042,
+          "bbox_gap": 0.06637911029191558
+        }
+      ]
+    }
+  },
+  "reference_target_audit": {
+    "count": 2000,
+    "mean_original_reference_pair_intersection": 5.136526059714969e-08,
+    "mean_target_decoded_pair_intersection": 0.015495044600500893,
+    "target_decoded_overlap_gt1e_5_cases": 1949,
+    "target_decoded_mib_width_or_height_disagreement_over1pct_cases": 1948,
+    "original_reference_mib_width_or_height_disagreement_over1pct_cases": 1949,
+    "original_reference_area_vs_current_public_area_disagreement_over1pct_cases": 1948,
+    "saved_reference_state_mean_G": 0.025601400964184517,
+    "saved_reference_state_G_vs_E81_G_rho": 0.09556826539206634,
+    "target_decoded_overlap_vs_E81_overlap_rho": 0.28238046759511687,
+    "limits": "A reference-state diagnostic, not optimum/lower bound or a pure MIB causal effect. Includes public area/locked spec/decode/clamp conventions. MIB discrepancy is shape consistency diagnostic, not official scored validation."
+  },
+  "source_files": {
+    "experiments\\E69_case_loss_statistics\\runs\\20261028_dev2000\\features.json": "426957c4fd55d19a63970574c2e79a2fc0100608363ee6a5691b1198e4699a67",
+    "experiments\\E42_joint_regularization\\runs\\20261023_rectangle_w96d12_ab_seed0\\terminal\\results.json": "a8b13cad56de8520e2a14e3ed72ab9f35eb9df79c294c32d21f7c9c8606a129a",
+    "experiments\\E74_collision_32k_posttrain\\runs\\20261029_e42_topology_seed0\\terminal\\results.json": "8b1a2875f149f4b88774298762cedf5dfbade9b1518f0806e45e36a640ae9367",
+    "experiments\\E79_center_refinement\\runs\\20261029_e78_center_seed0\\terminal\\results.json": "a48db080898813679a95161a690204155abe4486f2ff6d64d4d8da09523e4bb0",
+    "experiments\\E80_modular_transfer\\runs\\20261029_e42_frozen_e79_transfer\\terminal\\results.json": "650b4a5318dbda4f52f0b00fe9b7c8954cbc5a7f562bb35d6ae32512962de67c",
+    "experiments\\E81_multisource_refinement\\runs\\20261029_e42_multisource_seed0\\terminal\\results.json": "395c0971bff000d788ea5827bc7a8a0085a999aed92778ed46d349c6bf9083b1",
+    "experiments\\E82_global_pressure_refinement\\runs\\20261029_e81_pressure_seed0\\terminal\\results.json": "0f1a93a6d56e2c2ec971c226b9e082b8264dc29f07829c292bf1a0e89933b20b",
+    "experiments\\E78_connectivity_posttrain\\runs\\20261029_e77_connectivity_seed0\\terminal\\results.json": "2c801ad3f795a3aa62de554ace39c5b4d925d4c13d443a0704a5029e697371ac"
+  }
+}

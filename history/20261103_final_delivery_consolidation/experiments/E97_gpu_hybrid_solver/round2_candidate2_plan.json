@@ -1,0 +1,54 @@
+{
+  "round": 2,
+  "candidate": 2,
+  "name": "C3_current_geometry_group_MST",
+  "status": "registered_before_calibration",
+  "source_checkpoint": "experiments/E97_gpu_hybrid_solver/runs/20261102_candidate3_clearance_seed0/checkpoints/best.pt",
+  "source_sha256": "d784e96f46decf7a487c25bde2ab16db8cf6ebae1bc0632434cc5e2f78173fce",
+  "model": "student.DeploymentModel; strict C3 retained readouts, frozen E74, train241547; deployment unchanged",
+  "data": "same v5 first16k/train_monitor500/dev_monitor500, inherited32k source exposure, test sealed",
+  "loss": {
+    "base": "exact C3 center1+shape.25+near-relative.25+teacher-axis physical-clearance-tail1",
+    "new_term": "same public boundary plus current-geometry group minimum spanning contact cost; both axes/signs permitted; detached exact parallel Prim selection, gradients only selected smooth pair costs; 9 rounds because public train16k/dev500 group-size inventory max10; checked at attach",
+    "coefficient": 3.6876450434943204,
+    "calibration": "one preregistered train_monitor500 local-state gradient pass, share.5,500 active, no optimizer/solver/dev/Q",
+    "aggregation": "unchanged unweighted per-case arithmetic mean, identical backward/monitor/best/LR/early-stop",
+    "teacher_input_to_NN": false,
+    "reference_input_or_scoring_denominator": false,
+    "comparison": "vs R2C1 changed group topology objective and its train-only scale; same C3 start, base, architecture, optimizer, panels, full solver. Not a single numerical coefficient effect."
+  },
+  "calibration_weights": "runs/20261102_round2_candidate2_calibration/weights.json",
+  "calibration_sha256": "802d20544848a523bae05805eaf28accc7d2bb167ef7c70bfa90982695ddc5c1",
+  "optimization": {
+    "seed": 0,
+    "batch": 32,
+    "precision": "FP32 no AMP/TF32",
+    "optimizer": "fresh AdamW",
+    "weight_decay": 0.0003,
+    "clip": 1,
+    "lr_levels": [
+      0.00025,
+      0.0001,
+      5e-05,
+      2e-05
+    ],
+    "max_training_seconds": 3600,
+    "max_epochs": 100,
+    "baseline_epoch0": true,
+    "protection": 0,
+    "lr_bad_rounds": 3,
+    "min_delta": "max(1e-5,abs(best)*.001)",
+    "lowest_wait_epochs": 2
+  },
+  "deployment": "same small C3 architecture; verified decode/scaling captured in resident GPU graph, original full E85 singlethread CPU solver unchanged",
+  "terminal": "unique own-Loss best once full dev500/new raw2000/same100. If whole initial model selected unchanged, reuse this window current-condition C3 control plus existing C3 raw2000; no duplicate solve",
+  "control": "one registered current-condition C3 full singlethread decode-captured control; old complete source results read-only",
+  "preflight": "original5 real Dropout/Adam eager-vs-CUDA-graph updates, next-step restored model/Adam/RNG/order, explicit finite teacher gate, frozen L, strict C3 warm start, labels isolated from NN, contact/boundary semantic fixtures",
+  "caveats": [
+    "MST contact is a piecewise differentiable surrogate, not a guarantee of a globally realizable legal group. Immutable contacts may be impossible.",
+    "No learned relation head or relation input to solver; tree exists only during Loss computation.",
+    "No new teacher generation; C3 nominal teacher limitations remain; exposed adaptive dev evidence only."
+  ],
+  "test_read": false,
+  "capture_migration": "round2_candidate2_capture_migration.json; cached identical bits, original calibration archived; no numerical/objective change"
+}

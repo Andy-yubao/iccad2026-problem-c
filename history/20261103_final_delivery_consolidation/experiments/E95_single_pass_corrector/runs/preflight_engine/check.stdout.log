@@ -1,0 +1,112 @@
+Verified archived cache loaded: train 5 cases
+Five-case public/raw/cache parity passed
+Direct bbox objective, remaining Loss and finite-difference check passed
+Eager Dropout/Adam/RNG resume passed
+Neural contract, finite rejection and one-case terminal passed; checking packed engine
+{
+  "status": "passed",
+  "unique_train_cases": 5,
+  "indices": [
+    1683,
+    10027,
+    5474,
+    10140,
+    15001
+  ],
+  "public_port_counts": [
+    92,
+    172,
+    207,
+    151,
+    109
+  ],
+  "raw_cache_parity": true,
+  "complete_public_port_coordinates_and_edge_weights": true,
+  "labels_rejected": true,
+  "test_roles_rejected": true,
+  "independent_corrector": true,
+  "one_simultaneous_output_head": true,
+  "global_hidden_layers": 12,
+  "initial_draft_geometry_identity_exact": true,
+  "source_decode_identity_exact": true,
+  "no_local_movement_cap": true,
+  "hard_area_shapes_preplacements_after_updates": true,
+  "all_12_neural_layers_update": true,
+  "frozen_placer_bit_exact": true,
+  "real_Dropout_Adam_RNG_resume_bit_exact": true,
+  "module_permutation_equivariant": true,
+  "far_module_cross_influence": 0.007559606339782476,
+  "standalone_export_equivalent": true,
+  "parameters": 11661662,
+  "corrector_parameters": 5831723,
+  "optimizer_steps_are_implementation_checks_only": true,
+  "first_two_step_Loss": [
+    8.982993125915527,
+    8.827807426452637
+  ],
+  "bbox_objective": {
+    "other_loss_reconstruction_matches": true,
+    "decoded_bbox_matches": true,
+    "exact_coefficient_gradient": true,
+    "finite_difference": 1.4352798461914062,
+    "analytic": 1.4351966381072998,
+    "box_weight": 8.46,
+    "unique_cases": 5
+  },
+  "no_reference_corrector_objective": true,
+  "identity_intent_zero": true,
+  "complete_wirelength_matches_raw_edges": true,
+  "zero_head_eight_calls_no_numerical_drift": true,
+  "source_terminal_protocol_matches": true,
+  "nonfinite_update_rejected_before_Adam": true,
+  "one_train_case_frozen_flash_hard_legal": true,
+  "scheduler_flat_loss_drop_epochs": [
+    3,
+    6,
+    9
+  ],
+  "seconds": 21.170461699999578,
+  "formal_training_started": false,
+  "test_read": false,
+  "engine": {
+    "status": "passed",
+    "unique_train_cases": 5,
+    "indices": [
+      1683,
+      10027,
+      5474,
+      10140,
+      15001
+    ],
+    "old_checkpoint_sha256": "e7e6d44c15467d7cbca55ec886c8cca0151828da4e9b6f332b00ae412b30721c",
+    "stopped_step": 4481,
+    "shape": [
+      32,
+      120,
+      480
+    ],
+    "attention_backend": "FP32 efficient SDPA; no AMP/TF32",
+    "manual_efficient_output_max_abs": 1.6689300537109375e-06,
+    "manual_efficient_loss_max_abs": 2.384185791015625e-07,
+    "manual_efficient_gradient_relative_l2": 6.427931108413289e-07,
+    "manual_efficient_update_max_abs": 7.271766662597656e-06,
+    "efficient_eager_graph_update_max_abs": 0.0,
+    "exact_new_graph_Adam_RNG_restore": true,
+    "serialized_progress_preserved": true,
+    "warmup_capture_no_optimizer_updates": true,
+    "nonfinite_rejected_before_Adam": true,
+    "peak_allocated_MiB": 6770.82275390625,
+    "peak_reserved_MiB": 7780.0,
+    "reference_natural_ms": 271.3568250001117,
+    "reference_full_padding_ms": 612.9792500005351,
+    "graph_full_padding_ms": 350.09392499978276,
+    "natural_to_graph_speedup": 0.7750972114134231,
+    "full_to_graph_speedup": 1.7508994193512941,
+    "timing_scope": "four updates including public packing/transfers; five repeated train cases; not complete epoch speed",
+    "numerical_migration_required": true,
+    "reason": "efficient reduction order and fixed padding change rounding/Dropout stream consumption; no claim of old-path bit-exact continuation",
+    "no_formal_optimizer_updates": true,
+    "test_read": false
+  },
+  "engine_proof_sha256": "4eb2d9056122f5fb34b2f394dd1e2adb452188539861045e5a47f85db419d2f0"
+}

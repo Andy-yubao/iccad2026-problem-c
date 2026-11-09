@@ -1,0 +1,9 @@
+{
+  "stage": "read_only_draft_diagnostics",
+  "error": "Recomputed mean-center-move parity assertion failed",
+  "cause": "Audit normalized displacement using sqrt(float32 cached areas); original final.py uses np.asarray(areas,dtype=float), then float64 sqrt. Draft raw scoring and overlap diagnostic parity had passed before the assertion.",
+  "resolution": "Use the exact recorded float64 normalization; preserve first-attempt source/config/partial, recompute analysis from the beginning.",
+  "training": false,
+  "solver_calls": 0,
+  "frozen_model_or_data_changed": false
+}

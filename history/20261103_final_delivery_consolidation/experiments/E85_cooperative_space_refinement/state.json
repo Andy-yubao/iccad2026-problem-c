@@ -1,0 +1,123 @@
+{
+  "status": "complete_audited",
+  "stage": "complete_audited",
+  "controller_pid": 49680,
+  "child_pid": null,
+  "updated_utc": "2026-10-30T04:51:45.129208+00:00",
+  "events": [
+    {
+      "utc": "2026-10-30T03:19:07.436295+00:00",
+      "status": "running",
+      "stage": "initial_audit"
+    },
+    {
+      "utc": "2026-10-30T03:20:10.248002+00:00",
+      "status": "stage_complete",
+      "stage": "initial_audit"
+    },
+    {
+      "utc": "2026-10-30T03:20:10.268945+00:00",
+      "status": "running",
+      "stage": "train_control"
+    },
+    {
+      "utc": "2026-10-30T03:59:13.913184+00:00",
+      "status": "stage_complete",
+      "stage": "train_control"
+    },
+    {
+      "utc": "2026-10-30T03:59:13.953633+00:00",
+      "status": "running",
+      "stage": "train_cooperative"
+    },
+    {
+      "utc": "2026-10-30T04:18:05.142610+00:00",
+      "status": "stopped",
+      "stage": "train_cooperative"
+    },
+    {
+      "utc": "2026-10-30T04:23:06.289961+00:00",
+      "status": "running",
+      "stage": "initial_audit"
+    },
+    {
+      "utc": "2026-10-30T04:23:21.216720+00:00",
+      "status": "stage_complete",
+      "stage": "initial_audit"
+    },
+    {
+      "utc": "2026-10-30T04:23:21.244620+00:00",
+      "status": "running",
+      "stage": "train_cooperative"
+    },
+    {
+      "utc": "2026-10-30T04:36:45.868350+00:00",
+      "status": "stage_complete",
+      "stage": "train_cooperative"
+    },
+    {
+      "utc": "2026-10-30T04:36:45.902471+00:00",
+      "status": "running",
+      "stage": "final_control"
+    },
+    {
+      "utc": "2026-10-30T04:41:20.884707+00:00",
+      "status": "stage_complete",
+      "stage": "final_control"
+    },
+    {
+      "utc": "2026-10-30T04:41:20.916491+00:00",
+      "status": "running",
+      "stage": "final_cooperative"
+    },
+    {
+      "utc": "2026-10-30T04:45:48.444063+00:00",
+      "status": "stage_complete",
+      "stage": "final_cooperative"
+    },
+    {
+      "utc": "2026-10-30T04:45:48.464223+00:00",
+      "status": "running",
+      "stage": "gallery_control"
+    },
+    {
+      "utc": "2026-10-30T04:46:38.803115+00:00",
+      "status": "stage_complete",
+      "stage": "gallery_control"
+    },
+    {
+      "utc": "2026-10-30T04:46:38.811138+00:00",
+      "status": "running",
+      "stage": "gallery_cooperative"
+    },
+    {
+      "utc": "2026-10-30T04:47:27.287810+00:00",
+      "status": "stage_complete",
+      "stage": "gallery_cooperative"
+    },
+    {
+      "utc": "2026-10-30T04:47:27.307755+00:00",
+      "status": "running",
+      "stage": "report"
+    },
+    {
+      "utc": "2026-10-30T04:47:33.114651+00:00",
+      "status": "stage_complete",
+      "stage": "report"
+    },
+    {
+      "utc": "2026-10-30T04:47:33.119209+00:00",
+      "status": "complete",
+      "stage": "complete"
+    },
+    {
+      "utc": "2026-10-30T04:51:45.129208+00:00",
+      "status": "complete_audited",
+      "stage": "saved_evidence_and_visual_audit"
+    }
+  ],
+  "test_read": false,
+  "report": "runs/comparison.md",
+  "baseline_promoted": false,
+  "audit": "runs/completion/inspection.md"
+}

@@ -1,0 +1,76 @@
+{
+  "source_files": {
+    "model.py": {
+      "source": "history/20261101_research_consolidation/experiments/E94_posttrain_lr_reset/model.py",
+      "source_sha256": "0d71c96c75976dc57d589d5709639291d1a30addffa8a5f0f2c53e2cb88a9089",
+      "current_sha256": "0d71c96c75976dc57d589d5709639291d1a30addffa8a5f0f2c53e2cb88a9089"
+    },
+    "features.py": {
+      "source": "history/20261101_research_consolidation/experiments/E94_posttrain_lr_reset/features.py",
+      "source_sha256": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+      "current_sha256": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73"
+    },
+    "batches.py": {
+      "source": "history/20261101_research_consolidation/experiments/E94_posttrain_lr_reset/batches.py",
+      "source_sha256": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92",
+      "current_sha256": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92"
+    },
+    "data.py": {
+      "source": "history/20261101_research_consolidation/experiments/E94_posttrain_lr_reset/data.py",
+      "source_sha256": "1e43fe61a6d4dde4007295f817db927d75cd61439239423621ef65bf826e0d66",
+      "current_sha256": "1e43fe61a6d4dde4007295f817db927d75cd61439239423621ef65bf826e0d66"
+    },
+    "ports.py": {
+      "source": "history/20261101_research_consolidation/experiments/E94_posttrain_lr_reset/ports.py",
+      "source_sha256": "431b54476e7de8a94c12cf935a30a3b49b911e208305fbe6bb7b23d72e37dbef",
+      "current_sha256": "431b54476e7de8a94c12cf935a30a3b49b911e208305fbe6bb7b23d72e37dbef"
+    },
+    "resident.py": {
+      "source": "history/20261101_research_consolidation/experiments/E94_posttrain_lr_reset/resident.py",
+      "source_sha256": "a70da9f834fd05091ab011459e34fcff214bd41cb753f98ee9c088975c0a3c81",
+      "current_sha256": "a70da9f834fd05091ab011459e34fcff214bd41cb753f98ee9c088975c0a3c81"
+    },
+    "group_tree.py": {
+      "source": "history/20261101_research_consolidation/experiments/E94_posttrain_lr_reset/group_tree.py",
+      "source_sha256": "867ca3b84848ae78da25dd2a2db16018d722102c7bb5a34644492451efef65fd",
+      "current_sha256": "867ca3b84848ae78da25dd2a2db16018d722102c7bb5a34644492451efef65fd"
+    },
+    "simple_loss.py": {
+      "source": "history/20261101_research_consolidation/experiments/E94_posttrain_lr_reset/simple_loss.py",
+      "source_sha256": "a6de1f749edc3c74a56f1b38e354c2dfc5e7110031a148b3e63c7284ea47e3ca",
+      "current_sha256": "e96cc9272aa1e3b13a6f93b3674674df280e709c4ecde7098ad0dc1b73b8bfd3"
+    },
+    "step_control.py": {
+      "source": "history/20261101_research_consolidation/experiments/E94_posttrain_lr_reset/step_control.py",
+      "source_sha256": "795ddb45dd257e123f1880eea28b58502711807ee643bfcb51a7e72d484952da",
+      "current_sha256": "795ddb45dd257e123f1880eea28b58502711807ee643bfcb51a7e72d484952da"
+    },
+    "captured_projection.py": {
+      "source": "history/20261101_research_consolidation/experiments/E94_posttrain_lr_reset/captured_projection.py",
+      "source_sha256": "dd031332127edd706c0e09f49a07f5e6133f5a9cd0f7fcd69d2246644cbb74c9",
+      "current_sha256": "dd031332127edd706c0e09f49a07f5e6133f5a9cd0f7fcd69d2246644cbb74c9"
+    },
+    "cuda_step.py": {
+      "source": "history/20261101_research_consolidation/experiments/E94_posttrain_lr_reset/cuda_step.py",
+      "source_sha256": "57a1bc1ea04df1d43281bd4ed0421b731e8d49da6ff6537302dcd64b72569133",
+      "current_sha256": "57a1bc1ea04df1d43281bd4ed0421b731e8d49da6ff6537302dcd64b72569133"
+    },
+    "io.py": {
+      "source": "history/20261101_research_consolidation/experiments/E94_posttrain_lr_reset/io.py",
+      "source_sha256": "ea5696c246e8b252183a628e58ae9860812d34f37b226852c2cf54ff038a7b18",
+      "current_sha256": "8744d4dc2f0faaf9de18deb38051e5e334cac43529eaa97357941fcede3730c1"
+    },
+    "cache.py": {
+      "source": "experiments/E90_auxiliary_weight_placer/cache.py",
+      "source_sha256": "ac3e95aa991fa434967583f472931375960241d1e97a0c0e6c7072c2e70e74bb",
+      "current_sha256": "ac3e95aa991fa434967583f472931375960241d1e97a0c0e6c7072c2e70e74bb"
+    }
+  },
+  "parent_weights": null,
+  "initialization": "random seed0, all parameters trainable, no old checkpoint opened",
+  "loss_expansion": "existing fixed F objective; new shared-denominator soft contributions; ten coefficients fixed throughout this run",
+  "code_changes": "new experiment-local trainer/preflight/scheduler; no cross-experiment algorithm imports",
+  "git_commit": "ccfbd6f78254a5e774d7298946c7de15b3a285d8",
+  "test_read": false,
+  "authorization": "user directly requested scratch96x12 and background launch; earlier stop-if-similar check has been superseded by explicit retraining request"
+}

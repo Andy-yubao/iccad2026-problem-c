@@ -1,0 +1,14 @@
+
+{"command": ["E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe", "-u", "-B", "-m", "experiments.E39_rectangular_attention.train", "--arm", "rectangle", "--output", "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E39_rectangular_attention\\runs\\20261023_rectangle_w96d12_rectangle_seed0", "--seed", "0", "--max-hours", "4.0", "--max-epochs", "200", "--batch-size", "32"], "started_utc": "2026-10-22T18:49:49Z"}
+Prepared tensor cache loaded: train, 16000 cases
+Prepared tensor cache loaded: dev, 2000 cases
+epoch=0 step=0 dev_proxy=42.469543 supervision=9.907700 lr=0.001 (no postprocessing)
+step=100 epoch=1 samples=3200/16000 total=1.28846
+step=200 epoch=1 samples=6400/16000 total=0.89398
+step=300 epoch=1 samples=9600/16000 total=0.78716
+step=400 epoch=1 samples=12800/16000 total=0.85507
+step=500 epoch=1 samples=16000/16000 total=0.84677
+epoch=1 step=500 dev_proxy=1.539255 supervision=0.648192 lr=0.001 (no postprocessing)
+step=600 epoch=2 samples=3200/16000 total=0.84663
+step=700 epoch=2 samples=6400/16000 total=0.69729
+Stopped: user_stop wall hours: 0.0469792507499935 best epoch: 1

@@ -1,0 +1,30 @@
+{
+  "timings": {
+    "collate_host_to_gpu": {
+      "median_seconds": 0.007971300000008341,
+      "min_seconds": 0.007565000000795408,
+      "max_seconds": 0.008568900000682333
+    },
+    "resident_batch": {
+      "median_seconds": 0.0005501499995261838,
+      "min_seconds": 0.00048739999965619063,
+      "max_seconds": 0.0006823000003350899
+    },
+    "eager_gpu_batch": {
+      "median_seconds": 0.1656207999999424,
+      "min_seconds": 0.16149920000043494,
+      "max_seconds": 0.18086549999952695
+    },
+    "original_collate_plus_step": {
+      "median_seconds": 0.17125854999994772,
+      "min_seconds": 0.16696980000051553,
+      "max_seconds": 0.17713730000014039
+    },
+    "forward_only": {
+      "median_seconds": 0.04527874999985215,
+      "min_seconds": 0.042474299999412324,
+      "max_seconds": 0.0469941999999719
+    }
+  },
+  "seconds": 33.378508700000566
+}

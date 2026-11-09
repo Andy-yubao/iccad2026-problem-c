@@ -1,0 +1,88 @@
+{
+  "checkpoint": "experiments\\E42_joint_regularization\\runs\\20261023_rectangle_w96d12_ab_seed0\\checkpoints\\best.pt",
+  "checkpoint_sha256": "12878108e9a58b8c195b314ba6586686c2a6e2796c1f4b6443e102b4db4224a6",
+  "source_epoch": 51,
+  "source_step": 25500,
+  "selection": "nearest public module counts25/45/70/95/115 among27 reviewed shared-training members; no diagnostic quality used",
+  "train_indices": [
+    1683,
+    10027,
+    5474,
+    9793,
+    1814
+  ],
+  "members": [
+    [
+      "worker_34/layouts_5488.th",
+      30
+    ],
+    [
+      "worker_71/layouts_1568.th",
+      72
+    ],
+    [
+      "worker_72/layouts_6608.th",
+      38
+    ],
+    [
+      "worker_83/layouts_2912.th",
+      36
+    ],
+    [
+      "worker_61/layouts_9744.th",
+      41
+    ]
+  ],
+  "unique_cases": 5,
+  "training_batch_repetitions": [
+    7,
+    7,
+    6,
+    6,
+    6
+  ],
+  "optimizer": {
+    "lr": 5e-05,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.0003,
+    "amsgrad": false,
+    "maximize": false,
+    "foreach": null,
+    "capturable": false,
+    "differentiable": false,
+    "fused": null,
+    "decoupled_weight_decay": true
+  },
+  "grad_clip": 1.0,
+  "fixed_weights": {
+    "center_local": 1.0,
+    "shape": 0.25,
+    "relative_local": 0.25,
+    "overlap": 0.5,
+    "contact": 0.5,
+    "boundary": 0.25,
+    "mib": 0.1,
+    "bbox": 0.1
+  },
+  "Dropout": "one shared original-checkpoint RNG forward; all candidate gradients use exactly this realization",
+  "evaluation": "five unique eval/no_grad layouts; no dropout noise in finite-difference outcomes",
+  "budget_seconds": 900,
+  "formal_training_runs": 0,
+  "postprocessing_calls": 0,
+  "test_read": false,
+  "sources": {
+    "batches.py": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92",
+    "cache.py": "0630f588ac8431d9f60e49a344045430d0b2bfac2071cc9936067fcd10a5b64e",
+    "check.py": "7c0138e59eb55ada69ee2535df6c775dd9c079e6533491b62969da0760faefd8",
+    "diagnostics.py": "9b1198569ab119107612011b9ca9d114896200e4392f55c786732381a555062f",
+    "features.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+    "io.py": "60f1e1db1b38183377ad4da89d1c258c94ce8de752c4bf9ca2c25ab9d9914439",
+    "losses.py": "f6503136dc719f6742c66b31da7ebe1076726fac38edb64fa9ae6106ab9d6557",
+    "model.py": "0d71c96c75976dc57d589d5709639291d1a30addffa8a5f0f2c53e2cb88a9089",
+    "__init__.py": "c6f13e4284d36db1a1e88c2c9103b27aa8870a59a23da2476f6b57a0150a4886"
+  }
+}

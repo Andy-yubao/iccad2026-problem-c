@@ -1,0 +1,16 @@
+{
+  "status": "ready",
+  "formal_training_started": false,
+  "test_read": false,
+  "automation_created": false,
+  "preflight_sources_current": true,
+  "cache_metadata_verified": [
+    "train16000",
+    "dev2000"
+  ],
+  "weights_sha256": "3e469d96c0322274d3d20feb123153955b3c5aef3070ebbb806a4ade485021a2",
+  "model": "Exact E68 v2 full-port architecture, scratch seed0",
+  "single_selector": "New E70 total only; old_G diagnostic",
+  "benchmark_step_seconds_same5case_batch32": 0.10000686666656596,
+  "limitation": "Group-connectivity initial weighted output gradient largest (about2.06); this is not parameter-gradient attribution or proof of optimal weights. Constants remain as proposed; no dev/Q search."
+}

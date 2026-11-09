@@ -1,0 +1,28 @@
+{
+  "revision": "E68.full_ports_no_summary.v2",
+  "authorization": "User requests reasonable combined proposals first and deferred ablations; replace legacy port summaries with full port inputs. Prepare only; do not start training.",
+  "hypothesis": "Complete weighted port distributions allow the model to recover better local relative geometry, especially for modules without direct ports, than the current centroid-only compression",
+  "arms": [
+    "full_ports"
+  ],
+  "comparison": "One combined candidate versus existing frozen E64/E65/E42 evidence. No new centroid-only run; component ablations deferred until substantial improvement.",
+  "architecture": "Original96x12 backbone with14 input features (legacy pin total and centroid removed), per-layer24-dimensional full-port reader; raw individual weights enter token embedding and gated weighted sums with asinh preserve absolute strength/multiplicity. No added collision projection or changed Loss.",
+  "initialization": "Scratch; original backbone RNG preserved; first14 columns copied into14-channel input projection. New port output starts zero.",
+  "data": "Frozen reference_workset_v5 train16000; fixed train_monitor500/dev_monitor500; dev2000 terminal raw; tests sealed",
+  "loss": "Frozen E64 eight-term original E42 G; same backward/monitor/best/LR/early-stop arithmetic mean",
+  "seed": 0,
+  "multi_seed_confirmation": false,
+  "budget": {
+    "formal_runs": 1,
+    "max_hours_per_arm": 3,
+    "max_epochs_per_arm": 200,
+    "max_cumulative_training_hours": 3
+  },
+  "preflight": "At most five unique train members. Public-only contract, frozen G/gradients, neutral init, complete-versus-centroid signal, permutation/padding/no-pin behavior, CUDA/eager actual Adam, nonfinite rejection, deterministic Dropout resume",
+  "evaluation": "Each sole dev-G-selected best: raw dev2000, one frozen flash dev500, same100 reference/current/E42 pictures without ratings. Low coverage<=0.3 and high>=0.8; sparse<=dev exact-N median. Report no-pin module error, near-pair error and ordering, common-step training curves; Q auxiliary only",
+  "decision": "Assess full minus centroid on low-port/sparse group and full development alongside user draft review. If only rich-port cases improve, report that the intended weak-coverage problem remains. Never promote from average G or terminal Q alone",
+  "automation": false,
+  "training_started": false,
+  "test_read": false,
+  "supersedes": "Original prepared pair never launched; source, plan and preflight preserved at runs/preparation_v1/"
+}

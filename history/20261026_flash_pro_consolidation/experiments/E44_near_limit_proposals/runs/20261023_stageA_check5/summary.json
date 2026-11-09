@@ -1,0 +1,714 @@
+{
+  "finished": true,
+  "test_read": false,
+  "fixture_checks_passed": true,
+  "case_count": 5,
+  "stop_reason": "five_case_check_complete",
+  "cumulative_loop_seconds": 8.119962900062092,
+  "records": [
+    {
+      "case_id": "synthetic:contact_bbox",
+      "source": {
+        "split": "synthetic",
+        "purpose": "contact_bbox"
+      },
+      "input_summary": {
+        "block_count": 4,
+        "fixed_blocks": 0,
+        "preplaced_blocks": 0,
+        "boundary_blocks": 4,
+        "grouped_blocks": 4,
+        "mib_blocks": 4
+      },
+      "checks": {
+        "exact_contact_tree_and_actual_bbox": true,
+        "complete_separation": true,
+        "sequence_pair_complete_acyclic": true,
+        "missing_pair_rejected": true,
+        "unmasked_free_labels_rejected": true,
+        "all_returned_hard_legal": true
+      },
+      "mib_conflicts": [],
+      "fixture_complete": true,
+      "variants": {
+        "exact": {
+          "metrics": {
+            "is_feasible": true,
+            "overlap_violations": 0,
+            "area_violations": 0,
+            "dimension_violations": 0,
+            "hpwl_b2b": 0.0,
+            "hpwl_p2b": 0.0,
+            "hpwl_total": 0.0,
+            "hpwl_baseline": 0.0,
+            "hpwl_gap": 0.0,
+            "bbox_area": 4.0,
+            "bbox_area_baseline": 4.0,
+            "area_gap": 0.0,
+            "fixed_violations": 0,
+            "preplaced_violations": 0,
+            "boundary_violations": 0,
+            "grouping_violations": 0,
+            "mib_violations": 0,
+            "total_soft_violations": 0,
+            "max_possible_violations": 10,
+            "violations_relative": 0.0,
+            "runtime_seconds": 0.006705299951136112,
+            "cost": 1.0,
+            "official_is_feasible_before_nonnegative_check": true,
+            "nonnegative_coordinate_violations": 0
+          },
+          "seconds": 0.006705299951136112,
+          "lp_calls": 2,
+          "accepted_updates": 1,
+          "fixed_structure_feasible": true,
+          "retracted_count": 0,
+          "fallback_to_incumbent": false,
+          "full_budget_overrun_seconds": null,
+          "attempt_statuses": [
+            "Optimal",
+            "Optimal"
+          ],
+          "all_kept_feasible": true
+        }
+      }
+    },
+    {
+      "case_id": "synthetic:anchor_and_boundary_conflict",
+      "source": {
+        "split": "synthetic",
+        "purpose": "anchor_and_boundary_conflict"
+      },
+      "input_summary": {
+        "block_count": 3,
+        "fixed_blocks": 0,
+        "preplaced_blocks": 2,
+        "boundary_blocks": 1,
+        "grouped_blocks": 0,
+        "mib_blocks": 0
+      },
+      "checks": {
+        "infeasible_soft_boundary_retracted": true,
+        "acyclic_but_anchor_infeasible_rejected": true,
+        "incumbent_unchanged_after_failed_topology": true,
+        "public_anchors_exact": true,
+        "unmasked_free_labels_rejected": true,
+        "all_returned_hard_legal": true
+      },
+      "mib_conflicts": [],
+      "fixture_complete": true,
+      "variants": {
+        "retract_boundary": {
+          "metrics": {
+            "is_feasible": true,
+            "overlap_violations": 0,
+            "area_violations": 0,
+            "dimension_violations": 0,
+            "hpwl_b2b": 0.0,
+            "hpwl_p2b": 0.0,
+            "hpwl_total": 0.0,
+            "hpwl_baseline": 0.0,
+            "hpwl_gap": 0.0,
+            "bbox_area": 5.0,
+            "bbox_area_baseline": 5.0,
+            "area_gap": 0.0,
+            "fixed_violations": 0,
+            "preplaced_violations": 0,
+            "boundary_violations": 1,
+            "grouping_violations": 0,
+            "mib_violations": 0,
+            "total_soft_violations": 1,
+            "max_possible_violations": 1,
+            "violations_relative": 1.0,
+            "runtime_seconds": 0.0029120000544935465,
+            "cost": 7.38905609893065,
+            "official_is_feasible_before_nonnegative_check": true,
+            "nonnegative_coordinate_violations": 0
+          },
+          "seconds": 0.0029120000544935465,
+          "lp_calls": 2,
+          "accepted_updates": 0,
+          "fixed_structure_feasible": true,
+          "retracted_count": 1,
+          "fallback_to_incumbent": true,
+          "full_budget_overrun_seconds": null,
+          "attempt_statuses": [
+            "Infeasible",
+            "Optimal"
+          ],
+          "all_kept_feasible": false
+        },
+        "reject_anchor_topology": {
+          "metrics": {
+            "is_feasible": true,
+            "overlap_violations": 0,
+            "area_violations": 0,
+            "dimension_violations": 0,
+            "hpwl_b2b": 0.0,
+            "hpwl_p2b": 0.0,
+            "hpwl_total": 0.0,
+            "hpwl_baseline": 0.0,
+            "hpwl_gap": 0.0,
+            "bbox_area": 5.0,
+            "bbox_area_baseline": 5.0,
+            "area_gap": 0.0,
+            "fixed_violations": 0,
+            "preplaced_violations": 0,
+            "boundary_violations": 1,
+            "grouping_violations": 0,
+            "mib_violations": 0,
+            "total_soft_violations": 1,
+            "max_possible_violations": 1,
+            "violations_relative": 1.0,
+            "runtime_seconds": 0.0010206999722868204,
+            "cost": 7.38905609893065,
+            "official_is_feasible_before_nonnegative_check": true,
+            "nonnegative_coordinate_violations": 0
+          },
+          "seconds": 0.0010206999722868204,
+          "lp_calls": 1,
+          "accepted_updates": 0,
+          "fixed_structure_feasible": false,
+          "retracted_count": 0,
+          "fallback_to_incumbent": true,
+          "full_budget_overrun_seconds": null,
+          "attempt_statuses": [
+            "Infeasible"
+          ],
+          "all_kept_feasible": false
+        }
+      }
+    },
+    {
+      "case_id": "synthetic:incompatible_original_mib",
+      "source": {
+        "split": "synthetic",
+        "purpose": "incompatible_original_mib"
+      },
+      "input_summary": {
+        "block_count": 3,
+        "fixed_blocks": 2,
+        "preplaced_blocks": 0,
+        "boundary_blocks": 0,
+        "grouped_blocks": 0,
+        "mib_blocks": 3
+      },
+      "checks": {
+        "mib_conflict_reported": true,
+        "fixed_dimensions_exact": true,
+        "original_areas_not_edited": true,
+        "incompatible_mib_remains_soft": true,
+        "unmasked_free_labels_rejected": true,
+        "all_returned_hard_legal": true
+      },
+      "mib_conflicts": [
+        {
+          "group": 1,
+          "reason": "public_area_or_locked_shape_conflict",
+          "members": [
+            0,
+            1,
+            2
+          ],
+          "hard_specs_preserved": true
+        }
+      ],
+      "fixture_complete": true,
+      "variants": {
+        "hard_specs_first": {
+          "metrics": {
+            "is_feasible": true,
+            "overlap_violations": 0,
+            "area_violations": 0,
+            "dimension_violations": 0,
+            "hpwl_b2b": 0.0,
+            "hpwl_p2b": 0.0,
+            "hpwl_total": 0.0,
+            "hpwl_baseline": 0.0,
+            "hpwl_gap": 0.0,
+            "bbox_area": 8.0,
+            "bbox_area_baseline": 6.0,
+            "area_gap": 0.3333333333333333,
+            "fixed_violations": 0,
+            "preplaced_violations": 0,
+            "boundary_violations": 0,
+            "grouping_violations": 0,
+            "mib_violations": 1,
+            "total_soft_violations": 1,
+            "max_possible_violations": 2,
+            "violations_relative": 0.5,
+            "runtime_seconds": 0.0029349999967962503,
+            "cost": 3.171328799868886,
+            "official_is_feasible_before_nonnegative_check": true,
+            "nonnegative_coordinate_violations": 0
+          },
+          "seconds": 0.0029349999967962503,
+          "lp_calls": 1,
+          "accepted_updates": 0,
+          "fixed_structure_feasible": true,
+          "retracted_count": 0,
+          "fallback_to_incumbent": true,
+          "full_budget_overrun_seconds": null,
+          "attempt_statuses": [
+            "Optimal"
+          ],
+          "all_kept_feasible": true
+        }
+      }
+    },
+    {
+      "case_id": "dev:worker_17/layouts_6608.th:68",
+      "source": {
+        "split": "dev",
+        "workset": "dev",
+        "shard": "worker_17/layouts_6608.th",
+        "sample_index": 68,
+        "paths": [
+          "datasets/floorset_lite/worker_17/layouts_6608.th"
+        ],
+        "workset_sha256": "efeeb928f0abee4edb5a82d7a77adb901deb7263766eefa68553b563cc2a2dcd"
+      },
+      "input_summary": {
+        "block_count": 120,
+        "fixed_blocks": 10,
+        "preplaced_blocks": 7,
+        "boundary_blocks": 39,
+        "grouped_blocks": 34,
+        "mib_blocks": 7
+      },
+      "variants": {
+        "public_exact": {
+          "metrics": {
+            "is_feasible": true,
+            "overlap_violations": 0,
+            "area_violations": 0,
+            "dimension_violations": 0,
+            "hpwl_b2b": 421.81249680622574,
+            "hpwl_p2b": 168.2809991960942,
+            "hpwl_total": 590.09349600232,
+            "hpwl_baseline": 143.0057487487793,
+            "hpwl_gap": 3.1263620600242272,
+            "bbox_area": 101900.49950170518,
+            "bbox_area_baseline": 35728.0,
+            "area_gap": 1.8521187724391286,
+            "fixed_violations": 0,
+            "preplaced_violations": 0,
+            "boundary_violations": 37,
+            "grouping_violations": 29,
+            "mib_violations": 0,
+            "total_soft_violations": 66,
+            "max_possible_violations": 75,
+            "violations_relative": 0.88,
+            "runtime_seconds": 0.20915320003405213,
+            "cost": 9.999999,
+            "official_is_feasible_before_nonnegative_check": true,
+            "nonnegative_coordinate_violations": 0
+          },
+          "seconds": 0.20915320003405213,
+          "lp_calls": 3,
+          "accepted_updates": 0,
+          "fixed_structure_feasible": false,
+          "retracted_count": 73,
+          "fallback_to_incumbent": true,
+          "full_budget_overrun_seconds": 0.028606799948029227,
+          "attempt_statuses": [
+            "Infeasible",
+            "Infeasible",
+            "assembly_budget_exhausted"
+          ],
+          "all_kept_feasible": false
+        },
+        "public_soft": {
+          "metrics": {
+            "is_feasible": true,
+            "overlap_violations": 0,
+            "area_violations": 0,
+            "dimension_violations": 0,
+            "hpwl_b2b": 421.81249680622574,
+            "hpwl_p2b": 168.2809991960942,
+            "hpwl_total": 590.09349600232,
+            "hpwl_baseline": 143.0057487487793,
+            "hpwl_gap": 3.1263620600242272,
+            "bbox_area": 101900.49950170518,
+            "bbox_area_baseline": 35728.0,
+            "area_gap": 1.8521187724391286,
+            "fixed_violations": 0,
+            "preplaced_violations": 0,
+            "boundary_violations": 37,
+            "grouping_violations": 29,
+            "mib_violations": 0,
+            "total_soft_violations": 66,
+            "max_possible_violations": 75,
+            "violations_relative": 0.88,
+            "runtime_seconds": 0.303123899968341,
+            "cost": 9.999999,
+            "official_is_feasible_before_nonnegative_check": true,
+            "nonnegative_coordinate_violations": 0
+          },
+          "seconds": 0.303123899968341,
+          "lp_calls": 3,
+          "accepted_updates": 0,
+          "fixed_structure_feasible": false,
+          "retracted_count": 73,
+          "fallback_to_incumbent": true,
+          "full_budget_overrun_seconds": 0.12246090004220606,
+          "attempt_statuses": [
+            "Infeasible",
+            "Infeasible",
+            "assembly_budget_exhausted"
+          ],
+          "all_kept_feasible": false
+        },
+        "public_sequence": {
+          "metrics": {
+            "is_feasible": true,
+            "overlap_violations": 0,
+            "area_violations": 0,
+            "dimension_violations": 0,
+            "hpwl_b2b": 421.81249680622574,
+            "hpwl_p2b": 168.2809991960942,
+            "hpwl_total": 590.09349600232,
+            "hpwl_baseline": 143.0057487487793,
+            "hpwl_gap": 3.1263620600242272,
+            "bbox_area": 101900.49950170518,
+            "bbox_area_baseline": 35728.0,
+            "area_gap": 1.8521187724391286,
+            "fixed_violations": 0,
+            "preplaced_violations": 0,
+            "boundary_violations": 37,
+            "grouping_violations": 29,
+            "mib_violations": 0,
+            "total_soft_violations": 66,
+            "max_possible_violations": 75,
+            "violations_relative": 0.88,
+            "runtime_seconds": 0.23509089997969568,
+            "cost": 9.999999,
+            "official_is_feasible_before_nonnegative_check": true,
+            "nonnegative_coordinate_violations": 0
+          },
+          "seconds": 0.23509089997969568,
+          "lp_calls": 3,
+          "accepted_updates": 0,
+          "fixed_structure_feasible": false,
+          "retracted_count": 73,
+          "fallback_to_incumbent": true,
+          "full_budget_overrun_seconds": 0.05435779998544604,
+          "attempt_statuses": [
+            "Infeasible",
+            "Infeasible",
+            "Time limit reached"
+          ],
+          "all_kept_feasible": false
+        },
+        "reference_structure_diagnostic": {
+          "metrics": {
+            "is_feasible": true,
+            "overlap_violations": 0,
+            "area_violations": 0,
+            "dimension_violations": 0,
+            "hpwl_b2b": 421.81249680622574,
+            "hpwl_p2b": 168.2809991960942,
+            "hpwl_total": 590.09349600232,
+            "hpwl_baseline": 143.0057487487793,
+            "hpwl_gap": 3.1263620600242272,
+            "bbox_area": 101900.49950170518,
+            "bbox_area_baseline": 35728.0,
+            "area_gap": 1.8521187724391286,
+            "fixed_violations": 0,
+            "preplaced_violations": 0,
+            "boundary_violations": 37,
+            "grouping_violations": 29,
+            "mib_violations": 0,
+            "total_soft_violations": 66,
+            "max_possible_violations": 75,
+            "violations_relative": 0.88,
+            "runtime_seconds": 0.23125539999455214,
+            "cost": 9.999999,
+            "official_is_feasible_before_nonnegative_check": true,
+            "nonnegative_coordinate_violations": 0
+          },
+          "seconds": 0.23125539999455214,
+          "lp_calls": 1,
+          "accepted_updates": 0,
+          "fixed_structure_feasible": false,
+          "retracted_count": 37,
+          "fallback_to_incumbent": true,
+          "full_budget_overrun_seconds": null,
+          "attempt_statuses": [
+            "Time limit reached"
+          ],
+          "all_kept_feasible": false
+        },
+        "feasible_structure_diagnostic": {
+          "metrics": {
+            "is_feasible": true,
+            "overlap_violations": 0,
+            "area_violations": 0,
+            "dimension_violations": 0,
+            "hpwl_b2b": 144.15913195812672,
+            "hpwl_p2b": 15.704082493620643,
+            "hpwl_total": 159.86321445174735,
+            "hpwl_baseline": 143.0057487487793,
+            "hpwl_gap": 0.11787963666119368,
+            "bbox_area": 42070.55447931052,
+            "bbox_area_baseline": 35728.0,
+            "area_gap": 0.1775233564518171,
+            "fixed_violations": 0,
+            "preplaced_violations": 0,
+            "boundary_violations": 0,
+            "grouping_violations": 0,
+            "mib_violations": 0,
+            "total_soft_violations": 0,
+            "max_possible_violations": 75,
+            "violations_relative": 0.0,
+            "runtime_seconds": 0.20959700003731996,
+            "cost": 1.1477014965565053,
+            "official_is_feasible_before_nonnegative_check": true,
+            "nonnegative_coordinate_violations": 0
+          },
+          "seconds": 0.20959700003731996,
+          "lp_calls": 1,
+          "accepted_updates": 0,
+          "fixed_structure_feasible": false,
+          "retracted_count": 37,
+          "fallback_to_incumbent": true,
+          "full_budget_overrun_seconds": null,
+          "attempt_statuses": [
+            "Time limit reached"
+          ],
+          "all_kept_feasible": false
+        }
+      }
+    },
+    {
+      "case_id": "dev:worker_79/layouts_5040.th:16",
+      "source": {
+        "split": "dev",
+        "workset": "dev",
+        "shard": "worker_79/layouts_5040.th",
+        "sample_index": 16,
+        "paths": [
+          "datasets/floorset_lite/worker_79/layouts_5040.th"
+        ],
+        "workset_sha256": "efeeb928f0abee4edb5a82d7a77adb901deb7263766eefa68553b563cc2a2dcd"
+      },
+      "input_summary": {
+        "block_count": 57,
+        "fixed_blocks": 5,
+        "preplaced_blocks": 4,
+        "boundary_blocks": 28,
+        "grouped_blocks": 20,
+        "mib_blocks": 5
+      },
+      "variants": {
+        "public_exact": {
+          "metrics": {
+            "is_feasible": true,
+            "overlap_violations": 0,
+            "area_violations": 0,
+            "dimension_violations": 0,
+            "hpwl_b2b": 185.4592844622896,
+            "hpwl_p2b": 49.78133939823959,
+            "hpwl_total": 235.24062386052918,
+            "hpwl_baseline": 80.27944087982178,
+            "hpwl_gap": 1.930272324799622,
+            "bbox_area": 37025.78132144441,
+            "bbox_area_baseline": 17934.0,
+            "area_gap": 1.0645578968130038,
+            "fixed_violations": 0,
+            "preplaced_violations": 0,
+            "boundary_violations": 24,
+            "grouping_violations": 14,
+            "mib_violations": 0,
+            "total_soft_violations": 38,
+            "max_possible_violations": 48,
+            "violations_relative": 0.7916666666666666,
+            "runtime_seconds": 0.1930437000701204,
+            "cost": 9.999999,
+            "official_is_feasible_before_nonnegative_check": true,
+            "nonnegative_coordinate_violations": 0
+          },
+          "seconds": 0.1930437000701204,
+          "lp_calls": 4,
+          "accepted_updates": 0,
+          "fixed_structure_feasible": false,
+          "retracted_count": 48,
+          "fallback_to_incumbent": true,
+          "full_budget_overrun_seconds": 0.012490600049495704,
+          "attempt_statuses": [
+            "Infeasible",
+            "Infeasible",
+            "Infeasible",
+            "Time limit reached"
+          ],
+          "all_kept_feasible": false
+        },
+        "public_soft": {
+          "metrics": {
+            "is_feasible": true,
+            "overlap_violations": 0,
+            "area_violations": 0,
+            "dimension_violations": 0,
+            "hpwl_b2b": 170.17557285848414,
+            "hpwl_p2b": 47.92831095729562,
+            "hpwl_total": 218.10388381577977,
+            "hpwl_baseline": 80.27944087982178,
+            "hpwl_gap": 1.7168087050117975,
+            "bbox_area": 34155.03048005581,
+            "bbox_area_baseline": 17934.0,
+            "area_gap": 0.9044848042854805,
+            "fixed_violations": 0,
+            "preplaced_violations": 0,
+            "boundary_violations": 22,
+            "grouping_violations": 11,
+            "mib_violations": 0,
+            "total_soft_violations": 33,
+            "max_possible_violations": 48,
+            "violations_relative": 0.6875,
+            "runtime_seconds": 0.18799310002941638,
+            "cost": 9.138785194202805,
+            "official_is_feasible_before_nonnegative_check": true,
+            "nonnegative_coordinate_violations": 0
+          },
+          "seconds": 0.18799310002941638,
+          "lp_calls": 3,
+          "accepted_updates": 1,
+          "fixed_structure_feasible": true,
+          "retracted_count": 36,
+          "fallback_to_incumbent": false,
+          "full_budget_overrun_seconds": 0.007421000096946961,
+          "attempt_statuses": [
+            "Infeasible",
+            "Infeasible",
+            "Optimal"
+          ],
+          "all_kept_feasible": false
+        },
+        "public_sequence": {
+          "metrics": {
+            "is_feasible": true,
+            "overlap_violations": 0,
+            "area_violations": 0,
+            "dimension_violations": 0,
+            "hpwl_b2b": 185.4592844622896,
+            "hpwl_p2b": 49.78133939823959,
+            "hpwl_total": 235.24062386052918,
+            "hpwl_baseline": 80.27944087982178,
+            "hpwl_gap": 1.930272324799622,
+            "bbox_area": 37025.78132144441,
+            "bbox_area_baseline": 17934.0,
+            "area_gap": 1.0645578968130038,
+            "fixed_violations": 0,
+            "preplaced_violations": 0,
+            "boundary_violations": 24,
+            "grouping_violations": 14,
+            "mib_violations": 0,
+            "total_soft_violations": 38,
+            "max_possible_violations": 48,
+            "violations_relative": 0.7916666666666666,
+            "runtime_seconds": 0.09240960003808141,
+            "cost": 9.999999,
+            "official_is_feasible_before_nonnegative_check": true,
+            "nonnegative_coordinate_violations": 0
+          },
+          "seconds": 0.09240960003808141,
+          "lp_calls": 4,
+          "accepted_updates": 0,
+          "fixed_structure_feasible": false,
+          "retracted_count": 48,
+          "fallback_to_incumbent": true,
+          "full_budget_overrun_seconds": 0.0,
+          "attempt_statuses": [
+            "Infeasible",
+            "Infeasible",
+            "Infeasible",
+            "Infeasible"
+          ],
+          "all_kept_feasible": false
+        },
+        "reference_structure_diagnostic": {
+          "metrics": {
+            "is_feasible": true,
+            "overlap_violations": 0,
+            "area_violations": 0,
+            "dimension_violations": 0,
+            "hpwl_b2b": 185.4592844622896,
+            "hpwl_p2b": 49.78133939823959,
+            "hpwl_total": 235.24062386052918,
+            "hpwl_baseline": 80.27944087982178,
+            "hpwl_gap": 1.930272324799622,
+            "bbox_area": 37025.78132144441,
+            "bbox_area_baseline": 17934.0,
+            "area_gap": 1.0645578968130038,
+            "fixed_violations": 0,
+            "preplaced_violations": 0,
+            "boundary_violations": 24,
+            "grouping_violations": 14,
+            "mib_violations": 0,
+            "total_soft_violations": 38,
+            "max_possible_violations": 48,
+            "violations_relative": 0.7916666666666666,
+            "runtime_seconds": 0.20383010001387447,
+            "cost": 9.999999,
+            "official_is_feasible_before_nonnegative_check": true,
+            "nonnegative_coordinate_violations": 0
+          },
+          "seconds": 0.20383010001387447,
+          "lp_calls": 4,
+          "accepted_updates": 0,
+          "fixed_structure_feasible": false,
+          "retracted_count": 48,
+          "fallback_to_incumbent": true,
+          "full_budget_overrun_seconds": null,
+          "attempt_statuses": [
+            "Infeasible",
+            "Infeasible",
+            "Infeasible",
+            "Infeasible"
+          ],
+          "all_kept_feasible": false
+        },
+        "feasible_structure_diagnostic": {
+          "metrics": {
+            "is_feasible": true,
+            "overlap_violations": 0,
+            "area_violations": 0,
+            "dimension_violations": 0,
+            "hpwl_b2b": 122.00962806776647,
+            "hpwl_p2b": 15.578009256088917,
+            "hpwl_total": 137.58763732385538,
+            "hpwl_baseline": 80.27944087982178,
+            "hpwl_gap": 0.7138589384276343,
+            "bbox_area": 18794.666635652837,
+            "bbox_area_baseline": 17934.0,
+            "area_gap": 0.04799077928252686,
+            "fixed_violations": 0,
+            "preplaced_violations": 0,
+            "boundary_violations": 0,
+            "grouping_violations": 8,
+            "mib_violations": 0,
+            "total_soft_violations": 8,
+            "max_possible_violations": 48,
+            "violations_relative": 0.16666666666666666,
+            "runtime_seconds": 0.09607700002379715,
+            "cost": 1.9272358911284049,
+            "official_is_feasible_before_nonnegative_check": true,
+            "nonnegative_coordinate_violations": 0
+          },
+          "seconds": 0.09607700002379715,
+          "lp_calls": 1,
+          "accepted_updates": 1,
+          "fixed_structure_feasible": true,
+          "retracted_count": 0,
+          "fallback_to_incumbent": false,
+          "full_budget_overrun_seconds": null,
+          "attempt_statuses": [
+            "Optimal"
+          ],
+          "all_kept_feasible": true
+        }
+      }
+    }
+  ],
+  "scope": "five-case mechanism diagnosis; no generalization or target claim"
+}

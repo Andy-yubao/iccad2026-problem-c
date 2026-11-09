@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "E:\project\ICCAD\2026\problemC\experiments\E97_gpu_hybrid_solver\round2_candidate7_evaluate.py", line 129, in <module>
+    with threadpool_limits(1):main()
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\site-packages\torch\utils\_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "E:\project\ICCAD\2026\problemC\experiments\E97_gpu_hybrid_solver\round2_candidate7_evaluate.py", line 85, in main
+    original=returned(base,host,inputs,decode)
+  File "E:\project\ICCAD\2026\problemC\experiments\E97_gpu_hybrid_solver\latency_fixed.py", line 23, in returned
+    p=(decode(state,g)[0,:int(inputs[0])]*g['scale'][0]).cpu().numpy().astype(float)
+  File "E:\project\ICCAD\2026\problemC\experiments\E97_gpu_hybrid_solver\nn85\base_model.py", line 113, in decode
+    wh = torch.stack(((g['area'] * ratio.exp()).clamp_min(1e-12).sqrt(),
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!
+Traceback (most recent call last):
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "E:\project\ICCAD\2026\problemC\experiments\E97_gpu_hybrid_solver\round2_candidate7_pipeline.py", line 40, in <module>
+    try:main()
+  File "E:\project\ICCAD\2026\problemC\experiments\E97_gpu_hybrid_solver\round2_candidate7_pipeline.py", line 32, in main
+    if not (OUTPUT/'evaluation/results.json').exists():subprocess.run([*prefix,'experiments.E97_gpu_hybrid_solver.round2_candidate7_evaluate'],cwd=ROOT,check=True)
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe', '-u', '-B', '-m', 'experiments.E97_gpu_hybrid_solver.round2_candidate7_evaluate']' returned non-zero exit status 1.

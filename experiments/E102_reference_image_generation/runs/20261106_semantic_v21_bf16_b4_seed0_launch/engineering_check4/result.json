@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "train_instances": 4,
+  "members": [
+    [
+      "worker_13/layouts_3584.th",
+      7
+    ],
+    [
+      "worker_60/layouts_3808.th",
+      21
+    ],
+    [
+      "worker_60/layouts_6048.th",
+      62
+    ],
+    [
+      "worker_96/layouts_2576.th",
+      90
+    ]
+  ],
+  "parent_step": 12297,
+  "actual_bf16_updates": 1,
+  "FP32_reference_microbatch": 2,
+  "BF16_batch": 4,
+  "FP32_mean_loss": 2.76393985748291,
+  "BF16_mean_loss": 2.7665281295776367,
+  "relative_loss_difference": 0.0009364429861307144,
+  "loss_difference_gate": 0.02,
+  "gradient_norm_before_clip": 9.133952140808105,
+  "finite_parameters": true,
+  "master_weights_loss_adam_dtype": "FP32",
+  "peak_allocated_MiB": 13730.0126953125,
+  "first_update_seconds": 2.025429500004975,
+  "first_update_samples_per_second": 1.974889770288314,
+  "timing_note": "single engineering update, not steady-state throughput or epoch speedup",
+  "parent_checkpoint_modified": false,
+  "check_weights_used_for_training": false,
+  "test_read": false,
+  "parent_latest_sha256": "d233a95885860e88a8edc2d253f186a3fcde64d039feb1a33cf886a7679bae0a"
+}

@@ -1,0 +1,35 @@
+{
+  "parent_run": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E102_reference_image_generation\\runs\\20261106_semantic_v21_seed0",
+  "kind": "BF16_batch4_FP32_loss_Adam.v1",
+  "original_budget_seconds": 28800,
+  "inherited_elapsed_seconds": 11778.767189300008,
+  "next_monitor_seen": 28000,
+  "monitor_rule": "Same4000 seen-member interval at batch boundaries, plus epoch ends; no data reordering or dropping. First interval may exceed threshold by<=3 samples.",
+  "best_rule": "Reevaluate existing frozen parent best once on fixed dev500 in BF16; reevaluate inherited latest train/dev500. Preserve scheduler/early-stop counters; recalibrate their historical best scalar by the parent-best precision offset, no scheduler step on migration baseline. Do not compare FP32 and BF16 raw best values.",
+  "parent_latest_sha256": "d233a95885860e88a8edc2d253f186a3fcde64d039feb1a33cf886a7679bae0a",
+  "parent_best_sha256": "235d724fadf0fc383b7ab21b1221444798231dfce075c68cba2e26519499eeb3",
+  "unchanged_math_sources": [
+    "experiments/E102_reference_image_generation/semantic/model.py",
+    "experiments/E102_reference_image_generation/semantic/loss.py",
+    "experiments/E102_reference_image_generation/semantic/data.py",
+    "experiments/E102_reference_image_generation/semantic/generation.py",
+    "experiments/E102_reference_image_generation/data.py",
+    "experiments/E102_reference_image_generation/model.py",
+    "visualization/semantic_images.py"
+  ],
+  "preserved": [
+    "model",
+    "Adam FP32 moments and steps",
+    "RNG including corruption generator",
+    "member permutation and cursor",
+    "scheduler and early-stop counters",
+    "cumulative8h budget"
+  ],
+  "changed": [
+    "network precision FP32->BF16 with FP32 Loss/Adam",
+    "logical batch2->4; grouping and RNG consumption therefore intentionally differ",
+    "monitoring by seen members to retain data exposure cadence"
+  ],
+  "old_STOP_preserved": true,
+  "test_read": false
+}

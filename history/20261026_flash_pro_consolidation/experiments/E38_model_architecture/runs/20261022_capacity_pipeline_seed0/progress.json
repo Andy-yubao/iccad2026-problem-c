@@ -1,0 +1,181 @@
+{
+  "stages": [
+    {
+      "kind": "E25 reference",
+      "command": [
+        "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+        "-u",
+        "-B",
+        "-m",
+        "experiments.E38_model_architecture.final",
+        "--output",
+        "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E38_model_architecture\\runs\\20261022_capacity_e25_reference",
+        "--baseline"
+      ],
+      "returncode": 0,
+      "seconds": 185.72455370007083,
+      "output": "experiments/E38_model_architecture/runs/20261022_capacity_e25_reference"
+    },
+    {
+      "kind": "train base96x4",
+      "command": [
+        "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+        "-u",
+        "-B",
+        "-m",
+        "experiments.E38_model_architecture.train",
+        "--arm",
+        "base96x4",
+        "--output",
+        "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E38_model_architecture\\runs\\20261022_capacity_base96x4_seed0",
+        "--seed",
+        "0",
+        "--max-hours",
+        "4.0",
+        "--max-epochs",
+        "200",
+        "--batch-size",
+        "32"
+      ],
+      "returncode": 0,
+      "seconds": 2071.938044199953,
+      "output": "experiments/E38_model_architecture/runs/20261022_capacity_base96x4_seed0"
+    },
+    {
+      "kind": "final base96x4",
+      "command": [
+        "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+        "-u",
+        "-B",
+        "-m",
+        "experiments.E38_model_architecture.final",
+        "--output",
+        "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E38_model_architecture\\runs\\20261022_capacity_base96x4_seed0"
+      ],
+      "returncode": 0,
+      "seconds": 210.31532159994822,
+      "output": "experiments/E38_model_architecture/runs/20261022_capacity_base96x4_seed0"
+    },
+    {
+      "kind": "train deep96x8",
+      "command": [
+        "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+        "-u",
+        "-B",
+        "-m",
+        "experiments.E38_model_architecture.train",
+        "--arm",
+        "deep96x8",
+        "--output",
+        "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E38_model_architecture\\runs\\20261022_capacity_deep96x8_seed0",
+        "--seed",
+        "0",
+        "--max-hours",
+        "4.0",
+        "--max-epochs",
+        "200",
+        "--batch-size",
+        "32"
+      ],
+      "returncode": 0,
+      "seconds": 2540.7314250000054,
+      "output": "experiments/E38_model_architecture/runs/20261022_capacity_deep96x8_seed0"
+    },
+    {
+      "kind": "final deep96x8",
+      "command": [
+        "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+        "-u",
+        "-B",
+        "-m",
+        "experiments.E38_model_architecture.final",
+        "--output",
+        "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E38_model_architecture\\runs\\20261022_capacity_deep96x8_seed0"
+      ],
+      "returncode": 0,
+      "seconds": 204.48464170005172,
+      "output": "experiments/E38_model_architecture/runs/20261022_capacity_deep96x8_seed0"
+    },
+    {
+      "kind": "train deep96x12",
+      "command": [
+        "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+        "-u",
+        "-B",
+        "-m",
+        "experiments.E38_model_architecture.train",
+        "--arm",
+        "deep96x12",
+        "--output",
+        "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E38_model_architecture\\runs\\20261022_capacity_deep96x12_seed0",
+        "--seed",
+        "0",
+        "--max-hours",
+        "4.0",
+        "--max-epochs",
+        "200",
+        "--batch-size",
+        "32"
+      ],
+      "returncode": 0,
+      "seconds": 3748.358640599996,
+      "output": "experiments/E38_model_architecture/runs/20261022_capacity_deep96x12_seed0"
+    },
+    {
+      "kind": "final deep96x12",
+      "command": [
+        "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+        "-u",
+        "-B",
+        "-m",
+        "experiments.E38_model_architecture.final",
+        "--output",
+        "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E38_model_architecture\\runs\\20261022_capacity_deep96x12_seed0"
+      ],
+      "returncode": 0,
+      "seconds": 211.43048079998698,
+      "output": "experiments/E38_model_architecture/runs/20261022_capacity_deep96x12_seed0"
+    },
+    {
+      "kind": "train wide160x4",
+      "command": [
+        "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+        "-u",
+        "-B",
+        "-m",
+        "experiments.E38_model_architecture.train",
+        "--arm",
+        "wide160x4",
+        "--output",
+        "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E38_model_architecture\\runs\\20261022_capacity_wide160x4_seed0",
+        "--seed",
+        "0",
+        "--max-hours",
+        "4.0",
+        "--max-epochs",
+        "200",
+        "--batch-size",
+        "32"
+      ],
+      "returncode": 0,
+      "seconds": 1701.85405980004,
+      "output": "experiments/E38_model_architecture/runs/20261022_capacity_wide160x4_seed0"
+    },
+    {
+      "kind": "final wide160x4",
+      "command": [
+        "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+        "-u",
+        "-B",
+        "-m",
+        "experiments.E38_model_architecture.final",
+        "--output",
+        "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E38_model_architecture\\runs\\20261022_capacity_wide160x4_seed0"
+      ],
+      "returncode": 0,
+      "seconds": 211.02053749992047,
+      "output": "experiments/E38_model_architecture/runs/20261022_capacity_wide160x4_seed0"
+    }
+  ],
+  "test_read": false
+}

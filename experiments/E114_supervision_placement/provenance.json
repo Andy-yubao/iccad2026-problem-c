@@ -1,0 +1,50 @@
+{
+  "source": "experiments/E109_deep_supervision_shared",
+  "source_sha256": {
+    "augmentation.py": "32e2601a2071e47e7dd344148d146c7ee16040804efedfa2bd341d14863908e3",
+    "batches.py": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92",
+    "cache.py": "1818c741d3326a996b13733b313b16d46a7a7992413d277106e69684ae1a376e",
+    "captured_projection.py": "dd031332127edd706c0e09f49a07f5e6133f5a9cd0f7fcd69d2246644cbb74c9",
+    "cuda_step.py": "cd5eddd01dc44b33da1c57c13261b27e1f7ef232b81c425e57080501a25ce7f1",
+    "data.py": "1e43fe61a6d4dde4007295f817db927d75cd61439239423621ef65bf826e0d66",
+    "dataset_view.py": "4f0bcb1e15171d57ed1d0198560744a1ca2fd14b9bed46deac9def45d46752ee",
+    "features.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+    "group_tree.py": "867ca3b84848ae78da25dd2a2db16018d722102c7bb5a34644492451efef65fd",
+    "io.py": "f2a7b2d8c6283abdcaf3d5435ed86f9450f83807b000756edfa1347bf3060651",
+    "loss.py": "9fce4ae8e9e2d8118142aaa9b5aea15c70ca08ea65e8038b2789fb9e5f8116a2",
+    "loss_config.py": "4f1d9783a1b1e02b94b62c322ea5db7d003cdcd9aa78ff300993244206456b83",
+    "model.py": "7a5dea6e8520c8c185d4380ad0ec029103944f9619a7c262e4c10f7e777ce51d",
+    "ports.py": "431b54476e7de8a94c12cf935a30a3b49b911e208305fbe6bb7b23d72e37dbef",
+    "preflight.py": "f0e5df8cf454426026ad248f70f93fb022c6731be01a967b1d576529f28ec1b5",
+    "reference_model.py": "f530ecb88ce14df5985f20f8150bc60d74e8f4533e8ec79f2e9a8842e0c9d93b",
+    "resident.py": "a70da9f834fd05091ab011459e34fcff214bd41cb753f98ee9c088975c0a3c81",
+    "run_queue.py": "eeb58d3c8ed9d265a80b1c434a4f42a7dc63f0106ea3010aa7e64f446ee0b7c7",
+    "schedule.py": "4b784b3d501dcc7d84b1b4a77f5e40809b89293ceb1c455814cc9c9e251c62e8",
+    "simple_loss.py": "e96cc9272aa1e3b13a6f93b3674674df280e709c4ecde7098ad0dc1b73b8bfd3",
+    "step_control.py": "795ddb45dd257e123f1880eea28b58502711807ee643bfcb51a7e72d484952da",
+    "train.py": "d0c11a466198caf0447fbd3e36d6f260e5dc2a2bea912f2f9ce0700d96be0790",
+    "v6_registry.py": "17c5bee855e76dcb445c9ae924bdb04df7c8966581f58f80aad2d51acb07b594",
+    "__init__.py": "e88603c7289d0636a073fae6a35658f4829f4459cad9a1e7d1d91874c3e78960"
+  },
+  "copied_unchanged": [
+    "__init__.py",
+    "group_tree.py",
+    "ports.py",
+    "schedule.py",
+    "step_control.py",
+    "captured_projection.py",
+    "resident.py",
+    "cuda_step.py"
+  ],
+  "ownership": "E114 owns model/loss/engine; no other experiment private imports",
+  "adaptations": [
+    "64wide",
+    "MIB removed",
+    "all-module prediction",
+    "rawrandom40k",
+    "three supervision placements",
+    "explicit preparation-only authorization",
+    "no automatic queue/evaluation"
+  ],
+  "historical_runs_modified": false
+}

@@ -1,0 +1,77 @@
+{
+  "candidate": 3,
+  "status": "registered_before_preflight",
+  "name": "teacher_axis_physical_clearance",
+  "hypothesis": "C2 relative axis advantage permits contracted overlapping drafts. Add actual signed teacher-axis center distance>=half-extent sum, restore C1 absolute-center anchoring to resist unbounded expansion; unchanged NN/decoder/teacher/slim3.",
+  "model": "three small F85 message heads241547 trainable parameters, frozen E74; first two center/log-aspect proposals are linear residuals scaled0.5 without tanh trust cap or frozen-L frame. Canonical public locks/nonnegative/ratio[-5,5], MIB coherence in current proposal frame, third bounded local polish plus original8step geometry in current proposal frame.",
+  "source_checkpoint": "experiments/E97_gpu_hybrid_solver/runs/20261102_candidate1_distill_seed0/checkpoints/best.pt",
+  "source_sha256": "5590e672cbb05a862f739452fe6432846287ea906c83782f84a0dfdb5d486b50",
+  "initialization": "C1 unique own-Loss best all heads retained; frozen E74, fresh seed0 AdamW. New objective and run; no optimizer/scheduler inherited.",
+  "data": "v5 frozen first16000 train and same dev_monitor500; train_monitor500 reuse train labels; source has inherited32k exposure",
+  "teacher": {
+    "method": "Read-only reuse of completed16500 public-input solver labels; no regeneration",
+    "inputs": "public specs/connectivity/current frozen NN draft only, no free reference geometry or official score denominators",
+    "labels": "center/log-aspect of final public-solver geometry; stored only as supervision, never network input",
+    "usable": "strict public hard-legal, finite, not row_control fallback; all members retained, fallback labels carry zero imitation weight",
+    "panel": "train16000+dev_monitor500 only; no full dev2000 or test teacher generation",
+    "workers": 4,
+    "worker_torch_threads": 1,
+    "solver_threads": 2,
+    "wall_cap_seconds": 5400
+  },
+  "loss": {
+    "total": "usable*(teacher_center_local + .25*teacher_shape + .25*teacher_near_relative + teacher_axis_clearance_tail)",
+    "center_shape_relative": "Exactly C1 definitions: public free-variable masks, local sqrt(area) scales, SmoothL1 beta.1 center/near-relative, MSE log-aspect; teacher-near distance<=.25 mean sqrt(area).",
+    "clearance": "Decode actual predicted and target nominal-area/locked rectangles. For each valid distinct teacher-near pair with at least one free center, choose teacher argmax abs(center delta)/mean extent -1 (x tie), teacher sign along that axis. Predicted ratio=signed center distance/current half-extent sum along teacher axis, clamped[-8,8]. Hinge=relu(1-ratio)^2, max over near pairs per case;0 if none. Physical contact defines1, no reliability filter or comparative-axis hinge.",
+    "weights": {
+      "center": 1.0,
+      "shape": 0.25,
+      "relative": 0.25,
+      "clearance": 1.0
+    },
+    "monitoring": "Identical per-case total/backward/train500/dev500/own-Loss best/LR/early-stop; all frozen members included in mean",
+    "scope": "No free reference or scoring denominator, no dev sweep, C1 same start/objective terms with single added physical-clearance term; same solver budget."
+  },
+  "optimization": {
+    "batch_size": 32,
+    "precision": "FP32 no AMP/TF32",
+    "optimizer": "AdamW",
+    "weight_decay": 0.0003,
+    "clip_norm": 1.0,
+    "seed": 0,
+    "lr_levels": [
+      0.001,
+      0.00025,
+      0.0001,
+      5e-05
+    ],
+    "protection_epochs": 0,
+    "baseline_epoch0": true,
+    "lr_bad_rounds": 3,
+    "min_delta": "max(1e-5,abs(best)*.001)",
+    "lowest_wait_epochs": 2,
+    "max_epochs": 100,
+    "max_training_seconds": 3600,
+    "no_old9872step_cap": true
+  },
+  "engine": "source cached frozen L drafts; CUDA graph for F+same Loss+backward+clip, guarded AdamW outside; graph/real update/resume checked on five train members before formal start",
+  "terminal": "unique own-Loss best: one fixed dev500 true batch1 GPU+same slim3 full request evaluation and same100 four-stage gallery; full dev2000 raw diagnostics if budget permits; no Q checkpoint reselection",
+  "caveats": [
+    "Worst pair loss may focus on outliers; nominal-area teacher reconstruction differs from original allowed area tolerance.",
+    "Teacher labels9train target aspects exceed decode5; shape label errors preserved, clearance labels use actual decode.",
+    "Physical teacher-axis separations do not guarantee all public boundaries/grouping or postprocessor hard validity.",
+    "Absolute teacher-center anchoring counters expansion by design but no guarantee of Q improvement.",
+    "Teacher-nominal same5 mechanism probe is required; no five-case claim of generalized ceiling."
+  ],
+  "preflight_ids": [
+    1683,
+    10027,
+    5474,
+    10140,
+    15001
+  ],
+  "training_start_gate": "Same-five teacher nominal probe must demonstrate 5 legal outputs and no row fallback; actual Adam/graph/resume/finite/frozen-L preflight passes before formal start",
+  "formal_training_started": false,
+  "test_read": false,
+  "revision": "v1"
+}

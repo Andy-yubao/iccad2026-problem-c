@@ -1,0 +1,20 @@
+{
+  "revision":"E99.R22.overlap_priority_attraction_gate.v2",
+  "status":"registered_after_R20_and_R21_R22_saved_audits_before_candidate_runs",
+  "single_hypothesis":"When either endpoint of an attractive pair still has any repulsive overlap in the current snapshot, set that pair attraction to zero for this round. Every repulsion stays unchanged. Once both endpoints clear overlap, attraction resumes. This is one symmetric force activation rule, not a new objective or added coefficients.",
+  "evidence":"R20 local degree damping improves raw overlap but final trainQ1.01143347 vs1.01084845; rejected. R21 only26/10000 energy-ascent rounds in11 cases; defer global backtracking. R22 saved logs:65.66% of519340 both-force movable-module operations have attraction dot repulsion<0;93.25% attraction magnitude touches an overlapped endpoint. Gating is substantial and may help or harm compaction; finalQ decides.",
+  "configuration":{"iterations":20,"step_size":0.5,"step_fraction":0.05,"total_fraction":0.4,"attraction_range":0.5,"attraction_strength":1.0,"repulsion_strength":1.0,"shape_step_size":0.5,"shape_step_fraction":0.03,"shape_total_fraction":0.5,"exclude_exhausted":true,"area_attraction":false,"overlap_priority":true},
+  "unchanged":"R15 strong-attraction force functions, initial-area mobility, old angular shape strain,20 rounds,all caps,preplaced/fixed locks and original full planner/config. Active global max-degree damping is recomputed after the attraction gate; effective repulsive step can therefore change even though raw repulsion does not.",
+  "control":"Same frozen train500 R15 attraction_equal_slope Q1.010848448528; noAR control read-only; no repeated control solves.",
+  "panel":"v5.train_monitor500 same C3/public inputs/order; no dev/test read",
+  "pipeline":"pureAR -> unchanged original planner/config -> unchanged necessary hard checks; official neutral-time scoring after timer",
+  "preflight":{"indices":[0,4,43,95,135],"checks":"normal gate-off old branch full histories bit-exact; gate-on first snapshot degree/attraction/repulsion/strain vs independent vector reference; raw repulsion unchanged at same snapshot; all20 rounds every overlapped endpoint has zero incident attraction; capture/production exact; area/locks/caps and final official+independent legality. Five same-identity final records reused in500."},
+  "logs":"Every module/round normalized-mass response and all old fields; append round gated_attractive_pairs,gated_attraction_magnitude,original_attractive_pairs. Original first13 round columns retain meaning. Snapshot prepass does not update geometry.",
+  "timing":"Cached-draft CPU AR+unchanged planner+hard only, no C3/complete250ms acceptance; two-pass overhead measured; historical control timing unpaired.",
+  "execution":"Single1-thread numerical worker, sharedOS lock, source/member/hash binding, atomic percase saves, STOP boundaries. Identity-bound explicit resume only, failures preserved, no automatic retry or dev launch.",
+  "preflight_output":"runs/research/20261103_R22_overlap_priority_preflight5_v2",
+  "startup_fix":"First attempt failed before registration/data/compile: inherited parentR20 evidence path was wrongly renamed by scaffolding. Save error and original run/plan in original preflight folder; correct only parent pointer, run controlled preflight once in new v2 folder. No numeric mechanism changed.",
+  "output":"runs/research/20261103_R22_overlap_priority_train500",
+  "after":"Review final500 Q,soft constraints,raw coverage,force cancellation,gate utilization and timing before freeze/next candidate. Keep all bad/slow cases. Original100 four-stage gallery after candidate frozen for fresh complete dev500.",
+  "test_read":false,"new_training":false
+}

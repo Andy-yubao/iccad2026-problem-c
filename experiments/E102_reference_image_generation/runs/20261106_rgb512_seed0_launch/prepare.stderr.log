@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "E:\project\ICCAD\2026\problemC\experiments\E102_reference_image_generation\prepare.py", line 69, in <module>
+    main()
+  File "E:\project\ICCAD\2026\problemC\experiments\E102_reference_image_generation\prepare.py", line 58, in main
+    item = raw[index]
+  File "E:\project\ICCAD\2026\problemC\experiments\E102_reference_image_generation\data.py", line 102, in __getitem__
+    raise ValueError(f"Reference outside public canvas: {raw.case_id}; register canvas revision, do not crop")
+ValueError: Reference outside public canvas: train:worker_0/layouts_112.th:85; register canvas revision, do not crop

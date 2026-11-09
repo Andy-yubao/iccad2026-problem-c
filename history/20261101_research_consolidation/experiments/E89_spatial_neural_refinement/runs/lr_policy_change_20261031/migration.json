@@ -1,0 +1,56 @@
+{
+  "status": "migrated_paused",
+  "authorization": "user stop and LR-rule revision",
+  "changed_sources": [
+    "experiments/E89_spatial_neural_refinement/initialization.py",
+    "experiments/E89_spatial_neural_refinement/pipeline.py",
+    "experiments/E89_spatial_neural_refinement/plan.json",
+    "experiments/E89_spatial_neural_refinement/preflight.py",
+    "experiments/E89_spatial_neural_refinement/provenance.json",
+    "experiments/E89_spatial_neural_refinement/train.py"
+  ],
+  "identity_changes": [
+    "calibration",
+    "initialization",
+    "new_corrector_lr_policy",
+    "revision",
+    "scheduler_start_epoch",
+    "sources"
+  ],
+  "anchors": {
+    "best.pt": {
+      "epoch": 5,
+      "loss": 0.3278902986049652,
+      "original_sha256": "a1d8a7172b0389e0051a9d376182c0dbbd64bd4961a86b6bdad37c7a4a6698fb",
+      "new_sha256": "3ebcb243e24a6070e7a290ab0e8454ebe329646700bcffa018cf776185e1bc15"
+    },
+    "latest.pt": {
+      "epoch": 5,
+      "loss": 0.3278902986049652,
+      "original_sha256": "25892ede207f68e53ed397a94d6997daa432590b4ab02fde8e14495b71e531e5",
+      "new_sha256": "edca953899fc67748e29b84442fe77daad9f41016e7b497353580d6673548ec8"
+    }
+  },
+  "preserved": [
+    "model",
+    "Adam",
+    "RNG",
+    "data order/cursor",
+    "sample exposure",
+    "progress/history",
+    "step accounting",
+    "cumulative elapsed"
+  ],
+  "epoch": 6,
+  "step": 3000,
+  "cursor": 0,
+  "pending_monitor": true,
+  "current_lr": 0.001,
+  "charged_seconds": 476.91763250000076,
+  "budget_before": 476.841382100014,
+  "cap_seconds": 3600.0,
+  "no_retroactive_LR_drop": true,
+  "loss_coefficients_unchanged": true,
+  "tests_sealed": true,
+  "next": "explicit user resume required; STOP remains; pooled unstarted"
+}

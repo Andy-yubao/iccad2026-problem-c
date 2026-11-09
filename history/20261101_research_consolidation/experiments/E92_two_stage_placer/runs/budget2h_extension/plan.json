@@ -1,0 +1,59 @@
+{
+  "status": "authorized_preparation_then_background_train",
+  "architecture": {
+    "width": 192,
+    "layers": 12,
+    "rectangle": true,
+    "ffn_dropout": 0.05
+  },
+  "parameters": 5829939,
+  "training_data_size": 32000,
+  "epoch_draws": 32000,
+  "batch_size": 32,
+  "updates_per_epoch": 1000,
+  "seed": 0,
+  "maximum_hours": 2,
+  "maximum_epochs": 200,
+  "global_cap_seconds": 64800,
+  "global_prior_seconds": 38831.07569789997,
+  "initialization": "random; all parameters trainable; no E91 or other checkpoint load",
+  "phases": {
+    "P": {
+      "reference": 1.0,
+      "overlap": 0.029917209539524287,
+      "task": 0.11122773694450763,
+      "lr_levels": [
+        0.001,
+        0.00025
+      ],
+      "baseline_epoch": 15,
+      "switch": "second plateau event; first event drops LR"
+    },
+    "F": {
+      "reference": 1.0,
+      "overlap": 0.08975162861857286,
+      "task": 0.3336832108335229,
+      "lr_levels": [
+        0.00025,
+        0.0001,
+        5e-05
+      ],
+      "baseline_epoch": 0
+    }
+  },
+  "patience": 3,
+  "meaningful_relative_delta": 0.001,
+  "meaningful_absolute_delta": 1e-05,
+  "lowest_lr_full_epochs": 2,
+  "transition": "P own-best model only; fresh AdamW; retain end-of-P RNG, completed epoch count, seen flags and all charges; new full permutation",
+  "numerical_guards": {
+    "per_case_total_lt": 1000.0,
+    "batch_total_lt": 1000.0,
+    "preclip_norm_lt": 10000.0
+  },
+  "train_only": true,
+  "test_read": false,
+  "authorization": "用户：好的。请准备训练，并在后台启动",
+  "budget_policy": "At most2h cumulative new run; tighter historical18h global remainder applies; no automatic budget transfer/reset",
+  "sentinel_selection": "train1032 plus four public-only structural extremes; frozen before new model inference"
+}

@@ -1,0 +1,413 @@
+"""Scratch capacity/data diagnosis; validation never calls a layout postprocessor."""
+import argparse
+import json
+import os
+from pathlib import Path
+import random
+import signal
+import subprocess
+import sys
+import time
+os.environ.setdefault('CUBLAS_WORKSPACE_CONFIG', ':4096:8')
+os.environ.setdefault('OMP_NUM_THREADS', '4')
+os.environ.setdefault('OPENBLAS_NUM_THREADS', '4')
+os.environ.setdefault('MKL_NUM_THREADS', '4')
+import numpy as np
+import torch
+from datasets.reference_layouts import ReferenceLayouts, REGISTRY, registry
+from datasets.paths import resolved_data_paths
+from .data import load_rows, collate, register_resident
+from .resident import ResidentRows
+from .cuda_step import CapturedStep
+from .cache import identity as cache_identity
+from .io import ROOT, HERE, sha, save, checkpoint as write_checkpoint, sources, snapshot, exclusive
+from .loss import losses, weights
+from .model import GeometryModel
+from .model import decode
+from .batches import inputs_only
+
+from .arms import ARMS, model_config, weight_decay
+from .subsets import indices as subset_indices
+from .diagnostics import geometry_checks, distribution
+from .loss_config import configuration as loss_configuration
+REVISION = 'E57.capacity_data_diagnosis.v1'
+LR_LEVELS = (1e-3, 2.5e-4, 1e-4, 5e-5)
+WEIGHT_DECAY = 3e-4
+
+
+def seed_all(seed, threads=4):
+    random.seed(seed); np.random.seed(seed); torch.manual_seed(seed)
+    if torch.cuda.is_available(): torch.cuda.manual_seed_all(seed)
+    torch.set_num_threads(threads)
+    if torch.get_num_interop_threads() != 1:
+        torch.set_num_interop_threads(1)
+    torch.use_deterministic_algorithms(True)
+
+
+def rng_state():
+    return {'python': random.getstate(), 'numpy': np.random.get_state(), 'torch': torch.get_rng_state(),
+            'cuda': torch.cuda.get_rng_state_all() if torch.cuda.is_available() else None}
+
+
+def restore_rng(state):
+    random.setstate(state['python']); np.random.set_state(state['numpy']); torch.set_rng_state(state['torch'])
+    if state['cuda'] is not None: torch.cuda.set_rng_state_all(state['cuda'])
+
+
+def selection(values):
+    # Exactly the scalar optimized by backward(), with fixed full weights.
+    return values['total']
+
+
+class PlateauController:
+    """Four exact LR levels; lowest tier must complete two epochs before stopping."""
+    def __init__(self, optimizer, start_epoch=15):
+        self.optimizer = optimizer
+        self.start_epoch = start_epoch
+        self.best = None
+        self.lr_bad = 0
+        self.early_bad = 0
+        self.drops = 0
+        self.last_drop_epoch = None
+        self.lowest_validated = False
+        self.lowest_completed_epochs = 0
+
+    def step(self, value, epoch):
+        if epoch < self.start_epoch:
+            return
+        if self.drops == 3 and epoch > self.last_drop_epoch:
+            self.lowest_completed_epochs = epoch-self.last_drop_epoch
+            self.lowest_validated = self.lowest_completed_epochs >= 2
+        delta = max(1e-5, abs(self.best)*1e-3) if self.best is not None else 0.
+        meaningful = self.best is None or value < self.best-delta
+        if meaningful:
+            self.best, self.lr_bad, self.early_bad = value, 0, 0
+        else:
+            self.lr_bad += 1
+            self.early_bad += 1
+        if self.lr_bad >= 3 and self.drops < 3:
+            self.drops += 1
+            for group in self.optimizer.param_groups:
+                group['lr'] = LR_LEVELS[self.drops]
+            self.lr_bad = 0
+            self.last_drop_epoch = epoch
+            self.lowest_validated = False
+
+    def should_stop(self):
+        return self.early_bad >= 3 and self.drops == 3 and self.lowest_validated
+
+    def state_dict(self):
+        return {key: value for key, value in self.__dict__.items() if key != 'optimizer'}
+
+    def load_state_dict(self, state):
+        expected = set(self.state_dict())
+        if set(state) != expected:
+            raise ValueError('Incompatible LR-controller state')
+        for key, value in state.items():
+            setattr(self, key, value)
+
+
+@torch.no_grad()
+def monitor_losses(model, rows, device, arm, epoch, batch_size, *, should_stop=lambda: False, start_epoch=6, return_records=False):
+    model.eval(); sums = {}; hard_legal = 0; inference_seconds = 0.; diagnostics = []
+    for start in range(0, len(rows), batch_size):
+        if should_stop():
+            return None
+        selected = [rows[i] for i in range(start, min(start+batch_size, len(rows)))]
+        if str(device).startswith('cuda'): torch.cuda.synchronize(device)
+        started = time.perf_counter()
+        graph, targets = collate(selected, device)
+        state = model(inputs_only(graph))
+        positions = (decode(state, graph)*graph['scale'][:, None, None]).cpu().double().numpy()
+        if str(device).startswith('cuda'): torch.cuda.synchronize(device)
+        inference_seconds += time.perf_counter()-started
+        values = losses(state, graph, targets, arm, 2., include_quality=True, start_epoch=start_epoch)
+        for row, predicted in zip(selected, positions):
+            _, checks, diagnostic = geometry_checks(predicted, row['case'].solver_inputs)
+            hard_legal += int(checks['is_feasible'])
+            diagnostics.append({'member': list(row['member']), **diagnostic})
+        keys=list(values)
+        scalars=torch.stack([values[k].detach() for k in keys]).cpu().tolist()
+        for key, value in zip(keys,scalars): sums[key] = sums.get(key, 0.) + value*len(selected)
+    result = {key: value/len(rows) for key, value in sums.items()}
+    result.update(count=len(rows), selection_proxy=selection(result), raw_hard_legal=hard_legal,
+                  raw_hard_legal_rate=hard_legal/len(rows),
+                  batched_inference_seconds_per_case=inference_seconds/len(rows))
+    result['draft_diagnostics'] = distribution(diagnostics, [k for k in diagnostics[0] if k != 'member'])
+    if return_records:
+        result['diagnostic_records'] = diagnostics
+    return result
+
+
+def gradient_norm(value, parameters):
+    grads = torch.autograd.grad(value, parameters, retain_graph=True, allow_unused=True)
+    return float(sum(g.square().sum() for g in grads if g is not None).sqrt())
+
+
+def parser():
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument('--arm', choices=tuple(ARMS), default='geometry96')
+    ap.add_argument('--output', type=Path, required=True)
+    ap.add_argument('--device', default='cuda')
+    ap.add_argument('--seed', type=int, default=0)
+    ap.add_argument('--max-hours', type=float, default=2.)
+    ap.add_argument('--max-epochs', type=int, default=200)
+    ap.add_argument('--batch-size', type=int, choices=(32,), default=32)
+    ap.add_argument('--scheduler-start-epoch', type=int, choices=(15,), default=15)
+    ap.add_argument('--resume', action='store_true')
+    ap.add_argument('--dataset-size', type=int, choices=(32,2048,4096,8192,16000), default=16000)
+    ap.add_argument('--block-steps', type=int, default=500)
+    ap.add_argument('--deadline', type=float, default=0.)
+    ap.add_argument('--engine', choices=('cuda_graph','resident_eager','reference'), default='cuda_graph')
+    return ap
+
+
+def make_identity(args, implementation_check=False):
+    if registry().get('pilot') and not implementation_check:
+        raise ValueError('Pilot data cannot be used for formal training')
+    config = model_config(args.arm)
+    parameter_count = sum(p.numel() for p in GeometryModel(**config).parameters())
+    return {'revision': REVISION, 'arm': args.arm, 'initialization': 'from scratch, paired seed; no inherited weights',
+        **config, 'parameters': parameter_count,
+        'sources': sources(), 'registry_sha256': sha(REGISTRY), 'paths_sha256': sha(ROOT/'protocol/paths.json'),
+        'cache_identity': cache_identity(), 'seed': args.seed, 'device': args.device,
+        'torch': str(torch.__version__), 'numpy': np.__version__, 'cuda': torch.version.cuda,
+        'device_name': torch.cuda.get_device_name(args.device) if args.device.startswith('cuda') else 'cpu',
+        'max_seconds': args.max_hours*3600, 'max_epochs': args.max_epochs, 'batch_size': args.batch_size, 'dataset_size': args.dataset_size,
+        'subset_indices': subset_indices(args.dataset_size,args.seed), 'subset_manifest_sha256':sha(HERE/'subsets.json'),
+        'block_steps':args.block_steps, 'deadline':args.deadline, 'monitor_unit':'fixed optimizer-update block; not a dataset pass',
+        'lr': 1e-3, 'weight_decay': weight_decay(args.arm), 'clip_norm': 1., 'monitor_interval_epochs': 1,'monitor_interval_updates':args.block_steps,
+        'data_augmentation': False, 'regularization': {'ffn_dropout':config['ffn_dropout'],'weight_decay':weight_decay(args.arm)},
+        'module_overlap_loss': 'disabled; per-arm fixed objective declared below',
+        'count_factor_training': loss_configuration(args.arm)['count_factor'],
+        'fixed_loss_configuration':loss_configuration(args.arm),
+        'schedule': 'fixed full weights from first batch; no ramp, no anchor decay',
+        'selection': 'dev500 arithmetic mean of the same total used for training; no separate proxy; no solver calls',
+        'lr_patience_checks': 3, 'early_patience_checks': 3,
+        'scheduler_start_epoch': getattr(args, 'scheduler_start_epoch', 15),
+        'lr_levels': list(LR_LEVELS), 'required_lr_drops': 3,
+        'meaningful_relative_delta': 1e-3, 'meaningful_absolute_delta': 1e-5,
+        'cpu_threads': 4, 'lowest_lr_requires_completed_epochs': 2,
+        'engine': args.engine, 'precision': 'float32, no AMP/TF32 policy changes',
+        'gpu_resident_inputs': args.engine != 'reference',
+        'gradient_component_diagnostics': 'disabled; no optimization gradient removed',
+        'heartbeat_seconds': 5., 'periodic_checkpoint_seconds': 30.,
+        'training_postprocessing': False, 'validation_postprocessing': False,
+        'implementation_check': implementation_check, 'test_read': False, 'tail_test_read': False}
+
+
+def fresh_progress(count):
+    return {'epoch': 0, 'cursor': 0, 'order': None, 'step': 0, 'seen': np.zeros(count, dtype=bool),
+        'best_proxy': None, 'best_epoch': None, 'bad_checks': 0, 'pending_monitor': True,
+        'history': [], 'gradient_history': [], 'batch_history': [], 'full_dev_complete': False}
+
+
+def run(args, **kwargs):
+    if not Path(args.output).resolve().is_relative_to(HERE/'runs'):
+        raise ValueError('Output must stay in E57/runs')
+    with exclusive(Path(args.output).with_suffix('.lock')):
+        return _run(args, **kwargs)
+
+
+def _run(args, *, implementation_check=False, stop_after_steps=None, check_rows=None):
+    begin = time.perf_counter(); args.output = args.output.resolve()
+    if not args.output.is_relative_to(HERE/'runs'): raise ValueError('Output must stay in E57/runs')
+    if min(args.max_hours, args.max_epochs, args.batch_size) <= 0: raise ValueError('Positive budgets required')
+    if args.max_hours > 4 or args.max_epochs > 200 or args.batch_size != 32:
+        raise ValueError('E57 is limited to four hours/200 epochs per arm, batch32')
+    start_epoch = getattr(args, 'curriculum_start_epoch', 6)
+    scheduler_start = getattr(args, 'scheduler_start_epoch', 15)
+    if min(start_epoch, scheduler_start) < 1: raise ValueError('Positive schedule epochs required')
+    if args.device.startswith('cuda') and not torch.cuda.is_available(): raise RuntimeError('CUDA unavailable')
+    seed_all(args.seed)
+    identity = make_identity(args, implementation_check)
+    seed_all(args.seed)
+    model = GeometryModel(**model_config(args.arm)).to(args.device)
+    if sum(p.numel() for p in model.parameters()) != identity['parameters']:
+        raise ValueError('Actual model parameter count differs from architecture identity')
+    optimizer = torch.optim.AdamW(model.parameters(), lr=1e-3, weight_decay=identity['weight_decay'])
+    if any(group['weight_decay'] != identity['weight_decay'] for group in optimizer.param_groups):
+        raise ValueError('Actual optimizer decay differs from recorded identity')
+    scheduler = PlateauController(optimizer, start_epoch=scheduler_start)
+    previous = None; prior = 0.
+    if args.resume:
+        previous = torch.load(args.output/'checkpoints/latest.pt', map_location='cpu', weights_only=False)
+        if previous['identity'] != identity: raise ValueError('Resume source/data/budget/device identity mismatch')
+        if previous['finished']:
+            print('Already finished:', previous['status'], flush=True); return
+        if (args.output/'STOP').exists(): raise ValueError('Remove STOP before resuming')
+        model.load_state_dict(previous['model']); optimizer.load_state_dict(previous['optimizer'])
+        scheduler.load_state_dict(previous['scheduler']); prior = previous['elapsed_seconds']
+        if (args.output/'budget.json').exists():
+            prior = max(prior, json.loads((args.output/'budget.json').read_text(encoding='utf-8'))['elapsed_seconds'])
+    else:
+        args.output.mkdir(parents=True, exist_ok=False)
+        save(args.output/'config.json', {'identity': identity, 'command': [sys.executable, *sys.argv],
+            'commit': subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
+            'git_status': subprocess.check_output(['git','status','--short'],cwd=ROOT,text=True).strip(),
+            'data_paths': resolved_data_paths(), 'shared_cache_preparation': 'Read-only frozen train/dev tensors at E42 shared cache',
+            'timing': 'Cumulative training-stage wall includes mmap load/validation; inherited old wall is not reset'})
+        snapshot(args.output/'source_snapshot.zip', identity)
+    elapsed = lambda: prior+time.perf_counter()-begin
+    calls_path = args.output/'invocations.json'
+    calls = json.loads(calls_path.read_text(encoding='utf-8')) if calls_path.exists() else []
+    calls.append({'argv': [sys.executable,*sys.argv], 'resume': args.resume, 'prior_seconds': prior,
+                  'started_utc': time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())})
+    save(calls_path,calls)
+    train_meta, dev_meta = ReferenceLayouts('train'), ReferenceLayouts('dev')
+    mon_meta = ReferenceLayouts('train_monitor500')
+    selected_indices = subset_indices(args.dataset_size,args.seed)
+    full_member_map = {tuple(r['member']):i for i,r in enumerate(train_meta.records)}
+    if {r['member'][0] for r in train_meta.records} & {r['member'][0] for r in dev_meta.records}:
+        raise ValueError('Student source shards overlap')
+    if implementation_check:
+        if check_rows is None: raise ValueError('Supply the five preloaded check rows')
+        train, dev = check_rows
+        train_monitor = [dict(row) for row in train]
+        monitor_positions = list(range(len(train)))
+    else:
+        all_train = load_rows('train')
+        train = [all_train[i] for i in selected_indices]
+        dev = load_rows('dev_monitor500')
+        train_monitor = [dict(all_train[full_member_map[tuple(row['member'])]]) for row in mon_meta.records]
+        local_map = {tuple(row['member']):i for i,row in enumerate(train)}
+        monitor_positions = [local_map.get(tuple(row['member']),-1) for row in train_monitor]
+    fit_rows = [dict(row) for row in train] if args.dataset_size==32 else train_monitor
+    progress = previous['progress'] if previous and previous['progress'] is not None else fresh_progress(len(train))
+    if previous: restore_rng(previous['rng'])
+    resident_train = None; captured = None
+    if args.engine != 'reference':
+        if not args.device.startswith('cuda'): raise ValueError('Resident engines require CUDA')
+        max_nodes=max(row['graph']['n'] for row in [*train,*dev,*train_monitor])
+        resident_train=ResidentRows(train,args.device,max_nodes)
+        resident_dev=ResidentRows(dev,args.device,max_nodes)
+        resident_monitor=ResidentRows(train_monitor,args.device,max_nodes)
+        register_resident(resident_train);register_resident(resident_dev);register_resident(resident_monitor)
+        if args.dataset_size==32:
+            resident_fit=ResidentRows(fit_rows,args.device,max_nodes);register_resident(resident_fit)
+        print(f'GPU resident inputs: {(resident_train.bytes+resident_dev.bytes+resident_monitor.bytes+(resident_fit.bytes if args.dataset_size==32 else 0))/2**30:.3f} GiB; max_nodes={max_nodes}',flush=True)
+        if args.engine=='cuda_graph':
+            model.train()
+            captured=CapturedStep(model,optimizer,resident_train.batch(list(range(min(32,len(train))))),args.arm)
+            print('FP32 CUDA training graph captured; weights and optimizer not advanced during warmup.',flush=True)
+    requested = [False]
+    old_handler = signal.signal(signal.SIGINT, lambda *_: requested.__setitem__(0,True))
+    def stopped():
+        return requested[0] or (args.output/'STOP').exists() or (HERE/'runs/STOP').exists() or (stop_after_steps is not None and progress['step']>=stop_after_steps)
+    def exhausted(): return elapsed()>=identity['max_seconds'] or (args.deadline>0 and time.time()>=args.deadline)
+    last_heartbeat=[0.];last_checkpoint=[elapsed()]
+    def heartbeat(force=False):
+        now=elapsed()
+        if force or now-last_heartbeat[0]>=5.:
+            save(args.output/'budget.json', {'elapsed_seconds':now});last_heartbeat[0]=now
+    def store(status, finished=False, best=False):
+        heartbeat(force=True)
+        state = {'model':model.state_dict(), 'model_config':model_config(args.arm),
+            'optimizer':optimizer.state_dict(), 'scheduler':scheduler.state_dict(), 'rng':rng_state(),
+            'progress':progress, 'identity':identity, 'elapsed_seconds':elapsed(), 'status':status, 'finished':finished}
+        write_checkpoint(args.output/'checkpoints/latest.pt',state)
+        if best: write_checkpoint(args.output/'checkpoints/best.pt',state)
+        save(args.output/'progress.json', {'status':status,'finished':finished,'epoch':progress['epoch'],
+            'cursor':progress['cursor'],'step':progress['step'],'seen_count':int(progress['seen'].sum()),
+            'elapsed_seconds':elapsed(),'best_proxy':progress['best_proxy'],'best_epoch':progress['best_epoch'],
+            'bad_checks':progress['bad_checks'],'history':progress['history'],'gradients':progress['gradient_history'],
+            'lr_drops':scheduler.drops,'lr_tier':scheduler.drops+1,'lr_bad_checks':scheduler.lr_bad,
+            'lowest_lr_validated':scheduler.lowest_validated,
+            'full_dev_complete':progress['full_dev_complete'],'postprocessing_calls':0,
+            'implementation_check':implementation_check,'test_read':False,'tail_test_read':False})
+        last_checkpoint[0]=elapsed()
+    def monitor():
+        if stopped() or exhausted(): return False
+        epoch = progress['epoch']
+        val = monitor_losses(model,dev,args.device,args.arm,2.,args.batch_size,
+                             should_stop=lambda: stopped() or exhausted(), start_epoch=start_epoch)
+        if val is None: return False
+        tr = monitor_losses(model,train_monitor,args.device,args.arm,2.,args.batch_size,
+                            should_stop=lambda: stopped() or exhausted(), start_epoch=start_epoch)
+        if tr is None: return False
+        fit = tr if args.dataset_size!=32 else monitor_losses(model,fit_rows,args.device,args.arm,2.,args.batch_size,
+            should_stop=lambda:stopped() or exhausted(),start_epoch=start_epoch)
+        if fit is None:return False
+        seen = np.array([bool(progress['seen'][i]) if i>=0 else False for i in monitor_positions])
+        record = {'epoch':epoch,'step':progress['step'],'dev_monitor':val,'train_monitor':tr,'fit_train':fit,
+            'train_seen_count':int(seen.sum()),'weights':weights(args.arm,max(1,epoch),start_epoch),
+            'lr':optimizer.param_groups[0]['lr'],'elapsed_seconds':elapsed(),'postprocessing_calls':0}
+        for label,mask in (('train_seen',seen),('train_unseen',~seen)):
+            if mask.any():
+                record[label] = tr if mask.all() else monitor_losses(model,
+                    [row for row,flag in zip(train_monitor,mask) if flag],args.device,args.arm,2.,args.batch_size,
+                    should_stop=lambda: stopped() or exhausted(), start_epoch=start_epoch)
+                if record[label] is None: return False
+        improved = progress['best_proxy'] is None or val['selection_proxy']<progress['best_proxy']-1e-5
+        if improved: progress['best_proxy'],progress['best_epoch'] = val['selection_proxy'],epoch
+        scheduler.step(val['selection_proxy'],epoch)
+        progress['bad_checks'] = scheduler.early_bad
+        record.update(lr_next=optimizer.param_groups[0]['lr'],lr_drops=scheduler.drops,
+                      lr_bad_checks=scheduler.lr_bad,early_bad_checks=scheduler.early_bad,
+                      meaningful_best=scheduler.best)
+        progress['history'].append(record);progress['pending_monitor']=False
+        store('running',best=improved)
+        print(f'epoch={epoch} step={progress["step"]} train_loss={tr["total"]:.6f} dev_loss={val["total"]:.6f} supervision={val["supervision"]:.6f} lr={optimizer.param_groups[0]["lr"]:.2g} (same fixed Loss; no postprocessing)',flush=True)
+        return True
+    status = 'running'
+    try:
+        save(args.output/'panels.json', {'train_count':len(train),'dataset_size_requested':args.dataset_size,'subset_indices':selected_indices,
+            'block_steps':args.block_steps,'dev_monitor_count':len(dev),
+            'train_monitor_members':[list(r['member']) for r in train_monitor],
+            'dev_monitor_members':[list(dev[i]['member']) for i in range(len(dev))],
+            'test_read':False,'tail_test_read':False,'postprocessing_calls':0})
+        if not previous: store('prepared'); monitor()
+        while progress['epoch']<args.max_epochs or progress['pending_monitor']:
+            if scheduler.should_stop() and not progress['pending_monitor']:
+                status='early_stop';break
+            if stopped() or exhausted(): status='user_stop' if stopped() else 'budget';break
+            if progress['pending_monitor']:
+                if not monitor(): status='user_stop' if stopped() else 'budget';break
+                if scheduler.should_stop(): status='early_stop';break
+                continue
+            if progress['order'] is None:
+                draw_rng=np.random.default_rng(args.seed+progress['epoch'])
+                needed=args.block_steps*args.batch_size
+                progress['order']=np.concatenate([draw_rng.permutation(len(train)) for _ in range((needed+len(train)-1)//len(train))])[:needed]
+                progress['cursor']=0
+            model.train()
+            order_cuda=torch.as_tensor(progress['order'],device=args.device) if captured is not None else None
+            while progress['cursor']<len(progress['order']):
+                if stopped() or exhausted():break
+                ids=progress['order'][progress['cursor']:progress['cursor']+args.batch_size]
+                if captured is not None:
+                    resident_train.batch(order_cuda[progress['cursor']:progress['cursor']+len(ids)],out=captured.inputs)
+                    values,norm=captured.replay()
+                else:
+                    graph,targets=collate([train[i] for i in ids],args.device)
+                    optimizer.zero_grad(set_to_none=True)
+                    values=losses(model(inputs_only(graph)),graph,targets,args.arm,0.,include_quality=False)
+                    if not torch.isfinite(torch.stack(list(values.values()))).all():raise RuntimeError('Nonfinite loss')
+                    values['total'].backward()
+                    norm=torch.nn.utils.clip_grad_norm_(model.parameters(),1.,error_if_nonfinite=True)
+                    optimizer.step()
+                progress['seen'][ids]=True;progress['cursor']+=len(ids);progress['step']+=1
+                heartbeat()
+                if progress['step']%100==0:
+                    progress['batch_history'].append({'step':progress['step'],'epoch':progress['epoch']+1,
+                        'losses':dict(zip(values,torch.stack([v.detach() for v in values.values()]).cpu().tolist())),
+                        'grad_norm':float(norm),'elapsed_seconds':elapsed()})
+                    if elapsed()-last_checkpoint[0]>=30.:store('running')
+                    print(f'step={progress["step"]} epoch={progress["epoch"]+1} draws={progress["cursor"]}/{len(progress["order"])} total={float(values["total"].detach()):.5f}',flush=True)
+            if progress['cursor']<len(progress['order']):status='user_stop' if stopped() else 'budget';break
+            progress['epoch']+=1;progress['order']=None;progress['cursor']=0;progress['pending_monitor']=True
+            store('monitor_pending')
+        if status=='running':status='max_epochs'
+        store(status,finished=status in ('budget','max_epochs','early_stop'))
+        save(args.output/'results.json',{'status':status,'elapsed_seconds':elapsed(),'steps':progress['step'],
+            'epochs':progress['epoch'],'training_sample_draws':progress['step']*32,'effective_data_passes':progress['step']*32/len(train),'monitor_unit':'fixed update block','dataset_size':args.dataset_size,'block_steps':args.block_steps,'best_epoch':progress['best_epoch'],'best_proxy':progress['best_proxy'],
+            'full_dev_complete':progress['full_dev_complete'],'postprocessing_calls':0,
+            'test_read':False,'tail_test_read':False,'implementation_check':implementation_check,
+            'final_postprocessed_Q':'not run; one frozen best assessment is a separate stage'})
+        print('Stopped:',status,'wall hours:',elapsed()/3600,'best epoch:',progress['best_epoch'],flush=True)
+    except BaseException:
+        store('error');raise
+    finally:signal.signal(signal.SIGINT,old_handler)
+
+
+if __name__=='__main__':run(parser().parse_args())

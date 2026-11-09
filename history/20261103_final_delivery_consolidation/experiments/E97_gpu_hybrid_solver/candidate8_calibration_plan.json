@@ -1,0 +1,22 @@
+{
+  "status": "registered_before_execution",
+  "panel": "original frozen train_monitor500, all500 already trained/exposed; no dev calibration",
+  "source_checkpoint": "runs/20261102_candidate7_normalized_geometry_seed0/checkpoints/best.pt",
+  "source_checkpoint_sha256": "ac003467665ac78dab540f03117c77c86627b5340854e2cfafba642be8504a51",
+  "objective_source_sha256": "b9c490eef6561417e7ff849484c201ab2db8a6af0af473c162b02bde45081c46",
+  "procedure": "One frozen-source forward and state-gradient calculation per member, no optimizer updates, no solver or Q calls. Public count weights exp((n-120)/12) normalized by first16k mean. For each component over positive-gradient cases where teacher gradient also nonzero: coefficient=share*weighted_median(teacher local-state-gradient L2 norm)/weighted_median(component norm), same public count weights in medians. Threshold1e-10 for numerical nonzero. All zero/nonzero members remain in training/monitor means.",
+  "shares": {
+    "physics": 1.0,
+    "corridor": 0.5,
+    "quality": 0.1
+  },
+  "teacher_coefficient": 1.0,
+  "normalization": "gradients wrt state multiplied by public (sqrt(area),sqrt(area),1)*free mask; weighted medians on registered train500 only, no parameter-gradient equality claim",
+  "terms": "teacher C7 same imitation; physics=public exact intersection fraction+normalized penetration+.25 boundary+.1 MIB; corridor=log1p(mean+.25worst squared native-order anchored path deficit after fixed16 relaxations); quality=.5log1p(bbox/publicA)+.5log1p(exact full-port wire/(total public net weight*sqrt(publicA)))",
+  "coefficient_gate": "require at least5 active calibrated members per component, finite positive fixed coefficients<=1000; otherwise stop for diagnosis, no automatic formula/coefficient retry",
+  "training": "After calibration register exact weights+identity as candidate8_plan before original5 implementation preflight or formal start; weights freeze for entire candidate. No formal slot consumed by this no-update calibration.",
+  "full_ports": "Loss only. NN forward receives LEGACY public compressed-port fields only.",
+  "no_dev_sweep": true,
+  "formal_slots_consumed": 0,
+  "test_read": false
+}

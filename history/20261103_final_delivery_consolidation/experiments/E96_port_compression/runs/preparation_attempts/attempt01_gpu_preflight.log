@@ -1,0 +1,85 @@
+Verified archived cache loaded: train 5 cases
+{
+  "status": "passed",
+  "arm": "centroid",
+  "device": "cuda",
+  "unique_train_cases": 5,
+  "indices": [
+    1683,
+    10027,
+    5474,
+    10140,
+    15001
+  ],
+  "initial_model_sha256": "72f0de888a86475be99c001a7a058dbdaded1ada7231958533264a1d1567adc1",
+  "token_slots": 0,
+  "legacy_module_summary_exact": true,
+  "port_order_invariant": true,
+  "empty_connectivity_finite": true,
+  "labels_and_test_rejected": true,
+  "zero_head_identity_exact": true,
+  "original_full_port_Loss_preserved": true,
+  "one_simultaneous_output_head": true,
+  "public_hard_geometry_preserved": true,
+  "real_Adam_Dropout_next_update_restore_bit_exact": true,
+  "serialized_cursor_order_preserved": true,
+  "frozen_L_has_no_gradients": true,
+  "implementation_updates_only": true,
+  "formal_training_started": false,
+  "test_read": false,
+  "graph": {
+    "graph_reconstruction_resume_model_Adam_RNG_bit_exact": true,
+    "warmup_no_Adam_updates": true,
+    "nonfinite_rejected_before_Adam": true,
+    "peak_allocated_MiB": 2085.162109375,
+    "raw_public_shape": [
+      32,
+      120,
+      480
+    ],
+    "network_tokens": 120
+  },
+  "seconds": 41.45442659999753
+}
+Verified archived cache loaded: train 5 cases
+Traceback (most recent call last):
+  File "E:\project\ICCAD\2026\problemC\experiments\E96_port_compression\graph_step.py", line 30, in __init__
+    prediction=model.corrector(self.inputs,self.draft)
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "E:\project\ICCAD\2026\problemC\experiments\E96_port_compression\model.py", line 94, in forward
+    g=network_view(g,self.port_mode)
+  File "E:\project\ICCAD\2026\problemC\experiments\E96_port_compression\compression.py", line 30, in network_view
+    total=xy.new_zeros(xy.shape[0],32).scatter_add(1,index,weights)
+RuntimeError: CUDA error: operation not permitted when stream is capturing
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "E:\project\ICCAD\2026\problemC\experiments\E96_port_compression\preflight.py", line 147, in <module>
+    if __name__=='__main__':main()
+  File "E:\project\ICCAD\2026\problemC\experiments\E96_port_compression\preflight.py", line 140, in main
+    gc.collect();torch.cuda.empty_cache();result['graph']=graph_check(arm,rows)
+  File "E:\project\ICCAD\2026\problemC\experiments\E96_port_compression\preflight.py", line 111, in graph_check
+    initial=cpu(model.state_dict());before_rng=rng();engine=CapturedStep(model,opt,g,d)
+  File "E:\project\ICCAD\2026\problemC\experiments\E96_port_compression\graph_step.py", line 28, in __init__
+    with torch.cuda.graph(self.graph,stream=stream):
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\site-packages\torch\cuda\graphs.py", line 186, in __exit__
+    self.cuda_graph.capture_end()
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\site-packages\torch\cuda\graphs.py", line 84, in capture_end
+    super().capture_end()
+RuntimeError: CUDA error: operation failed due to a previous error during capture
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+

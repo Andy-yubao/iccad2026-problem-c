@@ -1,0 +1,44 @@
+Verified archived cache loaded: train 5 cases
+Manual/efficient actual update: 1.6689300537109375e-06 2.384185791015625e-07 6.427931108413289e-07 7.271766662597656e-06
+Capture complete, no model or Adam changes; MiB 7662.0
+Fresh graph reconstruction resumes next model/Adam/RNG bit-exactly
+{
+  "status": "passed",
+  "unique_train_cases": 5,
+  "indices": [
+    1683,
+    10027,
+    5474,
+    10140,
+    15001
+  ],
+  "old_checkpoint_sha256": "e7e6d44c15467d7cbca55ec886c8cca0151828da4e9b6f332b00ae412b30721c",
+  "stopped_step": 4481,
+  "shape": [
+    32,
+    120,
+    480
+  ],
+  "attention_backend": "FP32 efficient SDPA; no AMP/TF32",
+  "manual_efficient_output_max_abs": 1.6689300537109375e-06,
+  "manual_efficient_loss_max_abs": 2.384185791015625e-07,
+  "manual_efficient_gradient_relative_l2": 6.427931108413289e-07,
+  "manual_efficient_update_max_abs": 7.271766662597656e-06,
+  "efficient_eager_graph_update_max_abs": 0.0,
+  "exact_new_graph_Adam_RNG_restore": true,
+  "serialized_progress_preserved": true,
+  "warmup_capture_no_optimizer_updates": true,
+  "nonfinite_rejected_before_Adam": true,
+  "peak_allocated_MiB": 6770.82275390625,
+  "peak_reserved_MiB": 7780.0,
+  "reference_natural_ms": 271.3568250001117,
+  "reference_full_padding_ms": 612.9792500005351,
+  "graph_full_padding_ms": 350.09392499978276,
+  "natural_to_graph_speedup": 0.7750972114134231,
+  "full_to_graph_speedup": 1.7508994193512941,
+  "timing_scope": "four updates including public packing/transfers; five repeated train cases; not complete epoch speed",
+  "numerical_migration_required": true,
+  "reason": "efficient reduction order and fixed padding change rounding/Dropout stream consumption; no claim of old-path bit-exact continuation",
+  "no_formal_optimizer_updates": true,
+  "test_read": false
+}

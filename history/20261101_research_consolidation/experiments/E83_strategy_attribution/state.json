@@ -1,0 +1,36 @@
+{
+  "status": "complete_audited",
+  "training_updates": 0,
+  "test_read": false,
+  "started_utc": "2026-10-29T15:22:22.087816+00:00",
+  "startup_recovery": "Use managed persistent exec process; conservatively retain first launch UTC for total study wall budget",
+  "pid": 34884,
+  "last_update_utc": "2026-10-29T15:33:30.424094+00:00",
+  "arms": {
+    "P42_ops_only": {
+      "status": "terminal_complete",
+      "started_utc": "2026-10-29T15:24:39.010634+00:00",
+      "pid": 34884,
+      "checkpoint_sha256": "45574da63580d27ef08b3517a691bd21bc07d939bf362dcb2637eeab122ff8b0",
+      "checked_utc": "2026-10-29T15:29:05.063523+00:00",
+      "accounted_wall_seconds": 266.052889
+    },
+    "P74_frozen_F81": {
+      "status": "terminal_complete",
+      "started_utc": "2026-10-29T15:29:06.076633+00:00",
+      "pid": 34884,
+      "checkpoint_sha256": "03a8a6c7ce4fca6c469924c79edf505028c8ff85ffd547eb4c7c1d0f2b48d6d3",
+      "checked_utc": "2026-10-29T15:33:02.302487+00:00",
+      "accounted_wall_seconds": 236.225854
+    }
+  },
+  "current_arm": "P74_frozen_F81",
+  "error": "TypeError('Object of type int32 is not JSON serializable')",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E83_strategy_attribution\\pipeline.py\", line 50, in main\n    analyze()\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E83_strategy_attribution\\analysis.py\", line 70, in main\n    save(out,result)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E83_strategy_attribution\\io.py\", line 35, in save\n    temp.write_text(json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False) + '\\n', encoding='utf-8')\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\json\\__init__.py\", line 238, in dumps\n    **kw).encode(obj)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\json\\encoder.py\", line 201, in encode\n    chunks = list(chunks)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\json\\encoder.py\", line 431, in _iterencode\n    yield from _iterencode_dict(o, _current_indent_level)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\json\\encoder.py\", line 405, in _iterencode_dict\n    yield from chunks\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\json\\encoder.py\", line 405, in _iterencode_dict\n    yield from chunks\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\json\\encoder.py\", line 405, in _iterencode_dict\n    yield from chunks\n  [Previous line repeated 1 more time]\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\json\\encoder.py\", line 438, in _iterencode\n    o = _default(o)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\json\\encoder.py\", line 179, in default\n    raise TypeError(f'Object of type {o.__class__.__name__} '\nTypeError: Object of type int32 is not JSON serializable\n",
+  "accounted_wall_seconds": 668.336278,
+  "pipeline_error_retained": "TypeError('Object of type int32 is not JSON serializable')",
+  "postprocessing_recovery": "runs/serialization_recovery.json",
+  "recovery_finished_utc": "2026-10-29T15:46:21.747795+00:00",
+  "completion_report": "runs/inspection.md",
+  "audit_utc": "2026-10-29T15:49:07.618895+00:00"
+}

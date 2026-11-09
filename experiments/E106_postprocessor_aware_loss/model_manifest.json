@@ -1,0 +1,60 @@
+{
+  "models": [
+    {
+      "id": "enhanced71",
+      "origin": "experiments/E103_offline_loss_alignment/assets/e98_generalization/best.pt",
+      "origin_sha256": "3f7ca0086af8a13bd52eedf0635117312e5c0a72e80e423e9cee3db5ca9b87ea",
+      "checkpoint": "experiments/E106_postprocessor_aware_loss/assets/enhanced71.pt",
+      "sha256": "1d80efbc7f68a7f0ff3469c9fba4e1360fe08b9dd01e6a95b557e2bd711e6e46",
+      "best_epoch": 71,
+      "model_config": {
+        "width": 96,
+        "layers": 12,
+        "rectangle": true,
+        "ffn_dropout": 0.1,
+        "residual_dropout": 0.05
+      },
+      "reason": "Original completed E98 generalization baseline; primary neighborhood",
+      "weight_extraction_only": true,
+      "optimizer_updates": 0
+    },
+    {
+      "id": "learned29",
+      "origin": "experiments/E103_offline_loss_alignment/runs/20261104_learned_v1_lr1e3_seed0/checkpoints/best.pt",
+      "origin_sha256": "85d21d2dee2a6266894a9bf0036210c3a0ff7c2290ca0a6ec0b4e32784c84325",
+      "checkpoint": "experiments/E106_postprocessor_aware_loss/assets/learned29.pt",
+      "sha256": "47859ee1da8caf5a631e2ba0aa5093a64724d12fc8d9f74a8ae59e39f9acf0d4",
+      "best_epoch": 29,
+      "model_config": {
+        "width": 96,
+        "layers": 12,
+        "rectangle": true,
+        "ffn_dropout": 0.1,
+        "residual_dropout": 0.05
+      },
+      "reason": "Completed fitted-Loss continuation, different overlap/task tradeoff",
+      "weight_extraction_only": true,
+      "optimizer_updates": 0
+    },
+    {
+      "id": "reference075_8",
+      "origin": "experiments/E103_offline_loss_alignment/runs/20261104_reference075_seed0/checkpoints/best.pt",
+      "origin_sha256": "9ed10cc69a601bac488a1753aefcea32d0dea1a17df92f19c9d7ff05b80befc8",
+      "checkpoint": "experiments/E106_postprocessor_aware_loss/assets/reference075_8.pt",
+      "sha256": "69ea69fb460c2c3f6893f686dc66089f6e0d9bb9837bcdcac9dfb43523c112ee",
+      "best_epoch": 8,
+      "model_config": {
+        "width": 96,
+        "layers": 12,
+        "rectangle": true,
+        "ffn_dropout": 0.1,
+        "residual_dropout": 0.05
+      },
+      "reason": "Completed reference075 continuation; another mature local distribution",
+      "weight_extraction_only": true,
+      "optimizer_updates": 0
+    }
+  ],
+  "source_family": "Completed E98-compatible models",
+  "old_abandoned_search_models_used": false
+}

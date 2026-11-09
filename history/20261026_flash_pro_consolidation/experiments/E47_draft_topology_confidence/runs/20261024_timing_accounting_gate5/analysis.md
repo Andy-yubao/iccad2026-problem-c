@@ -1,0 +1,5 @@
+# 公共前端计时修正：五例行为核对
+
+v1在计时前构造辅助接口所需PackingProblem。v2将这段公开输入处理单独记录为public_prepare_seconds，并加入每臂完整记录。五例实测约1.174～1.933毫秒；这个范围只代表本次五例，不外推全体上界。每例complete_seconds与public_prepare_seconds＋inference_seconds＋postprocess_seconds核对一致。
+
+只有control，5输出全硬合法。坐标模型、算法与评分不改，本次不是新的质量候选或速度胜出证据。原生100/400等旧结果不按估计补时或追溯改写。离线见证生成/读取仍单列，尚无学习头推理成本，因此不能把特权实验的记录延迟当作真实新增模型的部署延迟。

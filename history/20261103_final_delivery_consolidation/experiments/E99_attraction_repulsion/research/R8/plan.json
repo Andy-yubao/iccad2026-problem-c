@@ -1,0 +1,13 @@
+{
+  "revision":"E99.R8.elastic_guidance_then_hard.v1",
+  "evidence":"R7 conditional native field on18 initially infeasible training cases worsened whole-panelQ1.0540113 to1.0605806;482 unchanged branches reused. Cheap pair field did not repair the globally incompatible anchored order. Original full planner uses elastic geometry but spends multiple iterations on hard validity.",
+  "hypothesis":"After initial hard conic PrimalInfeasible, spend the next one of the existing maximum4 calls on elastic shape geometry. Use its simultaneous output as the next snapshot even if overlapping; rebuild physical topology and resume hard constraints. This allows coherent module reordering while retaining a hard-legal incumbent and the same180ms deadline. No increase in maximum planning depth.",
+  "arms":["R6_control","elastic_on_infeasible"],
+  "backend":{"seconds":0.18,"maximum_shape_solves":4,"shape_cap_seconds":0.045,"projection_and_polish_reserve_seconds":0.033,"maximum_edge_flips_per_failure":8,"guide_elastic":100000.0,"conservative":false,"deep_recovery":false,"field":false},
+  "implementation_panel":[0,43,95,135,335],
+  "control_reuse":"R6 batch_dual_native500 read-only. New arm no-trigger branches identical and explicitly reused with source/coordinate hashes. All500 included; changed18 branches solved, counts reported. Historical timings are diagnostic, not formal latency evidence.",
+  "calibration_panel":"fixed v5 train_monitor500 after five-case implementation; frozen C3/public inputs",
+  "checks":"guide may overlap but never returned unchecked; final public locks/areas/nonoverlap and official checks unchanged; all guide/fallback time included",
+  "promotion":"Fresh complete C3 dev500 only after frozen candidate and training quality review; no dev coefficient scans",
+  "test_read":false,"new_training":false
+}

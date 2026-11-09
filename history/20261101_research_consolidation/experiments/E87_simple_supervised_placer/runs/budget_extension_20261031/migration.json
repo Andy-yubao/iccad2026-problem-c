@@ -1,0 +1,31 @@
+{
+  "status": "complete",
+  "registered_utc": "2026-10-31T04:44:40.557851+00:00",
+  "authorization": "User explicitly granted one additional hour to the active E87 training branch",
+  "old_cap_seconds": 3600,
+  "new_cap_seconds": 7200,
+  "elapsed_seconds_preserved": 2844.2156298999907,
+  "remaining_seconds": 4355.784370100009,
+  "step_preserved": 669,
+  "epoch_preserved": 1,
+  "cursor_preserved": 5408,
+  "model_optimizer_rng_scheduler_progress_unchanged": true,
+  "calibrated_coefficients_unchanged": true,
+  "no_learning_rate_protection_restored": true,
+  "all_algorithm_data_loss_sources_unchanged": true,
+  "changed_source_files": [
+    "experiments/E87_simple_supervised_placer/pipeline.py",
+    "experiments/E87_simple_supervised_placer/plan.json",
+    "experiments/E87_simple_supervised_placer/train.py"
+  ],
+  "identity_differences": [
+    "calibration",
+    "max_seconds",
+    "sources"
+  ],
+  "preserved_original_run_config_and_logs": true,
+  "original_checkpoints_preserved_under": "before/",
+  "elapsed_migration_seconds": 7.465663000009954,
+  "parameter_updates": 0,
+  "test_read": false
+}

@@ -1,0 +1,35 @@
+{
+  "status": "complete",
+  "pid": 49720,
+  "started_at": "2026-11-08T12:50:03.300805+00:00",
+  "jobs": [
+    "original4",
+    "new_first"
+  ],
+  "active": null,
+  "completed": [
+    {
+      "arm": "original4",
+      "status": "early_stop",
+      "epochs": 37,
+      "steps": 18500,
+      "completed_at": "2026-11-08T13:14:16.520443+00:00"
+    },
+    {
+      "arm": "new_first",
+      "status": "early_stop",
+      "epochs": 51,
+      "steps": 25500,
+      "completed_at": "2026-11-08T13:34:19.382334+00:00"
+    }
+  ],
+  "test_read": false,
+  "Q_evaluation": false,
+  "postprocessing_calls": 0,
+  "scope": "Exactly original4 scratch -> new_first scratch; seed0; fixed16k",
+  "per_arm_maximum_seconds": 14400,
+  "per_arm_maximum_epochs": 200,
+  "updated_at": "2026-11-08T13:34:19.501127+00:00",
+  "completed_at": "2026-11-08T13:34:19.501127+00:00",
+  "comparison": "loss_comparison.json and comparison_report.md; saved training logs only"
+}

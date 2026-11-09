@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "E:\project\ICCAD\2026\problemC\experiments\E101_final_c5_solver\runs\20261103_replay\sf\experiments\E101_final_c5_solver\evaluate.py", line 68, in <module>
+    with threadpool_limits(1):main(a.role)
+  File "E:\project\ICCAD\2026\problemC\experiments\E101_final_c5_solver\runs\20261103_replay\sf\experiments\E101_final_c5_solver\evaluate.py", line 45, in main
+    case=_build_case(raw.case_id,raw.source,tuple(inputs[1:6]),raw.reference_positions,raw.stored_metrics)
+  File "E:\project\ICCAD\2026\problemC\experiments\E101_final_c5_solver\runs\20261103_replay\sf\datasets\cases.py", line 58, in _build_case
+    official = official_evaluator()
+  File "E:\project\ICCAD\2026\problemC\experiments\E101_final_c5_solver\runs\20261103_replay\sf\scoring\official.py", line 15, in official_evaluator
+    official = importlib.import_module("iccad2026_evaluate")
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "E:\project\ICCAD\2026\problemC\experiments\E101_final_c5_solver\runs\20261103_replay\sf\third_party\FloorSet\iccad2026contest\iccad2026_evaluate.py", line 49, in <module>
+    from litetestLoader import FloorplanDatasetLiteTest, floorplan_collate as test_floorplan_collate
+ModuleNotFoundError: No module named 'litetestLoader'

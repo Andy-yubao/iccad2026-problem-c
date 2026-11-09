@@ -1,0 +1,50 @@
+{
+  "status": "failed",
+  "checks": {
+    "dev500_F_loss": true,
+    "weighted_Q": false,
+    "hard_legal": true,
+    "max_Q": false,
+    "module_pass10_pooled": false,
+    "worst_module_coverage_p95": false,
+    "numerical_stability": true,
+    "F_checkpoint": true
+  },
+  "values": {
+    "count": 500,
+    "hard_legal": 500,
+    "mean_Q": 1.0397568937641422,
+    "weighted_Q": 1.0312691127257632,
+    "p95_Q": 1.1529292518415055,
+    "max_Q": 2.154966169170041,
+    "worst5pct_mean_Q": 1.3076178939894436,
+    "seconds_mean": 0.2528111554014031,
+    "seconds_p95": 0.5854323350358754,
+    "row_fallbacks": 0,
+    "rescue_cases": 7,
+    "errors": 0,
+    "hpwl_gap_mean_returned": 0.011706576574224855,
+    "area_gap_mean_returned": 0.015869519955521483,
+    "boundary_violations_mean_returned": 0.188,
+    "grouping_violations_mean_returned": 0.24,
+    "mib_violations_mean_returned": 0.0,
+    "inference_seconds_mean_returned": 0.05961755100125447,
+    "postprocess_seconds_mean_returned": 0.1930214029958006,
+    "mean_center_move_local_mean_returned": 0.39661072720887913,
+    "max_center_move_local_mean_returned": 1.6487709571234495,
+    "dev500_F_loss": 0.32832567520439626,
+    "module_pass10_pooled": 0.5757981755986317,
+    "worst_module_coverage_p95": 0.8248128050741472,
+    "numerical_stability_pass": true,
+    "F_phase_checkpoint_exists": true
+  },
+  "checkpoint_sha256": "1d5d8e4122305848ba72ca04cf7d8528b9fcbd9ce77ee6f35e49bf29da7814db",
+  "registration_sha256": "94f9cfbba77a22577b739bcb7a222e51f1e782e8404cb218a807d32a69337a8d",
+  "weighted_Q_delta": 0.008921595558747653,
+  "worker_paired_95pct_interval": [
+    0.0014177562507874592,
+    0.018529477776454098
+  ],
+  "interpretation": "Exploratory engineering near-parity: Loss within2%, weightedQ tolerance+.001; maxQ+5%, coverage pass-2pp and worst coverage p95+3pp guards. Report worker-paired uncertainty; passing a point tolerance does not prove statistical equivalence. Tolerances must not change after seeing new terminal.",
+  "test_read": false
+}

@@ -1,0 +1,91 @@
+{
+  "status_at_read": {
+    "status": "running",
+    "current_task": "20261026_data16000_geometry96_seed1",
+    "stage": "train",
+    "child_pid": 33304,
+    "completed": [
+      "20261026_fit32_reference96_seed0",
+      "20261026_fit32_reference96_noreg_seed0",
+      "20261026_fit32_reference160_noreg_seed0",
+      "20261026_data16000_geometry96_seed0",
+      "20261026_data8192_geometry96_seed0",
+      "20261026_data4096_geometry96_seed0",
+      "20261026_data2048_geometry96_seed0",
+      "20261026_capacity16000_geometry160_seed0",
+      "20261026_fit32_reference96_seed1",
+      "20261026_fit32_reference96_noreg_seed1",
+      "20261026_fit32_reference160_noreg_seed1"
+    ],
+    "failures": [],
+    "deadline_unix": 1793053607.7690234,
+    "elapsed_seconds": 11445.797974586487,
+    "updated_utc": "2026-10-26T13:37:33.566998+00:00",
+    "test_read": false
+  },
+  "read_unix": 1793021888.8683317,
+  "data_seed0_dev2000": {
+    "2048": 0.49824216985702513,
+    "4096": 0.4395021619796753,
+    "8192": 0.3818811142444611,
+    "16000": 0.3512025842666626
+  },
+  "paired_update_check": {
+    "step": 16000,
+    "8192": 0.3869172763824463,
+    "16000": 0.3783632197380066
+  },
+  "memory_fit_diagnostics": [
+    {
+      "arm": "reference96",
+      "seed": 0,
+      "status": "early_stop",
+      "minimum_observed_fit": 0.007109756115823984,
+      "last_step": 1728
+    },
+    {
+      "arm": "reference96_noreg",
+      "seed": 0,
+      "status": "early_stop",
+      "minimum_observed_fit": 0.005964449606835842,
+      "last_step": 1664
+    },
+    {
+      "arm": "reference160_noreg",
+      "seed": 0,
+      "status": "early_stop",
+      "minimum_observed_fit": 0.00038644892629235983,
+      "last_step": 1664
+    },
+    {
+      "arm": "reference96",
+      "seed": 1,
+      "status": "early_stop",
+      "minimum_observed_fit": 0.0036712440196424723,
+      "last_step": 2176
+    },
+    {
+      "arm": "reference96_noreg",
+      "seed": 1,
+      "status": "early_stop",
+      "minimum_observed_fit": 0.0013850139221176505,
+      "last_step": 1856
+    },
+    {
+      "arm": "reference160_noreg",
+      "seed": 1,
+      "status": "early_stop",
+      "minimum_observed_fit": 0.0003675222978927195,
+      "last_step": 1728
+    }
+  ],
+  "capacity_warning": {
+    "run": "20261026_capacity16000_geometry160_seed0",
+    "best_step": 6000,
+    "final_dev_loss": 10.94796248626709,
+    "interpretation": "Optimization instability; do not treat poor full-data score as evidence that added capacity is useless or sufficient."
+  },
+  "memory_stopping_limit": "Small-fit runs retain mandatory external-dev-based LR/early-stop. Their minimum observed fitting losses are not fitted-to-convergence capacity ceilings; low is one-sided empirical evidence and high cannot disprove representability.",
+  "test_read": false,
+  "new_training_or_inference_started": false
+}

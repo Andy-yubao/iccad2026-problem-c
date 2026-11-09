@@ -1,0 +1,145 @@
+{
+  "passed": true,
+  "fixed_and_flexible_repair_positive_control": [
+    {
+      "flexible": false,
+      "stats": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "objective": 0.10000000333333355,
+        "dual_bound": null,
+        "gap": null,
+        "binary_variables": 0,
+        "threads": 1,
+        "flexible": false,
+        "max_move": 0.5,
+        "choice_pairs": 0,
+        "forced_pairs": 3,
+        "certificate_scope": "fixed shapes; movement cap, per-axis bbox span caps, HPWL cap, preserved successful boundary blocks"
+      },
+      "proof": {
+        "hard_legal": true,
+        "quality_guard": true,
+        "soft_regressions": [],
+        "metrics": {
+          "hpwl_total": 0.0,
+          "boundary_violations": 0,
+          "grouping_violations": 0,
+          "mib_violations": 0,
+          "area_violations": 0,
+          "dimension_violations": 0
+        },
+        "independent_hard_checks": {
+          "overlap_pairs": [],
+          "area_violation_blocks": [],
+          "fixed_or_preplaced_shape_violations": [],
+          "preplaced_location_violations": [],
+          "invalid_geometry_blocks": [],
+          "dimension_or_location_violation_count": 0,
+          "is_feasible": true
+        },
+        "max_move": 0.10000000000000031,
+        "mean_move_free": 0.03333333333333344,
+        "worst10_mean_free": 0.10000000000000031,
+        "fraction_free_moved_over_1pct": 0.3333333333333333,
+        "bbox_relative_change": 0.0,
+        "HPWL_relative_change": -1.0,
+        "max_abs_log_width_change": 0.0
+      }
+    },
+    {
+      "flexible": true,
+      "stats": {
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "objective": 0.10000000333333342,
+        "dual_bound": 0.10000000333333342,
+        "gap": 0.0,
+        "binary_variables": 4,
+        "threads": 1,
+        "flexible": true,
+        "max_move": 0.5,
+        "choice_pairs": 2,
+        "forced_pairs": 1,
+        "certificate_scope": "fixed shapes; movement cap, per-axis bbox span caps, HPWL cap, preserved successful boundary blocks"
+      },
+      "proof": {
+        "hard_legal": true,
+        "quality_guard": true,
+        "soft_regressions": [],
+        "metrics": {
+          "hpwl_total": 0.0,
+          "boundary_violations": 0,
+          "grouping_violations": 0,
+          "mib_violations": 0,
+          "area_violations": 0,
+          "dimension_violations": 0
+        },
+        "independent_hard_checks": {
+          "overlap_pairs": [],
+          "area_violation_blocks": [],
+          "fixed_or_preplaced_shape_violations": [],
+          "preplaced_location_violations": [],
+          "invalid_geometry_blocks": [],
+          "dimension_or_location_violation_count": 0,
+          "is_feasible": true
+        },
+        "max_move": 0.10000000000000031,
+        "mean_move_free": 0.03333333333333344,
+        "worst10_mean_free": 0.10000000000000031,
+        "fraction_free_moved_over_1pct": 0.3333333333333333,
+        "bbox_relative_change": 0.0,
+        "HPWL_relative_change": -1.0,
+        "max_abs_log_width_change": 0.0
+      }
+    }
+  ],
+  "anchor_case_fixed_shape_infeasible": {
+    "status": 2,
+    "message": "No separating axis is reachable for at least one pair within movement cap",
+    "pair": [
+      0,
+      1
+    ],
+    "certificate_scope": "fixed shapes, maximum L1 movement cap; independent of solver quality limits",
+    "binary_variables": 0,
+    "threads": 1
+  },
+  "anchor_case_shape_change_witness": {
+    "hard_legal": true,
+    "quality_guard": true,
+    "soft_regressions": [],
+    "metrics": {
+      "hpwl_total": 0.0,
+      "boundary_violations": 0,
+      "grouping_violations": 0,
+      "mib_violations": 0,
+      "area_violations": 0,
+      "dimension_violations": 0
+    },
+    "independent_hard_checks": {
+      "overlap_pairs": [],
+      "area_violation_blocks": [],
+      "fixed_or_preplaced_shape_violations": [],
+      "preplaced_location_violations": [],
+      "invalid_geometry_blocks": [],
+      "dimension_or_location_violation_count": 0,
+      "is_feasible": true
+    },
+    "max_move": 0.01980295074383182,
+    "mean_move_free": 0.014689488432528737,
+    "worst10_mean_free": 0.01980295074383182,
+    "fraction_free_moved_over_1pct": 0.5,
+    "bbox_relative_change": -0.002392181949903649,
+    "HPWL_relative_change": -1.0,
+    "max_abs_log_width_change": 0.01980263306610042
+  },
+  "shape_solver": {
+    "status": "Solved",
+    "seconds": 0.0007768,
+    "primal_residual": 1.281694644432231e-10,
+    "threads": 1,
+    "max_log_shape": 0.05,
+    "certificate_scope": "original nearest-separation directions only"
+  }
+}

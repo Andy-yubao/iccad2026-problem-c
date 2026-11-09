@@ -1,0 +1,106 @@
+{
+  "revision": "E101.final_C5_64k.two_stage.v1",
+  "registered_utc": "2026-11-03T08:11:01.895518+00:00",
+  "authorization": "User 2026-11-03: background final retraining; after actual start archive workspace; final frozen2000 test after training. No extra candidates or wakeups.",
+  "source_checkpoint": "experiments/E97_gpu_hybrid_solver/runs/20261102_round2_candidate5_countweighted_seed0/checkpoints/best.pt",
+  "source_sha256": "028ea3aa124c8cd9e7c3cc7bf8587c699ab9b4932f256899e3780d4d8c8816e0",
+  "data": {
+    "registry": "protocol/reference_workset_v6.json",
+    "train_size": 64000,
+    "dev_size": 2000,
+    "test_size": 2000,
+    "monitor_train": 500,
+    "monitor_dev": 500,
+    "split": "unchanged original split_v1 80/10/10, nestedv6 preservesv5",
+    "task": "public MIB mean-area E14.mean_area.v1",
+    "source_exposure": "E42pretrained16k; E74L32k; E97F16k; final64k includes all inherited members"
+  },
+  "architecture": "Exact C5 student.DeploymentModel, width192 depth12, F241547; compressed module-port total weight/centroid; no AR or relation head",
+  "stages": [
+    {
+      "name": "L",
+      "initialization": "C5 placer weights, fresh AdamW, not ordinary resume",
+      "loss": "unchanged E74 G+0.5 collision_topology",
+      "trainable": "L except pretrained graph-local mappings, as E74; F untouched",
+      "lr_levels": [
+        0.00025,
+        0.0001,
+        5e-05,
+        2e-05
+      ],
+      "max_epochs": 200,
+      "max_seconds": 93600,
+      "relative_module_update_limit": 0.005
+    },
+    {
+      "name": "teacher",
+      "source": "immutable original C5 + original complete repair on train64k/devmonitor500; no Q-based target selection",
+      "new_L_base": "recompute using unique new-L own-Loss best, eval, frozen",
+      "workers": 4,
+      "CPU_threads_per_worker": 1
+    },
+    {
+      "name": "F",
+      "initialization": "C5 refiner plus new L best; fresh AdamW; L frozen",
+      "loss": "exact C5 public-N-weighted group-aware teacher+public boundary/dynamicMST; inherited coefficients unchanged",
+      "lr_levels": [
+        0.00025,
+        0.0001,
+        5e-05,
+        2e-05
+      ],
+      "max_epochs": 100,
+      "max_seconds": 43200
+    }
+  ],
+  "training": {
+    "seed": 0,
+    "batch_size": 32,
+    "precision": "FP32 no AMP/TF32",
+    "weight_decay": 0.0003,
+    "clip_norm": 1.0,
+    "scheduler_protection_epochs": 0,
+    "lr_bad_checks": 3,
+    "min_delta": "max(1e-5,abs(plateau_best)*0.001)",
+    "lowest_wait_epochs": 2,
+    "selection": "devmonitor500 arithmetic mean of SAME per-case fixed total used for backward/monitor/LR/earlystop; save any strict best; epoch0 eligible",
+    "state": "best/latest, full Adam/RNG/order/cursor/seen/scheduler/cumulative time; no test feedback; no postprocessor in gradient"
+  },
+  "repair": {
+    "relaxed": false,
+    "mode": 0,
+    "adaptive": true,
+    "fast_budget": false,
+    "late_extension": true,
+    "plateau": true,
+    "robust_seeds": true,
+    "certified": true,
+    "quick_project": true,
+    "quadratic_project": true,
+    "incumbent_project": true,
+    "snap": 0.0001
+  },
+  "evaluation": {
+    "order": [
+      "freeze model identity",
+      "dev500 complete requests",
+      "final local_test2000 complete requests"
+    ],
+    "test_gate": "only after both training stages finish by earlystop/registered cap; immutable selected checkpoint SHA written before any test payload",
+    "one_checkpoint": "unique stageF own-Loss best, never replace based on test or devQ",
+    "timing": "batch1 sequential CPU1+GPU resident, full public clone/masking/meanarea/features/transfers/L/F/repair/hardcheck; disk and cold separately; no batch-throughput substitution",
+    "same100_gallery": "dev reference/L/F/final, shared visualization; no scoring controls/browser",
+    "all_cases_retained": true,
+    "failure": "record and stop; no automatic infinite retry; test cannot trigger training"
+  },
+  "stop": "run STOP prevents all subsequent stages; save at training batch/case boundary; no automatic wakeups",
+  "budget_extension": {
+    "authorized_utc": "2026-11-03T09:57:14.063570+00:00",
+    "stage": "L",
+    "old_max_seconds": 86400,
+    "new_max_seconds": 93600,
+    "increment_seconds": 7200,
+    "user_request": "Increase current training time limit by2h then continue; no change to Loss, LR, epoch cap or earlystop",
+    "F_max_seconds_unchanged": 43200
+  }
+}

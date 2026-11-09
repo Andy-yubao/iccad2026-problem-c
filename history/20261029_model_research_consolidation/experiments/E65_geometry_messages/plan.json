@@ -1,0 +1,18 @@
+{
+  "revision":"E65.predeclared.v1",
+  "authorization":"Current chat: user explicitly authorizes all four proposed architecture studies, any needed background training, and hourly wakeups; tests remain sealed.",
+  "question":"Does explicitly geometric message content improve fit and development drafts beyond adding a node-feature message branch?",
+  "arms":["geometry_message","feature_message"],
+  "seed":0,
+  "architecture":"Original E64/E42 width96 depth12 trunk plus independent 24-dimensional pair-message values after each layer, per-node LayerNorm for new branch, masked normalized attention pooling, residual scale0.1 and zero output initialization. Original trunk untouched.",
+  "matched_control":"feature_message has the same parameter tensors, initialization and shape; first12 explicit geometric edge channels are zeroed. Those columns have no data-dependent gradient, so registered parameter count is matched but effective degrees of freedom need not be identical. Hidden states still carry the trunk's geometry.",
+  "baseline":"Reuse E64 seed0 fixed-G scratch run as unified-protocol control; frozen E42 best51 is historical quality reference. No new seed0 baseline training.",
+  "data":"v5 train16000 in original order, frozen train_monitor500 and dev_monitor500, no v6 members",
+  "loss":"Byte-identical E64.frozen_E42_G.v1 objective, full weights, no auxiliary losses, no occupancy selector",
+  "training":{"batch_size":32,"precision":"FP32","engine":"cuda_graph","max_hours_per_arm":3,"max_epochs_per_arm":200,"seed":0,"lr_levels":[0.001,0.00025,0.0001,0.00005],"scheduler_start_epoch":15,"weight_decay":0.0003,"clip_norm":1.0,"augmentation":false},
+  "selection":"Unique best from fixed dev500 G only; same four-tier/early-stop and thresholds as E64",
+  "assessment":"Full raw dev2000, one unchanged flash dev500, same100 unscored reference/current/E42 images per unique best; fixed train/development curves and common-step comparison",
+  "continue_gate":"Single-seed promising candidate requires dev500 G at least0.5% below E64, full dev2000 same direction, raw overlap mean no more than2% relatively worse, and no instability. User explicitly prohibits multi-seed confirmation; all runs seed0. User visual acceptance still pending; no promotion from this numeric gate.",
+  "failure_policy":"Any nonfinite scalar or gradient prevents Adam update and stops that arm. OOM or failure recorded, no silent precision/batch/engine reduction; independent planned arm may proceed after evidence review. Controller must preserve parent process and cumulative task budget.",
+  "test_read":false
+}

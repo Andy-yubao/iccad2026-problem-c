@@ -1,0 +1,14 @@
+{
+  "revision":"E99.R13.collision_cut_recovery.v1",
+  "evidence":"R12 advances pending finite geometry and improves train500Q1.036356 to1.032867 (3 better,0 worse); remaining dominant bad cases have true infeasible complete pair orderings. Every far pair currently receives a hard axis/order, so nonlocal anchored paths can prevent escape even after independent obstacle clearing.",
+  "hypothesis":"After raw and obstacle-corrected hard solves both declare infeasibility, replace the complete pair ordering by sparse separation cuts: existing collisions/contact tree plus current preplaced relations. Solve globally, check every pair, add actual new collisions on the next snapshot. If sparse constraints are still infeasible, drop certified conflict cuts for one proposal so the subsequent collision check can select new directions. Never accept unchecked missing separations.",
+  "arms":["R12_control","collision_cut_recovery"],
+  "backend":{"seconds":0.18,"maximum_shape_solves":4,"recovery_maximum_shape_solves":6,"shape_cap_seconds":0.045,"projection_and_polish_reserve_seconds":0.033,"maximum_edge_flips_per_failure":8,"pending_projection_cap_seconds":0.015},
+  "depth":"Normal path unchanged max4. Recovery max2 complete-graph calls then up to4 sparse calls, still under same180ms geometry deadline/reserve. Report full vs sparse counts and wall times rather than calling this fewer total solves.",
+  "implementation_panel":[95,135,295,335,448],
+  "control_reuse":"R12 all500 and unchanged new branches with transitive coordinate/source provenance; new first-two-PrimalInfeasible branches only. Count all500, arm-filter reused counters; cached time diagnostic only.",
+  "calibration_panel":"fixed v5 train_monitor500, no dev sweep or NN change",
+  "checks":"5 cases, original final nonoverlap/area/locks plus independent/official checks; infeasible and timeout cases retained; no sparse proposal returned unless full hard check passes",
+  "promotion":"Frozen fresh complete C3 dev500 before any acceptance claim",
+  "test_read":false,"new_training":false
+}

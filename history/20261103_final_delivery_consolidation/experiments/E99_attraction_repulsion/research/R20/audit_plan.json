@@ -1,0 +1,8 @@
+{
+  "revision": "E99.R20.saved_pair_degree_damping_audit.v1",
+  "scope": "Read all20 rounds of current best R15 attraction_equal_slope train500; no new trajectory, planner solve, dev or test access.",
+  "question": "Does global maximum active-degree damping suppress many low-degree pairs? Reconstruct active pair forces/degrees from every saved snapshot, compare exactly to logs, measure potential symmetric weight D/max(di,dj) and degree distributions.",
+  "alternative_under_consideration": "Replace global pair weight1/D by symmetric1/max(di,dj), for both attraction/repulsion and shape stress, with same center mass and caps. Each active row sums normalized neighbor coefficients<=1 because max(di,dj)>=di; this is only a row-sum bound, not full2D mass/shape stability proof.",
+  "decision": "Only after diagnostic review register a single non-neural candidate with unchanged old angular strain and original full planner. Do not infer finalQ or speed benefit from degree ratios.",
+  "test_read": false,"new_training": false
+}

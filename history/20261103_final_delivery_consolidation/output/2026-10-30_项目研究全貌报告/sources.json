@@ -1,0 +1,216 @@
+{
+  "report": "项目研究全貌报告.md",
+  "state_date": "2026-10-30",
+  "timezone": "Asia/Shanghai",
+  "generated_at": "2026-10-30T09:35:18.735Z",
+  "scope": "Read existing project source and frozen run reports; reference existing images; no new inference, training, solver evaluation, or sealed-test reads.",
+  "theory": "General GNN and Transformer concepts checked against the implementation; no external literature search in this report.",
+  "sources": [
+    {
+      "path": "experiments/E85_cooperative_space_refinement/runs/20261030_P74_F81_cooperative_seed0/four_stage100/images/case_0217.png",
+      "bytes": 401878,
+      "sha256": "005c03c73e4383f793e6404da4b51b3dd523f747c22400317ff9df74ccf041ff"
+    },
+    {
+      "path": "experiments/E83_strategy_attribution/runs/P74_frozen_F81/four_stage100/images/case_0450.png",
+      "bytes": 464772,
+      "sha256": "51b85dbbe35b4c6b982c426196eda956766bfbafb7425fa1686b58ba505f8cc3"
+    },
+    {
+      "path": "README.md",
+      "bytes": 11295,
+      "sha256": "ed9c3a302845b5cbc0c3ef43be59440cf5929a20040010b0cd938b5eb96a4b43"
+    },
+    {
+      "path": "experiments/README.md",
+      "bytes": 4135,
+      "sha256": "69d827e522e4f836ed5315a039ac07fc55316c59acfc0ebbe3fa4de972e8801c"
+    },
+    {
+      "path": "experiments/E86_independent_global_corrector/README.md",
+      "bytes": 3740,
+      "sha256": "4bc5d93d4f51a4d86b3211d16bb8d0b9564d422089abea114c1b4515d51882e2"
+    },
+    {
+      "path": "experiments/E86_independent_global_corrector/plan.json",
+      "bytes": 4565,
+      "sha256": "83caaebfa4fdf99642235e4e4c45f0d2a397063546c96f7fe86da9414db12bb4"
+    },
+    {
+      "path": "experiments/E86_independent_global_corrector/runs/neural_contract_status.json",
+      "bytes": 562,
+      "sha256": "e2936945fa068e32201a2272c51cafd722e3b538e745bbae223a0d2d0935d30c"
+    },
+    {
+      "path": "experiments/E86_independent_global_corrector/runs/preflight/results.json",
+      "bytes": 6107,
+      "sha256": "ddb328c368bd20420cf2d2f6048dec5fbf8a5d5179e70aa824c01ba56d2242f3"
+    },
+    {
+      "path": "experiments/E85_cooperative_space_refinement/state.json",
+      "bytes": 3188,
+      "sha256": "9ca129f5b16e9170c4f59da60a47334d4beaf69d9ae33a92245386ec14cfe47a"
+    },
+    {
+      "path": "experiments/E81_multisource_refinement/runs/20261029_placer_corrector_audit/report.md",
+      "bytes": 7286,
+      "sha256": "6ebcd1b7bd059694685f07b69d20d02a496fb625fd7509d717bd0d72df80bd20"
+    },
+    {
+      "path": "experiments/E81_multisource_refinement/runs/20261029_placer_corrector_audit/index.html",
+      "bytes": 494935,
+      "sha256": "2f28c443cd928286e5e80e9c579a935c2f0f1a8bd8316f821fa54f60158bfae8"
+    },
+    {
+      "path": "experiments/E50_anytime_quality/runs/20261025_full500_parallel_v3/summary.json",
+      "bytes": 780,
+      "sha256": "9a074dbbe6609e1ddc1da483ab97627a5b26aa5dc106e2cb3ff686591fe75ebf"
+    },
+    {
+      "path": "experiments/E50_anytime_quality/README.md",
+      "bytes": 12237,
+      "sha256": "85b2272942e793bbbacf0437163b945c042dcfeea6284af782e19b852986de60"
+    },
+    {
+      "path": "experiments/E42_joint_regularization/README.md",
+      "bytes": 14820,
+      "sha256": "fc108dff8ed98b6937c82538104442711a375b58d454a3746ae2c704d56085a6"
+    },
+    {
+      "path": "experiments/E42_joint_regularization/model.py",
+      "bytes": 6447,
+      "sha256": "0d71c96c75976dc57d589d5709639291d1a30addffa8a5f0f2c53e2cb88a9089"
+    },
+    {
+      "path": "experiments/E42_joint_regularization/features.py",
+      "bytes": 4595,
+      "sha256": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73"
+    },
+    {
+      "path": "experiments/E86_independent_global_corrector/model.py",
+      "bytes": 5293,
+      "sha256": "a40c056d2f9d4578d9047653ff1601f29d53227762e2f5e6b4eb7b2cd0e14796"
+    },
+    {
+      "path": "experiments/E86_independent_global_corrector/train.py",
+      "bytes": 11664,
+      "sha256": "5f10dc0ec910e52c70ca9abbe2d1df09e0b62550202f862dfc188417fb1a6c98"
+    },
+    {
+      "path": "experiments/E81_multisource_refinement/model.py",
+      "bytes": 3823,
+      "sha256": "393bf5839d3bb1a4fdaeefa3d40fa807af26939dcc216b3d700ca1a50bcd6e66"
+    },
+    {
+      "path": "experiments/E81_multisource_refinement/corrector.py",
+      "bytes": 2366,
+      "sha256": "c9edacd4445916572c131f2c7455daa054b8ad7c598410a2f96b90d8a9217af9"
+    },
+    {
+      "path": "experiments/E81_multisource_refinement/loss.py",
+      "bytes": 1736,
+      "sha256": "a5522ff5a32e2ce6d7ee954bf17dbb9ab1035e482d753132f9cee4d0dd2605fc"
+    },
+    {
+      "path": "docs/protocol.md",
+      "bytes": 28312,
+      "sha256": "8528c33a0f2206e5e322378ad90d0c095b639d134108108c76412bf9340286eb"
+    },
+    {
+      "path": "experiments/E86_independent_global_corrector/losses.py",
+      "bytes": 4241,
+      "sha256": "fa8d7bc5a43d969a89d01fefc32f209c36f692b98bb28f3e94ddf566850eb316"
+    },
+    {
+      "path": "experiments/E85_cooperative_space_refinement/README.md",
+      "bytes": 5441,
+      "sha256": "1462ed5978f7724856613cf5a7f67fa24567217e67651f56e0fe3a324011fce6"
+    },
+    {
+      "path": "experiments/E85_cooperative_space_refinement/runs/completion/inspection.md",
+      "bytes": 4970,
+      "sha256": "799928534bbf0c700b140d25d09fb35f6241e80af763e8c776c5eae2ef8f200d"
+    },
+    {
+      "path": "experiments/E85_cooperative_space_refinement/runs/20261030_q101_n5_plan/plan.md",
+      "bytes": 7125,
+      "sha256": "34ce0ca1dd7c43a67b7d3071559d1475a220284c80e538a293e75246876b089a"
+    },
+    {
+      "path": "experiments/E86_independent_global_corrector/metrics.py",
+      "bytes": 1369,
+      "sha256": "68032b36f543474b9564e2343f53407f9493d12695c61ad2dfc25ed331612401"
+    },
+    {
+      "path": "history/20261026_flash_pro_consolidation/experiments/E38_model_architecture/runs/20261022_capacity_pipeline_seed0/completed_findings.md",
+      "bytes": 8153,
+      "sha256": "7a839f823748177a4fd7f490f9428e7078302c7cc94a89fb20894f3148a5392c"
+    },
+    {
+      "path": "experiments/E81_multisource_refinement/runs/20261029_placer_corrector_audit/five_questions.md",
+      "bytes": 10202,
+      "sha256": "fdf33a171154b9a2f84cdc9e4114b30075c8cefd4da78d7e325108ac4bbb35c4"
+    },
+    {
+      "path": "experiments/E74_collision_32k_posttrain/runs/completion/inspection.md",
+      "bytes": 4667,
+      "sha256": "a4aae4c8366ab923f2b62b89190929458a944c1abbd260459fe78f053afd1a75"
+    },
+    {
+      "path": "scoring/evaluation.py",
+      "bytes": 5266,
+      "sha256": "356e0d1c788c6f25154b33fb1c2455388317d2cc0dd96ca50d7357c58612c611"
+    },
+    {
+      "path": "docs/research_guide.zh-CN.md",
+      "bytes": 10030,
+      "sha256": "a730326c149e50216056ed6abcaed58dda63cadc3508f4faefea541f8fb209c3"
+    },
+    {
+      "path": "experiments/E83_strategy_attribution/runs/inspection.md",
+      "bytes": 3422,
+      "sha256": "f1bda199497b775f704b3636d1bf8e4089a0ff2985ef0016dac71bb9ba4ef90a"
+    },
+    {
+      "path": "experiments/E84_loss_control/runs/completion/inspection.md",
+      "bytes": 4589,
+      "sha256": "9e3ca3d040eadcd77188f4b2135ae274b53273dd9b31fbd3f7329fb45be041e1"
+    },
+    {
+      "path": "experiments/E86_independent_global_corrector/objective_review.md",
+      "bytes": 3168,
+      "sha256": "f4b33262a897fd472dda13b8209da0e19520874859fc2d5f9a9ac3fe087b11b8"
+    },
+    {
+      "path": "experiments/E86_independent_global_corrector/provenance.json",
+      "bytes": 777,
+      "sha256": "62406239c63c396aed2cb9a1e062fdc147ffa5de2ce0e8a2eb7de2ca902251a6"
+    },
+    {
+      "path": "experiments/E42_joint_regularization/solver.py",
+      "bytes": 10688,
+      "sha256": "13efe19cdb44ebd13e36d4d8d5ce44b0f9801f469e070981bc8be3354e9ecef6"
+    },
+    {
+      "path": "experiments/E42_joint_regularization/backend/conic_geometry.py",
+      "bytes": 11827,
+      "sha256": "0b1a0295426c37a61f4abc13946b5dadf2c6f107375a02890e90ffe404be40e4"
+    },
+    {
+      "path": "experiments/E42_joint_regularization/backend/rescue.py",
+      "bytes": 3842,
+      "sha256": "b928986f58fb3215140fe05acc36ddde92ce7aad99197fb2a975b7743a8c2e59"
+    }
+  ],
+  "verification": {
+    "project_links": 39,
+    "missing_links": [],
+    "top_level_sections": 16,
+    "reused_layout_images": 2,
+    "reused_figures_visually_inspected": true,
+    "new_layout_inference": 0,
+    "new_solver_evaluations": 0,
+    "html_browser_preview": "Not performed: browser policy disallows local file URLs. Reader checked statically, no browser-rendering claim."
+  },
+  "renderer": "build_report.cjs; bundled marked; reader uses no external assets or network calls"
+}

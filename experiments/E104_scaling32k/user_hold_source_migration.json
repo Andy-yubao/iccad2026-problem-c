@@ -1,0 +1,28 @@
+{
+  "reason": "User superseded launch with prepare-only; only pre-execution hold and documentation/plan changed; no numerical path/data change; no repeated GPU updates",
+  "changed": {
+    "experiments/E104_scaling32k/launch.ps1": {
+      "before": "7b117e8c45ecbaf61d10fc48a73d237d8c84fdff1ee080bba287feaf13a25b03",
+      "after": "141fb316eadde643d291a5b4942a8f9504427dd70c582e721e6bdafb214e8f89"
+    },
+    "experiments/E104_scaling32k/pipeline.py": {
+      "before": "025186b343ac19676fe7fc08e73c34a328fd1e4d94a8757eede20300a19c91c8",
+      "after": "41a5f351a3cc70f826ada8d5189ed4ff395da6f9751a88307787ae91650387c9"
+    },
+    "experiments/E104_scaling32k/plan.json": {
+      "before": "d956c131c1ce84dbdec5e7544f271385680e3e8ed612950c08c2a87fdb3265f3",
+      "after": "9a7392c50865c13699000e342b030b958c2c27580da24fac7051286fc5ea643a"
+    },
+    "experiments/E104_scaling32k/README.md": {
+      "before": "285c381133b86f2bd87b86cb753bbe105b2d137914e46b30f4f94ea14b786d88",
+      "after": "3575f26b8548b2b4193a0f5e1a19af39a19b4b8d818be6d3e13d927a4961817e"
+    },
+    "experiments/E104_scaling32k/train.py": {
+      "before": "29a78cd9c3626773f371fa4fecec7ad25cca4c93635136feac337ad3d8e29852",
+      "after": "5476ba2ed4319d3d4929a3b6ca45694bc19c05b61662ce875f5f5c942acdfdbb"
+    }
+  },
+  "numerical_preflight": "preflight_completed_before_user_hold.json",
+  "formal_training_started": false,
+  "test_read": false
+}

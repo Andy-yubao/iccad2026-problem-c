@@ -1,0 +1,31 @@
+{
+  "question": "Why do low pin coverage / sparse connection cases fail, and does strong center supervision contribute?",
+  "scope": "Follow-up to E69; exploratory development diagnosis, no training or test access",
+  "output": "runs/20261028_sparse_anchor_diagnosis",
+  "primary_model": "Frozen E65 geometry seed0 best; E42 for five-case sensitivity contrast",
+  "panels": {
+    "saved_case_statistics": "Existing dev2000 features and E63 full-dev records",
+    "layer_and_output_gradient_diagnostics": "Fixed dev_monitor500, eval-only; gradients with respect to temporary output state, no parameter update",
+    "input_thinning": "Five dev_monitor cases selected only by public N and pin coverage >=0.8; nested deterministic pin/edge thinning",
+    "parameter_gradient_probes": "Same five train indices as previous E62:1683,10027,5474,9793,1814; no optimizer or parameter update",
+    "pin_encoding_counterexample": "Two synthetic public inputs with same pin total/centroid but different weighted-median optima"
+  },
+  "comparisons": [
+    "Pin coverage <=0.3, (0.3,0.8), >=0.8; density relative to dev2000 median within exact N",
+    "Predicted/reference centered spatial spread and fitted isotropic contraction; pin/no-pin module errors",
+    "Layer0/3/6/9/12 spatial spread, and weighted center-versus-overlap output/parameter gradient alignment",
+    "Five-case pin and graph deletion with fixed labels; diagnostic distribution shift, not a trained-quality estimate",
+    "Existing E63 center0.75 and softband005 versus their matching control, stratified by public pin coverage"
+  ],
+  "limits": [
+    "Pin edges and connectivity are objective information, not necessarily hard positional constraints",
+    "Graph sparsity and low pin coverage remain observationally confounded; thinning probes only frozen model sensitivity",
+    "No inference from one reference to intrinsic ambiguity or irreducible error",
+    "Gradient norm shares are distinct from scalar Loss shares and actual Adam moves",
+    "No multi-seed confirmation; prior seed0 findings remain adaptive development evidence"
+  ],
+  "cpu_workers": 4,
+  "max_seconds": 900,
+  "training_started": false,
+  "test_read": false
+}

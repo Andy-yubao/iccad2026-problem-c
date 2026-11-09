@@ -1,0 +1,251 @@
+{
+  "count": 23,
+  "ratings": {
+    "count": 22,
+    "worker_clusters": 20,
+    "bootstrap_repetitions": 2000,
+    "metrics": {
+      "complex_energy_10pct": {
+        "spearman": -0.7778710461179124,
+        "worker_cluster_bootstrap95": [
+          -0.9078781708752235,
+          -0.5444299407081684
+        ],
+        "partial_rank_correlation_controlling_n": -0.7137505424237666,
+        "by_score": {
+          "1": {
+            "count": 4,
+            "mean": 0.01589334900304428,
+            "median": 0.015831058964405106
+          },
+          "2": {
+            "count": 9,
+            "mean": 0.01530809302737593,
+            "median": 0.008523332962092237
+          },
+          "3": {
+            "count": 9,
+            "mean": 0.0016461814962231164,
+            "median": 0.0
+          }
+        }
+      },
+      "coverage_energy": {
+        "spearman": -0.8810375232441812,
+        "worker_cluster_bootstrap95": [
+          -0.9338628955424122,
+          -0.7403261739029425
+        ],
+        "partial_rank_correlation_controlling_n": -0.8610699280609901,
+        "by_score": {
+          "1": {
+            "count": 4,
+            "mean": 0.10471987968811666,
+            "median": 0.11222463387293136
+          },
+          "2": {
+            "count": 9,
+            "mean": 0.05748881879928726,
+            "median": 0.05996011933976696
+          },
+          "3": {
+            "count": 9,
+            "mean": 0.024354773375475584,
+            "median": 0.0233114729935837
+          }
+        }
+      },
+      "pair_overlap_fraction": {
+        "spearman": -0.8651959080267893,
+        "worker_cluster_bootstrap95": [
+          -0.927024810886958,
+          -0.7047688614765265
+        ],
+        "partial_rank_correlation_controlling_n": -0.8336100636609325,
+        "by_score": {
+          "1": {
+            "count": 4,
+            "mean": 0.09301530909445407,
+            "median": 0.09540132015576341
+          },
+          "2": {
+            "count": 9,
+            "mean": 0.07037012980528713,
+            "median": 0.061789649700035185
+          },
+          "3": {
+            "count": 9,
+            "mean": 0.04432370389689357,
+            "median": 0.045473285997884035
+          }
+        }
+      },
+      "largest_any_component_fraction": {
+        "spearman": -0.2851490739130545,
+        "worker_cluster_bootstrap95": [
+          -0.6920891231208944,
+          0.2574994636017797
+        ],
+        "partial_rank_correlation_controlling_n": -0.1042634652872748,
+        "by_score": {
+          "1": {
+            "count": 4,
+            "mean": 0.7916542182387254,
+            "median": 0.8742175273865416
+          },
+          "2": {
+            "count": 9,
+            "mean": 0.8384275306458407,
+            "median": 0.8518518518518519
+          },
+          "3": {
+            "count": 9,
+            "mean": 0.7739500434624814,
+            "median": 0.8256880733944955
+          }
+        }
+      },
+      "empty_fraction": {
+        "spearman": -0.8225454055184264,
+        "worker_cluster_bootstrap95": [
+          -0.9101236249139923,
+          -0.6310518695402438
+        ],
+        "partial_rank_correlation_controlling_n": -0.8032241359193496,
+        "by_score": {
+          "1": {
+            "count": 4,
+            "mean": 0.12155690328743085,
+            "median": 0.12983698585558284
+          },
+          "2": {
+            "count": 9,
+            "mean": 0.10610288134195954,
+            "median": 0.09787009899966315
+          },
+          "3": {
+            "count": 9,
+            "mean": 0.08014926362984132,
+            "median": 0.0781859960336172
+          }
+        }
+      }
+    },
+    "scope": "descriptive only; adaptive metric design, small selected feedback sample; CI does not include metric-selection uncertainty"
+  },
+  "whitespace_curves": [
+    {
+      "delta": 0.0,
+      "eta": 0.0,
+      "mean_bbox_reduction": 0.0,
+      "median_bbox_reduction": 0.0,
+      "max_bbox_reduction": 0.0,
+      "positive_witnesses_over_1e_minus6": 0,
+      "geometric_only_mean_bbox_reduction": 0.0
+    },
+    {
+      "delta": 0.0,
+      "eta": 0.05,
+      "mean_bbox_reduction": 0.00019647725680714003,
+      "median_bbox_reduction": 1.3639189777592264e-10,
+      "max_bbox_reduction": 0.0029145520520978963,
+      "positive_witnesses_over_1e_minus6": 3,
+      "geometric_only_mean_bbox_reduction": 0.00019647725680714003
+    },
+    {
+      "delta": 0.02,
+      "eta": 0.0,
+      "mean_bbox_reduction": 0.0008898078320078042,
+      "median_bbox_reduction": 0.0006618988278177529,
+      "max_bbox_reduction": 0.0042168959328785505,
+      "positive_witnesses_over_1e_minus6": 13,
+      "geometric_only_mean_bbox_reduction": 0.0008898078415488146
+    },
+    {
+      "delta": 0.02,
+      "eta": 0.05,
+      "mean_bbox_reduction": 0.0027456595409407238,
+      "median_bbox_reduction": 0.0026750377687004834,
+      "max_bbox_reduction": 0.006785582389974176,
+      "positive_witnesses_over_1e_minus6": 20,
+      "geometric_only_mean_bbox_reduction": 0.002836924833873279
+    },
+    {
+      "delta": 0.05,
+      "eta": 0.0,
+      "mean_bbox_reduction": 0.001413779488376365,
+      "median_bbox_reduction": 0.0006715593226876981,
+      "max_bbox_reduction": 0.0053433985299898845,
+      "positive_witnesses_over_1e_minus6": 13,
+      "geometric_only_mean_bbox_reduction": 0.0014575768455535973
+    },
+    {
+      "delta": 0.05,
+      "eta": 0.05,
+      "mean_bbox_reduction": 0.004770784430287648,
+      "median_bbox_reduction": 0.00459355692797192,
+      "max_bbox_reduction": 0.013522978214349557,
+      "positive_witnesses_over_1e_minus6": 21,
+      "geometric_only_mean_bbox_reduction": 0.0050875013865032005
+    },
+    {
+      "delta": 0.1,
+      "eta": 0.0,
+      "mean_bbox_reduction": 0.0016845744706775589,
+      "median_bbox_reduction": 0.0006715593226876981,
+      "max_bbox_reduction": 0.006811645357919227,
+      "positive_witnesses_over_1e_minus6": 13,
+      "geometric_only_mean_bbox_reduction": 0.001801367434979075
+    },
+    {
+      "delta": 0.1,
+      "eta": 0.05,
+      "mean_bbox_reduction": 0.007876687450446045,
+      "median_bbox_reduction": 0.006462448326290171,
+      "max_bbox_reduction": 0.020399384681991095,
+      "positive_witnesses_over_1e_minus6": 22,
+      "geometric_only_mean_bbox_reduction": 0.00814386989155955
+    },
+    {
+      "delta": 0.2,
+      "eta": 0.0,
+      "mean_bbox_reduction": 0.001710533610558917,
+      "median_bbox_reduction": 0.0006715593226876981,
+      "max_bbox_reduction": 0.007059504874500022,
+      "positive_witnesses_over_1e_minus6": 13,
+      "geometric_only_mean_bbox_reduction": 0.0019047267030866508
+    },
+    {
+      "delta": 0.2,
+      "eta": 0.05,
+      "mean_bbox_reduction": 0.009436186382034159,
+      "median_bbox_reduction": 0.0077963785868735425,
+      "max_bbox_reduction": 0.025963245977283722,
+      "positive_witnesses_over_1e_minus6": 22,
+      "geometric_only_mean_bbox_reduction": 0.009770839656577478
+    }
+  ],
+  "solver_statuses": {
+    "Solved": 462,
+    "AlmostSolved": 16,
+    "InsufficientProgress": 143
+  },
+  "rejected_candidate_reasons": {
+    "grouping_violations": 74,
+    "boundary_violations": 6,
+    "overlap_increased": 5,
+    "negative_coordinates": 4
+  },
+  "joint_better_than_best_single_arm_at_5pct_count": 16,
+  "algorithm_source_sha256_used_for_probes": "25b3d514bf3860a9c1d927a262058bb45b40dca01fb6b0ed8369cc5f110b2d4a",
+  "current_algorithm_source_sha256": "84644760d1e7615ebda0e4024585cb64fc4317ac098526243c55e74dd9cef5ff",
+  "source_snapshot": "source_snapshot.zip preserves the exact diagnostic implementation used; subsequent source correction only restores verbatim user-message metadata",
+  "feedback_snapshot_sha256": "3ff01089a3a6af6aa4a0c158d3de14217af83977b27b358f919eadda974c454e",
+  "report_source_sha256": "ca669093f6125804bf09901f2731a14c289893ede6ffe37f0c6bea65916d15b3",
+  "limitations": [
+    "23 annotated, only22 rated; one whitespace tag",
+    "metric proposed after feedback; no unseen confirmation",
+    "conservative constructive lower bounds, never an irreducibility certificate",
+    "621 attempted conic subproblems include numerical failures; failures retained, not silently treated as proof of zero waste"
+  ]
+}

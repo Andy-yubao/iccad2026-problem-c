@@ -1,0 +1,20 @@
+{
+  "revision": "E68.port_distribution.v1",
+  "authorization": "User requested preparing the preferred complete-port experiment and launch commands; agent must not start formal training",
+  "hypothesis": "Complete weighted port distributions allow the model to recover better local relative geometry, especially for modules without direct ports, than the current centroid-only compression",
+  "arms": ["centroid_ports", "full_ports"],
+  "comparison": "Matched parameters/trunk/seed/data/order/FP32/G/schedule. Centroid control replaces each module's connected port coordinates by its weighted mean inside the same reader; no raw count/distribution features are added elsewhere",
+  "architecture": "Original E64/E42 rectangle96x12 with per-layer24-dimensional weighted port readers, output initialized zero and residual scale0.1. Original global module attention propagates read port information; no E65 geometry-message branch, extra propagation descriptors, new collision projection or new Loss",
+  "initialization": "Scratch, original trunk and RNG preserved; fresh AdamW in both arms",
+  "data": "Frozen reference_workset_v5 train16000; fixed train_monitor500/dev_monitor500; dev2000 terminal raw; tests sealed",
+  "loss": "Frozen E64 eight-term original E42 G; same backward/monitor/best/LR/early-stop arithmetic mean",
+  "seed": 0,
+  "multi_seed_confirmation": false,
+  "budget": {"formal_runs": 2, "max_hours_per_arm": 3, "max_epochs_per_arm": 200, "max_cumulative_training_hours": 6},
+  "preflight": "At most five unique train members. Public-only contract, frozen G/gradients, neutral init, complete-versus-centroid signal, permutation/padding/no-pin behavior, CUDA/eager actual Adam, nonfinite rejection, deterministic Dropout resume",
+  "evaluation": "Each sole dev-G-selected best: raw dev2000, one frozen flash dev500, same100 reference/current/E42 pictures without ratings. Low coverage<=0.3 and high>=0.8; sparse<=dev exact-N median. Report no-pin module error, near-pair error and ordering, common-step training curves; Q auxiliary only",
+  "decision": "Assess full minus centroid on low-port/sparse group and full development alongside user draft review. If only rich-port cases improve, report that the intended weak-coverage problem remains. Never promote from average G or terminal Q alone",
+  "automation": false,
+  "training_started": false,
+  "test_read": false
+}

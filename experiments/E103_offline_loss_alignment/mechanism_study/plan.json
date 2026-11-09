@@ -1,0 +1,40 @@
+{
+  "revision": "E103.mechanism_diagnosis.v1",
+  "authorization": "User requested Q sanity check then autonomous research continuation; previous authorization permits four parallel background tasks.",
+  "prerequisite": "5000 Q labels sanity checked, 5 unique problems/25 saved geometries independently rescored exactly; all5000 hard legal",
+  "reason": "V1 improves heldout ranking modestly but failed registered two-step descent gate; diagnose before long neural training.",
+  "loss_keys": [
+    "position",
+    "shape",
+    "penetration",
+    "module_load_mean",
+    "module_max_excess10",
+    "wirelength",
+    "compactness",
+    "boundary_contribution",
+    "grouping_contribution",
+    "mib_contribution"
+  ],
+  "case_boundary": "Only original fit600/tune200 for all new fits and diagnostic comparisons; original check200 already exposed, never used for new tuning. No dev/test data.",
+  "workers": 4,
+  "tasks": {
+    "capacity": "Signed linear and quadratic within-case centered ridge, fixed penalty.01; source-only and always-E42 controls. Diagnostic only; no sweep or neural objective adoption.",
+    "stability": "32 fixed-seed case bootstraps of registered nonnegative fit; original selected lambda1 fixed; report quantiles, do not pick a bootstrap winner.",
+    "canonical_view": "Recompute position/shape supervision from decoded geometry; eight public terms unchanged; fit exactly one canonical-view positive model with fixed lambda1. Compare tune only.",
+    "descent": "Reconstruct existing40-case/160-step raw Loss changes, compare with saved Q/geometry; zero additional postprocessor calls."
+  },
+  "candidate_followup": "Only if canonical-view tune ranking gains at least.02 and mixed regret reduces>.0005 versus V1 does it warrant a separately registered local direction check. No automatic long training.",
+  "frozen_input_hashes": {
+    "experiments/E103_offline_loss_alignment/panel.json": "ecb7d08ca8c2e4a5b1478c95ae10635954fdee415a42bfdd652209805e1e1d6e",
+    "experiments/E103_offline_loss_alignment/model_manifest.json": "134620d7faa6ebe45ffb9b5ab76903e1354c773c8368c2203493fc821d9905d8",
+    "experiments/E103_offline_loss_alignment/runs/20261104_bank1000x5_seed0/analysis/proposal.json": "f26cdc7596ff65e84229b64ba4c05972321ab0599d4b4c123e1295a5b83d352a",
+    "experiments/E103_offline_loss_alignment/runs/20261104_bank1000x5_seed0/analysis/results.json": "d7d82b78951acdb3ba777d2b9691fbce3ea9292e97cacfdbf11280817c09b4ea",
+    "experiments/E103_offline_loss_alignment/runs/20261104_bank1000x5_seed0/direction/results.json": "c59004bc5bd41118a810688996f67ffa58ce735ec41ac95b589820923f5f0956",
+    "experiments/E103_offline_loss_alignment/runs/20261104_bank1000x5_seed0/audits/q_sanity.json": "131c8ef99e7f71f06b10ea27c7435d40e440c12538d55ad79a7d80b1e5973bb2"
+  },
+  "outputs": "Per-task JSON plus summary report; original database, first-stage results and E98 solver immutable.",
+  "formal_training": false,
+  "new_postprocessor_evaluations": 0,
+  "test_read": false,
+  "automatic_wakeups": false
+}

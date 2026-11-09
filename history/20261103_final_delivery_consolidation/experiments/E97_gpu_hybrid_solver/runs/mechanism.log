@@ -1,0 +1,62 @@
+1683 ops_only full complete_ms 79.74 public_proxy 0.289037 soft (0, 0, 0) phases {'shape': 6, 'project': 1, 'certified_rigid_moves': 1} fallback False
+1683 E85 full complete_ms 69.49 public_proxy 0.287733 soft (0, 0, 0) phases {'shape': 4, 'project': 1, 'certified_rigid_moves': 1} fallback False
+1683 ops_only slim3 complete_ms 67.43 public_proxy 0.289127 soft (0, 0, 0) phases {'shape': 3, 'project': 1} fallback False
+1683 E85 slim3 complete_ms 65.11 public_proxy 0.287733 soft (0, 0, 0) phases {'shape': 3, 'project': 1} fallback False
+10027 ops_only full complete_ms 93.23 public_proxy 0.262777 soft (0, 0, 0) phases {'shape': 3, 'project': 1, 'certified_rigid_moves': 1} fallback False
+10027 E85 full complete_ms 93.52 public_proxy 0.264639 soft (0, 0, 0) phases {'shape': 3, 'project': 1, 'certified_rigid_moves': 1} fallback False
+10027 ops_only slim3 complete_ms 67.86 public_proxy 0.262777 soft (0, 0, 0) phases {'shape': 3, 'project': 1} fallback False
+10027 E85 slim3 complete_ms 71.05 public_proxy 0.264639 soft (0, 0, 0) phases {'shape': 3, 'project': 1} fallback False
+5474 ops_only full complete_ms 180.33 public_proxy 0.310449 soft (0, 1, 0) phases {'shape': 4, 'project': 1, 'certified_rigid_moves': 1} fallback False
+5474 E85 full complete_ms 180.67 public_proxy 0.364436 soft (1, 1, 0) phases {'shape': 4, 'project': 1, 'certified_rigid_moves': 1} fallback False
+5474 ops_only slim3 complete_ms 147.42 public_proxy 0.311344 soft (0, 1, 0) phases {'shape': 3, 'project': 1} fallback False
+5474 E85 slim3 complete_ms 148.14 public_proxy 0.410401 soft (1, 2, 0) phases {'shape': 3, 'project': 1} fallback False
+10140 ops_only full complete_ms 160.95 public_proxy 0.296794 soft (0, 0, 0) phases {'shape': 4, 'project': 1, 'certified_rigid_moves': 1} fallback False
+10140 E85 full complete_ms 190.87 public_proxy 0.32413 soft (0, 1, 0) phases {'shape': 5, 'project': 1, 'certified_rigid_moves': 1} fallback False
+10140 ops_only slim3 complete_ms 132.29 public_proxy 0.333451 soft (0, 1, 0) phases {'shape': 3, 'project': 1} fallback False
+10140 E85 slim3 complete_ms 132.08 public_proxy 0.32413 soft (0, 1, 0) phases {'shape': 3, 'project': 1} fallback False
+15001 ops_only full complete_ms 104.83 public_proxy 0.245492 soft (0, 0, 0) phases {'shape': 4, 'project': 1, 'certified_rigid_moves': 1} fallback False
+15001 E85 full complete_ms 106.4 public_proxy 0.249353 soft (0, 0, 0) phases {'shape': 4, 'project': 1, 'certified_rigid_moves': 1} fallback False
+15001 ops_only slim3 complete_ms 87.87 public_proxy 0.250698 soft (0, 0, 0) phases {'shape': 3, 'project': 1} fallback False
+15001 E85 slim3 complete_ms 91.31 public_proxy 0.251364 soft (0, 0, 0) phases {'shape': 3, 'project': 1} fallback False
+[
+  {
+    "network": "ops_only",
+    "repair": "full",
+    "count": 5,
+    "mean_complete_ms": 123.81410000016331,
+    "max_complete_ms": 180.32529999982216,
+    "mean_public_proxy": 0.2809099816218091,
+    "fallbacks": 0,
+    "hard_legal": 5
+  },
+  {
+    "network": "ops_only",
+    "repair": "slim3",
+    "count": 5,
+    "mean_complete_ms": 100.57403999962844,
+    "max_complete_ms": 147.42239999759477,
+    "mean_public_proxy": 0.28947953730419573,
+    "fallbacks": 0,
+    "hard_legal": 5
+  },
+  {
+    "network": "E85",
+    "repair": "full",
+    "count": 5,
+    "mean_complete_ms": 128.1894400002784,
+    "max_complete_ms": 190.8748000023479,
+    "mean_public_proxy": 0.2980582045614678,
+    "fallbacks": 0,
+    "hard_legal": 5
+  },
+  {
+    "network": "E85",
+    "repair": "slim3",
+    "count": 5,
+    "mean_complete_ms": 101.5391400003864,
+    "max_complete_ms": 148.13750000030268,
+    "mean_public_proxy": 0.3076534763860461,
+    "fallbacks": 0,
+    "hard_legal": 5
+  }
+]

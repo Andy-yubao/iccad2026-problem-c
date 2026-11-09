@@ -1,0 +1,13 @@
+{
+  "revision":"E99.R10.obstacle_projected_elastic_guidance.v1",
+  "evidence":"R9 static-obstacle projection improves train500Q1.0540113 to1.0363557 (16 improve,2 worsen among18 changed;500 legal) but still7 constructive recoveries, dominated by335/295/448. R8 elastic guidance without clearing immutable obstacles did not help. Combine these mechanisms only after R9's first obstacle-corrected hard solve is still proven infeasible.",
+  "hypothesis":"Use the third of the existing maximum4 conic calls for elastic geometry only after two hard infeasibility results separated by static-obstacle correction. Project that new simultaneous output around the immutable obstacles again before the final hard call. This allows coherent width/height and position changes while preserving an exact public obstacle-clear snapshot for topology rebuilding.",
+  "arms":["R9_control","projected_elastic"],
+  "backend":{"seconds":0.18,"maximum_shape_solves":4,"shape_cap_seconds":0.045,"projection_and_polish_reserve_seconds":0.033,"maximum_edge_flips_per_failure":8,"guide_elastic":100000.0},
+  "implementation_panel":[95,135,295,335,448],
+  "control_reuse":"R9 obstacle_on_infeasible500 read-only. New candidate only changes first-two-shapes both PrimalInfeasible branches; explicitly reuse all other complete records/coordinate provenance. Retain500 in quality, fresh/reused counts reported; historical times not complete acceptance.",
+  "calibration_panel":"fixed v5 train_monitor500; frozen public C3 inputs, no dev scan",
+  "checks":"5 cases; final official and independent hard checks; all guide/projection/constructive time included; never return the overlapping guide directly",
+  "promotion":"Freeze before fresh all500 C3 complete dev latency/quality acceptance",
+  "test_read":false,"new_training":false
+}

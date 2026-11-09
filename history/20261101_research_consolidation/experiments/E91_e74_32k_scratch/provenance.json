@@ -1,0 +1,17 @@
+{
+  "experiment": "E91_e74_32k_scratch",
+  "user_request": "用E74的数据和模型结构和新的Loss重跑；延续从头训练要求",
+  "initialization": "random PyTorch constructor seed0; no historical weights/Adam/RNG loaded",
+  "model_source": "experiments/E74_collision_32k_posttrain/model.py",
+  "model_source_sha256": "0d71c96c75976dc57d589d5709639291d1a30addffa8a5f0f2c53e2cb88a9089",
+  "data": "frozen reference_workset_v6 first32000; exact E74 members; same dev/monitors",
+  "loss_source": "E90 fixed baseline",
+  "independent_copy": "E74 exact model; E90 fixed Loss, cached data adapter, FP32 train/recovery and frozen flash runtime copied independently",
+  "no_cross_experiment_private_algorithm_imports": true,
+  "protected_checkpoints_sha256": {
+    "experiments/E74_collision_32k_posttrain/runs/20261029_e42_topology_seed0/checkpoints/best.pt": "5a26012c7e7f2f46f0f042040598a965b6037cc458a3991b8f1ba2db5cd63576",
+    "experiments/E90_auxiliary_weight_placer/runs/20261031_aux3_seed0/checkpoints/best.pt": "00e75ab87cbc2cc461a89198c5931ae54e1495736320fd621a3f875ff344c58b",
+    "experiments/E42_joint_regularization/runs/20261023_rectangle_w96d12_ab_seed0/checkpoints/best.pt": "12878108e9a58b8c195b314ba6586686c2a6e2796c1f4b6443e102b4db4224a6"
+  },
+  "test_read": false
+}

@@ -1,0 +1,146 @@
+Verified archived cache loaded: train 5 cases
+Verified archived cache loaded: dev_monitor500 500 cases
+{
+  "loss_improvement": {
+    "train_monitor": {
+      "initial": 0.4211325240135193,
+      "best": 0.4192374472618103,
+      "fraction": 0.004499953443748206
+    },
+    "dev_monitor": {
+      "initial": 0.4820767314434051,
+      "best": 0.47792214608192446,
+      "fraction": 0.00861809975569916
+    }
+  },
+  "source_components": {
+    "train_monitor": {
+      "P42_total": {
+        "initial": 0.4157994122505188,
+        "best": 0.41293729972839355
+      },
+      "P74_total": {
+        "initial": 0.41133551812171937,
+        "best": 0.4105151579380035
+      },
+      "true_intersection": {
+        "initial": 0.023441997438669204,
+        "best": 0.02301558530330658
+      },
+      "anchored_corridor": {
+        "initial": 0.1344414870738983,
+        "best": 0.12438204717636109
+      },
+      "P74_true_intersection": {
+        "initial": 0.021052132725715638,
+        "best": 0.020645119622349738
+      },
+      "P74_anchored_corridor": {
+        "initial": 0.07495624893903732,
+        "best": 0.07327241951227188
+      },
+      "common_original_G": {
+        "initial": 0.28733438467979433,
+        "best": 0.2886902492046356
+      }
+    },
+    "dev_monitor": {
+      "P42_total": {
+        "initial": 0.49102478432655333,
+        "best": 0.48980475854873656
+      },
+      "P74_total": {
+        "initial": 0.45435484528541564,
+        "best": 0.4485089566707611
+      },
+      "true_intersection": {
+        "initial": 0.02529467849433422,
+        "best": 0.024857290610671042
+      },
+      "anchored_corridor": {
+        "initial": 0.10892947286367416,
+        "best": 0.1053263463973999
+      },
+      "P74_true_intersection": {
+        "initial": 0.021848577544093133,
+        "best": 0.02143194256722927
+      },
+      "P74_anchored_corridor": {
+        "initial": 0.10517784279584885,
+        "best": 0.08468798476457595
+      },
+      "common_original_G": {
+        "initial": 0.3613539264202118,
+        "best": 0.3627817885875702
+      }
+    }
+  },
+  "paired_overlap2000_vs_E42": {
+    "count": 2000,
+    "current_mean": 0.024448869739853173,
+    "baseline_mean": 0.06302022655951652,
+    "mean_delta": -0.038571356819663345,
+    "worker_resampling95": [
+      -0.03967642767779914,
+      -0.03748976857720882
+    ],
+    "better_equal_worse": [
+      2000,
+      0,
+      0
+    ]
+  },
+  "paired_overlap2000_vs_E81": {
+    "count": 2000,
+    "current_mean": 0.024448869739853173,
+    "baseline_mean": 0.024910366620204585,
+    "mean_delta": -0.0004614968803514139,
+    "worker_resampling95": [
+      -0.0005021382393783272,
+      -0.0004205162743176973
+    ],
+    "better_equal_worse": [
+      1566,
+      0,
+      434
+    ]
+  },
+  "paired_geometry500_vs_E81": {
+    "bbox_over_A": {
+      "count": 500,
+      "current_mean": 1.0406931472467735,
+      "baseline_mean": 1.0406676094506477,
+      "mean_delta": 2.5537796125811417e-05,
+      "worker_resampling95": [
+        1.4720645020291966e-05,
+        3.833181174078083e-05
+      ],
+      "better_equal_worse": [
+        201,
+        60,
+        239
+      ]
+    },
+    "void_over_bbox": {
+      "count": 500,
+      "current_mean": 0.0628564813138228,
+      "baseline_mean": 0.06324715677393761,
+      "mean_delta": -0.00039067546011481007,
+      "worker_resampling95": [
+        -0.000470274143663286,
+        -0.0003081743786378938
+      ],
+      "better_equal_worse": [
+        378,
+        0,
+        122
+      ]
+    }
+  },
+  "frame_containment500": {
+    "source": "own public E42 prediction",
+    "max_normalized_excess": 9.825176159128868e-07,
+    "tolerance": 3e-06,
+    "violations": 0
+  }
+}

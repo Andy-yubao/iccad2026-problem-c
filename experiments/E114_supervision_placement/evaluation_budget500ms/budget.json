@@ -1,0 +1,219 @@
+{
+  "revision": "E114.staged.depth_budget_x3.target500ms.v1",
+  "scope": "One frozen E114 staged best48 dev500 postprocessor budget comparison",
+  "budget_calibration": "Predeclared 3x existing work caps from baseline mean176ms; soft average target500ms, no Q-based selection or dev parameter scan",
+  "buckets": [
+    {
+      "bucket": 0,
+      "reference_cases": 34,
+      "observed_shape_calls": [
+        4,
+        3,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        2,
+        2,
+        2,
+        4,
+        3,
+        3,
+        4,
+        2,
+        7,
+        6,
+        4,
+        2,
+        4,
+        8,
+        4,
+        3,
+        3,
+        3,
+        5,
+        3,
+        4,
+        3,
+        8,
+        7,
+        6,
+        2
+      ],
+      "main_steps": 12
+    },
+    {
+      "bucket": 1,
+      "reference_cases": 28,
+      "observed_shape_calls": [
+        6,
+        3,
+        2,
+        5,
+        4,
+        3,
+        3,
+        3,
+        4,
+        6,
+        3,
+        3,
+        3,
+        2,
+        4,
+        6,
+        3,
+        3,
+        4,
+        2,
+        2,
+        4,
+        4,
+        3,
+        3,
+        3,
+        5,
+        2
+      ],
+      "main_steps": 12
+    },
+    {
+      "bucket": 2,
+      "reference_cases": 25,
+      "observed_shape_calls": [
+        5,
+        4,
+        6,
+        6,
+        7,
+        4,
+        6,
+        4,
+        7,
+        22,
+        7,
+        5,
+        27,
+        4,
+        6,
+        4,
+        4,
+        5,
+        4,
+        9,
+        8,
+        5,
+        4,
+        4,
+        9
+      ],
+      "main_steps": 21
+    },
+    {
+      "bucket": 3,
+      "reference_cases": 13,
+      "observed_shape_calls": [
+        5,
+        7,
+        8,
+        7,
+        7,
+        8,
+        10,
+        7,
+        5,
+        12,
+        7,
+        5,
+        7
+      ],
+      "main_steps": 24
+    }
+  ],
+  "shape_solver_max_iterations": 300,
+  "projection_max_iterations": 240,
+  "extension_shape_steps": 6,
+  "rescue_seed_modes": [
+    2,
+    0,
+    1
+  ],
+  "rescue_shape_steps": 12,
+  "polish_max_accept": 12,
+  "polish_max_candidates": 720,
+  "numerical_tolerances": "unchanged; MaxIterations accepted only with existing primal-residual guard and independent hard checks",
+  "wall_clock": "Soft mean full-latency target0.5s/case; no forced cutoff, keep all hard-check/fallback time and all overruns",
+  "new_budget_identity": "Explicit increased-work experiment; original E98.depth_budget.v1 results retained for paired comparison",
+  "implementation_cases": [
+    {
+      "record": "experiments/E98_loss_weight_learning/runs/20261104_dynamic_mixedq_seed0/rounds/r01_reference_vs_public_geometry/feedback/control/repeat0/0052.json",
+      "member": [
+        "worker_54/layouts_4928.th",
+        15
+      ],
+      "n": 36
+    },
+    {
+      "record": "experiments/E98_loss_weight_learning/runs/20261104_dynamic_mixedq_seed0/rounds/r01_reference_vs_public_geometry/feedback/control/repeat0/0044.json",
+      "member": [
+        "worker_52/layouts_1344.th",
+        81
+      ],
+      "n": 74
+    },
+    {
+      "record": "experiments/E98_loss_weight_learning/runs/20261104_dynamic_mixedq_seed0/rounds/r01_reference_vs_public_geometry/feedback/control/repeat0/0061.json",
+      "member": [
+        "worker_19/layouts_6944.th",
+        74
+      ],
+      "n": 98
+    },
+    {
+      "record": "experiments/E98_loss_weight_learning/runs/20261104_dynamic_mixedq_seed0/rounds/r01_reference_vs_public_geometry/feedback/control/repeat0/0040.json",
+      "member": [
+        "worker_35/layouts_2800.th",
+        80
+      ],
+      "n": 113
+    },
+    {
+      "record": "experiments/E98_loss_weight_learning/runs/20261104_dynamic_mixedq_seed0/rounds/r01_reference_vs_public_geometry/feedback/control/repeat0/0000.json",
+      "member": [
+        "worker_94/layouts_7504.th",
+        44
+      ],
+      "n": 21
+    }
+  ],
+  "source_copy_manifest": {
+    "canonical.py": "9f7da6983541a3c8b0d57c8f869c6905c24f2bc4eb3643e0ed9e0a718d2abf2c",
+    "canonical_native.py": "e350394ce13f8bb20e53d03494912f9367d29c9f68809ad16c4314a45709718b",
+    "canonical_py.py": "b5b99c1f77756aa318fe5cb0e7fa82935844752b4fa815ab80367adb34e00195",
+    "certify_polish.py": "4cdc5c8e368f2ade78d6adcd046d3eb8163b33bda04cfb819e38418671f36094",
+    "fast_geometry.py": "5440a4deaa85397ff47f4323b4106d559e508c3f7af8f37953fea37cdfcdbf02",
+    "legal_seed.py": "45a6d0ee77c7cceafd05f41f9317f72ebdbf56dd45fc566da04952810e3a7588",
+    "projection.py": "7f43f22c1ded622268a4c73a26e0103d4e30edfd027089b80845a7195ee4cbff",
+    "solver.py": "6c4310ac9ae58ea5fa85732548e14e44f33ccb331f3bc69071a3582cd4fb8f2e",
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/conic_geometry.py": "8d611db3bee47499c77b64039eee09718607f356cd251df5792314a53bcdcd63",
+    "backend/guard.py": "eb36fbbcea1b694c7fb40fa0b36e3ed659ac66563be583f177fb6bb9e3c35bd7",
+    "backend/observe.py": "b924be6a40f157e2d2204e358990797192e10a6320e3e3c3399d044918b25dd8",
+    "backend/reduction.py": "d8ba6af127d9b08469b198f7ed38849e14ac566db58bfab855797920c92012ed",
+    "backend/rescue.py": "ada10eea489e0f7d65a2f6dd0a20358d33d08808f3dfef6a19c0583139f206e0",
+    "backend/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/frozen/canonical_geometry.py": "c1dcfd377ad33cdb85954c01917e762f87360deb43b1d5cce9b92c1b003fa2e4",
+    "backend/frozen/feasible.py": "9cfe70894d80fbe54ccaa1c3de60ef4ab111ac9b4472286d1ae6a0c5a1fdc756",
+    "backend/frozen/global_refine.py": "cd43991827597dfc4c5635cddb26f597774c680a24658237e5f443e9fbbca60c",
+    "backend/frozen/packing.py": "3c0500b7fee120807e6bd3fa8e9f115e476782af1a3e7620859c6651a089ef30",
+    "backend/frozen/postprocess.py": "da0e1572a822a589968a19e67e2d36dd5133c7d17b7ea9443bd743ee4653a272",
+    "backend/frozen/shape_lp.py": "6de2773cfd981723e55a1d317ad9422e8fee76b393d740acaf70007594bc8a9f",
+    "backend/frozen/solver.py": "ed874db1bac7205d5e1d80350b1d4e82d3c56eb2bb44b9f08ceb256244d24ea0",
+    "backend/frozen/topology_mip.py": "2ba0f2612f598f5e8d6e80a3ee1f74ad4941b78a3e9163f2d4acd7db5588da1a",
+    "backend/frozen/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "test_read": false,
+  "formal_feedback_repeats": 1
+}

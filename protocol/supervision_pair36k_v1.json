@@ -1,0 +1,20 @@
+{
+  "revision": "research.supervision_pair36k.v1",
+  "user_decision": "Both4+12 and9-layer1+9 expanded-first-head experiments use the same36k dataset as the two completed E114 experiments; prepare then background start",
+  "jobs": [
+    {"experiment": "E114_supervision_placement", "arm": "staged", "mode": "resume complete latest, preserve cumulative4h budget"},
+    {"experiment": "E115_first_head_supervision", "arm": "first9", "mode": "scratch seed0, separate4h budget"}
+  ],
+  "registry": "protocol/random_reference40k_v1.json",
+  "train_count": 36000,
+  "train_monitor": "original parent train_monitor500",
+  "dev_monitor": "original parent dev_monitor500",
+  "batch_size": 32,
+  "precision": "FP32",
+  "current_pair_exception_to16k_default": true,
+  "future_default16k_policy_unchanged": true,
+  "test_read": false,
+  "automatic_Q_evaluation": false,
+  "error_or_user_stop": "No retry, no next job",
+  "other_stopped_experiments": "Remain stopped"
+}

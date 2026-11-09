@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "E:\project\ICCAD\2026\problemC\experiments\E96_port_compression\pipeline.py", line 33, in <module>
+    if __name__=='__main__':main()
+  File "E:\project\ICCAD\2026\problemC\experiments\E96_port_compression\pipeline.py", line 18, in main
+    with exclusive(HERE/'runs/pipeline.lock'):
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "E:\project\ICCAD\2026\problemC\experiments\E96_port_compression\io.py", line 81, in exclusive
+    msvcrt.locking(handle.fileno(), msvcrt.LK_NBLCK, 1)
+PermissionError: [Errno 13] Permission denied

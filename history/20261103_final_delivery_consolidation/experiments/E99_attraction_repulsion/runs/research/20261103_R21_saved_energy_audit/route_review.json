@@ -1,0 +1,21 @@
+{
+  "status": "read_only_route_review",
+  "affected_cases": [
+    25,
+    43,
+    209,
+    221,
+    344,
+    363,
+    371,
+    381,
+    419,
+    460,
+    461
+  ],
+  "max_potential_weighted_gain_under_saved_unchanged_case_reuse": 0.00010403428263659577,
+  "optimistic_train_Q": 1.0107444142453617,
+  "assumptions": "Only ascent-filtered cases change; unchanged prefixes reuse identical saved finals; official neutral runtimeQ>=1. This is not a full-walltime or population bound.",
+  "decision": "No full energy-backtracking candidate now: only26 of10000 rounds,11 of500 cases affected, optimistic gain0.000104 cannot close train shortfall0.000848 and extra pair scans affect everycase. Preserve audit; register overlap-vs-attraction priority audit instead.",
+  "test_read": false
+}

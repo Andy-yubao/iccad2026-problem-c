@@ -1,0 +1,76 @@
+{
+  "status": "selected",
+  "selected_loss": "original",
+  "created_utc": "2026-10-26T19:54:40.891584+00:00",
+  "basis": "Predeclared common dev2000 raw-geometry gates plus actual inspection of four existing image pairs; no cross-objective total-Loss ranking",
+  "overlap_original_mean": 0.08788042550066374,
+  "overlap_centerline_mean": 0.0957340399947592,
+  "overlap_relative_worsening": 0.08936705130127229,
+  "failed_gates": [
+    "overlap_mean_down5pct",
+    "paired_cluster_ci_below_zero",
+    "overlap_p95_within2pct",
+    "overlap_worst5_within2pct",
+    "loss_boundary_guard"
+  ],
+  "paired_bootstrap": {
+    "resamples": 2000,
+    "seed": 20261027,
+    "case_paired_95ci": [
+      0.007271547969016122,
+      0.008435958406646685
+    ],
+    "source_shard_cluster_paired_95ci": [
+      0.00720568225766109,
+      0.008489411062340097
+    ],
+    "source_shards": 549,
+    "primary_gate": "source-shard cluster interval upper bound <0",
+    "limit": "Adaptive development evidence; neither interval measures across-seed training variation"
+  },
+  "comparison_sha256": "aed2a23acca2942590e0cce8e9d99186622fed4e9f8da482c4583aa4a08edff0",
+  "visual_review": {
+    "reviewer": "AI observational review; no human ratings",
+    "unique_cases": 4,
+    "cases": [
+      {
+        "index": 115,
+        "role": "largest improvement within fixed100",
+        "observation": "Centerline reduces the top-block7 collision and changes the yellow-group placement toward reference; several central and lower contacts still overlap. A genuine per-case improvement exists; no claim of dominance."
+      },
+      {
+        "index": 225,
+        "role": "largest regression within fixed100",
+        "observation": "Both drafts preserve broad reference regions, but centerline has more concentrated intersections around the lower G1/G3 region and the mid-left fixed blocks. Supports inspecting intersection severity rather than red-outline count alone."
+      },
+      {
+        "index": 355,
+        "role": "typical paired difference within fixed100",
+        "observation": "Macro regions remain similar. Centerline relocates blocks26/53 and changes upper22/63 relations while many collisions persist elsewhere; there is no consistent overall visual advantage."
+      },
+      {
+        "index": 449,
+        "role": "worst original overlap within fixed100",
+        "observation": "Centerline separates the nearly coincident top blocks0/15, a useful local improvement; the MIB49/nearby blocks and lower region remain crowded. This counterexample prevents claiming it fails on every case."
+      }
+    ],
+    "result": "Mixed local improvements, no consistent advantage overturning the common-metric decision"
+  },
+  "scope": "Reject only this fixed centerline_v1 plus calibrated kappa configuration at 4096 examples and seed0; not all directional losses or all scales",
+  "Q_role": "Both500 hard legal; weighted Q slightly better for centerline, but the decision is supported by raw overlap and boundary regression rather than Q. Postprocessor execution variance already documented.",
+  "next_training": {
+    "task": "large_original",
+    "arm": "large_original160",
+    "train_size": 64000,
+    "width": 160,
+    "layers": 12,
+    "graph_prenorm": true,
+    "seed": 0,
+    "batch_size": 32,
+    "max_hours": 4,
+    "max_monitor_rounds": 200,
+    "monitor_every_updates": 500,
+    "initialization": "scratch; preserve all original checkpoints"
+  },
+  "test_read": false
+}

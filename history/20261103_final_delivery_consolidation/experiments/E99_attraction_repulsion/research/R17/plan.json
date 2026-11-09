@@ -1,0 +1,13 @@
+{
+  "revision": "E99.R17.frozen_direction_rectangle_shape_audit.v1",
+  "status": "registered_read_only_diagnostic_before_new_shape_candidate",
+  "hypothesis": "The old radial_i*(ux^2-uy^2) strain heuristic can have the wrong sign for the active rectangle contact face at oblique angles. Check saved train500 operations before registering a shape-law experiment.",
+  "scope": "Read-only saved R15 budget_gate, R15 attraction_equal_slope, and R16 longer_relaxation; no new trajectories, planner solves, network runs, dev use or test reads.",
+  "conditional_geometry": "For fixed center direction u and other module, contact=min((wi+wj)/(2|ux|),(hi+hj)/(2|uy|)). Under wi=wi0 exp(qi),hi=hi0 exp(-qi), its active-face derivative is +wi/(2|ux|) on x or -hi/(2|uy|) on y. At a numerical tie use the average subgradient and report ties separately.",
+  "limits_of_claim": "Only a frozen-direction shape derivative. Central center forces ignore angular derivatives of rectangle contact distance; this is not a claim of an exact full-layout physical potential or global stability. A sign mismatch alone is not evidence of improved final Q.",
+  "outputs": "Hash-bound registration, analytic finite-difference fixtures, per-case operation statistics, force-weighted pair sign mismatch, aggregated free-module stress-direction mismatch, top logged mismatches, JSON+CSV+report. Recompute old stress and compare to saved logs.",
+  "execution": "Shared numerical OS lock; run only after R16 timed full controls finish. Single sequential worker, no automatic retries. Preserve original sources and saved evidence.",
+  "future_candidate_boundary": "If mismatch substantial, register an active-face shape-law arm with center forces, initial area inertia, round count and all existing movement/shape bounds unchanged; compare against matched frozen training control through unchanged original planner. No candidate numerical run authorized by mere preparation here.",
+  "test_read": false,
+  "new_training": false
+}

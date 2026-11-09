@@ -1,0 +1,64 @@
+{
+  "status": "passed",
+  "manifest_sha256": "ba0a2f77cc0b3e6be9749b468672d459114faf03503ca6f8aad42961e0964da3",
+  "counts": {
+    "train": 16000,
+    "dev": 2000,
+    "test": 2000
+  },
+  "train_monitor_count": 500,
+  "dev_monitor_count": 500,
+  "uniform_sampling_reproduced": true,
+  "train_members_unique_and_within_parent": true,
+  "parent_dev_and_test_metadata_unchanged": true,
+  "dev_monitor_unchanged": true,
+  "train_payloads_checked": 5,
+  "checked": [
+    {
+      "subset_index": 6963,
+      "parent_index": 15781,
+      "member": [
+        "worker_68/layouts_2128.th",
+        101
+      ]
+    },
+    {
+      "subset_index": 4506,
+      "parent_index": 10396,
+      "member": [
+        "worker_72/layouts_4704.th",
+        108
+      ]
+    },
+    {
+      "subset_index": 10463,
+      "parent_index": 23740,
+      "member": [
+        "worker_23/layouts_7056.th",
+        77
+      ]
+    },
+    {
+      "subset_index": 3453,
+      "parent_index": 7963,
+      "member": [
+        "worker_29/layouts_2464.th",
+        67
+      ]
+    },
+    {
+      "subset_index": 10262,
+      "parent_index": 23301,
+      "member": [
+        "worker_29/layouts_9520.th",
+        16
+      ]
+    }
+  ],
+  "dev_payloads_read": 0,
+  "test_payloads_read": 0,
+  "test_reader_rejected": true,
+  "training_started": false,
+  "parent_files_written": 0,
+  "source_sha256": "a33cc4d5d8e69148e1b01ee5ebca5b507d51fb46f1530709242a1ae232fe9bac"
+}

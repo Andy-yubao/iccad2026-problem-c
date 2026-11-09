@@ -1,0 +1,182 @@
+L74 cuda 1683 resident_ms 36.53959999974177 public_to_draft_ms 39.65969999990193
+L74 cuda graph 1683 resident_ms 2.398399999947287 public_to_draft_ms 4.700499999671592
+E85_full_draft cuda 1683 resident_ms 83.35545000045386 public_to_draft_ms 83.68379999956232
+E85_full_draft cuda graph 1683 resident_ms 4.6351000000868225 public_to_draft_ms 7.20760000149312
+L90 cuda 1683 resident_ms 38.89675000209536 public_to_draft_ms 39.39305000130844
+L90 cuda graph 1683 resident_ms 2.621499999804655 public_to_draft_ms 5.334450001100777
+E96_full_draft cuda 1683 resident_ms 56.65554999904998 public_to_draft_ms 61.27819999892381
+E96_full_draft cuda graph 1683 resident_ms 10.167350001211162 public_to_draft_ms 7.088199999998324
+L74 cuda 10027 resident_ms 36.51334999995015 public_to_draft_ms 38.88580000057118
+L74 cuda graph 10027 resident_ms 2.4548500005039386 public_to_draft_ms 4.7992499985412
+E85_full_draft cuda 10027 resident_ms 68.90264999856299 public_to_draft_ms 77.01410000117903
+E85_full_draft cuda graph 10027 resident_ms 5.148449999978766 public_to_draft_ms 7.142300002669799
+L90 cuda 10027 resident_ms 37.45150000031572 public_to_draft_ms 38.571150000279886
+L90 cuda graph 10027 resident_ms 2.594199999293778 public_to_draft_ms 5.180850001124782
+E96_full_draft cuda 10027 resident_ms 59.86805000065942 public_to_draft_ms 62.68534999981057
+E96_full_draft cuda graph 10027 resident_ms 10.71964999937336 public_to_draft_ms 6.959800000913674
+L74 cuda 5474 resident_ms 35.81239999948593 public_to_draft_ms 38.98950000075274
+L74 cuda graph 5474 resident_ms 2.742700000453624 public_to_draft_ms 5.790299999716808
+E85_full_draft cuda 5474 resident_ms 73.62054999975953 public_to_draft_ms 83.75615000113612
+E85_full_draft cuda graph 5474 resident_ms 6.101349998061778 public_to_draft_ms 8.293200000480283
+L90 cuda 5474 resident_ms 37.13355000036245 public_to_draft_ms 41.57880000093428
+L90 cuda graph 5474 resident_ms 2.7797500006272458 public_to_draft_ms 5.710549998184433
+E96_full_draft cuda 5474 resident_ms 59.377400000812486 public_to_draft_ms 64.27854999856208
+E96_full_draft cuda graph 5474 resident_ms 11.41644999916025 public_to_draft_ms 8.222700000260375
+L74 cuda 10140 resident_ms 37.460850000570645 public_to_draft_ms 41.899499999999534
+L74 cuda graph 10140 resident_ms 2.9207499992480734 public_to_draft_ms 5.623049999485374
+E85_full_draft cuda 10140 resident_ms 74.8239000004105 public_to_draft_ms 82.33230000041658
+E85_full_draft cuda graph 10140 resident_ms 6.635750001805718 public_to_draft_ms 8.56374999966647
+L90 cuda 10140 resident_ms 37.43465000115975 public_to_draft_ms 42.25209999822255
+L90 cuda graph 10140 resident_ms 2.727549999690382 public_to_draft_ms 6.000400000630179
+E96_full_draft cuda 10140 resident_ms 58.4830999996484 public_to_draft_ms 64.64684999991732
+E96_full_draft cuda graph 10140 resident_ms 11.501499999212683 public_to_draft_ms 8.248600001024897
+L74 cuda 15001 resident_ms 36.24130000025616 public_to_draft_ms 38.25784999935422
+L74 cuda graph 15001 resident_ms 2.4217999998654705 public_to_draft_ms 5.042150000008405
+E85_full_draft cuda 15001 resident_ms 69.82279999829188 public_to_draft_ms 70.96855000054347
+E85_full_draft cuda graph 15001 resident_ms 4.9022999992303085 public_to_draft_ms 7.207650000054855
+L90 cuda 15001 resident_ms 37.00310000022 public_to_draft_ms 38.72725000110222
+L90 cuda graph 15001 resident_ms 2.6953500000672648 public_to_draft_ms 5.536350001420942
+E96_full_draft cuda 15001 resident_ms 56.30850000125065 public_to_draft_ms 62.52975000097649
+E96_full_draft cuda graph 15001 resident_ms 10.725550000643125 public_to_draft_ms 7.133150000299793
+[
+  {
+    "model": "L74",
+    "device": "cuda",
+    "path": "eager",
+    "public_to_draft": {
+      "mean_ms": 39.69725599989033,
+      "median_ms": 39.30555000079039,
+      "p95_ms": 42.5358349995804,
+      "max_ms": 46.02589999922202,
+      "repetitions": 100
+    }
+  },
+  {
+    "model": "L74",
+    "device": "cuda",
+    "path": "cuda_graph",
+    "public_to_draft": {
+      "mean_ms": 5.209447999841359,
+      "median_ms": 5.088300002171309,
+      "p95_ms": 5.950784999367897,
+      "max_ms": 6.213600001501618,
+      "repetitions": 100
+    }
+  },
+  {
+    "model": "E85_full_draft",
+    "device": "cuda",
+    "path": "eager",
+    "public_to_draft": {
+      "mean_ms": 79.72591800007649,
+      "median_ms": 81.64105000105337,
+      "p95_ms": 86.49805500062939,
+      "max_ms": 90.13440000126138,
+      "repetitions": 100
+    }
+  },
+  {
+    "model": "E85_full_draft",
+    "device": "cuda",
+    "path": "cuda_graph",
+    "public_to_draft": {
+      "mean_ms": 7.830015000035928,
+      "median_ms": 7.368849999693339,
+      "p95_ms": 9.795360001044173,
+      "max_ms": 10.350100001232931,
+      "repetitions": 100
+    }
+  },
+  {
+    "model": "L90",
+    "device": "cuda",
+    "path": "eager",
+    "public_to_draft": {
+      "mean_ms": 40.12425200016878,
+      "median_ms": 39.5317000002251,
+      "p95_ms": 43.863174998659815,
+      "max_ms": 47.78889999943203,
+      "repetitions": 100
+    }
+  },
+  {
+    "model": "L90",
+    "device": "cuda",
+    "path": "cuda_graph",
+    "public_to_draft": {
+      "mean_ms": 5.570920999962254,
+      "median_ms": 5.567000000155531,
+      "p95_ms": 6.210845000350673,
+      "max_ms": 6.5431000002718065,
+      "repetitions": 100
+    }
+  },
+  {
+    "model": "E96_full_draft",
+    "device": "cuda",
+    "path": "eager",
+    "public_to_draft": {
+      "mean_ms": 63.579617999712355,
+      "median_ms": 62.96649999967485,
+      "p95_ms": 66.30799500107969,
+      "max_ms": 106.75759999867296,
+      "repetitions": 100
+    }
+  },
+  {
+    "model": "E96_full_draft",
+    "device": "cuda",
+    "path": "cuda_graph",
+    "public_to_draft": {
+      "mean_ms": 7.658309000034933,
+      "median_ms": 7.357349999438156,
+      "p95_ms": 8.67287999844848,
+      "max_ms": 13.73769999918295,
+      "repetitions": 100
+    }
+  },
+  {
+    "model": "L74",
+    "device": "cpu",
+    "path": "eager",
+    "public_to_draft": {
+      "mean_ms": 49.4520299999931,
+      "p95_ms": null,
+      "max_per_case_p95_ms": 78.16248500093936,
+      "note": "completed CPU timings reused; mean of equally repeated cases, per-case P95 retained; raw pooled CPU samples were not saved"
+    }
+  },
+  {
+    "model": "E85_full_draft",
+    "device": "cpu",
+    "path": "eager",
+    "public_to_draft": {
+      "mean_ms": 69.98377099975187,
+      "p95_ms": null,
+      "max_per_case_p95_ms": 96.34300500238169,
+      "note": "completed CPU timings reused; mean of equally repeated cases, per-case P95 retained; raw pooled CPU samples were not saved"
+    }
+  },
+  {
+    "model": "L90",
+    "device": "cpu",
+    "path": "eager",
+    "public_to_draft": {
+      "mean_ms": 48.34940300024755,
+      "p95_ms": null,
+      "max_per_case_p95_ms": 72.61385500023607,
+      "note": "completed CPU timings reused; mean of equally repeated cases, per-case P95 retained; raw pooled CPU samples were not saved"
+    }
+  },
+  {
+    "model": "E96_full_draft",
+    "device": "cpu",
+    "path": "eager",
+    "public_to_draft": {
+      "mean_ms": 79.9338669998906,
+      "p95_ms": null,
+      "max_per_case_p95_ms": 113.18586000252253,
+      "note": "completed CPU timings reused; mean of equally repeated cases, per-case P95 retained; raw pooled CPU samples were not saved"
+    }
+  }
+]

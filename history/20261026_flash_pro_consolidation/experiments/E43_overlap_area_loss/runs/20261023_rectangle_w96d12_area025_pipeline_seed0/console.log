@@ -1,0 +1,313 @@
+{"kind": "train", "argv": ["E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe", "-u", "-B", "-m", "experiments.E43_overlap_area_loss.train", "--arm", "rectangle_area", "--output", "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E43_overlap_area_loss\\runs\\20261023_rectangle_w96d12_area025_seed0", "--device", "cuda", "--seed", "0", "--max-hours", "4", "--max-epochs", "200", "--batch-size", "32", "--scheduler-start-epoch", "15"], "utc": "2026-10-23T13:36:36Z"}
+Prepared tensor cache loaded: train, 16000 cases
+Prepared tensor cache loaded: dev, 2000 cases
+epoch=0 step=0 dev_proxy=42.469543 supervision=9.907700 lr=0.001 (no postprocessing)
+step=100 epoch=1 samples=3200/16000 total=1.30615
+step=200 epoch=1 samples=6400/16000 total=0.87824
+step=300 epoch=1 samples=9600/16000 total=0.80576
+step=400 epoch=1 samples=12800/16000 total=0.76863
+step=500 epoch=1 samples=16000/16000 total=0.83453
+epoch=1 step=500 dev_proxy=1.468780 supervision=0.619919 lr=0.001 (no postprocessing)
+step=600 epoch=2 samples=3200/16000 total=0.87598
+step=700 epoch=2 samples=6400/16000 total=0.75898
+step=800 epoch=2 samples=9600/16000 total=0.76577
+step=900 epoch=2 samples=12800/16000 total=0.91380
+step=1000 epoch=2 samples=16000/16000 total=0.89056
+epoch=2 step=1000 dev_proxy=1.147109 supervision=0.570285 lr=0.001 (no postprocessing)
+step=1100 epoch=3 samples=3200/16000 total=0.81452
+step=1200 epoch=3 samples=6400/16000 total=0.81014
+step=1300 epoch=3 samples=9600/16000 total=0.77935
+step=1400 epoch=3 samples=12800/16000 total=0.80032
+step=1500 epoch=3 samples=16000/16000 total=0.79740
+epoch=3 step=1500 dev_proxy=1.014176 supervision=0.545591 lr=0.001 (no postprocessing)
+step=1600 epoch=4 samples=3200/16000 total=0.79197
+step=1700 epoch=4 samples=6400/16000 total=0.68159
+step=1800 epoch=4 samples=9600/16000 total=0.69269
+step=1900 epoch=4 samples=12800/16000 total=0.67627
+step=2000 epoch=4 samples=16000/16000 total=0.72066
+epoch=4 step=2000 dev_proxy=0.838277 supervision=0.452716 lr=0.001 (no postprocessing)
+step=2100 epoch=5 samples=3200/16000 total=0.60260
+step=2200 epoch=5 samples=6400/16000 total=0.64632
+step=2300 epoch=5 samples=9600/16000 total=0.64318
+step=2400 epoch=5 samples=12800/16000 total=0.59740
+step=2500 epoch=5 samples=16000/16000 total=0.66802
+epoch=5 step=2500 dev_proxy=0.800805 supervision=0.457518 lr=0.001 (no postprocessing)
+step=2600 epoch=6 samples=3200/16000 total=0.62302
+step=2700 epoch=6 samples=6400/16000 total=0.54723
+step=2800 epoch=6 samples=9600/16000 total=0.66371
+step=2900 epoch=6 samples=12800/16000 total=0.52638
+step=3000 epoch=6 samples=16000/16000 total=0.60583
+epoch=6 step=3000 dev_proxy=0.714961 supervision=0.417185 lr=0.001 (no postprocessing)
+step=3100 epoch=7 samples=3200/16000 total=0.54431
+step=3200 epoch=7 samples=6400/16000 total=0.51564
+step=3300 epoch=7 samples=9600/16000 total=0.60740
+step=3400 epoch=7 samples=12800/16000 total=0.54699
+step=3500 epoch=7 samples=16000/16000 total=0.60883
+epoch=7 step=3500 dev_proxy=0.692107 supervision=0.393322 lr=0.001 (no postprocessing)
+step=3600 epoch=8 samples=3200/16000 total=0.63092
+step=3700 epoch=8 samples=6400/16000 total=0.67561
+step=3800 epoch=8 samples=9600/16000 total=0.60473
+step=3900 epoch=8 samples=12800/16000 total=0.56689
+step=4000 epoch=8 samples=16000/16000 total=0.59382
+epoch=8 step=4000 dev_proxy=0.696375 supervision=0.405563 lr=0.001 (no postprocessing)
+step=4100 epoch=9 samples=3200/16000 total=0.54348
+step=4200 epoch=9 samples=6400/16000 total=0.60138
+step=4300 epoch=9 samples=9600/16000 total=0.52992
+step=4400 epoch=9 samples=12800/16000 total=0.53837
+step=4500 epoch=9 samples=16000/16000 total=0.60825
+epoch=9 step=4500 dev_proxy=0.705668 supervision=0.401448 lr=0.001 (no postprocessing)
+step=4600 epoch=10 samples=3200/16000 total=0.60007
+step=4700 epoch=10 samples=6400/16000 total=0.55593
+step=4800 epoch=10 samples=9600/16000 total=0.59994
+step=4900 epoch=10 samples=12800/16000 total=0.54138
+step=5000 epoch=10 samples=16000/16000 total=0.54265
+epoch=10 step=5000 dev_proxy=0.680684 supervision=0.386893 lr=0.001 (no postprocessing)
+step=5100 epoch=11 samples=3200/16000 total=0.49252
+step=5200 epoch=11 samples=6400/16000 total=0.58036
+step=5300 epoch=11 samples=9600/16000 total=0.44061
+step=5400 epoch=11 samples=12800/16000 total=0.58827
+step=5500 epoch=11 samples=16000/16000 total=0.53015
+epoch=11 step=5500 dev_proxy=0.692820 supervision=0.409232 lr=0.001 (no postprocessing)
+step=5600 epoch=12 samples=3200/16000 total=0.56011
+step=5700 epoch=12 samples=6400/16000 total=0.51313
+step=5800 epoch=12 samples=9600/16000 total=0.53801
+step=5900 epoch=12 samples=12800/16000 total=0.50103
+step=6000 epoch=12 samples=16000/16000 total=0.53569
+epoch=12 step=6000 dev_proxy=0.668669 supervision=0.388156 lr=0.001 (no postprocessing)
+step=6100 epoch=13 samples=3200/16000 total=0.58031
+step=6200 epoch=13 samples=6400/16000 total=0.61200
+step=6300 epoch=13 samples=9600/16000 total=0.56573
+step=6400 epoch=13 samples=12800/16000 total=0.39389
+step=6500 epoch=13 samples=16000/16000 total=0.61041
+epoch=13 step=6500 dev_proxy=0.659877 supervision=0.386601 lr=0.001 (no postprocessing)
+step=6600 epoch=14 samples=3200/16000 total=0.80389
+step=6700 epoch=14 samples=6400/16000 total=0.57042
+step=6800 epoch=14 samples=9600/16000 total=0.49935
+step=6900 epoch=14 samples=12800/16000 total=0.53991
+step=7000 epoch=14 samples=16000/16000 total=0.54633
+epoch=14 step=7000 dev_proxy=0.619737 supervision=0.364017 lr=0.001 (no postprocessing)
+step=7100 epoch=15 samples=3200/16000 total=0.43505
+step=7200 epoch=15 samples=6400/16000 total=0.53147
+step=7300 epoch=15 samples=9600/16000 total=0.46706
+step=7400 epoch=15 samples=12800/16000 total=0.47698
+step=7500 epoch=15 samples=16000/16000 total=0.43761
+epoch=15 step=7500 dev_proxy=0.589390 supervision=0.356857 lr=0.001 (no postprocessing)
+step=7600 epoch=16 samples=3200/16000 total=0.51241
+step=7700 epoch=16 samples=6400/16000 total=0.48282
+step=7800 epoch=16 samples=9600/16000 total=0.51261
+step=7900 epoch=16 samples=12800/16000 total=0.43123
+step=8000 epoch=16 samples=16000/16000 total=0.46723
+epoch=16 step=8000 dev_proxy=0.594256 supervision=0.357533 lr=0.001 (no postprocessing)
+step=8100 epoch=17 samples=3200/16000 total=0.53141
+step=8200 epoch=17 samples=6400/16000 total=0.55916
+step=8300 epoch=17 samples=9600/16000 total=0.57484
+step=8400 epoch=17 samples=12800/16000 total=0.52601
+step=8500 epoch=17 samples=16000/16000 total=0.44907
+epoch=17 step=8500 dev_proxy=0.587602 supervision=0.360191 lr=0.001 (no postprocessing)
+step=8600 epoch=18 samples=3200/16000 total=0.44550
+step=8700 epoch=18 samples=6400/16000 total=0.45361
+step=8800 epoch=18 samples=9600/16000 total=0.54543
+step=8900 epoch=18 samples=12800/16000 total=0.47187
+step=9000 epoch=18 samples=16000/16000 total=0.48749
+epoch=18 step=9000 dev_proxy=0.606591 supervision=0.368873 lr=0.001 (no postprocessing)
+step=9100 epoch=19 samples=3200/16000 total=0.50507
+step=9200 epoch=19 samples=6400/16000 total=0.52456
+step=9300 epoch=19 samples=9600/16000 total=0.49171
+step=9400 epoch=19 samples=12800/16000 total=0.41752
+step=9500 epoch=19 samples=16000/16000 total=0.48532
+epoch=19 step=9500 dev_proxy=0.590276 supervision=0.368124 lr=0.001 (no postprocessing)
+step=9600 epoch=20 samples=3200/16000 total=0.48264
+step=9700 epoch=20 samples=6400/16000 total=0.54899
+step=9800 epoch=20 samples=9600/16000 total=0.48578
+step=9900 epoch=20 samples=12800/16000 total=0.44933
+step=10000 epoch=20 samples=16000/16000 total=0.48027
+epoch=20 step=10000 dev_proxy=0.572372 supervision=0.348211 lr=0.001 (no postprocessing)
+step=10100 epoch=21 samples=3200/16000 total=0.50813
+step=10200 epoch=21 samples=6400/16000 total=0.46723
+step=10300 epoch=21 samples=9600/16000 total=0.48128
+step=10400 epoch=21 samples=12800/16000 total=0.45190
+step=10500 epoch=21 samples=16000/16000 total=0.51741
+epoch=21 step=10500 dev_proxy=0.568052 supervision=0.346922 lr=0.001 (no postprocessing)
+step=10600 epoch=22 samples=3200/16000 total=0.42925
+step=10700 epoch=22 samples=6400/16000 total=0.50049
+step=10800 epoch=22 samples=9600/16000 total=0.42151
+step=10900 epoch=22 samples=12800/16000 total=0.51301
+step=11000 epoch=22 samples=16000/16000 total=0.44365
+epoch=22 step=11000 dev_proxy=0.618452 supervision=0.393787 lr=0.001 (no postprocessing)
+step=11100 epoch=23 samples=3200/16000 total=0.46153
+step=11200 epoch=23 samples=6400/16000 total=0.41985
+step=11300 epoch=23 samples=9600/16000 total=0.47516
+step=11400 epoch=23 samples=12800/16000 total=0.44099
+step=11500 epoch=23 samples=16000/16000 total=0.45377
+epoch=23 step=11500 dev_proxy=0.572113 supervision=0.347691 lr=0.001 (no postprocessing)
+step=11600 epoch=24 samples=3200/16000 total=0.42783
+step=11700 epoch=24 samples=6400/16000 total=0.44097
+step=11800 epoch=24 samples=9600/16000 total=0.41281
+step=11900 epoch=24 samples=12800/16000 total=0.42489
+step=12000 epoch=24 samples=16000/16000 total=0.45110
+epoch=24 step=12000 dev_proxy=0.616952 supervision=0.372646 lr=0.00025 (no postprocessing)
+step=12100 epoch=25 samples=3200/16000 total=0.36728
+step=12200 epoch=25 samples=6400/16000 total=0.39753
+step=12300 epoch=25 samples=9600/16000 total=0.37056
+step=12400 epoch=25 samples=12800/16000 total=0.35377
+step=12500 epoch=25 samples=16000/16000 total=0.33361
+epoch=25 step=12500 dev_proxy=0.501105 supervision=0.317679 lr=0.00025 (no postprocessing)
+step=12600 epoch=26 samples=3200/16000 total=0.42985
+step=12700 epoch=26 samples=6400/16000 total=0.32987
+step=12800 epoch=26 samples=9600/16000 total=0.34326
+step=12900 epoch=26 samples=12800/16000 total=0.38864
+step=13000 epoch=26 samples=16000/16000 total=0.37088
+epoch=26 step=13000 dev_proxy=0.494263 supervision=0.309452 lr=0.00025 (no postprocessing)
+step=13100 epoch=27 samples=3200/16000 total=0.36115
+step=13200 epoch=27 samples=6400/16000 total=0.31766
+step=13300 epoch=27 samples=9600/16000 total=0.38790
+step=13400 epoch=27 samples=12800/16000 total=0.38832
+step=13500 epoch=27 samples=16000/16000 total=0.38861
+epoch=27 step=13500 dev_proxy=0.492570 supervision=0.309411 lr=0.00025 (no postprocessing)
+step=13600 epoch=28 samples=3200/16000 total=0.46453
+step=13700 epoch=28 samples=6400/16000 total=0.36062
+step=13800 epoch=28 samples=9600/16000 total=0.37592
+step=13900 epoch=28 samples=12800/16000 total=0.37930
+step=14000 epoch=28 samples=16000/16000 total=0.37766
+epoch=28 step=14000 dev_proxy=0.488546 supervision=0.310631 lr=0.00025 (no postprocessing)
+step=14100 epoch=29 samples=3200/16000 total=0.37183
+step=14200 epoch=29 samples=6400/16000 total=0.37246
+step=14300 epoch=29 samples=9600/16000 total=0.39603
+step=14400 epoch=29 samples=12800/16000 total=0.39405
+step=14500 epoch=29 samples=16000/16000 total=0.37836
+epoch=29 step=14500 dev_proxy=0.480879 supervision=0.304244 lr=0.00025 (no postprocessing)
+step=14600 epoch=30 samples=3200/16000 total=0.34311
+step=14700 epoch=30 samples=6400/16000 total=0.35693
+step=14800 epoch=30 samples=9600/16000 total=0.32799
+step=14900 epoch=30 samples=12800/16000 total=0.34206
+step=15000 epoch=30 samples=16000/16000 total=0.34728
+epoch=30 step=15000 dev_proxy=0.478625 supervision=0.307892 lr=0.00025 (no postprocessing)
+step=15100 epoch=31 samples=3200/16000 total=0.42846
+step=15200 epoch=31 samples=6400/16000 total=0.35697
+step=15300 epoch=31 samples=9600/16000 total=0.38725
+step=15400 epoch=31 samples=12800/16000 total=0.39616
+step=15500 epoch=31 samples=16000/16000 total=0.32291
+epoch=31 step=15500 dev_proxy=0.478749 supervision=0.304379 lr=0.00025 (no postprocessing)
+step=15600 epoch=32 samples=3200/16000 total=0.35178
+step=15700 epoch=32 samples=6400/16000 total=0.41473
+step=15800 epoch=32 samples=9600/16000 total=0.39641
+step=15900 epoch=32 samples=12800/16000 total=0.36794
+step=16000 epoch=32 samples=16000/16000 total=0.47260
+epoch=32 step=16000 dev_proxy=0.481593 supervision=0.307813 lr=0.00025 (no postprocessing)
+step=16100 epoch=33 samples=3200/16000 total=0.36792
+step=16200 epoch=33 samples=6400/16000 total=0.34455
+step=16300 epoch=33 samples=9600/16000 total=0.36475
+step=16400 epoch=33 samples=12800/16000 total=0.37563
+step=16500 epoch=33 samples=16000/16000 total=0.32138
+epoch=33 step=16500 dev_proxy=0.478999 supervision=0.303415 lr=0.0001 (no postprocessing)
+step=16600 epoch=34 samples=3200/16000 total=0.39476
+step=16700 epoch=34 samples=6400/16000 total=0.33676
+step=16800 epoch=34 samples=9600/16000 total=0.34501
+step=16900 epoch=34 samples=12800/16000 total=0.29598
+step=17000 epoch=34 samples=16000/16000 total=0.33835
+epoch=34 step=17000 dev_proxy=0.462922 supervision=0.296964 lr=0.0001 (no postprocessing)
+step=17100 epoch=35 samples=3200/16000 total=0.29152
+step=17200 epoch=35 samples=6400/16000 total=0.34885
+step=17300 epoch=35 samples=9600/16000 total=0.26626
+step=17400 epoch=35 samples=12800/16000 total=0.33142
+step=17500 epoch=35 samples=16000/16000 total=0.32671
+epoch=35 step=17500 dev_proxy=0.458047 supervision=0.294359 lr=0.0001 (no postprocessing)
+step=17600 epoch=36 samples=3200/16000 total=0.34264
+step=17700 epoch=36 samples=6400/16000 total=0.36935
+step=17800 epoch=36 samples=9600/16000 total=0.34904
+step=17900 epoch=36 samples=12800/16000 total=0.34577
+step=18000 epoch=36 samples=16000/16000 total=0.39290
+epoch=36 step=18000 dev_proxy=0.460066 supervision=0.296045 lr=0.0001 (no postprocessing)
+step=18100 epoch=37 samples=3200/16000 total=0.36424
+step=18200 epoch=37 samples=6400/16000 total=0.34640
+step=18300 epoch=37 samples=9600/16000 total=0.27048
+step=18400 epoch=37 samples=12800/16000 total=0.30940
+step=18500 epoch=37 samples=16000/16000 total=0.31552
+epoch=37 step=18500 dev_proxy=0.456691 supervision=0.294658 lr=0.0001 (no postprocessing)
+step=18600 epoch=38 samples=3200/16000 total=0.39253
+step=18700 epoch=38 samples=6400/16000 total=0.31754
+step=18800 epoch=38 samples=9600/16000 total=0.27191
+step=18900 epoch=38 samples=12800/16000 total=0.34622
+step=19000 epoch=38 samples=16000/16000 total=0.30429
+epoch=38 step=19000 dev_proxy=0.459959 supervision=0.297544 lr=0.0001 (no postprocessing)
+step=19100 epoch=39 samples=3200/16000 total=0.36269
+step=19200 epoch=39 samples=6400/16000 total=0.38832
+step=19300 epoch=39 samples=9600/16000 total=0.30733
+step=19400 epoch=39 samples=12800/16000 total=0.32301
+step=19500 epoch=39 samples=16000/16000 total=0.41762
+epoch=39 step=19500 dev_proxy=0.458826 supervision=0.294367 lr=0.0001 (no postprocessing)
+step=19600 epoch=40 samples=3200/16000 total=0.37488
+step=19700 epoch=40 samples=6400/16000 total=0.30174
+step=19800 epoch=40 samples=9600/16000 total=0.34607
+step=19900 epoch=40 samples=12800/16000 total=0.28295
+step=20000 epoch=40 samples=16000/16000 total=0.33684
+epoch=40 step=20000 dev_proxy=0.456714 supervision=0.294170 lr=5e-05 (no postprocessing)
+step=20100 epoch=41 samples=3200/16000 total=0.28848
+step=20200 epoch=41 samples=6400/16000 total=0.30302
+step=20300 epoch=41 samples=9600/16000 total=0.31224
+step=20400 epoch=41 samples=12800/16000 total=0.30074
+step=20500 epoch=41 samples=16000/16000 total=0.35678
+epoch=41 step=20500 dev_proxy=0.453780 supervision=0.293103 lr=5e-05 (no postprocessing)
+step=20600 epoch=42 samples=3200/16000 total=0.34336
+step=20700 epoch=42 samples=6400/16000 total=0.30661
+step=20800 epoch=42 samples=9600/16000 total=0.39536
+step=20900 epoch=42 samples=12800/16000 total=0.38542
+step=21000 epoch=42 samples=16000/16000 total=0.29291
+epoch=42 step=21000 dev_proxy=0.453426 supervision=0.292699 lr=5e-05 (no postprocessing)
+step=21100 epoch=43 samples=3200/16000 total=0.35551
+step=21200 epoch=43 samples=6400/16000 total=0.33643
+step=21300 epoch=43 samples=9600/16000 total=0.28779
+step=21400 epoch=43 samples=12800/16000 total=0.32864
+step=21500 epoch=43 samples=16000/16000 total=0.32321
+epoch=43 step=21500 dev_proxy=0.451903 supervision=0.292976 lr=5e-05 (no postprocessing)
+step=21600 epoch=44 samples=3200/16000 total=0.34120
+step=21700 epoch=44 samples=6400/16000 total=0.28244
+step=21800 epoch=44 samples=9600/16000 total=0.34008
+step=21900 epoch=44 samples=12800/16000 total=0.31549
+step=22000 epoch=44 samples=16000/16000 total=0.37960
+epoch=44 step=22000 dev_proxy=0.451486 supervision=0.291788 lr=5e-05 (no postprocessing)
+step=22100 epoch=45 samples=3200/16000 total=0.33890
+step=22200 epoch=45 samples=6400/16000 total=0.23795
+step=22300 epoch=45 samples=9600/16000 total=0.32737
+step=22400 epoch=45 samples=12800/16000 total=0.29785
+step=22500 epoch=45 samples=16000/16000 total=0.31179
+epoch=45 step=22500 dev_proxy=0.452732 supervision=0.292761 lr=5e-05 (no postprocessing)
+step=22600 epoch=46 samples=3200/16000 total=0.29589
+step=22700 epoch=46 samples=6400/16000 total=0.33032
+step=22800 epoch=46 samples=9600/16000 total=0.32323
+step=22900 epoch=46 samples=12800/16000 total=0.31164
+step=23000 epoch=46 samples=16000/16000 total=0.32797
+epoch=46 step=23000 dev_proxy=0.451502 supervision=0.291951 lr=5e-05 (no postprocessing)
+Stopped: early_stop wall hours: 1.8191896787222424 best epoch: 44
+{"kind": "final", "argv": ["E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe", "-u", "-B", "-m", "experiments.E43_overlap_area_loss.final", "--output", "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E43_overlap_area_loss\\runs\\20261023_rectangle_w96d12_area025_seed0"], "utc": "2026-10-23T15:25:56Z"}
+Prepared tensor cache loaded: dev, 2000 cases
+Full-dev raw diagnostics: 320 / 2000
+Full-dev raw diagnostics: 640 / 2000
+Full-dev raw diagnostics: 960 / 2000
+Full-dev raw diagnostics: 1280 / 2000
+Full-dev raw diagnostics: 1600 / 2000
+Full-dev raw diagnostics: 1920 / 2000
+Prepared tensor cache loaded: dev, 2000 cases
+Prepared tensor cache loaded: dev, 2000 cases
+Terminal steady: 25 / 500
+Terminal steady: 50 / 500
+Terminal steady: 75 / 500
+Terminal steady: 100 / 500
+Terminal steady: 125 / 500
+Terminal steady: 150 / 500
+Terminal steady: 175 / 500
+Terminal steady: 200 / 500
+Terminal steady: 225 / 500
+Terminal steady: 250 / 500
+Terminal steady: 275 / 500
+Terminal steady: 300 / 500
+Terminal steady: 325 / 500
+Terminal steady: 350 / 500
+Terminal steady: 375 / 500
+Terminal steady: 400 / 500
+Terminal steady: 425 / 500
+Terminal steady: 450 / 500
+Terminal steady: 475 / 500
+Terminal steady: 500 / 500
+{"count": 500, "hard_legal": 500, "mean_Q": 1.0407955611402204, "weighted_Q": 1.0292752163887642, "p95_Q": 1.1556373578346404, "max_Q": 1.815711593492757, "worst5pct_mean_Q": 1.2512098562527039, "seconds_mean": 0.2600981123999227, "seconds_p95": 0.5911222499213181, "row_fallbacks": 0, "rescue_cases": 5, "errors": 0, "hpwl_gap_mean_returned": 0.013113438740444338, "area_gap_mean_returned": 0.019661705439388368, "boundary_violations_mean_returned": 0.234, "grouping_violations_mean_returned": 0.192, "mib_violations_mean_returned": 0.002, "inference_seconds_mean_returned": 0.05342066460265778, "postprocess_seconds_mean_returned": 0.20655366419767962, "mean_center_move_local_mean_returned": 0.40184109475297497, "max_center_move_local_mean_returned": 1.7080543364029315}
+{"kind": "report", "argv": ["E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe", "-u", "-B", "-m", "experiments.E43_overlap_area_loss.report", "--output", "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E43_overlap_area_loss\\runs\\20261023_rectangle_w96d12_area025_seed0"], "utc": "2026-10-23T15:29:06Z"}

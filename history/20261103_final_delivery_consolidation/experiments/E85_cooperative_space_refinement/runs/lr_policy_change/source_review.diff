@@ -1,0 +1,160 @@
+--- original/docs/protocol.md
++++ current/docs/protocol.md
+@@ -53,8 +53,9 @@
+ #### ML训练的学习率与早停规则
+ 
+ - 每轮结束后在固定验证面板上评价一次，使用预先固定的主指标与min_delta判断是否有明显改善，不以单个训练batch的loss判断。
+-- 第1～14轮为学习率保护期；**第15轮起可以降低学习率**。保护期内仍保存验证曲线和best，但不累积用于触发学习率下降或早停的停滞计数。
+-- 保护期结束后，**连续3轮无明显改善，学习率切换至下一指定档位**，不再使用统一减半系数。出现明显改善时，连续无改善计数清零；一次下降后重置调度器的停滞计数，重新观察下一组3轮。这里的明显改善指的是至少能看到一定程度的优化，不能把极小的优化认为是可以不下调学习率的证据。
++- **2026-10-30用户更新：已有权重的后训练不设学习率保护期。**第0轮固定开发监测作为调度基准，从第1轮开始累计无明显改善的轮数；连续3轮无明显改善即可降档。已有后训练若中途改规则，须显式记录生效位置，保留权重、优化器、随机状态、游标和累计预算，不伪造历史降档或最低档完成轮数。
++- 从头训练仍保留第1～14轮学习率保护期，**第15轮起进入调度**；保护期内保存监测和best，不累计停滞。历史已完成训练不追溯修改。
++- 进入调度后，**连续3轮无明显改善，学习率切换至下一指定档位**，不再使用统一减半系数。出现明显改善时，连续无改善计数清零；一次下降后重置调度器的停滞计数，重新观察下一组3轮。这里的明显改善指的是至少能看到一定程度的优化，不能把极小的优化认为是可以不下调学习率的证据。
+ - **学习率固定采用4个档位：`1e-3 → 2.5e-4 → 1e-4 → 5e-5`，到第四档不再降低；早停前实际降低3次。** 2026-10-20用户明确指定这四个数值，替代此前以`1e-4`起步的设置；用于后续新训练。已有运行、日志和checkpoint保留实际学习率，续训如需采用新档位，须显式登记配置与优化器/调度器状态迁移，不静默改写或清零累计预算。
+ - **训练batch size固定为32。** 2026-10-20用户明确要求，后续训练入口与运行配置须一致使用`batch_size=32`；不能仍以16启动，或将梯度累积未经说明地视为相同配置。已有运行保留其实际batch；更改已有断点的batch时显式登记配置迁移，保留原样本游标、已见成员与累计预算。如实际显存不足，记录失败并协商调整，不静默减小batch。
+ - **连续3轮无明显改善时进入早停判断**；学习率下降不清空这项连续计数。实际停止须同时满足：连续无改善至少3轮、已完成3次下降，且第三次下降后的最低学习率档位已有至少二轮完整训练和验证。不能在刚进入第四档、尚未训练时立即停止。
+--- original/experiments/E85_cooperative_space_refinement/freeze.py
++++ current/experiments/E85_cooperative_space_refinement/freeze.py
+@@ -4,6 +4,7 @@
+ import torch
+ from .dataset_view import REGISTRY
+ from .io import ROOT, HERE, sha, save, sources
++from .source_compatibility import reviewed_sources
+ 
+ 
+ def frozen_checkpoint(output, *, baseline=False, implementation_check=False):
+@@ -19,11 +20,13 @@
+         raise ValueError('Finish training before freezing its unique best')
+     if state['identity']['implementation_check'] != implementation_check:
+         raise ValueError('Implementation checkpoints cannot become formal candidates')
+-    if state['identity']['sources'] != sources() or state['identity']['registry_sha256'] != sha(REGISTRY):
++    if not reviewed_sources(state['identity']['sources'],sources()) or state['identity']['registry_sha256'] != sha(REGISTRY):
+         raise ValueError('Source/data identity changed after training')
+     identity = {'checkpoint': path.relative_to(ROOT).as_posix(), 'checkpoint_sha256': sha(path),
+                 'model_config': state['model_config'], 'registry_sha256': sha(REGISTRY),
+-                'sources': sources(), 'baseline': False, 'count': 500,
++                'sources': sources(), 'training_sources':state['identity']['sources'],
++                'scheduler_policy_change':'runs/lr_policy_change/migration.json; completed control retains original policy',
++                'baseline': False, 'count': 500,
+                 'panel': 'v6 nested32k; unchanged dev_monitor500', 'workers': 2, 'threads_per_worker': 2,
+                 'selection': 'same fixed own total as backward; dev500 mean; no terminal-Q selection',
+                 'implementation_check': implementation_check, 'test_read': False}
+--- original/experiments/E85_cooperative_space_refinement/initial_audit.py
++++ current/experiments/E85_cooperative_space_refinement/initial_audit.py
+@@ -7,13 +7,14 @@
+ from .model import GeometryModel
+ from .arms import model_config
+ from .train import monitor_losses,seed_all
++from .source_compatibility import reviewed_sources
+ 
+ def main():
+     started=time.perf_counter();seed_all(0);rows=load_rows('dev');protected=verify_protected()
+     for arm in ('control','cooperative'):
+         path=HERE/('runs/initial_'+arm+'.json')
+         if path.exists():
+-            if json.loads(path.read_text(encoding='utf-8'))['sources']!=sources():raise ValueError('Initial audit source changed')
++            if not reviewed_sources(json.loads(path.read_text(encoding='utf-8'))['sources'],sources()):raise ValueError('Initial audit source changed')
+             continue
+         model=GeometryModel(**model_config(arm)).cuda().eval();load(model,model_config(arm))
+         values=monitor_losses(model,rows,'cuda',arm,0,32,return_records=True)
+--- original/experiments/E85_cooperative_space_refinement/pipeline.py
++++ current/experiments/E85_cooperative_space_refinement/pipeline.py
+@@ -22,6 +22,8 @@
+     if args.dry_run:print(json.dumps(commands));return
+     with exclusive(HERE/'runs/pipeline.lock'):
+         verify_protected();check=json.loads((HERE/'runs/preflight/results.json').read_text(encoding='utf-8'))
++        if args.resume and (HERE/'runs/lr_policy_change/validation.json').exists():
++            check=json.loads((HERE/'runs/lr_policy_change/validation.json').read_text(encoding='utf-8'))
+         if check['status']!='passed' or check['sources']!=sources():raise ValueError('Passing current-source preflight required')
+         events=json.loads(STATE.read_text(encoding='utf-8')).get('events',[]) if STATE.exists() else []
+         def state(status,stage,child=None,**extra):
+@@ -34,7 +36,7 @@
+                 charged=max(info.get('elapsed_seconds',0),json.loads(budget.read_text(encoding='utf-8')).get('elapsed_seconds',0) if budget.exists() else 0)
+                 ledger.append(dict(arm=arm,status=info.get('status','pending_or_running'),charged_seconds=charged,output=str(folder)))
+             total=sum(row['charged_seconds'] for row in ledger)
+-            save(HERE/'study.json',dict(phase='20261030 cooperative space',prior_training_seconds=34604.39659300004,max_new_training_seconds=14400,global_cap_seconds=64800,phase_charged_seconds=total,global_charged_seconds=34604.39659300004+total,preflight_seconds=check['seconds'],runs=ledger,status=status,stage=stage,test_read=False))
++            save(HERE/'study.json',dict(phase='20261030 cooperative space',prior_training_seconds=34604.39659300004,max_new_training_seconds=14400,global_cap_seconds=64800,phase_charged_seconds=total,global_charged_seconds=34604.39659300004+total,preflight_seconds=check['seconds'],scheduler_policy_change='runs/lr_policy_change/migration.json',comparison_limit='Completed control used original protection; cooperative resumed without protection; not a pure operator-only training-policy comparison',runs=ledger,status=status,stage=stage,test_read=False))
+         stage='initial'
+         try:
+             for stage,cmd in commands:
+--- original/experiments/E85_cooperative_space_refinement/report.py
++++ current/experiments/E85_cooperative_space_refinement/report.py
+@@ -38,11 +38,15 @@
+     raw_pairs={}
+     for group,mask in masks.items():
+         d=np.array([a['overlap_area_fraction']-b['overlap_area_fraction'] for a,b in zip(ordered['cooperative'],ordered['control'])]);raw_pairs[group]=paired(d[mask],workers[mask])
+-    report=dict(status='complete_pending_visual_review',arms=arms,paired_overlap_cooperative_minus_control=raw_pairs,paired_Q=q_pair(arms['cooperative']['terminal_records'],arms['control']['terminal_records']),test_read=False,baseline_promoted=False,limits=read(HERE/'plan.json')['comparison_limits'])
++    limits=read(HERE/'plan.json')['comparison_limits']
++    policy_path=HERE/'runs/lr_policy_change/migration.json'
++    policy_change=read(policy_path) if policy_path.exists() else None
++    if policy_change:limits.append('User changed post-training LR policy mid-run: completed control kept protection; cooperative continued without it. This is not a pure operator-only comparison under identical training policies.')
++    report=dict(status='complete_pending_visual_review',arms=arms,paired_overlap_cooperative_minus_control=raw_pairs,paired_Q=q_pair(arms['cooperative']['terminal_records'],arms['control']['terminal_records']),test_read=False,baseline_promoted=False,limits=limits,scheduler_policy_change=policy_change)
+     # Retain coordinates only in their existing terminal files.
+     for arm in arms:arms[arm].pop('terminal_records')
+     save(HERE/'runs/comparison.json',report)
+-    lines=['# E85 E74协同空间修正对照','', '两组同E74/F81起点、同241,547个可训练参数、同固定Loss；只改变最后中心提议后的8步联合接触压力传播。训练前算子效果与训练后效果分别列出。所有统计为已暴露自适应开发证据，测试封存。','', '|配置|训练分钟|停止/best|dev2000交面积|弱端口稀疏交面积|flash加权Q|最大Q|','|---|---:|---|---:|---:|---:|---:|']
++    lines=['# E85 E74协同空间修正对照','', '两组同E74/F81起点、同241,547个可训练参数、同固定Loss。用户于协同组中途取消后训练学习率保护；已完成控制组保留原策略，因此终末差异同时包含调度政策变化，不能单独归因为协同算子。训练前算子直接效果单列。所有统计为已暴露自适应开发证据，测试封存。','', '|配置|训练分钟|停止/best|dev2000交面积|弱端口稀疏交面积|flash加权Q|最大Q|','|---|---:|---|---:|---:|---:|---:|']
+     for arm,a in arms.items():
+         t=a['training'];f=a['flash'];lines.append(f"|{arm}|{t['elapsed_seconds']/60:.2f}|{t['status']}/{t['best_epoch']}|{100*a['groups']['all']['overlap']:.3f}%|{100*a['groups']['weak_port_sparse']['overlap']:.3f}%|{f['weighted_Q']:.6f}|{f['max_Q']:.6f}|")
+     lines+=['','## 协同组减控制组的开发集配对差','']
+--- original/experiments/E85_cooperative_space_refinement/source_compatibility.py
++++ current/experiments/E85_cooperative_space_refinement/source_compatibility.py
+@@ -0,0 +1,19 @@
++"""Explicit scheduler-only source review; never silently accept identity drift."""
++import json
++from .io import HERE
++
++REVIEWABLE={
++    'docs/protocol.md',
++    *('experiments/E85_cooperative_space_refinement/'+name for name in
++      ('train.py','pipeline.py','freeze.py','initial_audit.py','report.py','source_compatibility.py')),
++}
++
++def reviewed_sources(old,current):
++    if old==current:return True
++    path=HERE/'runs/lr_policy_change/source_compatibility.json'
++    if not path.exists():return False
++    record=json.loads(path.read_text(encoding='utf-8'))
++    changes={k for k in old.keys()|current.keys() if old.get(k)!=current.get(k)}
++    return (record['status']=='passed_scheduler_only_review'
++            and record['old_sources']==old and record['new_sources']==current
++            and changes==set(record['changes']) and changes<=REVIEWABLE)
+--- original/experiments/E85_cooperative_space_refinement/train.py
++++ current/experiments/E85_cooperative_space_refinement/train.py
+@@ -61,7 +61,7 @@
+ 
+ class PlateauController:
+     """Four exact LR levels; lowest tier must complete two epochs before stopping."""
+-    def __init__(self, optimizer, start_epoch=15):
++    def __init__(self, optimizer, start_epoch=0):
+         self.optimizer = optimizer
+         self.start_epoch = start_epoch
+         self.best = None
+@@ -162,7 +162,7 @@
+     ap.add_argument('--max-hours', type=float, default=2.)
+     ap.add_argument('--max-epochs', type=int, default=200)
+     ap.add_argument('--batch-size', type=int, choices=(32,), default=32)
+-    ap.add_argument('--scheduler-start-epoch', type=int, choices=(15,), default=15)
++    ap.add_argument('--scheduler-start-epoch', type=int, choices=(0,), default=0)
+     ap.add_argument('--resume', action='store_true')
+     ap.add_argument('--engine', choices=('cuda_graph','resident_eager','reference'), default='cuda_graph')
+     return ap
+@@ -190,7 +190,7 @@
+         'schedule': 'fixed full weights from first batch; no ramp, no anchor decay',
+         'selection': 'dev500 arithmetic mean of the same total used for training; no separate proxy; no solver calls',
+         'lr_patience_checks': 3, 'early_patience_checks': 3,
+-        'scheduler_start_epoch': getattr(args, 'scheduler_start_epoch', 15),
++        'scheduler_start_epoch': getattr(args, 'scheduler_start_epoch', 0),
+         'lr_levels': list(LR_LEVELS), 'required_lr_drops': 3,
+         'meaningful_relative_delta': 1e-3, 'meaningful_absolute_delta': 1e-5,
+         'cpu_threads': 4, 'lowest_lr_requires_completed_epochs': 2,
+@@ -222,8 +222,8 @@
+     if args.max_hours > 2 or args.max_epochs > 200 or args.batch_size != 32:
+         raise ValueError('E85 is limited to two hours/200 epochs per arm, batch32')
+     start_epoch = getattr(args, 'curriculum_start_epoch', 6)
+-    scheduler_start = getattr(args, 'scheduler_start_epoch', 15)
+-    if min(start_epoch, scheduler_start) < 1: raise ValueError('Positive schedule epochs required')
++    scheduler_start = getattr(args, 'scheduler_start_epoch', 0)
++    if start_epoch < 1 or scheduler_start < 0: raise ValueError('Invalid schedule epochs')
+     if args.engine!='cuda_graph':raise ValueError('E85 wide candidate requires guarded CUDA graph engine')
+     if args.device.startswith('cuda') and not torch.cuda.is_available(): raise RuntimeError('CUDA unavailable')
+     seed_all(args.seed)

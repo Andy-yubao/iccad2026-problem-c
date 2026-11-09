@@ -1,0 +1,19 @@
+{
+  "registered_date": "2026-11-07",
+  "role": "important baseline for subsequent architecture research",
+  "user_selection": "User judged A best for the current research after inspecting layer outputs, and selected it as an important baseline.",
+  "experiment": "E109_deep_supervision_shared",
+  "run": "20261107_shared_seed0",
+  "checkpoint": "experiments/E109_deep_supervision_shared/runs/20261107_shared_seed0/checkpoints/best.pt",
+  "checkpoint_sha256": "5123c81c1eabd3b5fdf4eb2824caf8fbd334108610b8b3bf9f5dd059e7b02a02",
+  "best_epoch": 61,
+  "architecture": "96x12 independent graph blocks, shared 96->96->3 head, original E98 input/decoder semantics",
+  "objective": "0.5*original_loss(layer12)+sum(original_loss(layer1..11))/22",
+  "dataset_identity": "original frozen v5 train16k with historical MIB mean-area transform; fixed train/dev500",
+  "final_original_dev_loss": 0.341898862361908,
+  "mixed_Q_dev500": 1.0425853607007032,
+  "comparison_note": "Selection is a research baseline decision, not a claim A wins every metric. B has lower mixed Q in this completed single-seed dev500 evaluation.",
+  "contest_delivery": "E101 original C5 plus original full postprocessing remains unchanged",
+  "legacy_exceptions": "Baseline identity is preserved. Its historical MIB and fixed/preplaced handling are not blanket authorization to override later general design rules in future runs; any migration must be separately registered and controlled.",
+  "new_training_authorized": false
+}

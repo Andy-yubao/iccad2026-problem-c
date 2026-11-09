@@ -1,0 +1,57 @@
+Traceback (most recent call last):
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "E:\project\ICCAD\2026\problemC\experiments\E101_final_c5_solver\evaluate.py", line 66, in <module>
+    with threadpool_limits(1):main(a.role)
+  File "E:\project\ICCAD\2026\problemC\experiments\E101_final_c5_solver\evaluate.py", line 21, in main
+    assert sources()==read(RUN/'sources.json'),'Source changed after final freeze'
+AssertionError: Source changed after final freeze
+Traceback (most recent call last):
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "E:\project\ICCAD\2026\problemC\experiments\E101_final_c5_solver\evaluate.py", line 68, in <module>
+    with threadpool_limits(1):main(a.role)
+  File "E:\project\ICCAD\2026\problemC\experiments\E101_final_c5_solver\evaluate.py", line 53, in main
+    plot_case(dict(case_id=f'dev500:{i}',panel='Final C5 / 64k',constraints=c,variants=variants),folder/'gallery'/f'{i:03d}.png',stages=(('reference','Reference'),('placer','L'),('corrected','F'),('final','Full repair')),show_metrics=False)
+  File "E:\project\ICCAD\2026\problemC\visualization\layouts.py", line 214, in plot_case
+    fig.savefig(destination, dpi=170, facecolor="white")
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\site-packages\matplotlib\figure.py", line 3490, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\site-packages\matplotlib\backend_bases.py", line 2186, in print_figure
+    result = print_method(
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\site-packages\matplotlib\backend_bases.py", line 2042, in <lambda>
+    print_method = functools.wraps(meth)(lambda *args, **kwargs: meth(
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\site-packages\matplotlib\backends\backend_agg.py", line 481, in print_png
+    self._print_pil(filename_or_obj, "png", pil_kwargs, metadata)
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\site-packages\matplotlib\backends\backend_agg.py", line 430, in _print_pil
+    mpl.image.imsave(
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\site-packages\matplotlib\image.py", line 1657, in imsave
+    image.save(fname, **pil_kwargs)
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\site-packages\PIL\Image.py", line 2706, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: 'E:\\project\\ICCAD\\2026\\problemC\\experiments\\E101_final_c5_solver\\runs\\20261103_final64k_seed0\\evaluation\\dev_monitor500\\gallery\\000.png'
+dev_monitor500 25 / 500
+dev_monitor500 50 / 500
+dev_monitor500 75 / 500
+dev_monitor500 100 / 500
+dev_monitor500 125 / 500
+dev_monitor500 150 / 500
+dev_monitor500 175 / 500
+dev_monitor500 200 / 500
+dev_monitor500 225 / 500
+dev_monitor500 250 / 500
+dev_monitor500 275 / 500
+dev_monitor500 300 / 500
+dev_monitor500 325 / 500
+dev_monitor500 350 / 500
+dev_monitor500 375 / 500
+dev_monitor500 400 / 500
+dev_monitor500 425 / 500
+dev_monitor500 450 / 500
+dev_monitor500 475 / 500
+dev_monitor500 500 / 500
+dev_monitor500 {'count': 500, 'hard_legal': 500, 'weighted_Q': 1.0315819606723182, 'mean_Q': 1.061307159094618, 'p95_Q': 1.264065839591926, 'max_Q': 1.63073192482707, 'mean_complete_seconds': 0.24100160459888867, 'p95_complete_seconds': 0.5382865549981942, 'max_complete_seconds': 3.174946400016779, 'cases_over_025s': 161, 'fallbacks': 0}

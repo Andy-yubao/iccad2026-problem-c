@@ -1,0 +1,766 @@
+{
+  "status": "user_stop",
+  "finished": false,
+  "epoch": 2,
+  "cursor": 0,
+  "step": 2,
+  "seen_count": 32,
+  "elapsed_seconds": 4.3490456999934395,
+  "best_proxy": 0.04329939931631088,
+  "best_epoch": 0,
+  "bad_checks": 0,
+  "history": [
+    {
+      "epoch": 0,
+      "step": 0,
+      "dev_monitor": {
+        "total": 0.04329939931631088,
+        "overlap": 0.010713969357311726,
+        "boundary": 0.008194741792976856,
+        "mib": 0.005382276605814695,
+        "module_overlap_base": 0.025132378563284874,
+        "module_overlap_counted": 0.037409428507089615,
+        "module_count_extra": 0.012277046218514442,
+        "module_load_mean": 0.057263731956481934,
+        "module_load_max": 0.41234540939331055,
+        "module_load_gt05_fraction": 0.35021379590034485,
+        "module_soft_count_mean": 0.47999143600463867,
+        "module_count_factor_mean": 1.2566713094711304,
+        "compactness": 0.008366825990378857,
+        "count": 5,
+        "selection_proxy": 0.04329939931631088,
+        "raw_hard_legal": 0,
+        "raw_hard_legal_rate": 0.0,
+        "batched_inference_seconds_per_case": 0.01006816000008257,
+        "draft_diagnostics": {
+          "overlap_pairs": {
+            "mean": 53.6,
+            "p95": 88.4,
+            "max": 90.0
+          },
+          "overlap_area_fraction": {
+            "mean": 0.022766059090947182,
+            "p95": 0.03423224786391897,
+            "max": 0.03751753795696899
+          },
+          "penetration_squared_per_block": {
+            "mean": 0.005356984288266512,
+            "p95": 0.007698441162379632,
+            "max": 0.008050960863881448
+          },
+          "max_local_penetration": {
+            "mean": 0.2743273973778598,
+            "p95": 0.3546455309614611,
+            "max": 0.3727944765282061
+          },
+          "largest_conflict_cluster": {
+            "mean": 40.4,
+            "p95": 70.8,
+            "max": 74.0
+          },
+          "largest_conflict_cluster_fraction": {
+            "mean": 0.5485320547746177,
+            "p95": 0.7345864661654135,
+            "max": 0.7789473684210526
+          },
+          "module_load_mean": {
+            "mean": 0.05726371376107807,
+            "p95": 0.08685129528387879,
+            "max": 0.09386650879105117
+          },
+          "module_load_p95": {
+            "mean": 0.19754877250032404,
+            "p95": 0.2987368567598855,
+            "max": 0.32461722570724394
+          },
+          "module_load_max": {
+            "mean": 0.4123453924277943,
+            "p95": 0.6160968915974663,
+            "max": 0.6443207561840407
+          },
+          "module_load_gt05_fraction": {
+            "mean": 0.35021379535796016,
+            "p95": 0.45565217391304347,
+            "max": 0.46956521739130436
+          },
+          "module_load_gt50_fraction": {
+            "mean": 0.007322654462242563,
+            "p95": 0.022974828375286038,
+            "max": 0.02608695652173913
+          },
+          "module_soft_count_mean": {
+            "mean": 0.4799912126457727,
+            "p95": 0.6047382202134004,
+            "max": 0.6213356460522259
+          },
+          "module_neighbors_mean": {
+            "mean": 1.465925683774654,
+            "p95": 1.6940961098398168,
+            "max": 1.7263157894736842
+          },
+          "module_load_small_mean": {
+            "mean": 0.07888295717329426,
+            "p95": 0.11743854952853755,
+            "max": 0.1224306208342977
+          },
+          "module_load_small_gt05_fraction": {
+            "mean": 0.4135363247863248,
+            "p95": 0.5825641025641025,
+            "max": 0.6
+          },
+          "module_load_middle_mean": {
+            "mean": 0.05779652023545325,
+            "p95": 0.0905801874699149,
+            "max": 0.09846584258745543
+          },
+          "module_load_middle_gt05_fraction": {
+            "mean": 0.38499141876430204,
+            "p95": 0.5210526315789473,
+            "max": 0.5263157894736842
+          },
+          "module_load_large_mean": {
+            "mean": 0.034967009249790404,
+            "p95": 0.05453905798807423,
+            "max": 0.05995137579236755
+          },
+          "module_load_large_gt05_fraction": {
+            "mean": 0.2545678009891489,
+            "p95": 0.34691075514874137,
+            "max": 0.3684210526315789
+          }
+        }
+      },
+      "train_monitor": {
+        "total": 0.043450791388750076,
+        "overlap": 0.010657278820872307,
+        "boundary": 0.008813324384391308,
+        "mib": 0.005704591982066631,
+        "module_overlap_base": 0.024886278435587883,
+        "module_overlap_counted": 0.037028007209300995,
+        "module_count_extra": 0.012141730636358261,
+        "module_load_mean": 0.05663697421550751,
+        "module_load_max": 0.4039677381515503,
+        "module_load_gt05_fraction": 0.3495754301548004,
+        "module_soft_count_mean": 0.4780198633670807,
+        "module_count_factor_mean": 1.2557275295257568,
+        "compactness": 0.008557373657822609,
+        "count": 32,
+        "selection_proxy": 0.043450791388750076,
+        "raw_hard_legal": 0,
+        "raw_hard_legal_rate": 0.0,
+        "batched_inference_seconds_per_case": 0.0018204437499207415,
+        "draft_diagnostics": {
+          "overlap_pairs": {
+            "mean": 51.75,
+            "p95": 90.0,
+            "max": 90.0
+          },
+          "overlap_area_fraction": {
+            "mean": 0.022533437299559995,
+            "p95": 0.03751753795696899,
+            "max": 0.03751753795696899
+          },
+          "penetration_squared_per_block": {
+            "mean": 0.005328638872747139,
+            "p95": 0.008050960863881448,
+            "max": 0.008050960863881448
+          },
+          "max_local_penetration": {
+            "mean": 0.27078466267294776,
+            "p95": 0.3727944765282061,
+            "max": 0.3727944765282061
+          },
+          "largest_conflict_cluster": {
+            "mean": 38.84375,
+            "p95": 74.0,
+            "max": 74.0
+          },
+          "largest_conflict_cluster_fraction": {
+            "mean": 0.5424432457956485,
+            "p95": 0.7789473684210526,
+            "max": 0.7789473684210526
+          },
+          "module_load_mean": {
+            "mean": 0.056636953217417775,
+            "p95": 0.09386650879105117,
+            "max": 0.09386650879105117
+          },
+          "module_load_p95": {
+            "mean": 0.19454792127760806,
+            "p95": 0.32461722570724394,
+            "max": 0.32461722570724394
+          },
+          "module_load_max": {
+            "mean": 0.40396767197842454,
+            "p95": 0.6443207561840407,
+            "max": 0.6443207561840407
+          },
+          "module_load_gt05_fraction": {
+            "mean": 0.3495754331480876,
+            "p95": 0.46956521739130436,
+            "max": 0.46956521739130436
+          },
+          "module_load_gt50_fraction": {
+            "mean": 0.006864988558352403,
+            "p95": 0.02608695652173913,
+            "max": 0.02608695652173913
+          },
+          "module_soft_count_mean": {
+            "mean": 0.478019714664509,
+            "p95": 0.6213356460522259,
+            "max": 0.6213356460522259
+          },
+          "module_neighbors_mean": {
+            "mean": 1.4576386618720716,
+            "p95": 1.7263157894736842,
+            "max": 1.7263157894736842
+          },
+          "module_load_small_mean": {
+            "mean": 0.07767436452840974,
+            "p95": 0.1224306208342977,
+            "max": 0.1224306208342977
+          },
+          "module_load_small_gt05_fraction": {
+            "mean": 0.40991252670940176,
+            "p95": 0.6,
+            "max": 0.6
+          },
+          "module_load_middle_mean": {
+            "mean": 0.05775586365979782,
+            "p95": 0.09846584258745543,
+            "max": 0.09846584258745543
+          },
+          "module_load_middle_gt05_fraction": {
+            "mean": 0.38905445509153314,
+            "p95": 0.5263157894736842,
+            "max": 0.5263157894736842
+          },
+          "module_load_large_mean": {
+            "mean": 0.034399939485678335,
+            "p95": 0.05995137579236755,
+            "max": 0.05995137579236755
+          },
+          "module_load_large_gt05_fraction": {
+            "mean": 0.2527198134273271,
+            "p95": 0.3684210526315789,
+            "max": 0.3684210526315789
+          }
+        }
+      },
+      "train_seen_count": 0,
+      "weights": {
+        "overlap": 0.75,
+        "boundary": 0.5,
+        "mib": 0.5,
+        "module_overlap_counted": 0.75,
+        "compactness": 0.05
+      },
+      "lr": 0.001,
+      "elapsed_seconds": 2.174832899996545,
+      "postprocessing_calls": 0,
+      "train_unseen": {
+        "total": 0.043450791388750076,
+        "overlap": 0.010657278820872307,
+        "boundary": 0.008813324384391308,
+        "mib": 0.005704591982066631,
+        "module_overlap_base": 0.024886278435587883,
+        "module_overlap_counted": 0.037028007209300995,
+        "module_count_extra": 0.012141730636358261,
+        "module_load_mean": 0.05663697421550751,
+        "module_load_max": 0.4039677381515503,
+        "module_load_gt05_fraction": 0.3495754301548004,
+        "module_soft_count_mean": 0.4780198633670807,
+        "module_count_factor_mean": 1.2557275295257568,
+        "compactness": 0.008557373657822609,
+        "count": 32,
+        "selection_proxy": 0.043450791388750076,
+        "raw_hard_legal": 0,
+        "raw_hard_legal_rate": 0.0,
+        "batched_inference_seconds_per_case": 0.0018204437499207415,
+        "draft_diagnostics": {
+          "overlap_pairs": {
+            "mean": 51.75,
+            "p95": 90.0,
+            "max": 90.0
+          },
+          "overlap_area_fraction": {
+            "mean": 0.022533437299559995,
+            "p95": 0.03751753795696899,
+            "max": 0.03751753795696899
+          },
+          "penetration_squared_per_block": {
+            "mean": 0.005328638872747139,
+            "p95": 0.008050960863881448,
+            "max": 0.008050960863881448
+          },
+          "max_local_penetration": {
+            "mean": 0.27078466267294776,
+            "p95": 0.3727944765282061,
+            "max": 0.3727944765282061
+          },
+          "largest_conflict_cluster": {
+            "mean": 38.84375,
+            "p95": 74.0,
+            "max": 74.0
+          },
+          "largest_conflict_cluster_fraction": {
+            "mean": 0.5424432457956485,
+            "p95": 0.7789473684210526,
+            "max": 0.7789473684210526
+          },
+          "module_load_mean": {
+            "mean": 0.056636953217417775,
+            "p95": 0.09386650879105117,
+            "max": 0.09386650879105117
+          },
+          "module_load_p95": {
+            "mean": 0.19454792127760806,
+            "p95": 0.32461722570724394,
+            "max": 0.32461722570724394
+          },
+          "module_load_max": {
+            "mean": 0.40396767197842454,
+            "p95": 0.6443207561840407,
+            "max": 0.6443207561840407
+          },
+          "module_load_gt05_fraction": {
+            "mean": 0.3495754331480876,
+            "p95": 0.46956521739130436,
+            "max": 0.46956521739130436
+          },
+          "module_load_gt50_fraction": {
+            "mean": 0.006864988558352403,
+            "p95": 0.02608695652173913,
+            "max": 0.02608695652173913
+          },
+          "module_soft_count_mean": {
+            "mean": 0.478019714664509,
+            "p95": 0.6213356460522259,
+            "max": 0.6213356460522259
+          },
+          "module_neighbors_mean": {
+            "mean": 1.4576386618720716,
+            "p95": 1.7263157894736842,
+            "max": 1.7263157894736842
+          },
+          "module_load_small_mean": {
+            "mean": 0.07767436452840974,
+            "p95": 0.1224306208342977,
+            "max": 0.1224306208342977
+          },
+          "module_load_small_gt05_fraction": {
+            "mean": 0.40991252670940176,
+            "p95": 0.6,
+            "max": 0.6
+          },
+          "module_load_middle_mean": {
+            "mean": 0.05775586365979782,
+            "p95": 0.09846584258745543,
+            "max": 0.09846584258745543
+          },
+          "module_load_middle_gt05_fraction": {
+            "mean": 0.38905445509153314,
+            "p95": 0.5263157894736842,
+            "max": 0.5263157894736842
+          },
+          "module_load_large_mean": {
+            "mean": 0.034399939485678335,
+            "p95": 0.05995137579236755,
+            "max": 0.05995137579236755
+          },
+          "module_load_large_gt05_fraction": {
+            "mean": 0.2527198134273271,
+            "p95": 0.3684210526315789,
+            "max": 0.3684210526315789
+          }
+        }
+      },
+      "lr_next": 0.001,
+      "lr_drops": 0,
+      "lr_bad_checks": 0,
+      "early_bad_checks": 0,
+      "meaningful_best": null
+    },
+    {
+      "epoch": 1,
+      "step": 1,
+      "dev_monitor": {
+        "total": 0.08070427179336548,
+        "overlap": 0.009831639938056469,
+        "boundary": 0.09592153877019882,
+        "mib": 0.0030045309104025364,
+        "module_overlap_base": 0.01331986952573061,
+        "module_overlap_counted": 0.01906636916100979,
+        "module_count_extra": 0.005746500100940466,
+        "module_load_mean": 0.028419047594070435,
+        "module_load_max": 0.36062097549438477,
+        "module_load_gt05_fraction": 0.15920250117778778,
+        "module_soft_count_mean": 0.19952762126922607,
+        "module_count_factor_mean": 1.1227478981018066,
+        "compactness": 0.1913546621799469,
+        "count": 5,
+        "selection_proxy": 0.08070427179336548,
+        "raw_hard_legal": 0,
+        "raw_hard_legal_rate": 0.0,
+        "batched_inference_seconds_per_case": 0.010336599999573082,
+        "draft_diagnostics": {
+          "overlap_pairs": {
+            "mean": 23.2,
+            "p95": 43.0,
+            "max": 45.0
+          },
+          "overlap_area_fraction": {
+            "mean": 0.012340466778186145,
+            "p95": 0.02667334364162676,
+            "max": 0.03015598577180103
+          },
+          "penetration_squared_per_block": {
+            "mean": 0.0046361779910873285,
+            "p95": 0.012169189468054842,
+            "max": 0.014340150298956458
+          },
+          "max_local_penetration": {
+            "mean": 0.2790233081007852,
+            "p95": 0.6152908677004874,
+            "max": 0.7016465558171193
+          },
+          "largest_conflict_cluster": {
+            "mean": 6.8,
+            "p95": 10.399999999999999,
+            "max": 11.0
+          },
+          "largest_conflict_cluster_fraction": {
+            "mean": 0.10170585885002362,
+            "p95": 0.1191578947368421,
+            "max": 0.12
+          },
+          "module_load_mean": {
+            "mean": 0.028419042033539187,
+            "p95": 0.06290028387119649,
+            "max": 0.07273588611978865
+          },
+          "module_load_p95": {
+            "mean": 0.11148440437872462,
+            "p95": 0.21218488846236724,
+            "max": 0.23533063846565475
+          },
+          "module_load_max": {
+            "mean": 0.36062065202869864,
+            "p95": 0.8822611508156082,
+            "max": 1.0
+          },
+          "module_load_gt05_fraction": {
+            "mean": 0.159202499001126,
+            "p95": 0.2651207729468599,
+            "max": 0.28695652173913044
+          },
+          "module_load_gt50_fraction": {
+            "mean": 0.006956521739130435,
+            "p95": 0.027826086956521733,
+            "max": 0.034782608695652174
+          },
+          "module_soft_count_mean": {
+            "mean": 0.19952757467492654,
+            "p95": 0.3034325277620661,
+            "max": 0.3278947406919432
+          },
+          "module_neighbors_mean": {
+            "mean": 0.6062393665322727,
+            "p95": 0.7734553775743708,
+            "max": 0.782608695652174
+          },
+          "module_load_small_mean": {
+            "mean": 0.03316386683246677,
+            "p95": 0.07674037693277692,
+            "max": 0.09102500922669972
+          },
+          "module_load_small_gt05_fraction": {
+            "mean": 0.1948611111111111,
+            "p95": 0.31111111111111106,
+            "max": 0.3333333333333333
+          },
+          "module_load_middle_mean": {
+            "mean": 0.035167462539245645,
+            "p95": 0.07544674799883486,
+            "max": 0.0851158329852654
+          },
+          "module_load_middle_gt05_fraction": {
+            "mean": 0.20925438596491225,
+            "p95": 0.3361842105263158,
+            "max": 0.34210526315789475
+          },
+          "module_load_large_mean": {
+            "mean": 0.01659228981929785,
+            "p95": 0.0369587079801338,
+            "max": 0.04158552343406106
+          },
+          "module_load_large_gt05_fraction": {
+            "mean": 0.06953027730616865,
+            "p95": 0.16672325976230898,
+            "max": 0.18421052631578946
+          }
+        }
+      },
+      "train_monitor": {
+        "total": 0.08002295345067978,
+        "overlap": 0.009475113824009895,
+        "boundary": 0.09543058276176453,
+        "mib": 0.0032258140854537487,
+        "module_overlap_base": 0.013002082705497742,
+        "module_overlap_counted": 0.018590673804283142,
+        "module_count_extra": 0.0055885910987854,
+        "module_load_mean": 0.027754899114370346,
+        "module_load_max": 0.34668976068496704,
+        "module_load_gt05_fraction": 0.15855790674686432,
+        "module_soft_count_mean": 0.19756191968917847,
+        "module_count_factor_mean": 1.121753454208374,
+        "compactness": 0.19290833175182343,
+        "count": 32,
+        "selection_proxy": 0.08002295345067978,
+        "raw_hard_legal": 0,
+        "raw_hard_legal_rate": 0.0,
+        "batched_inference_seconds_per_case": 0.0019156656248924264,
+        "draft_diagnostics": {
+          "overlap_pairs": {
+            "mean": 22.28125,
+            "p95": 45.0,
+            "max": 45.0
+          },
+          "overlap_area_fraction": {
+            "mean": 0.012031095067759845,
+            "p95": 0.03015598577180103,
+            "max": 0.03015598577180103
+          },
+          "penetration_squared_per_block": {
+            "mean": 0.004475392854723292,
+            "p95": 0.014340150298956458,
+            "max": 0.014340150298956458
+          },
+          "max_local_penetration": {
+            "mean": 0.27096472588254245,
+            "p95": 0.7016465558171193,
+            "max": 0.7016465558171193
+          },
+          "largest_conflict_cluster": {
+            "mean": 6.59375,
+            "p95": 11.0,
+            "max": 11.0
+          },
+          "largest_conflict_cluster_fraction": {
+            "mean": 0.10187702044967491,
+            "p95": 0.12,
+            "max": 0.12
+          },
+          "module_load_mean": {
+            "mean": 0.027754892284536987,
+            "p95": 0.07273588611978865,
+            "max": 0.07273588611978865
+          },
+          "module_load_p95": {
+            "mean": 0.11013289844825008,
+            "p95": 0.23533063846565475,
+            "max": 0.23533063846565475
+          },
+          "module_load_max": {
+            "mean": 0.34668941668394293,
+            "p95": 1.0,
+            "max": 1.0
+          },
+          "module_load_gt05_fraction": {
+            "mean": 0.15855789836911122,
+            "p95": 0.28695652173913044,
+            "max": 0.28695652173913044
+          },
+          "module_load_gt50_fraction": {
+            "mean": 0.006521739130434783,
+            "p95": 0.034782608695652174,
+            "max": 0.034782608695652174
+          },
+          "module_soft_count_mean": {
+            "mean": 0.19756186636162332,
+            "p95": 0.3278947406919432,
+            "max": 0.3278947406919432
+          },
+          "module_neighbors_mean": {
+            "mean": 0.5986271839017834,
+            "p95": 0.782608695652174,
+            "max": 0.782608695652174
+          },
+          "module_load_small_mean": {
+            "mean": 0.03229244511448033,
+            "p95": 0.09102500922669972,
+            "max": 0.09102500922669972
+          },
+          "module_load_small_gt05_fraction": {
+            "mean": 0.19587673611111112,
+            "p95": 0.3333333333333333,
+            "max": 0.3333333333333333
+          },
+          "module_load_middle_mean": {
+            "mean": 0.03454751338279431,
+            "p95": 0.0851158329852654,
+            "max": 0.0851158329852654
+          },
+          "module_load_middle_gt05_fraction": {
+            "mean": 0.20841557017543857,
+            "p95": 0.34210526315789475,
+            "max": 0.34210526315789475
+          },
+          "module_load_large_mean": {
+            "mean": 0.016088850146047034,
+            "p95": 0.04158552343406106,
+            "max": 0.04158552343406106
+          },
+          "module_load_large_gt05_fraction": {
+            "mean": 0.06726796830786644,
+            "p95": 0.18421052631578946,
+            "max": 0.18421052631578946
+          }
+        }
+      },
+      "train_seen_count": 32,
+      "weights": {
+        "overlap": 0.75,
+        "boundary": 0.5,
+        "mib": 0.5,
+        "module_overlap_counted": 0.75,
+        "compactness": 0.05
+      },
+      "lr": 0.001,
+      "elapsed_seconds": 3.928252399993653,
+      "postprocessing_calls": 0,
+      "train_seen": {
+        "total": 0.08002295345067978,
+        "overlap": 0.009475113824009895,
+        "boundary": 0.09543058276176453,
+        "mib": 0.0032258140854537487,
+        "module_overlap_base": 0.013002082705497742,
+        "module_overlap_counted": 0.018590673804283142,
+        "module_count_extra": 0.0055885910987854,
+        "module_load_mean": 0.027754899114370346,
+        "module_load_max": 0.34668976068496704,
+        "module_load_gt05_fraction": 0.15855790674686432,
+        "module_soft_count_mean": 0.19756191968917847,
+        "module_count_factor_mean": 1.121753454208374,
+        "compactness": 0.19290833175182343,
+        "count": 32,
+        "selection_proxy": 0.08002295345067978,
+        "raw_hard_legal": 0,
+        "raw_hard_legal_rate": 0.0,
+        "batched_inference_seconds_per_case": 0.0019156656248924264,
+        "draft_diagnostics": {
+          "overlap_pairs": {
+            "mean": 22.28125,
+            "p95": 45.0,
+            "max": 45.0
+          },
+          "overlap_area_fraction": {
+            "mean": 0.012031095067759845,
+            "p95": 0.03015598577180103,
+            "max": 0.03015598577180103
+          },
+          "penetration_squared_per_block": {
+            "mean": 0.004475392854723292,
+            "p95": 0.014340150298956458,
+            "max": 0.014340150298956458
+          },
+          "max_local_penetration": {
+            "mean": 0.27096472588254245,
+            "p95": 0.7016465558171193,
+            "max": 0.7016465558171193
+          },
+          "largest_conflict_cluster": {
+            "mean": 6.59375,
+            "p95": 11.0,
+            "max": 11.0
+          },
+          "largest_conflict_cluster_fraction": {
+            "mean": 0.10187702044967491,
+            "p95": 0.12,
+            "max": 0.12
+          },
+          "module_load_mean": {
+            "mean": 0.027754892284536987,
+            "p95": 0.07273588611978865,
+            "max": 0.07273588611978865
+          },
+          "module_load_p95": {
+            "mean": 0.11013289844825008,
+            "p95": 0.23533063846565475,
+            "max": 0.23533063846565475
+          },
+          "module_load_max": {
+            "mean": 0.34668941668394293,
+            "p95": 1.0,
+            "max": 1.0
+          },
+          "module_load_gt05_fraction": {
+            "mean": 0.15855789836911122,
+            "p95": 0.28695652173913044,
+            "max": 0.28695652173913044
+          },
+          "module_load_gt50_fraction": {
+            "mean": 0.006521739130434783,
+            "p95": 0.034782608695652174,
+            "max": 0.034782608695652174
+          },
+          "module_soft_count_mean": {
+            "mean": 0.19756186636162332,
+            "p95": 0.3278947406919432,
+            "max": 0.3278947406919432
+          },
+          "module_neighbors_mean": {
+            "mean": 0.5986271839017834,
+            "p95": 0.782608695652174,
+            "max": 0.782608695652174
+          },
+          "module_load_small_mean": {
+            "mean": 0.03229244511448033,
+            "p95": 0.09102500922669972,
+            "max": 0.09102500922669972
+          },
+          "module_load_small_gt05_fraction": {
+            "mean": 0.19587673611111112,
+            "p95": 0.3333333333333333,
+            "max": 0.3333333333333333
+          },
+          "module_load_middle_mean": {
+            "mean": 0.03454751338279431,
+            "p95": 0.0851158329852654,
+            "max": 0.0851158329852654
+          },
+          "module_load_middle_gt05_fraction": {
+            "mean": 0.20841557017543857,
+            "p95": 0.34210526315789475,
+            "max": 0.34210526315789475
+          },
+          "module_load_large_mean": {
+            "mean": 0.016088850146047034,
+            "p95": 0.04158552343406106,
+            "max": 0.04158552343406106
+          },
+          "module_load_large_gt05_fraction": {
+            "mean": 0.06726796830786644,
+            "p95": 0.18421052631578946,
+            "max": 0.18421052631578946
+          }
+        }
+      },
+      "lr_next": 0.001,
+      "lr_drops": 0,
+      "lr_bad_checks": 0,
+      "early_bad_checks": 0,
+      "meaningful_best": null
+    }
+  ],
+  "gradients": [],
+  "lr_drops": 0,
+  "lr_tier": 1,
+  "lr_bad_checks": 0,
+  "lowest_lr_validated": false,
+  "full_dev_complete": false,
+  "postprocessing_calls": 0,
+  "implementation_check": true,
+  "test_read": false,
+  "tail_test_read": false
+}

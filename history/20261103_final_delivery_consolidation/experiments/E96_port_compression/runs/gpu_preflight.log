@@ -1,0 +1,94 @@
+Verified archived cache loaded: train 5 cases
+Eager/graph parity centroid parameter 0.0 Loss 0.0
+{
+  "status": "passed",
+  "arm": "centroid",
+  "device": "cuda",
+  "unique_train_cases": 5,
+  "indices": [
+    1683,
+    10027,
+    5474,
+    10140,
+    15001
+  ],
+  "initial_model_sha256": "72f0de888a86475be99c001a7a058dbdaded1ada7231958533264a1d1567adc1",
+  "token_slots": 0,
+  "natural_module_slots": 75,
+  "legacy_module_summary_exact": true,
+  "port_order_invariant": true,
+  "empty_connectivity_finite": true,
+  "labels_and_test_rejected": true,
+  "zero_head_identity_exact": true,
+  "original_full_port_Loss_preserved": true,
+  "one_simultaneous_output_head": true,
+  "public_hard_geometry_preserved": true,
+  "real_Adam_Dropout_next_update_restore_bit_exact": true,
+  "serialized_cursor_order_preserved": true,
+  "frozen_L_has_no_gradients": true,
+  "implementation_updates_only": true,
+  "formal_training_started": false,
+  "test_read": false,
+  "graph": {
+    "graph_reconstruction_resume_model_Adam_RNG_bit_exact": true,
+    "warmup_no_Adam_updates": true,
+    "same_shape_eager_graph_update_max_abs": 0.0,
+    "same_shape_eager_graph_loss_max_abs": 0.0,
+    "nonfinite_rejected_before_Adam": true,
+    "peak_allocated_MiB": 2129.77490234375,
+    "raw_public_shape": [
+      32,
+      120,
+      480
+    ],
+    "network_tokens": 120
+  },
+  "seconds": 45.186363699998765
+}
+Verified archived cache loaded: train 5 cases
+Eager/graph parity regional32 parameter 0.0 Loss 0.0
+{
+  "status": "passed",
+  "arm": "regional32",
+  "device": "cuda",
+  "unique_train_cases": 5,
+  "indices": [
+    1683,
+    10027,
+    5474,
+    10140,
+    15001
+  ],
+  "initial_model_sha256": "72f0de888a86475be99c001a7a058dbdaded1ada7231958533264a1d1567adc1",
+  "token_slots": 32,
+  "natural_module_slots": 75,
+  "legacy_module_summary_exact": true,
+  "port_order_invariant": true,
+  "empty_connectivity_finite": true,
+  "labels_and_test_rejected": true,
+  "zero_head_identity_exact": true,
+  "original_full_port_Loss_preserved": true,
+  "one_simultaneous_output_head": true,
+  "public_hard_geometry_preserved": true,
+  "real_Adam_Dropout_next_update_restore_bit_exact": true,
+  "serialized_cursor_order_preserved": true,
+  "frozen_L_has_no_gradients": true,
+  "implementation_updates_only": true,
+  "formal_training_started": false,
+  "test_read": false,
+  "graph": {
+    "graph_reconstruction_resume_model_Adam_RNG_bit_exact": true,
+    "warmup_no_Adam_updates": true,
+    "same_shape_eager_graph_update_max_abs": 0.0,
+    "same_shape_eager_graph_loss_max_abs": 0.0,
+    "nonfinite_rejected_before_Adam": true,
+    "peak_allocated_MiB": 2482.72607421875,
+    "raw_public_shape": [
+      32,
+      120,
+      480
+    ],
+    "network_tokens": 152
+  },
+  "seconds": 23.927061900001718
+}

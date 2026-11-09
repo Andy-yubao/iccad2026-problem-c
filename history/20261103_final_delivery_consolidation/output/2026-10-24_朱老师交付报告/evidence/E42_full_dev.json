@@ -1,0 +1,67 @@
+{
+  "checkpoint_sha256": "12878108e9a58b8c195b314ba6586686c2a6e2796c1f4b6443e102b4db4224a6",
+  "losses": {
+    "total": 0.3575172619819641,
+    "mse": 0.05422357857227325,
+    "center_mse": 0.0021072444934397937,
+    "shape_mse": 0.16962164855003356,
+    "center_local": 0.18914555644989015,
+    "shape": 0.16962164855003356,
+    "relative_local": 0.2390873908996582,
+    "overlap": 0.04140220791101456,
+    "contact": 0.08376102435588836,
+    "boundary": 0.009532972730696202,
+    "mib": 0.012016764499247073,
+    "bbox": 0.00027906136983074246,
+    "local": 0.29132281732559206,
+    "geometry": 0.35751725554466246,
+    "overlap_area": 0.06302021634578704,
+    "crowding": 0.003537696873769164,
+    "void": 0.12855536496639253,
+    "compactness": 0.0016904152520000936,
+    "occupancy": 0.09629704350233079,
+    "repair": 0.45381430387496946,
+    "supervision": 0.29132281732559206,
+    "quality_proxy": 0.35751725554466246,
+    "selection_proxy": 0.45381430387496946,
+    "batched_inference_seconds_per_case": 0.00291817845008336,
+    "count": 2000,
+    "raw_hard_legal": 0,
+    "raw_hard_legal_rate": 0.0,
+    "draft_diagnostics": {
+      "overlap_pairs": {
+        "mean": 75.7345,
+        "p95": 127.0,
+        "max": 147.0
+      },
+      "overlap_area_fraction": {
+        "mean": 0.06302022659001225,
+        "p95": 0.10604861364648896,
+        "max": 0.17004460212093728
+      },
+      "penetration_squared_per_block": {
+        "mean": 0.020358474585031212,
+        "p95": 0.04408996427539026,
+        "max": 0.07682359882529759
+      },
+      "max_local_penetration": {
+        "mean": 0.45486058721218414,
+        "p95": 0.7465371813282716,
+        "max": 0.9120445536313285
+      },
+      "largest_conflict_cluster": {
+        "mean": 54.1235,
+        "p95": 95.0,
+        "max": 112.0
+      },
+      "largest_conflict_cluster_fraction": {
+        "mean": 0.7761537745484799,
+        "p95": 0.9304942400594574,
+        "max": 1.0
+      }
+    }
+  },
+  "count": 2000,
+  "postprocessing_calls": 0,
+  "test_read": false
+}

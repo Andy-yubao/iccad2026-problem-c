@@ -1,0 +1,62 @@
+{
+  "started_utc": "2026-11-01T15:03:43.007835+00:00",
+  "device": "NVIDIA GeForce RTX 5080 Laptop GPU, 16303 MiB, 0 MiB, 0 %, 23.12 W",
+  "torch_version": "2.7.1+cu128",
+  "threads": 2,
+  "batch": 1,
+  "precision": "FP32 no AMP/TF32",
+  "repeats": 20,
+  "warmups": 3,
+  "train_ids": [
+    1683,
+    10027,
+    5474,
+    10140,
+    15001
+  ],
+  "members": [
+    [
+      "worker_34/layouts_5488.th",
+      30
+    ],
+    [
+      "worker_71/layouts_1568.th",
+      72
+    ],
+    [
+      "worker_72/layouts_6608.th",
+      38
+    ],
+    [
+      "worker_68/layouts_6496.th",
+      67
+    ],
+    [
+      "worker_30/layouts_8400.th",
+      82
+    ]
+  ],
+  "cold_start_excluded": true,
+  "files_loading_excluded": true,
+  "quality_not_evaluated": true,
+  "test_read": false,
+  "source_sha256": {
+    "latency.py": "510dc428a5de3b07bc84ef0af776b5982eb1fafff91c72ab872d677f8504dd19",
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "nn85/base_model.py": "0d71c96c75976dc57d589d5709639291d1a30addffa8a5f0f2c53e2cb88a9089",
+    "nn85/center_corrector.py": "13a3734a5845f7230d309a34bbe7c2232fd2142492c96c714546e6e56c4ed072",
+    "nn85/cooperation.py": "e69f2e58d5f89a7864344b4d0ea1474e89374688a2a6cb13ffa83741d56bf2d3",
+    "nn85/corrector.py": "c9edacd4445916572c131f2c7455daa054b8ad7c598410a2f96b90d8a9217af9",
+    "nn85/features.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+    "nn85/frame.py": "4e4e42ea108392d65df2f96bae7f85ce04e94f8535b57391fe62615f4c6cf987",
+    "nn85/inference.py": "b202f111d9b5feeb5f3ccbc473fb29e732d8088c5fb43472ab7d49f445378838",
+    "nn85/mib_projection.py": "123a3e0ea2018c6367a66a4d7412105b09ce5c01b488ea3e261f2bb4336f5526",
+    "nn85/model.py": "9355ae30eda4f6cb55c9624204d95f03d4b750a347678db7cb18590a77e6fdde",
+    "nn85/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "nn96/base_model.py": "0d71c96c75976dc57d589d5709639291d1a30addffa8a5f0f2c53e2cb88a9089",
+    "nn96/compression.py": "58d0a9a783dea511550743fdbac3548cb93a6f5fc7c532a24f5c0bf529e39f1a",
+    "nn96/data.py": "99be5ffde69045bd14d3c5b811f21ef94118faa1bd6a07586408efd4564abb87",
+    "nn96/model.py": "1e22441f5378dd8f97774247d2db25e1e2375eda8bc3bc4b7c0b6787e87184a9",
+    "nn96/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

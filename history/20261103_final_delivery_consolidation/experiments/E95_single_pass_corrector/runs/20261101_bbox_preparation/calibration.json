@@ -1,0 +1,101 @@
+{
+  "status": "passed",
+  "box_weight": 8.46,
+  "previous_effective_box_weight": 0.05,
+  "multiplier": 169.20000000000002,
+  "rule_sha256": "5db886c076b9ce1cb82be33650bb60587af31b2bfa67b2b953e041d33f572768",
+  "initial_gradients": [
+    {
+      "index": 1683,
+      "overlap_gradient_norm": 16.335241317749023,
+      "bbox_gradient_norm": 1.6167552471160889,
+      "ratio": 10.103719376749977,
+      "cosine": -0.061746034771203995,
+      "bbox": 1.017640233039856
+    },
+    {
+      "index": 10027,
+      "overlap_gradient_norm": 9.141655921936035,
+      "bbox_gradient_norm": 1.6592320203781128,
+      "ratio": 5.509570578232209,
+      "cosine": -0.18775254487991333,
+      "bbox": 1.0188251733779907
+    },
+    {
+      "index": 5474,
+      "overlap_gradient_norm": 13.888623237609863,
+      "bbox_gradient_norm": 1.6417969465255737,
+      "ratio": 8.459403744781861,
+      "cosine": -0.03418583422899246,
+      "bbox": 1.0235438346862793
+    },
+    {
+      "index": 10140,
+      "overlap_gradient_norm": 23.971439361572266,
+      "bbox_gradient_norm": 1.6859225034713745,
+      "ratio": 14.218589117954247,
+      "cosine": -0.04512844234704971,
+      "bbox": 1.020784854888916
+    },
+    {
+      "index": 15001,
+      "overlap_gradient_norm": 10.102028846740723,
+      "bbox_gradient_norm": 1.708816647529602,
+      "ratio": 5.9117102243502835,
+      "cosine": -0.059656355530023575,
+      "bbox": 1.0081274509429932
+    }
+  ],
+  "ranking_diagnostic": [
+    {
+      "index": 1683,
+      "initial_bbox": 1.017640233039856,
+      "old_corrected_bbox": 1.1637295484542847,
+      "initial_overlap": 0.170105442404747,
+      "old_corrected_overlap": 0.0071062250062823296,
+      "new_loss_initial": 8.796782493591309,
+      "new_loss_old_corrected": 9.873745918273926
+    },
+    {
+      "index": 10027,
+      "initial_bbox": 1.0188251733779907,
+      "old_corrected_bbox": 1.2454155683517456,
+      "initial_overlap": 0.2874814569950104,
+      "old_corrected_overlap": 0.003692289814352989,
+      "new_loss_initial": 8.922174453735352,
+      "new_loss_old_corrected": 10.565084457397461
+    },
+    {
+      "index": 5474,
+      "initial_bbox": 1.0235438346862793,
+      "old_corrected_bbox": 1.2428420782089233,
+      "initial_overlap": 0.4713274836540222,
+      "old_corrected_overlap": 0.10827761888504028,
+      "new_loss_initial": 9.147625923156738,
+      "new_loss_old_corrected": 10.657012939453125
+    },
+    {
+      "index": 10140,
+      "initial_bbox": 1.020784854888916,
+      "old_corrected_bbox": 1.1432114839553833,
+      "initial_overlap": 0.2470138818025589,
+      "old_corrected_overlap": 0.004905651789158583,
+      "new_loss_initial": 8.900946617126465,
+      "new_loss_old_corrected": 9.698512077331543
+    },
+    {
+      "index": 15001,
+      "initial_bbox": 1.0081274509429932,
+      "old_corrected_bbox": 1.2857521772384644,
+      "initial_overlap": 0.645209789276123,
+      "old_corrected_overlap": 0.003640513401478529,
+      "new_loss_initial": 9.188610076904297,
+      "new_loss_old_corrected": 10.907194137573242
+    }
+  ],
+  "old_checkpoint_sha256": "dce25426b5010eb2fdddb572e45f06926eed55a2fac2a08434d33d12c76302a1",
+  "no_dev_or_test_loaded": true,
+  "reference_in_objective": false,
+  "optimizer_updates": 0,
+  "note": "analytic gradient scale hypothesis, not an optimum or a guarantee of nonexpansion"
+}

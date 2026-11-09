@@ -1,0 +1,62 @@
+{
+  "identity": {
+    "version": "E44.stageA.v1",
+    "config": {
+      "seed": 0,
+      "threads": 4,
+      "budget": {
+        "seconds": 0.18,
+        "max_lp_calls": 4,
+        "shape_updates": 2,
+        "threads": 4
+      },
+      "wall_seconds": 180,
+      "members": [
+        [
+          "worker_17/layouts_6608.th",
+          68
+        ],
+        [
+          "worker_79/layouts_5040.th",
+          16
+        ]
+      ],
+      "existing_e42_sha256": "a8b13cad56de8520e2a14e3ed72ab9f35eb9df79c294c32d21f7c9c8606a129a",
+      "fixture_count": 3,
+      "real_dev_count": 2,
+      "test_read": false,
+      "selection": "input-only objective; reference and inherited E42 arms are diagnostics only"
+    },
+    "sources": {
+      "datasets/__init__.py": "03c36f364366be6c8a5091d6bd3dbec0788d7871747acdeac5fa89d4974cec21",
+      "datasets/cases.py": "1fd51addaaae38164c22f1946712665beebac700054db4bb07ed4f9d44e0b168",
+      "datasets/paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+      "datasets/public_member_inputs.py": "6d525fa963d098051648b01d6bc75fb8a032dd5746529fb3c750afe2b5e8bb09",
+      "datasets/quality_layouts.py": "94f374fa9562770a9c7deadb645d73c3af1fc1a20251f98f1dce4ac575820191",
+      "datasets/reference_layouts.py": "f6aeeba298a163b7d506c67e3fba024cd3a191c3aae1116fc6b5d294431db9b5",
+      "datasets/worksets.py": "013087151ab8e1195d7d2757e777839f521486425eeaff4c45fed4e370df233c",
+      "docs/protocol.md": "f31a4e394df17e816b108e8cff21e7459c79dc50098c22fdf032688a85e106ec",
+      "experiments/E44_near_limit_proposals/__init__.py": "e5bcb3aa4212d609694652f60104c72dc6551a992c9909218af13b660218cb45",
+      "experiments/E44_near_limit_proposals/evidence.py": "2c7f6d508fff0ddb9efb01be10548dfc7fb2c3866310e0bdb1fd54c2e30872ed",
+      "experiments/E44_near_limit_proposals/gate.py": "c57201eb88f45a2b29ca579d1375d92c00985586912bd043cfe25aa690d031d9",
+      "experiments/E44_near_limit_proposals/geometry.py": "dce1407243e7a1c6312dd70a7c02130eeab3324116f7e3befefe357629e1c91c",
+      "experiments/E44_near_limit_proposals/problem.py": "6ac826e9b65867a4e4b9e43a8430f63ce72aa8ba027c018e159fbd511c22f455",
+      "experiments/E44_near_limit_proposals/solver.py": "f75ba3395d6eb0b846ad9e0f0d3e4fe46e969737fc50f64eab78929484d484ed",
+      "experiments/E44_near_limit_proposals/structure.py": "c1e78e0c0edd6c849cd87e34602ed224f65d84348fe5a78e32cbcbe28a6a62b0",
+      "protocol/paths.json": "7a28cd42de0f10809500c43c48836576361e67a72e723f7b32a404186df9b419",
+      "protocol/reference_workset_v5.json": "1409ccf825b9c7cae1097a22e8dc4068e1283d79541c85ce54c5627d0c2b4208",
+      "protocol/split_v1.json": "a1f23edae03194c1155d260415482d892e4cb5ad66170abc93af04aafc8cefbd",
+      "scoring/__init__.py": "933bf2be947e20bae164511f26afaa84c2f331d0dbdebc417d235db8358a9247",
+      "scoring/checks.py": "738f6b57e20dce58516f3f10d83689f8df273a84a02b2dce99c6ccc1f904763a",
+      "scoring/evaluation.py": "356e0d1c788c6f25154b33fb1c2455388317d2cc0dd96ca50d7357c58612c611",
+      "scoring/official.py": "478fbc228a56ec4b336b5d8687a44b22b749f30aae09372f57c08e7124270e03",
+      "third_party/FloorSet/cost.py": "b60561556f79aa41c196c8fcaddea57840aab41059c76dbc3f80b4fdde6b48c3",
+      "third_party/FloorSet/iccad2026contest/iccad2026_evaluate.py": "64db37865b42baf11add62bdbf035690dca086cd4be7b5b4e58db756f20d8498",
+      "third_party/FloorSet/utils.py": "9299d9257f5bd932001896307f2296b51cc5567f44150db5514f357ed93c121e"
+    },
+    "python": "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe"
+  },
+  "git_head": "34b073d82ea17815661c91854357b4ffcb16c566",
+  "git_status": "M .gitignore\n M README.md\n M experiments/README.md\n?? experiments/E32_learned_relation_feedback/runs/\n?? experiments/E33_learned_solver_portfolio/runs/20261022_interface_check5/\n?? experiments/E33_learned_solver_portfolio/runs/20261022_pipeline_seed0/\n?? experiments/E33_learned_solver_portfolio/runs/20261022_research_summary/\n?? experiments/E34_sparse_contact_feedback/runs/\n?? experiments/E38_model_architecture/\n?? experiments/E39_rectangular_attention/\n?? experiments/E40_endpoint_constraint_tokens/\n?? experiments/E41_rectangular_depth/\n?? experiments/E42_joint_regularization/\n?? experiments/E43_overlap_area_loss/\n?? experiments/E44_near_limit_proposals/\n?? output/",
+  "source_snapshot_sha256": "e35b108d6c4540360dcab435a42ad0a30cbe3b530cb06a72c0a5c0de8bb9f65f"
+}

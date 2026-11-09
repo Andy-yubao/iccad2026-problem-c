@@ -1,0 +1,16 @@
+{
+  "revision":"E99.R24.frozen_AR_independent_training_probe.v1",
+  "single_hypothesis":"Check whether the frozen retained AR benefit reproduces on another500 training members before further mechanism tuning. No coefficient change: paired original noAR vs exact R15 retained AR on same newly generated C3 drafts.",
+  "evidence":"R23 complete dev500 all hard legal butQ1.01388508659,135 requests>=250ms,max2.312s. All500 raw drafts bit-exact to saved original control; recomputed matched originalQ1.013332050323. This dev observation rejects upgrade; no per-dev-case parameter selection follows.",
+  "panel":"R24/panel.json:5 per public n21..120 from frozen v5 train pool, disjoint original fixed train_monitor500, deterministic hash rule independent of labels/scores. Original registry/split/index files unchanged. These members were seen by neural training; only independent of E99 AR tuning so far, not a new sealed test.",
+  "configuration":"Exact frozen R15 attraction_equal_slope from R23, unchanged weights,old angular shape,20 rounds,all caps; no extra variants or fitting on this probe.",
+  "arms":["original","retained_AR"],
+  "pipeline":"Fresh public construction -> frozen C3 batch1 GPU -> either raw or same retained AR -> byte-identical original full planner/config -> same necessary hard checks. Score references only after timer. Require same raw draft bitwise for each matched arm pair.",
+  "preflight":{"indices":[0,4,43,95,135],"checks":"Panel membership/index binding, train-only public inputs, both arm raw drafts exact, frozen model unchanged, full official+independent legality. Ten same-identity arm-case records reused in full1000."},
+  "timing":"Same complete scope as R23, no cached NN or throughput amortization. Shard disk loading and model/native warmup separate. Rotate two-arm order by fixed panel index; single worker1 math thread. Training probe timing cannot establish dev500 acceptance.",
+  "execution":"OS lock, source/checkpoint/panel/membership hashes, atomic cases/coordinates, STOP at arm boundaries, explicit same-identity resume only. Do not duplicate controls or restart failed jobs automatically.",
+  "preflight_output":"runs/research/20261103_R24_probe_preflight5",
+  "output":"runs/research/20261103_R24_frozen_AR_train_probe500",
+  "after":"Audit frozen paired benefit on original train_monitor500 vs new training probe; distinguish repeatability from independent generalization. Register next single mechanism on training sources; no dev coefficient sweep or checkpoint reselection. Existing R23 fixed100 gallery remains current delivered view.",
+  "test_read":false,"new_training":false,"new_dev_evaluation":false
+}

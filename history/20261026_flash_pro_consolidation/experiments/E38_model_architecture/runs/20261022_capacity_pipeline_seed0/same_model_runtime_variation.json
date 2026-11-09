@@ -1,0 +1,185 @@
+{
+  "model_parameters_exactly_identical": true,
+  "raw_geometry_metric_changes": [],
+  "reference_summary": {
+    "count": 500,
+    "hard_legal": 500,
+    "mean_Q": 1.067168979640638,
+    "weighted_Q": 1.061168854793639,
+    "p95_Q": 1.2289630505461864,
+    "max_Q": 2.525082328162355,
+    "worst5pct_mean_Q": 1.3857141725476374,
+    "seconds_mean": 0.2738094186033122,
+    "seconds_p95": 0.6798815849935635,
+    "row_fallbacks": 0,
+    "rescue_cases": 13,
+    "errors": 0,
+    "hpwl_gap_mean_returned": 0.030290024957067743,
+    "area_gap_mean_returned": 0.033849779066723304,
+    "boundary_violations_mean_returned": 0.352,
+    "grouping_violations_mean_returned": 0.306,
+    "mib_violations_mean_returned": 0.002,
+    "inference_seconds_mean_returned": 0.021851515602786094,
+    "postprocess_seconds_mean_returned": 0.2518158758000936,
+    "mean_center_move_local_mean_returned": 0.5257203059962594,
+    "max_center_move_local_mean_returned": 2.193832325261105
+  },
+  "control_summary": {
+    "count": 500,
+    "hard_legal": 500,
+    "mean_Q": 1.0648696069314374,
+    "weighted_Q": 1.0404011225363554,
+    "p95_Q": 1.2289572353521911,
+    "max_Q": 2.525082328162355,
+    "worst5pct_mean_Q": 1.3451911574313695,
+    "seconds_mean": 0.26438817000109704,
+    "seconds_p95": 0.6762826449237763,
+    "row_fallbacks": 0,
+    "rescue_cases": 11,
+    "errors": 0,
+    "hpwl_gap_mean_returned": 0.0275451942685038,
+    "area_gap_mean_returned": 0.034369770406400844,
+    "boundary_violations_mean_returned": 0.35,
+    "grouping_violations_mean_returned": 0.284,
+    "mib_violations_mean_returned": 0.002,
+    "inference_seconds_mean_returned": 0.02165778499748558,
+    "postprocess_seconds_mean_returned": 0.24259123619901948,
+    "mean_center_move_local_mean_returned": 0.5148989896918389,
+    "max_center_move_local_mean_returned": 2.124124365868385
+  },
+  "weighted_Q_difference_same_model": -0.020767732257283678,
+  "largest_weighted_changes": [
+    {
+      "index": 21,
+      "member": [
+        "worker_17/layouts_6608.th",
+        68
+      ],
+      "n": 120,
+      "reference_Q": 2.332869894254544,
+      "control_Q": 1.1742195833209612,
+      "Q_delta": -1.1586503109335826,
+      "seconds_delta": -2.4699999999720603,
+      "weighted_contribution_delta": -0.018567641760571008
+    },
+    {
+      "index": 398,
+      "member": [
+        "worker_63/layouts_8624.th",
+        63
+      ],
+      "n": 114,
+      "reference_Q": 1.3421723901714275,
+      "control_Q": 1.1039282586375614,
+      "Q_delta": -0.23824413153386614,
+      "seconds_delta": -0.24329669994767755,
+      "weighted_contribution_delta": -0.0023156842227920593
+    },
+    {
+      "index": 401,
+      "member": [
+        "worker_5/layouts_0.th",
+        27
+      ],
+      "n": 85,
+      "reference_Q": 1.060978196213537,
+      "control_Q": 1.2323606210738223,
+      "Q_delta": 0.17138242486028532,
+      "seconds_delta": -0.016523599973879755,
+      "weighted_contribution_delta": 0.0001486203946669741
+    },
+    {
+      "index": 241,
+      "member": [
+        "worker_32/layouts_0.th",
+        29
+      ],
+      "n": 89,
+      "reference_Q": 1.0444612809252336,
+      "control_Q": 1.154434122020808,
+      "Q_delta": 0.10997284109557448,
+      "seconds_delta": -0.5282055998686701,
+      "weighted_contribution_delta": 0.00013309520185954396
+    },
+    {
+      "index": 45,
+      "member": [
+        "worker_34/layouts_5264.th",
+        29
+      ],
+      "n": 99,
+      "reference_Q": 1.2131680433030996,
+      "control_Q": 1.1713349937264554,
+      "Q_delta": -0.04183304957664413,
+      "seconds_delta": -0.01480109989643097,
+      "weighted_contribution_delta": -0.00011649533853391728
+    },
+    {
+      "index": 340,
+      "member": [
+        "worker_7/layouts_1904.th",
+        61
+      ],
+      "n": 83,
+      "reference_Q": 1.1604857246242937,
+      "control_Q": 1.0319977588465938,
+      "Q_delta": -0.12848796577769983,
+      "seconds_delta": -0.6665392001159489,
+      "weighted_contribution_delta": -9.431747524022524e-05
+    },
+    {
+      "index": 406,
+      "member": [
+        "worker_18/layouts_8624.th",
+        111
+      ],
+      "n": 100,
+      "reference_Q": 1.032276446023827,
+      "control_Q": 1.0578613435986806,
+      "Q_delta": 0.025584897574853604,
+      "seconds_delta": -1.0293108000187203,
+      "weighted_contribution_delta": 7.743974460752973e-05
+    },
+    {
+      "index": 409,
+      "member": [
+        "worker_72/layouts_6720.th",
+        14
+      ],
+      "n": 92,
+      "reference_Q": 1.0066429316173304,
+      "control_Q": 1.0447281831813449,
+      "Q_delta": 0.03808525156401443,
+      "seconds_delta": -0.02412349998485297,
+      "weighted_contribution_delta": 5.9184421005614784e-05
+    },
+    {
+      "index": 218,
+      "member": [
+        "worker_5/layouts_0.th",
+        19
+      ],
+      "n": 85,
+      "reference_Q": 1.0912865988251645,
+      "control_Q": 1.0236800575397236,
+      "Q_delta": -0.06760654128544097,
+      "seconds_delta": -0.022853399976156652,
+      "weighted_contribution_delta": -5.862742843148839e-05
+    },
+    {
+      "index": 352,
+      "member": [
+        "worker_92/layouts_4480.th",
+        7
+      ],
+      "n": 86,
+      "reference_Q": 1.1389626433568896,
+      "control_Q": 1.0945427145130646,
+      "Q_delta": -0.04441992884382495,
+      "seconds_delta": -0.024949899991042912,
+      "weighted_contribution_delta": -4.186790135963486e-05
+    }
+  ],
+  "interpretation": "Identical model and raw geometry; time-budgeted repair variability cannot be attributed to model training. Rank models primarily by the fixed raw validation proxy and raw draft diagnostics. Report terminal results against both E25 reference and the contemporaneous retrained control, without terminal-Q checkpoint selection.",
+  "test_read": false
+}

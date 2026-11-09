@@ -1,0 +1,238 @@
+{
+  "status": "spatial_complete_pooled_pending",
+  "checked_utc": "2026-10-31T10:11:57.318725+00:00",
+  "pipeline_at_check": {
+    "status": "running",
+    "arm": "pooled",
+    "stage": "train",
+    "pid": 29400,
+    "test_read": false
+  },
+  "training": {
+    "status": "early_stop",
+    "elapsed_seconds": 1119.8581672,
+    "steps": 9500,
+    "epochs": 19,
+    "graph_step_control": {
+      "policy": "fresh corrector AdamW with global gradient clipping1; no parameter projection; placer frozen",
+      "steps": 9500,
+      "group_names": [
+        "",
+        "node.0",
+        "node.2",
+        "message.0",
+        "grid_encoder.0",
+        "grid_encoder.1",
+        "grid_encoder.3",
+        "grid_encoder.4",
+        "grid_encoder.6",
+        "query",
+        "key",
+        "value",
+        "readout.0",
+        "delta_head"
+      ],
+      "clipped_steps_per_group": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "last_scales": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "best_epoch": 18,
+    "best_proxy": 0.32752189540863036,
+    "full_dev_complete": false,
+    "postprocessing_calls": 0,
+    "test_read": false,
+    "tail_test_read": false,
+    "implementation_check": false,
+    "final_postprocessed_Q": "not run; one frozen best assessment is a separate stage"
+  },
+  "lr_drops": [
+    {
+      "epoch": 8,
+      "lr": 0.001,
+      "next_lr": 0.00025,
+      "drops": 1
+    },
+    {
+      "epoch": 11,
+      "lr": 0.00025,
+      "next_lr": 0.0001,
+      "drops": 2
+    },
+    {
+      "epoch": 17,
+      "lr": 0.0001,
+      "next_lr": 5e-05,
+      "drops": 3
+    }
+  ],
+  "lowest_completed_epochs": 2,
+  "best_monitor_relative_improvement": 0.00479646070953638,
+  "full_dev_loss_before": 0.3273173639774323,
+  "full_dev_loss_after": 0.3257313959598541,
+  "weighted_loss_change": {
+    "reference": -0.0015862984657287471,
+    "overlap_total": 0.00020930462980278498,
+    "task": -0.00020897460971435806
+  },
+  "paired_counts2000": {
+    "overlap_area_fraction": {
+      "better": 1251,
+      "worse": 749,
+      "equal": 0
+    },
+    "max_covered_fraction": {
+      "better": 831,
+      "worse": 1140,
+      "equal": 29
+    },
+    "bbox_over_A": {
+      "better": 1000,
+      "worse": 1000,
+      "equal": 0
+    },
+    "loss_total": {
+      "better": 1414,
+      "worse": 586,
+      "equal": 0
+    }
+  },
+  "comparison": {
+    "status": "complete",
+    "terminal_summary": {
+      "count": 500,
+      "hard_legal": 500,
+      "mean_Q": 1.0396423756429727,
+      "weighted_Q": 1.0243043994533492,
+      "p95_Q": 1.1604676558133606,
+      "max_Q": 2.3585260847745175,
+      "worst5pct_mean_Q": 1.2641005117557895,
+      "seconds_mean": 0.3133606551978737,
+      "seconds_p95": 0.6787502799881622,
+      "row_fallbacks": 0,
+      "rescue_cases": 6,
+      "errors": 0,
+      "hpwl_gap_mean_returned": 0.009849055359928144,
+      "area_gap_mean_returned": 0.017738084889333004,
+      "boundary_violations_mean_returned": 0.206,
+      "grouping_violations_mean_returned": 0.226,
+      "mib_violations_mean_returned": 0.0,
+      "inference_seconds_mean_returned": 0.09705030219745822,
+      "postprocess_seconds_mean_returned": 0.21612921439867933,
+      "mean_center_move_local_mean_returned": 0.372161564548597,
+      "max_center_move_local_mean_returned": 1.5231408077532242
+    },
+    "E90_terminal_summary": {
+      "count": 500,
+      "hard_legal": 500,
+      "mean_Q": 1.0388259368207473,
+      "weighted_Q": 1.0223475171670156,
+      "p95_Q": 1.145570827221716,
+      "max_Q": 1.8419663187374198,
+      "worst5pct_mean_Q": 1.274665676966712,
+      "seconds_mean": 0.2744325074002845,
+      "seconds_p95": 0.6128417149826418,
+      "row_fallbacks": 0,
+      "rescue_cases": 6,
+      "errors": 0,
+      "hpwl_gap_mean_returned": 0.012173637421218889,
+      "area_gap_mean_returned": 0.01749755698046387,
+      "boundary_violations_mean_returned": 0.168,
+      "grouping_violations_mean_returned": 0.22,
+      "mib_violations_mean_returned": 0.002,
+      "inference_seconds_mean_returned": 0.07042669959960039,
+      "postprocess_seconds_mean_returned": 0.20383588799915742,
+      "mean_center_move_local_mean_returned": 0.38451847166746256,
+      "max_center_move_local_mean_returned": 1.5759551520527484
+    },
+    "weighted_Q_difference": 0.0019568822863335186,
+    "worker_bootstrap95": [
+      0.00019172980580421978,
+      0.003901700838264851
+    ],
+    "raw2000": {
+      "count": 2000,
+      "pair_overlap": 0.05416362098049276,
+      "module_pass10": 0.6023867604491888,
+      "worst_module_coverage_mean": 0.43427798731416933,
+      "all_modules_pass10": 0
+    },
+    "E90_raw2000": {
+      "count": 2000,
+      "pair_overlap": 0.05442034250162526,
+      "module_pass10": 0.5984752042899103,
+      "worst_module_coverage_mean": 0.4320735669233443,
+      "all_modules_pass10": 0
+    },
+    "sparse157": {
+      "count": 157,
+      "pair_overlap": 0.085210226246356,
+      "module_pass10": 0.3924731182795699,
+      "worst_module_coverage_mean": 0.6097619189724804,
+      "all_modules_pass10": 0
+    },
+    "E90_sparse157": {
+      "count": 157,
+      "pair_overlap": 0.08457203108081567,
+      "module_pass10": 0.3932411674347158,
+      "worst_module_coverage_mean": 0.6069188141868647,
+      "all_modules_pass10": 0
+    },
+    "limitations": "Single-seed adaptive development. Frozen E90 source, fresh corrector. Spatial/pooled matched control must be compared before attributing gain to explicit spatial distribution.",
+    "test_read": false
+  },
+  "worst_Q": {
+    "index": 164,
+    "member": [
+      "worker_79/layouts_5040.th",
+      16
+    ],
+    "Q": 2.3585260847745175,
+    "E90_Q": 1.8419663187374198
+  },
+  "frozen_placer_tensors_equal": true,
+  "best_checkpoint_matches_full_dev": true,
+  "gallery_100_hashes_valid": true,
+  "visual_review_ids": [
+    217,
+    194,
+    399
+  ],
+  "visual_observation": "Three fixed cases show small residual changes and continuing draft overlaps; not a statistical quality judgment.",
+  "limitations": [
+    "Pooled not complete.",
+    "Spatial first six epochs used old protection; pooled starts new policy.",
+    "Single seed and adaptive development; bootstrap is descriptive, not blind-test proof.",
+    "Training results.json describes its own stage; later full_dev/terminal/comparison/gallery files establish validation completion."
+  ],
+  "new_training_or_inference_started": false,
+  "test_read": false
+}

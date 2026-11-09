@@ -1,0 +1,22 @@
+{
+  "status": "planned_not_launched",
+  "hypothesis": "Gap/penetration channels may explain the simultaneous collision improvement and boundary/MIB regressions; no_gap retains size and anchor channels, parameter count and initial shared trunk.",
+  "arm": "rectangle_no_gap",
+  "width": 96,
+  "depth": 12,
+  "seed": 0,
+  "batch_size": 32,
+  "max_hours": 4,
+  "max_epochs": 200,
+  "loss_change": false,
+  "initialization": "from scratch; no reuse of check or rectangle weights",
+  "command_train": ".conda/envs/iccad2026/python.exe -u -B -m experiments.E39_rectangular_attention.pipeline --arm rectangle_no_gap --stage train --tag 20261023_rectangle_no_gap_w96d12 --seed 0 --max-hours 4 --max-epochs 200 --resume",
+  "environment": {"E39_WIDTH": "96", "E39_DEPTH": "12", "OMP_NUM_THREADS": "4", "MKL_NUM_THREADS": "4", "OPENBLAS_NUM_THREADS": "4"},
+  "command_final": ".conda/envs/iccad2026/python.exe -u -B -m experiments.E39_rectangular_attention.final --output experiments/E39_rectangular_attention/runs/20261023_rectangle_no_gap_w96d12_rectangle_no_gap_seed0",
+  "wait_for": "experiments/E38_model_architecture/runs/20261023_structure_followup_r2/results.json status complete and no active stage",
+  "controls": ["E38 deep96x12 seed0", "E39 rectangle seed0 v2 corrected run"],
+  "comparison": "Fixed monitor and full-dev proxies plus collision, boundary, MIB and contact diagnostics; one frozen-best terminal assessment, no Q-based checkpoint selection",
+  "mechanism_check": "Compare whether removing gap/penetration changes both collision gains and constraint regressions; a mixed result does not establish general superiority",
+  "stop_resume": "Use experiment/pipeline/output STOP files; remove after diagnosis and resume same command with unchanged source/config and cumulative budget",
+  "test_read": false
+}

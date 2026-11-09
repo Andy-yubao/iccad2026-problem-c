@@ -1,0 +1,67 @@
+{
+  "stage": "gate",
+  "count": 5,
+  "hard_legal": 5,
+  "selected_Q_lt1_03": 2,
+  "all_selected_Q_lt1_03": false,
+  "weighted_Q": 1.1442145304247429,
+  "mean_Q": 1.1551735792905184,
+  "p95_Q": 1.4366338600189932,
+  "max_Q": 1.5034219240039468,
+  "worst5_mean_Q": 1.5034219240039468,
+  "posthoc_best_candidate_Q_lt1_03": 2,
+  "posthoc_best_candidate_max_Q": 1.5034219240039468,
+  "mean_full_seconds": 4.849700700002723,
+  "max_full_seconds": 4.9347158001037315,
+  "over5s_count": 0,
+  "shelf_selected": 0,
+  "mean_selected_D": 0.8469617521934426,
+  "candidate_count_total": 249,
+  "selected_source_counts": {
+    "fixed_shape_polish/3": 3,
+    "shape_branch/1": 1,
+    "shape_branch/5": 1
+  },
+  "baseline_weighted_Q_same_cases": 1.1285510691920144,
+  "per_case_target_diagnostics": [
+    {
+      "index": 0,
+      "selected_target_met": true,
+      "candidate_target_met": true,
+      "first_Q_target_full_seconds": 0.43687949993181974,
+      "min_found_D_for_Q_target": 0.23960368784872962
+    },
+    {
+      "index": 50,
+      "selected_target_met": true,
+      "candidate_target_met": true,
+      "first_Q_target_full_seconds": 0.07774590002372861,
+      "min_found_D_for_Q_target": 0.1064105373266293
+    },
+    {
+      "index": 164,
+      "selected_target_met": false,
+      "candidate_target_met": false,
+      "first_Q_target_full_seconds": null,
+      "min_found_D_for_Q_target": null
+    },
+    {
+      "index": 443,
+      "selected_target_met": false,
+      "candidate_target_met": false,
+      "first_Q_target_full_seconds": null,
+      "min_found_D_for_Q_target": null
+    },
+    {
+      "index": 21,
+      "selected_target_met": false,
+      "candidate_target_met": false,
+      "first_Q_target_full_seconds": null,
+      "min_found_D_for_Q_target": null
+    }
+  ],
+  "test_read": false,
+  "formal_contest_score": false,
+  "scope": "development, input-only online selection; posthoc candidateQ is diagnosis only, not deployed selection",
+  "ready_for_screen100": true
+}

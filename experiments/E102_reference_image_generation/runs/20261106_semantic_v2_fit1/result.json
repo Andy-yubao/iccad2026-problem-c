@@ -1,0 +1,42 @@
+{
+  "status": "completed",
+  "actual_updates": 250,
+  "training_member_count": 1,
+  "member": [
+    "worker_13/layouts_5264.th",
+    63
+  ],
+  "registry_sha256": "efeeb928f0abee4edb5a82d7a77adb901deb7263766eefa68553b563cc2a2dcd",
+  "resolution": 512,
+  "precision": "FP32",
+  "parameters": 12814186,
+  "elapsed_seconds": 59.13220779999392,
+  "initial": {
+    "all_masked_loss": 5.127893447875977,
+    "module_mean_IoU": 0.0018032744992524385,
+    "foreground_pixel_accuracy": 0.08472394943237305,
+    "ce": 4.012969970703125,
+    "dice": 0.9745835661888123,
+    "boundary": 0.7016986608505249
+  },
+  "final": {
+    "all_masked_loss": 1.3180371522903442,
+    "module_mean_IoU": 0.5512010455131531,
+    "foreground_pixel_accuracy": 0.7702200412750244,
+    "ce": 0.8007357120513916,
+    "dice": 0.39529386162757874,
+    "boundary": 0.6100378036499023
+  },
+  "sampled_image": {
+    "module_mean_IoU": 0.37734392285346985,
+    "foreground_pixel_accuracy": 0.6379219889640808
+  },
+  "learning_gate_passed": false,
+  "sampler_takes_reference": false,
+  "formal_training_started": false,
+  "dev_read": false,
+  "test_read": false,
+  "geometry_extraction": false,
+  "repair": false,
+  "Q_computed": false
+}

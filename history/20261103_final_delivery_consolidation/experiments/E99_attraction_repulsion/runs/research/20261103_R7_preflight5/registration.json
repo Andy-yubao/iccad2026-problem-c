@@ -1,0 +1,86 @@
+{
+  "identity": {
+    "plan": {
+      "revision": "E99.R7.conditional_snapshot_preconditioner.v1",
+      "evidence": "R6 implementation: native greedy geometry matches original bit-exact on5 cases, improves recovery time but batch8 ray corrections still cannot repair95/135/335 within4 calls. Flipping individual reduced edges may leave alternate overconstrained paths in the complete pair graph. A physical synchronous update changes many pair order choices coherently.",
+      "hypothesis": "After the first shape call reports PrimalInfeasible, apply exactly one registered12-round native simultaneous public field to the current draft, discard stale dual overrides, and rebuild topology. Subsequent failures use R6 batch8 repair. Do not alter the path for requests whose first solve is not proven infeasible.",
+      "arms": [
+        "R6_control",
+        "field_on_infeasible"
+      ],
+      "backend": {
+        "seconds": 0.18,
+        "maximum_shape_solves": 4,
+        "shape_cap_seconds": 0.045,
+        "projection_and_polish_reserve_seconds": 0.033,
+        "maximum_edge_flips_per_failure": 8,
+        "field_settings": {
+          "iterations": 12,
+          "step_fraction": 0.04,
+          "total_fraction": 0.35,
+          "shape_step_log": 0.025,
+          "shape_total_factor": 1.3,
+          "group_strength": 0.35,
+          "boundary_strength": 0.5
+        }
+      },
+      "implementation_panel": [
+        0,
+        43,
+        95,
+        135,
+        335
+      ],
+      "control_reuse": "Completed R6 batch_dual_native full500 read-only; historical timing explicitly labeled. New arm's mathematically unchanged no-trigger branches may reuse their R6 complete records/coordinates with explicit provenance; include all500 in statistics and list fresh/reused counts. This is conditional-branch development evidence, never fresh complete latency acceptance.",
+      "calibration_panel": "fixed v5 train_monitor500 after R6 completion; only changed triggered branches newly solved; C3/public inputs frozen",
+      "checks": "max5 implementation cases, locks/area/MIB plus original hard checks; cold native initialization separate, timeout/fallback included",
+      "promotion": "Fresh C3 plus all geometry and hard checks on all dev500 only after candidate freeze; no dev coefficient sweep",
+      "test_read": false,
+      "new_training": false
+    },
+    "sources": {
+      "datasets/reference_layouts.py": "f6aeeba298a163b7d506c67e3fba024cd3a191c3aae1116fc6b5d294431db9b5",
+      "experiments/E99_attraction_repulsion/planner/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "experiments/E99_attraction_repulsion/planner/backend/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "experiments/E99_attraction_repulsion/planner/backend/conic_geometry.py": "8d611db3bee47499c77b64039eee09718607f356cd251df5792314a53bcdcd63",
+      "experiments/E99_attraction_repulsion/planner/backend/frozen/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "experiments/E99_attraction_repulsion/planner/backend/frozen/canonical_geometry.py": "c1dcfd377ad33cdb85954c01917e762f87360deb43b1d5cce9b92c1b003fa2e4",
+      "experiments/E99_attraction_repulsion/planner/backend/frozen/feasible.py": "9cfe70894d80fbe54ccaa1c3de60ef4ab111ac9b4472286d1ae6a0c5a1fdc756",
+      "experiments/E99_attraction_repulsion/planner/backend/frozen/global_refine.py": "cd43991827597dfc4c5635cddb26f597774c680a24658237e5f443e9fbbca60c",
+      "experiments/E99_attraction_repulsion/planner/backend/frozen/packing.py": "3c0500b7fee120807e6bd3fa8e9f115e476782af1a3e7620859c6651a089ef30",
+      "experiments/E99_attraction_repulsion/planner/backend/frozen/postprocess.py": "da0e1572a822a589968a19e67e2d36dd5133c7d17b7ea9443bd743ee4653a272",
+      "experiments/E99_attraction_repulsion/planner/backend/frozen/shape_lp.py": "6de2773cfd981723e55a1d317ad9422e8fee76b393d740acaf70007594bc8a9f",
+      "experiments/E99_attraction_repulsion/planner/backend/frozen/solver.py": "ed874db1bac7205d5e1d80350b1d4e82d3c56eb2bb44b9f08ceb256244d24ea0",
+      "experiments/E99_attraction_repulsion/planner/backend/frozen/topology_mip.py": "2ba0f2612f598f5e8d6e80a3ee1f74ad4941b78a3e9163f2d4acd7db5588da1a",
+      "experiments/E99_attraction_repulsion/planner/backend/guard.py": "eb36fbbcea1b694c7fb40fa0b36e3ed659ac66563be583f177fb6bb9e3c35bd7",
+      "experiments/E99_attraction_repulsion/planner/backend/observe.py": "b924be6a40f157e2d2204e358990797192e10a6320e3e3c3399d044918b25dd8",
+      "experiments/E99_attraction_repulsion/planner/backend/reduction.py": "d8ba6af127d9b08469b198f7ed38849e14ac566db58bfab855797920c92012ed",
+      "experiments/E99_attraction_repulsion/planner/backend/rescue.py": "ada10eea489e0f7d65a2f6dd0a20358d33d08808f3dfef6a19c0583139f206e0",
+      "experiments/E99_attraction_repulsion/planner/canonical.py": "9f7da6983541a3c8b0d57c8f869c6905c24f2bc4eb3643e0ed9e0a718d2abf2c",
+      "experiments/E99_attraction_repulsion/planner/canonical_native.py": "e350394ce13f8bb20e53d03494912f9367d29c9f68809ad16c4314a45709718b",
+      "experiments/E99_attraction_repulsion/planner/canonical_py.py": "b5b99c1f77756aa318fe5cb0e7fa82935844752b4fa815ab80367adb34e00195",
+      "experiments/E99_attraction_repulsion/planner/certify_polish.py": "4cdc5c8e368f2ade78d6adcd046d3eb8163b33bda04cfb819e38418671f36094",
+      "experiments/E99_attraction_repulsion/planner/fast_geometry.py": "5440a4deaa85397ff47f4323b4106d559e508c3f7af8f37953fea37cdfcdbf02",
+      "experiments/E99_attraction_repulsion/planner/legal_seed.py": "45a6d0ee77c7cceafd05f41f9317f72ebdbf56dd45fc566da04952810e3a7588",
+      "experiments/E99_attraction_repulsion/planner/projection.py": "7f43f22c1ded622268a4c73a26e0103d4e30edfd027089b80845a7195ee4cbff",
+      "experiments/E99_attraction_repulsion/planner/solver.py": "6c4310ac9ae58ea5fa85732548e14e44f33ccb331f3bc69071a3582cd4fb8f2e",
+      "experiments/E99_attraction_repulsion/relaxation.py": "37482099cf22a0659e2fc160157ad8a121085606effd0e0cc4733a8d7015d200",
+      "experiments/E99_attraction_repulsion/research/R2/field.py": "5700aaa6e0683915c056be871e49c8922ed9772ede06c680c2e5588c391a7f50",
+      "experiments/E99_attraction_repulsion/research/R4/normalization.py": "254a6f5812a1b02abac55e7a5bd0ed5f03c57e31d1fb1b65618fbc2f6a39a624",
+      "experiments/E99_attraction_repulsion/research/R6/native_seed.py": "ecc1ba78c412ee4bdbf8ac7f14e12d0165f92dd85866a85b59eac54f26c2267e",
+      "experiments/E99_attraction_repulsion/research/R7/__init__.py": "9f851aa46ee65b50c02bb31f80953208dcaf43e5afa8aad2a9283e1348463739",
+      "experiments/E99_attraction_repulsion/research/R7/bounded.py": "499dc5fde3eae96129136b096ba5582a6a570827fc77a3c00598ac058e28f2b3",
+      "experiments/E99_attraction_repulsion/research/R7/plan.json": "dae996f36d318a9431c3868f40baf59b069b7722eb36c35956e626b786b1b621",
+      "experiments/E99_attraction_repulsion/research/R7/run.py": "3b547258cc82ccb847360fd33a60ebdd6acd7b69167a8f9068bfcf940bcdb8fc",
+      "experiments/E99_attraction_repulsion/tune.py": "7d7ad9710aa99f1d72117e745e9250eae3ace8d7d0091d1ee9c70aab75be4346",
+      "scoring/checks.py": "738f6b57e20dce58516f3f10d83689f8df273a84a02b2dce99c6ccc1f904763a",
+      "scoring/evaluation.py": "356e0d1c788c6f25154b33fb1c2455388317d2cc0dd96ca50d7357c58612c611",
+      "scoring/official.py": "478fbc228a56ec4b336b5d8687a44b22b749f30aae09372f57c08e7124270e03"
+    },
+    "control_registration_sha256": "82dd6d1f8d7a5243dc1510981bfff1424be6014c2a5ab3c50a519017de925264",
+    "reused_control_result_sha256": "6ae563681562e20e9a16482104ae89857e3b1bbab7b119a2c956add1441a20c0",
+    "registry_sha256": "1409ccf825b9c7cae1097a22e8dc4068e1283d79541c85ce54c5627d0c2b4208",
+    "timing_scope": "cached_C3_to_final_CPU_only_not_acceptance"
+  },
+  "created_utc": "2026-11-03T00:09:43.767987+00:00"
+}

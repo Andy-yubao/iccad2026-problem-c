@@ -1,0 +1,298 @@
+{
+  "member": [
+    "worker_40/layouts_9296.th",
+    69
+  ],
+  "n": 27,
+  "accepted_updates": 22,
+  "parameter_updates": 0,
+  "test_read": false,
+  "replay_scope": "Read-only failure-batch diagnosis. Deterministic clean outputs are exact for saved weights; paired Dropout uses one common saved post-failure RNG draw, not the original rejected draw.",
+  "recorded_rejected_loss": 49.702369689941406,
+  "cases": {
+    "parent_clean": {
+      "raw": {
+        "area_excess": 0.06817460060119629,
+        "overlap_region_fraction": 0.06773563474416733,
+        "tail": 0.3568587005138397,
+        "whitespace": 0.08683347702026367,
+        "N10": 11.0,
+        "N10_fraction": 0.40740740299224854,
+        "max_covered_fraction": 0.4032476842403412,
+        "bbox_over_A": 1.0204331874847412,
+        "penetration": 0.015185385011136532,
+        "position": 0.48674800992012024,
+        "shape": 0.4788985252380371,
+        "wirelength": 0.29961544275283813,
+        "soft_original": 0.003134808037430048,
+        "boundary": 0.002005759859457612,
+        "grouping": 0.0025980717036873102,
+        "mib": 0.006207271013408899,
+        "soft_barrier": 0.0,
+        "wire_barrier": 0.0,
+        "trust": 0.0,
+        "legacy_E105_total": 0.7023624777793884,
+        "area_excess_scaled": 1.2641414403915405,
+        "tail_scaled": 1.3120349645614624,
+        "whitespace_scaled": 1.0770885944366455,
+        "total": 3.766752004623413
+      },
+      "weighted": {
+        "position": 0.048674800992012025,
+        "shape": 0.011972463130950928,
+        "area_excess_scaled": 1.2641414403915405,
+        "tail_scaled": 1.3120349645614624,
+        "whitespace_scaled": 1.0770885944366455,
+        "soft_original": 0.002092065622552786,
+        "soft_barrier": 0.0,
+        "wirelength": 0.049988321476537305,
+        "wire_barrier": 0.0,
+        "trust": 0.0,
+        "penetration": 0.0007592692505568266
+      },
+      "soft_ratios": {
+        "boundary": {
+          "parent": 0.002005759859457612,
+          "value": 0.002005759859457612,
+          "bound": 0.01,
+          "weighted_penalty": 0
+        },
+        "grouping": {
+          "parent": 0.0025980717036873102,
+          "value": 0.0025980717036873102,
+          "bound": 0.01,
+          "weighted_penalty": 0
+        },
+        "mib": {
+          "parent": 0.006207271013408899,
+          "value": 0.006207271013408899,
+          "bound": 0.006207271013408899,
+          "weighted_penalty": 0.0
+        }
+      }
+    },
+    "student_clean": {
+      "raw": {
+        "area_excess": 0.05881541967391968,
+        "overlap_region_fraction": 0.058549415320158005,
+        "tail": 0.32263585925102234,
+        "whitespace": 0.09391427040100098,
+        "N10": 11.0,
+        "N10_fraction": 0.40740740299224854,
+        "max_covered_fraction": 0.39028096199035645,
+        "bbox_over_A": 1.0387368202209473,
+        "penetration": 0.014539866708219051,
+        "position": 0.4955470860004425,
+        "shape": 0.47038769721984863,
+        "wirelength": 0.3025873005390167,
+        "soft_original": 0.0020205415785312653,
+        "boundary": 0.000857957114931196,
+        "grouping": 0.0010960976360365748,
+        "mib": 0.005617992952466011,
+        "soft_barrier": 0.0,
+        "wire_barrier": 0.0,
+        "trust": 0.0002798703499138355,
+        "legacy_E105_total": 0.7086735963821411,
+        "area_excess_scaled": 1.0905969142913818,
+        "tail_scaled": 1.1862105131149292,
+        "whitespace_scaled": 1.1649192571640015,
+        "total": 3.5558807849884033
+      },
+      "weighted": {
+        "position": 0.04955470860004425,
+        "shape": 0.011759692430496217,
+        "area_excess_scaled": 1.0905969142913818,
+        "tail_scaled": 1.1862105131149292,
+        "whitespace_scaled": 1.1649192571640015,
+        "soft_original": 0.0013484416030938948,
+        "soft_barrier": 0.0,
+        "wirelength": 0.05048415100065364,
+        "wire_barrier": 0.0,
+        "trust": 0.0002798703499138355,
+        "penetration": 0.0007269933354109526
+      },
+      "soft_ratios": {
+        "boundary": {
+          "parent": 0.002005759859457612,
+          "value": 0.000857957114931196,
+          "bound": 0.01,
+          "weighted_penalty": 0
+        },
+        "grouping": {
+          "parent": 0.0025980717036873102,
+          "value": 0.0010960976360365748,
+          "bound": 0.01,
+          "weighted_penalty": 0
+        },
+        "mib": {
+          "parent": 0.006207271013408899,
+          "value": 0.005617992952466011,
+          "bound": 0.006207271013408899,
+          "weighted_penalty": 0
+        }
+      }
+    },
+    "parent_paired_dropout": {
+      "raw": {
+        "area_excess": 0.0722164511680603,
+        "overlap_region_fraction": 0.07123280316591263,
+        "tail": 0.37256932258605957,
+        "whitespace": 0.09088146686553955,
+        "N10": 13.0,
+        "N10_fraction": 0.48148149251937866,
+        "max_covered_fraction": 0.41321712732315063,
+        "bbox_over_A": 1.0205309391021729,
+        "penetration": 0.014471691101789474,
+        "position": 0.4912966191768646,
+        "shape": 0.4705874025821686,
+        "wirelength": 0.29796692728996277,
+        "soft_original": 0.003308339510113001,
+        "boundary": 0.0037645224947482347,
+        "grouping": 0.0017386421095579863,
+        "mib": 0.004151256754994392,
+        "soft_barrier": 0.0,
+        "wire_barrier": 0.0,
+        "trust": 0.0,
+        "legacy_E105_total": 0.707413911819458,
+        "area_excess_scaled": 1.3390882015228271,
+        "tail_scaled": 1.3697969913482666,
+        "whitespace_scaled": 1.1273001432418823,
+        "total": 3.9497246742248535
+      },
+      "weighted": {
+        "position": 0.04912966191768647,
+        "shape": 0.011764685064554215,
+        "area_excess_scaled": 1.3390882015228271,
+        "tail_scaled": 1.3697969913482666,
+        "whitespace_scaled": 1.1273001432418823,
+        "soft_original": 0.0022078747005238207,
+        "soft_barrier": 0.0,
+        "wirelength": 0.04971328051015682,
+        "wire_barrier": 0.0,
+        "trust": 0.0,
+        "penetration": 0.0007235845550894737
+      },
+      "soft_ratios": {
+        "boundary": {
+          "parent": 0.002005759859457612,
+          "value": 0.0037645224947482347,
+          "bound": 0.01,
+          "weighted_penalty": 0
+        },
+        "grouping": {
+          "parent": 0.0025980717036873102,
+          "value": 0.0017386421095579863,
+          "bound": 0.01,
+          "weighted_penalty": 0
+        },
+        "mib": {
+          "parent": 0.006207271013408899,
+          "value": 0.004151256754994392,
+          "bound": 0.006207271013408899,
+          "weighted_penalty": 0
+        }
+      }
+    },
+    "student_paired_dropout": {
+      "raw": {
+        "area_excess": 0.0614585280418396,
+        "overlap_region_fraction": 0.06078554317355156,
+        "tail": 0.30851247906684875,
+        "whitespace": 0.09527504444122314,
+        "N10": 11.0,
+        "N10_fraction": 0.40740740299224854,
+        "max_covered_fraction": 0.40795981884002686,
+        "bbox_over_A": 1.0373777151107788,
+        "penetration": 0.012229768559336662,
+        "position": 0.502104640007019,
+        "shape": 0.4599037170410156,
+        "wirelength": 0.3009203374385834,
+        "soft_original": 0.0020663845352828503,
+        "boundary": 0.0017358772456645966,
+        "grouping": 0.0014022768009454012,
+        "mib": 0.0035572766792029142,
+        "soft_barrier": 0.0,
+        "wire_barrier": 0.0,
+        "trust": 0.0002798703499138355,
+        "legacy_E105_total": 0.7144267559051514,
+        "area_excess_scaled": 1.139607310295105,
+        "tail_scaled": 1.1342841386795044,
+        "whitespace_scaled": 1.1817984580993652,
+        "total": 3.5698742866516113
+      },
+      "weighted": {
+        "position": 0.05021046400070191,
+        "shape": 0.011497592926025391,
+        "area_excess_scaled": 1.139607310295105,
+        "tail_scaled": 1.1342841386795044,
+        "whitespace_scaled": 1.1817984580993652,
+        "soft_original": 0.0013790356530998373,
+        "soft_barrier": 0.0,
+        "wirelength": 0.05020603220080684,
+        "wire_barrier": 0.0,
+        "trust": 0.0002798703499138355,
+        "penetration": 0.0006114884279668332
+      },
+      "soft_ratios": {
+        "boundary": {
+          "parent": 0.002005759859457612,
+          "value": 0.0017358772456645966,
+          "bound": 0.01,
+          "weighted_penalty": 0
+        },
+        "grouping": {
+          "parent": 0.0025980717036873102,
+          "value": 0.0014022768009454012,
+          "bound": 0.01,
+          "weighted_penalty": 0
+        },
+        "mib": {
+          "parent": 0.006207271013408899,
+          "value": 0.0035572766792029142,
+          "bound": 0.006207271013408899,
+          "weighted_penalty": 0
+        }
+      }
+    }
+  },
+  "clean_drift": {
+    "center_median": 0.030744947493076324,
+    "center_mean": 0.03586751967668533,
+    "center_p95": 0.06804561614990234,
+    "center_max": 0.07822859287261963,
+    "log_aspect_mean": 0.0241757370531559,
+    "log_aspect_max": 0.10819569230079651
+  },
+  "interpolation": [
+    {
+      "alpha": 0.0,
+      "total": 3.766752004623413,
+      "area_excess": 0.06817460060119629,
+      "tail": 0.3568587005138397,
+      "whitespace": 0.08683347702026367,
+      "N10": 11.0,
+      "soft_barrier": 0.0,
+      "trust": 0.0
+    },
+    {
+      "alpha": 0.5,
+      "total": 3.6518197059631348,
+      "area_excess": 0.06317728757858276,
+      "tail": 0.34009262919425964,
+      "whitespace": 0.0900084376335144,
+      "N10": 11.0,
+      "soft_barrier": 0.0,
+      "trust": 0.0
+    },
+    {
+      "alpha": 1.0,
+      "total": 3.5558807849884033,
+      "area_excess": 0.05881541967391968,
+      "tail": 0.32263585925102234,
+      "whitespace": 0.09391427040100098,
+      "N10": 11.0,
+      "soft_barrier": 0.0,
+      "trust": 0.0002798703499138355
+    }
+  ]
+}

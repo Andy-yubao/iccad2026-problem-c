@@ -1,0 +1,73 @@
+{
+  "experiment": "E116_first_draft_comparison",
+  "revision": "E116.first_draft_comparison.v1",
+  "status": "preparation_only_training_disabled",
+  "seed": 0,
+  "arms": [
+    "original4",
+    "new_first"
+  ],
+  "comparison": "Original four RectangleBlocks with geometry feedback vs four hidden Attention+SwiGLU blocks and one global-conditioned readout; neither has downstream layers; only final output supervised",
+  "parameters_by_arm": {
+    "original4": 207987,
+    "new_first": 209891
+  },
+  "architecture_by_arm": {
+    "original4": "width64/depth4 RectangleBlock, shared64->64->3, intermediate geometry feedback, final L4 only",
+    "new_first": "width64/depth4 hidden attention blocks, SwiGLU128, wire/group scalar attention bias, final128->64->3 global-conditioned readout; no intermediate state, decode, or feedback"
+  },
+  "comparison_limit": "Near parameter budget; complete design comparison, not isolated geometry-feedback ablation or equal FLOPs",
+  "initialization": "Scratch seed0; same copied fresh input/norm/qkv/output/local initial tensors; incompatible FFNs/readouts freshly initialized; no checkpoint reads; common global CPU RNG preserved",
+  "new_component_seed": 20261108116,
+  "batch_size": 32,
+  "precision": "FP32 deterministic; TF32 disabled",
+  "threads": 4,
+  "train_count": 16000,
+  "train_monitor_count": 500,
+  "dev_monitor_count": 500,
+  "dataset": "random_reference16k.v1 frozen view of random40k; original areas; no MIB; all modules predicted",
+  "registry_sha256": "ef09a04d37540cc3e8f60cc25955278aee3c0b960807f0ad7c0ba9b0cec396ea",
+  "train_members_sha256": "093ccd8d92f0752e6fed36edc0d26ece2b64f8ff4c3ac695b19eb9bee512a539",
+  "dataset_report_sha256": "3a79fd9eb2636578fa4df876ccac51699eab04cd59179027488aa7d8c334928a",
+  "payload_checksums_sha256": "f8eeb86da003c9901b73541eb13cc8e16cad9cd963dcf74a0edddf4a1a5abe54",
+  "no_mib": true,
+  "predict_all_modules": true,
+  "hard_specification_enforcement": "Public specifications condition model only; no draft overwrite",
+  "objective": "Single final base_per_case complete E114 no-MIB Loss; weight1; no intermediate/auxiliary Loss",
+  "optimizer": "AdamW weight_decay .0003; global clip1; per-module joint relative update bound .005",
+  "lr_levels": [
+    0.001,
+    0.00025,
+    0.0001,
+    5e-05
+  ],
+  "protection_epochs": 14,
+  "scheduler_baseline_epoch": 15,
+  "patience": 3,
+  "minimum_meaningful_absolute": 1e-05,
+  "minimum_meaningful_relative": 0.001,
+  "best_minimum_absolute_improvement": 1e-05,
+  "minimum_lowest_lr_complete_epochs": 2,
+  "maximum_seconds": 14400,
+  "maximum_epochs": 200,
+  "budget": "Prospective per-arm4h/200epoch caps; preparation is not launch authorization; compare actual epochs/steps/time and common steps separately",
+  "selection": "Same final-Loss arithmetic mean on fixed dev500 for backward/monitor/best/LR/earlystop",
+  "resume": "Only own latest, complete model/Adam/RNG/permutation/cursor/seen/scheduler/projection/cumulative budget; no reset; no preparation-time resume test",
+  "numerical_guards": "Reject before Adam on nonfinite, case/mean Loss>=1000 or unclipped grad norm>=10000; no skip/retry",
+  "augmentation": "Axis swap P=.5 indexed by seed/epoch/subset-local member; FFN .1/residual .05; dropout realization need not match across different FFNs",
+  "engine": "FP32 CUDA forward/loss/backward/clip capture, AdamW outside, captured per-module projection",
+  "stop": "Experiment/run STOP and SIGINT; no next arm automatically",
+  "preflight_train_indices": [
+    6963,
+    4506,
+    10463,
+    3453,
+    10262
+  ],
+  "preflight": "Only five unique train members; real gradients/CUDA graph; zero Adam updates; no dev/test",
+  "automatic_queue": false,
+  "q_evaluation": false,
+  "postprocessing_calls": 0,
+  "test_read": false,
+  "cublas_workspace_config": ":4096:8"
+}

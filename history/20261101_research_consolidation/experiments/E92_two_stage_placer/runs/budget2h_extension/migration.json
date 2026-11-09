@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "authorization": "用户要求完整2h并每小时跟进，E90达标后条件研究修正模型",
+  "old_checkpoint_sha256": "9ea65374661cda614e85fd3634062135b22de547f2b00b69c84a753b40178be4",
+  "new_checkpoint_sha256": "7a38647bb4e716eecd65f2cc2bccce5e5448043fd287b7d5664104b870411de5",
+  "state_fingerprints_before": {
+    "model": "92803ba71c307d4effb34f76daf6420830799d72866877f18c5ccec30b6121c5",
+    "optimizer": "240bcf327f569999ec5c6c4adb0a6b9ed3f4349e940ba3cb6030d007f4940f7b",
+    "scheduler": "476880e1ca355bc5d9c26d184461dd69850987e7e2336c73dcba21ec5385065f",
+    "rng": "5137c6ec540b364f7dee3a50c64b7312ad95c0fd18a7ccd440e6ecf8af33bc2a",
+    "progress": "e2d5339d23d1b00efa28c1bfc2ef5d5c6d207321fb98c693d8d4c384583a64ed",
+    "graph_step_control": "210930e9446aa7f6452d0d83687f8f83dece6d21d545502e4e5b813c887428dd"
+  },
+  "state_fingerprints_after": {
+    "model": "92803ba71c307d4effb34f76daf6420830799d72866877f18c5ccec30b6121c5",
+    "optimizer": "240bcf327f569999ec5c6c4adb0a6b9ed3f4349e940ba3cb6030d007f4940f7b",
+    "scheduler": "476880e1ca355bc5d9c26d184461dd69850987e7e2336c73dcba21ec5385065f",
+    "rng": "5137c6ec540b364f7dee3a50c64b7312ad95c0fd18a7ccd440e6ecf8af33bc2a",
+    "progress": "e2d5339d23d1b00efa28c1bfc2ef5d5c6d207321fb98c693d8d4c384583a64ed",
+    "graph_step_control": "210930e9446aa7f6452d0d83687f8f83dece6d21d545502e4e5b813c887428dd"
+  },
+  "model_Adam_scheduler_RNG_progress_projection_unchanged": true,
+  "accepted_steps": 711,
+  "cursor": 22752,
+  "epoch": 0,
+  "phase": "P",
+  "lr": 0.001,
+  "elapsed_before_checkpoint": 355.36948200000916,
+  "elapsed_preserved": 355.64940779999597,
+  "layout_cumulative_cap_seconds": 7200,
+  "scoped_global_cap_seconds": 83007.25936599995,
+  "changed_sources": [
+    "experiments/E92_two_stage_placer/README.md",
+    "experiments/E92_two_stage_placer/io.py",
+    "experiments/E92_two_stage_placer/pipeline.py",
+    "experiments/E92_two_stage_placer/plan.json",
+    "experiments/E92_two_stage_placer/preflight.py",
+    "experiments/E92_two_stage_placer/train.py"
+  ],
+  "plan_changed_keys": [
+    "budget_extension_authorization",
+    "budget_policy",
+    "global_cap_seconds"
+  ],
+  "test_read": false
+}

@@ -1,0 +1,17 @@
+{
+  "revision":"E99.R16.original_full_planner_four_mechanisms.v1",
+  "arms":["local_step_limits","double_step_limit","balanced_area_source","longer_relaxation"],
+  "matched_controls":{"local_step_limits":"budget_gate","double_step_limit":"budget_gate","balanced_area_source":"bounded_area_source","longer_relaxation":"budget_gate"},
+  "registration_basis":"R15 completed same500 original-planner controls, Q1.011264 budget_gate and1.011541 attraction-only bounded_area_source, vs original noAR1.013901. R16 mechanism hypotheses registered before any R16 numerical run; keep all coefficients and budgets as operator.variants, no new grid search.",
+  "panel":"v5 train_monitor500 original frozen order, identical C3/public inputs",
+  "configs":"Exactly R16 operator.variants/replay_plan: independent caps,10% single step at same40% path, balanced source attraction+repulsion,80 rounds at same allowances. No group/boundary/MIB force.",
+  "pipeline":"fresh native pureAR capture=False -> unchanged original planner with byte-identical planner_config.json -> original hard checks; reference labels/denominators only in scoring after timer",
+  "timing":"CPU cached-draft processing only including AR/original planner/hard check. Original noAR and matched R15 AR controls read-only quality, timings historical/unpaired. No new C3 input/inference, no complete250ms acceptance claim.",
+  "preflight":{"indices":[0,4,43,95,135],"checks":"same5 integration cases x4 arms, official/independent hard checks and exact equality to logged trajectories; original planner source freeze"},
+  "preflight_reuse":"20 same-identity preflight arm-cases reused read-only in full panel;1980 remaining arm-cases new; do not repeat completed controls",
+  "output":"runs/research/20261103_R16_AR_original_planner_train500",
+  "preflight_output":"runs/research/20261103_R16_original_planner_preflight5",
+  "execution":"single sequential numerical worker/1 math thread, rotated arm order, sharedOS lock, atomic saves, STOP at arm boundary, explicit source-bound resume; no automatic retries or dev launch",
+  "freeze_after":"Review full500 finalQ/soft/hard/latency along with each operation log. Only frozen justified candidate gets fresh complete C3 dev500 and fixed100 four-stage gallery. Original planner not modified.",
+  "test_read":false,"new_training":false,"automatic_dev_launch":false
+}

@@ -1,0 +1,43 @@
+{
+  "observed_utc": "2026-11-03T09:00:16.757220+00:00",
+  "status": "background_training_active",
+  "pipeline": {
+    "status": "running",
+    "stage": "train_L",
+    "pid": 1008,
+    "updated_utc": "2026-11-03T08:52:08.688392+00:00",
+    "test_read": false
+  },
+  "training_heartbeat": {
+    "pid": 17592,
+    "stage": "L",
+    "epoch": 1,
+    "steps": 3668,
+    "cursor": 53376,
+    "seen_count": 64000,
+    "last_loss": 0.3835831880569458,
+    "step_seconds": 0.10943609999958426,
+    "batch_prepare_seconds": 0.022008800006005913,
+    "guarded_GPU_update_seconds": 0.08742729999357834,
+    "samples_per_second": 292.4080810639411,
+    "elapsed_seconds": 1807.9743909885,
+    "updated_utc": "2026-11-03T09:00:15.398572+00:00",
+    "actual_optimizer_updates": true,
+    "test_read": false
+  },
+  "only_active_experiment": [
+    "E101_final_c5_solver"
+  ],
+  "archive": {
+    "files": 75705,
+    "sha256_checked_files": 58769,
+    "bytes": 15463085526,
+    "locked_originals": 0
+  },
+  "frozen_sources_unchanged": true,
+  "baseline_weight_sha256": "028ea3aa124c8cd9e7c3cc7bf8587c699ab9b4932f256899e3780d4d8c8816e0",
+  "shared_cache_archive_paths_verified": true,
+  "test2000_gate": "implemented; no test payload opened; only after unique own-Loss best freeze and dev500 completion",
+  "git": "prior changes preserved; no blanket staging/commit/push",
+  "no_extra_optimization_or_wakeup": true
+}

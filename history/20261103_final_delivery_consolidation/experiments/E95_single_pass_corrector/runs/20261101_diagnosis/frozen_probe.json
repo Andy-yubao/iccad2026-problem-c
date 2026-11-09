@@ -1,0 +1,677 @@
+{
+  "unique_train_cases": 5,
+  "indices": [
+    1683,
+    10027,
+    5474,
+    10140,
+    15001
+  ],
+  "records": {
+    "initial": {
+      "mean_loss": {
+        "penetration": 0.010056017898023129,
+        "module_load_mean": 0.10278458893299103,
+        "module_max_excess10": 0.25138670206069946,
+        "overlap_total": 0.3642272651195526,
+        "wirelength": 0.2999504506587982,
+        "compactness": 0.01778433285653591,
+        "grouping": 0.011432584375143051,
+        "boundary": 0.004177495837211609,
+        "mib": 0.013428312726318836,
+        "soft": 0.007738109212368727,
+        "task": 0.17434361577033997,
+        "pair_intersection_fraction": 0.05092163011431694,
+        "module_load_max": 0.3513866662979126,
+        "intent_direction": 0.0,
+        "intent_neighbour": 0.0,
+        "input_movement": 0.0,
+        "input_shape_change": 0.0,
+        "intent": 0.0,
+        "total": 0.38166165351867676
+      },
+      "hidden_layers": [
+        {
+          "rms": 4.362884998321533,
+          "between_module_std": 3.5456855297088623,
+          "relative_module_std": 0.8099598288536072
+        },
+        {
+          "rms": 5.503340244293213,
+          "between_module_std": 4.418881416320801,
+          "relative_module_std": 0.8003984689712524
+        },
+        {
+          "rms": 6.559622287750244,
+          "between_module_std": 5.356830596923828,
+          "relative_module_std": 0.8139713406562805
+        },
+        {
+          "rms": 7.597138404846191,
+          "between_module_std": 5.861241340637207,
+          "relative_module_std": 0.7693818807601929
+        },
+        {
+          "rms": 7.957099914550781,
+          "between_module_std": 6.181807041168213,
+          "relative_module_std": 0.7752062678337097
+        },
+        {
+          "rms": 9.04217529296875,
+          "between_module_std": 6.618093967437744,
+          "relative_module_std": 0.7312185168266296
+        },
+        {
+          "rms": 9.3074312210083,
+          "between_module_std": 6.683598518371582,
+          "relative_module_std": 0.7171472907066345
+        },
+        {
+          "rms": 8.593155860900879,
+          "between_module_std": 6.136570930480957,
+          "relative_module_std": 0.7132841944694519
+        },
+        {
+          "rms": 9.645133972167969,
+          "between_module_std": 6.917064189910889,
+          "relative_module_std": 0.716955840587616
+        },
+        {
+          "rms": 8.625571250915527,
+          "between_module_std": 6.211658477783203,
+          "relative_module_std": 0.7198116183280945
+        },
+        {
+          "rms": 9.773255348205566,
+          "between_module_std": 6.966286659240723,
+          "relative_module_std": 0.7130347490310669
+        },
+        {
+          "rms": 9.181681632995605,
+          "between_module_std": 6.594184875488281,
+          "relative_module_std": 0.7183921933174133
+        }
+      ],
+      "center_movement_module_units_mean": 0.0,
+      "center_movement_module_units_max": 0.0,
+      "raw_delta_std": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "raw_delta_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "head_last_weight_norm": 0.0,
+      "head_last_bias": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "output_gradient_norm": 6.9836106300354,
+      "output_gradient_active_fraction": 0.9242424368858337
+    },
+    "best": {
+      "mean_loss": {
+        "penetration": 0.0027697780169546604,
+        "module_load_mean": 0.025444084778428078,
+        "module_max_excess10": 0.11126741021871567,
+        "overlap_total": 0.1394812911748886,
+        "wirelength": 0.3420526683330536,
+        "compactness": 0.30878496170043945,
+        "grouping": 0.038636524230241776,
+        "boundary": 0.041073691099882126,
+        "mib": 0.014846093021333218,
+        "soft": 0.03844306990504265,
+        "task": 0.4023049473762512,
+        "pair_intersection_fraction": 0.013210785575211048,
+        "module_load_max": 0.1958145946264267,
+        "intent_direction": 2.1480439045262756e-06,
+        "intent_neighbour": 0.1407458633184433,
+        "input_movement": 0.3321022093296051,
+        "input_shape_change": 0.06788637489080429,
+        "intent": 0.14423872530460358,
+        "total": 0.1941356509923935
+      },
+      "hidden_layers": [
+        {
+          "rms": 3.28135347366333,
+          "between_module_std": 2.8407459259033203,
+          "relative_module_std": 0.8645116090774536
+        },
+        {
+          "rms": 4.67677640914917,
+          "between_module_std": 4.143977642059326,
+          "relative_module_std": 0.8856650590896606
+        },
+        {
+          "rms": 5.715726375579834,
+          "between_module_std": 5.143299102783203,
+          "relative_module_std": 0.899753987789154
+        },
+        {
+          "rms": 6.658442974090576,
+          "between_module_std": 6.041812896728516,
+          "relative_module_std": 0.9062078595161438
+        },
+        {
+          "rms": 7.5609130859375,
+          "between_module_std": 6.848077297210693,
+          "relative_module_std": 0.9039062857627869
+        },
+        {
+          "rms": 8.757105827331543,
+          "between_module_std": 7.750552654266357,
+          "relative_module_std": 0.8833300471305847
+        },
+        {
+          "rms": 10.44333553314209,
+          "between_module_std": 8.822248458862305,
+          "relative_module_std": 0.8433801531791687
+        },
+        {
+          "rms": 12.79080867767334,
+          "between_module_std": 10.516953468322754,
+          "relative_module_std": 0.8204016089439392
+        },
+        {
+          "rms": 15.713829040527344,
+          "between_module_std": 13.118219375610352,
+          "relative_module_std": 0.8362805247306824
+        },
+        {
+          "rms": 18.999652862548828,
+          "between_module_std": 15.998099327087402,
+          "relative_module_std": 0.8459600806236267
+        },
+        {
+          "rms": 29.915363311767578,
+          "between_module_std": 22.504056930541992,
+          "relative_module_std": 0.7556841969490051
+        },
+        {
+          "rms": 61.43644332885742,
+          "between_module_std": 30.723861694335938,
+          "relative_module_std": 0.5043338537216187
+        }
+      ],
+      "center_movement_module_units_mean": 0.6771306395530701,
+      "center_movement_module_units_max": 4.609334945678711,
+      "raw_delta_std": [
+        0.07387348264455795,
+        0.0037545161321759224,
+        0.13815167546272278
+      ],
+      "raw_delta_mean": [
+        0.07274875044822693,
+        0.0004429226682987064,
+        0.19706913828849792
+      ],
+      "head_last_weight_norm": 0.22456933557987213,
+      "head_last_bias": [
+        0.00927780196070671,
+        0.00247011287137866,
+        0.011722572147846222
+      ],
+      "output_gradient_norm": 3.6439855098724365,
+      "output_gradient_active_fraction": 0.872474730014801,
+      "checkpoint_sha256": "e8f41277411de4d261588c6535d508505dd9db9f9c8dce654c80371eed2676ab",
+      "checkpoint_step": 500
+    },
+    "latest": {
+      "mean_loss": {
+        "penetration": 0.00993274338543415,
+        "module_load_mean": 0.10159363597631454,
+        "module_max_excess10": 0.24959075450897217,
+        "overlap_total": 0.3611171245574951,
+        "wirelength": 0.29996562004089355,
+        "compactness": 0.01930852048099041,
+        "grouping": 0.011523361317813396,
+        "boundary": 0.004503691103309393,
+        "mib": 0.013441570103168488,
+        "soft": 0.00794023647904396,
+        "task": 0.17551754415035248,
+        "pair_intersection_fraction": 0.05043305084109306,
+        "module_load_max": 0.3495907485485077,
+        "intent_direction": 0.0,
+        "intent_neighbour": 3.588060735637555e-06,
+        "input_movement": 0.00045869825407862663,
+        "input_shape_change": 0.00012486342166084796,
+        "intent": 8.487202649121173e-06,
+        "total": 0.37866973876953125
+      },
+      "hidden_layers": [
+        {
+          "rms": 4.3212432861328125,
+          "between_module_std": 2.6639115810394287,
+          "relative_module_std": 0.6177652478218079
+        },
+        {
+          "rms": 9.576387405395508,
+          "between_module_std": 5.180616855621338,
+          "relative_module_std": 0.5400159358978271
+        },
+        {
+          "rms": 20.891742706298828,
+          "between_module_std": 11.502450942993164,
+          "relative_module_std": 0.5468656420707703
+        },
+        {
+          "rms": 46.171817779541016,
+          "between_module_std": 26.40635108947754,
+          "relative_module_std": 0.5681637525558472
+        },
+        {
+          "rms": 101.41887664794922,
+          "between_module_std": 61.88741683959961,
+          "relative_module_std": 0.6053526997566223
+        },
+        {
+          "rms": 221.552978515625,
+          "between_module_std": 142.00570678710938,
+          "relative_module_std": 0.6355651021003723
+        },
+        {
+          "rms": 566.6475219726562,
+          "between_module_std": 363.68646240234375,
+          "relative_module_std": 0.6350626945495605
+        },
+        {
+          "rms": 1415.9765625,
+          "between_module_std": 878.2296752929688,
+          "relative_module_std": 0.6110736131668091
+        },
+        {
+          "rms": 3536.53125,
+          "between_module_std": 2248.594970703125,
+          "relative_module_std": 0.6256605982780457
+        },
+        {
+          "rms": 8742.56640625,
+          "between_module_std": 5330.93359375,
+          "relative_module_std": 0.5970374941825867
+        },
+        {
+          "rms": 27104.765625,
+          "between_module_std": 15410.0966796875,
+          "relative_module_std": 0.5527416467666626
+        },
+        {
+          "rms": 120606.703125,
+          "between_module_std": 63891.8125,
+          "relative_module_std": 0.5099367499351501
+        }
+      ],
+      "center_movement_module_units_mean": 0.01193292811512947,
+      "center_movement_module_units_max": 0.050204597413539886,
+      "raw_delta_std": [
+        0.00030207657255232334,
+        0.0001287078921450302,
+        0.004625529982149601
+      ],
+      "raw_delta_mean": [
+        0.0012115712743252516,
+        0.00025332075892947614,
+        0.00941956415772438
+      ],
+      "head_last_weight_norm": 0.4508900046348572,
+      "head_last_bias": [
+        0.00555110489949584,
+        0.004592210054397583,
+        0.012310443446040154
+      ],
+      "output_gradient_norm": 6.976775169372559,
+      "output_gradient_active_fraction": 0.9318181872367859,
+      "checkpoint_sha256": "dcbbafd59c06a0ce1c421459fcd9b7e3a50c433895f70eecfc5ecc66a61604c2",
+      "checkpoint_step": 2586
+    }
+  },
+  "history": [
+    {
+      "epoch": 0,
+      "step": 0,
+      "train_monitor": {
+        "penetration": 0.009948262155056,
+        "module_load_mean": 0.10754459762573242,
+        "module_max_excess10": 0.3142053470611572,
+        "overlap_total": 0.4316982097625732,
+        "wirelength": 0.2985346641540527,
+        "compactness": 0.028125617742538453,
+        "grouping": 0.007591169267892837,
+        "boundary": 0.004847728610038757,
+        "mib": 0.015934269666671753,
+        "soft": 0.006948008358478546,
+        "task": 0.17722615814208983,
+        "pair_intersection_fraction": 0.05418675804138184,
+        "module_load_max": 0.41420535278320314,
+        "intent_direction": 0.0,
+        "intent_neighbour": 0.0,
+        "input_movement": 0.0,
+        "input_shape_change": 0.0,
+        "intent": 0.0,
+        "total": 0.4494208297729492,
+        "count": 500,
+        "training_exposure": {
+          "unseen": {
+            "count": 500,
+            "total": 0.44942082720994947
+          }
+        }
+      },
+      "dev_monitor": {
+        "penetration": 0.010551577568054199,
+        "module_load_mean": 0.10846897077560425,
+        "module_max_excess10": 0.3282097187042236,
+        "overlap_total": 0.44723025703430175,
+        "wirelength": 0.2991478042602539,
+        "compactness": 0.029680503368377686,
+        "grouping": 0.010901223063468933,
+        "boundary": 0.005240135446190834,
+        "mib": 0.01636847746372223,
+        "soft": 0.008217284888029098,
+        "task": 0.18084872007369995,
+        "pair_intersection_fraction": 0.05474892473220825,
+        "module_load_max": 0.42820972537994384,
+        "intent_direction": 0.0,
+        "intent_neighbour": 0.0,
+        "input_movement": 0.0,
+        "input_shape_change": 0.0,
+        "intent": 0.0,
+        "total": 0.4653151340484619,
+        "count": 500,
+        "training_exposure": {}
+      },
+      "lr": 0.001,
+      "lr_next": 0.001
+    },
+    {
+      "epoch": 1,
+      "step": 500,
+      "train_monitor": {
+        "penetration": 0.0032907850742340088,
+        "module_load_mean": 0.030261314272880556,
+        "module_max_excess10": 0.17062833547592163,
+        "overlap_total": 0.20418043613433837,
+        "wirelength": 0.3364092903137207,
+        "compactness": 0.3331405487060547,
+        "grouping": 0.03345718848705292,
+        "boundary": 0.04155729520320892,
+        "mib": 0.020150332987308502,
+        "soft": 0.03722622537612915,
+        "task": 0.4092273712158203,
+        "pair_intersection_fraction": 0.014379664540290833,
+        "module_load_max": 0.26645942974090575,
+        "intent_direction": 4.60299007499998e-05,
+        "intent_neighbour": 0.1428006958961487,
+        "input_movement": 0.33567376518249514,
+        "input_shape_change": 0.06661762428283692,
+        "intent": 0.1463700075149536,
+        "total": 0.2597401733398437,
+        "count": 500,
+        "training_exposure": {
+          "seen": {
+            "count": 500,
+            "total": 0.2597401740178466
+          }
+        }
+      },
+      "dev_monitor": {
+        "penetration": 0.0037141944915056227,
+        "module_load_mean": 0.032461008667945865,
+        "module_max_excess10": 0.18695451831817628,
+        "overlap_total": 0.22312971878051757,
+        "wirelength": 0.3354304609298706,
+        "compactness": 0.3292055492401123,
+        "grouping": 0.03811797344684601,
+        "boundary": 0.04230697214603424,
+        "mib": 0.020035495340824126,
+        "soft": 0.039172480583190915,
+        "task": 0.41066297149658204,
+        "pair_intersection_fraction": 0.015362558722496032,
+        "module_load_max": 0.2837561779022217,
+        "intent_direction": 6.180967332329601e-05,
+        "intent_neighbour": 0.13497141599655152,
+        "input_movement": 0.32546622467041014,
+        "input_shape_change": 0.06586554384231567,
+        "intent": 0.13845255136489867,
+        "total": 0.27804126930236817,
+        "count": 500,
+        "training_exposure": {}
+      },
+      "lr": 0.001,
+      "lr_next": 0.001
+    },
+    {
+      "epoch": 2,
+      "step": 1000,
+      "train_monitor": {
+        "penetration": 0.00352321258187294,
+        "module_load_mean": 0.031131632804870607,
+        "module_max_excess10": 0.18603951740264893,
+        "overlap_total": 0.22069436931610106,
+        "wirelength": 0.33237496280670165,
+        "compactness": 0.3047912540435791,
+        "grouping": 0.032597739458084106,
+        "boundary": 0.044094568848609926,
+        "mib": 0.02115246456861496,
+        "soft": 0.03835985684394837,
+        "task": 0.3953028144836426,
+        "pair_intersection_fraction": 0.014791649162769318,
+        "module_load_max": 0.2829983205795288,
+        "intent_direction": 0.0018989962797786575,
+        "intent_neighbour": 0.11276368713378906,
+        "input_movement": 0.31776919269561765,
+        "input_shape_change": 0.046206201076507566,
+        "intent": 0.11795588970184326,
+        "total": 0.27202023220062255,
+        "count": 500,
+        "training_exposure": {
+          "seen": {
+            "count": 500,
+            "total": 0.27202023616433146
+          }
+        }
+      },
+      "dev_monitor": {
+        "penetration": 0.003990125939249993,
+        "module_load_mean": 0.033759742498397825,
+        "module_max_excess10": 0.20009638833999635,
+        "overlap_total": 0.2378462610244751,
+        "wirelength": 0.3318566370010376,
+        "compactness": 0.30156669998168945,
+        "grouping": 0.05244530832767486,
+        "boundary": 0.04575305771827698,
+        "mib": 0.019448745489120484,
+        "soft": 0.04425763428211212,
+        "task": 0.405226939201355,
+        "pair_intersection_fraction": 0.015999830543994904,
+        "module_load_max": 0.2980517387390137,
+        "intent_direction": 0.0026437055885326116,
+        "intent_neighbour": 0.12363508462905884,
+        "input_movement": 0.3118318147659302,
+        "input_shape_change": 0.049882706999778745,
+        "intent": 0.1295218152999878,
+        "total": 0.29132114028930667,
+        "count": 500,
+        "training_exposure": {}
+      },
+      "lr": 0.001,
+      "lr_next": 0.001
+    },
+    {
+      "epoch": 3,
+      "step": 1500,
+      "train_monitor": {
+        "penetration": 0.01015391606092453,
+        "module_load_mean": 0.10809393644332886,
+        "module_max_excess10": 0.3181979789733887,
+        "overlap_total": 0.43644582557678224,
+        "wirelength": 0.29862776374816896,
+        "compactness": 0.028724106788635254,
+        "grouping": 0.007596598714590072,
+        "boundary": 0.005355659872293472,
+        "mib": 0.015931656777858735,
+        "soft": 0.0072373804152011875,
+        "task": 0.17815069723129273,
+        "pair_intersection_fraction": 0.05438581466674805,
+        "module_load_max": 0.4181979751586914,
+        "intent_direction": 0.0,
+        "intent_neighbour": 3.3465514658018946e-05,
+        "input_movement": 0.005931560963392258,
+        "input_shape_change": 0.00037113304156810047,
+        "intent": 9.370895568281413e-05,
+        "total": 0.45427026176452634,
+        "count": 500,
+        "training_exposure": {
+          "seen": {
+            "count": 500,
+            "total": 0.4542702703475952
+          }
+        }
+      },
+      "dev_monitor": {
+        "penetration": 0.01075033712387085,
+        "module_load_mean": 0.10917608261108398,
+        "module_max_excess10": 0.3329657688140869,
+        "overlap_total": 0.4528921909332275,
+        "wirelength": 0.2992507724761963,
+        "compactness": 0.030290258646011353,
+        "grouping": 0.010942633509635926,
+        "boundary": 0.0057285214364528655,
+        "mib": 0.01636937350034714,
+        "soft": 0.008514680951833725,
+        "task": 0.18179988145828246,
+        "pair_intersection_fraction": 0.05496259927749634,
+        "module_load_max": 0.43296576881408694,
+        "intent_direction": 0.0,
+        "intent_neighbour": 3.540781559422612e-05,
+        "input_movement": 0.00589938148856163,
+        "input_shape_change": 0.00037329533789306877,
+        "intent": 9.533486654981971e-05,
+        "total": 0.4710817127227783,
+        "count": 500,
+        "training_exposure": {}
+      },
+      "lr": 0.001,
+      "lr_next": 0.001
+    },
+    {
+      "epoch": 4,
+      "step": 2000,
+      "train_monitor": {
+        "penetration": 0.009998971670866013,
+        "module_load_mean": 0.1065563325881958,
+        "module_max_excess10": 0.3139939422607422,
+        "overlap_total": 0.4305492515563965,
+        "wirelength": 0.29861285591125486,
+        "compactness": 0.02977942943572998,
+        "grouping": 0.007564887017011642,
+        "boundary": 0.004895901367068291,
+        "mib": 0.015934663712978362,
+        "soft": 0.0069692605286836625,
+        "task": 0.17813466453552246,
+        "pair_intersection_fraction": 0.0536526288986206,
+        "module_load_max": 0.41399394607543943,
+        "intent_direction": 0.0,
+        "intent_neighbour": 5.859372613485903e-06,
+        "input_movement": 0.0008041062392294407,
+        "input_shape_change": 0.0003075502049177885,
+        "intent": 1.4669310010503977e-05,
+        "total": 0.44836418533325195,
+        "count": 500,
+        "training_exposure": {
+          "seen": {
+            "count": 500,
+            "total": 0.44836417900025843
+          }
+        }
+      },
+      "dev_monitor": {
+        "penetration": 0.010590423882007599,
+        "module_load_mean": 0.10756019830703735,
+        "module_max_excess10": 0.3290701446533203,
+        "overlap_total": 0.44722076988220216,
+        "wirelength": 0.2992281446456909,
+        "compactness": 0.03133489751815796,
+        "grouping": 0.01092084839940071,
+        "boundary": 0.005296677500009537,
+        "mib": 0.01637038880586624,
+        "soft": 0.008258424669504166,
+        "task": 0.18179836750030517,
+        "pair_intersection_fraction": 0.054213263511657714,
+        "module_load_max": 0.429070143699646,
+        "intent_direction": 0.0,
+        "intent_neighbour": 5.977026507025585e-06,
+        "input_movement": 0.0008001422863453627,
+        "input_shape_change": 0.0003082879111170769,
+        "intent": 1.4749169058632106e-05,
+        "total": 0.4654020881652832,
+        "count": 500,
+        "training_exposure": {}
+      },
+      "lr": 0.001,
+      "lr_next": 0.00025
+    },
+    {
+      "epoch": 5,
+      "step": 2500,
+      "train_monitor": {
+        "penetration": 0.009970848560333251,
+        "module_load_mean": 0.10663136434555054,
+        "module_max_excess10": 0.31363300609588624,
+        "overlap_total": 0.4302352180480957,
+        "wirelength": 0.29856194496154786,
+        "compactness": 0.029436562299728394,
+        "grouping": 0.007565119445323944,
+        "boundary": 0.004877434074878693,
+        "mib": 0.015938061833381652,
+        "soft": 0.006957595333456993,
+        "task": 0.1779144444465637,
+        "pair_intersection_fraction": 0.053694077730178834,
+        "module_load_max": 0.4136330013275146,
+        "intent_direction": 0.0,
+        "intent_neighbour": 5.629117687931284e-06,
+        "input_movement": 0.0003030429407954216,
+        "input_shape_change": 0.00019121471606194974,
+        "intent": 9.137583809206262e-06,
+        "total": 0.44802757263183596,
+        "count": 500,
+        "training_exposure": {
+          "seen": {
+            "count": 500,
+            "total": 0.44802757528424264
+          }
+        }
+      },
+      "dev_monitor": {
+        "penetration": 0.010566295325756073,
+        "module_load_mean": 0.10762621307373046,
+        "module_max_excess10": 0.32849019718170164,
+        "overlap_total": 0.44668270301818847,
+        "wirelength": 0.2991746206283569,
+        "compactness": 0.03097020983695984,
+        "grouping": 0.01091210862994194,
+        "boundary": 0.005263749703764915,
+        "mib": 0.016371914565563202,
+        "soft": 0.008236614048480988,
+        "task": 0.18154564046859742,
+        "pair_intersection_fraction": 0.05426560139656067,
+        "module_load_max": 0.4284901943206787,
+        "intent_direction": 0.0,
+        "intent_neighbour": 6.232121377252042e-06,
+        "input_movement": 0.00029805462062358856,
+        "input_shape_change": 0.00019152815733104945,
+        "intent": 9.691487648524343e-06,
+        "total": 0.4648382453918457,
+        "count": 500,
+        "training_exposure": {}
+      },
+      "lr": 0.00025,
+      "lr_next": 0.00025
+    }
+  ],
+  "formal_updates": 0,
+  "test_read": false
+}

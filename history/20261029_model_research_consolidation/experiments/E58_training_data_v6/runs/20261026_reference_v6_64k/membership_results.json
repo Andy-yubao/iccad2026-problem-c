@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "registry": "protocol/reference_workset_v6.json",
+  "registry_sha256": "2fe459b0a785ffb6995dd3e5966cd47337b948b15ec4bb4d4c19ffe169e404ae",
+  "counts": {
+    "train": 64000,
+    "dev": 2000,
+    "local_test": 2000,
+    "train_monitor500": 500,
+    "dev_monitor500": 500
+  },
+  "nested_train_views": [
+    16000,
+    32000,
+    64000
+  ],
+  "new_train_cases": 48000,
+  "same_v5_dev_test_and_monitors": true,
+  "candidate_train_count": 395061,
+  "metadata_seconds": 8.165497299996787,
+  "test_payloads_read": false
+}

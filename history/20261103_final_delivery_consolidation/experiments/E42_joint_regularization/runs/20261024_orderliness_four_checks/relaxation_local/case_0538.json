@@ -1,0 +1,68 @@
+{
+  "id": "case_0538",
+  "score": 3,
+  "trials": [
+    {
+      "arm": "bbox_only",
+      "solver": {
+        "status": 2,
+        "message": "No separating axis is reachable for at least one pair within movement cap",
+        "pair": [
+          54,
+          58
+        ],
+        "certificate_scope": "fixed shapes, maximum L1 movement cap; independent of solver quality limits",
+        "binary_variables": 0,
+        "threads": 1
+      }
+    },
+    {
+      "arm": "wire_only",
+      "solver": {
+        "status": 2,
+        "message": "No separating axis is reachable for at least one pair within movement cap",
+        "pair": [
+          54,
+          58
+        ],
+        "certificate_scope": "fixed shapes, maximum L1 movement cap; independent of solver quality limits",
+        "binary_variables": 0,
+        "threads": 1
+      }
+    },
+    {
+      "arm": "boundary_only",
+      "solver": {
+        "status": 2,
+        "message": "No separating axis is reachable for at least one pair within movement cap",
+        "pair": [
+          54,
+          58
+        ],
+        "certificate_scope": "fixed shapes, maximum L1 movement cap; independent of solver quality limits",
+        "binary_variables": 0,
+        "threads": 1
+      }
+    },
+    {
+      "arm": "larger_move_control",
+      "solver": {
+        "status": 1,
+        "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+        "objective": null,
+        "dual_bound": null,
+        "gap": null,
+        "binary_variables": 8151,
+        "threads": 1,
+        "flexible": true,
+        "max_move": 2.0,
+        "span_gain": 0.01,
+        "wire_gain": 0.01,
+        "protect_boundary": true,
+        "choice_pairs": 2627,
+        "forced_pairs": 1,
+        "certificate_scope": "fixed shapes; movement cap, per-axis bbox span caps, HPWL cap, preserved successful boundary blocks"
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "revision": "E99.central_rectangles.area_mass.v2",
+  "authorization": "2026-11-02用户要求面积大的模块有更大质量，相同力下位移更小，并明确允许检查100例。",
+  "migration": "New force-response identity; preserves completed v1 plans, snapshots, five-case coordinates and results. No network or checkpoint changes.",
+  "config": {"iterations": 4, "step_size": 0.5, "step_fraction": 0.02, "total_fraction": 0.06, "attraction_range": 0.5, "attraction_strength": 0.25, "repulsion_strength": 1.0, "mass_weighted": true},
+  "mass": "Initial realized public draft area wi*hi / median draft area; inverse mass multiplies net force. Only a common units normalization, no reference labels or scores. Preplaced mobility is zero.",
+  "safety": "One global per-round shrink factor ensures EACH module's step <=2% initial shortest side and path/displacement <=6%, retaining inverse-mass ratios before coordinate-domain projection. No inertia. Same hard ceilings of 8 iterations and 6% path as v1.",
+  "panel": "Frozen v5 dev_monitor500 first100 in original order, indices0..99, explicitly authorized extension; already adaptively exposed development panel, not independent generalization or full dev500.",
+  "source_draft": "experiments/E97_gpu_hybrid_solver/runs/20261102_fullrepair_singlethread_dev500/C3/terminal/{index:04d}.json",
+  "source_field": "draft_positions",
+  "source_model": "E97 C3 own-Loss best d784e96f46decf7a487c25bde2ab16db8cf6ebae1bc0632434cc5e2f78173fce",
+  "task": "Existing E14.mean_area.v1 public MIB mean-area transform; v5 original split_v1 membership unchanged",
+  "controls": "Saved C3 draft and completed full-planner output reused. Frozen v1 no-mass response computed once for raw geometry only on same100, no downstream duplicate solve. This control includes v1 individual caps, so comparison is the mass-response redesign including common safety scaling, not pure mass alone.",
+  "new_execution": "One fixed mass-weighted preprocessor plus identical local single-thread full planner per member, exactly100 new final solves; no parameter scan, no new candidate training, no test, no automation.",
+  "evaluation": "Exact raw intersection and union metrics, module coverage strictly below10% and worst module; final independent+official hard checks and neutral-runtime official Q. Reference labels and denominators are used only by reporting/scoring after solver return, never by the preprocessor/planner.",
+  "timing": "Resident CPU draft through preprocessor/planner/necessary hard check; NN/input construction/transfers excluded. Preprocessor mean/P95 separate. Historical control timings are not paired fresh measurements and cannot establish speedup. No throughput claim.",
+  "visualization": "Exactly same100 reference / saved C3 draft / area-mass preprocessor / final planner, common IDs and scale, shared visualization only; no scoring controls or automatic browser opening. Rendering after measured solves.",
+  "stopping": "STOP at member boundaries; save progress and exit; failures preserved, no automatic retry. Fixed100 only; no full dev500 evaluation.",
+  "output": "runs/20261102_area_mass_v2_dev100",
+  "test_read": false
+}

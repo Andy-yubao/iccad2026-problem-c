@@ -1,0 +1,63 @@
+{
+  "members_matched": true,
+  "terminal_Q_lower_is_better": true,
+  "Q_improved": 191,
+  "Q_worsened": 243,
+  "old_Q": {
+    "mean": 1.0388259368207473,
+    "p95": 1.145570827221716,
+    "max": 1.8419663187374198
+  },
+  "new_Q": {
+    "mean": 1.0386611782163384,
+    "p95": 1.1363591522542196,
+    "max": 1.729341397928321
+  },
+  "old_postprocess_seconds": {
+    "mean": 0.20383588799915742,
+    "p95": 0.5059840349829756,
+    "max": 3.054146500013303
+  },
+  "new_postprocess_seconds": {
+    "mean": 0.18489740139998684,
+    "p95": 0.489745294999784,
+    "max": 3.0393354000007093
+  },
+  "F_only_seconds_amortized": {
+    "mean": 0.004790940300000784,
+    "p95": 0.005012793750012179,
+    "max": 0.038649365624991106
+  },
+  "raw_hard_legal": 14,
+  "old_terminal_legal": 500,
+  "new_terminal_legal": 500,
+  "raw_bbox_worsened": 2000,
+  "raw_wirelength_worsened": 2000,
+  "test_read": false,
+  "small": {
+    "count": 199,
+    "mean_Q_delta": -0.008601509047991835,
+    "weighted_Q_delta": -0.0107133920953088
+  },
+  "middle": {
+    "count": 196,
+    "mean_Q_delta": 0.0032154011385827994,
+    "weighted_Q_delta": 0.006260885798246195
+  },
+  "large": {
+    "count": 105,
+    "mean_Q_delta": 0.009515260716034634,
+    "weighted_Q_delta": 0.010038957407919057
+  },
+  "old_terminal_metrics": {
+    "hpwl_gap": 0.012173637421218887,
+    "area_gap": 0.017497556980463867,
+    "total_soft_violations": 0.39
+  },
+  "new_terminal_metrics": {
+    "hpwl_gap": 0.012060118026774994,
+    "area_gap": 0.01597169013777654,
+    "total_soft_violations": 0.424
+  },
+  "same100_one_call_loss": 0.055486801117658614
+}

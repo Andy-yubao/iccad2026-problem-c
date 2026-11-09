@@ -1,0 +1,4568 @@
+{
+  "index": 23,
+  "member": [
+    "worker_89/layouts_2688.th",
+    77
+  ],
+  "n": 25,
+  "output_state_gradients": {
+    "cosines": {
+      "center_local": {
+        "center_local": 0.9999998211860657,
+        "shape": 0.0,
+        "relative_local": 0.7019019722938538,
+        "overlap": -0.5105994343757629,
+        "contact": 0.20088614523410797,
+        "boundary": -0.05206246301531792,
+        "mib": 0.0,
+        "bbox": 0.022397898137569427
+      },
+      "shape": {
+        "center_local": 0.0,
+        "shape": 1.0,
+        "relative_local": 0.003401323687285185,
+        "overlap": 0.01519810315221548,
+        "contact": 0.014863792806863785,
+        "boundary": 0.011104064993560314,
+        "mib": -0.23760035634040833,
+        "bbox": 0.004972371272742748
+      },
+      "relative_local": {
+        "center_local": 0.7019019722938538,
+        "shape": 0.003401323687285185,
+        "relative_local": 1.0,
+        "overlap": -0.3159230649471283,
+        "contact": 0.16919440031051636,
+        "boundary": -0.11259813606739044,
+        "mib": -0.0024659268092364073,
+        "bbox": 0.08782969415187836
+      },
+      "overlap": {
+        "center_local": -0.5105994343757629,
+        "shape": 0.01519810315221548,
+        "relative_local": -0.3159230649471283,
+        "overlap": 0.9999999403953552,
+        "contact": -0.2102632373571396,
+        "boundary": -0.01911400631070137,
+        "mib": -0.004875043872743845,
+        "bbox": -0.03918419033288956
+      },
+      "contact": {
+        "center_local": 0.20088614523410797,
+        "shape": 0.014863792806863785,
+        "relative_local": 0.16919440031051636,
+        "overlap": -0.2102632373571396,
+        "contact": 0.9999998807907104,
+        "boundary": 0.0024293840397149324,
+        "mib": -0.004178570583462715,
+        "bbox": 0.0018704875838011503
+      },
+      "boundary": {
+        "center_local": -0.05206246301531792,
+        "shape": 0.011104064993560314,
+        "relative_local": -0.11259813606739044,
+        "overlap": -0.01911400631070137,
+        "contact": 0.0024293840397149324,
+        "boundary": 1.0,
+        "mib": -0.004600134678184986,
+        "bbox": 0.8284643888473511
+      },
+      "mib": {
+        "center_local": 0.0,
+        "shape": -0.23760035634040833,
+        "relative_local": -0.0024659268092364073,
+        "overlap": -0.004875043872743845,
+        "contact": -0.004178570583462715,
+        "boundary": -0.004600134678184986,
+        "mib": 1.0,
+        "bbox": 0.0
+      },
+      "bbox": {
+        "center_local": 0.022397898137569427,
+        "shape": 0.004972371272742748,
+        "relative_local": 0.08782969415187836,
+        "overlap": -0.03918419033288956,
+        "contact": 0.0018704875838011503,
+        "boundary": 0.8284643888473511,
+        "mib": 0.0,
+        "bbox": 1.0
+      }
+    },
+    "norms": {
+      "center_local": 0.8911426663398743,
+      "shape": 0.02608518861234188,
+      "relative_local": 0.20308361947536469,
+      "overlap": 0.6256580948829651,
+      "contact": 0.2701452970504761,
+      "boundary": 0.17863327264785767,
+      "mib": 0.016331426799297333,
+      "bbox": 0.004762733355164528
+    },
+    "sum_to_sum_of_norms": 0.44091348615052844
+  },
+  "parameter_gradients": {
+    "cosines": {
+      "center_local": {
+        "center_local": 1.0000295639038086,
+        "shape": 0.2413298487663269,
+        "relative_local": 0.6148940920829773,
+        "overlap": -0.2808878719806671,
+        "contact": -0.20000235736370087,
+        "boundary": 0.22620730102062225,
+        "mib": 0.08213888108730316,
+        "bbox": 0.4634561240673065
+      },
+      "shape": {
+        "center_local": 0.2413298487663269,
+        "shape": 1.0000386238098145,
+        "relative_local": 0.12974070012569427,
+        "overlap": 0.4681084156036377,
+        "contact": -0.04518791288137436,
+        "boundary": 0.1831291913986206,
+        "mib": -0.0312504805624485,
+        "bbox": 0.07551119476556778
+      },
+      "relative_local": {
+        "center_local": 0.6148940920829773,
+        "shape": 0.12974070012569427,
+        "relative_local": 1.0000314712524414,
+        "overlap": -0.42351648211479187,
+        "contact": -0.028269434347748756,
+        "boundary": 0.014924060553312302,
+        "mib": 0.0018519008299335837,
+        "bbox": 0.517268717288971
+      },
+      "overlap": {
+        "center_local": -0.2808878719806671,
+        "shape": 0.4681084156036377,
+        "relative_local": -0.42351648211479187,
+        "overlap": 1.0000280141830444,
+        "contact": -0.10339423269033432,
+        "boundary": -0.1090337485074997,
+        "mib": -0.09926790744066238,
+        "bbox": -0.43646320700645447
+      },
+      "contact": {
+        "center_local": -0.20000235736370087,
+        "shape": -0.04518791288137436,
+        "relative_local": -0.028269434347748756,
+        "overlap": -0.10339423269033432,
+        "contact": 1.0000213384628296,
+        "boundary": 0.04004000499844551,
+        "mib": 0.013895378448069096,
+        "bbox": 0.06965287029743195
+      },
+      "boundary": {
+        "center_local": 0.22620730102062225,
+        "shape": 0.1831291913986206,
+        "relative_local": 0.014924060553312302,
+        "overlap": -0.1090337485074997,
+        "contact": 0.04004000499844551,
+        "boundary": 1.0000020265579224,
+        "mib": 0.16460806131362915,
+        "bbox": 0.7244030833244324
+      },
+      "mib": {
+        "center_local": 0.08213888108730316,
+        "shape": -0.0312504805624485,
+        "relative_local": 0.0018519008299335837,
+        "overlap": -0.09926790744066238,
+        "contact": 0.013895378448069096,
+        "boundary": 0.16460806131362915,
+        "mib": 1.0000666379928589,
+        "bbox": 0.21139788627624512
+      },
+      "bbox": {
+        "center_local": 0.4634561240673065,
+        "shape": 0.07551119476556778,
+        "relative_local": 0.517268717288971,
+        "overlap": -0.43646320700645447,
+        "contact": 0.06965287029743195,
+        "boundary": 0.7244030833244324,
+        "mib": 0.21139788627624512,
+        "bbox": 1.0000027418136597
+      }
+    },
+    "norms": {
+      "center_local": 4.28722620010376,
+      "shape": 1.015877604484558,
+      "relative_local": 1.1754781007766724,
+      "overlap": 1.5640453100204468,
+      "contact": 0.6635270118713379,
+      "boundary": 1.1486958265304565,
+      "mib": 0.3773893415927887,
+      "bbox": 0.03801876679062843
+    },
+    "sum_to_sum_of_norms": 0.5449502568414821
+  },
+  "gradient_sum_relative_error": 4.9983050587343314e-08,
+  "inference_route_state_max_error": 0.0,
+  "trajectory": [
+    {
+      "layer": 0,
+      "pileup": {
+        "n": 25,
+        "empty_fraction": 0.8038835496468167,
+        "pair_overlap_fraction": 4.231888248902647,
+        "overlap_excess_fraction": 0.8026455545717693,
+        "overlap_pair_count": 216,
+        "largest_any_component_fraction": 0.96,
+        "coverage_load_mean": 9.604212486791802,
+        "coverage_load_p90": 13.908712909983088,
+        "coverage_load_top10_mean": 14.196522018493289,
+        "coverage_energy": 108.0640755620875,
+        "complex_energy_10pct": 108.0640755620875,
+        "strong_component_fraction_10pct": 0.96,
+        "threshold_curve": [
+          {
+            "threshold": 0.02,
+            "worst": {
+              "ids": [
+                0,
+                24,
+                22,
+                21,
+                20,
+                19,
+                18,
+                17,
+                16,
+                15,
+                14,
+                13,
+                12,
+                11,
+                10,
+                9,
+                8,
+                7,
+                6,
+                5,
+                4,
+                3,
+                2,
+                1
+              ],
+              "blocks": 24,
+              "block_fraction": 0.96,
+              "area_fraction": 0.9547235538422978,
+              "mean_coverage_load": 10.004388007074793,
+              "max_coverage_load": 14.453420641596164,
+              "energy": 108.06407556208747,
+              "strong_edges": 214
+            },
+            "complex_energy": 108.06407556208747,
+            "largest_strong_component": 24,
+            "all_complex_energy": 108.06407556208747
+          },
+          {
+            "threshold": 0.05,
+            "worst": {
+              "ids": [
+                0,
+                24,
+                7,
+                12,
+                22,
+                21,
+                20,
+                19,
+                18,
+                17,
+                16,
+                15,
+                14,
+                13,
+                11,
+                10,
+                9,
+                8,
+                6,
+                5,
+                4,
+                3,
+                2,
+                1
+              ],
+              "blocks": 24,
+              "block_fraction": 0.96,
+              "area_fraction": 0.9547235538422978,
+              "mean_coverage_load": 10.004388007074795,
+              "max_coverage_load": 14.453420641596164,
+              "energy": 108.06407556208747,
+              "strong_edges": 204
+            },
+            "complex_energy": 108.06407556208747,
+            "largest_strong_component": 24,
+            "all_complex_energy": 108.06407556208747
+          },
+          {
+            "threshold": 0.1,
+            "worst": {
+              "ids": [
+                0,
+                24,
+                22,
+                16,
+                21,
+                12,
+                7,
+                20,
+                19,
+                18,
+                17,
+                15,
+                14,
+                13,
+                11,
+                10,
+                9,
+                8,
+                6,
+                5,
+                4,
+                3,
+                2,
+                1
+              ],
+              "blocks": 24,
+              "block_fraction": 0.96,
+              "area_fraction": 0.9547235538422978,
+              "mean_coverage_load": 10.004388007074795,
+              "max_coverage_load": 14.453420641596164,
+              "energy": 108.0640755620875,
+              "strong_edges": 181
+            },
+            "complex_energy": 108.0640755620875,
+            "largest_strong_component": 24,
+            "all_complex_energy": 108.0640755620875
+          },
+          {
+            "threshold": 0.2,
+            "worst": {
+              "ids": [
+                0,
+                24,
+                22,
+                16,
+                13,
+                21,
+                7,
+                12,
+                20,
+                19,
+                18,
+                17,
+                15,
+                14,
+                11,
+                10,
+                9,
+                8,
+                6,
+                5,
+                4,
+                3,
+                2,
+                1
+              ],
+              "blocks": 24,
+              "block_fraction": 0.96,
+              "area_fraction": 0.9547235538422978,
+              "mean_coverage_load": 10.004388007074793,
+              "max_coverage_load": 14.453420641596164,
+              "energy": 108.0640755620875,
+              "strong_edges": 155
+            },
+            "complex_energy": 108.0640755620875,
+            "largest_strong_component": 24,
+            "all_complex_energy": 108.0640755620875
+          }
+        ]
+      },
+      "losses": {
+        "mse": 0.3945486545562744,
+        "center_mse": 0.4676555097103119,
+        "shape_mse": 0.22744734585285187,
+        "center_local": 3.5308010578155518,
+        "shape": 0.22744734585285187,
+        "relative_local": 0.9210680723190308,
+        "overlap": 5.692619800567627,
+        "contact": 0.6575892567634583,
+        "boundary": 0.9798391461372375,
+        "mib": 0.026519784703850746,
+        "bbox": 0.00021949256188236177,
+        "local": 3.817929983139038,
+        "geometry": 7.240668296813965
+      },
+      "occupancy_proxy": {
+        "overlap_area": 4.231888771057129,
+        "crowding": 98.69987487792969,
+        "void": 0.7998958826065063,
+        "compactness": 3.959743116865866e-05,
+        "occupancy": 29.106836318969727
+      },
+      "center_clamped_coordinate_fraction": 0.699999988079071
+    },
+    {
+      "layer": 1,
+      "pileup": {
+        "n": 25,
+        "empty_fraction": 0.8021889310780951,
+        "pair_overlap_fraction": 3.577940752223986,
+        "overlap_excess_fraction": 0.8009402388010752,
+        "overlap_pair_count": 201,
+        "largest_any_component_fraction": 0.96,
+        "coverage_load_mean": 7.568178274009785,
+        "coverage_load_p90": 9.216204833195722,
+        "coverage_load_top10_mean": 9.945068110319408,
+        "coverage_energy": 61.47245826973986,
+        "complex_energy_10pct": 61.472458269739874,
+        "strong_component_fraction_10pct": 0.96,
+        "threshold_curve": [
+          {
+            "threshold": 0.02,
+            "worst": {
+              "ids": [
+                0,
+                24,
+                22,
+                21,
+                20,
+                19,
+                18,
+                17,
+                16,
+                15,
+                14,
+                13,
+                12,
+                11,
+                10,
+                9,
+                8,
+                7,
+                6,
+                5,
+                4,
+                3,
+                2,
+                1
+              ],
+              "blocks": 24,
+              "block_fraction": 0.96,
+              "area_fraction": 0.9547235538795993,
+              "mean_coverage_load": 7.883519035426858,
+              "max_coverage_load": 10.291388982187872,
+              "energy": 61.472458269739874,
+              "strong_edges": 192
+            },
+            "complex_energy": 61.472458269739874,
+            "largest_strong_component": 24,
+            "all_complex_energy": 61.472458269739874
+          },
+          {
+            "threshold": 0.05,
+            "worst": {
+              "ids": [
+                0,
+                24,
+                7,
+                12,
+                22,
+                21,
+                20,
+                19,
+                18,
+                17,
+                16,
+                15,
+                14,
+                13,
+                11,
+                10,
+                9,
+                8,
+                6,
+                5,
+                4,
+                3,
+                2,
+                1
+              ],
+              "blocks": 24,
+              "block_fraction": 0.96,
+              "area_fraction": 0.9547235538795993,
+              "mean_coverage_load": 7.883519035426858,
+              "max_coverage_load": 10.291388982187872,
+              "energy": 61.472458269739874,
+              "strong_edges": 179
+            },
+            "complex_energy": 61.472458269739874,
+            "largest_strong_component": 24,
+            "all_complex_energy": 61.472458269739874
+          },
+          {
+            "threshold": 0.1,
+            "worst": {
+              "ids": [
+                0,
+                24,
+                22,
+                21,
+                20,
+                19,
+                18,
+                17,
+                16,
+                15,
+                14,
+                13,
+                11,
+                10,
+                9,
+                8,
+                12,
+                7,
+                6,
+                5,
+                4,
+                3,
+                2,
+                1
+              ],
+              "blocks": 24,
+              "block_fraction": 0.96,
+              "area_fraction": 0.9547235538795993,
+              "mean_coverage_load": 7.883519035426858,
+              "max_coverage_load": 10.291388982187874,
+              "energy": 61.472458269739874,
+              "strong_edges": 164
+            },
+            "complex_energy": 61.472458269739874,
+            "largest_strong_component": 24,
+            "all_complex_energy": 61.472458269739874
+          },
+          {
+            "threshold": 0.2,
+            "worst": {
+              "ids": [
+                0,
+                24,
+                2,
+                22,
+                21,
+                11,
+                9,
+                20,
+                19,
+                18,
+                17,
+                16,
+                15,
+                14,
+                13,
+                10,
+                8,
+                6,
+                5,
+                4,
+                3,
+                1
+              ],
+              "blocks": 22,
+              "block_fraction": 0.88,
+              "area_fraction": 0.9468872452998927,
+              "mean_coverage_load": 7.930322990841426,
+              "max_coverage_load": 10.291388982187874,
+              "energy": 57.03992490288472,
+              "strong_edges": 134
+            },
+            "complex_energy": 57.03992490288472,
+            "largest_strong_component": 22,
+            "all_complex_energy": 57.03992490288472
+          }
+        ]
+      },
+      "losses": {
+        "mse": 0.3753507435321808,
+        "center_mse": 0.4505627155303955,
+        "shape_mse": 0.20343753695487976,
+        "center_local": 3.1300888061523438,
+        "shape": 0.20343753695487976,
+        "relative_local": 0.9210456013679504,
+        "overlap": 5.342762470245361,
+        "contact": 0.4153068959712982,
+        "boundary": 0.9651228785514832,
+        "mib": 0.03876729682087898,
+        "bbox": 0.00021949256188236177,
+        "local": 3.4112095832824707,
+        "geometry": 6.535423755645752
+      },
+      "occupancy_proxy": {
+        "overlap_area": 3.5779409408569336,
+        "crowding": 54.1442756652832,
+        "void": 0.7993873357772827,
+        "compactness": 3.959743116865866e-05,
+        "occupancy": 17.313861846923828
+      },
+      "center_clamped_coordinate_fraction": 0.41999998688697815,
+      "center_step_mean_free": 1.0106229666490054,
+      "center_step_max": 4.311809382488134
+    },
+    {
+      "layer": 2,
+      "pileup": {
+        "n": 25,
+        "empty_fraction": 0.7533532775878827,
+        "pair_overlap_fraction": 2.7357782517372797,
+        "overlap_excess_fraction": 0.7517963107719374,
+        "overlap_pair_count": 183,
+        "largest_any_component_fraction": 0.96,
+        "coverage_load_mean": 5.6412736209259515,
+        "coverage_load_p90": 7.46577601012648,
+        "coverage_load_top10_mean": 8.447577667552435,
+        "coverage_energy": 35.81704516845876,
+        "complex_energy_10pct": 35.81704516845876,
+        "strong_component_fraction_10pct": 0.96,
+        "threshold_curve": [
+          {
+            "threshold": 0.02,
+            "worst": {
+              "ids": [
+                0,
+                24,
+                21,
+                12,
+                11,
+                9,
+                8,
+                7,
+                2,
+                22,
+                20,
+                19,
+                18,
+                17,
+                16,
+                15,
+                14,
+                13,
+                10,
+                6,
+                5,
+                4,
+                3,
+                1
+              ],
+              "blocks": 24,
+              "block_fraction": 0.96,
+              "area_fraction": 0.9547235544211838,
+              "mean_coverage_load": 5.876326688464533,
+              "max_coverage_load": 8.977862100668187,
+              "energy": 35.81704516845877,
+              "strong_edges": 170
+            },
+            "complex_energy": 35.81704516845877,
+            "largest_strong_component": 24,
+            "all_complex_energy": 35.81704516845877
+          },
+          {
+            "threshold": 0.05,
+            "worst": {
+              "ids": [
+                0,
+                24,
+                21,
+                7,
+                11,
+                9,
+                8,
+                2,
+                12,
+                22,
+                20,
+                19,
+                18,
+                17,
+                16,
+                15,
+                14,
+                13,
+                10,
+                6,
+                5,
+                4,
+                3,
+                1
+              ],
+              "blocks": 24,
+              "block_fraction": 0.96,
+              "area_fraction": 0.9547235544211838,
+              "mean_coverage_load": 5.876326688464533,
+              "max_coverage_load": 8.977862100668187,
+              "energy": 35.81704516845876,
+              "strong_edges": 150
+            },
+            "complex_energy": 35.81704516845876,
+            "largest_strong_component": 24,
+            "all_complex_energy": 35.81704516845876
+          },
+          {
+            "threshold": 0.1,
+            "worst": {
+              "ids": [
+                0,
+                24,
+                21,
+                7,
+                18,
+                11,
+                10,
+                9,
+                8,
+                2,
+                12,
+                22,
+                20,
+                19,
+                17,
+                16,
+                15,
+                14,
+                13,
+                6,
+                5,
+                4,
+                3,
+                1
+              ],
+              "blocks": 24,
+              "block_fraction": 0.96,
+              "area_fraction": 0.9547235544211838,
+              "mean_coverage_load": 5.876326688464533,
+              "max_coverage_load": 8.977862100668185,
+              "energy": 35.81704516845876,
+              "strong_edges": 125
+            },
+            "complex_energy": 35.81704516845876,
+            "largest_strong_component": 24,
+            "all_complex_energy": 35.81704516845876
+          },
+          {
+            "threshold": 0.2,
+            "worst": {
+              "ids": [
+                0,
+                24,
+                22,
+                18,
+                11,
+                9,
+                17,
+                21,
+                7,
+                10,
+                8,
+                2,
+                1,
+                20,
+                19,
+                16,
+                15,
+                14,
+                13,
+                6,
+                5,
+                4,
+                3
+              ],
+              "blocks": 23,
+              "block_fraction": 0.92,
+              "area_fraction": 0.9514584261342499,
+              "mean_coverage_load": 5.838486872191482,
+              "max_coverage_load": 8.977862100668187,
+              "energy": 33.9993945656434,
+              "strong_edges": 91
+            },
+            "complex_energy": 33.9993945656434,
+            "largest_strong_component": 23,
+            "all_complex_energy": 33.9993945656434
+          }
+        ]
+      },
+      "losses": {
+        "mse": 0.41752225160598755,
+        "center_mse": 0.5114349722862244,
+        "shape_mse": 0.20286442339420319,
+        "center_local": 3.5743439197540283,
+        "shape": 0.20286442339420319,
+        "relative_local": 0.9739341735839844,
+        "overlap": 3.5701446533203125,
+        "contact": 0.5078229308128357,
+        "boundary": 1.2665364742279053,
+        "mib": 0.028235161677002907,
+        "bbox": 0.00021949256188236177,
+        "local": 3.8685436248779297,
+        "geometry": 6.227006912231445
+      },
+      "occupancy_proxy": {
+        "overlap_area": 2.7357780933380127,
+        "crowding": 30.415771484375,
+        "void": 0.7535832524299622,
+        "compactness": 3.959743116865866e-05,
+        "occupancy": 10.528121948242188
+      },
+      "center_clamped_coordinate_fraction": 0.41999998688697815,
+      "center_step_mean_free": 0.9256914955084822,
+      "center_step_max": 3.041307540438489
+    },
+    {
+      "layer": 3,
+      "pileup": {
+        "n": 25,
+        "empty_fraction": 0.7511869229536248,
+        "pair_overlap_fraction": 2.4811491270096537,
+        "overlap_excess_fraction": 0.7496162732783515,
+        "overlap_pair_count": 165,
+        "largest_any_component_fraction": 0.96,
+        "coverage_load_mean": 5.070913515622625,
+        "coverage_load_p90": 6.6079567452824834,
+        "coverage_load_top10_mean": 7.349512665617529,
+        "coverage_energy": 28.707670072656,
+        "complex_energy_10pct": 28.707670072655997,
+        "strong_component_fraction_10pct": 0.96,
+        "threshold_curve": [
+          {
+            "threshold": 0.02,
+            "worst": {
+              "ids": [
+                0,
+                24,
+                12,
+                7,
+                22,
+                21,
+                20,
+                19,
+                18,
+                17,
+                16,
+                15,
+                14,
+                13,
+                11,
+                10,
+                9,
+                8,
+                6,
+                5,
+                4,
+                3,
+                2,
+                1
+              ],
+              "blocks": 24,
+              "block_fraction": 0.96,
+              "area_fraction": 0.9547235530354417,
+              "mean_coverage_load": 5.282201578773567,
+              "max_coverage_load": 7.80368971824646,
+              "energy": 28.707670072656,
+              "strong_edges": 154
+            },
+            "complex_energy": 28.707670072656,
+            "largest_strong_component": 24,
+            "all_complex_energy": 28.707670072656
+          },
+          {
+            "threshold": 0.05,
+            "worst": {
+              "ids": [
+                0,
+                24,
+                7,
+                12,
+                22,
+                3,
+                21,
+                20,
+                19,
+                18,
+                17,
+                16,
+                15,
+                14,
+                13,
+                11,
+                10,
+                9,
+                8,
+                6,
+                5,
+                4,
+                2,
+                1
+              ],
+              "blocks": 24,
+              "block_fraction": 0.96,
+              "area_fraction": 0.9547235530354417,
+              "mean_coverage_load": 5.282201578773567,
+              "max_coverage_load": 7.80368971824646,
+              "energy": 28.707670072656,
+              "strong_edges": 137
+            },
+            "complex_energy": 28.707670072656,
+            "largest_strong_component": 24,
+            "all_complex_energy": 28.707670072656
+          },
+          {
+            "threshold": 0.1,
+            "worst": {
+              "ids": [
+                0,
+                24,
+                21,
+                12,
+                7,
+                22,
+                14,
+                4,
+                3,
+                20,
+                11,
+                19,
+                18,
+                17,
+                16,
+                15,
+                13,
+                10,
+                9,
+                8,
+                6,
+                5,
+                2,
+                1
+              ],
+              "blocks": 24,
+              "block_fraction": 0.96,
+              "area_fraction": 0.9547235530354417,
+              "mean_coverage_load": 5.282201578773567,
+              "max_coverage_load": 7.80368971824646,
+              "energy": 28.707670072655997,
+              "strong_edges": 107
+            },
+            "complex_energy": 28.707670072655997,
+            "largest_strong_component": 24,
+            "all_complex_energy": 28.707670072655997
+          },
+          {
+            "threshold": 0.2,
+            "worst": {
+              "ids": [
+                0,
+                24,
+                21,
+                7,
+                12,
+                8,
+                2,
+                22,
+                20,
+                18,
+                13,
+                11,
+                6,
+                19,
+                17,
+                16,
+                14,
+                4,
+                3,
+                15,
+                10,
+                9,
+                5,
+                1
+              ],
+              "blocks": 24,
+              "block_fraction": 0.96,
+              "area_fraction": 0.9547235530354417,
+              "mean_coverage_load": 5.282201578773567,
+              "max_coverage_load": 7.80368971824646,
+              "energy": 28.707670072656,
+              "strong_edges": 80
+            },
+            "complex_energy": 28.707670072656,
+            "largest_strong_component": 24,
+            "all_complex_energy": 28.707670072656
+          }
+        ]
+      },
+      "losses": {
+        "mse": 0.5597089529037476,
+        "center_mse": 0.716810405254364,
+        "shape_mse": 0.20062020421028137,
+        "center_local": 4.286600589752197,
+        "shape": 0.20062020421028137,
+        "relative_local": 0.9704738259315491,
+        "overlap": 3.122957229614258,
+        "contact": 0.641998827457428,
+        "boundary": 1.2483105659484863,
+        "mib": 0.07362741976976395,
+        "bbox": 0.00021949256188236177,
+        "local": 4.579374313354492,
+        "geometry": 6.781314849853516
+      },
+      "occupancy_proxy": {
+        "overlap_area": 2.481149435043335,
+        "crowding": 23.876754760742188,
+        "void": 0.751451849937439,
+        "compactness": 3.959743116865866e-05,
+        "occupancy": 8.63820743560791
+      },
+      "center_clamped_coordinate_fraction": 0.46000000834465027,
+      "center_step_mean_free": 0.6668802419139807,
+      "center_step_max": 3.198802548030003
+    },
+    {
+      "layer": 4,
+      "pileup": {
+        "n": 25,
+        "empty_fraction": 0.7396433328349483,
+        "pair_overlap_fraction": 2.155684813031245,
+        "overlap_excess_fraction": 0.7002448188629113,
+        "overlap_pair_count": 139,
+        "largest_any_component_fraction": 0.92,
+        "coverage_load_mean": 4.040789906737748,
+        "coverage_load_p90": 6.249731903567306,
+        "coverage_load_top10_mean": 6.544818427192889,
+        "coverage_energy": 20.52573240574106,
+        "complex_energy_10pct": 19.183445093700847,
+        "strong_component_fraction_10pct": 0.84,
+        "threshold_curve": [
+          {
+            "threshold": 0.02,
+            "worst": {
+              "ids": [
+                0,
+                24,
+                7,
+                3,
+                22,
+                21,
+                12,
+                20,
+                19,
+                18,
+                11,
+                6,
+                17,
+                16,
+                15,
+                14,
+                10,
+                9,
+                8,
+                5,
+                4,
+                2,
+                1
+              ],
+              "blocks": 23,
+              "block_fraction": 0.92,
+              "area_fraction": 0.9364388352631922,
+              "mean_coverage_load": 4.392162942106249,
+              "max_coverage_load": 6.771836498116932,
+              "energy": 20.52573240574106,
+              "strong_edges": 131
+            },
+            "complex_energy": 20.52573240574106,
+            "largest_strong_component": 23,
+            "all_complex_energy": 20.52573240574106
+          },
+          {
+            "threshold": 0.05,
+            "worst": {
+              "ids": [
+                0,
+                24,
+                7,
+                3,
+                2,
+                22,
+                21,
+                12,
+                20,
+                19,
+                18,
+                11,
+                6,
+                16,
+                17,
+                15,
+                14,
+                10,
+                9,
+                8,
+                5,
+                4,
+                1
+              ],
+              "blocks": 23,
+              "block_fraction": 0.92,
+              "area_fraction": 0.9364388352631922,
+              "mean_coverage_load": 4.392162942106248,
+              "max_coverage_load": 6.771836498116932,
+              "energy": 20.525732405741064,
+              "strong_edges": 119
+            },
+            "complex_energy": 20.525732405741064,
+            "largest_strong_component": 23,
+            "all_complex_energy": 20.525732405741064
+          },
+          {
+            "threshold": 0.1,
+            "worst": {
+              "ids": [
+                0,
+                24,
+                3,
+                2,
+                22,
+                21,
+                12,
+                20,
+                19,
+                18,
+                6,
+                17,
+                15,
+                16,
+                14,
+                10,
+                9,
+                8,
+                5,
+                4,
+                1
+              ],
+              "blocks": 21,
+              "block_fraction": 0.84,
+              "area_fraction": 0.9135829352605233,
+              "mean_coverage_load": 4.519788243620201,
+              "max_coverage_load": 6.771836498116932,
+              "energy": 19.183445093700847,
+              "strong_edges": 101
+            },
+            "complex_energy": 19.183445093700847,
+            "largest_strong_component": 21,
+            "all_complex_energy": 19.183445093700847
+          },
+          {
+            "threshold": 0.2,
+            "worst": {
+              "ids": [
+                0,
+                24,
+                5,
+                3,
+                2,
+                22,
+                20,
+                18,
+                6,
+                14,
+                9,
+                19,
+                17,
+                21,
+                15,
+                16,
+                10,
+                8,
+                4,
+                1
+              ],
+              "blocks": 20,
+              "block_fraction": 0.8,
+              "area_fraction": 0.910317806931912,
+              "mean_coverage_load": 4.498148765460934,
+              "max_coverage_load": 6.771836498116932,
+              "energy": 18.19999508596493,
+              "strong_edges": 67
+            },
+            "complex_energy": 18.19999508596493,
+            "largest_strong_component": 20,
+            "all_complex_energy": 18.19999508596493
+          }
+        ]
+      },
+      "losses": {
+        "mse": 0.32552748918533325,
+        "center_mse": 0.3764626085758209,
+        "shape_mse": 0.2091042697429657,
+        "center_local": 3.264141082763672,
+        "shape": 0.2091042697429657,
+        "relative_local": 1.0892963409423828,
+        "overlap": 2.5034868717193604,
+        "contact": 0.39378345012664795,
+        "boundary": 1.6571661233901978,
+        "mib": 0.00561176473274827,
+        "bbox": 0.014353391714394093,
+        "local": 3.5887413024902344,
+        "geometry": 5.453664302825928
+      },
+      "occupancy_proxy": {
+        "overlap_area": 2.15568470954895,
+        "crowding": 16.711444854736328,
+        "void": 0.7391197681427002,
+        "compactness": 0.01985662803053856,
+        "occupancy": 6.521304130554199
+      },
+      "center_clamped_coordinate_fraction": 0.3799999952316284,
+      "center_step_mean_free": 0.8592965441530223,
+      "center_step_max": 3.5623465042968054
+    },
+    {
+      "layer": 5,
+      "pileup": {
+        "n": 25,
+        "empty_fraction": 0.609848008248346,
+        "pair_overlap_fraction": 0.868919995418702,
+        "overlap_excess_fraction": 0.49617255194645365,
+        "overlap_pair_count": 50,
+        "largest_any_component_fraction": 0.8,
+        "coverage_load_mean": 1.4476256400077725,
+        "coverage_load_p90": 2.8604857110435056,
+        "coverage_load_top10_mean": 3.467323789904253,
+        "coverage_energy": 3.6077307849183415,
+        "complex_energy_10pct": 3.6035547170366824,
+        "strong_component_fraction_10pct": 0.68,
+        "threshold_curve": [
+          {
+            "threshold": 0.02,
+            "worst": {
+              "ids": [
+                0,
+                22,
+                10,
+                19,
+                24,
+                21,
+                2,
+                16,
+                14,
+                9,
+                11,
+                8,
+                5,
+                3,
+                20,
+                17,
+                6,
+                15,
+                4,
+                1
+              ],
+              "blocks": 20,
+              "block_fraction": 0.8,
+              "area_fraction": 0.9011754477600745,
+              "mean_coverage_load": 1.8095320500097156,
+              "max_coverage_load": 4.143196196163984,
+              "energy": 3.6077307849183415,
+              "strong_edges": 49
+            },
+            "complex_energy": 3.6077307849183415,
+            "largest_strong_component": 20,
+            "all_complex_energy": 3.6077307849183415
+          },
+          {
+            "threshold": 0.05,
+            "worst": {
+              "ids": [
+                0,
+                22,
+                5,
+                19,
+                24,
+                21,
+                2,
+                10,
+                16,
+                8,
+                3,
+                20,
+                17,
+                6,
+                15,
+                4,
+                1
+              ],
+              "blocks": 17,
+              "block_fraction": 0.68,
+              "area_fraction": 0.8463212873546566,
+              "mean_coverage_load": 2.112150515610131,
+              "max_coverage_load": 4.143196196163983,
+              "energy": 3.6035547170366824,
+              "strong_edges": 43
+            },
+            "complex_energy": 3.6035547170366824,
+            "largest_strong_component": 17,
+            "all_complex_energy": 3.6035547170366824
+          },
+          {
+            "threshold": 0.1,
+            "worst": {
+              "ids": [
+                0,
+                22,
+                5,
+                10,
+                16,
+                8,
+                24,
+                21,
+                2,
+                19,
+                3,
+                20,
+                17,
+                6,
+                15,
+                4,
+                1
+              ],
+              "blocks": 17,
+              "block_fraction": 0.68,
+              "area_fraction": 0.8463212873546566,
+              "mean_coverage_load": 2.112150515610131,
+              "max_coverage_load": 4.143196196163983,
+              "energy": 3.6035547170366824,
+              "strong_edges": 36
+            },
+            "complex_energy": 3.6035547170366824,
+            "largest_strong_component": 17,
+            "all_complex_energy": 3.6035547170366824
+          },
+          {
+            "threshold": 0.2,
+            "worst": {
+              "ids": [
+                0,
+                22,
+                20,
+                17,
+                5,
+                10,
+                3,
+                4,
+                6,
+                1,
+                15
+              ],
+              "blocks": 11,
+              "block_fraction": 0.44,
+              "area_fraction": 0.5939812795781206,
+              "mean_coverage_load": 2.2739938567692337,
+              "max_coverage_load": 4.143196196163984,
+              "energy": 2.707682286693094,
+              "strong_edges": 17
+            },
+            "complex_energy": 2.707682286693094,
+            "largest_strong_component": 11,
+            "all_complex_energy": 3.446969784119543
+          }
+        ]
+      },
+      "losses": {
+        "mse": 0.17706763744354248,
+        "center_mse": 0.16759659349918365,
+        "shape_mse": 0.1987157166004181,
+        "center_local": 2.04231858253479,
+        "shape": 0.1987157166004181,
+        "relative_local": 1.1059092283248901,
+        "overlap": 1.0071278810501099,
+        "contact": 1.5498489141464233,
+        "boundary": 2.168423652648926,
+        "mib": 0.029970506206154823,
+        "bbox": 0.05503227561712265,
+        "local": 2.3684749603271484,
+        "geometry": 4.197569370269775
+      },
+      "occupancy_proxy": {
+        "overlap_area": 0.8689199686050415,
+        "crowding": 2.3382656574249268,
+        "void": 0.6088833808898926,
+        "compactness": 0.06538122147321701,
+        "occupancy": 1.6155145168304443
+      },
+      "center_clamped_coordinate_fraction": 0.2199999988079071,
+      "center_step_mean_free": 2.6938472269166964,
+      "center_step_max": 13.153869422963052
+    },
+    {
+      "layer": 6,
+      "pileup": {
+        "n": 25,
+        "empty_fraction": 0.5465966631921035,
+        "pair_overlap_fraction": 0.32160936705784854,
+        "overlap_excess_fraction": 0.2637197619889565,
+        "overlap_pair_count": 20,
+        "largest_any_component_fraction": 0.32,
+        "coverage_load_mean": 0.5625612886150906,
+        "coverage_load_p90": 1.5785901165732952,
+        "coverage_load_top10_mean": 1.6177062757310823,
+        "coverage_energy": 0.6640576075192743,
+        "complex_energy_10pct": 0.37268901899033646,
+        "strong_component_fraction_10pct": 0.24,
+        "threshold_curve": [
+          {
+            "threshold": 0.02,
+            "worst": {
+              "ids": [
+                0,
+                22,
+                20,
+                6,
+                4
+              ],
+              "blocks": 5,
+              "block_fraction": 0.2,
+              "area_fraction": 0.23971484690229744,
+              "mean_coverage_load": 1.3245496037974542,
+              "max_coverage_load": 1.6193001403435934,
+              "energy": 0.37268901899033646,
+              "strong_edges": 7
+            },
+            "complex_energy": 0.37268901899033646,
+            "largest_strong_component": 8,
+            "all_complex_energy": 0.6616871234459638
+          },
+          {
+            "threshold": 0.05,
+            "worst": {
+              "ids": [
+                0,
+                22,
+                6,
+                20,
+                4
+              ],
+              "blocks": 5,
+              "block_fraction": 0.2,
+              "area_fraction": 0.23971484690229744,
+              "mean_coverage_load": 1.3245496037974542,
+              "max_coverage_load": 1.6193001403435934,
+              "energy": 0.37268901899033646,
+              "strong_edges": 6
+            },
+            "complex_energy": 0.37268901899033646,
+            "largest_strong_component": 6,
+            "all_complex_energy": 0.6286708436101327
+          },
+          {
+            "threshold": 0.1,
+            "worst": {
+              "ids": [
+                0,
+                22,
+                6,
+                20,
+                4
+              ],
+              "blocks": 5,
+              "block_fraction": 0.2,
+              "area_fraction": 0.23971484690229744,
+              "mean_coverage_load": 1.3245496037974542,
+              "max_coverage_load": 1.6193001403435934,
+              "energy": 0.37268901899033646,
+              "strong_edges": 6
+            },
+            "complex_energy": 0.37268901899033646,
+            "largest_strong_component": 6,
+            "all_complex_energy": 0.6286708436101327
+          },
+          {
+            "threshold": 0.2,
+            "worst": {
+              "ids": [
+                0,
+                22,
+                6,
+                20,
+                4
+              ],
+              "blocks": 5,
+              "block_fraction": 0.2,
+              "area_fraction": 0.23971484690229744,
+              "mean_coverage_load": 1.3245496037974542,
+              "max_coverage_load": 1.6193001403435934,
+              "energy": 0.37268901899033646,
+              "strong_edges": 6
+            },
+            "complex_energy": 0.37268901899033646,
+            "largest_strong_component": 5,
+            "all_complex_energy": 0.4905930908815838
+          }
+        ]
+      },
+      "losses": {
+        "mse": 0.15118804574012756,
+        "center_mse": 0.13200528919696808,
+        "shape_mse": 0.19503438472747803,
+        "center_local": 1.4834870100021362,
+        "shape": 0.19503438472747803,
+        "relative_local": 0.9977632164955139,
+        "overlap": 0.34720316529273987,
+        "contact": 1.3153564929962158,
+        "boundary": 2.692326784133911,
+        "mib": 0.03268502652645111,
+        "bbox": 0.21503686904907227,
+        "local": 1.7816864252090454,
+        "geometry": 3.3108201026916504
+      },
+      "occupancy_proxy": {
+        "overlap_area": 0.32160934805870056,
+        "crowding": 0.24265888333320618,
+        "void": 0.5534838438034058,
+        "compactness": 0.23505881428718567,
+        "occupancy": 0.5559038519859314
+      },
+      "center_clamped_coordinate_fraction": 0.11999999731779099,
+      "center_step_mean_free": 2.8021350589556797,
+      "center_step_max": 6.7656567604550375
+    },
+    {
+      "layer": 7,
+      "pileup": {
+        "n": 25,
+        "empty_fraction": 0.4452028423577983,
+        "pair_overlap_fraction": 0.14808851095479328,
+        "overlap_excess_fraction": 0.14688885128017268,
+        "overlap_pair_count": 16,
+        "largest_any_component_fraction": 0.48,
+        "coverage_load_mean": 0.22092830281322307,
+        "coverage_load_p90": 0.5687337423367756,
+        "coverage_load_top10_mean": 0.6368121590331043,
+        "coverage_energy": 0.10525219357674664,
+        "complex_energy_10pct": 0.045390869754583625,
+        "strong_component_fraction_10pct": 0.2,
+        "threshold_curve": [
+          {
+            "threshold": 0.02,
+            "worst": {
+              "ids": [
+                2,
+                24,
+                19,
+                17,
+                5,
+                22,
+                15,
+                20,
+                6,
+                10,
+                8
+              ],
+              "blocks": 11,
+              "block_fraction": 0.44,
+              "area_fraction": 0.6081301781632206,
+              "mean_coverage_load": 0.429712995491273,
+              "max_coverage_load": 0.7369897523706253,
+              "energy": 0.09592561130981743,
+              "strong_edges": 11
+            },
+            "complex_energy": 0.09592561130981743,
+            "largest_strong_component": 11,
+            "all_complex_energy": 0.09592561130981743
+          },
+          {
+            "threshold": 0.05,
+            "worst": {
+              "ids": [
+                2,
+                24,
+                19,
+                17,
+                5,
+                22,
+                15,
+                20,
+                6,
+                10,
+                8
+              ],
+              "blocks": 11,
+              "block_fraction": 0.44,
+              "area_fraction": 0.6081301781632206,
+              "mean_coverage_load": 0.429712995491273,
+              "max_coverage_load": 0.7369897523706253,
+              "energy": 0.09592561130981743,
+              "strong_edges": 10
+            },
+            "complex_energy": 0.09592561130981743,
+            "largest_strong_component": 11,
+            "all_complex_energy": 0.09592561130981743
+          },
+          {
+            "threshold": 0.1,
+            "worst": {
+              "ids": [
+                2,
+                24,
+                19,
+                10
+              ],
+              "blocks": 4,
+              "block_fraction": 0.16,
+              "area_fraction": 0.2328036650732118,
+              "mean_coverage_load": 0.4972485860027766,
+              "max_coverage_load": 0.7369897523706253,
+              "energy": 0.045390869754583625,
+              "strong_edges": 3
+            },
+            "complex_energy": 0.045390869754583625,
+            "largest_strong_component": 5,
+            "all_complex_energy": 0.08691403700613548
+          },
+          {
+            "threshold": 0.2,
+            "worst": null,
+            "complex_energy": 0.0,
+            "largest_strong_component": 0,
+            "all_complex_energy": 0
+          }
+        ]
+      },
+      "losses": {
+        "mse": 0.16210904717445374,
+        "center_mse": 0.10965898633003235,
+        "shape_mse": 0.28199484944343567,
+        "center_local": 1.2303599119186401,
+        "shape": 0.28199484944343567,
+        "relative_local": 0.8261756896972656,
+        "overlap": 0.12424104660749435,
+        "contact": 0.857811689376831,
+        "boundary": 2.278071880340576,
+        "mib": 0.03640719875693321,
+        "bbox": 0.1674276739358902,
+        "local": 1.5074025392532349,
+        "geometry": 2.5883302688598633
+      },
+      "occupancy_proxy": {
+        "overlap_area": 0.1480884999036789,
+        "crowding": 0.0030618265736848116,
+        "void": 0.4474838972091675,
+        "compactness": 0.18514709174633026,
+        "occupancy": 0.2884970009326935
+      },
+      "center_clamped_coordinate_fraction": 0.03999999910593033,
+      "center_step_mean_free": 0.9900420998955726,
+      "center_step_max": 3.2005814233583427
+    },
+    {
+      "layer": 8,
+      "pileup": {
+        "n": 25,
+        "empty_fraction": 0.28552562396814385,
+        "pair_overlap_fraction": 0.35287600058994,
+        "overlap_excess_fraction": 0.28101546238686353,
+        "overlap_pair_count": 42,
+        "largest_any_component_fraction": 0.48,
+        "coverage_load_mean": 0.7411612765231064,
+        "coverage_load_p90": 1.4097484673928864,
+        "coverage_load_top10_mean": 1.7491736107572355,
+        "coverage_energy": 0.8733384877203437,
+        "complex_energy_10pct": 0.6513174764187646,
+        "strong_component_fraction_10pct": 0.4,
+        "threshold_curve": [
+          {
+            "threshold": 0.02,
+            "worst": {
+              "ids": [
+                0,
+                22,
+                20,
+                15,
+                16,
+                14,
+                13,
+                6,
+                5,
+                4,
+                3
+              ],
+              "blocks": 11,
+              "block_fraction": 0.44,
+              "area_fraction": 0.4617163651668944,
+              "mean_coverage_load": 1.100536953374408,
+              "max_coverage_load": 2.0384584691150556,
+              "energy": 0.6656693829268423,
+              "strong_edges": 22
+            },
+            "complex_energy": 0.6656693829268423,
+            "largest_strong_component": 11,
+            "all_complex_energy": 0.8726402341048649
+          },
+          {
+            "threshold": 0.05,
+            "worst": {
+              "ids": [
+                0,
+                22,
+                20,
+                15,
+                16,
+                14,
+                13,
+                6,
+                5,
+                4,
+                3
+              ],
+              "blocks": 11,
+              "block_fraction": 0.44,
+              "area_fraction": 0.4617163651668944,
+              "mean_coverage_load": 1.100536953374408,
+              "max_coverage_load": 2.0384584691150556,
+              "energy": 0.6656693829268423,
+              "strong_edges": 20
+            },
+            "complex_energy": 0.6656693829268423,
+            "largest_strong_component": 11,
+            "all_complex_energy": 0.8710838202959256
+          },
+          {
+            "threshold": 0.1,
+            "worst": {
+              "ids": [
+                0,
+                20,
+                15,
+                16,
+                14,
+                13,
+                5,
+                6,
+                4,
+                3
+              ],
+              "blocks": 10,
+              "block_fraction": 0.4,
+              "area_fraction": 0.40805941900992515,
+              "mean_coverage_load": 1.1681260571466086,
+              "max_coverage_load": 2.0384584691150556,
+              "energy": 0.6513174764187646,
+              "strong_edges": 14
+            },
+            "complex_energy": 0.6513174764187646,
+            "largest_strong_component": 10,
+            "all_complex_energy": 0.8143275049946137
+          },
+          {
+            "threshold": 0.2,
+            "worst": {
+              "ids": [
+                0,
+                15,
+                5,
+                16,
+                14,
+                4,
+                6
+              ],
+              "blocks": 7,
+              "block_fraction": 0.28,
+              "area_fraction": 0.3146767481700767,
+              "mean_coverage_load": 1.3526122556748916,
+              "max_coverage_load": 1.912833042518691,
+              "energy": 0.5444852648011204,
+              "strong_edges": 7
+            },
+            "complex_energy": 0.5444852648011204,
+            "largest_strong_component": 7,
+            "all_complex_energy": 0.579029117991102
+          }
+        ]
+      },
+      "losses": {
+        "mse": 0.037789467722177505,
+        "center_mse": 0.009490168653428555,
+        "shape_mse": 0.10247360169887543,
+        "center_local": 0.43391332030296326,
+        "shape": 0.10247360169887543,
+        "relative_local": 0.3188990652561188,
+        "overlap": 0.4116756021976471,
+        "contact": 0.2012879103422165,
+        "boundary": 0.1414634883403778,
+        "mib": 0.022597206756472588,
+        "bbox": 0.00021949256188236177,
+        "local": 0.5392565131187439,
+        "geometry": 0.8833857774734497
+      },
+      "occupancy_proxy": {
+        "overlap_area": 0.3528759181499481,
+        "crowding": 0.3312814235687256,
+        "void": 0.29642587900161743,
+        "compactness": 3.959743116865866e-05,
+        "occupancy": 0.5098087191581726
+      },
+      "center_clamped_coordinate_fraction": 0.1599999964237213,
+      "center_step_mean_free": 2.5616876179785923,
+      "center_step_max": 7.250904772363438
+    },
+    {
+      "layer": 9,
+      "pileup": {
+        "n": 25,
+        "empty_fraction": 0.1501285738388355,
+        "pair_overlap_fraction": 0.1428059944654824,
+        "overlap_excess_fraction": 0.13769555948511664,
+        "overlap_pair_count": 28,
+        "largest_any_component_fraction": 0.72,
+        "coverage_load_mean": 0.29240047970600247,
+        "coverage_load_p90": 0.48046688378423225,
+        "coverage_load_top10_mean": 0.6830119782923391,
+        "coverage_energy": 0.1259623971046271,
+        "complex_energy_10pct": 0.04284268977303641,
+        "strong_component_fraction_10pct": 0.16,
+        "threshold_curve": [
+          {
+            "threshold": 0.02,
+            "worst": {
+              "ids": [
+                0,
+                20,
+                15,
+                16,
+                14,
+                5,
+                3,
+                6,
+                13,
+                4
+              ],
+              "blocks": 10,
+              "block_fraction": 0.4,
+              "area_fraction": 0.4080594318598587,
+              "mean_coverage_load": 0.3710004536603622,
+              "max_coverage_load": 0.8914969675413603,
+              "energy": 0.07108701117392004,
+              "strong_edges": 11
+            },
+            "complex_energy": 0.07108701117392004,
+            "largest_strong_component": 10,
+            "all_complex_energy": 0.1257034412137339
+          },
+          {
+            "threshold": 0.05,
+            "worst": {
+              "ids": [
+                0,
+                20,
+                15,
+                16,
+                14,
+                5,
+                3,
+                6,
+                13,
+                4
+              ],
+              "blocks": 10,
+              "block_fraction": 0.4,
+              "area_fraction": 0.4080594318598587,
+              "mean_coverage_load": 0.3710004536603622,
+              "max_coverage_load": 0.8914969675413603,
+              "energy": 0.07108701117392004,
+              "strong_edges": 11
+            },
+            "complex_energy": 0.07108701117392004,
+            "largest_strong_component": 10,
+            "all_complex_energy": 0.10774622711671977
+          },
+          {
+            "threshold": 0.1,
+            "worst": {
+              "ids": [
+                0,
+                20,
+                4,
+                15
+              ],
+              "blocks": 4,
+              "block_fraction": 0.16,
+              "area_fraction": 0.22330757781682564,
+              "mean_coverage_load": 0.43626506871556714,
+              "max_coverage_load": 0.8914969675413603,
+              "energy": 0.04284268977303641,
+              "strong_edges": 3
+            },
+            "complex_energy": 0.04284268977303641,
+            "largest_strong_component": 4,
+            "all_complex_energy": 0.06711461985068551
+          },
+          {
+            "threshold": 0.2,
+            "worst": null,
+            "complex_energy": 0.0,
+            "largest_strong_component": 0,
+            "all_complex_energy": 0
+          }
+        ]
+      },
+      "losses": {
+        "mse": 0.03898433595895767,
+        "center_mse": 0.0017974358052015305,
+        "shape_mse": 0.12398296594619751,
+        "center_local": 0.17505566775798798,
+        "shape": 0.12398296594619751,
+        "relative_local": 0.19780835509300232,
+        "overlap": 0.09574946761131287,
+        "contact": 0.0574171207845211,
+        "boundary": 0.029164854437112808,
+        "mib": 0.0490327887237072,
+        "bbox": 4.3355892557883635e-05,
+        "local": 0.25550350546836853,
+        "geometry": 0.34428560733795166
+      },
+      "occupancy_proxy": {
+        "overlap_area": 0.14280596375465393,
+        "crowding": 0.006996956653892994,
+        "void": 0.16579297184944153,
+        "compactness": 0.0002109287743223831,
+        "occupancy": 0.18603508174419403
+      },
+      "center_clamped_coordinate_fraction": 0.10000000149011612,
+      "center_step_mean_free": 0.7083798147919914,
+      "center_step_max": 1.752127521175658
+    },
+    {
+      "layer": 10,
+      "pileup": {
+        "n": 25,
+        "empty_fraction": 0.22781387131006514,
+        "pair_overlap_fraction": 0.14614594176063,
+        "overlap_excess_fraction": 0.1459965266250413,
+        "overlap_pair_count": 28,
+        "largest_any_component_fraction": 1.0,
+        "coverage_load_mean": 0.34410125807285696,
+        "coverage_load_p90": 0.5867594898895743,
+        "coverage_load_top10_mean": 0.7666508701926165,
+        "coverage_energy": 0.1599042945852796,
+        "complex_energy_10pct": 0.06952252724891675,
+        "strong_component_fraction_10pct": 0.32,
+        "threshold_curve": [
+          {
+            "threshold": 0.02,
+            "worst": {
+              "ids": [
+                0,
+                20,
+                4,
+                5,
+                19,
+                24,
+                12,
+                7,
+                21,
+                2,
+                15,
+                16,
+                14,
+                9,
+                18,
+                11,
+                1,
+                13,
+                6
+              ],
+              "blocks": 19,
+              "block_fraction": 0.76,
+              "area_fraction": 0.7210764052917897,
+              "mean_coverage_load": 0.38294571228042035,
+              "max_coverage_load": 0.9826755152792127,
+              "energy": 0.14673907750560794,
+              "strong_edges": 18
+            },
+            "complex_energy": 0.14673907750560794,
+            "largest_strong_component": 19,
+            "all_complex_energy": 0.1561826922755545
+          },
+          {
+            "threshold": 0.05,
+            "worst": {
+              "ids": [
+                1,
+                11,
+                18,
+                9,
+                14,
+                16,
+                15,
+                13
+              ],
+              "blocks": 8,
+              "block_fraction": 0.32,
+              "area_fraction": 0.2602035297290487,
+              "mean_coverage_load": 0.4344210797684394,
+              "max_coverage_load": 0.679705618481466,
+              "energy": 0.06952252724891675,
+              "strong_edges": 7
+            },
+            "complex_energy": 0.06952252724891675,
+            "largest_strong_component": 8,
+            "all_complex_energy": 0.09733068380748207
+          },
+          {
+            "threshold": 0.1,
+            "worst": {
+              "ids": [
+                1,
+                11,
+                18,
+                9,
+                14,
+                16,
+                15,
+                13
+              ],
+              "blocks": 8,
+              "block_fraction": 0.32,
+              "area_fraction": 0.2602035297290487,
+              "mean_coverage_load": 0.4344210797684394,
+              "max_coverage_load": 0.679705618481466,
+              "energy": 0.06952252724891675,
+              "strong_edges": 7
+            },
+            "complex_energy": 0.06952252724891675,
+            "largest_strong_component": 8,
+            "all_complex_energy": 0.08529799418486327
+          },
+          {
+            "threshold": 0.2,
+            "worst": null,
+            "complex_energy": 0.0,
+            "largest_strong_component": 0,
+            "all_complex_energy": 0
+          }
+        ]
+      },
+      "losses": {
+        "mse": 0.10421457141637802,
+        "center_mse": 0.0015923863975331187,
+        "shape_mse": 0.3387795090675354,
+        "center_local": 0.1759050041437149,
+        "shape": 0.3387795090675354,
+        "relative_local": 0.18460571765899658,
+        "overlap": 0.16867400705814362,
+        "contact": 0.14872054755687714,
+        "boundary": 0.07725892961025238,
+        "mib": 0.14621664583683014,
+        "bbox": 0.0063364338129758835,
+        "local": 0.3067513108253479,
+        "geometry": 0.5000186562538147
+      },
+      "occupancy_proxy": {
+        "overlap_area": 0.14614591002464294,
+        "crowding": 0.011372262611985207,
+        "void": 0.23620551824569702,
+        "compactness": 0.010142432525753975,
+        "occupancy": 0.20956172049045563
+      },
+      "center_clamped_coordinate_fraction": 0.07999999821186066,
+      "center_step_mean_free": 0.23751492768370297,
+      "center_step_max": 0.7019115990080173
+    },
+    {
+      "layer": 11,
+      "pileup": {
+        "n": 25,
+        "empty_fraction": 0.10692486161171555,
+        "pair_overlap_fraction": 0.07833563995710616,
+        "overlap_excess_fraction": 0.07803917252050478,
+        "overlap_pair_count": 26,
+        "largest_any_component_fraction": 0.8,
+        "coverage_load_mean": 0.18735768211010256,
+        "coverage_load_p90": 0.34094964274652556,
+        "coverage_load_top10_mean": 0.4506606918850684,
+        "coverage_energy": 0.048751188544875784,
+        "complex_energy_10pct": 0.0,
+        "strong_component_fraction_10pct": 0.0,
+        "threshold_curve": [
+          {
+            "threshold": 0.02,
+            "worst": {
+              "ids": [
+                2,
+                24,
+                19,
+                17,
+                22,
+                3,
+                5,
+                16,
+                14,
+                9,
+                18,
+                11,
+                10,
+                8
+              ],
+              "blocks": 14,
+              "block_fraction": 0.56,
+              "area_fraction": 0.5926752331966407,
+              "mean_coverage_load": 0.16822861536351427,
+              "max_coverage_load": 0.4018236932292647,
+              "energy": 0.019711039060638355,
+              "strong_edges": 14
+            },
+            "complex_energy": 0.019711039060638355,
+            "largest_strong_component": 14,
+            "all_complex_energy": 0.03330237563909872
+          },
+          {
+            "threshold": 0.05,
+            "worst": {
+              "ids": [
+                0,
+                20,
+                6,
+                15,
+                13
+              ],
+              "blocks": 5,
+              "block_fraction": 0.2,
+              "area_fraction": 0.24159229117037942,
+              "mean_coverage_load": 0.2209024960703989,
+              "max_coverage_load": 0.4262754060593491,
+              "energy": 0.012339141472738789,
+              "strong_edges": 4
+            },
+            "complex_energy": 0.012339141472738789,
+            "largest_strong_component": 5,
+            "all_complex_energy": 0.017966477254481975
+          },
+          {
+            "threshold": 0.1,
+            "worst": null,
+            "complex_energy": 0.0,
+            "largest_strong_component": 0,
+            "all_complex_energy": 0
+          },
+          {
+            "threshold": 0.2,
+            "worst": null,
+            "complex_energy": 0.0,
+            "largest_strong_component": 0,
+            "all_complex_energy": 0
+          }
+        ]
+      },
+      "losses": {
+        "mse": 0.02478872798383236,
+        "center_mse": 0.001905239769257605,
+        "shape_mse": 0.07709385454654694,
+        "center_local": 0.1840542107820511,
+        "shape": 0.07709385454654694,
+        "relative_local": 0.15555401146411896,
+        "overlap": 0.04358576238155365,
+        "contact": 0.014307667501270771,
+        "boundary": 0.013019260950386524,
+        "mib": 0.0647403746843338,
+        "bbox": 0.00011500790424179286,
+        "local": 0.24221616983413696,
+        "geometry": 0.28090324997901917
+      },
+      "occupancy_proxy": {
+        "overlap_area": 0.07833564281463623,
+        "crowding": 2.281633351230994e-05,
+        "void": 0.12734352052211761,
+        "compactness": 0.0010132789611816406,
+        "occupancy": 0.11032922565937042
+      },
+      "center_clamped_coordinate_fraction": 0.10000000149011612,
+      "center_step_mean_free": 0.2520344541673662,
+      "center_step_max": 1.908191851975448
+    },
+    {
+      "layer": 12,
+      "pileup": {
+        "n": 25,
+        "empty_fraction": 0.08481421833713143,
+        "pair_overlap_fraction": 0.051069817059903336,
+        "overlap_excess_fraction": 0.050877793070136686,
+        "overlap_pair_count": 28,
+        "largest_any_component_fraction": 0.88,
+        "coverage_load_mean": 0.14292846566060588,
+        "coverage_load_p90": 0.37969429307042674,
+        "coverage_load_top10_mean": 0.484083707980727,
+        "coverage_energy": 0.04343184258177137,
+        "complex_energy_10pct": 0.0,
+        "strong_component_fraction_10pct": 0.0,
+        "threshold_curve": [
+          {
+            "threshold": 0.02,
+            "worst": {
+              "ids": [
+                0,
+                20,
+                22,
+                6,
+                15,
+                16,
+                5,
+                19,
+                13
+              ],
+              "blocks": 9,
+              "block_fraction": 0.36,
+              "area_fraction": 0.47045058228655073,
+              "mean_coverage_load": 0.1403230282072295,
+              "max_coverage_load": 0.46406163720051785,
+              "energy": 0.012981464771701234,
+              "strong_edges": 8
+            },
+            "complex_energy": 0.012981464771701234,
+            "largest_strong_component": 9,
+            "all_complex_energy": 0.020074367367540216
+          },
+          {
+            "threshold": 0.05,
+            "worst": {
+              "ids": [
+                0,
+                6,
+                13
+              ],
+              "blocks": 3,
+              "block_fraction": 0.12,
+              "area_fraction": 0.12252394069869937,
+              "mean_coverage_load": 0.2046581020294361,
+              "max_coverage_load": 0.36728513050200984,
+              "energy": 0.0066564751954548765,
+              "strong_edges": 2
+            },
+            "complex_energy": 0.0066564751954548765,
+            "largest_strong_component": 3,
+            "all_complex_energy": 0.0066564751954548765
+          },
+          {
+            "threshold": 0.1,
+            "worst": null,
+            "complex_energy": 0.0,
+            "largest_strong_component": 0,
+            "all_complex_energy": 0
+          },
+          {
+            "threshold": 0.2,
+            "worst": null,
+            "complex_energy": 0.0,
+            "largest_strong_component": 0,
+            "all_complex_energy": 0
+          }
+        ]
+      },
+      "losses": {
+        "mse": 0.01858193427324295,
+        "center_mse": 0.001705470378510654,
+        "shape_mse": 0.05715670436620712,
+        "center_local": 0.17000527679920197,
+        "shape": 0.05715670436620712,
+        "relative_local": 0.1331581026315689,
+        "overlap": 0.0253733042627573,
+        "contact": 0.010030754841864109,
+        "boundary": 0.006987219210714102,
+        "mib": 0.040007319301366806,
+        "bbox": 0.00023417056945618242,
+        "local": 0.21758396923542023,
+        "geometry": 0.24105694890022278
+      },
+      "occupancy_proxy": {
+        "overlap_area": 0.05106983706355095,
+        "crowding": 0.0002659080200828612,
+        "void": 0.12247387319803238,
+        "compactness": 0.0013257244136184454,
+        "occupancy": 0.08195363730192184
+      },
+      "center_clamped_coordinate_fraction": 0.2199999988079071,
+      "center_step_mean_free": 0.09693884481254715,
+      "center_step_max": 0.34374494991721916
+    }
+  ],
+  "layer_positions": [
+    [
+      [
+        0.0,
+        1.146135926246643,
+        26.601083755493164,
+        26.314720153808594
+      ],
+      [
+        0.6775015592575073,
+        0.0,
+        27.535249710083008,
+        22.11710548400879
+      ],
+      [
+        0.0,
+        0.0,
+        20.4517879486084,
+        11.294857025146484
+      ],
+      [
+        0.0,
+        0.0,
+        18.74355697631836,
+        10.456927299499512
+      ],
+      [
+        0.0,
+        0.0,
+        22.292932510375977,
+        11.561960220336914
+      ],
+      [
+        0.0,
+        0.0,
+        34.083351135253906,
+        19.070894241333008
+      ],
+      [
+        0.0,
+        10.075916290283203,
+        17.457284927368164,
+        14.764610290527344
+      ],
+      [
+        0.0,
+        0.0,
+        7.781438827514648,
+        5.397459506988525
+      ],
+      [
+        0.0,
+        0.0,
+        21.388469696044922,
+        12.050886154174805
+      ],
+      [
+        4.69911527633667,
+        0.0,
+        13.855774879455566,
+        12.124909400939941
+      ],
+      [
+        0.0,
+        0.0,
+        20.76854133605957,
+        24.267473220825195
+      ],
+      [
+        0.0,
+        0.0,
+        13.491082191467285,
+        12.452672958374023
+      ],
+      [
+        0.0,
+        0.0,
+        5.0,
+        6.0
+      ],
+      [
+        4.785193920135498,
+        20.396373748779297,
+        13.198877334594727,
+        12.72835636138916
+      ],
+      [
+        7.2131028175354,
+        16.904136657714844,
+        14.195040702819824,
+        11.83512020111084
+      ],
+      [
+        5.51597785949707,
+        19.889131546020508,
+        28.326871871948242,
+        21.18130111694336
+      ],
+      [
+        7.097989559173584,
+        24.97702980041504,
+        18.59871482849121,
+        13.85848331451416
+      ],
+      [
+        0.0,
+        0.0,
+        25.27526092529297,
+        27.536808013916016
+      ],
+      [
+        2.224189519882202,
+        0.0,
+        16.7503662109375,
+        15.044447898864746
+      ],
+      [
+        0.0,
+        0.0,
+        35.40901184082031,
+        19.82546043395996
+      ],
+      [
+        0.0,
+        9.946858406066895,
+        19.0,
+        26.0
+      ],
+      [
+        0.0,
+        0.0,
+        17.237804412841797,
+        9.746021270751953
+      ],
+      [
+        0.0,
+        7.794500827789307,
+        17.0,
+        29.000001907348633
+      ],
+      [
+        41.0,
+        122.0,
+        26.0,
+        16.0
+      ],
+      [
+        0.0,
+        0.0,
+        35.347354888916016,
+        19.860044479370117
+      ]
+    ],
+    [
+      [
+        1.6314555406570435,
+        4.379574775695801,
+        22.824073791503906,
+        30.66937255859375
+      ],
+      [
+        1.8321583271026611,
+        0.0,
+        23.580047607421875,
+        25.826923370361328
+      ],
+      [
+        5.98114013671875,
+        27.762632369995117,
+        13.519133567810059,
+        17.086894989013672
+      ],
+      [
+        7.289449691772461,
+        18.75023078918457,
+        12.228191375732422,
+        16.028535842895508
+      ],
+      [
+        10.603750228881836,
+        19.081764221191406,
+        13.904779434204102,
+        18.53679084777832
+      ],
+      [
+        6.631543159484863,
+        11.39360523223877,
+        23.675670623779297,
+        27.454345703125
+      ],
+      [
+        5.085421085357666,
+        22.281436920166016,
+        18.837905883789062,
+        13.682518005371094
+      ],
+      [
+        0.0,
+        19.87929344177246,
+        5.673368453979492,
+        7.403010368347168
+      ],
+      [
+        0.0,
+        20.232257843017578,
+        15.89983081817627,
+        16.21086311340332
+      ],
+      [
+        1.2787913084030151,
+        0.0,
+        14.206985473632812,
+        11.82516860961914
+      ],
+      [
+        0.0,
+        0.0,
+        25.459625244140625,
+        19.796051025390625
+      ],
+      [
+        0.0,
+        0.0,
+        13.334460258483887,
+        12.598934173583984
+      ],
+      [
+        0.0,
+        23.61675262451172,
+        5.0,
+        6.0
+      ],
+      [
+        7.651363849639893,
+        20.421798706054688,
+        14.01054573059082,
+        11.990968704223633
+      ],
+      [
+        3.946127414703369,
+        4.524439811706543,
+        15.166954040527344,
+        11.076713562011719
+      ],
+      [
+        6.262606620788574,
+        21.29105567932129,
+        26.59449577331543,
+        22.561059951782227
+      ],
+      [
+        1.9680330753326416,
+        8.57131576538086,
+        18.243295669555664,
+        14.12847900390625
+      ],
+      [
+        0.0,
+        0.0,
+        28.555625915527344,
+        24.37348175048828
+      ],
+      [
+        0.0,
+        0.0,
+        17.011104583740234,
+        14.813855171203613
+      ],
+      [
+        0.0,
+        14.821965217590332,
+        24.21240997314453,
+        28.993396759033203
+      ],
+      [
+        0.0,
+        1.626304268836975,
+        19.0,
+        26.0
+      ],
+      [
+        0.0,
+        4.042943477630615,
+        10.939441680908203,
+        15.357274055480957
+      ],
+      [
+        0.0,
+        0.0,
+        17.0,
+        29.000001907348633
+      ],
+      [
+        41.0,
+        122.0,
+        26.0,
+        16.0
+      ],
+      [
+        0.0,
+        17.226736068725586,
+        24.624834060668945,
+        28.50780487060547
+      ]
+    ],
+    [
+      [
+        13.63482666015625,
+        16.48780632019043,
+        25.11049461364746,
+        27.87679100036621
+      ],
+      [
+        0.0,
+        0.0,
+        18.720808029174805,
+        32.5306510925293
+      ],
+      [
+        0.0,
+        12.32116985321045,
+        13.572497367858887,
+        17.01971435546875
+      ],
+      [
+        12.461943626403809,
+        27.14641761779785,
+        12.521452903747559,
+        15.65313720703125
+      ],
+      [
+        17.68354034423828,
+        23.695110321044922,
+        13.36097240447998,
+        19.291263580322266
+      ],
+      [
+        5.048350811004639,
+        15.365760803222656,
+        24.148881912231445,
+        26.91636085510254
+      ],
+      [
+        16.606983184814453,
+        20.420562744140625,
+        16.65899658203125,
+        15.472121238708496
+      ],
+      [
+        0.0,
+        0.0,
+        4.978014945983887,
+        8.437098503112793
+      ],
+      [
+        0.0,
+        0.0,
+        15.447840690612793,
+        16.6851806640625
+      ],
+      [
+        18.335439682006836,
+        0.0,
+        13.33117389678955,
+        12.602041244506836
+      ],
+      [
+        0.0,
+        0.0,
+        16.846782684326172,
+        29.91669273376465
+      ],
+      [
+        17.375694274902344,
+        0.0,
+        11.006881713867188,
+        15.263179779052734
+      ],
+      [
+        0.0,
+        17.52056312561035,
+        5.0,
+        6.0
+      ],
+      [
+        15.830707550048828,
+        23.170799255371094,
+        14.480579376220703,
+        11.60174560546875
+      ],
+      [
+        15.043519973754883,
+        20.45953369140625,
+        14.049151420593262,
+        11.958017349243164
+      ],
+      [
+        12.731709480285645,
+        22.681941986083984,
+        23.147777557373047,
+        25.9204158782959
+      ],
+      [
+        15.006072044372559,
+        12.4717435836792,
+        12.971753120422363,
+        19.870098114013672
+      ],
+      [
+        0.0,
+        0.0,
+        22.701387405395508,
+        30.658920288085938
+      ],
+      [
+        14.694634437561035,
+        0.0,
+        13.088903427124023,
+        19.252948760986328
+      ],
+      [
+        0.0,
+        12.192582130432129,
+        24.77558135986328,
+        28.3343505859375
+      ],
+      [
+        25.814250946044922,
+        10.606059074401855,
+        19.0,
+        26.0
+      ],
+      [
+        0.0,
+        0.0,
+        10.033467292785645,
+        16.743961334228516
+      ],
+      [
+        3.2117488384246826,
+        5.9861836433410645,
+        17.0,
+        29.000001907348633
+      ],
+      [
+        41.0,
+        122.0,
+        26.0,
+        16.0
+      ],
+      [
+        0.0,
+        2.7832412719726562,
+        26.311891555786133,
+        26.679954528808594
+      ]
+    ],
+    [
+      [
+        6.515673637390137,
+        5.1265692710876465,
+        26.389047622680664,
+        26.526155471801758
+      ],
+      [
+        0.0,
+        0.0,
+        25.331823348999023,
+        24.04090690612793
+      ],
+      [
+        0.0,
+        0.0,
+        13.686595916748047,
+        16.87782859802246
+      ],
+      [
+        14.81847095489502,
+        29.3842716217041,
+        13.800159454345703,
+        14.20273494720459
+      ],
+      [
+        19.2603759765625,
+        27.242238998413086,
+        14.534576416015625,
+        17.73357582092285
+      ],
+      [
+        2.2068774700164795,
+        25.009719848632812,
+        26.08881378173828,
+        24.914892196655273
+      ],
+      [
+        26.260122299194336,
+        11.40505313873291,
+        12.406608581542969,
+        20.775218963623047
+      ],
+      [
+        0.0,
+        0.0,
+        8.709829330444336,
+        4.82213830947876
+      ],
+      [
+        0.0,
+        0.0,
+        19.63945770263672,
+        13.124089241027832
+      ],
+      [
+        22.034093856811523,
+        5.33463716506958,
+        12.291436195373535,
+        13.668052673339844
+      ],
+      [
+        0.0,
+        0.0,
+        23.884479522705078,
+        21.1015682220459
+      ],
+      [
+        24.684572219848633,
+        0.0,
+        13.374832153320312,
+        12.560906410217285
+      ],
+      [
+        0.0,
+        0.0,
+        5.0,
+        6.0
+      ],
+      [
+        24.065155029296875,
+        13.244035720825195,
+        14.6554536819458,
+        11.463309288024902
+      ],
+      [
+        16.206268310546875,
+        27.58334732055664,
+        13.197723388671875,
+        12.729470252990723
+      ],
+      [
+        8.262885093688965,
+        15.691652297973633,
+        22.839252471923828,
+        26.27056121826172
+      ],
+      [
+        16.400760650634766,
+        20.10491180419922,
+        14.562414169311523,
+        17.699674606323242
+      ],
+      [
+        0.0,
+        8.174703598022461,
+        27.376739501953125,
+        25.42304229736328
+      ],
+      [
+        24.755260467529297,
+        0.0,
+        15.990246772766113,
+        15.75960636138916
+      ],
+      [
+        0.0,
+        0.0,
+        26.708084106445312,
+        26.2841796875
+      ],
+      [
+        23.30891990661621,
+        4.377513885498047,
+        19.0,
+        26.0
+      ],
+      [
+        0.0,
+        0.0,
+        22.518470764160156,
+        7.460542678833008
+      ],
+      [
+        6.428127288818359,
+        9.52081298828125,
+        17.0,
+        29.000001907348633
+      ],
+      [
+        41.0,
+        122.0,
+        26.0,
+        16.0
+      ],
+      [
+        0.0,
+        0.0,
+        28.601346969604492,
+        24.54429817199707
+      ]
+    ],
+    [
+      [
+        5.838440895080566,
+        0.0,
+        26.318578720092773,
+        26.59718132019043
+      ],
+      [
+        0.0,
+        0.0,
+        27.16408348083496,
+        22.4193115234375
+      ],
+      [
+        0.0,
+        23.857074737548828,
+        15.467510223388672,
+        14.934530258178711
+      ],
+      [
+        9.525111198425293,
+        26.763683319091797,
+        13.62636947631836,
+        14.383874893188477
+      ],
+      [
+        14.364557266235352,
+        16.829936981201172,
+        14.368911743164062,
+        17.938032150268555
+      ],
+      [
+        1.7371703386306763,
+        21.074199676513672,
+        24.301864624023438,
+        26.746919631958008
+      ],
+      [
+        35.659820556640625,
+        9.456180572509766,
+        12.811875343322754,
+        20.11805534362793
+      ],
+      [
+        0.0,
+        19.192760467529297,
+        6.282331466674805,
+        6.6854166984558105
+      ],
+      [
+        0.0,
+        0.0,
+        14.148865699768066,
+        18.217008590698242
+      ],
+      [
+        24.62313461303711,
+        13.46300220489502,
+        13.086907386779785,
+        12.837258338928223
+      ],
+      [
+        0.0,
+        10.021899223327637,
+        19.770519256591797,
+        25.492502212524414
+      ],
+      [
+        40.59853744506836,
+        0.0,
+        14.803650856018066,
+        11.348552703857422
+      ],
+      [
+        0.0,
+        5.055538177490234,
+        5.0,
+        6.0
+      ],
+      [
+        60.124454498291016,
+        4.717663288116455,
+        16.53044319152832,
+        10.163066864013672
+      ],
+      [
+        15.552556037902832,
+        18.96903419494629,
+        14.2869873046875,
+        11.758952140808105
+      ],
+      [
+        20.776477813720703,
+        13.550658226013184,
+        23.71115493774414,
+        25.304542541503906
+      ],
+      [
+        24.951078414916992,
+        23.984079360961914,
+        13.354117393493652,
+        19.301164627075195
+      ],
+      [
+        0.0,
+        0.0,
+        20.21057891845703,
+        34.43741226196289
+      ],
+      [
+        27.319868087768555,
+        6.084399700164795,
+        16.970727920532227,
+        14.849099159240723
+      ],
+      [
+        0.0,
+        8.853315353393555,
+        24.884777069091797,
+        28.210020065307617
+      ],
+      [
+        15.759008407592773,
+        0.0,
+        19.0,
+        26.0
+      ],
+      [
+        0.0,
+        0.0,
+        13.071549415588379,
+        12.852339744567871
+      ],
+      [
+        6.6363348960876465,
+        4.193785190582275,
+        17.0,
+        29.000001907348633
+      ],
+      [
+        41.0,
+        122.0,
+        26.0,
+        16.0
+      ],
+      [
+        0.0,
+        15.637343406677246,
+        25.0238037109375,
+        28.05329132080078
+      ]
+    ],
+    [
+      [
+        0.0,
+        0.0,
+        28.30289649963379,
+        24.732450485229492
+      ],
+      [
+        18.657163619995117,
+        0.0,
+        28.097211837768555,
+        21.67474937438965
+      ],
+      [
+        0.0,
+        57.80188751220703,
+        18.690242767333984,
+        12.359391212463379
+      ],
+      [
+        6.158414840698242,
+        28.3898868560791,
+        14.247563362121582,
+        13.756738662719727
+      ],
+      [
+        6.691780090332031,
+        6.764617919921875,
+        17.36913299560547,
+        14.839543342590332
+      ],
+      [
+        8.044015884399414,
+        26.10077476501465,
+        25.542583465576172,
+        25.447702407836914
+      ],
+      [
+        19.563079833984375,
+        8.93287181854248,
+        17.4114990234375,
+        14.803435325622559
+      ],
+      [
+        14.403139114379883,
+        75.23011779785156,
+        6.077212333679199,
+        6.9110636711120605
+      ],
+      [
+        0.0,
+        44.30104064941406,
+        22.137170791625977,
+        11.643312454223633
+      ],
+      [
+        47.834686279296875,
+        51.89597702026367,
+        12.798314094543457,
+        13.126729011535645
+      ],
+      [
+        14.795877456665039,
+        30.715362548828125,
+        22.92662239074707,
+        21.983177185058594
+      ],
+      [
+        55.373409271240234,
+        40.890106201171875,
+        14.419025421142578,
+        11.651274681091309
+      ],
+      [
+        3.095900535583496,
+        74.00634765625,
+        5.0,
+        6.0
+      ],
+      [
+        71.54521942138672,
+        3.1238467693328857,
+        14.43328857421875,
+        11.639759063720703
+      ],
+      [
+        36.14390182495117,
+        44.46674728393555,
+        14.568166732788086,
+        11.531993865966797
+      ],
+      [
+        30.3731632232666,
+        3.247887134552002,
+        28.05942726135254,
+        21.383188247680664
+      ],
+      [
+        31.118520736694336,
+        27.032573699951172,
+        20.629079818725586,
+        12.494497299194336
+      ],
+      [
+        0.0,
+        8.198848724365234,
+        24.259382247924805,
+        28.689929962158203
+      ],
+      [
+        52.43274688720703,
+        71.44535064697266,
+        16.421236038208008,
+        15.345982551574707
+      ],
+      [
+        0.0,
+        49.3762321472168,
+        31.09567642211914,
+        22.57548713684082
+      ],
+      [
+        2.2055912017822266,
+        0.0,
+        19.0,
+        26.0
+      ],
+      [
+        8.938148498535156,
+        60.15952682495117,
+        16.348508834838867,
+        10.276166915893555
+      ],
+      [
+        4.837752819061279,
+        4.46466064453125,
+        17.0,
+        29.000001907348633
+      ],
+      [
+        41.0,
+        122.0,
+        26.0,
+        16.0
+      ],
+      [
+        0.0,
+        52.18263244628906,
+        33.31059265136719,
+        21.074377059936523
+      ]
+    ],
+    [
+      [
+        10.762472152709961,
+        0.0,
+        25.116727828979492,
+        27.869874954223633
+      ],
+      [
+        60.676109313964844,
+        124.77667999267578,
+        29.370088577270508,
+        20.735383987426758
+      ],
+      [
+        1.8318554162979126,
+        92.23725891113281,
+        16.17527198791504,
+        14.281059265136719
+      ],
+      [
+        4.204199314117432,
+        31.531070709228516,
+        13.185450553894043,
+        14.86487102508545
+      ],
+      [
+        14.968111038208008,
+        6.54384708404541,
+        14.942419052124023,
+        17.249549865722656
+      ],
+      [
+        24.219066619873047,
+        37.7609977722168,
+        27.33119010925293,
+        23.7823543548584
+      ],
+      [
+        33.58434295654297,
+        0.0,
+        19.460329055786133,
+        13.244894981384277
+      ],
+      [
+        9.481644630432129,
+        108.16637420654297,
+        7.31796407699585,
+        5.7393012046813965
+      ],
+      [
+        29.877182006835938,
+        86.47109985351562,
+        15.217788696289062,
+        16.937416076660156
+      ],
+      [
+        79.71578216552734,
+        69.06462097167969,
+        13.987744331359863,
+        12.010514259338379
+      ],
+      [
+        27.42693328857422,
+        71.57950592041016,
+        22.774106979370117,
+        22.13039779663086
+      ],
+      [
+        79.49217987060547,
+        103.36192321777344,
+        14.901878356933594,
+        11.273747444152832
+      ],
+      [
+        12.255260467529297,
+        100.05709075927734,
+        5.0,
+        6.0
+      ],
+      [
+        90.25460815429688,
+        0.0,
+        14.11420726776123,
+        11.902901649475098
+      ],
+      [
+        74.52214813232422,
+        49.12744903564453,
+        14.557723999023438,
+        11.540266990661621
+      ],
+      [
+        63.03280258178711,
+        12.24874496459961,
+        30.659706115722656,
+        19.569658279418945
+      ],
+      [
+        83.04918670654297,
+        31.871349334716797,
+        15.070585250854492,
+        17.102853775024414
+      ],
+      [
+        21.505386352539062,
+        45.09540939331055,
+        27.713823318481445,
+        25.113819122314453
+      ],
+      [
+        77.56524658203125,
+        85.16468048095703,
+        16.903522491455078,
+        14.908135414123535
+      ],
+      [
+        4.777353763580322,
+        68.23493194580078,
+        27.33100128173828,
+        25.68511962890625
+      ],
+      [
+        30.398115158081055,
+        0.0,
+        19.0,
+        26.0
+      ],
+      [
+        26.31998062133789,
+        107.99080657958984,
+        14.98745346069336,
+        11.209376335144043
+      ],
+      [
+        29.98782730102539,
+        0.0,
+        17.0,
+        29.000001907348633
+      ],
+      [
+        41.0,
+        122.0,
+        26.0,
+        16.0
+      ],
+      [
+        10.213977813720703,
+        79.55844116210938,
+        28.78478240966797,
+        24.387887954711914
+      ]
+    ],
+    [
+      [
+        3.4585304260253906,
+        0.0,
+        24.02603530883789,
+        29.135059356689453
+      ],
+      [
+        63.20987319946289,
+        126.71289825439453,
+        27.375410079956055,
+        22.24624252319336
+      ],
+      [
+        20.725391387939453,
+        103.47602844238281,
+        16.668752670288086,
+        13.85826587677002
+      ],
+      [
+        3.450028896331787,
+        36.81273651123047,
+        15.129888534545898,
+        12.95449161529541
+      ],
+      [
+        14.14810562133789,
+        20.77772331237793,
+        17.67498207092285,
+        14.582757949829102
+      ],
+      [
+        27.22963523864746,
+        40.96497344970703,
+        29.149885177612305,
+        22.29854393005371
+      ],
+      [
+        35.22724533081055,
+        1.6971782445907593,
+        21.29421615600586,
+        12.104227066040039
+      ],
+      [
+        19.23311996459961,
+        119.20487213134766,
+        6.508105754852295,
+        6.4534912109375
+      ],
+      [
+        44.93999099731445,
+        103.33616638183594,
+        15.334869384765625,
+        16.8080997467041
+      ],
+      [
+        75.2540512084961,
+        73.71753692626953,
+        15.461906433105469,
+        10.865413665771484
+      ],
+      [
+        37.71815872192383,
+        84.29412841796875,
+        23.992786407470703,
+        21.006315231323242
+      ],
+      [
+        64.29878997802734,
+        109.16458892822266,
+        17.19351577758789,
+        9.771124839782715
+      ],
+      [
+        15.302542686462402,
+        113.30438232421875,
+        5.0,
+        6.0
+      ],
+      [
+        82.67772674560547,
+        1.259853720664978,
+        15.619658470153809,
+        10.755677223205566
+      ],
+      [
+        78.15453338623047,
+        52.942955017089844,
+        17.21456527709961,
+        9.759178161621094
+      ],
+      [
+        51.65732955932617,
+        18.840749740600586,
+        32.25930404663086,
+        18.599285125732422
+      ],
+      [
+        78.72225189208984,
+        36.55305862426758,
+        18.352394104003906,
+        14.044489860534668
+      ],
+      [
+        24.882272720336914,
+        61.243595123291016,
+        35.33865737915039,
+        19.695146560668945
+      ],
+      [
+        71.08838653564453,
+        91.12203216552734,
+        19.508373260498047,
+        12.91753101348877
+      ],
+      [
+        9.28170108795166,
+        75.99610900878906,
+        29.43671226501465,
+        23.8477725982666
+      ],
+      [
+        44.434974670410156,
+        0.0,
+        19.0,
+        26.0
+      ],
+      [
+        27.202411651611328,
+        124.24079895019531,
+        12.821386337280273,
+        13.103107452392578
+      ],
+      [
+        44.053775787353516,
+        25.980113983154297,
+        17.0,
+        29.000001907348633
+      ],
+      [
+        41.0,
+        122.0,
+        26.0,
+        16.0
+      ],
+      [
+        13.20429801940918,
+        89.01102447509766,
+        30.74261474609375,
+        22.834754943847656
+      ]
+    ],
+    [
+      [
+        15.641861915588379,
+        0.7330152988433838,
+        24.92185401916504,
+        28.087799072265625
+      ],
+      [
+        9.07000732421875,
+        107.31219482421875,
+        22.803129196166992,
+        26.706863403320312
+      ],
+      [
+        26.958168029785156,
+        90.7846450805664,
+        14.713165283203125,
+        15.700224876403809
+      ],
+      [
+        20.202817916870117,
+        26.045583724975586,
+        13.817021369934082,
+        14.185401916503906
+      ],
+      [
+        8.591190338134766,
+        16.03835105895996,
+        17.79259490966797,
+        14.48636245727539
+      ],
+      [
+        0.0,
+        23.350543975830078,
+        24.079330444335938,
+        26.994108200073242
+      ],
+      [
+        16.873428344726562,
+        0.0,
+        17.416688919067383,
+        14.79902458190918
+      ],
+      [
+        28.509859085083008,
+        106.40298461914062,
+        5.6664252281188965,
+        7.412080764770508
+      ],
+      [
+        40.97813415527344,
+        99.81536865234375,
+        19.47240447998047,
+        13.23668098449707
+      ],
+      [
+        0.0,
+        63.49355697631836,
+        11.71649169921875,
+        14.338763236999512
+      ],
+      [
+        37.597618103027344,
+        79.87165069580078,
+        24.61618423461914,
+        20.474336624145508
+      ],
+      [
+        2.9053561687469482,
+        101.08714294433594,
+        13.539294242858887,
+        12.40832805633545
+      ],
+      [
+        25.117036819458008,
+        101.76092529296875,
+        5.0,
+        6.0
+      ],
+      [
+        2.644223690032959,
+        0.6123258471488953,
+        10.15640926361084,
+        16.541278839111328
+      ],
+      [
+        0.0,
+        37.640403747558594,
+        12.972996711730957,
+        12.949976921081543
+      ],
+      [
+        0.0,
+        6.042701721191406,
+        23.121564865112305,
+        25.949798583984375
+      ],
+      [
+        0.0,
+        25.255130767822266,
+        15.065634727478027,
+        17.10847282409668
+      ],
+      [
+        28.176530838012695,
+        54.07844543457031,
+        28.33382797241211,
+        24.56427574157715
+      ],
+      [
+        0.0,
+        81.70648193359375,
+        14.71519947052002,
+        17.125150680541992
+      ],
+      [
+        11.841754913330078,
+        55.84151840209961,
+        30.19647979736328,
+        23.247743606567383
+      ],
+      [
+        36.83506774902344,
+        0.0,
+        19.0,
+        26.0
+      ],
+      [
+        22.09933853149414,
+        107.6964340209961,
+        11.715752601623535,
+        14.339668273925781
+      ],
+      [
+        32.544044494628906,
+        23.51141929626465,
+        17.0,
+        29.000001907348633
+      ],
+      [
+        41.0,
+        122.0,
+        26.0,
+        16.0
+      ],
+      [
+        14.099575996398926,
+        72.41559600830078,
+        24.252389907836914,
+        28.945602416992188
+      ]
+    ],
+    [
+      [
+        24.64923095703125,
+        2.270815372467041,
+        25.219331741333008,
+        27.756488800048828
+      ],
+      [
+        0.9650000333786011,
+        114.4361343383789,
+        24.926836013793945,
+        24.431499481201172
+      ],
+      [
+        32.645484924316406,
+        96.67697143554688,
+        15.238354682922363,
+        15.159116744995117
+      ],
+      [
+        31.194482803344727,
+        37.79034423828125,
+        15.327752113342285,
+        12.787263870239258
+      ],
+      [
+        23.580095291137695,
+        19.955720901489258,
+        15.918295860290527,
+        16.192060470581055
+      ],
+      [
+        9.024255752563477,
+        38.957557678222656,
+        27.827394485473633,
+        23.358280181884766
+      ],
+      [
+        10.634078979492188,
+        1.2429044246673584,
+        18.231578826904297,
+        14.137557029724121
+      ],
+      [
+        31.85474395751953,
+        114.38164520263672,
+        5.486677169799805,
+        7.654906749725342
+      ],
+      [
+        47.76107406616211,
+        104.27662658691406,
+        16.061908721923828,
+        16.047285079956055
+      ],
+      [
+        0.0,
+        69.46922302246094,
+        11.521146774291992,
+        14.58188247680664
+      ],
+      [
+        45.751548767089844,
+        79.1785659790039,
+        18.349742889404297,
+        27.466323852539062
+      ],
+      [
+        2.197840452194214,
+        102.62281036376953,
+        12.291531562805176,
+        13.667946815490723
+      ],
+      [
+        29.498735427856445,
+        106.00812530517578,
+        5.0,
+        6.0
+      ],
+      [
+        0.28472286462783813,
+        1.1563050746917725,
+        11.342044830322266,
+        14.812145233154297
+      ],
+      [
+        0.0,
+        51.95446014404297,
+        13.11662483215332,
+        12.808173179626465
+      ],
+      [
+        0.0,
+        15.00927448272705,
+        28.579519271850586,
+        20.994054794311523
+      ],
+      [
+        0.0,
+        32.64374542236328,
+        12.529609680175781,
+        20.571271896362305
+      ],
+      [
+        38.51580810546875,
+        51.922977447509766,
+        25.604703903198242,
+        27.182504653930664
+      ],
+      [
+        0.0,
+        84.70728302001953,
+        13.528437614440918,
+        18.62742805480957
+      ],
+      [
+        17.66494369506836,
+        64.75737762451172,
+        28.92195701599121,
+        24.272218704223633
+      ],
+      [
+        46.00777816772461,
+        0.5381744503974915,
+        19.0,
+        26.0
+      ],
+      [
+        21.855628967285156,
+        117.71430206298828,
+        13.3411283493042,
+        12.59263801574707
+      ],
+      [
+        50.3928337097168,
+        26.162424087524414,
+        17.0,
+        29.000001907348633
+      ],
+      [
+        41.0,
+        122.0,
+        26.0,
+        16.0
+      ],
+      [
+        14.849736213684082,
+        82.82017517089844,
+        29.698209762573242,
+        23.63779067993164
+      ]
+    ],
+    [
+      [
+        28.81271743774414,
+        0.0,
+        23.269208908081055,
+        30.082674026489258
+      ],
+      [
+        0.8014404773712158,
+        111.8653335571289,
+        20.45319175720215,
+        29.775304794311523
+      ],
+      [
+        35.21277618408203,
+        92.37828063964844,
+        11.430051803588867,
+        20.209882736206055
+      ],
+      [
+        41.47974395751953,
+        36.75745391845703,
+        10.378374099731445,
+        18.885425567626953
+      ],
+      [
+        28.084630966186523,
+        23.214841842651367,
+        13.564537048339844,
+        19.001754760742188
+      ],
+      [
+        12.812143325805664,
+        38.0534553527832,
+        19.653400421142578,
+        33.07315444946289
+      ],
+      [
+        13.654727935791016,
+        1.0810751914978027,
+        15.679659843444824,
+        16.438495635986328
+      ],
+      [
+        32.203125,
+        112.06797790527344,
+        5.665122985839844,
+        7.413784980773926
+      ],
+      [
+        50.92758560180664,
+        107.57754516601562,
+        13.988131523132324,
+        18.42633628845215
+      ],
+      [
+        1.2735264301300049,
+        68.1856918334961,
+        8.800732612609863,
+        19.08932113647461
+      ],
+      [
+        51.82681655883789,
+        75.16914367675781,
+        15.2617826461792,
+        33.02366638183594
+      ],
+      [
+        3.147130012512207,
+        102.34632873535156,
+        10.342629432678223,
+        16.243452072143555
+      ],
+      [
+        28.990785598754883,
+        106.710693359375,
+        5.0,
+        6.0
+      ],
+      [
+        1.8955078125,
+        0.0,
+        10.787267684936523,
+        15.573917388916016
+      ],
+      [
+        1.9733718633651733,
+        52.42864990234375,
+        8.572723388671875,
+        19.5970401763916
+      ],
+      [
+        0.0,
+        9.502374649047852,
+        17.241756439208984,
+        34.79924011230469
+      ],
+      [
+        0.0,
+        28.935285568237305,
+        8.497808456420898,
+        30.331348419189453
+      ],
+      [
+        46.5737190246582,
+        49.752647399902344,
+        20.36573600769043,
+        34.175045013427734
+      ],
+      [
+        1.1880508661270142,
+        81.06375885009766,
+        9.624605178833008,
+        26.182891845703125
+      ],
+      [
+        21.265153884887695,
+        60.2689323425293,
+        23.303571701049805,
+        30.1241397857666
+      ],
+      [
+        49.981788635253906,
+        0.08760703355073929,
+        19.0,
+        26.0
+      ],
+      [
+        25.50061798095703,
+        115.73128509521484,
+        10.896430015563965,
+        15.41789436340332
+      ],
+      [
+        54.74155044555664,
+        26.969480514526367,
+        17.0,
+        29.000001907348633
+      ],
+      [
+        41.0,
+        122.0,
+        26.0,
+        16.0
+      ],
+      [
+        15.174968719482422,
+        82.3414077758789,
+        23.372304916381836,
+        30.035547256469727
+      ]
+    ],
+    [
+      [
+        26.597389221191406,
+        0.0,
+        26.019567489624023,
+        26.90283203125
+      ],
+      [
+        0.0,
+        117.39701080322266,
+        28.89394187927246,
+        21.077083587646484
+      ],
+      [
+        37.11467361450195,
+        97.89576721191406,
+        13.98343563079834,
+        16.519546508789062
+      ],
+      [
+        37.37886047363281,
+        40.62983703613281,
+        13.582344055175781,
+        14.430499076843262
+      ],
+      [
+        23.52836799621582,
+        24.924598693847656,
+        17.891401290893555,
+        14.406360626220703
+      ],
+      [
+        10.891922950744629,
+        40.29546356201172,
+        24.1438045501709,
+        26.922021865844727
+      ],
+      [
+        12.215864181518555,
+        0.9328774213790894,
+        17.82065773010254,
+        14.463550567626953
+      ],
+      [
+        29.792924880981445,
+        113.96401977539062,
+        7.101492404937744,
+        5.914249897003174
+      ],
+      [
+        46.35820007324219,
+        107.66041564941406,
+        19.172908782958984,
+        13.443448066711426
+      ],
+      [
+        0.7563753724098206,
+        69.71917724609375,
+        10.873444557189941,
+        15.450486183166504
+      ],
+      [
+        46.81365966796875,
+        81.09815216064453,
+        21.560712814331055,
+        23.375850677490234
+      ],
+      [
+        0.9503352642059326,
+        105.50393676757812,
+        15.000864028930664,
+        11.199356079101562
+      ],
+      [
+        26.188274383544922,
+        114.35977935791016,
+        5.0,
+        6.0
+      ],
+      [
+        0.7013047933578491,
+        0.7134799361228943,
+        13.562474250793457,
+        12.387120246887207
+      ],
+      [
+        0.36075785756111145,
+        56.75032043457031,
+        11.474804878234863,
+        14.640772819519043
+      ],
+      [
+        0.0,
+        12.20291519165039,
+        23.24195098876953,
+        25.815387725830078
+      ],
+      [
+        0.0,
+        37.61445617675781,
+        12.839790344238281,
+        20.074316024780273
+      ],
+      [
+        43.31052017211914,
+        52.79018783569336,
+        24.96771240234375,
+        27.87600326538086
+      ],
+      [
+        0.04377245157957077,
+        83.79183197021484,
+        11.609782218933105,
+        21.705835342407227
+      ],
+      [
+        15.077645301818848,
+        65.9990463256836,
+        29.475025177001953,
+        23.8167724609375
+      ],
+      [
+        49.19275665283203,
+        0.0,
+        19.0,
+        26.0
+      ],
+      [
+        25.345884323120117,
+        121.18509674072266,
+        14.212778091430664,
+        11.82034969329834
+      ],
+      [
+        51.49784851074219,
+        26.662555694580078,
+        17.0,
+        29.000001907348633
+      ],
+      [
+        41.0,
+        122.0,
+        26.0,
+        16.0
+      ],
+      [
+        9.871917724609375,
+        87.26566314697266,
+        29.75996208190918,
+        23.5887393951416
+      ]
+    ],
+    [
+      [
+        24.752750396728516,
+        0.0,
+        25.923477172851562,
+        27.00255012512207
+      ],
+      [
+        0.0,
+        115.25875854492188,
+        26.212299346923828,
+        23.233369827270508
+      ],
+      [
+        36.84244155883789,
+        96.18678283691406,
+        11.443955421447754,
+        20.18532943725586
+      ],
+      [
+        36.276363372802734,
+        37.98966598510742,
+        12.868303298950195,
+        15.23122501373291
+      ],
+      [
+        23.76396942138672,
+        26.362308502197266,
+        19.069482803344727,
+        13.51636028289795
+      ],
+      [
+        11.230978965759277,
+        40.82632827758789,
+        26.028921127319336,
+        24.97222328186035
+      ],
+      [
+        12.810283660888672,
+        0.0,
+        16.397804260253906,
+        15.718567848205566
+      ],
+      [
+        29.363895416259766,
+        113.18431854248047,
+        7.57163667678833,
+        5.5470170974731445
+      ],
+      [
+        49.06391525268555,
+        106.44607543945312,
+        17.558238983154297,
+        14.679718017578125
+      ],
+      [
+        0.0,
+        70.43440246582031,
+        12.350160598754883,
+        13.603060722351074
+      ],
+      [
+        47.955814361572266,
+        80.00831604003906,
+        20.372615814208984,
+        24.739091873168945
+      ],
+      [
+        0.0,
+        105.37354278564453,
+        14.754624366760254,
+        11.386260986328125
+      ],
+      [
+        26.36781883239746,
+        112.65655517578125,
+        5.0,
+        6.0
+      ],
+      [
+        0.0,
+        0.37645208835601807,
+        15.0116548538208,
+        11.191305160522461
+      ],
+      [
+        0.0,
+        56.63554763793945,
+        12.1596097946167,
+        13.816234588623047
+      ],
+      [
+        0.0,
+        13.319929122924805,
+        23.209575653076172,
+        25.851398468017578
+      ],
+      [
+        0.0,
+        37.82332992553711,
+        13.677228927612305,
+        18.845191955566406
+      ],
+      [
+        43.07465362548828,
+        53.97196578979492,
+        24.916170120239258,
+        27.93366813659668
+      ],
+      [
+        0.0,
+        83.77192687988281,
+        11.503938674926758,
+        21.905542373657227
+      ],
+      [
+        13.477288246154785,
+        65.06436920166016,
+        29.744787216186523,
+        23.60077476501465
+      ],
+      [
+        49.80322265625,
+        0.0,
+        19.0,
+        26.0
+      ],
+      [
+        27.693538665771484,
+        120.64368438720703,
+        12.062755584716797,
+        13.927167892456055
+      ],
+      [
+        51.539913177490234,
+        25.00952911376953,
+        17.0,
+        29.000001907348633
+      ],
+      [
+        41.0,
+        122.0,
+        26.0,
+        16.0
+      ],
+      [
+        11.100309371948242,
+        89.66370391845703,
+        28.90213966369629,
+        24.288860321044922
+      ]
+    ]
+  ],
+  "constraints": [
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      8.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      3.0,
+      5.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      4.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      2.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      8.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      3.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      4.0,
+      2.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      4.0,
+      2.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      9.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      2.0,
+      1.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      2.0,
+      1.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      2.0,
+      1.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      2.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      10.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      3.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      2.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      6.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ]
+  ],
+  "original_target_state_diagnostic": {
+    "pileup": {
+      "n": 25,
+      "empty_fraction": 0.04001500079692255,
+      "pair_overlap_fraction": 0.019536408140738034,
+      "overlap_excess_fraction": 0.019536407546264487,
+      "overlap_pair_count": 17,
+      "largest_any_component_fraction": 0.52,
+      "coverage_load_mean": 0.046229446796244834,
+      "coverage_load_p90": 0.11931949343000141,
+      "coverage_load_top10_mean": 0.271910300118326,
+      "coverage_energy": 0.011619581654901859,
+      "complex_energy_10pct": 0.0,
+      "strong_component_fraction_10pct": 0.0,
+      "threshold_curve": [
+        {
+          "threshold": 0.02,
+          "worst": {
+            "ids": [
+              0,
+              6,
+              15,
+              16,
+              14,
+              5,
+              13
+            ],
+            "blocks": 7,
+            "block_fraction": 0.28,
+            "area_fraction": 0.30490857201086596,
+            "mean_coverage_load": 0.16510475141738926,
+            "max_coverage_load": 0.34820571130243416,
+            "energy": 0.011619581237079197,
+            "strong_edges": 6
+          },
+          "complex_energy": 0.011619581237079197,
+          "largest_strong_component": 7,
+          "all_complex_energy": 0.011619581237079197
+        },
+        {
+          "threshold": 0.05,
+          "worst": {
+            "ids": [
+              6,
+              15,
+              13
+            ],
+            "blocks": 3,
+            "block_fraction": 0.12,
+            "area_fraction": 0.1116401846327911,
+            "mean_coverage_load": 0.1486618918918457,
+            "max_coverage_load": 0.2518745646798827,
+            "energy": 0.003330868762000483,
+            "strong_edges": 2
+          },
+          "complex_energy": 0.003330868762000483,
+          "largest_strong_component": 3,
+          "all_complex_energy": 0.00662863869447079
+        },
+        {
+          "threshold": 0.1,
+          "worst": null,
+          "complex_energy": 0.0,
+          "largest_strong_component": 0,
+          "all_complex_energy": 0
+        },
+        {
+          "threshold": 0.2,
+          "worst": null,
+          "complex_energy": 0.0,
+          "largest_strong_component": 0,
+          "all_complex_energy": 0
+        }
+      ]
+    },
+    "losses": {
+      "mse": 0.0,
+      "center_mse": 0.0,
+      "shape_mse": 0.0,
+      "center_local": 0.0,
+      "shape": 0.0,
+      "relative_local": 0.002029932104051113,
+      "overlap": 0.006438232492655516,
+      "contact": 0.0038472935557365417,
+      "boundary": 0.010660075582563877,
+      "mib": 0.13133414089679718,
+      "bbox": 0.0,
+      "local": 0.0005074830260127783,
+      "geometry": 0.021448679268360138
+    },
+    "scope": "original supervision state decoded under derived public areas; a conflict witness, not an attainable loss lower bound or legal target"
+  },
+  "final_training_terms": {
+    "mse": 0.01858193427324295,
+    "center_mse": 0.001705470378510654,
+    "shape_mse": 0.05715670436620712,
+    "center_local": 0.17000527679920197,
+    "shape": 0.05715670436620712,
+    "relative_local": 0.1331581026315689,
+    "overlap": 0.0253733042627573,
+    "contact": 0.010030754841864109,
+    "boundary": 0.006987219210714102,
+    "mib": 0.040007319301366806,
+    "bbox": 0.00023417056945618242,
+    "local": 0.21758396923542023,
+    "geometry": 0.24105694890022278
+  },
+  "weights": {
+    "center_local": 1.0,
+    "shape": 0.25,
+    "relative_local": 0.25,
+    "overlap": 0.5,
+    "contact": 0.5,
+    "boundary": 0.25,
+    "mib": 0.1,
+    "bbox": 0.1
+  },
+  "model_eval": true,
+  "dropout_active": false
+}

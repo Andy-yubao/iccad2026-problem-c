@@ -1,0 +1,66 @@
+{
+  "finished": true,
+  "stop_reason": "panel_complete",
+  "cumulative_pipeline_seconds": 12.199130599969067,
+  "variants": {
+    "control": {
+      "count": 5,
+      "hard_legal": 5,
+      "weighted_Q": 1.0090404749048607,
+      "mean_Q": 1.4537348109227106,
+      "p95_Q": 2.2149950928203688,
+      "CVaR95_Q": 2.3276494038369444,
+      "max_Q": 2.3276494038369444,
+      "complete_seconds_mean": 0.6719427000265569,
+      "complete_seconds_p95": 1.7222155800322068,
+      "complete_seconds_max": 1.9834597000153735,
+      "over_2s": 0,
+      "mean_center_move": 1.4815066107819488,
+      "mean_abs_log_ratio_change": 0.45291874344802086,
+      "rescue_cases": 1
+    },
+    "center_preserving": {
+      "count": 5,
+      "hard_legal": 5,
+      "weighted_Q": 1.0095853517135485,
+      "mean_Q": 1.4714645394847317,
+      "p95_Q": 2.2858758261358734,
+      "CVaR95_Q": 2.4162531421264504,
+      "max_Q": 2.4162531421264504,
+      "complete_seconds_mean": 0.6771141000557691,
+      "complete_seconds_p95": 1.7281737400684503,
+      "complete_seconds_max": 1.9871977000730112,
+      "over_2s": 0,
+      "mean_center_move": 1.4799092754388448,
+      "mean_abs_log_ratio_change": 0.4473417093026629,
+      "rescue_cases": 1
+    },
+    "legalize_anchor": {
+      "count": 5,
+      "hard_legal": 5,
+      "weighted_Q": 1.0107967567451803,
+      "mean_Q": 1.5115024503403973,
+      "p95_Q": 2.4436652419227403,
+      "CVaR95_Q": 2.612623311928733,
+      "max_Q": 2.612623311928733,
+      "complete_seconds_mean": 0.6842847400112078,
+      "complete_seconds_p95": 1.730371519969776,
+      "complete_seconds_max": 1.994655599934049,
+      "over_2s": 0,
+      "mean_center_move": 1.48865899963843,
+      "mean_abs_log_ratio_change": 0.441391902997829,
+      "rescue_cases": 1
+    }
+  },
+  "implementation_checks": {
+    "quadratic_gradient_error": 2.708033450260494e-14,
+    "positive_semidefinite": true,
+    "projection_gradient_parity": true,
+    "original_draft_read_only": true,
+    "rescue_keeps_original_target": true,
+    "simulated_released_blocks": 24,
+    "untouched_blocks_preserved": true
+  },
+  "test_read": false,
+  "scope": "adaptive development mechanism gate"
+}

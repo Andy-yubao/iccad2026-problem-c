@@ -1,0 +1,23 @@
+{
+  "status": "startup_process_exited_before_pipeline_state",
+  "previous_launch": {
+    "pid": 31776,
+    "started_utc": "2026-10-29T15:22:22.0878169Z",
+    "stdout": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E83_strategy_attribution\\runs\\controller_20261029_152222.stdout.log",
+    "stderr": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E83_strategy_attribution\\runs\\controller_20261029_152222.stderr.log",
+    "authorization": "User explicitly authorized autonomous experiments and automatic wakeup",
+    "training_updates": 0
+  },
+  "checked_utc": "2026-10-29T15:23:40.753448+00:00",
+  "evidence": [
+    "Get-Process did not find launched PID",
+    "Pipeline OS lock independently acquired",
+    "State still preparing; no composition or progress created",
+    "stdout and stderr empty"
+  ],
+  "cause": "Unknown; no evidence of numerical/model failure",
+  "training_updates": 0,
+  "solver_calls": 0,
+  "recovery": "Use managed persistent exec process; conservatively retain first launch UTC for total study wall budget",
+  "managed_start_metadata_fix": "Normalized PowerShell 7-digit Z timestamp to Python3.10 six-digit UTC offset before startup; no model/evaluation executed"
+}

@@ -1,0 +1,123 @@
+{
+  "experiment": "E97_gpu_hybrid_solver",
+  "revision": "v1",
+  "authorization": "2026-11-01 用户明确允许类似E85的NN+非NN混合、GPU全流程、自主训练、每30分钟唤醒；答复确认逐例延迟/质量优先/12小时最多3正式候选。随后强调先测神经网络draft生成延迟，研究更简单更少迭代的后处理及更好输入。 后续用户把正式训练候选上限从3提升到8，12小时总窗口不变。",
+  "objective": {
+    "weighted_Q_lt": 1.01,
+    "quality_scope": "same frozen dev500 neutral-runtime Q; not contest-runtime total",
+    "hard_legal": "500/500 final official and independent checks, never count invalid results as quality",
+    "latency_target_seconds": 0.25,
+    "latency_scope": "resident warmed service, single problem to final returned result; input feature construction, H2D/D2H, NN, all geometry and necessary hard checks included; disk/model load and warmup separately",
+    "priority": "quality first, maintain quality-latency Pareto",
+    "latency_amendment": "用户后续明确：0.1s太严苛了，0.25s/例就行；仅放宽逐例完整延迟，质量优先/硬合法/Q<1.01/12小时最多3候选不变。"
+  },
+  "port_representation": "fully compressed per-module mass and weighted center; zero independent port tokens",
+  "data": {
+    "train_version": "v5 first16k default; E85 weights inherit historical32k exposure, no new expansion without registration",
+    "dev": 2000,
+    "monitor": 500,
+    "test": "sealed",
+    "split": "original split_v1 unchanged"
+  },
+  "stage0": {
+    "status": "registered_before_execution",
+    "name": "five-train draft latency anatomy",
+    "ids": [
+      1683,
+      10027,
+      5474,
+      10140,
+      15001
+    ],
+    "models": [
+      "E74 L",
+      "E85 cooperative L+three heads+fixed geometry",
+      "E90 L",
+      "E96 L+one F"
+    ],
+    "paths": [
+      "CPU eager two threads",
+      "GPU eager batch1",
+      "GPU captured batch1"
+    ],
+    "repetitions": 20,
+    "warmups": 3,
+    "includes": "reconstruct public input graph every end-to-end call; read-only input objects, no reference free geometry; geometry inside E85 included",
+    "excludes": "no postprocessor in draft-generation timing; do not claim final solve target met",
+    "numeric_checks": "strict checkpoint load, CPU/GPU state/decoded output comparison, eager/graph output comparison; no hidden autocast/TF32",
+    "no_training": true
+  },
+  "future_stages": [
+    "Profile repair phases and validate a simpler fewer-iteration postprocessor on the same five train cases, trained for better inputs. Target 0.25 seconds complete single-case solve; all fallback and necessary hard checks counted.",
+    "Register a finite final dev500 comparison of same-budget NN vs no-learned-corrector/geometry-only paths, measure end-to-end quality and P95; do not replay completed identical evaluations.",
+    "Only train a candidate after an effective simple decoder/repair is demonstrated. Train NN to supply inputs useful to that repair, targeting boundary/grouping/compactness and actual wire with fixed registered Loss, not merely proxy overlap. At most8 candidates, each with complete source, dataset, LR, budget, own-Loss best/latest and one terminal evaluation."
+  ],
+  "no_auto_old_experiments": true,
+  "heartbeat_id": "problem-c-gpu",
+  "no_automatic_test": true,
+  "max_formal_training_candidates": 8,
+  "stage1": {
+    "status": "registered_before_execution",
+    "ids": [
+      1683,
+      10027,
+      5474,
+      10140,
+      15001
+    ],
+    "arms": [
+      "ops_only+frozen_full_repair",
+      "E85+frozen_full_repair",
+      "ops_only+slim3",
+      "E85+slim3"
+    ],
+    "scope": "same original five public train inputs; zero training, no dev coefficient search",
+    "control": "same frozen E74, same frame/MIB/8step geometry; omit learned residual networks in ops_only",
+    "slim": {
+      "shape_steps": 3,
+      "seconds": 0.18,
+      "adaptive": false,
+      "late_extension": false,
+      "certified": false,
+      "robust_seeds": false,
+      "quick_project": false,
+      "quadratic_project": true,
+      "incumbent_project": false,
+      "projection": true,
+      "snap": 0.0001
+    },
+    "measurement": "batch1 common fixed120 GPU graph, public graph build/padding/H2D/NN+geometry/D2H/CPU repair/independent public hard check all inside timer; warmup/capture separate; one solve each input/arm",
+    "quality": "native public objective/bbox/actual wire/soft violations and hard legality only; not official Q or generalization",
+    "purpose": "determine whether weaker fewer-step repair is viable and whether learned F gives it better inputs before training"
+  },
+  "stage2": {
+    "status": "registered_before_execution",
+    "arms": [
+      "ops_only_slim3",
+      "E85_slim3"
+    ],
+    "fixed_repair": {
+      "shape_steps": 3,
+      "seconds": 0.18,
+      "adaptive": false,
+      "late_extension": false,
+      "certified": false,
+      "robust_seeds": false,
+      "quick_project": false,
+      "quadratic_project": true,
+      "incumbent_project": false,
+      "projection": true,
+      "snap": 0.0001
+    },
+    "panel": "frozen dev_monitor500 in original order; one complete single-case request per arm/member, alternating arm order",
+    "no_training": true,
+    "no_coefficients_swept": true,
+    "source": "same frozen E85 cooperative best; control removes learned residual heads while keeping identical source frame/MIB/8step geometry",
+    "clock": "input object already loaded; construct public features/padding, H2D, cached model graph, decode/D2H, all repair/fallback plus independent public hard check inside timer; cold load/warmup/capture and evaluation scoring excluded and separately reported",
+    "scoring": "existing scoring.evaluate_case neutral-runtime Q, independent legal; all errors/invalid cases cost10 and denominator500",
+    "reason": "five-train probe demonstrated 5/5 legal and ~0.1s but inconsistent learned F value, so test finite matched control before designing NN training",
+    "historical_reference": "old E85 full solver dev500 reused only as historical quality/time reference, not a matched latency control",
+    "per_arm_repeats": 1,
+    "timeout": "shared12h deadline/STOP; no restarts without diagnosis"
+  }
+}

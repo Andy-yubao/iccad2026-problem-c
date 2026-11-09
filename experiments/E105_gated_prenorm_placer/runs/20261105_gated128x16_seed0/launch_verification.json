@@ -1,0 +1,38 @@
+{
+  "status": "background_training_actual_updates_verified",
+  "utc": "2026-11-04T23:47:22.571622+00:00",
+  "heartbeat": {
+    "status": "running",
+    "activity": "training",
+    "pid": 9920,
+    "monitor_completed": 500,
+    "monitor_count": 500,
+    "epoch": 0,
+    "step": 325,
+    "cursor": 10400,
+    "elapsed_seconds": 360.34922540000116,
+    "utc": "2026-11-04T23:47:21Z",
+    "test_read": false,
+    "postprocessing_calls": 0
+  },
+  "last_logged_step": {
+    "step": 300,
+    "epoch": 1,
+    "seconds_per_step": 0.1712124699999913,
+    "samples_per_second": 186.90227411590772,
+    "total": 1.061065435409546,
+    "gradient_norm": 6.313472747802734,
+    "elapsed_seconds": 355.98780340000303,
+    "max_case_loss": 1.6006991863250732,
+    "output_max": 1.9325075149536133,
+    "gate_min": 0.09443271160125732,
+    "gate_mean": 0.10028574615716934,
+    "gate_max": 0.10703102499246597
+  },
+  "actual_frozen_members_verified": true,
+  "all_e104_non_architecture_alignment_passed": true,
+  "parameters": 3490819,
+  "preflight": "passed, five training cases one real update",
+  "normal_early_stop_then_automatic_dev500": true,
+  "test_read": false
+}

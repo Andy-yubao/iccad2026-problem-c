@@ -1,0 +1,13 @@
+{
+  "revision":"E99.R12.pending_geometry_repair.v1",
+  "evidence":"R11 removing artificial size boxes did not improveQ. Case448 repeatedly reports AlmostSolved but fails hard acceptance. R9 leaves state unchanged on a rejected proposal, then constructs from the original prefix and projects the fallback rather than the promising proposal. Original full planner advances its working state on finite proposals even before hard legality.",
+  "hypothesis":"If no useful legal incumbent exists, preserve a returned non-None proposal as a working snapshot even when final hard checks reject it; rebuild topology from that snapshot. Before constructive fallback, attempt a bounded fixed-shape projection of the last pending geometry. Never return unchecked pending geometry or alter hard checks. No change after a legal incumbent exists.",
+  "arms":["R9_control","pending_geometry"],
+  "backend":{"seconds":0.18,"maximum_shape_solves":4,"shape_cap_seconds":0.045,"projection_and_polish_reserve_seconds":0.033,"maximum_edge_flips_per_failure":8,"pending_projection_cap_seconds":0.015},
+  "implementation_panel":[95,135,295,335,448],
+  "control_reuse":"R9 all500 read-only. Reuse new candidate records whose prior trace has no Solved/AlmostSolved/MaxTime rejected shape before a legal shape; new changed branches freshly solved. All500 included, arm-filtered reuse counts, transitive coordinate provenance. Historical timing not complete acceptance.",
+  "calibration_panel":"fixed v5 train_monitor500, frozen C3/public inputs",
+  "checks":"5-case final official/independent legality; rejected-proposal overlap/area diagnostics from public inputs only; retain final failures and all fallback timing",
+  "promotion":"No dev tuning; freeze before fresh complete C3 dev500 acceptance",
+  "test_read":false,"new_training":false
+}

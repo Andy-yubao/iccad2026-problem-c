@@ -1,0 +1,57 @@
+{
+  "scope": "three disposable image copies; no real human scores inserted",
+  "real_round_ratings": 0,
+  "case_count": 100,
+  "passed": [
+    "incomplete rejection",
+    "invalid score rejection",
+    "revision conflict",
+    "cross-origin token rejection",
+    "Chinese notes/tags",
+    "note-only remains unrated",
+    "rerating history retained",
+    "metrics exposure event",
+    "complete after all rated",
+    "JSON export verbatim",
+    "CSV formula escaping",
+    "allowlisted image route",
+    "workspace/database routes blocked",
+    "database close/reopen durability"
+  ],
+  "successful_events": 8,
+  "HTTP_statuses": [
+    400,
+    400,
+    400,
+    200,
+    409,
+    403,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200
+  ],
+  "status": "passed",
+  "browser_verification": {
+    "auto_advance": true,
+    "notes_and_tags_saved": true,
+    "keyboard_scores": true,
+    "refresh_restores_unrated": true,
+    "image_focus_crop_visually_checked": true,
+    "feedback_and_completion": true,
+    "all100_PNG_decoded": true,
+    "real_round_untouched": true
+  },
+  "verified_sources_sha256": {
+    "visualization/review.py": "5daf41408be65b9b8c450f3450a0395097f2fd6c4ccfccf1837b2c14b6d63e21",
+    "visualization/review_web/index.html": "9486fef5e233d0cb51fb4d57cad8fefb3ad61aab9d3b091bedf52b1a238b61e3",
+    "visualization/review_web/style.css": "b136783d7427eb7cd9b4693219f93617c43b74aa798f43a36a4e06794428bf45",
+    "visualization/review_web/app.js": "38c04d28ebad507c600a46db589f3877b61108487fb3a86c254da6a61721d13c",
+    "experiments/E42_joint_regularization/prepare_review.py": "29933449bcf241d0215d91475bf33d5217263880ab6ec47ac77a171c281a0186"
+  },
+  "preview": "frontend_preview.png",
+  "temporary_QA_cleaned": true
+}

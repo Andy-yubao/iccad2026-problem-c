@@ -1,0 +1,13 @@
+{
+  "revision":"E99.R14.persistent_collision_recovery.v1",
+  "implementation_audit":"R12 source unintentionally resets pending after copying a rejected geometry; state advancement works but pending projection cannot execute. R13 repeats that reset and also resets cuts/removed/cut_mode after rejected proposals. Its observed Q1.022449806 is valid saved evidence for the actual reset implementation, not validation of the intended persistent-cut algorithm. R10 inherits control reuse flags and reports977 reused candidates; actual new-arm count is495, quality rows unaffected. Old JSON/source snapshots remain unchanged; corrections are sidecar audits.",
+  "hypothesis":"Correct recovery-state lifetime explicitly: pending geometry survives to final projection; cut_mode/cuts/removed persist across failed proposals until a new proposal permits recomputing missing collisions. Rewrite orchestration directly rather than broad text substitutions. Same180ms deadline and max4 normal/max6 recovery shape calls; no changed hard checks.",
+  "arms":["R13_control","persistent_recovery"],
+  "backend":{"seconds":0.18,"maximum_shape_solves":4,"recovery_maximum_shape_solves":6,"shape_cap_seconds":0.045,"projection_and_polish_reserve_seconds":0.033,"maximum_edge_flips_per_failure":8,"pending_projection_cap_seconds":0.015},
+  "implementation_panel":[95,135,295,335,448],
+  "checks":"5-case hard checks plus trace invariant: after sparse mode begins, subsequent shape calls remain sparse; pending state may only clear with a legal accepted proposal. All fallback and deadline costs included.",
+  "control_reuse":"Completed R13 actual implementation control500 read-only. Reuse new cases with no pending_shape or start_collision_cuts trace because those branches are unchanged; solve modified branches freshly. Count all500, candidate-arm-only reuse counters, transitive coordinate hashes.",
+  "calibration_panel":"v5 train_monitor500; all source/checkpoint/protocol frozen, no test or NN training",
+  "promotion":"No dev coefficient scans; fresh complete C3 dev500 after quality/source review",
+  "test_read":false,"new_training":false
+}

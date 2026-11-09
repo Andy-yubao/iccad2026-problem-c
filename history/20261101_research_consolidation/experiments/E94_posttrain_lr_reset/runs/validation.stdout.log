@@ -1,0 +1,130 @@
+Verified archived cache loaded: dev_monitor500 500 cases
+Verified archived cache loaded: dev_monitor500 500 cases
+Verified archived cache loaded: dev_monitor500 500 cases
+Verified archived cache loaded: dev_monitor500 500 cases
+Verified archived cache loaded: dev_monitor500 500 cases
+{
+  "status": "completed",
+  "checkpoint_sha256": "b7a197327ce65a0beb629e872551e8e1110d9502014c81907674580f75a0106f",
+  "best_F_epoch": 30,
+  "summary": {
+    "count": 500,
+    "hard_legal": 500,
+    "mean_Q": 1.0393357259630147,
+    "weighted_Q": 1.025528584656029,
+    "p95_Q": 1.148513926464226,
+    "max_Q": 2.2812517968513553,
+    "worst5pct_mean_Q": 1.2716926430698468,
+    "seconds_mean": 0.2676153922015801,
+    "seconds_p95": 0.6121636699535884,
+    "row_fallbacks": 0,
+    "rescue_cases": 4,
+    "errors": 0,
+    "hpwl_gap_mean_returned": 0.009365866568416951,
+    "area_gap_mean_returned": 0.01660575090753921,
+    "boundary_violations_mean_returned": 0.206,
+    "grouping_violations_mean_returned": 0.23,
+    "mib_violations_mean_returned": 0.0,
+    "inference_seconds_mean_returned": 0.0670264307986945,
+    "postprocess_seconds_mean_returned": 0.20042582620494068,
+    "mean_center_move_local_mean_returned": 0.38287984798892966,
+    "max_center_move_local_mean_returned": 1.5802701937062815
+  },
+  "module_pass10_pooled": 0.5841220068415052,
+  "all_modules_pass10_count": 0,
+  "worst_module_coverage_p95": 0.7492701937674058,
+  "worst_module_coverage_max": 1.0,
+  "raw500_geometry_mean": {
+    "bbox_over_A": 1.025759773020376,
+    "empty_fraction_of_bbox": 0.07992164150969126,
+    "overlap_area_fraction": 0.056599435047802585
+  },
+  "dev500_loss": {
+    "penetration": 0.011909051795490086,
+    "module_load_mean": 0.11409119010716677,
+    "module_max_excess10": 0.3240663321018219,
+    "overlap_total": 0.45006657458841803,
+    "wirelength": 0.29838782221078874,
+    "compactness": 0.02580388355255127,
+    "grouping": 0.011347549114958383,
+    "boundary": 0.003761203277797904,
+    "mib": 0.017497265557554785,
+    "soft": 0.007517624921281822,
+    "task": 0.17713110288977624,
+    "pair_intersection_fraction": 0.05659944892674684,
+    "module_load_max": 0.42406633067131044,
+    "position": 0.1832922080978751,
+    "shape": 0.16139809592068197,
+    "reference": 0.22364173167198897,
+    "supervision": 0.22364173167198897,
+    "total": 0.32314161774516104,
+    "count": 500,
+    "p95": 0.6419622570276258,
+    "p99": 0.7917996752262115,
+    "max": 0.886239767074585,
+    "worst_member": [
+      "worker_98/layouts_2352.th",
+      95
+    ],
+    "output_max": 2.1931729316711426,
+    "inference_seconds": 4.7383875999366865,
+    "F_diagnostic": 0.32314161487882553,
+    "weighted_contributions": {
+      "reference": 0.22364173167198897,
+      "overlap": 0.040394208056092916,
+      "task": 0.05910567515074364
+    }
+  },
+  "comparisons": {
+    "E90": {
+      "weighted_Q_delta": 0.003181067489013296,
+      "worker_paired_95pct_interval": [
+        -0.0014061911707566248,
+        0.008274987554509483
+      ],
+      "improved": 202,
+      "worse": 235
+    },
+    "E92": {
+      "weighted_Q_delta": -0.005740528069734356,
+      "worker_paired_95pct_interval": [
+        -0.015567809808585924,
+        0.0023906568159882953
+      ],
+      "improved": 214,
+      "worse": 207
+    },
+    "E93_C": {
+      "weighted_Q_delta": -0.0007015063999081179,
+      "worker_paired_95pct_interval": [
+        -0.0043652437174032535,
+        0.0033319601608559793
+      ],
+      "improved": 222,
+      "worse": 214
+    },
+    "E93_G": {
+      "weighted_Q_delta": 0.0009279390792887608,
+      "worker_paired_95pct_interval": [
+        -0.0031028809545405453,
+        0.005169494946315131
+      ],
+      "improved": 213,
+      "worse": 220
+    }
+  },
+  "test_read": false,
+  "neutral_runtime_development_only": true,
+  "next_action": "report only; no Q-based reselect or further training",
+  "integrity": {
+    "verified_images": 100,
+    "worker_pids": [
+      2852,
+      16648,
+      17428,
+      21060
+    ],
+    "threads_per_worker": 2,
+    "source_checkpoint_unchanged": true
+  }
+}

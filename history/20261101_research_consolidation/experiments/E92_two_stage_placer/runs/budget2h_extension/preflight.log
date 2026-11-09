@@ -1,0 +1,40 @@
+Verified archived cache loaded: train 5 cases
+{
+  "status": "passed",
+  "test_read": false,
+  "schedule": {
+    "P_first_drop_epoch": 18,
+    "P_switch_epoch": 21,
+    "F_drops": [
+      3,
+      6
+    ],
+    "F_stop_epoch": 8,
+    "tiny_improvement_does_not_reset": true
+  },
+  "initial_loss": {
+    "P": {
+      "mean": 13.364398002624512,
+      "max": 18.573148727416992
+    },
+    "F": {
+      "mean": 16.069229125976562,
+      "max": 23.101821899414062
+    }
+  },
+  "recovery": "P4 + handoff to P best2 + F2 == same handoff with F1+resume+F1, bit-exact model/Adam/RNG/projection/progress/monitor",
+  "guards": "finite single-case catastrophe and nonfinite rejected before Adam; weights/counters unchanged",
+  "train_cases": [
+    1032,
+    8047,
+    27988,
+    1799,
+    75
+  ],
+  "parameters": 5829939,
+  "all_trainable": true,
+  "per_epoch_draws": 32000,
+  "updates_per_epoch": 1000,
+  "peak_gpu_allocated": 3160770560,
+  "elapsed_seconds": 46.322052900039125
+}

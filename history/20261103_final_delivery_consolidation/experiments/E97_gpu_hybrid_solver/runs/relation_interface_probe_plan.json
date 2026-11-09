@@ -1,0 +1,22 @@
+{
+  "status": "registered_before_execution",
+  "stage": "C1 frozen geometry plus supplied separation graph",
+  "train_ids": [
+    1683,
+    10027,
+    5474,
+    10140,
+    15001
+  ],
+  "arms": [
+    "C1 geometry plus ordinary dynamically extracted native edges",
+    "same C1 geometry plus fixed saved public-teacher edges"
+  ],
+  "source_solver_sha256": "6c4310ac9ae58ea5fa85732548e14e44f33ccb331f3bc69071a3582cd4fb8f2e",
+  "changes": "Only optional fixed input edge graph replacing native extraction; same3 shape+1 projection and .18s, unchanged objective/CPU solver; copied solver original protected",
+  "no_training": true,
+  "no_dev": true,
+  "oracle_labels": "train mechanism only; never inference input in final system",
+  "purpose": "Check if NN can predict repair-ready relations instead of moving geometry until native extraction guesses them",
+  "test_read": false
+}

@@ -1,0 +1,30 @@
+E:\project\ICCAD\2026\problemC\experiments\E90_auxiliary_weight_placer\metrics.py:20: RuntimeWarning: invalid value encountered in divide
+  inter=size.prod(-1);np.fill_diagonal(inter,0);pair=inter.sum(1)/area
+E:\project\ICCAD\2026\problemC\experiments\E90_auxiliary_weight_placer\metrics.py:23: RuntimeWarning: invalid value encountered in scalar divide
+  ids=np.flatnonzero(inter[i]>0);covered.append(union_area(np.c_[low[i,ids],size[i,ids]])/area[i])
+Traceback (most recent call last):
+  File "E:\project\ICCAD\2026\problemC\experiments\E90_auxiliary_weight_placer\runs\validate_4process_20261031.py", line 168, in <module>
+    main()
+  File "E:\project\ICCAD\2026\problemC\experiments\E90_auxiliary_weight_placer\runs\validate_4process_20261031.py", line 157, in main
+    if not final.full_dev(OUTPUT, state, identity):
+  File "E:\project\ICCAD\2026\problemC\experiments\E90_auxiliary_weight_placer\final.py", line 132, in full_dev
+    chunks.append(value); save(partial_path, chunks)
+  File "E:\project\ICCAD\2026\problemC\experiments\E90_auxiliary_weight_placer\io.py", line 35, in save
+    temp.write_text(json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False) + '\n', encoding='utf-8')
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\json\encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\json\encoder.py", line 429, in _iterencode
+    yield from _iterencode_list(o, _current_indent_level)
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\json\encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\json\encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\json\encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\json\encoder.py", line 397, in _iterencode_dict
+    yield _floatstr(value)
+  File "E:\project\ICCAD\2026\problemC\.conda\envs\iccad2026\lib\json\encoder.py", line 239, in floatstr
+    raise ValueError(
+ValueError: Out of range float values are not JSON compliant: nan

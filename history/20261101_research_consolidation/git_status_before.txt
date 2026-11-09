@@ -1,0 +1,923 @@
+ M .gitignore
+ M AGENTS.md
+ M README.md
+ M docs/aim.md
+ M docs/protocol.md
+ M docs/research_guide.zh-CN.md
+ M docs/workspace_structure.md
+ D experiments/E25_integrated_baseline/README.md
+ D experiments/E25_integrated_baseline/__init__.py
+ D experiments/E25_integrated_baseline/audit.py
+ D experiments/E25_integrated_baseline/backend/__init__.py
+ D experiments/E25_integrated_baseline/backend/conic_geometry.py
+ D experiments/E25_integrated_baseline/backend/frozen/__init__.py
+ D experiments/E25_integrated_baseline/backend/frozen/canonical_geometry.py
+ D experiments/E25_integrated_baseline/backend/frozen/feasible.py
+ D experiments/E25_integrated_baseline/backend/frozen/global_refine.py
+ D experiments/E25_integrated_baseline/backend/frozen/packing.py
+ D experiments/E25_integrated_baseline/backend/frozen/postprocess.py
+ D experiments/E25_integrated_baseline/backend/frozen/shape_lp.py
+ D experiments/E25_integrated_baseline/backend/frozen/solver.py
+ D experiments/E25_integrated_baseline/backend/frozen/topology_mip.py
+ D experiments/E25_integrated_baseline/backend/guard.py
+ D experiments/E25_integrated_baseline/backend/observe.py
+ D experiments/E25_integrated_baseline/backend/optimizer.py
+ D experiments/E25_integrated_baseline/backend/reduction.py
+ D experiments/E25_integrated_baseline/backend/rescue.py
+ D experiments/E25_integrated_baseline/backend/robust.py
+ D experiments/E25_integrated_baseline/backend/selection.py
+ D experiments/E25_integrated_baseline/backend/stable.py
+ D experiments/E25_integrated_baseline/canonical.py
+ D experiments/E25_integrated_baseline/canonical_native.py
+ D experiments/E25_integrated_baseline/canonical_py.py
+ D experiments/E25_integrated_baseline/cases.py
+ D experiments/E25_integrated_baseline/certify_polish.py
+ D experiments/E25_integrated_baseline/export_test_drafts.py
+ D experiments/E25_integrated_baseline/fast_geometry.py
+ D experiments/E25_integrated_baseline/features.py
+ D experiments/E25_integrated_baseline/io.py
+ D experiments/E25_integrated_baseline/legal_seed.py
+ D experiments/E25_integrated_baseline/model.py
+ D experiments/E25_integrated_baseline/projection.py
+ D experiments/E25_integrated_baseline/provenance.json
+ D experiments/E25_integrated_baseline/requirements-native.txt
+ D experiments/E25_integrated_baseline/run.py
+ D experiments/E25_integrated_baseline/runs/20261020_controls_steady_monitor500/config.json
+ D experiments/E25_integrated_baseline/runs/20261020_controls_steady_monitor500/initialization.json
+ D experiments/E25_integrated_baseline/runs/20261020_controls_steady_monitor500/results.json
+ D experiments/E25_integrated_baseline/runs/20261020_controls_steady_monitor500/source_snapshot.zip
+ D experiments/E25_integrated_baseline/runs/20261020_e10_geometry_v5_seed0/analysis.md
+ D experiments/E25_integrated_baseline/runs/20261020_e10_geometry_v5_seed0/budget.json
+ D experiments/E25_integrated_baseline/runs/20261020_e10_geometry_v5_seed0/completion_audit.json
+ D experiments/E25_integrated_baseline/runs/20261020_e10_geometry_v5_seed0/config.json
+ D experiments/E25_integrated_baseline/runs/20261020_e10_geometry_v5_seed0/final_evaluation/config.json
+ D experiments/E25_integrated_baseline/runs/20261020_e10_geometry_v5_seed0/final_evaluation/frozen.json
+ D experiments/E25_integrated_baseline/runs/20261020_e10_geometry_v5_seed0/final_evaluation/progress.json
+ D experiments/E25_integrated_baseline/runs/20261020_e10_geometry_v5_seed0/final_evaluation/results.json
+ D experiments/E25_integrated_baseline/runs/20261020_e10_geometry_v5_seed0/final_evaluation/source_snapshot.zip
+ D experiments/E25_integrated_baseline/runs/20261020_e10_geometry_v5_seed0/full_dev.json
+ D experiments/E25_integrated_baseline/runs/20261020_e10_geometry_v5_seed0/invocations.json
+ D experiments/E25_integrated_baseline/runs/20261020_e10_geometry_v5_seed0/panels.json
+ D experiments/E25_integrated_baseline/runs/20261020_e10_geometry_v5_seed0/progress.json
+ D experiments/E25_integrated_baseline/runs/20261020_e10_geometry_v5_seed0/results.json
+ D experiments/E25_integrated_baseline/runs/20261020_e10_geometry_v5_seed0/source_snapshot.zip
+ D experiments/E25_integrated_baseline/runs/20261020_migration_check/results.json
+ D experiments/E25_integrated_baseline/runs/20261020_migration_check/workspace.json
+ D experiments/E25_integrated_baseline/runs/20261022_model_training_review/review.md
+ D experiments/E25_integrated_baseline/runs/20261022_test100_draft_gallery/config.json
+ D experiments/E25_integrated_baseline/runs/20261022_test100_draft_gallery/progress.json
+ D experiments/E25_integrated_baseline/runs/20261022_test100_draft_gallery/summary.json
+ D experiments/E25_integrated_baseline/runs/20261022_test100_draft_gallery/verify_images.py
+ D experiments/E25_integrated_baseline/runs/cache_migration.json
+ D experiments/E25_integrated_baseline/runs/frozen_model.json
+ D experiments/E25_integrated_baseline/solver.py
+ D experiments/E30_stable_fast_geometry/README.md
+ D experiments/E30_stable_fast_geometry/__init__.py
+ D experiments/E30_stable_fast_geometry/analyze.py
+ D experiments/E30_stable_fast_geometry/audit.py
+ D experiments/E30_stable_fast_geometry/backend/__init__.py
+ D experiments/E30_stable_fast_geometry/backend/conic_geometry.py
+ D experiments/E30_stable_fast_geometry/backend/frozen/__init__.py
+ D experiments/E30_stable_fast_geometry/backend/frozen/canonical_geometry.py
+ D experiments/E30_stable_fast_geometry/backend/frozen/feasible.py
+ D experiments/E30_stable_fast_geometry/backend/frozen/global_refine.py
+ D experiments/E30_stable_fast_geometry/backend/frozen/packing.py
+ D experiments/E30_stable_fast_geometry/backend/frozen/postprocess.py
+ D experiments/E30_stable_fast_geometry/backend/frozen/shape_lp.py
+ D experiments/E30_stable_fast_geometry/backend/frozen/solver.py
+ D experiments/E30_stable_fast_geometry/backend/frozen/topology_mip.py
+ D experiments/E30_stable_fast_geometry/backend/guard.py
+ D experiments/E30_stable_fast_geometry/backend/observe.py
+ D experiments/E30_stable_fast_geometry/backend/optimizer.py
+ D experiments/E30_stable_fast_geometry/backend/reduction.py
+ D experiments/E30_stable_fast_geometry/backend/rescue.py
+ D experiments/E30_stable_fast_geometry/backend/robust.py
+ D experiments/E30_stable_fast_geometry/backend/selection.py
+ D experiments/E30_stable_fast_geometry/backend/stable.py
+ D experiments/E30_stable_fast_geometry/batches.py
+ D experiments/E30_stable_fast_geometry/cache.py
+ D experiments/E30_stable_fast_geometry/canonical.py
+ D experiments/E30_stable_fast_geometry/canonical_native.py
+ D experiments/E30_stable_fast_geometry/canonical_py.py
+ D experiments/E30_stable_fast_geometry/cases.py
+ D experiments/E30_stable_fast_geometry/certify_polish.py
+ D experiments/E30_stable_fast_geometry/check.py
+ D experiments/E30_stable_fast_geometry/confirmation.py
+ D experiments/E30_stable_fast_geometry/data.py
+ D experiments/E30_stable_fast_geometry/fast_geometry.py
+ D experiments/E30_stable_fast_geometry/features.py
+ D experiments/E30_stable_fast_geometry/io.py
+ D experiments/E30_stable_fast_geometry/legal_seed.py
+ D experiments/E30_stable_fast_geometry/loss.py
+ D experiments/E30_stable_fast_geometry/losses.py
+ D experiments/E30_stable_fast_geometry/model.py
+ D experiments/E30_stable_fast_geometry/native_reduce.py
+ D experiments/E30_stable_fast_geometry/occupancy.py
+ D experiments/E30_stable_fast_geometry/pipeline.py
+ D experiments/E30_stable_fast_geometry/plot.py
+ D experiments/E30_stable_fast_geometry/projection.py
+ D experiments/E30_stable_fast_geometry/provenance.json
+ D experiments/E30_stable_fast_geometry/requirements-native.txt
+ D experiments/E30_stable_fast_geometry/resources.py
+ D experiments/E30_stable_fast_geometry/run.py
+ D experiments/E30_stable_fast_geometry/runs/20261022_baseline_smoke_steady_monitor5/config.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_baseline_smoke_steady_monitor5/initialization.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_frozen_confirmation500/config.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_frozen_confirmation500/figures.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_frozen_confirmation500/initialization.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_frozen_confirmation500/invocations.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_frozen_confirmation500/layout_01.png
+ D experiments/E30_stable_fast_geometry/runs/20261022_frozen_confirmation500/layout_02.png
+ D experiments/E30_stable_fast_geometry/runs/20261022_frozen_confirmation500/quality_runtime.png
+ D experiments/E30_stable_fast_geometry/runs/20261022_frozen_confirmation500/summary.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_full_native_monitor500/config.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_full_native_monitor500/initialization.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_full_native_monitor500/paired_analysis.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_full_push_monitor500/config.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_full_push_monitor500/initialization.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_full_push_monitor500/paired_analysis.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_full_tail_monitor500/config.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_full_tail_monitor500/initialization.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_full_tail_monitor500/paired_analysis.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_geometry_control_seed0_terminal_tail_monitor500/config.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_geometry_control_seed0_terminal_tail_monitor500/initialization.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_geometry_control_seed0_terminal_tail_monitor500/paired_analysis.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_geometry_control_seed0_terminal_tail_monitor500/paired_runtime.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_geometry_control_seed0_terminal_tail_monitor500/paired_same_tail.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_geometry_control_seed1_terminal_tail_monitor500/config.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_geometry_control_seed1_terminal_tail_monitor500/initialization.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_geometry_control_seed1_terminal_tail_monitor500/paired_analysis.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_geometry_control_seed2_terminal_tail_monitor500/config.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_geometry_control_seed2_terminal_tail_monitor500/initialization.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_geometry_control_seed2_terminal_tail_monitor500/paired_analysis.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_matched_steady_monitor500/config.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_matched_steady_monitor500/initialization.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_pairing_smoke5/config.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_pairing_smoke5/initialization.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_pairing_smoke5/invocations.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_postprocess_stage/decision.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_relation_risk_seed0_terminal_tail_monitor500/config.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_relation_risk_seed0_terminal_tail_monitor500/initialization.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_research_summary/analysis.md
+ D experiments/E30_stable_fast_geometry/runs/20261022_research_summary/environment.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_research_summary/final_audit.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_research_summary/monitor_figures/index.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_research_summary/monitor_figures/layout_01.png
+ D experiments/E30_stable_fast_geometry/runs/20261022_research_summary/monitor_figures/layout_02.png
+ D experiments/E30_stable_fast_geometry/runs/20261022_research_summary/monitor_figures/quality_runtime.png
+ D experiments/E30_stable_fast_geometry/runs/20261022_research_summary/monitor_figures/training_curves.png
+ D experiments/E30_stable_fast_geometry/runs/20261022_research_summary/run_summaries.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_research_summary/seed_summary.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_screen_budget_monitor100/config.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_screen_budget_monitor100/initialization.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_screen_budget_monitor100/paired_analysis.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_screen_native_monitor100/config.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_screen_native_monitor100/initialization.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_screen_native_monitor100/paired_analysis.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_screen_progress_monitor100/config.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_screen_progress_monitor100/initialization.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_screen_progress_monitor100/paired_analysis.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_screen_warm_monitor100/config.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_screen_warm_monitor100/initialization.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_screen_warm_monitor100/paired_analysis.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_tail_counterexample/config.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed0/active.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed0/geometry_control/budget.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed0/geometry_control/config.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed0/geometry_control/frozen.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed0/geometry_control/full_dev.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed0/geometry_control/invocations.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed0/geometry_control/panels.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed0/geometry_control/progress.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed0/geometry_control/results.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed0/progress.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed0/relation_risk/budget.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed0/relation_risk/config.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed0/relation_risk/frozen.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed0/relation_risk/full_dev.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed0/relation_risk/invocations.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed0/relation_risk/panels.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed0/relation_risk/parent_equality.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed0/relation_risk/progress.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed0/relation_risk/results.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed0/results.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed1/active.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed1/geometry_control/budget.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed1/geometry_control/config.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed1/geometry_control/frozen.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed1/geometry_control/full_dev.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed1/geometry_control/invocations.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed1/geometry_control/panels.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed1/geometry_control/progress.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed1/geometry_control/results.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed1/progress.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed1/results.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed2/active.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed2/geometry_control/budget.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed2/geometry_control/config.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed2/geometry_control/frozen.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed2/geometry_control/full_dev.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed2/geometry_control/invocations.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed2/geometry_control/panels.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed2/geometry_control/progress.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed2/geometry_control/results.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed2/progress.json
+ D experiments/E30_stable_fast_geometry/runs/20261022_training_seed2/results.json
+ D experiments/E30_stable_fast_geometry/runs/frozen_candidate.json
+ D experiments/E30_stable_fast_geometry/runs/research_session.json
+ D experiments/E30_stable_fast_geometry/solver.py
+ D experiments/E30_stable_fast_geometry/tail_diagnostic.py
+ D experiments/E30_stable_fast_geometry/train.py
+ D experiments/E31_conic_workspace_reuse/README.md
+ D experiments/E31_conic_workspace_reuse/__init__.py
+ D experiments/E31_conic_workspace_reuse/backend/__init__.py
+ D experiments/E31_conic_workspace_reuse/backend/conic_geometry.py
+ D experiments/E31_conic_workspace_reuse/backend/frozen/__init__.py
+ D experiments/E31_conic_workspace_reuse/backend/frozen/canonical_geometry.py
+ D experiments/E31_conic_workspace_reuse/backend/frozen/feasible.py
+ D experiments/E31_conic_workspace_reuse/backend/frozen/global_refine.py
+ D experiments/E31_conic_workspace_reuse/backend/frozen/packing.py
+ D experiments/E31_conic_workspace_reuse/backend/frozen/postprocess.py
+ D experiments/E31_conic_workspace_reuse/backend/frozen/shape_lp.py
+ D experiments/E31_conic_workspace_reuse/backend/frozen/solver.py
+ D experiments/E31_conic_workspace_reuse/backend/frozen/topology_mip.py
+ D experiments/E31_conic_workspace_reuse/backend/guard.py
+ D experiments/E31_conic_workspace_reuse/backend/observe.py
+ D experiments/E31_conic_workspace_reuse/backend/optimizer.py
+ D experiments/E31_conic_workspace_reuse/backend/reduction.py
+ D experiments/E31_conic_workspace_reuse/backend/rescue.py
+ D experiments/E31_conic_workspace_reuse/backend/robust.py
+ D experiments/E31_conic_workspace_reuse/backend/selection.py
+ D experiments/E31_conic_workspace_reuse/backend/stable.py
+ D experiments/E31_conic_workspace_reuse/canonical.py
+ D experiments/E31_conic_workspace_reuse/canonical_native.py
+ D experiments/E31_conic_workspace_reuse/canonical_py.py
+ D experiments/E31_conic_workspace_reuse/cases.py
+ D experiments/E31_conic_workspace_reuse/certify_polish.py
+ D experiments/E31_conic_workspace_reuse/check.py
+ D experiments/E31_conic_workspace_reuse/fast_geometry.py
+ D experiments/E31_conic_workspace_reuse/features.py
+ D experiments/E31_conic_workspace_reuse/io.py
+ D experiments/E31_conic_workspace_reuse/legal_seed.py
+ D experiments/E31_conic_workspace_reuse/model.py
+ D experiments/E31_conic_workspace_reuse/native_reduce.py
+ D experiments/E31_conic_workspace_reuse/projection.py
+ D experiments/E31_conic_workspace_reuse/provenance.json
+ D experiments/E31_conic_workspace_reuse/requirements-native.txt
+ D experiments/E31_conic_workspace_reuse/resources.py
+ D experiments/E31_conic_workspace_reuse/runs/20261022_real_case_check/config.json
+ D experiments/E31_conic_workspace_reuse/runs/20261022_real_case_check/decision.json
+ D experiments/E31_conic_workspace_reuse/runs/20261022_sdk_probe/results.json
+ D experiments/E31_conic_workspace_reuse/sdk_probe.py
+ D experiments/E31_conic_workspace_reuse/solver.py
+ D experiments/E32_learned_relation_feedback/README.md
+ D experiments/E32_learned_relation_feedback/__init__.py
+ D experiments/E32_learned_relation_feedback/backend/__init__.py
+ D experiments/E32_learned_relation_feedback/backend/conic_geometry.py
+ D experiments/E32_learned_relation_feedback/backend/frozen/__init__.py
+ D experiments/E32_learned_relation_feedback/backend/frozen/canonical_geometry.py
+ D experiments/E32_learned_relation_feedback/backend/frozen/feasible.py
+ D experiments/E32_learned_relation_feedback/backend/frozen/global_refine.py
+ D experiments/E32_learned_relation_feedback/backend/frozen/packing.py
+ D experiments/E32_learned_relation_feedback/backend/frozen/postprocess.py
+ D experiments/E32_learned_relation_feedback/backend/frozen/shape_lp.py
+ D experiments/E32_learned_relation_feedback/backend/frozen/solver.py
+ D experiments/E32_learned_relation_feedback/backend/frozen/topology_mip.py
+ D experiments/E32_learned_relation_feedback/backend/guard.py
+ D experiments/E32_learned_relation_feedback/backend/observe.py
+ D experiments/E32_learned_relation_feedback/backend/optimizer.py
+ D experiments/E32_learned_relation_feedback/backend/reduction.py
+ D experiments/E32_learned_relation_feedback/backend/rescue.py
+ D experiments/E32_learned_relation_feedback/backend/robust.py
+ D experiments/E32_learned_relation_feedback/backend/selection.py
+ D experiments/E32_learned_relation_feedback/backend/stable.py
+ D experiments/E32_learned_relation_feedback/batches.py
+ D experiments/E32_learned_relation_feedback/cache.py
+ D experiments/E32_learned_relation_feedback/canonical.py
+ D experiments/E32_learned_relation_feedback/canonical_native.py
+ D experiments/E32_learned_relation_feedback/canonical_py.py
+ D experiments/E32_learned_relation_feedback/cases.py
+ D experiments/E32_learned_relation_feedback/certify_polish.py
+ D experiments/E32_learned_relation_feedback/check.py
+ D experiments/E32_learned_relation_feedback/data.py
+ D experiments/E32_learned_relation_feedback/diagnostics.py
+ D experiments/E32_learned_relation_feedback/evaluate.py
+ D experiments/E32_learned_relation_feedback/fast_geometry.py
+ D experiments/E32_learned_relation_feedback/features.py
+ D experiments/E32_learned_relation_feedback/io.py
+ D experiments/E32_learned_relation_feedback/legal_seed.py
+ D experiments/E32_learned_relation_feedback/literature.md
+ D experiments/E32_learned_relation_feedback/model.py
+ D experiments/E32_learned_relation_feedback/native_reduce.py
+ D experiments/E32_learned_relation_feedback/pipeline.py
+ D experiments/E32_learned_relation_feedback/policy.py
+ D experiments/E32_learned_relation_feedback/prepare.py
+ D experiments/E32_learned_relation_feedback/projection.py
+ D experiments/E32_learned_relation_feedback/provenance.json
+ D experiments/E32_learned_relation_feedback/relations.py
+ D experiments/E32_learned_relation_feedback/requirements-native.txt
+ D experiments/E32_learned_relation_feedback/resources.py
+ D experiments/E32_learned_relation_feedback/schedule.py
+ D experiments/E32_learned_relation_feedback/solver.py
+ D experiments/E32_learned_relation_feedback/train.py
+ D experiments/E32_learned_relation_feedback/training_check.py
+ D experiments/E33_learned_solver_portfolio/README.md
+ D experiments/E33_learned_solver_portfolio/__init__.py
+ D experiments/E33_learned_solver_portfolio/backend/__init__.py
+ D experiments/E33_learned_solver_portfolio/backend/conic_geometry.py
+ D experiments/E33_learned_solver_portfolio/backend/frozen/__init__.py
+ D experiments/E33_learned_solver_portfolio/backend/frozen/canonical_geometry.py
+ D experiments/E33_learned_solver_portfolio/backend/frozen/feasible.py
+ D experiments/E33_learned_solver_portfolio/backend/frozen/global_refine.py
+ D experiments/E33_learned_solver_portfolio/backend/frozen/packing.py
+ D experiments/E33_learned_solver_portfolio/backend/frozen/postprocess.py
+ D experiments/E33_learned_solver_portfolio/backend/frozen/shape_lp.py
+ D experiments/E33_learned_solver_portfolio/backend/frozen/solver.py
+ D experiments/E33_learned_solver_portfolio/backend/frozen/topology_mip.py
+ D experiments/E33_learned_solver_portfolio/backend/guard.py
+ D experiments/E33_learned_solver_portfolio/backend/observe.py
+ D experiments/E33_learned_solver_portfolio/backend/optimizer.py
+ D experiments/E33_learned_solver_portfolio/backend/reduction.py
+ D experiments/E33_learned_solver_portfolio/backend/rescue.py
+ D experiments/E33_learned_solver_portfolio/backend/robust.py
+ D experiments/E33_learned_solver_portfolio/backend/selection.py
+ D experiments/E33_learned_solver_portfolio/backend/stable.py
+ D experiments/E33_learned_solver_portfolio/batches.py
+ D experiments/E33_learned_solver_portfolio/cache.py
+ D experiments/E33_learned_solver_portfolio/calibrate.py
+ D experiments/E33_learned_solver_portfolio/canonical.py
+ D experiments/E33_learned_solver_portfolio/canonical_native.py
+ D experiments/E33_learned_solver_portfolio/canonical_py.py
+ D experiments/E33_learned_solver_portfolio/cases.py
+ D experiments/E33_learned_solver_portfolio/certify_polish.py
+ D experiments/E33_learned_solver_portfolio/check.py
+ D experiments/E33_learned_solver_portfolio/data.py
+ D experiments/E33_learned_solver_portfolio/evaluate.py
+ D experiments/E33_learned_solver_portfolio/fast_geometry.py
+ D experiments/E33_learned_solver_portfolio/features.py
+ D experiments/E33_learned_solver_portfolio/inference.py
+ D experiments/E33_learned_solver_portfolio/inspect_labels.py
+ D experiments/E33_learned_solver_portfolio/io.py
+ D experiments/E33_learned_solver_portfolio/legal_seed.py
+ D experiments/E33_learned_solver_portfolio/model.py
+ D experiments/E33_learned_solver_portfolio/native_reduce.py
+ D experiments/E33_learned_solver_portfolio/pipeline.py
+ D experiments/E33_learned_solver_portfolio/policy.py
+ D experiments/E33_learned_solver_portfolio/prepare.py
+ D experiments/E33_learned_solver_portfolio/projection.py
+ D experiments/E33_learned_solver_portfolio/provenance.json
+ D experiments/E33_learned_solver_portfolio/relations.py
+ D experiments/E33_learned_solver_portfolio/requirements-native.txt
+ D experiments/E33_learned_solver_portfolio/resources.py
+ D experiments/E33_learned_solver_portfolio/routing.py
+ D experiments/E33_learned_solver_portfolio/runs/pause_20261022.json
+ D experiments/E33_learned_solver_portfolio/schedule.py
+ D experiments/E33_learned_solver_portfolio/solver.py
+ D experiments/E33_learned_solver_portfolio/train.py
+ D experiments/E34_sparse_contact_feedback/README.md
+ D experiments/E34_sparse_contact_feedback/__init__.py
+ D experiments/E34_sparse_contact_feedback/backend/__init__.py
+ D experiments/E34_sparse_contact_feedback/backend/conic_geometry.py
+ D experiments/E34_sparse_contact_feedback/backend/frozen/__init__.py
+ D experiments/E34_sparse_contact_feedback/backend/frozen/canonical_geometry.py
+ D experiments/E34_sparse_contact_feedback/backend/frozen/feasible.py
+ D experiments/E34_sparse_contact_feedback/backend/frozen/global_refine.py
+ D experiments/E34_sparse_contact_feedback/backend/frozen/packing.py
+ D experiments/E34_sparse_contact_feedback/backend/frozen/postprocess.py
+ D experiments/E34_sparse_contact_feedback/backend/frozen/shape_lp.py
+ D experiments/E34_sparse_contact_feedback/backend/frozen/solver.py
+ D experiments/E34_sparse_contact_feedback/backend/frozen/topology_mip.py
+ D experiments/E34_sparse_contact_feedback/backend/guard.py
+ D experiments/E34_sparse_contact_feedback/backend/observe.py
+ D experiments/E34_sparse_contact_feedback/backend/optimizer.py
+ D experiments/E34_sparse_contact_feedback/backend/reduction.py
+ D experiments/E34_sparse_contact_feedback/backend/rescue.py
+ D experiments/E34_sparse_contact_feedback/backend/robust.py
+ D experiments/E34_sparse_contact_feedback/backend/selection.py
+ D experiments/E34_sparse_contact_feedback/backend/stable.py
+ D experiments/E34_sparse_contact_feedback/batches.py
+ D experiments/E34_sparse_contact_feedback/cache.py
+ D experiments/E34_sparse_contact_feedback/canonical.py
+ D experiments/E34_sparse_contact_feedback/canonical_native.py
+ D experiments/E34_sparse_contact_feedback/canonical_py.py
+ D experiments/E34_sparse_contact_feedback/cases.py
+ D experiments/E34_sparse_contact_feedback/certify_polish.py
+ D experiments/E34_sparse_contact_feedback/check.py
+ D experiments/E34_sparse_contact_feedback/data.py
+ D experiments/E34_sparse_contact_feedback/evaluate.py
+ D experiments/E34_sparse_contact_feedback/fast_geometry.py
+ D experiments/E34_sparse_contact_feedback/features.py
+ D experiments/E34_sparse_contact_feedback/io.py
+ D experiments/E34_sparse_contact_feedback/legal_seed.py
+ D experiments/E34_sparse_contact_feedback/model.py
+ D experiments/E34_sparse_contact_feedback/native_reduce.py
+ D experiments/E34_sparse_contact_feedback/policy.py
+ D experiments/E34_sparse_contact_feedback/projection.py
+ D experiments/E34_sparse_contact_feedback/provenance.json
+ D experiments/E34_sparse_contact_feedback/relations.py
+ D experiments/E34_sparse_contact_feedback/requirements-native.txt
+ D experiments/E34_sparse_contact_feedback/resources.py
+ D experiments/E34_sparse_contact_feedback/solver.py
+ D experiments/E34_sparse_contact_feedback/sparse.py
+ D experiments/E35_optimizer_attribution/README.md
+ D experiments/E35_optimizer_attribution/__init__.py
+ D experiments/E35_optimizer_attribution/analyze.py
+ D experiments/E35_optimizer_attribution/backend/__init__.py
+ D experiments/E35_optimizer_attribution/backend/conic_geometry.py
+ D experiments/E35_optimizer_attribution/backend/frozen/__init__.py
+ D experiments/E35_optimizer_attribution/backend/frozen/canonical_geometry.py
+ D experiments/E35_optimizer_attribution/backend/frozen/feasible.py
+ D experiments/E35_optimizer_attribution/backend/frozen/global_refine.py
+ D experiments/E35_optimizer_attribution/backend/frozen/packing.py
+ D experiments/E35_optimizer_attribution/backend/frozen/postprocess.py
+ D experiments/E35_optimizer_attribution/backend/frozen/shape_lp.py
+ D experiments/E35_optimizer_attribution/backend/frozen/solver.py
+ D experiments/E35_optimizer_attribution/backend/frozen/topology_mip.py
+ D experiments/E35_optimizer_attribution/backend/guard.py
+ D experiments/E35_optimizer_attribution/backend/observe.py
+ D experiments/E35_optimizer_attribution/backend/optimizer.py
+ D experiments/E35_optimizer_attribution/backend/reduction.py
+ D experiments/E35_optimizer_attribution/backend/rescue.py
+ D experiments/E35_optimizer_attribution/backend/robust.py
+ D experiments/E35_optimizer_attribution/backend/selection.py
+ D experiments/E35_optimizer_attribution/backend/stable.py
+ D experiments/E35_optimizer_attribution/canonical.py
+ D experiments/E35_optimizer_attribution/canonical_native.py
+ D experiments/E35_optimizer_attribution/canonical_py.py
+ D experiments/E35_optimizer_attribution/cases.py
+ D experiments/E35_optimizer_attribution/certify_polish.py
+ D experiments/E35_optimizer_attribution/fast_geometry.py
+ D experiments/E35_optimizer_attribution/features.py
+ D experiments/E35_optimizer_attribution/historical.py
+ D experiments/E35_optimizer_attribution/io.py
+ D experiments/E35_optimizer_attribution/legal_seed.py
+ D experiments/E35_optimizer_attribution/model.py
+ D experiments/E35_optimizer_attribution/projection.py
+ D experiments/E35_optimizer_attribution/provenance.json
+ D experiments/E35_optimizer_attribution/reference_fast_geometry.py
+ D experiments/E35_optimizer_attribution/reference_polish.py
+ D experiments/E35_optimizer_attribution/reference_projection.py
+ D experiments/E35_optimizer_attribution/reference_solver.py
+ D experiments/E35_optimizer_attribution/requirements-native.txt
+ D experiments/E35_optimizer_attribution/resources.py
+ D experiments/E35_optimizer_attribution/run.py
+ D experiments/E35_optimizer_attribution/runs/20261022_attribution100/config.json
+ D experiments/E35_optimizer_attribution/runs/20261022_attribution100/initialization.json
+ D experiments/E35_optimizer_attribution/runs/20261022_attribution100/progress.json
+ D experiments/E35_optimizer_attribution/runs/20261022_attribution100/summary.json
+ D experiments/E35_optimizer_attribution/runs/20261022_attribution_report/analysis.md
+ D experiments/E35_optimizer_attribution/runs/20261022_attribution_report/boundary_counterexample.png
+ D experiments/E35_optimizer_attribution/runs/20261022_attribution_report/conclusions.md
+ D experiments/E35_optimizer_attribution/runs/20261022_attribution_report/inspect_mechanisms.py
+ D experiments/E35_optimizer_attribution/runs/20261022_attribution_report/inventory.json
+ D experiments/E35_optimizer_attribution/runs/20261022_attribution_report/inventory.py
+ D experiments/E35_optimizer_attribution/runs/20261022_attribution_report/mechanisms.json
+ D experiments/E35_optimizer_attribution/runs/20261022_attribution_report/mechanisms.md
+ D experiments/E35_optimizer_attribution/runs/20261022_attribution_report/projection_local_counterexample.png
+ D experiments/E35_optimizer_attribution/runs/20261022_attribution_report/removal_effects.png
+ D experiments/E35_optimizer_attribution/runs/20261022_attribution_report/rescue_tail_counterexample.png
+ D experiments/E35_optimizer_attribution/runs/20261022_attribution_report/summary.json
+ D experiments/E35_optimizer_attribution/runs/20261022_check5/config.json
+ D experiments/E35_optimizer_attribution/runs/20261022_check5/initialization.json
+ D experiments/E35_optimizer_attribution/runs/20261022_check5/progress.json
+ D experiments/E35_optimizer_attribution/runs/20261022_check5/summary.json
+ D experiments/E35_optimizer_attribution/runs/20261022_historical500/analysis.md
+ D experiments/E35_optimizer_attribution/runs/20261022_historical500/summary.json
+ D experiments/E35_optimizer_attribution/runs/20261022_trajectory_features/analysis.md
+ D experiments/E35_optimizer_attribution/runs/20261022_trajectory_features/case_127.png
+ D experiments/E35_optimizer_attribution/runs/20261022_trajectory_features/case_329.png
+ D experiments/E35_optimizer_attribution/runs/20261022_trajectory_features/case_496.png
+ D experiments/E35_optimizer_attribution/runs/20261022_trajectory_features/conflict_diagnostics.png
+ D experiments/E35_optimizer_attribution/runs/20261022_trajectory_features/design.md
+ D experiments/E35_optimizer_attribution/runs/20261022_trajectory_features/summary.json
+ D experiments/E35_optimizer_attribution/runs/20261022_trajectory_features/trajectory_diagnostics.png
+ D experiments/E35_optimizer_attribution/solver.py
+ D experiments/E35_optimizer_attribution/trace.py
+ D experiments/E35_optimizer_attribution/trajectory_features.py
+ D experiments/E36_persistent_conflict_repair/README.md
+ D experiments/E36_persistent_conflict_repair/__init__.py
+ D experiments/E36_persistent_conflict_repair/backend/__init__.py
+ D experiments/E36_persistent_conflict_repair/backend/conic_geometry.py
+ D experiments/E36_persistent_conflict_repair/backend/frozen/__init__.py
+ D experiments/E36_persistent_conflict_repair/backend/frozen/canonical_geometry.py
+ D experiments/E36_persistent_conflict_repair/backend/frozen/feasible.py
+ D experiments/E36_persistent_conflict_repair/backend/frozen/global_refine.py
+ D experiments/E36_persistent_conflict_repair/backend/frozen/packing.py
+ D experiments/E36_persistent_conflict_repair/backend/frozen/postprocess.py
+ D experiments/E36_persistent_conflict_repair/backend/frozen/shape_lp.py
+ D experiments/E36_persistent_conflict_repair/backend/frozen/solver.py
+ D experiments/E36_persistent_conflict_repair/backend/frozen/topology_mip.py
+ D experiments/E36_persistent_conflict_repair/backend/guard.py
+ D experiments/E36_persistent_conflict_repair/backend/observe.py
+ D experiments/E36_persistent_conflict_repair/backend/optimizer.py
+ D experiments/E36_persistent_conflict_repair/backend/reduction.py
+ D experiments/E36_persistent_conflict_repair/backend/rescue.py
+ D experiments/E36_persistent_conflict_repair/backend/robust.py
+ D experiments/E36_persistent_conflict_repair/backend/selection.py
+ D experiments/E36_persistent_conflict_repair/backend/stable.py
+ D experiments/E36_persistent_conflict_repair/canonical.py
+ D experiments/E36_persistent_conflict_repair/canonical_native.py
+ D experiments/E36_persistent_conflict_repair/canonical_py.py
+ D experiments/E36_persistent_conflict_repair/cases.py
+ D experiments/E36_persistent_conflict_repair/certify_polish.py
+ D experiments/E36_persistent_conflict_repair/conflicts.py
+ D experiments/E36_persistent_conflict_repair/fast_geometry.py
+ D experiments/E36_persistent_conflict_repair/features.py
+ D experiments/E36_persistent_conflict_repair/io.py
+ D experiments/E36_persistent_conflict_repair/legal_seed.py
+ D experiments/E36_persistent_conflict_repair/model.py
+ D experiments/E36_persistent_conflict_repair/projection.py
+ D experiments/E36_persistent_conflict_repair/provenance.json
+ D experiments/E36_persistent_conflict_repair/reference_fast_geometry.py
+ D experiments/E36_persistent_conflict_repair/reference_polish.py
+ D experiments/E36_persistent_conflict_repair/reference_projection.py
+ D experiments/E36_persistent_conflict_repair/reference_solver.py
+ D experiments/E36_persistent_conflict_repair/requirements-native.txt
+ D experiments/E36_persistent_conflict_repair/resources.py
+ D experiments/E36_persistent_conflict_repair/run.py
+ D experiments/E36_persistent_conflict_repair/run_confirmation.py
+ D experiments/E36_persistent_conflict_repair/run_stage2.py
+ D experiments/E36_persistent_conflict_repair/runs/20261022_conclusions.md
+ D experiments/E36_persistent_conflict_repair/runs/20261022_confirmation500/config.json
+ D experiments/E36_persistent_conflict_repair/runs/20261022_confirmation500/progress.json
+ D experiments/E36_persistent_conflict_repair/runs/20261022_confirmation500/summary.json
+ D experiments/E36_persistent_conflict_repair/runs/20261022_confirmation_design.md
+ D experiments/E36_persistent_conflict_repair/runs/20261022_confirmation_report/analysis.md
+ D experiments/E36_persistent_conflict_repair/runs/20261022_confirmation_report/case_174_success.png
+ D experiments/E36_persistent_conflict_repair/runs/20261022_confirmation_report/case_179_regression.png
+ D experiments/E36_persistent_conflict_repair/runs/20261022_confirmation_report/case_237_regression.png
+ D experiments/E36_persistent_conflict_repair/runs/20261022_confirmation_report/effects.png
+ D experiments/E36_persistent_conflict_repair/runs/20261022_confirmation_report/examples.json
+ D experiments/E36_persistent_conflict_repair/runs/20261022_confirmation_report/inspect_examples.py
+ D experiments/E36_persistent_conflict_repair/runs/20261022_confirmation_report/progress_and_regressions.png
+ D experiments/E36_persistent_conflict_repair/runs/20261022_confirmation_report/summary.json
+ D experiments/E36_persistent_conflict_repair/runs/20261022_gate5/config.json
+ D experiments/E36_persistent_conflict_repair/runs/20261022_gate5/initialization.json
+ D experiments/E36_persistent_conflict_repair/runs/20261022_gate5/progress.json
+ D experiments/E36_persistent_conflict_repair/runs/20261022_gate5/summary.json
+ D experiments/E36_persistent_conflict_repair/runs/20261022_paired100/config.json
+ D experiments/E36_persistent_conflict_repair/runs/20261022_paired100/initialization.json
+ D experiments/E36_persistent_conflict_repair/runs/20261022_paired100/progress.json
+ D experiments/E36_persistent_conflict_repair/runs/20261022_paired100/summary.json
+ D experiments/E36_persistent_conflict_repair/runs/20261022_report/analysis.md
+ D experiments/E36_persistent_conflict_repair/runs/20261022_report/analyze.py
+ D experiments/E36_persistent_conflict_repair/runs/20261022_report/paired_effects.png
+ D experiments/E36_persistent_conflict_repair/runs/20261022_report/summary.json
+ D experiments/E36_persistent_conflict_repair/runs/20261022_stage2_design.md
+ D experiments/E36_persistent_conflict_repair/runs/20261022_stage2_gate5/config.json
+ D experiments/E36_persistent_conflict_repair/runs/20261022_stage2_gate5/progress.json
+ D experiments/E36_persistent_conflict_repair/runs/20261022_stage2_gate5/summary.json
+ D experiments/E36_persistent_conflict_repair/runs/20261022_stage2_paired100/config.json
+ D experiments/E36_persistent_conflict_repair/runs/20261022_stage2_paired100/progress.json
+ D experiments/E36_persistent_conflict_repair/runs/20261022_stage2_paired100/summary.json
+ D experiments/E36_persistent_conflict_repair/runs/20261022_stage2_report/analysis.md
+ D experiments/E36_persistent_conflict_repair/runs/20261022_stage2_report/analyze.py
+ D experiments/E36_persistent_conflict_repair/runs/20261022_stage2_report/effects.png
+ D experiments/E36_persistent_conflict_repair/runs/20261022_stage2_report/summary.json
+ D experiments/E36_persistent_conflict_repair/runs/budget.json
+ D experiments/E36_persistent_conflict_repair/runs/frozen_pivot_v1.json
+ D experiments/E36_persistent_conflict_repair/solver.py
+ D experiments/E36_persistent_conflict_repair/trace.py
+ D experiments/E37_radial_draft_expansion/README.md
+ D experiments/E37_radial_draft_expansion/__init__.py
+ D experiments/E37_radial_draft_expansion/backend/__init__.py
+ D experiments/E37_radial_draft_expansion/backend/conic_geometry.py
+ D experiments/E37_radial_draft_expansion/backend/frozen/__init__.py
+ D experiments/E37_radial_draft_expansion/backend/frozen/canonical_geometry.py
+ D experiments/E37_radial_draft_expansion/backend/frozen/feasible.py
+ D experiments/E37_radial_draft_expansion/backend/frozen/global_refine.py
+ D experiments/E37_radial_draft_expansion/backend/frozen/packing.py
+ D experiments/E37_radial_draft_expansion/backend/frozen/postprocess.py
+ D experiments/E37_radial_draft_expansion/backend/frozen/shape_lp.py
+ D experiments/E37_radial_draft_expansion/backend/frozen/solver.py
+ D experiments/E37_radial_draft_expansion/backend/frozen/topology_mip.py
+ D experiments/E37_radial_draft_expansion/backend/guard.py
+ D experiments/E37_radial_draft_expansion/backend/observe.py
+ D experiments/E37_radial_draft_expansion/backend/optimizer.py
+ D experiments/E37_radial_draft_expansion/backend/reduction.py
+ D experiments/E37_radial_draft_expansion/backend/rescue.py
+ D experiments/E37_radial_draft_expansion/backend/robust.py
+ D experiments/E37_radial_draft_expansion/backend/selection.py
+ D experiments/E37_radial_draft_expansion/backend/stable.py
+ D experiments/E37_radial_draft_expansion/canonical.py
+ D experiments/E37_radial_draft_expansion/canonical_native.py
+ D experiments/E37_radial_draft_expansion/canonical_py.py
+ D experiments/E37_radial_draft_expansion/cases.py
+ D experiments/E37_radial_draft_expansion/diagnostics.py
+ D experiments/E37_radial_draft_expansion/expansion.py
+ D experiments/E37_radial_draft_expansion/features.py
+ D experiments/E37_radial_draft_expansion/io.py
+ D experiments/E37_radial_draft_expansion/legal_seed.py
+ D experiments/E37_radial_draft_expansion/model.py
+ D experiments/E37_radial_draft_expansion/provenance.json
+ D experiments/E37_radial_draft_expansion/reference_fast_geometry.py
+ D experiments/E37_radial_draft_expansion/reference_polish.py
+ D experiments/E37_radial_draft_expansion/reference_projection.py
+ D experiments/E37_radial_draft_expansion/reference_solver.py
+ D experiments/E37_radial_draft_expansion/requirements-native.txt
+ D experiments/E37_radial_draft_expansion/resources.py
+ D experiments/E37_radial_draft_expansion/run.py
+ D experiments/E37_radial_draft_expansion/runs/20261022_gate5/config.json
+ D experiments/E37_radial_draft_expansion/runs/20261022_gate5/progress.json
+ D experiments/E37_radial_draft_expansion/runs/20261022_gate5/summary.json
+ D experiments/E37_radial_draft_expansion/runs/20261022_paired100/config.json
+ D experiments/E37_radial_draft_expansion/runs/20261022_paired100/progress.json
+ D experiments/E37_radial_draft_expansion/runs/20261022_paired100/summary.json
+ D experiments/E37_radial_draft_expansion/runs/20261022_report/analysis.md
+ D experiments/E37_radial_draft_expansion/runs/20261022_report/analyze.py
+ D experiments/E37_radial_draft_expansion/runs/20261022_report/case_139_radial5_literal_regression.png
+ D experiments/E37_radial_draft_expansion/runs/20261022_report/case_261_radial5_rebase_restore_regression.png
+ D experiments/E37_radial_draft_expansion/runs/20261022_report/case_329_radial5_restore_regression.png
+ D experiments/E37_radial_draft_expansion/runs/20261022_report/case_496_radial5_rebase_restore_improvement.png
+ D experiments/E37_radial_draft_expansion/runs/20261022_report/effects.png
+ D experiments/E37_radial_draft_expansion/runs/20261022_report/examples.json
+ D experiments/E37_radial_draft_expansion/runs/20261022_report/inspect_examples.py
+ D experiments/E37_radial_draft_expansion/runs/20261022_report/summary.json
+ D experiments/E37_radial_draft_expansion/runs/budget.json
+ D experiments/E37_radial_draft_expansion/runs/selection.json
+ D experiments/E37_radial_draft_expansion/solver.py
+ M experiments/E78_connectivity_posttrain/study.json
+ M experiments/E79_center_refinement/README.md
+ M experiments/E81_multisource_refinement/README.md
+ M experiments/E82_global_pressure_refinement/README.md
+ M experiments/README.md
+ D experiments/baseline/README.md
+ D experiments/baseline/__init__.py
+ D experiments/baseline/audit.py
+ D experiments/baseline/design.md
+ D experiments/baseline/diagnostics.md
+ D experiments/baseline/optimizer.py
+ D experiments/baseline/packing.py
+ D experiments/baseline/plot.py
+ D experiments/baseline/run.py
+ D experiments/baseline/run_official.py
+ D experiments/baseline/runs/five_case_final/audit.json
+ D experiments/baseline/runs/full100_clean_cu128_seed0/requirements-freeze.txt
+ D experiments/baseline/runs/full100_clean_cu128_seed0/run/environment.json
+ D experiments/baseline/runs/full100_clean_cu128_seed0/run/execution.json
+ D experiments/baseline/runs/full100_clean_cu128_seed0/run/results.json
+ D experiments/baseline/runs/full100_clean_cu128_seed0/run/run.log
+ D experiments/baseline/runs/full100_clean_cu128_seed0/status.json
+ D experiments/baseline/runs/stage1_dev_run1/config.json
+ D experiments/baseline/runs/stage1_dev_run1/layout_comparison.png
+ D experiments/baseline/runs/stage1_dev_run1/quality_comparison.png
+ D experiments/baseline/runs/stage1_dev_run1/results.json
+ D experiments/baseline/runs/stage1_dev_run1/run.log
+ D experiments/baseline/runs/stage1_dev_run1/source_snapshot.zip
+ D experiments/baseline/runs/template_version_check/content_hashes.json
+ D experiments/baseline/runs/template_version_check/history_findings.json
+ D experiments/baseline/runs/template_version_check/origin_and_data.json
+ D experiments/baseline/version_check.md
+ M references/README.md
+ M references/papers/README.md
+ M visualization/README.md
+ M visualization/layouts.py
+?? datasets/expanded_reference/
+?? experiments/E42_joint_regularization/
+?? experiments/E50_anytime_quality/
+?? experiments/E69_case_loss_statistics/
+?? experiments/E71_density_reference_curriculum/
+?? experiments/E72_topology_posttrain/runs/20261029_e42_topology_seed0/budget.json
+?? experiments/E72_topology_posttrain/runs/20261029_e42_topology_seed0/config.json
+?? experiments/E72_topology_posttrain/runs/20261029_e42_topology_seed0/invocations.json
+?? experiments/E72_topology_posttrain/runs/20261029_e42_topology_seed0/panels.json
+?? experiments/E72_topology_posttrain/runs/20261029_e42_topology_seed0/progress.json
+?? experiments/E72_topology_posttrain/runs/20261029_e42_topology_seed0/results.json
+?? experiments/E72_topology_posttrain/runs/diagnosis/
+?? experiments/E72_topology_posttrain/runs/preflight/
+?? experiments/E72_topology_posttrain/runs/train.log
+?? experiments/E72_topology_posttrain/state.json
+?? experiments/E73_wide_robust_posttrain/runs/20261029_e42_topology_seed0/budget.json
+?? experiments/E73_wide_robust_posttrain/runs/20261029_e42_topology_seed0/config.json
+?? experiments/E73_wide_robust_posttrain/runs/20261029_e42_topology_seed0/draft_comparison100/
+?? experiments/E73_wide_robust_posttrain/runs/20261029_e42_topology_seed0/frozen.json
+?? experiments/E73_wide_robust_posttrain/runs/20261029_e42_topology_seed0/full_dev.json
+?? experiments/E73_wide_robust_posttrain/runs/20261029_e42_topology_seed0/invocations.json
+?? experiments/E73_wide_robust_posttrain/runs/20261029_e42_topology_seed0/panels.json
+?? experiments/E73_wide_robust_posttrain/runs/20261029_e42_topology_seed0/progress.json
+?? experiments/E73_wide_robust_posttrain/runs/20261029_e42_topology_seed0/terminal/config.json
+?? experiments/E73_wide_robust_posttrain/runs/draft100.log
+?? experiments/E73_wide_robust_posttrain/runs/final.log
+?? experiments/E73_wide_robust_posttrain/runs/geometry500.json
+?? experiments/E73_wide_robust_posttrain/runs/preflight/resumed/
+?? experiments/E73_wide_robust_posttrain/runs/preflight/uninterrupted/
+?? experiments/E73_wide_robust_posttrain/runs/preflight_v1/
+?? experiments/E73_wide_robust_posttrain/runs/report.log
+?? experiments/E73_wide_robust_posttrain/runs/train.log
+?? experiments/E73_wide_robust_posttrain/state.json
+?? experiments/E74_collision_32k_posttrain/runs/20261029_e42_topology_seed0/budget.json
+?? experiments/E74_collision_32k_posttrain/runs/20261029_e42_topology_seed0/config.json
+?? experiments/E74_collision_32k_posttrain/runs/20261029_e42_topology_seed0/draft_comparison100/
+?? experiments/E74_collision_32k_posttrain/runs/20261029_e42_topology_seed0/frozen.json
+?? experiments/E74_collision_32k_posttrain/runs/20261029_e42_topology_seed0/full_dev.json
+?? experiments/E74_collision_32k_posttrain/runs/20261029_e42_topology_seed0/invocations.json
+?? experiments/E74_collision_32k_posttrain/runs/20261029_e42_topology_seed0/panels.json
+?? experiments/E74_collision_32k_posttrain/runs/20261029_e42_topology_seed0/progress.json
+?? experiments/E74_collision_32k_posttrain/runs/20261029_e42_topology_seed0/terminal/config.json
+?? experiments/E74_collision_32k_posttrain/runs/draft100.log
+?? experiments/E74_collision_32k_posttrain/runs/final.log
+?? experiments/E74_collision_32k_posttrain/runs/geometry500.json
+?? experiments/E74_collision_32k_posttrain/runs/preflight/resumed/
+?? experiments/E74_collision_32k_posttrain/runs/preflight/uninterrupted/
+?? experiments/E74_collision_32k_posttrain/runs/report.log
+?? experiments/E74_collision_32k_posttrain/runs/train.log
+?? experiments/E74_collision_32k_posttrain/state.json
+?? experiments/E75_collision_box_finetune/runs/20261029_e74_collision_box_seed0/budget.json
+?? experiments/E75_collision_box_finetune/runs/20261029_e74_collision_box_seed0/config.json
+?? experiments/E75_collision_box_finetune/runs/20261029_e74_collision_box_seed0/invocations.json
+?? experiments/E75_collision_box_finetune/runs/20261029_e74_collision_box_seed0/panels.json
+?? experiments/E75_collision_box_finetune/runs/20261029_e74_collision_box_seed0/progress.json
+?? experiments/E75_collision_box_finetune/runs/STOP
+?? experiments/E75_collision_box_finetune/runs/linear_box_preflight/resumed/
+?? experiments/E75_collision_box_finetune/runs/linear_box_preflight/uninterrupted/
+?? experiments/E75_collision_box_finetune/runs/preflight/resumed/
+?? experiments/E75_collision_box_finetune/runs/preflight/uninterrupted/
+?? experiments/E75_collision_box_finetune/runs/train.log
+?? experiments/E75_collision_box_finetune/state.json
+?? experiments/E76_bounded_refinement/runs/20261029_frozen_e74_corrector_seed0/
+?? experiments/E76_bounded_refinement/runs/draft100.log
+?? experiments/E76_bounded_refinement/runs/final.log
+?? experiments/E76_bounded_refinement/runs/geometry500.json
+?? experiments/E76_bounded_refinement/runs/preflight/resumed/
+?? experiments/E76_bounded_refinement/runs/preflight/uninterrupted/
+?? experiments/E76_bounded_refinement/runs/preflight_v1/
+?? experiments/E76_bounded_refinement/runs/report.log
+?? experiments/E76_bounded_refinement/runs/review.json
+?? experiments/E76_bounded_refinement/runs/review.md
+?? experiments/E76_bounded_refinement/runs/train.log
+?? experiments/E76_bounded_refinement/state.json
+?? experiments/E77_compact_refinement/runs/20261029_e76_compact_corrector_seed0/budget.json
+?? experiments/E77_compact_refinement/runs/20261029_e76_compact_corrector_seed0/config.json
+?? experiments/E77_compact_refinement/runs/20261029_e76_compact_corrector_seed0/draft_comparison100/
+?? experiments/E77_compact_refinement/runs/20261029_e76_compact_corrector_seed0/frozen.json
+?? experiments/E77_compact_refinement/runs/20261029_e76_compact_corrector_seed0/full_dev.json
+?? experiments/E77_compact_refinement/runs/20261029_e76_compact_corrector_seed0/invocations.json
+?? experiments/E77_compact_refinement/runs/20261029_e76_compact_corrector_seed0/panels.json
+?? experiments/E77_compact_refinement/runs/20261029_e76_compact_corrector_seed0/progress.json
+?? experiments/E77_compact_refinement/runs/20261029_e76_compact_corrector_seed0/terminal/config.json
+?? experiments/E77_compact_refinement/runs/controller_resume_20261029_020830.stderr.log
+?? experiments/E77_compact_refinement/runs/controller_resume_20261029_020830.stdout.log
+?? experiments/E77_compact_refinement/runs/controller_stderr.log
+?? experiments/E77_compact_refinement/runs/controller_stdout.log
+?? experiments/E77_compact_refinement/runs/draft100.log
+?? experiments/E77_compact_refinement/runs/final.log
+?? experiments/E77_compact_refinement/runs/geometry500.json
+?? experiments/E77_compact_refinement/runs/preflight/resumed/
+?? experiments/E77_compact_refinement/runs/preflight/uninterrupted/
+?? experiments/E77_compact_refinement/runs/preflight_v1/
+?? experiments/E77_compact_refinement/runs/train.log
+?? experiments/E78_connectivity_posttrain/runs/20261029_e77_connectivity_seed0/
+?? experiments/E78_connectivity_posttrain/runs/completion/order_certificates.json
+?? experiments/E78_connectivity_posttrain/runs/completion/saved_pair_analysis.json
+?? experiments/E78_connectivity_posttrain/runs/controller_20261029_054715.stderr.log
+?? experiments/E78_connectivity_posttrain/runs/controller_20261029_054715.stdout.log
+?? experiments/E78_connectivity_posttrain/runs/diagnosis/order_certificates.json
+?? experiments/E78_connectivity_posttrain/runs/diagnosis/saved_pair_analysis.json
+?? experiments/E78_connectivity_posttrain/runs/draft100.log
+?? experiments/E78_connectivity_posttrain/runs/final.log
+?? experiments/E78_connectivity_posttrain/runs/geometry500.json
+?? experiments/E78_connectivity_posttrain/runs/preflight/resumed/
+?? experiments/E78_connectivity_posttrain/runs/preflight/uninterrupted/
+?? experiments/E78_connectivity_posttrain/runs/record_controller.py
+?? experiments/E78_connectivity_posttrain/runs/report.log
+?? experiments/E78_connectivity_posttrain/runs/review.json
+?? experiments/E78_connectivity_posttrain/runs/review.md
+?? experiments/E78_connectivity_posttrain/runs/train.log
+?? experiments/E78_connectivity_posttrain/state.json
+?? experiments/E79_center_refinement/runs/20261029_e78_center_seed0/
+?? experiments/E79_center_refinement/runs/completion/
+?? experiments/E79_center_refinement/runs/controller_20261029_065525.stderr.log
+?? experiments/E79_center_refinement/runs/controller_20261029_065525.stdout.log
+?? experiments/E79_center_refinement/runs/draft100.log
+?? experiments/E79_center_refinement/runs/final.log
+?? experiments/E79_center_refinement/runs/geometry500.json
+?? experiments/E79_center_refinement/runs/preflight/resumed/
+?? experiments/E79_center_refinement/runs/preflight/uninterrupted/
+?? experiments/E79_center_refinement/runs/record_controller.py
+?? experiments/E79_center_refinement/runs/report.log
+?? experiments/E79_center_refinement/runs/review.json
+?? experiments/E79_center_refinement/runs/review.md
+?? experiments/E79_center_refinement/runs/train.log
+?? experiments/E79_center_refinement/state.json
+?? experiments/E80_modular_transfer/
+?? experiments/E81_multisource_refinement/runs/20261029_e42_multisource_seed0/
+?? experiments/E81_multisource_refinement/runs/20261029_placer_corrector_audit/
+?? experiments/E81_multisource_refinement/runs/STOP
+?? experiments/E81_multisource_refinement/runs/analyze_five_questions.py
+?? experiments/E81_multisource_refinement/runs/controller_20261029_102748.stderr.log
+?? experiments/E81_multisource_refinement/runs/controller_20261029_102748.stdout.log
+?? experiments/E81_multisource_refinement/runs/controller_20261029_103005.stderr.log
+?? experiments/E81_multisource_refinement/runs/controller_20261029_103005.stdout.log
+?? experiments/E81_multisource_refinement/runs/controller_20261029_103254.stderr.log
+?? experiments/E81_multisource_refinement/runs/controller_20261029_103254.stdout.log
+?? experiments/E81_multisource_refinement/runs/controller_attempt_20261029_102748.json
+?? experiments/E81_multisource_refinement/runs/controller_attempt_20261029_103005.json
+?? experiments/E81_multisource_refinement/runs/controller_launch.json
+?? experiments/E81_multisource_refinement/runs/draft100.log
+?? experiments/E81_multisource_refinement/runs/final.log
+?? experiments/E81_multisource_refinement/runs/finish_paused_audit.py
+?? experiments/E81_multisource_refinement/runs/followup_prompt.txt
+?? experiments/E81_multisource_refinement/runs/loss_curves.png
+?? experiments/E81_multisource_refinement/runs/placer_corrector_audit.py
+?? experiments/E81_multisource_refinement/runs/preflight/results_before_entrypoint_fix.json
+?? experiments/E81_multisource_refinement/runs/preflight/resumed/
+?? experiments/E81_multisource_refinement/runs/preflight/resumed_v2/
+?? experiments/E81_multisource_refinement/runs/preflight/uninterrupted/
+?? experiments/E81_multisource_refinement/runs/preflight/uninterrupted_v2/
+?? experiments/E81_multisource_refinement/runs/prepare_paused_audit.py
+?? experiments/E81_multisource_refinement/runs/render_four_stage_audit.py
+?? experiments/E81_multisource_refinement/runs/report.log
+?? experiments/E81_multisource_refinement/runs/review.json
+?? experiments/E81_multisource_refinement/runs/review.md
+?? experiments/E81_multisource_refinement/runs/route_diagnosis.json
+?? experiments/E81_multisource_refinement/runs/route_diagnosis.log
+?? experiments/E81_multisource_refinement/runs/runtime_identity_check.json
+?? experiments/E81_multisource_refinement/runs/startup_attempts.json
+?? experiments/E81_multisource_refinement/runs/train.log
+?? experiments/E81_multisource_refinement/state.json
+?? experiments/E81_multisource_refinement/study.json
+?? experiments/E82_global_pressure_refinement/runs/20261029_e81_pressure_seed0/
+?? experiments/E82_global_pressure_refinement/runs/STOP
+?? experiments/E82_global_pressure_refinement/runs/audit_saved.log
+?? experiments/E82_global_pressure_refinement/runs/audit_saved.py
+?? experiments/E82_global_pressure_refinement/runs/check_running_identity.py
+?? experiments/E82_global_pressure_refinement/runs/completion/
+?? experiments/E82_global_pressure_refinement/runs/controller_20261029_120354.stderr.log
+?? experiments/E82_global_pressure_refinement/runs/controller_20261029_120354.stdout.log
+?? experiments/E82_global_pressure_refinement/runs/controller_launch.json
+?? experiments/E82_global_pressure_refinement/runs/draft100.log
+?? experiments/E82_global_pressure_refinement/runs/final.log
+?? experiments/E82_global_pressure_refinement/runs/finalize_audit.py
+?? experiments/E82_global_pressure_refinement/runs/followup_delta.txt
+?? experiments/E82_global_pressure_refinement/runs/loss_curves.png
+?? experiments/E82_global_pressure_refinement/runs/preflight/resumed_v2/
+?? experiments/E82_global_pressure_refinement/runs/preflight/uninterrupted_v2/
+?? experiments/E82_global_pressure_refinement/runs/prepare_audit.py
+?? experiments/E82_global_pressure_refinement/runs/report.log
+?? experiments/E82_global_pressure_refinement/runs/review.json
+?? experiments/E82_global_pressure_refinement/runs/review.md
+?? experiments/E82_global_pressure_refinement/runs/runtime_identity_check.json
+?? experiments/E82_global_pressure_refinement/runs/source_commit_paths.nul
+?? experiments/E82_global_pressure_refinement/runs/train.log
+?? experiments/E82_global_pressure_refinement/state.json
+?? experiments/E83_strategy_attribution/runs/P42_ops_only/
+?? experiments/E83_strategy_attribution/runs/P74_frozen_F81/
+?? experiments/E83_strategy_attribution/runs/analysis.json
+?? experiments/E83_strategy_attribution/runs/audit_saved.json
+?? experiments/E83_strategy_attribution/runs/controller_20261029_152222.stderr.log
+?? experiments/E83_strategy_attribution/runs/controller_20261029_152222.stdout.log
+?? experiments/E83_strategy_attribution/runs/controller_active.json
+?? experiments/E83_strategy_attribution/runs/controller_launch.json
+?? experiments/E83_strategy_attribution/runs/gallery_manifest.json
+?? experiments/E83_strategy_attribution/runs/index.html
+?? experiments/E83_strategy_attribution/runs/inspection.json
+?? experiments/E83_strategy_attribution/runs/preflight.json
+?? experiments/E83_strategy_attribution/runs/preflight.log
+?? experiments/E83_strategy_attribution/runs/preflight_numeric_diagnostic.json
+?? experiments/E83_strategy_attribution/runs/report.md
+?? experiments/E83_strategy_attribution/runs/serialization_recovery.json
+?? experiments/E83_strategy_attribution/runs/startup_attempt.json
+?? experiments/E83_strategy_attribution/state.json
+?? experiments/E84_loss_control/runs/20261029_same_initialization_G_only_seed0/
+?? experiments/E84_loss_control/runs/STOP
+?? experiments/E84_loss_control/runs/audit_saved.log
+?? experiments/E84_loss_control/runs/completion/coverage_decomposition.json
+?? experiments/E84_loss_control/runs/completion/final_integrity.json
+?? experiments/E84_loss_control/runs/completion/inspection.html
+?? experiments/E84_loss_control/runs/completion/inspection.json
+?? experiments/E84_loss_control/runs/completion/source_control.json
+?? experiments/E84_loss_control/runs/completion/strategy_attribution.html
+?? experiments/E84_loss_control/runs/completion/subgroup_Q.json
+?? experiments/E84_loss_control/runs/controller_active.json
+?? experiments/E84_loss_control/runs/draft100.log
+?? experiments/E84_loss_control/runs/final.log
+?? experiments/E84_loss_control/runs/loss_curves.png
+?? experiments/E84_loss_control/runs/preflight.log
+?? experiments/E84_loss_control/runs/preflight/
+?? experiments/E84_loss_control/runs/report.log
+?? experiments/E84_loss_control/runs/review.json
+?? experiments/E84_loss_control/runs/review.md
+?? experiments/E84_loss_control/runs/source_commit_paths.nul
+?? experiments/E84_loss_control/runs/train.log
+?? experiments/E84_loss_control/state.json
+?? experiments/E85_cooperative_space_refinement/
+?? experiments/E86_independent_global_corrector/
+?? experiments/E87_simple_supervised_placer/
+?? experiments/E88_sparse_training/
+?? experiments/E89_spatial_neural_refinement/
+?? experiments/E90_auxiliary_weight_placer/
+?? experiments/E91_e74_32k_scratch/
+?? experiments/E92_two_stage_placer/
+?? experiments/E93_matched_posttrain/
+?? experiments/E94_posttrain_lr_reset/
+?? experiments/E95_single_pass_corrector/
+?? history/20261026_flash_pro_consolidation/
+?? history/20261029_model_research_consolidation/experiments/
+?? history/20261031_two_stage_protocol/
+?? history/20261101_research_consolidation/
+?? output/
+?? protocol/reference_workset_v6.json
+?? references/papers/loss_training_practice_20261026.zh-CN.md
+?? visualization/review.py
+?? visualization/review_web/
+?? visualization/saved_gallery.py

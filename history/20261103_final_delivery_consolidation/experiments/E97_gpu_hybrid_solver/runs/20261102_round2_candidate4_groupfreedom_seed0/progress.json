@@ -1,0 +1,456 @@
+{
+  "epoch": 13,
+  "step": 6500,
+  "cursor": 0,
+  "pending_monitor": false,
+  "best_loss": 0.8012095317840576,
+  "best_epoch": 5,
+  "history": [
+    {
+      "epoch": 0,
+      "step": 0,
+      "train_monitor": {
+        "teacher_center": 0.14581328535079957,
+        "teacher_shape": 0.13338756227493287,
+        "teacher_relative": 0.08180785298347473,
+        "teacher_clearance_tail": 0.4617240562438965,
+        "total": 0.7199409236907959,
+        "public_boundary": 0.010298781514167786,
+        "public_group_contact": 0.0055933941900730135,
+        "public_soft": 0.01589217537641525,
+        "base_total": 0.661336196899414,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.14345429039001464,
+        "teacher_shape": 0.12381130456924438,
+        "teacher_relative": 0.082691978931427,
+        "teacher_clearance_tail": 0.5772610111236572,
+        "total": 0.8419668312072754,
+        "public_boundary": 0.012115523785352706,
+        "public_group_contact": 0.006765272796154022,
+        "public_soft": 0.018880796194076538,
+        "base_total": 0.772341136932373,
+        "count": 500
+      },
+      "lr": 0.00025,
+      "lr_next": 0.00025,
+      "train_monitor_seen_count": 0
+    },
+    {
+      "epoch": 1,
+      "step": 500,
+      "train_monitor": {
+        "teacher_center": 0.1447001085281372,
+        "teacher_shape": 0.13312017154693603,
+        "teacher_relative": 0.07786896395683289,
+        "teacher_clearance_tail": 0.4538270387649536,
+        "total": 0.6766858892440796,
+        "public_boundary": 0.0018038491010665893,
+        "public_group_contact": 0.0050871222615242,
+        "public_soft": 0.006890971392393112,
+        "base_total": 0.6512744274139405,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.14196145915985106,
+        "teacher_shape": 0.12245423412322998,
+        "teacher_relative": 0.07860229468345642,
+        "teacher_clearance_tail": 0.5739153289794922,
+        "total": 0.80292276096344,
+        "public_boundary": 0.003725344702601433,
+        "public_group_contact": 0.006248996764421463,
+        "public_soft": 0.009974341690540314,
+        "base_total": 0.7661408948898315,
+        "count": 500
+      },
+      "lr": 0.00025,
+      "lr_next": 0.00025,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 2,
+      "step": 1000,
+      "train_monitor": {
+        "teacher_center": 0.14503449249267578,
+        "teacher_shape": 0.12873343467712403,
+        "teacher_relative": 0.07705790090560913,
+        "teacher_clearance_tail": 0.4539387230873108,
+        "total": 0.6741911087036133,
+        "public_boundary": 0.0017045329473912717,
+        "public_group_contact": 0.004741333901882172,
+        "public_soft": 0.006445866852998734,
+        "base_total": 0.6504210605621338,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.14210453891754152,
+        "teacher_shape": 0.11817930698394775,
+        "teacher_relative": 0.0779719922542572,
+        "teacher_clearance_tail": 0.5814200177192688,
+        "total": 0.8084319515228271,
+        "public_boundary": 0.0037886724844574927,
+        "public_group_contact": 0.00593828359246254,
+        "public_soft": 0.009726956337690353,
+        "base_total": 0.7725624094009399,
+        "count": 500
+      },
+      "lr": 0.00025,
+      "lr_next": 0.00025,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 3,
+      "step": 1500,
+      "train_monitor": {
+        "teacher_center": 0.14399205780029298,
+        "teacher_shape": 0.1287783923149109,
+        "teacher_relative": 0.07768907904624939,
+        "teacher_clearance_tail": 0.4537693643569946,
+        "total": 0.6719959135055542,
+        "public_boundary": 0.0014710470661520958,
+        "public_group_contact": 0.0046623112112283704,
+        "public_soft": 0.006133358359336853,
+        "base_total": 0.6493782806396484,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.14161006546020508,
+        "teacher_shape": 0.11843099784851074,
+        "teacher_relative": 0.07854237818717956,
+        "teacher_clearance_tail": 0.5819658055305481,
+        "total": 0.8072235679626465,
+        "public_boundary": 0.0033465725928544998,
+        "public_group_contact": 0.005983058243989945,
+        "public_soft": 0.009329630941152573,
+        "base_total": 0.7728192281723022,
+        "count": 500
+      },
+      "lr": 0.00025,
+      "lr_next": 0.00025,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 4,
+      "step": 2000,
+      "train_monitor": {
+        "teacher_center": 0.1437146315574646,
+        "teacher_shape": 0.1270449185371399,
+        "teacher_relative": 0.0774651551246643,
+        "teacher_clearance_tail": 0.45235491228103636,
+        "total": 0.6704169015884399,
+        "public_boundary": 0.0015720389783382416,
+        "public_group_contact": 0.004724615931510925,
+        "public_soft": 0.006296654790639877,
+        "base_total": 0.6471970739364624,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.14121234369277955,
+        "teacher_shape": 0.11684292697906494,
+        "teacher_relative": 0.07833585286140442,
+        "teacher_clearance_tail": 0.5860665783882141,
+        "total": 0.8102331562042236,
+        "public_boundary": 0.003291168011724949,
+        "public_group_contact": 0.005972067356109619,
+        "public_soft": 0.009263235449790954,
+        "base_total": 0.7760736541748047,
+        "count": 500
+      },
+      "lr": 0.00025,
+      "lr_next": 0.0001,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 5,
+      "step": 2500,
+      "train_monitor": {
+        "teacher_center": 0.14341399335861207,
+        "teacher_shape": 0.12912312173843385,
+        "teacher_relative": 0.07694773459434509,
+        "teacher_clearance_tail": 0.44460555744171143,
+        "total": 0.6618333511352539,
+        "public_boundary": 0.001449715381488204,
+        "public_group_contact": 0.004596444740891457,
+        "public_soft": 0.006046160221099854,
+        "base_total": 0.6395372657775878,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.14098390340805053,
+        "teacher_shape": 0.11874607944488526,
+        "teacher_relative": 0.07794555521011352,
+        "teacher_clearance_tail": 0.5778027315139771,
+        "total": 0.8012095317840576,
+        "public_boundary": 0.0031199253275990485,
+        "public_group_contact": 0.005896666496992112,
+        "public_soft": 0.009016591936349868,
+        "base_total": 0.7679595575332642,
+        "count": 500
+      },
+      "lr": 0.0001,
+      "lr_next": 0.0001,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 6,
+      "step": 3000,
+      "train_monitor": {
+        "teacher_center": 0.14313700342178345,
+        "teacher_shape": 0.12789613914489745,
+        "teacher_relative": 0.07692582392692567,
+        "teacher_clearance_tail": 0.4459408264160156,
+        "total": 0.6625523462295532,
+        "public_boundary": 0.0014313060119748116,
+        "public_group_contact": 0.004607509583234787,
+        "public_soft": 0.006038815528154373,
+        "base_total": 0.6402833318710327,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.14067071390151978,
+        "teacher_shape": 0.11755424213409424,
+        "teacher_relative": 0.07786163973808288,
+        "teacher_clearance_tail": 0.5827363872528076,
+        "total": 0.8054010334014893,
+        "public_boundary": 0.003197579637169838,
+        "public_group_contact": 0.005789173245429993,
+        "public_soft": 0.008986753076314927,
+        "base_total": 0.7722610702514648,
+        "count": 500
+      },
+      "lr": 0.0001,
+      "lr_next": 0.0001,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 7,
+      "step": 3500,
+      "train_monitor": {
+        "teacher_center": 0.14328429126739503,
+        "teacher_shape": 0.12832242822647094,
+        "teacher_relative": 0.07700689911842346,
+        "teacher_clearance_tail": 0.445245096206665,
+        "total": 0.6620836400985718,
+        "public_boundary": 0.0014380797799676656,
+        "public_group_contact": 0.004587968423962593,
+        "public_soft": 0.006026048183441162,
+        "base_total": 0.6398617200851441,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.14092934131622314,
+        "teacher_shape": 0.11761334371566773,
+        "teacher_relative": 0.07798957014083863,
+        "teacher_clearance_tail": 0.5886835780143738,
+        "total": 0.8116612281799317,
+        "public_boundary": 0.0031056005358695983,
+        "public_group_contact": 0.005883219301700592,
+        "public_soft": 0.008988819867372513,
+        "base_total": 0.7785136260986328,
+        "count": 500
+      },
+      "lr": 0.0001,
+      "lr_next": 0.0001,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 8,
+      "step": 4000,
+      "train_monitor": {
+        "teacher_center": 0.14335048484802246,
+        "teacher_shape": 0.1273548469543457,
+        "teacher_relative": 0.07697080063819885,
+        "teacher_clearance_tail": 0.44621816301345824,
+        "total": 0.662879472732544,
+        "public_boundary": 0.0014414948746562003,
+        "public_group_contact": 0.0045865863859653475,
+        "public_soft": 0.006028081357479095,
+        "base_total": 0.640650032043457,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.14093117141723632,
+        "teacher_shape": 0.1169825382232666,
+        "teacher_relative": 0.07806956672668457,
+        "teacher_clearance_tail": 0.5874014539718628,
+        "total": 0.8104653692245484,
+        "public_boundary": 0.003218471620231867,
+        "public_group_contact": 0.005830591470003128,
+        "public_soft": 0.009049063086509705,
+        "base_total": 0.7770956401824951,
+        "count": 500
+      },
+      "lr": 0.0001,
+      "lr_next": 5e-05,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 9,
+      "step": 4500,
+      "train_monitor": {
+        "teacher_center": 0.14306766271591187,
+        "teacher_shape": 0.12790092325210572,
+        "teacher_relative": 0.07684656190872192,
+        "teacher_clearance_tail": 0.4459396386146545,
+        "total": 0.6621541185379028,
+        "public_boundary": 0.00142330233566463,
+        "public_group_contact": 0.004531695201992989,
+        "public_soft": 0.005954997658729554,
+        "base_total": 0.6401941537857055,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.14074619245529174,
+        "teacher_shape": 0.11750440549850463,
+        "teacher_relative": 0.07793510150909423,
+        "teacher_clearance_tail": 0.5841454420089721,
+        "total": 0.806922571182251,
+        "public_boundary": 0.003194273967295885,
+        "public_group_contact": 0.005800916075706482,
+        "public_soft": 0.008995190113782883,
+        "base_total": 0.7737515048980713,
+        "count": 500
+      },
+      "lr": 5e-05,
+      "lr_next": 5e-05,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 10,
+      "step": 5000,
+      "train_monitor": {
+        "teacher_center": 0.143148250579834,
+        "teacher_shape": 0.12771270990371705,
+        "teacher_relative": 0.07682541394233704,
+        "teacher_clearance_tail": 0.4442038869857788,
+        "total": 0.6603725109100341,
+        "public_boundary": 0.0014115078635513782,
+        "public_group_contact": 0.004523401618003845,
+        "public_soft": 0.005934909403324127,
+        "base_total": 0.6384866743087768,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.14084755659103393,
+        "teacher_shape": 0.11723702716827393,
+        "teacher_relative": 0.07794804191589355,
+        "teacher_clearance_tail": 0.5862675986289978,
+        "total": 0.808921196937561,
+        "public_boundary": 0.003143284548074007,
+        "public_group_contact": 0.005808164715766907,
+        "public_soft": 0.008951449185609818,
+        "base_total": 0.7759114112854004,
+        "count": 500
+      },
+      "lr": 5e-05,
+      "lr_next": 5e-05,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 11,
+      "step": 5500,
+      "train_monitor": {
+        "teacher_center": 0.1430881209373474,
+        "teacher_shape": 0.12750530529022217,
+        "teacher_relative": 0.07675064635276795,
+        "teacher_clearance_tail": 0.44330139207839964,
+        "total": 0.6594381437301636,
+        "public_boundary": 0.0014016896653920412,
+        "public_group_contact": 0.004560011208057404,
+        "public_soft": 0.005961701035499573,
+        "base_total": 0.6374535140991211,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.14078253698349,
+        "teacher_shape": 0.11701768255233765,
+        "teacher_relative": 0.07791602277755737,
+        "teacher_clearance_tail": 0.586957718372345,
+        "total": 0.8094108791351319,
+        "public_boundary": 0.0030984756387770177,
+        "public_group_contact": 0.00583328464627266,
+        "public_soft": 0.008931760370731354,
+        "base_total": 0.7764736833572388,
+        "count": 500
+      },
+      "lr": 5e-05,
+      "lr_next": 2e-05,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 12,
+      "step": 6000,
+      "train_monitor": {
+        "teacher_center": 0.14304462718963623,
+        "teacher_shape": 0.12827305698394775,
+        "teacher_relative": 0.07674466514587402,
+        "teacher_clearance_tail": 0.4427193546295166,
+        "total": 0.6587810840606689,
+        "public_boundary": 0.0013820592146366834,
+        "public_group_contact": 0.004519452720880508,
+        "public_soft": 0.005901511818170548,
+        "base_total": 0.6370184116363525,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.14081483364105224,
+        "teacher_shape": 0.11777472496032715,
+        "teacher_relative": 0.07790105676651,
+        "teacher_clearance_tail": 0.5845360765457154,
+        "total": 0.8070298500061035,
+        "public_boundary": 0.0030762125328183173,
+        "public_group_contact": 0.00580751234292984,
+        "public_soft": 0.008883724510669709,
+        "base_total": 0.7742698249816895,
+        "count": 500
+      },
+      "lr": 2e-05,
+      "lr_next": 2e-05,
+      "train_monitor_seen_count": 500
+    },
+    {
+      "epoch": 13,
+      "step": 6500,
+      "train_monitor": {
+        "teacher_center": 0.14308303499221803,
+        "teacher_shape": 0.12798144817352294,
+        "teacher_relative": 0.07678196549415589,
+        "teacher_clearance_tail": 0.4412069435119629,
+        "total": 0.6572197237014771,
+        "public_boundary": 0.0013795574828982353,
+        "public_group_contact": 0.004515506401658058,
+        "public_soft": 0.005895063877105713,
+        "base_total": 0.6354808149337768,
+        "count": 500
+      },
+      "dev_monitor": {
+        "teacher_center": 0.140783588886261,
+        "teacher_shape": 0.11749508428573609,
+        "teacher_relative": 0.07787048459053039,
+        "teacher_clearance_tail": 0.5850421786308289,
+        "total": 0.807311912536621,
+        "public_boundary": 0.0030504176281392573,
+        "public_group_contact": 0.005802061289548874,
+        "public_soft": 0.008852478802204132,
+        "base_total": 0.7746671400070191,
+        "count": 500
+      },
+      "lr": 2e-05,
+      "lr_next": 2e-05,
+      "train_monitor_seen_count": 500
+    }
+  ],
+  "status": "early_stop",
+  "finished": true,
+  "seen_count": 16000,
+  "scheduler": {
+    "best": 0.8012095317840576,
+    "bad": 2,
+    "early_bad": 8,
+    "drops": 3,
+    "last_drop": 11
+  },
+  "elapsed_seconds": 373.9484419000073,
+  "test_read": false
+}

@@ -1,0 +1,29 @@
+{
+  "status": "prepared_source_registration",
+  "priority": [
+    "new simplified Loss",
+    "more real sparse train samples",
+    "two-dimensional neural spatial model"
+  ],
+  "rejected_direction": "autoregressive placement: explicitly removed by user",
+  "formal_training_started": false,
+  "arms": [
+    "simple",
+    "legacy"
+  ],
+  "dataset": "v5 train16000 via verified v6 prefix; unchanged train/dev500 and dev2000; test sealed",
+  "loss_registration": "one train500 calibration before formal arms; no dev coefficient search",
+  "max_hours_per_arm": 1,
+  "max_epochs": 200,
+  "batch_size": 32,
+  "new_training_stage_cap_seconds": 25200,
+  "prior_global_training_seconds": 38831.07569789997,
+  "global_training_cap_seconds": 64800,
+  "later_stage_budget": "up to two1h sparse arms, then two1h spatial arms; no automatic continuation",
+  "postprocessing": "unique own-Loss best once on flash500, never Q reselection",
+  "assistant_execution": "max five unique train cases and under20min implementation checks; long jobs user-run",
+  "test_read": false,
+  "simple_authorized_extension_hours": 1,
+  "simple_total_hours": 2,
+  "budget_extension_authorization": "2026-10-31 user explicitly granted E87 simple an additional1h; preserve elapsed time"
+}

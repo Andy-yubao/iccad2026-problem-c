@@ -1,0 +1,354 @@
+{
+  "date": "2026-11-05",
+  "sources": [
+    {
+      "path": "experiments/E101_final_c5_solver/runs/20261103_final64k_seed0/state.json",
+      "sha256": "985fce5712d0d78d8d59eb6a6e2b9738a45733526e6a3f33faa62e3b08e16fb4",
+      "bytes": 177,
+      "state": {
+        "status": "complete",
+        "stage": "final_test2000_complete",
+        "updated_utc": "2026-11-03T14:37:09.629187+00:00",
+        "test_read": true,
+        "no_further_training": true
+      }
+    },
+    {
+      "path": "experiments/E101_final_c5_solver/runs/20261103_replay/state.json",
+      "sha256": "a5a0184461f14730a23a1c6696da4cdf21e4eacfa8983be3fe88e707f60663fa",
+      "bytes": 195,
+      "state": {
+        "status": "complete",
+        "stage": "full_training_and_repeated_test2000_complete",
+        "updated_utc": "2026-11-03T23:29:59.486470+00:00",
+        "test_read": true,
+        "no_test_feedback": true
+      }
+    },
+    {
+      "path": "experiments/E101_final_c5_solver/runs/20261104_chain64k_seed0/stop_verification_20261104.json",
+      "sha256": "d5ebc1408ad264229a8e14a6945afe0b35d35aad83579c027385869f50b7ddb6",
+      "bytes": 837,
+      "state": {
+        "status": "user_stop_verified",
+        "user_request": "Terminate64k task and prioritize original historical C5 full test2000; no automatic training resume",
+        "verified_utc": "2026-11-04T02:58:57.597773+00:00",
+        "all_processes_exited": true,
+        "observed_exited_pids": [
+          44848,
+          38144,
+          48304
+        ],
+        "GPU_compute_processes_after_stop": [],
+        "latest_saved": true,
+        "latest_sha256": "1b2d15647b71ff744e6e8c489baee3efb0259d0b529e64e52abd2860d1916ae7",
+        "best_sha256": "1670014d0bb3ae63f7a29064b7bdca6e5f2ed6357f440c922649940aa68837a1",
+        "epoch": 31,
+        "cursor": 49952,
+        "step": 63561,
+        "best_epoch": 31,
+        "elapsed_seconds": 12316.188568600017,
+        "optimizer_RNG_order_cursor_scheduler_preserved": true,
+        "subsequent_stages_not_started": true,
+        "STOP_preserved": true,
+        "automatic_resume": false
+      }
+    },
+    {
+      "path": "experiments/E101_final_c5_solver/runs/20261104_original_C5_test2000/state.json",
+      "sha256": "b5c5cf6583979858ea834cb3e84c3d3e148f9128743feed94be1465bc22f06df",
+      "bytes": 206,
+      "state": {
+        "status": "complete",
+        "stage": "original_C5_test2000_complete",
+        "updated_utc": "2026-11-04T03:13:48.735387+00:00",
+        "test_read": true,
+        "no_retraining": true,
+        "no_test_feedback": true
+      }
+    },
+    {
+      "path": "experiments/E98_loss_weight_learning/runs/20261104_dynamic_train500_v3_seed0/stop_verification_20261104.json",
+      "sha256": "44a3d7a1ea6e79135caa04ceb9867e057e7eb37e1bd0b59e441a4dc0df950a2d",
+      "bytes": 1191,
+      "state": {
+        "status": "stopped_and_abandoned",
+        "verified_utc": "2026-11-04T11:12:12.373062+00:00",
+        "run": "experiments/E98_loss_weight_learning/runs/20261104_dynamic_train500_v3_seed0",
+        "round": 3,
+        "arm": "plus",
+        "completed_epochs": 2,
+        "updates": 1149,
+        "cursor": 4768,
+        "checkpoint_status": "user_stop",
+        "latest": "experiments/E98_loss_weight_learning/runs/20261104_dynamic_train500_v3_seed0/rounds/r03_worst_overlap_vs_mean_overlap/branches/plus/checkpoints/latest.pt",
+        "latest_sha256": "06a6a93297f581abd83427f853dbe96e262d35d82024bcf463a2338e21ba3950",
+        "best": "experiments/E98_loss_weight_learning/runs/20261104_dynamic_train500_v3_seed0/rounds/r03_worst_overlap_vs_mean_overlap/branches/plus/checkpoints/best.pt",
+        "best_sha256": "ce9bdc174dac74740e588f98b1b402716e8ad4e25614db42cf30cc8c28ab60d0",
+        "latest_and_best_preserved": true,
+        "supervisor_session": 64386,
+        "supervisor_exit_code": 0,
+        "process_exit_evidence": "Supervised launch session returned exit0 after STOP; terminal state user_stop; GPU compute process list empty",
+        "next_minus_started": false,
+        "next_round_started": false,
+        "automatic_resume": false,
+        "test_read": false
+      }
+    },
+    {
+      "path": "experiments/E103_offline_loss_alignment/runs/20261104_bank1000x5_seed0/state.json",
+      "sha256": "e3bb6c570c06656e9e664359cced2e86093d7e5f54580000d78601c884407be7",
+      "bytes": 242,
+      "state": {
+        "status": "complete",
+        "stage": "offline_report_ready",
+        "workers": 4,
+        "test_read": false,
+        "total": 40,
+        "completed": 40,
+        "pid": 33212,
+        "elapsed_seconds": 277.2668822000269,
+        "updated_utc": "2026-11-04T11:57:21Z"
+      }
+    },
+    {
+      "path": "experiments/E103_offline_loss_alignment/runs/20261104_learned_v1_lr1e3_seed0/state.json",
+      "sha256": "3575211805724435f6faa331eb9dec1fdb88941027f19168a876e9d6eab310c1",
+      "bytes": 314,
+      "state": {
+        "status": "complete",
+        "stage": "training_complete_no_next_stage",
+        "test_read": false,
+        "epoch": 32,
+        "step": 16000,
+        "lr": 5e-05,
+        "phase": 1,
+        "arm": "learned_v1",
+        "seen_count": 16000,
+        "pid": 38656,
+        "elapsed_seconds": 1850.7006502999575,
+        "updated_utc": "2026-11-04T13:01:33Z"
+      }
+    },
+    {
+      "path": "experiments/E103_offline_loss_alignment/runs/20261104_learned_v1_lr1e3_seed0/evaluation_depth_dev500/state.json",
+      "sha256": "878ce08f32dd8fa9a43d84800a98a6c4c41e7849f2054862ca0ce5dda8067b86",
+      "bytes": 226,
+      "state": {
+        "status": "complete",
+        "stage": "validation_complete",
+        "completed": 500,
+        "total": 500,
+        "test_read": false,
+        "pid": 38680,
+        "elapsed_seconds": 230.0044332999969,
+        "updated_utc": "2026-11-04T13:38:02Z"
+      }
+    },
+    {
+      "path": "experiments/E103_offline_loss_alignment/runs/20261104_pair_enhanced_current_v1/state.json",
+      "sha256": "981b7e6cb10c097e2c06e14f771fe1d06bede24fa579ad7bcba2792d01058e0b",
+      "bytes": 245,
+      "state": {
+        "status": "complete",
+        "stage": "weight_proposal_ready",
+        "total": 1000,
+        "completed": 1000,
+        "workers": 4,
+        "test_read": false,
+        "pid": 516,
+        "elapsed_seconds": 88.95811830001185,
+        "updated_utc": "2026-11-04T14:04:55Z"
+      }
+    },
+    {
+      "path": "experiments/E103_offline_loss_alignment/runs/20261104_global_independent2000_seed0/state.json",
+      "sha256": "3e6c4906da03e0535c270d25d8fdbf12c12bf9a7347ef2cd30fb56b650a966ea",
+      "bytes": 260,
+      "state": {
+        "status": "complete",
+        "stage": "global_analysis_and_figures_ready",
+        "completed": 2000,
+        "total": 2000,
+        "workers": 4,
+        "test_read": false,
+        "pid": 28948,
+        "elapsed_seconds": 223.07954649999738,
+        "updated_utc": "2026-11-04T15:02:14Z"
+      }
+    },
+    {
+      "path": "experiments/E103_offline_loss_alignment/runs/20261104_reference075_seed0/pipeline_state.json",
+      "sha256": "b504e2c51e589b130b2ab46182282ec5e2ec958eb209fc88046eefaf221f2a62",
+      "bytes": 452,
+      "state": {
+        "status": "complete",
+        "stage": "complete_no_next_stage",
+        "pid": 12448,
+        "active_progress": {
+          "status": "complete",
+          "stage": "validation_complete",
+          "completed": 500,
+          "total": 500,
+          "test_read": false,
+          "pid": 12448,
+          "elapsed_seconds": 206.72042970000007,
+          "updated_utc": "2026-11-04T15:44:42Z"
+        },
+        "elapsed_seconds": 979.9925814,
+        "updated_utc": "2026-11-04T15:44:42Z",
+        "test_read": false
+      }
+    },
+    {
+      "path": "experiments/E104_scaling32k/runs/20261104_scaling128x16_seed0/pipeline_state.json",
+      "sha256": "1ad2e5b2cd43e138746a63bb4ad5a798d11752195555f7c2f2341f74f6e6fc0b",
+      "bytes": 108,
+      "state": {
+        "status": "complete",
+        "evaluation_exit_code": 0,
+        "test_read": false,
+        "next_stage": "none"
+      }
+    },
+    {
+      "path": "experiments/E104_scaling32k/runs/20261104_scaling128x16_seed0/results.json",
+      "sha256": "8e7ceb44f8e8470e83ff6f29990fb69a2a2f4f006b98a9db9e8f1e1b11b1d040",
+      "bytes": 567,
+      "state": {
+        "status": "early_stop",
+        "error": null,
+        "epochs": 82,
+        "steps": 82000,
+        "best_epoch": 81,
+        "best_fixed_loss": 0.3378080095350742,
+        "elapsed_seconds": 11010.850050399946,
+        "train_monitor_last4": [
+          0.338501045525074,
+          0.3389744685292244,
+          0.3376331925392151,
+          0.3388128538876772
+        ],
+        "train_plateau_observed": false,
+        "convergence": "operational dev plateau; train plateau separate",
+        "test_read": false,
+        "postprocessing_calls": 0,
+        "next_stage": "frozen best dev500 only if normal early_stop; managed by pipeline"
+      }
+    },
+    {
+      "path": "experiments/E105_gated_prenorm_placer/runs/20261105_gated128x16_seed0/pipeline_state.json",
+      "sha256": "1ad2e5b2cd43e138746a63bb4ad5a798d11752195555f7c2f2341f74f6e6fc0b",
+      "bytes": 108,
+      "state": {
+        "status": "complete",
+        "evaluation_exit_code": 0,
+        "test_read": false,
+        "next_stage": "none"
+      }
+    },
+    {
+      "path": "experiments/E105_gated_prenorm_placer/runs/20261105_gated128x16_seed0/results.json",
+      "sha256": "792035d587d3a56f21f503f0f1abc7eed89b0aa6d7bba86837e23c7ed8e89be8",
+      "bytes": 571,
+      "state": {
+        "status": "early_stop",
+        "error": null,
+        "epochs": 61,
+        "steps": 61000,
+        "best_epoch": 58,
+        "best_fixed_loss": 0.33148643009364603,
+        "elapsed_seconds": 8699.435611699999,
+        "train_monitor_last4": [
+          0.33818563951551917,
+          0.33783275152742864,
+          0.33848009799420836,
+          0.3374618926346302
+        ],
+        "train_plateau_observed": false,
+        "convergence": "operational dev plateau; train plateau separate",
+        "test_read": false,
+        "postprocessing_calls": 0,
+        "next_stage": "frozen best dev500 only if normal early_stop; managed by pipeline"
+      }
+    },
+    {
+      "path": "experiments/E106_postprocessor_aware_loss/runs/20261105_bank25000_seed0/autostart_state.json",
+      "sha256": "27b02541ad6e4b39f2a4079c43b97576b8e3041abc87f4306c99288160afe4db",
+      "bytes": 694,
+      "state": {
+        "status": "complete_no_next_stage",
+        "pid": 20736,
+        "elapsed_seconds": 2028.850531199998,
+        "updated_utc": "2026-11-05T03:03:18Z",
+        "test_read": false,
+        "layout_training": false,
+        "result": {
+          "status": "early_stop",
+          "best_epoch": 7,
+          "best_validation_Loss": 2.496825092783198,
+          "epochs": 26,
+          "updates": 13000,
+          "check": {
+            "total": 0.8704172114897519,
+            "value": 0.7149005423039198,
+            "directions": 0.08408142402420936,
+            "auxiliary": 0.7143523153662682
+          },
+          "checkpoint_sha256": "e0d348a8990e4e18e9d92596f5dccfa574f1c7805da876f89e13d08b6220801e",
+          "automatic_layout_training": false,
+          "test_read": false
+        }
+      }
+    },
+    {
+      "path": "experiments/E106_postprocessor_aware_loss/runs/20261105_bank25000_seed0/critic/results.json",
+      "sha256": "00cce017ddd7180b602ec6ee084115de6f7abfbd20d65aa4c23744b818c239e3",
+      "bytes": 455,
+      "state": {
+        "status": "early_stop",
+        "best_epoch": 7,
+        "best_validation_Loss": 2.496825092783198,
+        "epochs": 26,
+        "updates": 13000,
+        "check": {
+          "total": 0.8704172114897519,
+          "value": 0.7149005423039198,
+          "directions": 0.08408142402420936,
+          "auxiliary": 0.7143523153662682
+        },
+        "checkpoint_sha256": "e0d348a8990e4e18e9d92596f5dccfa574f1c7805da876f89e13d08b6220801e",
+        "automatic_layout_training": false,
+        "test_read": false
+      }
+    },
+    {
+      "path": "experiments/E107_geometry_posttrain/runs/20261105_geometry_ref10_seed0/stop_verification.json",
+      "sha256": "b13f7522a54f4a52b55d8ca7e62e3e146e53c2b9efa487bb12fbe8045ef64696",
+      "bytes": 610,
+      "state": {
+        "status": "stopped_on_relative_case_loss_spike",
+        "verified_utc": "2026-11-05T04:17:40.458465+00:00",
+        "training_and_controller_exited": true,
+        "gpu_memory_released": true,
+        "stop_present": true,
+        "evaluation_started": false,
+        "test_read": false,
+        "rejected_update": 23,
+        "accepted_updates": 22,
+        "offender": {
+          "batch_index": 0,
+          "member": [
+            "worker_40/layouts_9296.th",
+            69
+          ],
+          "loss": 49.702369689941406,
+          "parent_loss": 3.766752004623413,
+          "case_limit": 37.667518615722656
+        },
+        "all_losses_finite": true,
+        "no_automatic_restart": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "source_hashes": {
+    "experiments/E39_rectangular_attention/runs/20261023_rectangle_w96d12_r2_rectangle_seed0/terminal/results.json": "1ba753b7db70d573535724877ea306392c4ec1a84cb901d8821e68b4b5c510ed",
+    "experiments/E39_rectangular_attention/runs/20261023_rectangle_w96d12_r2_rectangle_seed0/checkpoints/best.pt": "9e21058ebfe2f69f43e11e3798577d3e4aad04732ef403073cb50c1d17fb06f4",
+    "protocol/reference_workset_v5.json": "1409ccf825b9c7cae1097a22e8dc4068e1283d79541c85ce54c5627d0c2b4208",
+    "experiments/E39_rectangular_attention/runs/20261023_failure_mode_audit/analyze.py": "f628606862bbe784e190ffea71adc6cc720761a0d31495b0ec68a7784ad5e65d",
+    "datasets/reference_layouts.py": "f6aeeba298a163b7d506c67e3fba024cd3a191c3aae1116fc6b5d294431db9b5",
+    "experiments/E39_rectangular_attention/losses.py": "f6503136dc719f6742c66b31da7ebe1076726fac38edb64fa9ae6106ab9d6557",
+    "experiments/E39_rectangular_attention/batches.py": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92"
+  },
+  "command": [
+    "experiments/E39_rectangular_attention/runs/20261023_failure_mode_audit/analyze.py",
+    "--pilot"
+  ],
+  "workers": 2,
+  "threads_per_worker": 2,
+  "seed": 20261023,
+  "training": false,
+  "solver_calls": 0,
+  "test_read": false,
+  "roles": [
+    "train_monitor500",
+    "dev_monitor500"
+  ],
+  "wall_limit_seconds": 900,
+  "original_area_note": "Initial cache audit uses reference WH product as area proxy; verified separately against raw public areas."
+}

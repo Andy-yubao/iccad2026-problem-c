@@ -1,0 +1,142 @@
+Verified archived cache loaded: dev 2000 cases
+Frozen public placer audit: 32 /2000
+Frozen public placer audit: 512 /2000
+Frozen public placer audit: 992 /2000
+Frozen public placer audit: 1472 /2000
+Frozen public placer audit: 1952 /2000
+{
+  "frames": {
+    "E42": {
+      "count": 0,
+      "minimum_B_over_A": 1.001284441774736,
+      "below_99percent": 0,
+      "max_unavoidable_pair_overlap_lower_bound": 0.0
+    },
+    "E74": {
+      "count": 0,
+      "minimum_B_over_A": 1.006781204917012,
+      "below_99percent": 0,
+      "max_unavoidable_pair_overlap_lower_bound": 0.0
+    }
+  },
+  "E81_bins": [
+    {
+      "quintile": 1,
+      "count": 400,
+      "base_min": 0.02351096558727861,
+      "base_max": 0.043590206960888805,
+      "base_mean": 0.037351956997997544,
+      "corrected_mean": 0.011821903034443108,
+      "absolute_reduction_mean": 0.025530053963554424,
+      "relative_reduction_fraction": 0.6834997685642847,
+      "corrected_overlap_gt5percent": 0,
+      "better_equal_worse": [
+        400,
+        0,
+        0
+      ]
+    },
+    {
+      "quintile": 2,
+      "count": 400,
+      "base_min": 0.0435987030614665,
+      "base_max": 0.0534847130953269,
+      "base_mean": 0.048355076400409445,
+      "corrected_mean": 0.017662983162566263,
+      "absolute_reduction_mean": 0.030692093237843193,
+      "relative_reduction_fraction": 0.6347232911741052,
+      "corrected_overlap_gt5percent": 0,
+      "better_equal_worse": [
+        400,
+        0,
+        0
+      ]
+    },
+    {
+      "quintile": 3,
+      "count": 400,
+      "base_min": 0.05353903614067709,
+      "base_max": 0.06514032462095475,
+      "base_mean": 0.05905419286594668,
+      "corrected_mean": 0.023219475446325754,
+      "absolute_reduction_mean": 0.03583471741962093,
+      "relative_reduction_fraction": 0.6068107221610144,
+      "corrected_overlap_gt5percent": 1,
+      "better_equal_worse": [
+        400,
+        0,
+        0
+      ]
+    },
+    {
+      "quintile": 4,
+      "count": 400,
+      "base_min": 0.06521290258600722,
+      "base_max": 0.08018724172789352,
+      "base_mean": 0.07211119651458565,
+      "corrected_mean": 0.029664289224285323,
+      "absolute_reduction_mean": 0.04244690729030033,
+      "relative_reduction_fraction": 0.5886312991868712,
+      "corrected_overlap_gt5percent": 3,
+      "better_equal_worse": [
+        400,
+        0,
+        0
+      ]
+    },
+    {
+      "quintile": 5,
+      "count": 400,
+      "base_min": 0.08019885083430925,
+      "base_max": 0.17004460212093728,
+      "base_mean": 0.09822871001864325,
+      "corrected_mean": 0.04218318223340248,
+      "absolute_reduction_mean": 0.05604552778524075,
+      "relative_reduction_fraction": 0.5705615779195681,
+      "corrected_overlap_gt5percent": 86,
+      "better_equal_worse": [
+        400,
+        0,
+        0
+      ]
+    }
+  ],
+  "same_f": {
+    "E79/E80": {
+      "P74_source_better_raw_overlap_cases": 1871,
+      "among_those_P74_corrected_better_equal_worse": [
+        1483,
+        0,
+        388
+      ],
+      "P42_corrected_overlap": 0.02784877391673398,
+      "P74_corrected_overlap": 0.023583658894456887,
+      "source_difference_corrected_difference_spearman": 0.7139333069833267,
+      "limits": "Same cases/shared frozen F; frame changes with source. E79 F trained on P74, later F trained on both. No new P74 postprocessing Q for F81/F82."
+    },
+    "E81": {
+      "P74_source_better_raw_overlap_cases": 1871,
+      "among_those_P74_corrected_better_equal_worse": [
+        1395,
+        0,
+        476
+      ],
+      "P42_corrected_overlap": 0.024910366620204585,
+      "P74_corrected_overlap": 0.021445633598719725,
+      "source_difference_corrected_difference_spearman": 0.6672904458226114,
+      "limits": "Same cases/shared frozen F; frame changes with source. E79 F trained on P74, later F trained on both. No new P74 postprocessing Q for F81/F82."
+    },
+    "E82": {
+      "P74_source_better_raw_overlap_cases": 1871,
+      "among_those_P74_corrected_better_equal_worse": [
+        1389,
+        0,
+        482
+      ],
+      "P42_corrected_overlap": 0.024448869739853173,
+      "P74_corrected_overlap": 0.021008070513489657,
+      "source_difference_corrected_difference_spearman": 0.6640565995141499,
+      "limits": "Same cases/shared frozen F; frame changes with source. E79 F trained on P74, later F trained on both. No new P74 postprocessing Q for F81/F82."
+    }
+  }
+}

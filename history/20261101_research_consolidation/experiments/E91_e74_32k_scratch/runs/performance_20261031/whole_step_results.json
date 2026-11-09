@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "unique_real_train_cases": 5,
+  "checkpoint_step": 31600,
+  "isolated_steps_per_path": 10,
+  "full_step_model_Adam_RNG_clipping_bit_exact": true,
+  "same_FP32_Dropout_batch32_Loss": true,
+  "timings": {
+    "old": {
+      "step_median_ms": 331.1714499723166,
+      "step_mean_ms": 327.82890999224037,
+      "losses": [
+        0.32140684127807617,
+        0.309170126914978,
+        0.2950512766838074,
+        0.28287309408187866,
+        0.2709748148918152,
+        0.2555732727050781,
+        0.2520991861820221,
+        0.2529263198375702,
+        0.24373222887516022,
+        0.23044024407863617
+      ]
+    },
+    "captured": {
+      "step_median_ms": 141.01444999687374,
+      "step_mean_ms": 152.668559999438,
+      "losses": [
+        0.32140684127807617,
+        0.309170126914978,
+        0.2950512766838074,
+        0.28287309408187866,
+        0.2709748148918152,
+        0.2555732727050781,
+        0.2520991861820221,
+        0.2529263198375702,
+        0.24373222887516022,
+        0.23044024407863617
+      ]
+    }
+  },
+  "whole_step_micro_speedup": 2.3484930089055314,
+  "limitation": "Shared GPU, hot same-five-case32 batches; excludes real32k staging, monitoring and checkpoint I/O. Not a formal whole-run benchmark.",
+  "active_training_source_or_checkpoint_mutated": false,
+  "test_read": false,
+  "seconds": 38.31213600002229
+}

@@ -1,0 +1,22 @@
+{
+  "status": "stopped_before_evaluation",
+  "training_exit_code": 1,
+  "training": {
+    "status": "error",
+    "error": "LossExplosion('Loss explosion: rejected before AdamW')",
+    "epochs": 0,
+    "steps": 22,
+    "best_epoch": 0,
+    "best_fixed_loss": 3.000270802259445,
+    "elapsed_seconds": 239.7200834999967,
+    "train_monitor_last4": [
+      3.0788788657188415
+    ],
+    "train_plateau_observed": false,
+    "convergence": "not established",
+    "test_read": false,
+    "postprocessing_calls": 0,
+    "next_stage": "frozen best dev500 only if normal early_stop; managed by pipeline"
+  },
+  "test_read": false
+}

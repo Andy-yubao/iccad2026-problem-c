@@ -1,0 +1,246 @@
+{
+  "completed": 2,
+  "rounds": [
+    {
+      "round": 1,
+      "name": "reference_vs_public_geometry",
+      "direction": [
+        -1,
+        -1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "training": {
+        "control": {
+          "status": "frozen_reference",
+          "epochs": 0,
+          "updates": 0,
+          "best_checkpoint": "experiments/E98_loss_weight_learning/runs/20261104_generalization96_seed0/checkpoints/best.pt",
+          "best_sha256": "3f7ca0086af8a13bd52eedf0635117312e5c0a72e80e423e9cee3db5ca9b87ea"
+        },
+        "plus": {
+          "status": "early_stop",
+          "epochs": 12,
+          "updates": 6000,
+          "best_epoch": 9,
+          "best_dev_loss": 0.32887089109420775,
+          "best_checkpoint": "experiments/E98_loss_weight_learning/runs/20261104_dynamic_train500_v3_seed0/rounds/r01_reference_vs_public_geometry/branches/plus/checkpoints/best.pt",
+          "best_sha256": "19f71f114176cf1c4092a46b60897e621c0e0f2f2f9c3f42fb7d324ce1f855e1",
+          "phase_elapsed_seconds": 648.5133429999696,
+          "coefficient_sum": 3.855037361690378,
+          "test_read": false
+        },
+        "minus": {
+          "status": "early_stop",
+          "epochs": 12,
+          "updates": 6000,
+          "best_epoch": 9,
+          "best_dev_loss": 0.42119004514813424,
+          "best_checkpoint": "experiments/E98_loss_weight_learning/runs/20261104_dynamic_train500_v3_seed0/rounds/r01_reference_vs_public_geometry/branches/minus/checkpoints/best.pt",
+          "best_sha256": "4e55555d69981a0b76a5b8e9dd03e9f7213c1188f9e0b779c43c924dafa26d71",
+          "phase_elapsed_seconds": 622.696943500021,
+          "coefficient_sum": 3.8550373616903797,
+          "test_read": false
+        }
+      },
+      "train_feedback": {
+        "control": [
+          {
+            "count": 500,
+            "weighted_Q": 1.0454105248988987,
+            "mean_Q": 1.0449554933039662,
+            "mixed_Q": 1.0451830091014325,
+            "hard_legal": 500,
+            "mean_complete_seconds": 0.20589082880038767,
+            "p95_complete_seconds": 0.48239395498239895,
+            "max_complete_seconds": 1.5347879999899305,
+            "over250ms": 167,
+            "p95_Q": 1.1377249906913756,
+            "max_Q": 4.226696418960946,
+            "fallbacks": 0,
+            "model_hash": "67e4ca2a8c01c8f06656b1d9c0b9967cf7fae3ed6874fda2452b546d65539010",
+            "cache_hits": 0,
+            "actual_solver_calls": 500,
+            "raw_hard_legal": 0,
+            "latency_scope": "Fresh rows include input/transfer/network/repair/independent hard check; cache hits retain original timing, not a new latency measurement"
+          }
+        ],
+        "plus": [
+          {
+            "count": 500,
+            "weighted_Q": 1.0425664397267607,
+            "mean_Q": 1.0498641601923542,
+            "mixed_Q": 1.0462152999595573,
+            "hard_legal": 500,
+            "mean_complete_seconds": 0.20920588199980558,
+            "p95_complete_seconds": 0.49201176002097763,
+            "max_complete_seconds": 1.5857388000003994,
+            "over250ms": 166,
+            "p95_Q": 1.1520178597848545,
+            "max_Q": 3.8269578266649606,
+            "fallbacks": 0,
+            "model_hash": "6f4a83fba4426d730d07107861df4c3a3cb626fd113a114683ad92d6f8fec330",
+            "cache_hits": 0,
+            "actual_solver_calls": 500,
+            "raw_hard_legal": 0,
+            "latency_scope": "Fresh rows include input/transfer/network/repair/independent hard check; cache hits retain original timing, not a new latency measurement"
+          }
+        ],
+        "minus": [
+          {
+            "count": 500,
+            "weighted_Q": 1.046635665009405,
+            "mean_Q": 1.0560900190020537,
+            "mixed_Q": 1.0513628420057293,
+            "hard_legal": 500,
+            "mean_complete_seconds": 0.21833231459965463,
+            "p95_complete_seconds": 0.5119238199986285,
+            "max_complete_seconds": 1.652730599977076,
+            "over250ms": 172,
+            "p95_Q": 1.173477374615707,
+            "max_Q": 3.2952580985744273,
+            "fallbacks": 0,
+            "model_hash": "273b8809e11b935c57bd887f167893bb10d6b3ffec54e34ee2fc28b953e91077",
+            "cache_hits": 0,
+            "actual_solver_calls": 500,
+            "raw_hard_legal": 0,
+            "latency_scope": "Fresh rows include input/transfer/network/repair/independent hard check; cache hits retain original timing, not a new latency measurement"
+          }
+        ]
+      },
+      "selected_arm": "control",
+      "accepted_candidates": [],
+      "feedback_unique_cases": 500,
+      "feedback_source_population": 16000,
+      "control_result_reused": true,
+      "test_read": false
+    },
+    {
+      "round": 2,
+      "name": "overlap_vs_wire_compactness",
+      "direction": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        -1,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "training": {
+        "control": {
+          "status": "frozen_reference",
+          "epochs": 0,
+          "updates": 0,
+          "best_checkpoint": "experiments/E98_loss_weight_learning/runs/20261104_generalization96_seed0/checkpoints/best.pt",
+          "best_sha256": "3f7ca0086af8a13bd52eedf0635117312e5c0a72e80e423e9cee3db5ca9b87ea"
+        },
+        "plus": {
+          "status": "maximum_epochs",
+          "epochs": 15,
+          "updates": 7500,
+          "best_epoch": 14,
+          "best_dev_loss": 0.37386596348881723,
+          "best_checkpoint": "experiments/E98_loss_weight_learning/runs/20261104_dynamic_train500_v3_seed0/rounds/r02_overlap_vs_wire_compactness/branches/plus/checkpoints/best.pt",
+          "best_sha256": "8cd6ad2fe6984ad7468fa21be814ea666cbe2dad71e4fabed2d321f1436aaded",
+          "phase_elapsed_seconds": 767.9112427000073,
+          "coefficient_sum": 3.8550373616903792,
+          "test_read": false
+        },
+        "minus": {
+          "status": "early_stop",
+          "epochs": 13,
+          "updates": 6500,
+          "best_epoch": 10,
+          "best_dev_loss": 0.3709924859106541,
+          "best_checkpoint": "experiments/E98_loss_weight_learning/runs/20261104_dynamic_train500_v3_seed0/rounds/r02_overlap_vs_wire_compactness/branches/minus/checkpoints/best.pt",
+          "best_sha256": "dba90e8381e85873509e450f09bcef9cc4abffe84a74b2f20c9cec8cacd4ed38",
+          "phase_elapsed_seconds": 675.6006720000296,
+          "coefficient_sum": 3.8550373616903784,
+          "test_read": false
+        }
+      },
+      "train_feedback": {
+        "control": [
+          {
+            "count": 500,
+            "weighted_Q": 1.0454105248988987,
+            "mean_Q": 1.0449554933039662,
+            "mixed_Q": 1.0451830091014325,
+            "hard_legal": 500,
+            "mean_complete_seconds": 0.20589082880038767,
+            "p95_complete_seconds": 0.48239395498239895,
+            "max_complete_seconds": 1.5347879999899305,
+            "over250ms": 167,
+            "p95_Q": 1.1377249906913756,
+            "max_Q": 4.226696418960946,
+            "fallbacks": 0,
+            "model_hash": "67e4ca2a8c01c8f06656b1d9c0b9967cf7fae3ed6874fda2452b546d65539010",
+            "cache_hits": 0,
+            "actual_solver_calls": 500,
+            "raw_hard_legal": 0,
+            "latency_scope": "Fresh rows include input/transfer/network/repair/independent hard check; cache hits retain original timing, not a new latency measurement"
+          }
+        ],
+        "plus": [
+          {
+            "count": 500,
+            "weighted_Q": 1.0403775405719144,
+            "mean_Q": 1.0499838626144407,
+            "mixed_Q": 1.0451807015931776,
+            "hard_legal": 500,
+            "mean_complete_seconds": 0.21258616160042584,
+            "p95_complete_seconds": 0.4992161949892761,
+            "max_complete_seconds": 1.617194099992048,
+            "over250ms": 168,
+            "p95_Q": 1.147022428476207,
+            "max_Q": 3.363310806962937,
+            "fallbacks": 0,
+            "model_hash": "72052ab0e9c2fe53388725effd60627392edfcf999ed46b99eb981d70f6bf16d",
+            "cache_hits": 0,
+            "actual_solver_calls": 500,
+            "raw_hard_legal": 0,
+            "latency_scope": "Fresh rows include input/transfer/network/repair/independent hard check; cache hits retain original timing, not a new latency measurement"
+          }
+        ],
+        "minus": [
+          {
+            "count": 500,
+            "weighted_Q": 1.0487567090935774,
+            "mean_Q": 1.0563660262575028,
+            "mixed_Q": 1.05256136767554,
+            "hard_legal": 500,
+            "mean_complete_seconds": 0.2159594774019206,
+            "p95_complete_seconds": 0.504508080013329,
+            "max_complete_seconds": 1.5777084000292234,
+            "over250ms": 167,
+            "p95_Q": 1.1620325711803958,
+            "max_Q": 3.8747751017417875,
+            "fallbacks": 0,
+            "model_hash": "2a3a4892a6dff3b01fd0b15472a16fc712819aaf0a768770d4704385fdd34fae",
+            "cache_hits": 0,
+            "actual_solver_calls": 500,
+            "raw_hard_legal": 0,
+            "latency_scope": "Fresh rows include input/transfer/network/repair/independent hard check; cache hits retain original timing, not a new latency measurement"
+          }
+        ]
+      },
+      "selected_arm": "control",
+      "accepted_candidates": [],
+      "feedback_unique_cases": 500,
+      "feedback_source_population": 16000,
+      "control_result_reused": true,
+      "test_read": false
+    }
+  ],
+  "test_read": false
+}

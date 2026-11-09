@@ -1,0 +1,22 @@
+{
+  "status": "registered_before_calibration",
+  "user_authorization": "好的，准备并在后台开始实验吧。",
+  "scope": "only direct bbox/A term and its coefficient; all other objective terms unchanged",
+  "ids": [
+    1683,
+    10027,
+    5474,
+    10140,
+    15001
+  ],
+  "coefficient_rule": "three significant figures of median five per-case ||d overlap_total/d free_state||_2 / ||d bbox_over_A/d free_state||_2 at initial frozen L draft; single analytic calculation, no candidate training or dev sweep",
+  "gradient_coordinates": "decoded center/log-aspect state, multiply public free-variable mask",
+  "minimum_valid_gradients": 5,
+  "calibration_model": "same E90 initialized zero-head independent F; old E95 best only read-only ranking diagnostic",
+  "controls": "same frozen L, init, seed0, batch32 FP32, order, model and engine; sole primary change bbox objective",
+  "new_training_window_seconds": 7200,
+  "max_optimizer_steps": 9872,
+  "prior_family_seconds": 7200.687475600026,
+  "evaluation_window_seconds": 3600,
+  "test_read": false
+}

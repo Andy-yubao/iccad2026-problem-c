@@ -1,0 +1,14 @@
+{
+  "workers": 1,
+  "torch_intraop": 2,
+  "torch_interop": 1,
+  "parallel_info": "ATen/Parallel:\n\tat::get_num_threads() : 2\n\tat::get_num_interop_threads() : 1\nOpenMP 2019\n\tomp_get_max_threads() : 2\nIntel(R) oneAPI Math Kernel Library Version 2025.1-Product Build 20250306 for Intel(R) 64 architecture applications\n\tmkl_get_max_threads() : 2\nIntel(R) MKL-DNN v3.7.1 (Git Hash 8d263e693366ef8db40acc569cc7d8edf644556d)\nstd::thread::hardware_concurrency() : 24\nEnvironment variables:\n\tOMP_NUM_THREADS : 2\n\tMKL_NUM_THREADS : 2\nATen parallel backend: OpenMP\n",
+  "environment": {
+    "OMP_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2"
+  },
+  "solver_threads": 2,
+  "pid": 11248,
+  "test_read": false
+}

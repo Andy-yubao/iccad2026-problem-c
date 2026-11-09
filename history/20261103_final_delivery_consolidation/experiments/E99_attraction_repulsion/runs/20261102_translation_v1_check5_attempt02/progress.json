@@ -1,0 +1,1776 @@
+{
+  "completed": 5,
+  "records": [
+    {
+      "index": 0,
+      "member": [
+        "worker_18/layouts_8624.th",
+        18
+      ],
+      "n": 100,
+      "source": "experiments/E97_gpu_hybrid_solver/runs/20261102_fullrepair_singlethread_dev500/C3/terminal/0000.json",
+      "source_sha256": "27e738b1d69bd9b8e2ba2bff94a00c5d70d13c4edc7d14f36de13a355a86e91d",
+      "arm_order": [
+        "control",
+        "relaxed"
+      ],
+      "raw_before": {
+        "pair_intersection_over_area_sum": 0.018734355947433935,
+        "overlap_pairs": 98,
+        "mean_module_coverage": 0.04176831332652382,
+        "modules_strictly_below_10pct": 86,
+        "fraction_strictly_below_10pct": 0.86,
+        "worst_module": 62,
+        "worst_module_coverage": 0.1956928569754877,
+        "bbox_area": 31061.14010281934,
+        "bbox_over_area_sum": 1.0505695751462372,
+        "exact_void_fraction": 0.06595710860785362
+      },
+      "raw_after": {
+        "pair_intersection_over_area_sum": 0.017884379689461254,
+        "overlap_pairs": 114,
+        "mean_module_coverage": 0.04253898110660978,
+        "modules_strictly_below_10pct": 88,
+        "fraction_strictly_below_10pct": 0.88,
+        "worst_module": 62,
+        "worst_module_coverage": 0.1853343322136749,
+        "bbox_area": 31123.77503681296,
+        "bbox_over_area_sum": 1.0526880535979992,
+        "exact_void_fraction": 0.06703085158333778
+      },
+      "relaxation": {
+        "config": {
+          "iterations": 4,
+          "step_size": 0.5,
+          "step_fraction": 0.02,
+          "total_fraction": 0.06,
+          "attraction_range": 0.5,
+          "attraction_strength": 0.25,
+          "repulsion_strength": 1.0
+        },
+        "iterations": 4,
+        "stop_reason": "iteration_limit",
+        "max_displacement_fraction": 0.05961252816691394,
+        "mean_displacement_fraction": 0.010270558917435701,
+        "max_path_fraction": 0.060000000000000435,
+        "trace": [
+          {
+            "iteration": 1,
+            "attractive_pairs": 200,
+            "repulsive_pairs": 98,
+            "damping": 11,
+            "max_step_fraction": 0.01911404860629578,
+            "max_path_fraction": 0.01911404860629578
+          },
+          {
+            "iteration": 2,
+            "attractive_pairs": 198,
+            "repulsive_pairs": 100,
+            "damping": 11,
+            "max_step_fraction": 0.01787352968969338,
+            "max_path_fraction": 0.03698757829598916
+          },
+          {
+            "iteration": 3,
+            "attractive_pairs": 195,
+            "repulsive_pairs": 103,
+            "damping": 11,
+            "max_step_fraction": 0.016738248537990583,
+            "max_path_fraction": 0.053725826833979744
+          },
+          {
+            "iteration": 4,
+            "attractive_pairs": 190,
+            "repulsive_pairs": 109,
+            "damping": 11,
+            "max_step_fraction": 0.009364055517907841,
+            "max_path_fraction": 0.060000000000000435
+          }
+        ],
+        "seconds": 0.007280000005266629
+      },
+      "raw_module_width_height_unchanged": true,
+      "preplaced_unchanged": true,
+      "control": {
+        "seconds": 0.252086499996949,
+        "hard": {
+          "overlap_pairs": [],
+          "area_violation_blocks": [],
+          "fixed_or_preplaced_shape_violations": [],
+          "preplaced_location_violations": [],
+          "invalid_geometry_blocks": [],
+          "dimension_or_location_violation_count": 0,
+          "is_feasible": true
+        },
+        "geometry": {
+          "pair_intersection_over_area_sum": 2.342007083509305e-12,
+          "overlap_pairs": 1,
+          "mean_module_coverage": 2.736053733451898e-12,
+          "modules_strictly_below_10pct": 100,
+          "fraction_strictly_below_10pct": 1.0,
+          "worst_module": 54,
+          "worst_module_coverage": 1.59493832207251e-10,
+          "bbox_area": 29759.54515769313,
+          "bbox_over_area_sum": 1.0147188078720526,
+          "exact_void_fraction": 0.014505307046846843
+        },
+        "trace": {
+          "seconds": 0.24946740000450518,
+          "proxy": 0.26237814828847233,
+          "trace": [
+            {
+              "phase": "shape",
+              "legal": true,
+              "status": "Solved",
+              "native_seconds": 0.0368716,
+              "seconds": 0.04173609999998007,
+              "assembly_seconds": 0.0036893999931635335,
+              "setup_seconds": 0.005286200001137331,
+              "iterations": 30,
+              "variables": 1201,
+              "constraints": 3360
+            },
+            {
+              "phase": "shape",
+              "legal": true,
+              "status": "Solved",
+              "native_seconds": 0.0306089,
+              "seconds": 0.03515369999513496,
+              "assembly_seconds": 0.0034736999950837344,
+              "setup_seconds": 0.0035174000076949596,
+              "iterations": 26,
+              "variables": 1194,
+              "constraints": 3346
+            },
+            {
+              "phase": "shape",
+              "legal": true,
+              "status": "Solved",
+              "native_seconds": 0.0328477,
+              "seconds": 0.03745679999701679,
+              "assembly_seconds": 0.0035531000030459836,
+              "setup_seconds": 0.0035872000007657334,
+              "iterations": 27,
+              "variables": 1191,
+              "constraints": 3340
+            },
+            {
+              "phase": "shape",
+              "legal": true,
+              "status": "Solved",
+              "native_seconds": 0.0314367,
+              "seconds": 0.03593330000876449,
+              "assembly_seconds": 0.003435999999055639,
+              "setup_seconds": 0.0035558000090532005,
+              "iterations": 26,
+              "variables": 1202,
+              "constraints": 3362
+            },
+            {
+              "phase": "shape",
+              "legal": true,
+              "status": "Solved",
+              "native_seconds": 0.0320927,
+              "seconds": 0.03663040000537876,
+              "assembly_seconds": 0.00349659999483265,
+              "setup_seconds": 0.003518500001518987,
+              "iterations": 27,
+              "variables": 1198,
+              "constraints": 3354
+            },
+            {
+              "phase": "project",
+              "legal": true,
+              "status": "Solved",
+              "native_seconds": 0.0079209,
+              "seconds": 0.01048169999558013
+            },
+            {
+              "phase": "certified_rigid_moves",
+              "seconds": 0.0006636000034632161,
+              "accepted": 0,
+              "tested": 0
+            }
+          ],
+          "row_retained": false,
+          "public_stopped": false
+        }
+      },
+      "relaxed": {
+        "seconds": 0.2545862999977544,
+        "hard": {
+          "overlap_pairs": [],
+          "area_violation_blocks": [],
+          "fixed_or_preplaced_shape_violations": [],
+          "preplaced_location_violations": [],
+          "invalid_geometry_blocks": [],
+          "dimension_or_location_violation_count": 0,
+          "is_feasible": true
+        },
+        "geometry": {
+          "pair_intersection_over_area_sum": 2.528113063640862e-12,
+          "overlap_pairs": 1,
+          "mean_module_coverage": 2.9534723592786773e-12,
+          "modules_strictly_below_10pct": 100,
+          "fraction_strictly_below_10pct": 1.0,
+          "worst_module": 54,
+          "worst_module_coverage": 1.7216789975276165e-10,
+          "bbox_area": 29759.471419304893,
+          "bbox_over_area_sum": 1.0147162935867748,
+          "exact_void_fraction": 0.014502865167646565
+        },
+        "trace": {
+          "relaxation": {
+            "config": {
+              "iterations": 4,
+              "step_size": 0.5,
+              "step_fraction": 0.02,
+              "total_fraction": 0.06,
+              "attraction_range": 0.5,
+              "attraction_strength": 0.25,
+              "repulsion_strength": 1.0
+            },
+            "iterations": 4,
+            "stop_reason": "iteration_limit",
+            "max_displacement_fraction": 0.05961252816691394,
+            "mean_displacement_fraction": 0.010270558917435701,
+            "max_path_fraction": 0.060000000000000435,
+            "trace": [
+              {
+                "iteration": 1,
+                "attractive_pairs": 200,
+                "repulsive_pairs": 98,
+                "damping": 11,
+                "max_step_fraction": 0.01911404860629578,
+                "max_path_fraction": 0.01911404860629578
+              },
+              {
+                "iteration": 2,
+                "attractive_pairs": 198,
+                "repulsive_pairs": 100,
+                "damping": 11,
+                "max_step_fraction": 0.01787352968969338,
+                "max_path_fraction": 0.03698757829598916
+              },
+              {
+                "iteration": 3,
+                "attractive_pairs": 195,
+                "repulsive_pairs": 103,
+                "damping": 11,
+                "max_step_fraction": 0.016738248537990583,
+                "max_path_fraction": 0.053725826833979744
+              },
+              {
+                "iteration": 4,
+                "attractive_pairs": 190,
+                "repulsive_pairs": 109,
+                "damping": 11,
+                "max_step_fraction": 0.009364055517907841,
+                "max_path_fraction": 0.060000000000000435
+              }
+            ],
+            "seconds": 0.006573099992237985
+          },
+          "planner": {
+            "seconds": 0.24532940000062808,
+            "proxy": 0.2623787089624924,
+            "trace": [
+              {
+                "phase": "shape",
+                "legal": true,
+                "status": "Solved",
+                "native_seconds": 0.0361885,
+                "seconds": 0.04061320000619162,
+                "assembly_seconds": 0.003362200004630722,
+                "setup_seconds": 0.003642199997557327,
+                "iterations": 30,
+                "variables": 1202,
+                "constraints": 3362
+              },
+              {
+                "phase": "shape",
+                "legal": true,
+                "status": "Solved",
+                "native_seconds": 0.0291772,
+                "seconds": 0.03366700001060963,
+                "assembly_seconds": 0.003450700009125285,
+                "setup_seconds": 0.0035342999908607453,
+                "iterations": 25,
+                "variables": 1194,
+                "constraints": 3346
+              },
+              {
+                "phase": "shape",
+                "legal": true,
+                "status": "Solved",
+                "native_seconds": 0.033811,
+                "seconds": 0.03841090000059921,
+                "assembly_seconds": 0.0035208000044804066,
+                "setup_seconds": 0.003612999993492849,
+                "iterations": 28,
+                "variables": 1190,
+                "constraints": 3338
+              },
+              {
+                "phase": "shape",
+                "legal": true,
+                "status": "Solved",
+                "native_seconds": 0.0313236,
+                "seconds": 0.03605480000260286,
+                "assembly_seconds": 0.0036641000042436644,
+                "setup_seconds": 0.0035908999998355284,
+                "iterations": 26,
+                "variables": 1202,
+                "constraints": 3362
+              },
+              {
+                "phase": "shape",
+                "legal": true,
+                "status": "Solved",
+                "native_seconds": 0.0331017,
+                "seconds": 0.03763239999534562,
+                "assembly_seconds": 0.003465200003120117,
+                "setup_seconds": 0.003744000001461245,
+                "iterations": 27,
+                "variables": 1198,
+                "constraints": 3354
+              },
+              {
+                "phase": "project",
+                "legal": true,
+                "status": "Solved",
+                "native_seconds": 0.0080951,
+                "seconds": 0.010692300013033673
+              },
+              {
+                "phase": "certified_rigid_moves",
+                "seconds": 0.0005807999987155199,
+                "accepted": 0,
+                "tested": 0
+              }
+            ],
+            "row_retained": false,
+            "public_stopped": false
+          },
+          "cpu_draft_to_planner_seconds": 0.25202050000370946
+        }
+      }
+    },
+    {
+      "index": 1,
+      "member": [
+        "worker_69/layouts_6160.th",
+        51
+      ],
+      "n": 44,
+      "source": "experiments/E97_gpu_hybrid_solver/runs/20261102_fullrepair_singlethread_dev500/C3/terminal/0001.json",
+      "source_sha256": "6c49842aafc3e62c971ce939ba813db7a4b24f08b9cdf22d9c9858b148b85bbc",
+      "arm_order": [
+        "relaxed",
+        "control"
+      ],
+      "raw_before": {
+        "pair_intersection_over_area_sum": 0.037149020178417834,
+        "overlap_pairs": 47,
+        "mean_module_coverage": 0.08325283308509236,
+        "modules_strictly_below_10pct": 34,
+        "fraction_strictly_below_10pct": 0.7727272727272727,
+        "worst_module": 12,
+        "worst_module_coverage": 0.6348049865379795,
+        "bbox_area": 13247.482338578895,
+        "bbox_over_area_sum": 1.0571768052811426,
+        "exact_void_fraction": 0.08921998348281678
+      },
+      "raw_after": {
+        "pair_intersection_over_area_sum": 0.03694455744111615,
+        "overlap_pairs": 56,
+        "mean_module_coverage": 0.08308063065583803,
+        "modules_strictly_below_10pct": 34,
+        "fraction_strictly_below_10pct": 0.7727272727272727,
+        "worst_module": 12,
+        "worst_module_coverage": 0.5742809409926803,
+        "bbox_area": 13316.926119734731,
+        "bbox_over_area_sum": 1.062718564298641,
+        "exact_void_fraction": 0.09371809265520173
+      },
+      "relaxation": {
+        "config": {
+          "iterations": 4,
+          "step_size": 0.5,
+          "step_fraction": 0.02,
+          "total_fraction": 0.06,
+          "attraction_range": 0.5,
+          "attraction_strength": 0.25,
+          "repulsion_strength": 1.0
+        },
+        "iterations": 4,
+        "stop_reason": "iteration_limit",
+        "max_displacement_fraction": 0.05999636856857184,
+        "mean_displacement_fraction": 0.012700488768807172,
+        "max_path_fraction": 0.05999999999999987,
+        "trace": [
+          {
+            "iteration": 1,
+            "attractive_pairs": 69,
+            "repulsive_pairs": 47,
+            "damping": 10,
+            "max_step_fraction": 0.020000000000000618,
+            "max_path_fraction": 0.020000000000000618
+          },
+          {
+            "iteration": 2,
+            "attractive_pairs": 64,
+            "repulsive_pairs": 53,
+            "damping": 11,
+            "max_step_fraction": 0.019999999999999754,
+            "max_path_fraction": 0.04000000000000037
+          },
+          {
+            "iteration": 3,
+            "attractive_pairs": 62,
+            "repulsive_pairs": 55,
+            "damping": 11,
+            "max_step_fraction": 0.019999999999999504,
+            "max_path_fraction": 0.05999999999999987
+          },
+          {
+            "iteration": 4,
+            "attractive_pairs": 62,
+            "repulsive_pairs": 55,
+            "damping": 11,
+            "max_step_fraction": 0.01279828443784171,
+            "max_path_fraction": 0.05999999999999987
+          }
+        ],
+        "seconds": 0.002572599987615831
+      },
+      "raw_module_width_height_unchanged": true,
+      "preplaced_unchanged": true,
+      "control": {
+        "seconds": 0.07383959999424405,
+        "hard": {
+          "overlap_pairs": [],
+          "area_violation_blocks": [],
+          "fixed_or_preplaced_shape_violations": [],
+          "preplaced_location_violations": [],
+          "invalid_geometry_blocks": [],
+          "dimension_or_location_violation_count": 0,
+          "is_feasible": true
+        },
+        "geometry": {
+          "pair_intersection_over_area_sum": 1.8829762327030646e-11,
+          "overlap_pairs": 3,
+          "mean_module_coverage": 3.776227412825237e-11,
+          "modules_strictly_below_10pct": 44,
+          "fraction_strictly_below_10pct": 1.0,
+          "worst_module": 14,
+          "worst_module_coverage": 5.933115436134626e-10,
+          "bbox_area": 14179.429701866,
+          "bbox_over_area_sum": 1.141129901095413,
+          "exact_void_fraction": 0.12367557889664171
+        },
+        "trace": {
+          "seconds": 0.0730327000055695,
+          "proxy": 0.30532659358763875,
+          "trace": [
+            {
+              "phase": "shape",
+              "legal": false,
+              "status": "AlmostSolved",
+              "native_seconds": 0.0105651,
+              "seconds": 0.013076400005957112,
+              "assembly_seconds": 0.002019999999902211,
+              "setup_seconds": 0.0015290000010281801,
+              "iterations": 22,
+              "variables": 513,
+              "constraints": 1470
+            },
+            {
+              "phase": "shape",
+              "legal": false,
+              "status": "Solved",
+              "native_seconds": 0.0110015,
+              "seconds": 0.01356560000567697,
+              "assembly_seconds": 0.002021799999056384,
+              "setup_seconds": 0.0016322000010404736,
+              "iterations": 23,
+              "variables": 508,
+              "constraints": 1460
+            },
+            {
+              "phase": "shape",
+              "legal": false,
+              "status": "Solved",
+              "native_seconds": 0.0105388,
+              "seconds": 0.01302630000282079,
+              "assembly_seconds": 0.0020185000030323863,
+              "setup_seconds": 0.0014795999886700884,
+              "iterations": 22,
+              "variables": 500,
+              "constraints": 1444
+            },
+            {
+              "phase": "shape",
+              "legal": true,
+              "status": "Solved",
+              "native_seconds": 0.0111578,
+              "seconds": 0.013678699993761256,
+              "assembly_seconds": 0.0020283999911043793,
+              "setup_seconds": 0.001502800005255267,
+              "iterations": 22,
+              "variables": 505,
+              "constraints": 1454
+            },
+            {
+              "phase": "project",
+              "legal": true,
+              "status": "Solved",
+              "native_seconds": 0.003011,
+              "seconds": 0.0047008999972604215
+            },
+            {
+              "phase": "certified_rigid_moves",
+              "seconds": 0.0003060000017285347,
+              "accepted": 0,
+              "tested": 0
+            }
+          ],
+          "row_retained": false,
+          "public_stopped": false
+        }
+      },
+      "relaxed": {
+        "seconds": 0.13048910000361502,
+        "hard": {
+          "overlap_pairs": [],
+          "area_violation_blocks": [],
+          "fixed_or_preplaced_shape_violations": [],
+          "preplaced_location_violations": [],
+          "invalid_geometry_blocks": [],
+          "dimension_or_location_violation_count": 0,
+          "is_feasible": true
+        },
+        "geometry": {
+          "pair_intersection_over_area_sum": 1.6197172342399626e-11,
+          "overlap_pairs": 4,
+          "mean_module_coverage": 2.7652657364590668e-11,
+          "modules_strictly_below_10pct": 44,
+          "fraction_strictly_below_10pct": 1.0,
+          "worst_module": 27,
+          "worst_module_coverage": 4.338093553797207e-10,
+          "bbox_area": 14103.30019817513,
+          "bbox_over_area_sum": 1.1350031630242603,
+          "exact_void_fraction": 0.11894518662021743
+        },
+        "trace": {
+          "relaxation": {
+            "config": {
+              "iterations": 4,
+              "step_size": 0.5,
+              "step_fraction": 0.02,
+              "total_fraction": 0.06,
+              "attraction_range": 0.5,
+              "attraction_strength": 0.25,
+              "repulsion_strength": 1.0
+            },
+            "iterations": 4,
+            "stop_reason": "iteration_limit",
+            "max_displacement_fraction": 0.05999636856857184,
+            "mean_displacement_fraction": 0.012700488768807172,
+            "max_path_fraction": 0.05999999999999987,
+            "trace": [
+              {
+                "iteration": 1,
+                "attractive_pairs": 69,
+                "repulsive_pairs": 47,
+                "damping": 10,
+                "max_step_fraction": 0.020000000000000618,
+                "max_path_fraction": 0.020000000000000618
+              },
+              {
+                "iteration": 2,
+                "attractive_pairs": 64,
+                "repulsive_pairs": 53,
+                "damping": 11,
+                "max_step_fraction": 0.019999999999999754,
+                "max_path_fraction": 0.04000000000000037
+              },
+              {
+                "iteration": 3,
+                "attractive_pairs": 62,
+                "repulsive_pairs": 55,
+                "damping": 11,
+                "max_step_fraction": 0.019999999999999504,
+                "max_path_fraction": 0.05999999999999987
+              },
+              {
+                "iteration": 4,
+                "attractive_pairs": 62,
+                "repulsive_pairs": 55,
+                "damping": 11,
+                "max_step_fraction": 0.01279828443784171,
+                "max_path_fraction": 0.05999999999999987
+              }
+            ],
+            "seconds": 0.0019995000038761646
+          },
+          "planner": {
+            "seconds": 0.12768060000962578,
+            "proxy": 0.30471086659086233,
+            "trace": [
+              {
+                "phase": "shape",
+                "legal": false,
+                "status": "Solved",
+                "native_seconds": 0.0106944,
+                "seconds": 0.013524499998311512,
+                "assembly_seconds": 0.0023201000003609806,
+                "setup_seconds": 0.0016051999991759658,
+                "iterations": 22,
+                "variables": 514,
+                "constraints": 1472
+              },
+              {
+                "phase": "shape",
+                "legal": false,
+                "status": "Solved",
+                "native_seconds": 0.010721,
+                "seconds": 0.013449799997033551,
+                "assembly_seconds": 0.0022370000078808516,
+                "setup_seconds": 0.0014923999988241121,
+                "iterations": 23,
+                "variables": 508,
+                "constraints": 1460
+              },
+              {
+                "phase": "shape",
+                "legal": false,
+                "status": "Solved",
+                "native_seconds": 0.0130785,
+                "seconds": 0.01568369999586139,
+                "assembly_seconds": 0.0020927000005031005,
+                "setup_seconds": 0.0014419999934034422,
+                "iterations": 23,
+                "variables": 500,
+                "constraints": 1444
+              },
+              {
+                "phase": "early_projection",
+                "legal": false,
+                "status": "PrimalInfeasible",
+                "native_seconds": 0.0051431,
+                "seconds": 0.006422899998142384
+              },
+              {
+                "phase": "shape",
+                "legal": true,
+                "status": "Solved",
+                "native_seconds": 0.0103738,
+                "seconds": 0.012927999996463768,
+                "assembly_seconds": 0.0020278000010875985,
+                "setup_seconds": 0.001473299998906441,
+                "iterations": 22,
+                "variables": 506,
+                "constraints": 1456
+              },
+              {
+                "phase": "shape",
+                "legal": true,
+                "status": "Solved",
+                "native_seconds": 0.0102455,
+                "seconds": 0.0128231999988202,
+                "assembly_seconds": 0.0021137000003363937,
+                "setup_seconds": 0.0014424999972106889,
+                "iterations": 22,
+                "variables": 494,
+                "constraints": 1432
+              },
+              {
+                "phase": "shape",
+                "legal": true,
+                "status": "Solved",
+                "native_seconds": 0.0101168,
+                "seconds": 0.012622000009287149,
+                "assembly_seconds": 0.0020462999964365736,
+                "setup_seconds": 0.0014375000027939677,
+                "iterations": 22,
+                "variables": 493,
+                "constraints": 1430
+              },
+              {
+                "phase": "shape",
+                "legal": true,
+                "status": "Solved",
+                "native_seconds": 0.0095757,
+                "seconds": 0.012031699996441603,
+                "assembly_seconds": 0.001987600000575185,
+                "setup_seconds": 0.0014075000071898103,
+                "iterations": 21,
+                "variables": 496,
+                "constraints": 1436
+              },
+              {
+                "phase": "project",
+                "legal": true,
+                "status": "Solved",
+                "native_seconds": 0.0028178,
+                "seconds": 0.004124499988392927
+              },
+              {
+                "phase": "certified_rigid_moves",
+                "seconds": 0.00031480001052841544,
+                "accepted": 0,
+                "tested": 0
+              }
+            ],
+            "row_retained": false,
+            "public_stopped": false
+          },
+          "cpu_draft_to_planner_seconds": 0.12978560000192374
+        }
+      }
+    },
+    {
+      "index": 2,
+      "member": [
+        "worker_38/layouts_3024.th",
+        34
+      ],
+      "n": 43,
+      "source": "experiments/E97_gpu_hybrid_solver/runs/20261102_fullrepair_singlethread_dev500/C3/terminal/0002.json",
+      "source_sha256": "5e431b02e0d089168523c0630ad8a99fdc5a6069c5b76713cd0fff331791b969",
+      "arm_order": [
+        "control",
+        "relaxed"
+      ],
+      "raw_before": {
+        "pair_intersection_over_area_sum": 0.019431472536280924,
+        "overlap_pairs": 38,
+        "mean_module_coverage": 0.04400197305412454,
+        "modules_strictly_below_10pct": 40,
+        "fraction_strictly_below_10pct": 0.9302325581395349,
+        "worst_module": 28,
+        "worst_module_coverage": 0.3969299894577309,
+        "bbox_area": 14173.66003981177,
+        "bbox_over_area_sum": 1.0339699303851264,
+        "exact_void_fraction": 0.05164670639291183
+      },
+      "raw_after": {
+        "pair_intersection_over_area_sum": 0.019483794441869234,
+        "overlap_pairs": 43,
+        "mean_module_coverage": 0.04478386054780598,
+        "modules_strictly_below_10pct": 40,
+        "fraction_strictly_below_10pct": 0.9302325581395349,
+        "worst_module": 28,
+        "worst_module_coverage": 0.36178976826832443,
+        "bbox_area": 14244.228540215498,
+        "bbox_over_area_sum": 1.0391179096117251,
+        "exact_void_fraction": 0.05639562508887123
+      },
+      "relaxation": {
+        "config": {
+          "iterations": 4,
+          "step_size": 0.5,
+          "step_fraction": 0.02,
+          "total_fraction": 0.06,
+          "attraction_range": 0.5,
+          "attraction_strength": 0.25,
+          "repulsion_strength": 1.0
+        },
+        "iterations": 4,
+        "stop_reason": "iteration_limit",
+        "max_displacement_fraction": 0.0544002185073197,
+        "mean_displacement_fraction": 0.012762533313666634,
+        "max_path_fraction": 0.054447960901543004,
+        "trace": [
+          {
+            "iteration": 1,
+            "attractive_pairs": 75,
+            "repulsive_pairs": 38,
+            "damping": 10,
+            "max_step_fraction": 0.016758896209915736,
+            "max_path_fraction": 0.016758896209915736
+          },
+          {
+            "iteration": 2,
+            "attractive_pairs": 72,
+            "repulsive_pairs": 41,
+            "damping": 10,
+            "max_step_fraction": 0.014456405828868715,
+            "max_path_fraction": 0.031215302038784455
+          },
+          {
+            "iteration": 3,
+            "attractive_pairs": 73,
+            "repulsive_pairs": 40,
+            "damping": 10,
+            "max_step_fraction": 0.012471910044739984,
+            "max_path_fraction": 0.043687212083524433
+          },
+          {
+            "iteration": 4,
+            "attractive_pairs": 71,
+            "repulsive_pairs": 42,
+            "damping": 10,
+            "max_step_fraction": 0.010977905013993908,
+            "max_path_fraction": 0.054447960901543004
+          }
+        ],
+        "seconds": 0.002432199995382689
+      },
+      "raw_module_width_height_unchanged": true,
+      "preplaced_unchanged": true,
+      "control": {
+        "seconds": 0.06647349998820573,
+        "hard": {
+          "overlap_pairs": [],
+          "area_violation_blocks": [],
+          "fixed_or_preplaced_shape_violations": [],
+          "preplaced_location_violations": [],
+          "invalid_geometry_blocks": [],
+          "dimension_or_location_violation_count": 0,
+          "is_feasible": true
+        },
+        "geometry": {
+          "pair_intersection_over_area_sum": 9.642238575409724e-13,
+          "overlap_pairs": 7,
+          "mean_module_coverage": 2.0929786828765946e-12,
+          "modules_strictly_below_10pct": 43,
+          "fraction_strictly_below_10pct": 1.0,
+          "worst_module": 1,
+          "worst_module_coverage": 2.9057381608978763e-11,
+          "bbox_area": 13738.111143233094,
+          "bbox_over_area_sum": 1.0114334658455264,
+          "exact_void_fraction": 0.011304219439617439
+        },
+        "trace": {
+          "seconds": 0.06576049998693634,
+          "proxy": 0.2868266468985755,
+          "trace": [
+            {
+              "phase": "shape",
+              "legal": true,
+              "status": "AlmostSolved",
+              "native_seconds": 0.0091505,
+              "seconds": 0.011725199990905821,
+              "assembly_seconds": 0.0020985000010114163,
+              "setup_seconds": 0.0014994999946793541,
+              "iterations": 20,
+              "variables": 488,
+              "constraints": 1398
+            },
+            {
+              "phase": "shape",
+              "legal": false,
+              "status": "AlmostSolved",
+              "native_seconds": 0.0086749,
+              "seconds": 0.011203700007172301,
+              "assembly_seconds": 0.0020655999978771433,
+              "setup_seconds": 0.0014242000033846125,
+              "iterations": 19,
+              "variables": 490,
+              "constraints": 1402
+            },
+            {
+              "phase": "shape",
+              "legal": true,
+              "status": "Solved",
+              "native_seconds": 0.008924,
+              "seconds": 0.011518799990881234,
+              "assembly_seconds": 0.002117599986377172,
+              "setup_seconds": 0.00149200001033023,
+              "iterations": 19,
+              "variables": 488,
+              "constraints": 1398
+            },
+            {
+              "phase": "shape",
+              "legal": true,
+              "status": "Solved",
+              "native_seconds": 0.0093061,
+              "seconds": 0.011865599997690879,
+              "assembly_seconds": 0.0020920999959344044,
+              "setup_seconds": 0.0014049000019440427,
+              "iterations": 20,
+              "variables": 483,
+              "constraints": 1388
+            },
+            {
+              "phase": "project",
+              "legal": true,
+              "status": "Solved",
+              "native_seconds": 0.0024211,
+              "seconds": 0.003867300009005703
+            },
+            {
+              "phase": "certified_rigid_moves",
+              "seconds": 0.00030309999419841915,
+              "accepted": 0,
+              "tested": 0
+            }
+          ],
+          "row_retained": false,
+          "public_stopped": false
+        }
+      },
+      "relaxed": {
+        "seconds": 0.06962759999441914,
+        "hard": {
+          "overlap_pairs": [],
+          "area_violation_blocks": [],
+          "fixed_or_preplaced_shape_violations": [],
+          "preplaced_location_violations": [],
+          "invalid_geometry_blocks": [],
+          "dimension_or_location_violation_count": 0,
+          "is_feasible": true
+        },
+        "geometry": {
+          "pair_intersection_over_area_sum": 2.6852825128937055e-11,
+          "overlap_pairs": 4,
+          "mean_module_coverage": 4.315982886223725e-11,
+          "modules_strictly_below_10pct": 43,
+          "fraction_strictly_below_10pct": 1.0,
+          "worst_module": 9,
+          "worst_module_coverage": 4.0285828474320866e-10,
+          "bbox_area": 13738.07910318266,
+          "bbox_over_area_sum": 1.011431106908629,
+          "exact_void_fraction": 0.011301913553381384
+        },
+        "trace": {
+          "relaxation": {
+            "config": {
+              "iterations": 4,
+              "step_size": 0.5,
+              "step_fraction": 0.02,
+              "total_fraction": 0.06,
+              "attraction_range": 0.5,
+              "attraction_strength": 0.25,
+              "repulsion_strength": 1.0
+            },
+            "iterations": 4,
+            "stop_reason": "iteration_limit",
+            "max_displacement_fraction": 0.0544002185073197,
+            "mean_displacement_fraction": 0.012762533313666634,
+            "max_path_fraction": 0.054447960901543004,
+            "trace": [
+              {
+                "iteration": 1,
+                "attractive_pairs": 75,
+                "repulsive_pairs": 38,
+                "damping": 10,
+                "max_step_fraction": 0.016758896209915736,
+                "max_path_fraction": 0.016758896209915736
+              },
+              {
+                "iteration": 2,
+                "attractive_pairs": 72,
+                "repulsive_pairs": 41,
+                "damping": 10,
+                "max_step_fraction": 0.014456405828868715,
+                "max_path_fraction": 0.031215302038784455
+              },
+              {
+                "iteration": 3,
+                "attractive_pairs": 73,
+                "repulsive_pairs": 40,
+                "damping": 10,
+                "max_step_fraction": 0.012471910044739984,
+                "max_path_fraction": 0.043687212083524433
+              },
+              {
+                "iteration": 4,
+                "attractive_pairs": 71,
+                "repulsive_pairs": 42,
+                "damping": 10,
+                "max_step_fraction": 0.010977905013993908,
+                "max_path_fraction": 0.054447960901543004
+              }
+            ],
+            "seconds": 0.002476400011801161
+          },
+          "planner": {
+            "seconds": 0.06638230000680778,
+            "proxy": 0.2868265514335646,
+            "trace": [
+              {
+                "phase": "shape",
+                "legal": true,
+                "status": "AlmostSolved",
+                "native_seconds": 0.0096962,
+                "seconds": 0.012154299998655915,
+                "assembly_seconds": 0.002004599999054335,
+                "setup_seconds": 0.0014311999984784052,
+                "iterations": 21,
+                "variables": 488,
+                "constraints": 1398
+              },
+              {
+                "phase": "shape",
+                "legal": true,
+                "status": "Solved",
+                "native_seconds": 0.00894,
+                "seconds": 0.01151729999401141,
+                "assembly_seconds": 0.002119299999321811,
+                "setup_seconds": 0.0013761000009253621,
+                "iterations": 19,
+                "variables": 491,
+                "constraints": 1404
+              },
+              {
+                "phase": "shape",
+                "legal": true,
+                "status": "AlmostSolved",
+                "native_seconds": 0.0088526,
+                "seconds": 0.011575800002901815,
+                "assembly_seconds": 0.002275899998494424,
+                "setup_seconds": 0.001385900002787821,
+                "iterations": 19,
+                "variables": 488,
+                "constraints": 1398
+              },
+              {
+                "phase": "shape",
+                "legal": true,
+                "status": "AlmostSolved",
+                "native_seconds": 0.0089771,
+                "seconds": 0.011363400000846013,
+                "assembly_seconds": 0.0019358999998075888,
+                "setup_seconds": 0.001336100001935847,
+                "iterations": 20,
+                "variables": 483,
+                "constraints": 1388
+              },
+              {
+                "phase": "project",
+                "legal": true,
+                "status": "Solved",
+                "native_seconds": 0.0025134,
+                "seconds": 0.003959699999541044
+              },
+              {
+                "phase": "certified_rigid_moves",
+                "seconds": 0.0003009999927598983,
+                "accepted": 0,
+                "tested": 0
+              }
+            ],
+            "row_retained": false,
+            "public_stopped": false
+          },
+          "cpu_draft_to_planner_seconds": 0.06895309999526944
+        }
+      }
+    },
+    {
+      "index": 3,
+      "member": [
+        "worker_19/layouts_3696.th",
+        76
+      ],
+      "n": 109,
+      "source": "experiments/E97_gpu_hybrid_solver/runs/20261102_fullrepair_singlethread_dev500/C3/terminal/0003.json",
+      "source_sha256": "a0163eeda3a3f68d4b142ad5f2a67d4b96ebf88be30e1afdf39b2d404cb93814",
+      "arm_order": [
+        "relaxed",
+        "control"
+      ],
+      "raw_before": {
+        "pair_intersection_over_area_sum": 0.03375547421684735,
+        "overlap_pairs": 95,
+        "mean_module_coverage": 0.07315485730683219,
+        "modules_strictly_below_10pct": 83,
+        "fraction_strictly_below_10pct": 0.7614678899082569,
+        "worst_module": 74,
+        "worst_module_coverage": 0.5841603039825392,
+        "bbox_area": 28890.192806510746,
+        "bbox_over_area_sum": 1.0823134716625806,
+        "exact_void_fraction": 0.10687243686455773
+      },
+      "raw_after": {
+        "pair_intersection_over_area_sum": 0.033133266559588787,
+        "overlap_pairs": 104,
+        "mean_module_coverage": 0.07461165560963894,
+        "modules_strictly_below_10pct": 84,
+        "fraction_strictly_below_10pct": 0.7706422018348624,
+        "worst_module": 74,
+        "worst_module_coverage": 0.5675648276375578,
+        "bbox_area": 29102.520245804182,
+        "bbox_over_area_sum": 1.0902678958330942,
+        "exact_void_fraction": 0.11294316777137689
+      },
+      "relaxation": {
+        "config": {
+          "iterations": 4,
+          "step_size": 0.5,
+          "step_fraction": 0.02,
+          "total_fraction": 0.06,
+          "attraction_range": 0.5,
+          "attraction_strength": 0.25,
+          "repulsion_strength": 1.0
+        },
+        "iterations": 4,
+        "stop_reason": "iteration_limit",
+        "max_displacement_fraction": 0.059949965128203796,
+        "mean_displacement_fraction": 0.01464323055717482,
+        "max_path_fraction": 0.06000000000000175,
+        "trace": [
+          {
+            "iteration": 1,
+            "attractive_pairs": 190,
+            "repulsive_pairs": 95,
+            "damping": 10,
+            "max_step_fraction": 0.02000000000000043,
+            "max_path_fraction": 0.02000000000000043
+          },
+          {
+            "iteration": 2,
+            "attractive_pairs": 185,
+            "repulsive_pairs": 100,
+            "damping": 10,
+            "max_step_fraction": 0.01781087311293453,
+            "max_path_fraction": 0.037810873112934955
+          },
+          {
+            "iteration": 3,
+            "attractive_pairs": 183,
+            "repulsive_pairs": 101,
+            "damping": 10,
+            "max_step_fraction": 0.016669299270926904,
+            "max_path_fraction": 0.05244338134909855
+          },
+          {
+            "iteration": 4,
+            "attractive_pairs": 185,
+            "repulsive_pairs": 102,
+            "damping": 10,
+            "max_step_fraction": 0.012377895689900149,
+            "max_path_fraction": 0.06000000000000175
+          }
+        ],
+        "seconds": 0.007760599997709505
+      },
+      "raw_module_width_height_unchanged": true,
+      "preplaced_unchanged": true,
+      "control": {
+        "seconds": 0.3093061999970814,
+        "hard": {
+          "overlap_pairs": [],
+          "area_violation_blocks": [],
+          "fixed_or_preplaced_shape_violations": [],
+          "preplaced_location_violations": [],
+          "invalid_geometry_blocks": [],
+          "dimension_or_location_violation_count": 0,
+          "is_feasible": true
+        },
+        "geometry": {
+          "pair_intersection_over_area_sum": 5.412485340688799e-11,
+          "overlap_pairs": 16,
+          "mean_module_coverage": 9.83167781584788e-11,
+          "modules_strictly_below_10pct": 109,
+          "fraction_strictly_below_10pct": 1.0,
+          "worst_module": 103,
+          "worst_module_coverage": 2.064404248893238e-09,
+          "bbox_area": 27244.933009351436,
+          "bbox_over_area_sum": 1.029544931329512,
+          "exact_void_fraction": 0.028697078179466935
+        },
+        "trace": {
+          "seconds": 0.3060736000043107,
+          "proxy": 0.24817152120340652,
+          "trace": [
+            {
+              "phase": "shape",
+              "legal": true,
+              "status": "Solved",
+              "native_seconds": 0.0382866,
+              "seconds": 0.044786099999328144,
+              "assembly_seconds": 0.005280299999867566,
+              "setup_seconds": 0.0039659000030951574,
+              "iterations": 29,
+              "variables": 1308,
+              "constraints": 3694
+            },
+            {
+              "phase": "shape",
+              "legal": true,
+              "status": "AlmostSolved",
+              "native_seconds": 0.0338043,
+              "seconds": 0.03804800000216346,
+              "assembly_seconds": 0.0030941000004531816,
+              "setup_seconds": 0.0038244000024860725,
+              "iterations": 27,
+              "variables": 1300,
+              "constraints": 3678
+            },
+            {
+              "phase": "shape",
+              "legal": true,
+              "status": "Solved",
+              "native_seconds": 0.036111,
+              "seconds": 0.04054140001244377,
+              "assembly_seconds": 0.0032233000092674047,
+              "setup_seconds": 0.0038610999908996746,
+              "iterations": 29,
+              "variables": 1281,
+              "constraints": 3640
+            },
+            {
+              "phase": "shape",
+              "legal": true,
+              "status": "Solved",
+              "native_seconds": 0.037061,
+              "seconds": 0.041355299996212125,
+              "assembly_seconds": 0.003119500004686415,
+              "setup_seconds": 0.0038585999864153564,
+              "iterations": 30,
+              "variables": 1279,
+              "constraints": 3636
+            },
+            {
+              "phase": "shape",
+              "legal": true,
+              "status": "Solved",
+              "native_seconds": 0.0371612,
+              "seconds": 0.04159599999547936,
+              "assembly_seconds": 0.003277900003013201,
+              "setup_seconds": 0.0038994999922579154,
+              "iterations": 30,
+              "variables": 1276,
+              "constraints": 3630
+            },
+            {
+              "phase": "shape",
+              "legal": true,
+              "status": "MaxTime",
+              "native_seconds": 0.021707,
+              "seconds": 0.026069999992614612,
+              "assembly_seconds": 0.003182299988111481,
+              "setup_seconds": 0.00391220000165049,
+              "iterations": 17,
+              "variables": 1271,
+              "constraints": 3620
+            },
+            {
+              "phase": "project",
+              "legal": true,
+              "status": "Solved",
+              "native_seconds": 0.0104376,
+              "seconds": 0.012708100010058843
+            },
+            {
+              "phase": "certified_rigid_moves",
+              "seconds": 0.0004133000038564205,
+              "accepted": 0,
+              "tested": 0
+            }
+          ],
+          "row_retained": false,
+          "public_stopped": false
+        }
+      },
+      "relaxed": {
+        "seconds": 0.316490099998191,
+        "hard": {
+          "overlap_pairs": [],
+          "area_violation_blocks": [],
+          "fixed_or_preplaced_shape_violations": [],
+          "preplaced_location_violations": [],
+          "invalid_geometry_blocks": [],
+          "dimension_or_location_violation_count": 0,
+          "is_feasible": true
+        },
+        "geometry": {
+          "pair_intersection_over_area_sum": 1.8567340112611492e-13,
+          "overlap_pairs": 1,
+          "mean_module_coverage": 1.6796691655232336e-13,
+          "modules_strictly_below_10pct": 109,
+          "fraction_strictly_below_10pct": 1.0,
+          "worst_module": 101,
+          "worst_module_coverage": 1.1029148524800436e-11,
+          "bbox_area": 27256.859999116325,
+          "bbox_over_area_sum": 1.0299956344731005,
+          "exact_void_fraction": 0.029122098647175795
+        },
+        "trace": {
+          "relaxation": {
+            "config": {
+              "iterations": 4,
+              "step_size": 0.5,
+              "step_fraction": 0.02,
+              "total_fraction": 0.06,
+              "attraction_range": 0.5,
+              "attraction_strength": 0.25,
+              "repulsion_strength": 1.0
+            },
+            "iterations": 4,
+            "stop_reason": "iteration_limit",
+            "max_displacement_fraction": 0.059949965128203796,
+            "mean_displacement_fraction": 0.01464323055717482,
+            "max_path_fraction": 0.06000000000000175,
+            "trace": [
+              {
+                "iteration": 1,
+                "attractive_pairs": 190,
+                "repulsive_pairs": 95,
+                "damping": 10,
+                "max_step_fraction": 0.02000000000000043,
+                "max_path_fraction": 0.02000000000000043
+              },
+              {
+                "iteration": 2,
+                "attractive_pairs": 185,
+                "repulsive_pairs": 100,
+                "damping": 10,
+                "max_step_fraction": 0.01781087311293453,
+                "max_path_fraction": 0.037810873112934955
+              },
+              {
+                "iteration": 3,
+                "attractive_pairs": 183,
+                "repulsive_pairs": 101,
+                "damping": 10,
+                "max_step_fraction": 0.016669299270926904,
+                "max_path_fraction": 0.05244338134909855
+              },
+              {
+                "iteration": 4,
+                "attractive_pairs": 185,
+                "repulsive_pairs": 102,
+                "damping": 10,
+                "max_step_fraction": 0.012377895689900149,
+                "max_path_fraction": 0.06000000000000175
+              }
+            ],
+            "seconds": 0.007247900008223951
+          },
+          "planner": {
+            "seconds": 0.30599740000616293,
+            "proxy": 0.2492379381484821,
+            "trace": [
+              {
+                "phase": "shape",
+                "legal": true,
+                "status": "AlmostSolved",
+                "native_seconds": 0.0374551,
+                "seconds": 0.041795500001171604,
+                "assembly_seconds": 0.0031612000020686537,
+                "setup_seconds": 0.0045765999966533855,
+                "iterations": 30,
+                "variables": 1311,
+                "constraints": 3700
+              },
+              {
+                "phase": "shape",
+                "legal": true,
+                "status": "Solved",
+                "native_seconds": 0.03373,
+                "seconds": 0.038011199998436496,
+                "assembly_seconds": 0.0031547000107821077,
+                "setup_seconds": 0.00386399999842979,
+                "iterations": 26,
+                "variables": 1305,
+                "constraints": 3688
+              },
+              {
+                "phase": "shape",
+                "legal": true,
+                "status": "Solved",
+                "native_seconds": 0.0339789,
+                "seconds": 0.03831459999491926,
+                "assembly_seconds": 0.003123100002994761,
+                "setup_seconds": 0.0038477999914903194,
+                "iterations": 27,
+                "variables": 1285,
+                "constraints": 3648
+              },
+              {
+                "phase": "shape",
+                "legal": true,
+                "status": "Solved",
+                "native_seconds": 0.0399262,
+                "seconds": 0.04426650000095833,
+                "assembly_seconds": 0.003106299991486594,
+                "setup_seconds": 0.0038887999980943277,
+                "iterations": 33,
+                "variables": 1286,
+                "constraints": 3650
+              },
+              {
+                "phase": "shape",
+                "legal": true,
+                "status": "Solved",
+                "native_seconds": 0.0400423,
+                "seconds": 0.044478000010713004,
+                "assembly_seconds": 0.003243700004532002,
+                "setup_seconds": 0.0038324000051943585,
+                "iterations": 32,
+                "variables": 1275,
+                "constraints": 3628
+              },
+              {
+                "phase": "shape",
+                "legal": true,
+                "status": "MaxTime",
+                "native_seconds": 0.0211746,
+                "seconds": 0.02552579999610316,
+                "assembly_seconds": 0.0032248999923467636,
+                "setup_seconds": 0.0038420000055339187,
+                "iterations": 17,
+                "variables": 1279,
+                "constraints": 3636
+              },
+              {
+                "phase": "project",
+                "legal": true,
+                "status": "Solved",
+                "native_seconds": 0.0100527,
+                "seconds": 0.01232470000104513
+              },
+              {
+                "phase": "certified_rigid_moves",
+                "seconds": 0.00040439999429509044,
+                "accepted": 0,
+                "tested": 0
+              }
+            ],
+            "row_retained": false,
+            "public_stopped": false
+          },
+          "cpu_draft_to_planner_seconds": 0.31341009998868685
+        }
+      }
+    },
+    {
+      "index": 4,
+      "member": [
+        "worker_83/layouts_6496.th",
+        21
+      ],
+      "n": 73,
+      "source": "experiments/E97_gpu_hybrid_solver/runs/20261102_fullrepair_singlethread_dev500/C3/terminal/0004.json",
+      "source_sha256": "6ff0a026a7fb83ecfa9f28375662184fb8d12450770ff2d2c18333f6a8b59da0",
+      "arm_order": [
+        "control",
+        "relaxed"
+      ],
+      "raw_before": {
+        "pair_intersection_over_area_sum": 0.029415031980015337,
+        "overlap_pairs": 71,
+        "mean_module_coverage": 0.06524050642146006,
+        "modules_strictly_below_10pct": 54,
+        "fraction_strictly_below_10pct": 0.7397260273972602,
+        "worst_module": 14,
+        "worst_module_coverage": 0.31251723859343306,
+        "bbox_area": 21985.50312224718,
+        "bbox_over_area_sum": 1.0653955513631972,
+        "exact_void_fraction": 0.08897726097484823
+      },
+      "raw_after": {
+        "pair_intersection_over_area_sum": 0.02907758767910016,
+        "overlap_pairs": 85,
+        "mean_module_coverage": 0.06386672337289495,
+        "modules_strictly_below_10pct": 55,
+        "fraction_strictly_below_10pct": 0.7534246575342466,
+        "worst_module": 14,
+        "worst_module_coverage": 0.30669204317666426,
+        "bbox_area": 22153.422546822876,
+        "bbox_over_area_sum": 1.0735327591830803,
+        "exact_void_fraction": 0.09555968482662361
+      },
+      "relaxation": {
+        "config": {
+          "iterations": 4,
+          "step_size": 0.5,
+          "step_fraction": 0.02,
+          "total_fraction": 0.06,
+          "attraction_range": 0.5,
+          "attraction_strength": 0.25,
+          "repulsion_strength": 1.0
+        },
+        "iterations": 4,
+        "stop_reason": "iteration_limit",
+        "max_displacement_fraction": 0.05992174462747066,
+        "mean_displacement_fraction": 0.014360483496146433,
+        "max_path_fraction": 0.060000000000000046,
+        "trace": [
+          {
+            "iteration": 1,
+            "attractive_pairs": 124,
+            "repulsive_pairs": 71,
+            "damping": 11,
+            "max_step_fraction": 0.019999999999999997,
+            "max_path_fraction": 0.019999999999999997
+          },
+          {
+            "iteration": 2,
+            "attractive_pairs": 116,
+            "repulsive_pairs": 79,
+            "damping": 11,
+            "max_step_fraction": 0.019544007097525132,
+            "max_path_fraction": 0.039544007097525126
+          },
+          {
+            "iteration": 3,
+            "attractive_pairs": 115,
+            "repulsive_pairs": 80,
+            "damping": 11,
+            "max_step_fraction": 0.018077415587150487,
+            "max_path_fraction": 0.05762142268467561
+          },
+          {
+            "iteration": 4,
+            "attractive_pairs": 114,
+            "repulsive_pairs": 81,
+            "damping": 11,
+            "max_step_fraction": 0.012505254164212706,
+            "max_path_fraction": 0.060000000000000046
+          }
+        ],
+        "seconds": 0.00419000000692904
+      },
+      "raw_module_width_height_unchanged": true,
+      "preplaced_unchanged": true,
+      "control": {
+        "seconds": 0.137438599995221,
+        "hard": {
+          "overlap_pairs": [],
+          "area_violation_blocks": [],
+          "fixed_or_preplaced_shape_violations": [],
+          "preplaced_location_violations": [],
+          "invalid_geometry_blocks": [],
+          "dimension_or_location_violation_count": 0,
+          "is_feasible": true
+        },
+        "geometry": {
+          "pair_intersection_over_area_sum": 1.8037007812745176e-10,
+          "overlap_pairs": 3,
+          "mean_module_coverage": 3.6832473417559734e-10,
+          "modules_strictly_below_10pct": 73,
+          "fraction_strictly_below_10pct": 1.0,
+          "worst_module": 34,
+          "worst_module_coverage": 8.442975285038121e-09,
+          "bbox_area": 21314.29078561082,
+          "bbox_over_area_sum": 1.042236648936954,
+          "exact_void_fraction": 0.04052500855770535
+        },
+        "trace": {
+          "seconds": 0.13589760000468232,
+          "proxy": 0.30942426282072966,
+          "trace": [
+            {
+              "phase": "shape",
+              "legal": true,
+              "status": "Solved",
+              "native_seconds": 0.0215165,
+              "seconds": 0.025336499995319173,
+              "assembly_seconds": 0.0028514000005088747,
+              "setup_seconds": 0.002774599997792393,
+              "iterations": 24,
+              "variables": 878,
+              "constraints": 2476
+            },
+            {
+              "phase": "shape",
+              "legal": true,
+              "status": "Solved",
+              "native_seconds": 0.0198473,
+              "seconds": 0.02366479999909643,
+              "assembly_seconds": 0.0029852000006940216,
+              "setup_seconds": 0.0026288999943062663,
+              "iterations": 23,
+              "variables": 872,
+              "constraints": 2464
+            },
+            {
+              "phase": "shape",
+              "legal": true,
+              "status": "AlmostSolved",
+              "native_seconds": 0.0208523,
+              "seconds": 0.024304500009748153,
+              "assembly_seconds": 0.0026397000037832186,
+              "setup_seconds": 0.002543299997341819,
+              "iterations": 23,
+              "variables": 874,
+              "constraints": 2468
+            },
+            {
+              "phase": "shape",
+              "legal": true,
+              "status": "AlmostSolved",
+              "native_seconds": 0.020602,
+              "seconds": 0.02402569999685511,
+              "assembly_seconds": 0.0026209999923594296,
+              "setup_seconds": 0.0025618000072427094,
+              "iterations": 24,
+              "variables": 875,
+              "constraints": 2470
+            },
+            {
+              "phase": "project",
+              "legal": true,
+              "status": "Solved",
+              "native_seconds": 0.007833,
+              "seconds": 0.009579000005032867
+            },
+            {
+              "phase": "certified_rigid_moves",
+              "seconds": 0.0019002000044565648,
+              "accepted": 0,
+              "tested": 0
+            }
+          ],
+          "row_retained": false,
+          "public_stopped": false
+        }
+      },
+      "relaxed": {
+        "seconds": 0.14140480000060052,
+        "hard": {
+          "overlap_pairs": [],
+          "area_violation_blocks": [],
+          "fixed_or_preplaced_shape_violations": [],
+          "preplaced_location_violations": [],
+          "invalid_geometry_blocks": [],
+          "dimension_or_location_violation_count": 0,
+          "is_feasible": true
+        },
+        "geometry": {
+          "pair_intersection_over_area_sum": 1.837304208391695e-10,
+          "overlap_pairs": 2,
+          "mean_module_coverage": 3.3848906001018615e-10,
+          "modules_strictly_below_10pct": 73,
+          "fraction_strictly_below_10pct": 1.0,
+          "worst_module": 34,
+          "worst_module_coverage": 8.504601437479675e-09,
+          "bbox_area": 21315.592942406074,
+          "bbox_over_area_sum": 1.0423003179328234,
+          "exact_void_fraction": 0.040583618165297534
+        },
+        "trace": {
+          "relaxation": {
+            "config": {
+              "iterations": 4,
+              "step_size": 0.5,
+              "step_fraction": 0.02,
+              "total_fraction": 0.06,
+              "attraction_range": 0.5,
+              "attraction_strength": 0.25,
+              "repulsion_strength": 1.0
+            },
+            "iterations": 4,
+            "stop_reason": "iteration_limit",
+            "max_displacement_fraction": 0.05992174462747066,
+            "mean_displacement_fraction": 0.014360483496146433,
+            "max_path_fraction": 0.060000000000000046,
+            "trace": [
+              {
+                "iteration": 1,
+                "attractive_pairs": 124,
+                "repulsive_pairs": 71,
+                "damping": 11,
+                "max_step_fraction": 0.019999999999999997,
+                "max_path_fraction": 0.019999999999999997
+              },
+              {
+                "iteration": 2,
+                "attractive_pairs": 116,
+                "repulsive_pairs": 79,
+                "damping": 11,
+                "max_step_fraction": 0.019544007097525132,
+                "max_path_fraction": 0.039544007097525126
+              },
+              {
+                "iteration": 3,
+                "attractive_pairs": 115,
+                "repulsive_pairs": 80,
+                "damping": 11,
+                "max_step_fraction": 0.018077415587150487,
+                "max_path_fraction": 0.05762142268467561
+              },
+              {
+                "iteration": 4,
+                "attractive_pairs": 114,
+                "repulsive_pairs": 81,
+                "damping": 11,
+                "max_step_fraction": 0.012505254164212706,
+                "max_path_fraction": 0.060000000000000046
+              }
+            ],
+            "seconds": 0.003870399988954887
+          },
+          "planner": {
+            "seconds": 0.13595019999775104,
+            "proxy": 0.309440691725011,
+            "trace": [
+              {
+                "phase": "shape",
+                "legal": true,
+                "status": "AlmostSolved",
+                "native_seconds": 0.0221258,
+                "seconds": 0.025548200006596744,
+                "assembly_seconds": 0.00259580000420101,
+                "setup_seconds": 0.002590899995993823,
+                "iterations": 24,
+                "variables": 880,
+                "constraints": 2480
+              },
+              {
+                "phase": "shape",
+                "legal": true,
+                "status": "AlmostSolved",
+                "native_seconds": 0.0226252,
+                "seconds": 0.026257299992721528,
+                "assembly_seconds": 0.0028104999946663156,
+                "setup_seconds": 0.0025356999976793304,
+                "iterations": 27,
+                "variables": 869,
+                "constraints": 2458
+              },
+              {
+                "phase": "shape",
+                "legal": true,
+                "status": "AlmostSolved",
+                "native_seconds": 0.0194882,
+                "seconds": 0.022926100005861372,
+                "assembly_seconds": 0.002619899998535402,
+                "setup_seconds": 0.0025682999985292554,
+                "iterations": 23,
+                "variables": 876,
+                "constraints": 2472
+              },
+              {
+                "phase": "shape",
+                "legal": true,
+                "status": "AlmostSolved",
+                "native_seconds": 0.0203588,
+                "seconds": 0.023762100012390874,
+                "assembly_seconds": 0.0025364000030094758,
+                "setup_seconds": 0.002595900004962459,
+                "iterations": 24,
+                "variables": 875,
+                "constraints": 2470
+              },
+              {
+                "phase": "project",
+                "legal": true,
+                "status": "Solved",
+                "native_seconds": 0.0073708,
+                "seconds": 0.009098199996515177
+              },
+              {
+                "phase": "certified_rigid_moves",
+                "seconds": 0.0020471000025281683,
+                "accepted": 0,
+                "tested": 1
+              }
+            ],
+            "row_retained": false,
+            "public_stopped": false
+          },
+          "cpu_draft_to_planner_seconds": 0.13992430000507738
+        }
+      }
+    }
+  ],
+  "test_read": false
+}

@@ -1,0 +1,22 @@
+{
+  "source_checkpoint": "experiments/E97_gpu_hybrid_solver/runs/20261102_candidate3_clearance_seed0/checkpoints/best.pt",
+  "source_sha256": "d784e96f46decf7a487c25bde2ab16db8cf6ebae1bc0632434cc5e2f78173fce",
+  "ids": [
+    1683,
+    10027,
+    5474,
+    10140,
+    15001
+  ],
+  "repetitions": 5,
+  "warmups": 3,
+  "paths": [
+    "old capture=model only, decode/scaling outside graph",
+    "new capture=model+identical decode/scaling, only D2H/public exact restoration outside"
+  ],
+  "purpose": "new implementation anatomy/control, not repeated identical total-only measurement; no solver, train, dev or Q",
+  "cpu_threads": 1,
+  "no_power_or_clock_changes": true,
+  "source_file_sha256": "c87b5e5516419c60a8bb091beb2732b3afbf7adb95215264e85a75c39b2e4beb",
+  "test_read": false
+}

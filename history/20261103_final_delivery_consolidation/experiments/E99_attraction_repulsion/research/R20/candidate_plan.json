@@ -1,0 +1,19 @@
+{
+  "revision": "E99.R20.symmetric_pair_degree_damping.v1",
+  "status": "registered_after_saved_degree_audit_before_candidate_runs",
+  "single_hypothesis": "Replace only global maximum active-degree pair weight1/D by symmetric local pair weight1/max(di,dj). Apply identical weight to attraction, repulsion and old angular shape strain. Preserve area inertia, force functions,20 rounds, all movement/shape caps and unchanged original planner.",
+  "evidence": "R19 confirms both movement+shape Q1.01084845 better than translation-only1.01208145 and shape-only1.01304797. R20 independently reconstructed all10000 current-best training snapshots to3.6e-15 force error. Proposed local pair weights on these saved snapshots have median amplification1.4286, force-weighted mean1.5157;15.13% absolute force mass would double or more. These are hypothetical diagnostics, not finalQ evidence.",
+  "equation": "First compute all active pair degrees from same current snapshot, then weight pair force and strain by1/max(1,di,dj). No extra globalD division. Pair force remains equal/opposite. Sum_j(1/max(di,dj))<=1 for each active module, but this is not a full2D mass/shape stability proof; existing limits remain mandatory.",
+  "configuration": {"iterations":20,"step_size":0.5,"step_fraction":0.05,"total_fraction":0.4,"attraction_range":0.5,"attraction_strength":1.0,"repulsion_strength":1.0,"shape_step_size":0.5,"shape_step_fraction":0.03,"shape_total_fraction":0.5,"exclude_exhausted":true,"area_attraction":false,"pair_degree_normalization":true},
+  "control": "Frozen R15 attraction_equal_slope same500 Q1.010848448528, original noAR control also reused read-only; do not repeat controls.",
+  "panel": "v5.train_monitor500 original C3 drafts/public inputs/order; no dev/test access",
+  "pipeline": "pureAR with old angular shape -> unchanged original full planner/config -> unchanged necessary hard checks; official neutral-time scoring after timer",
+  "preflight": {"indices":[0,4,43,95,135],"checks":"unchanged normalization-off branch full histories bit-exact vs R15; new first snapshot force/strain vs independent vectorized reference, symmetry/row bound; capture/production exact; area/locks/budgets; original full integration legality. Five final records reused in500."},
+  "trajectory_logging": "All module/round histories, degree, normalized forces/strain, raw/applied responses and caps. Round damping=1 in normalized arm because division is inside each pair; module active_degree stores actual degree. Diagnostic capture outside production timer, prefix exact comparison.",
+  "timing": "Cached-draft CPU AR+original planner+hard only; no C3/complete250ms acceptance and no historical timing speedup claim. Two force passes overhead is measured, not assumed negligible.",
+  "execution": "One numerical worker1 math thread, sharedOS lock, source/member/hash binding, atomic percase saves, STOP boundaries, explicit identity-bound resume. Failures retained/diagnosed, no automatic retry or dev launch.",
+  "preflight_output": "runs/research/20261103_R20_pair_degree_preflight5",
+  "output": "runs/research/20261103_R20_pair_degree_train500",
+  "after": "Audit all500 finalQ/soft constraints/caps/timing before next mechanism or candidate freeze; keep old best and all bad/slow cases; original100 four-stage gallery follows frozen dev evaluation.",
+  "test_read": false,"new_training": false
+}

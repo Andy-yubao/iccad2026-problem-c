@@ -1,0 +1,45 @@
+{
+  "comparisons": [
+    {
+      "experiment": "E90",
+      "batch_size": 32,
+      "width": 192,
+      "layers": 12,
+      "seconds_per_step_epoch_amortized_median": 0.20735378980002134,
+      "source": "experiments\\E90_auxiliary_weight_placer\\runs\\20261031_aux3_seed0\\progress.json",
+      "scope": "historical consecutive epoch walls divided by update delta; includes monitors/saves; not matched hardware microbenchmark"
+    },
+    {
+      "experiment": "E94",
+      "batch_size": 32,
+      "width": 192,
+      "layers": 12,
+      "seconds_per_step_epoch_amortized_median": 0.11124033609998878,
+      "source": "history\\20261101_research_consolidation\\experiments\\E94_posttrain_lr_reset\\runs\\20261101_lr1e3_seed0\\progress.json",
+      "scope": "historical consecutive epoch walls divided by update delta; includes monitors/saves; not matched hardware microbenchmark"
+    },
+    {
+      "experiment": "E95 bbox",
+      "batch_size": 32,
+      "width": 192,
+      "layers": 12,
+      "steps": 4303,
+      "elapsed_seconds": 2468.4581233999997,
+      "seconds_per_step_with_startup": 0.5736598009295839,
+      "scope": "live window including startup, monitor and save"
+    }
+  ],
+  "model_evidence": {
+    "old_trainable_parameters": 5829939,
+    "F_trainable_parameters": 5831723,
+    "old_attention_tokens": "modules only",
+    "new_attention_tokens": "modules + all public ports",
+    "old_engines": "CUDA graph; E90 resident tensors, E94 packed public transfers",
+    "new_engine": "dynamic eager; pinned Python assembly; manual dense attention",
+    "recompute_threshold_tokens": 448,
+    "source_drafts": "reused frozen L cache, one F call per training batch"
+  },
+  "attribution_limits": "no concurrent GPU benchmarks or profiler attached; causal share of attention/loader/synchronization/recompute not measured",
+  "live_training_configuration_changed": false,
+  "test_read": false
+}

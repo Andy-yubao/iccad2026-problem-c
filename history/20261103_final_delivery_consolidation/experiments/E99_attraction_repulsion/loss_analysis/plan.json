@@ -1,0 +1,13 @@
+{
+  "revision": "E99.area_mass100.loss_Q_statistics.v1",
+  "authorization": "用户要求统计已完成100例在吸引排斥步骤下的Loss/Q下降数量及相关性。",
+  "panel": "Exactly existing E99 area_mass_v2_dev100 indices0..99 in frozen order; all saved geometry/results reused, no solver/NN rerun or test access.",
+  "loss": "Actual source model C3 fixed teacher imitation total: usable*(center + .25*shape + .25*teacher_near_relative + teacher_axis_clearance_tail). Independent exact source copies; existing readonly public teacher labels, not E98 rich10 or a newly chosen proxy.",
+  "stages": "Loss(before saved C3 draft) versus Loss(after area-mass preprocessor), before downstream planner. Q_direct compares these same two raw geometries using official evaluator; Q_final compares stored old planner output versus stored preprocessor+planner output.",
+  "numerics": "Canonical center/logaspect state reconstructed from saved XYWH with original public graph normalization. Primary posthoc arithmetic FP64, no coefficient/definition change; FP32 sensitivity check and geometry decode roundtrip recorded. This is not a replay of historical GPU monitor states.",
+  "directions": "Changes are after-before, negative=improvement. Loss tie tolerance1e-10*(1+abs(before)); Q tie tolerance1e-12. Strict signs and FP32 counts also retained, no threshold chosen from outcomes.",
+  "statistics": "All100 arithmetic loss summaries and fixed n-exponential weighted final Q; 3x3 loss/Q direction cross-table; Pearson and Spearman signed-change correlation; relative-loss-change correlation; weighted Pearson and Pearson leave-one-out sensitivity. P-values/Fisher intervals descriptive on exposed adaptive panel; no causal or independent generalization claim.",
+  "auxiliary": "Source Loss component changes and raw intersection/coverage changes correlated with final Q for mechanism only; no selection of coefficients or cases.",
+  "output": "runs/20261102_area_mass_v2_dev100/loss_Q_analysis",
+  "test_read": false
+}
