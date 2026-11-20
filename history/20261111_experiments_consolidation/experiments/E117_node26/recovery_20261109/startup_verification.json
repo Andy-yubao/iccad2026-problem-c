@@ -1,0 +1,41 @@
+{
+  "status": "formal_training_updates_observed",
+  "observed_at": "2026-11-09T03:10:23.080273+00:00",
+  "heartbeat": {
+    "status": "running",
+    "activity": "training",
+    "pid": 51384,
+    "cache_built": 500,
+    "cache_reused": 0,
+    "loaded": 500,
+    "count": 500,
+    "cache_role": "dev",
+    "cache_key": "a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148",
+    "cache_requested": 500,
+    "cache_seconds": 6.29088079999201,
+    "monitor_completed": 500,
+    "monitor_count": 500,
+    "epoch": 1,
+    "step": 1234,
+    "cursor": 3488,
+    "elapsed_seconds": 1623.694445799978,
+    "utc": "2026-11-09T03:10:20Z",
+    "test_read": false,
+    "postprocessing_calls": 0
+  },
+  "controller_pid": 51536,
+  "trainer_pid": 51384,
+  "task_name": "Codex_ICCAD_E117_Node26_Recovery_20261109_1",
+  "durable_background_verified": true,
+  "source_gate_matches": true,
+  "cache_members": {
+    "train": 36000,
+    "dev": 500
+  },
+  "cache_root": "datasets/static_tensor_cache_v1/a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148",
+  "cache_transport": "NumPy IPC; same five bitwise checks passed",
+  "actual_train_and_dev_payloads_only": true,
+  "no_test": true,
+  "automatic_dev500_after_success": true,
+  "automatic_retry": false
+}

@@ -1,0 +1,16 @@
+{
+  "training_enabled": true,
+  "scope": "E157.sequential_s1_s2.v1.seed0",
+  "allowed_arms": [
+    "e157_s1",
+    "e157_s2"
+  ],
+  "postprocessing_enabled": true,
+  "stage_order": [
+    "e157_s1",
+    "e157_s2"
+  ],
+  "test_enabled": false,
+  "activated": "2026-11-20",
+  "user_authorization": "Train S1 then freeze own best, then train S2; start background after preparation. Terminal fixed dev500 evaluation per approved plan."
+}

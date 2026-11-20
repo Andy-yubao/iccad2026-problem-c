@@ -1,0 +1,49 @@
+{
+  "status": "queue_dispatched_initialization_in_progress",
+  "queue": {
+    "status": "running",
+    "pid": 46380,
+    "started_at": "2026-11-07T09:15:27.842208+00:00",
+    "arms": [
+      "terminal",
+      "dense",
+      "staged"
+    ],
+    "completed": [],
+    "active": {
+      "arm": "terminal",
+      "pid": 9468,
+      "started_at": "2026-11-07T09:15:27.856180+00:00"
+    },
+    "test_read": false,
+    "postprocessing_calls": 0,
+    "automatic_evaluation": false,
+    "updated_at": "2026-11-07T09:24:13.838111+00:00"
+  },
+  "observed_heartbeat": {
+    "status": "data_preparation",
+    "activity": "preparing raw CPU tensors",
+    "pid": 9468,
+    "loaded": 22201,
+    "count": 36000,
+    "epoch": 0,
+    "step": 0,
+    "cursor": 0,
+    "elapsed_seconds": 527.0995973999961,
+    "utc": "2026-11-07T09:24:17Z",
+    "test_read": false,
+    "postprocessing_calls": 0
+  },
+  "actual_parameter_updates_verified": false,
+  "training_error_logs_empty": true,
+  "remaining_arms_queued": [
+    "dense",
+    "staged"
+  ],
+  "training_math_unchanged": true,
+  "old_STOPs_unchanged": true,
+  "test_read": false,
+  "postprocessing_calls": 0,
+  "verification_wait_ended_at_user_request": true,
+  "note": "User requested finishing once queue is prepared; do not claim observed GPU updates when step remains zero."
+}

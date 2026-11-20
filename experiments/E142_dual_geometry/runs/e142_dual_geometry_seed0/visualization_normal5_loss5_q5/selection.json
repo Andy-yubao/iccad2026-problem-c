@@ -1,0 +1,112 @@
+{
+  "arm": "e142_dual_geometry",
+  "seed": 20261116,
+  "ordinary": [
+    109,
+    494,
+    111,
+    332,
+    210
+  ],
+  "worst_loss": [
+    293,
+    455,
+    475,
+    263,
+    315
+  ],
+  "worst_Q": [
+    43,
+    345,
+    158,
+    44,
+    215
+  ],
+  "entries": [
+    {
+      "category": "普通例",
+      "rank": 1,
+      "index": 109
+    },
+    {
+      "category": "普通例",
+      "rank": 2,
+      "index": 494
+    },
+    {
+      "category": "普通例",
+      "rank": 3,
+      "index": 111
+    },
+    {
+      "category": "普通例",
+      "rank": 4,
+      "index": 332
+    },
+    {
+      "category": "普通例",
+      "rank": 5,
+      "index": 210
+    },
+    {
+      "category": "Loss最差",
+      "rank": 1,
+      "index": 293
+    },
+    {
+      "category": "Loss最差",
+      "rank": 2,
+      "index": 455
+    },
+    {
+      "category": "Loss最差",
+      "rank": 3,
+      "index": 475
+    },
+    {
+      "category": "Loss最差",
+      "rank": 4,
+      "index": 263
+    },
+    {
+      "category": "Loss最差",
+      "rank": 5,
+      "index": 315
+    },
+    {
+      "category": "Q最差",
+      "rank": 1,
+      "index": 43
+    },
+    {
+      "category": "Q最差",
+      "rank": 2,
+      "index": 345
+    },
+    {
+      "category": "Q最差",
+      "rank": 3,
+      "index": 158
+    },
+    {
+      "category": "Q最差",
+      "rank": 4,
+      "index": 44
+    },
+    {
+      "category": "Q最差",
+      "rank": 5,
+      "index": 215
+    }
+  ],
+  "duplicates_preserved": true,
+  "normal_rule": "Five random dev cases, seed20261116, excluding this model worst-Loss/Q sets",
+  "loss_rule": "Saved per-case own aggregate dev Loss at this frozen own-Loss-best; descending, dev index tie-break",
+  "Q_rule": "Saved final postprocessed per-case Q descending, dev index tie-break",
+  "checkpoint_sha256": "9799b60053fd38d78f86141b51d9b1933ba817d237cabc5c1859f4003fd24553",
+  "best_epoch": 55,
+  "training": false,
+  "postprocessing_calls": 0,
+  "Q_calls": 0,
+  "test_read": false
+}

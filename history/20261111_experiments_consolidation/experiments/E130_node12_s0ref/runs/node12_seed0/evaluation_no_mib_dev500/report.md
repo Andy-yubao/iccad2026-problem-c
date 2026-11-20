@@ -1,0 +1,36 @@
+# E130_node12_s0ref node12：固定dev500验证
+
+唯一own-Loss best在Q评价前冻结；原始面积/无MIB，全模块真实草稿。
+
+```json
+{
+  "status": "complete",
+  "arm": "node12",
+  "count": 500,
+  "checkpoint_sha256": "17db4adbb797febc525e143b04f0e6413f8c3cf6c69f89ad12ed0875098d8a30",
+  "best_epoch": 60,
+  "parameters": 725619,
+  "weighted_Q": 1.07330071608436,
+  "mean_Q": 1.0442650527924777,
+  "mixed_Q": 1.0587828844384188,
+  "hard_legal": 500,
+  "raw_hard_legal": 0,
+  "fallbacks": 0,
+  "mean_complete_seconds": 0.17779771739942954,
+  "p95_complete_seconds": 0.41772249499335834,
+  "max_complete_seconds": 1.45099369995296,
+  "over250ms": 118,
+  "max_Q": 3.785448925357595,
+  "p95_Q": 1.1506201824169324,
+  "raw_repeated_coverage": 0.0399265914978821,
+  "raw_bbox_over_area": 1.0244060787682123,
+  "common_final_dev_loss": 0.3642675108909607,
+  "own_selection_loss": 0.3343265979886055,
+  "scoring_policy": "local research Q without MIB, original areas/specs; not official contest score",
+  "training_seconds": 5316.666433900013,
+  "training_epochs": 61,
+  "elapsed_seconds": 195.80243630008772,
+  "test_read": false,
+  "selection_frozen_before_Q": true
+}
+```

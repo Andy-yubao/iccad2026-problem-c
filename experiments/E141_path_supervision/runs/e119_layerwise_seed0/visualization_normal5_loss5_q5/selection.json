@@ -1,0 +1,112 @@
+{
+  "arm": "e119_layerwise",
+  "seed": 20261116,
+  "ordinary": [
+    112,
+    114,
+    335,
+    214,
+    450
+  ],
+  "worst_loss": [
+    293,
+    455,
+    263,
+    475,
+    24
+  ],
+  "worst_Q": [
+    34,
+    29,
+    174,
+    480,
+    215
+  ],
+  "entries": [
+    {
+      "category": "普通例",
+      "rank": 1,
+      "index": 112
+    },
+    {
+      "category": "普通例",
+      "rank": 2,
+      "index": 114
+    },
+    {
+      "category": "普通例",
+      "rank": 3,
+      "index": 335
+    },
+    {
+      "category": "普通例",
+      "rank": 4,
+      "index": 214
+    },
+    {
+      "category": "普通例",
+      "rank": 5,
+      "index": 450
+    },
+    {
+      "category": "Loss最差",
+      "rank": 1,
+      "index": 293
+    },
+    {
+      "category": "Loss最差",
+      "rank": 2,
+      "index": 455
+    },
+    {
+      "category": "Loss最差",
+      "rank": 3,
+      "index": 263
+    },
+    {
+      "category": "Loss最差",
+      "rank": 4,
+      "index": 475
+    },
+    {
+      "category": "Loss最差",
+      "rank": 5,
+      "index": 24
+    },
+    {
+      "category": "Q最差",
+      "rank": 1,
+      "index": 34
+    },
+    {
+      "category": "Q最差",
+      "rank": 2,
+      "index": 29
+    },
+    {
+      "category": "Q最差",
+      "rank": 3,
+      "index": 174
+    },
+    {
+      "category": "Q最差",
+      "rank": 4,
+      "index": 480
+    },
+    {
+      "category": "Q最差",
+      "rank": 5,
+      "index": 215
+    }
+  ],
+  "duplicates_preserved": true,
+  "normal_rule": "Same five random dev cases for both arms, excluding union of both arms worst-Loss/Q sets",
+  "loss_rule": "Saved per-case own aggregate dev Loss at this frozen own-Loss-best; descending, dev index tie-break",
+  "Q_rule": "Saved final postprocessed per-case Q descending, dev index tie-break",
+  "checkpoint_sha256": "f945a993c7a425c26d7e5646f58603b8eb363c441d087093af99d165939217c9",
+  "best_epoch": 60,
+  "training": false,
+  "postprocessing_calls": 0,
+  "Q_calls": 0,
+  "test_read": false
+}

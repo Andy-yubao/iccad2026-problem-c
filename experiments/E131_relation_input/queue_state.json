@@ -1,0 +1,28 @@
+{
+  "status": "user_stop",
+  "controller_pid": 32780,
+  "started_at": "2026-11-12T12:37:56.575343+00:00",
+  "active": {
+    "stage": "full",
+    "pid": 48000,
+    "started_at": "2026-11-12T12:38:27.389012+00:00"
+  },
+  "order": [
+    "startup_check",
+    "full",
+    "pure"
+  ],
+  "completed": [
+    {
+      "stage": "startup_check",
+      "completed_at": "2026-11-12T12:38:26.965104+00:00"
+    }
+  ],
+  "automatic_retry": false,
+  "postprocessing_calls": 0,
+  "test_read": false,
+  "monitoring_requested": false,
+  "error": "InterruptedError('User stop; next arm blocked')",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\output\\P0_relation_input_launch_20261112\\supervisor.py\", line 97, in main\n    launch(arm, ['-m', 'experiments.E131_relation_input.train', '--arm', arm])\n  File \"E:\\project\\ICCAD\\2026\\problemC\\output\\P0_relation_input_launch_20261112\\supervisor.py\", line 84, in launch\n    raise InterruptedError('User stop; next arm blocked')\nInterruptedError: User stop; next arm blocked\n",
+  "updated_at": "2026-11-12T13:13:51.860915+00:00"
+}

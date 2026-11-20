@@ -1,0 +1,110 @@
+{
+  "experiment": "E150 role initial plus original E148 refinement, joint scratch with initial supervision",
+  "revision": "E150.role_joint.v1.seed0",
+  "status": "authorized_preparation",
+  "authorization": "2026-11-18 user requested new initial-generator structure + original downstream structure all from scratch, initial S0 output supervised too; prepare and launch background. Continuing Loss-only scope.",
+  "architecture": {
+    "e150": "E149 role initial107739 + E148 public encoder101184 + three reusable two-layer units472218, original12 refinements"
+  },
+  "parameters": {
+    "e150": 681141
+  },
+  "trainable_parameters": {
+    "e150": 681141
+  },
+  "seed": 0,
+  "batch_size": 64,
+  "precision": "FP32; deterministic; TF32 disabled",
+  "threads": 4,
+  "train_count": 36000,
+  "train_monitor_count": 500,
+  "dev_monitor_count": 500,
+  "dataset": "random_reference40k.v1; original public areas; test sealed",
+  "data_migration": "Explicit continuation of current 36k supervision study, reusing E134 members/cache and monitoring panels; no new sampling",
+  "no_mib": true,
+  "predict_all_modules": true,
+  "hard_specification_enforcement": "postprocessing only",
+  "initialization": "All681141 parameters scratch seed0, no checkpoint or optimizer loaded; discarded preflight model not reused",
+  "optimizer": "AdamW weight_decay.0003, global gradient clip1, joint per-module relative update bound.005",
+  "lr_levels": [
+    0.001,
+    0.00025,
+    0.0001,
+    5e-05
+  ],
+  "protection_epochs": 14,
+  "scheduler_baseline_epoch": 15,
+  "patience": 3,
+  "minimum_meaningful_absolute": 1e-05,
+  "minimum_meaningful_relative": 0.001,
+  "best_minimum_absolute_improvement": 1e-05,
+  "minimum_lowest_lr_complete_epochs": 2,
+  "maximum_seconds": 14400,
+  "maximum_epochs": 200,
+  "budget": "One whole joint candidate4h/200epoch, batch64/tail32, original FP32/Adam/guards/schedule",
+  "selection": "Each fixed own-Loss dev500 arithmetic mean for best/LR/earlystop; no Q selection",
+  "resume": "Ctrl+C pauses at accepted update/case boundary. Restore model/Adam/RNG/permutation/cursor/seen/LR/earlystop/projection; cumulative budget never reset. Evaluation resumes committed case prefix.",
+  "numerical_guards": "Nonfinite or case/mean Loss>=1000 or unclipped grad norm>=10000: reject before Adam; no skip/retry",
+  "augmentation": "P=.5 axis swap; flags indexed by seed/epoch/member, independent of dropout",
+  "engine": "E141 deterministic FP32 CUDA graph64 plus eager final32; original AdamW/projection/guards",
+  "stop": "Experiment STOP, per-run STOP, SIGINT; save accepted cursor and exit, no next arm",
+  "preflight_train_indices": [
+    10841,
+    12651,
+    6417,
+    4280,
+    17946
+  ],
+  "preflight": "Copied structure identity, role cache identity, initial objective and all4 Loss gradients,13 actual readouts,hidden isolation/layout gradients,labels/permutations/augmentation,CUDA64/tail32,shared-Adam resume parity",
+  "comparison": "E148 supervision and initial architecture differ; frozen transfer was no-training diagnostic, not a matched training baseline",
+  "reporting": "Joint aggregate plus individual L0/L4/L8/L12 Loss/components, initial no-overlap/full and final complete Loss; same joint aggregate selects best/LR/earlystop",
+  "terminal_evaluation": "Freeze own joint-Loss best and Loss-only summary; no Q/postprocessing/test",
+  "historical_standards": "E74/E105/A numbers are historical context until matched new task evaluation",
+  "test_read": false,
+  "postprocessing_calls": 0,
+  "automatic_queue": true,
+  "dataset_report_sha256": "3a79fd9eb2636578fa4df876ccac51699eab04cd59179027488aa7d8c334928a",
+  "payload_checksums_sha256": "f8eeb86da003c9901b73541eb13cc8e16cad9cd963dcf74a0edddf4a1a5abe54",
+  "queue": "Joint scratch train -> frozen own joint-Loss-best -> Loss summary only",
+  "cache_build_workers": 4,
+  "required_cache_key": "a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148",
+  "cache_policy": "Reuse original shared CPU cache and complete E149 public-role sidecars; features/batches/ports/role producer byte-identical",
+  "loss": "Original base coefficients; L0/L4 exclude all direct collision terms, L8/L12 full; auxiliary total.2 split equally across0/4/8, terminal.8",
+  "architecture_parent": "Independent E147 numerical engine / E142 pair and node feedback",
+  "new_candidates": 1,
+  "automatic_retry": false,
+  "overlap_omission": "Only L0 and L4 omit entire direct overlap group; no hard prediction mask or overwrite",
+  "monitor_batch_size": 64,
+  "batch_tail": "562 batches64 plus one32 per full epoch; no dropped or repeated rows",
+  "training_mode": "One joint optimizer; initial generator, separate downstream public encoder, all three shared units trainable. Layout gradients cross all unit boundaries.",
+  "supervision": {
+    "L0": 0.06666666666666667,
+    "L4": 0.06666666666666667,
+    "L8": 0.06666666666666667,
+    "L12": 0.8
+  },
+  "role_features": 16,
+  "port_features": 4,
+  "pair_features": 6,
+  "automatic_evaluation": false,
+  "Q_calls": 0,
+  "no_overlap_layers": [
+    0,
+    4
+  ],
+  "full_loss_layers": [
+    8,
+    12
+  ],
+  "unit_order": [
+    0,
+    0,
+    1,
+    1,
+    2,
+    2
+  ],
+  "initial_readout_in_returned_states": true,
+  "role_cache_root": "experiments/E149_role_initial/role_cache_v1",
+  "role_cache_policy": "Require complete identity-compatible E149 public-role sidecars, no rebuilding or copying payloads"
+}

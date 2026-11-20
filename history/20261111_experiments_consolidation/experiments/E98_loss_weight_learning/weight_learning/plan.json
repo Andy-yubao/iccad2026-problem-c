@@ -1,0 +1,313 @@
+{
+  "authorization": "用户：好了，基线已经准备完毕。现在开始尝试Loss调权。同样要求后台运行。",
+  "revision": "E98.train_feedback.direct_search.round1.v1",
+  "run": "runs/20261102_weight_round1_seed0",
+  "parent_checkpoint": "experiments/E98_loss_weight_learning/runs/20261102_fixed_rich96_seed0/checkpoints/best.pt",
+  "parent_sha256": "1df099d624797d3e61fd332b7ffafed8ebc213f73758649e2a34054b395201d1",
+  "parent_epoch": 58,
+  "parent_step": 29000,
+  "architecture": {
+    "width": 96,
+    "layers": 12,
+    "rectangle": true,
+    "ffn_dropout": 0.05
+  },
+  "parameters": 1471539,
+  "maximum_seconds": 3600,
+  "outer_rounds": 1,
+  "training_arms": [
+    "control",
+    "plus",
+    "minus"
+  ],
+  "epochs_per_arm": 4,
+  "updates_per_arm": 2000,
+  "batch_size": 32,
+  "learning_rate": 5e-05,
+  "optimizer": "inherit same best58 AdamW moments/ages, retain decay.0003, clip1 and joint update bound.005; new fixed-Loss phase",
+  "seed": 0,
+  "sampler_epoch_offset": 58,
+  "coefficient_base": {
+    "position": 1.0,
+    "shape": 0.25,
+    "penetration": 0.08975162861857286,
+    "module_load_mean": 0.08975162861857286,
+    "module_max_excess10": 0.08975162861857286,
+    "wirelength": 0.16684160541676146,
+    "compactness": 0.16684160541676146,
+    "boundary_contribution": 0.6673664216670459,
+    "grouping_contribution": 0.6673664216670459,
+    "mib_contribution": 0.6673664216670459
+  },
+  "log_perturbation": 0.22314355131420976,
+  "direction": [
+    1.0,
+    1.0,
+    -1.0,
+    -1.0,
+    1.0,
+    1.0,
+    -1.0,
+    1.0,
+    -1.0,
+    -1.0
+  ],
+  "coefficients": {
+    "control": {
+      "position": 1.0,
+      "shape": 0.25,
+      "penetration": 0.08975162861857286,
+      "module_load_mean": 0.08975162861857286,
+      "module_max_excess10": 0.08975162861857286,
+      "wirelength": 0.16684160541676146,
+      "compactness": 0.16684160541676146,
+      "boundary_contribution": 0.6673664216670459,
+      "grouping_contribution": 0.6673664216670459,
+      "mib_contribution": 0.6673664216670459
+    },
+    "plus": {
+      "position": 1.1862203142327061,
+      "shape": 0.29655507855817653,
+      "penetration": 0.0681377312658052,
+      "module_load_mean": 0.0681377312658052,
+      "module_max_excess10": 0.10646520510282063,
+      "wirelength": 0.1979109016045599,
+      "compactness": 0.12666297702691837,
+      "boundary_contribution": 0.7916436064182396,
+      "grouping_contribution": 0.5066519081076735,
+      "mib_contribution": 0.5066519081076735
+    },
+    "minus": {
+      "position": 0.8030251162011424,
+      "shape": 0.2007562790502856,
+      "penetration": 0.11261376875104881,
+      "module_load_mean": 0.11261376875104881,
+      "module_max_excess10": 0.07207281200067124,
+      "wirelength": 0.13397799957698,
+      "compactness": 0.20934062433903125,
+      "boundary_contribution": 0.53591199830792,
+      "grouping_contribution": 0.837362497356125,
+      "mib_contribution": 0.837362497356125
+    }
+  },
+  "coefficient_rule": "multiplicative symmetric log perturbation, same total coefficient sum; no formula/normalization changes",
+  "feedback_panel": [
+    {
+      "train_index": 8255,
+      "member": [
+        "worker_13/layouts_5264.th",
+        63
+      ],
+      "n": 21
+    },
+    {
+      "train_index": 11983,
+      "member": [
+        "worker_48/layouts_784.th",
+        16
+      ],
+      "n": 25
+    },
+    {
+      "train_index": 6563,
+      "member": [
+        "worker_67/layouts_9072.th",
+        104
+      ],
+      "n": 29
+    },
+    {
+      "train_index": 5340,
+      "member": [
+        "worker_8/layouts_6832.th",
+        71
+      ],
+      "n": 33
+    },
+    {
+      "train_index": 11130,
+      "member": [
+        "worker_32/layouts_6496.th",
+        15
+      ],
+      "n": 38
+    },
+    {
+      "train_index": 1537,
+      "member": [
+        "worker_49/layouts_112.th",
+        20
+      ],
+      "n": 42
+    },
+    {
+      "train_index": 8700,
+      "member": [
+        "worker_29/layouts_8512.th",
+        57
+      ],
+      "n": 46
+    },
+    {
+      "train_index": 6157,
+      "member": [
+        "worker_36/layouts_4928.th",
+        93
+      ],
+      "n": 51
+    },
+    {
+      "train_index": 355,
+      "member": [
+        "worker_84/layouts_5264.th",
+        104
+      ],
+      "n": 55
+    },
+    {
+      "train_index": 9744,
+      "member": [
+        "worker_29/layouts_9632.th",
+        52
+      ],
+      "n": 59
+    },
+    {
+      "train_index": 11427,
+      "member": [
+        "worker_75/layouts_1344.th",
+        93
+      ],
+      "n": 63
+    },
+    {
+      "train_index": 3388,
+      "member": [
+        "worker_1/layouts_1232.th",
+        88
+      ],
+      "n": 68
+    },
+    {
+      "train_index": 13129,
+      "member": [
+        "worker_62/layouts_6944.th",
+        19
+      ],
+      "n": 72
+    },
+    {
+      "train_index": 7177,
+      "member": [
+        "worker_65/layouts_2352.th",
+        12
+      ],
+      "n": 77
+    },
+    {
+      "train_index": 14159,
+      "member": [
+        "worker_29/layouts_1344.th",
+        27
+      ],
+      "n": 82
+    },
+    {
+      "train_index": 14328,
+      "member": [
+        "worker_12/layouts_8736.th",
+        83
+      ],
+      "n": 86
+    },
+    {
+      "train_index": 4443,
+      "member": [
+        "worker_94/layouts_2576.th",
+        62
+      ],
+      "n": 90
+    },
+    {
+      "train_index": 9306,
+      "member": [
+        "worker_18/layouts_8064.th",
+        34
+      ],
+      "n": 95
+    },
+    {
+      "train_index": 13970,
+      "member": [
+        "worker_38/layouts_2016.th",
+        40
+      ],
+      "n": 99
+    },
+    {
+      "train_index": 3006,
+      "member": [
+        "worker_48/layouts_2800.th",
+        54
+      ],
+      "n": 103
+    },
+    {
+      "train_index": 14096,
+      "member": [
+        "worker_84/layouts_1568.th",
+        102
+      ],
+      "n": 107
+    },
+    {
+      "train_index": 7916,
+      "member": [
+        "worker_24/layouts_5600.th",
+        45
+      ],
+      "n": 112
+    },
+    {
+      "train_index": 3395,
+      "member": [
+        "worker_83/layouts_2576.th",
+        4
+      ],
+      "n": 116
+    },
+    {
+      "train_index": 2195,
+      "member": [
+        "worker_93/layouts_8960.th",
+        60
+      ],
+      "n": 120
+    }
+  ],
+  "feedback_repeats": 2,
+  "feedback_order": [
+    "base",
+    "control",
+    "plus",
+    "minus"
+  ],
+  "repeat_order": "forward then reverse arm order; same panel order",
+  "minimum_absolute_gain_per_repeat": 0.0001,
+  "feedback_objective": "official neutral-time Q with exp(N/12) layout weighting, hard feasibility required, complete singlethread repair fixed",
+  "branch_selection": "evaluate exactly terminal2000 for all branches; own-train-Loss best saved only, not candidate for Q re-selection",
+  "branch_monitoring": "same fixed branch Loss train500 every epoch; no dev reads until selection frozen; no LR/early-stop decisions inside fixed2000 budget",
+  "data": "original frozen v5 train16k; public mean-area transform; existing monitors and split unchanged",
+  "validation": "once selected.json is frozen, terminal control and selected fixed dev500, no controller feedback; reuse control when selected=control",
+  "preflight_train_indices": [
+    1683,
+    5474,
+    10027,
+    10140,
+    15001
+  ],
+  "source_baseline_evaluation_plan_sha256": "f7abba1fb93c5285af67485d04dff5ebec183591f68e0cd3deda9f5a654b2ac2",
+  "test_read": false,
+  "automatic_wakeups": false,
+  "next_outer_round": "not authorized by this pilot"
+}

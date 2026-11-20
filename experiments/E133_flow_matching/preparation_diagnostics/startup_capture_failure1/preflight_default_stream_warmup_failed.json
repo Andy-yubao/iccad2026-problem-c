@@ -1,0 +1,54 @@
+{
+  "status": "error",
+  "unique_train_cases": 5,
+  "optimizer_updates": 0,
+  "dev_tensor_payloads": 0,
+  "test_read": false,
+  "raw_payload_reads": 0,
+  "postprocessing_calls": 0,
+  "resume_tested": false,
+  "members": [
+    [
+      "worker_68/layouts_2128.th",
+      101
+    ],
+    [
+      "worker_72/layouts_4704.th",
+      108
+    ],
+    [
+      "worker_23/layouts_7056.th",
+      77
+    ],
+    [
+      "worker_29/layouts_2464.th",
+      67
+    ],
+    [
+      "worker_29/layouts_9520.th",
+      16
+    ]
+  ],
+  "cache_inventory": {
+    "train": {
+      "count": 16000,
+      "chunks": 141,
+      "tensor_payloads_opened": 0
+    },
+    "dev_monitor500": {
+      "count": 500,
+      "chunks": 8,
+      "tensor_payloads_opened": 0
+    }
+  },
+  "parameters": 920643,
+  "CPU_loss": 2.1480908393859863,
+  "path_target_and_Euler_oracle": true,
+  "axis_symmetric_affine": true,
+  "labels_excluded_from_condition": true,
+  "all_F_P_channels_supervised": true,
+  "time_and_state_and_all_blocks_gradients": true,
+  "error": "RuntimeError('CUDA error: operation failed due to a previous error during capture\\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\\n')",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E133_flow_matching\\cuda_step.py\", line 45, in __init__\n    with torch.cuda.graph(self.graph,stream=stream):calculation()\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E133_flow_matching\\cuda_step.py\", line 30, in calculation\n    self.values['total'].backward()\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\site-packages\\torch\\_tensor.py\", line 648, in backward\n    torch.autograd.backward(\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\site-packages\\torch\\autograd\\__init__.py\", line 353, in backward\n    _engine_run_backward(\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\site-packages\\torch\\autograd\\graph.py\", line 824, in _engine_run_backward\n    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\nRuntimeError: CUDA error: operation would make the legacy stream depend on a capturing blocking stream\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E133_flow_matching\\inspect.py\", line 68, in main\n    cap=CapturedStep(model,optimizer,gpu)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E133_flow_matching\\cuda_step.py\", line 45, in __init__\n    with torch.cuda.graph(self.graph,stream=stream):calculation()\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\site-packages\\torch\\cuda\\graphs.py\", line 186, in __exit__\n    self.cuda_graph.capture_end()\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\site-packages\\torch\\cuda\\graphs.py\", line 84, in capture_end\n    super().capture_end()\nRuntimeError: CUDA error: operation failed due to a previous error during capture\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n\n",
+  "elapsed_seconds": 24.607645900003263
+}

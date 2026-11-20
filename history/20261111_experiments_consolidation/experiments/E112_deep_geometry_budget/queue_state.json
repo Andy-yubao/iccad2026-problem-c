@@ -1,0 +1,56 @@
+{
+  "status": "needs_attention",
+  "pid": 20748,
+  "started_at": "2026-11-07T00:20:29.526670+00:00",
+  "jobs": [
+    {
+      "name": "E112_deep_geometry_budget",
+      "phase": "train",
+      "module": "experiments.E112_deep_geometry_budget.train"
+    },
+    {
+      "name": "E112_deep_geometry_budget",
+      "phase": "dev500",
+      "module": "experiments.E112_deep_geometry_budget.evaluation.run"
+    },
+    {
+      "name": "E112_deep_geometry_budget",
+      "phase": "five_case_display",
+      "module": "experiments.E112_deep_geometry_budget.diagnostics.layer_trace"
+    },
+    {
+      "name": "E113_deep_head_budget",
+      "phase": "train",
+      "module": "experiments.E113_deep_head_budget.train"
+    },
+    {
+      "name": "E113_deep_head_budget",
+      "phase": "dev500",
+      "module": "experiments.E113_deep_head_budget.evaluation.run"
+    },
+    {
+      "name": "E113_deep_head_budget",
+      "phase": "five_case_display",
+      "module": "experiments.E113_deep_head_budget.diagnostics.layer_trace"
+    },
+    {
+      "name": "combined_display",
+      "phase": "publish",
+      "module": "visualization.layer_budget_viewer"
+    }
+  ],
+  "completed": [],
+  "active": {
+    "name": "E112_deep_geometry_budget",
+    "phase": "train",
+    "module": "experiments.E112_deep_geometry_budget.train",
+    "index": 1,
+    "total": 7,
+    "pid": 2036
+  },
+  "scope": "Only E112/E113 scratch training, each frozen-best dev500 plus same-five display, then combined viewer; A reused, no test",
+  "active_started_at": "2026-11-07T00:20:29.540672+00:00",
+  "updated_at": "2026-11-07T04:20:07.425186+00:00",
+  "error": "RuntimeError('Training not normally completed; no continuation')",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E112_deep_geometry_budget\\run_queue.py\", line 52, in main\n    raise RuntimeError('Training not normally completed; no continuation')\nRuntimeError: Training not normally completed; no continuation\n"
+}

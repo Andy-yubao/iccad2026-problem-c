@@ -1,0 +1,211 @@
+{
+  "parent": "experiments/E142_dual_geometry",
+  "parent_preflight_sha256": "03cab49c05669b9f5ae08a346603b76728298006d5be0f4bc5f0403adf365f2f",
+  "copied_originals": {
+    "__init__.py": {
+      "parent": "experiments/E142_dual_geometry/__init__.py",
+      "sha256": "e88603c7289d0636a073fae6a35658f4829f4459cad9a1e7d1d91874c3e78960"
+    },
+    "augmentation.py": {
+      "parent": "experiments/E142_dual_geometry/augmentation.py",
+      "sha256": "dba0658829115b08184fadec488ef0b56fe0adf0e8452cb240029d5c5c4de87c"
+    },
+    "batches.py": {
+      "parent": "experiments/E142_dual_geometry/batches.py",
+      "sha256": "7d8aaccb6b27ee4ea261d7a9c9bebfedfe484181ee00e5d7f6ccb27d0639be54"
+    },
+    "captured_projection.py": {
+      "parent": "experiments/E142_dual_geometry/captured_projection.py",
+      "sha256": "7f19baba25bc52a686e08a1af32236bffa8b47300cac96c52914b3b81d88131a"
+    },
+    "cuda_step.py": {
+      "parent": "experiments/E142_dual_geometry/cuda_step.py",
+      "sha256": "aa8d1982fb8a701afa9edde819f86cae6458a6ec7b73bf87e42c1f8f6ac22927"
+    },
+    "data.py": {
+      "parent": "experiments/E142_dual_geometry/data.py",
+      "sha256": "2651d03992b2a06b609d2c79f37f1133bb7e0e19643ad9244a42431d575a9dab"
+    },
+    "e119_model.py": {
+      "parent": "experiments/E142_dual_geometry/e119_model.py",
+      "sha256": "437bb5027389269b5ee08cfc98e7e65e8cab2dd2dbf5c3415618ba122f9dc636"
+    },
+    "evaluation/__init__.py": {
+      "parent": "experiments/E142_dual_geometry/evaluation/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evaluation/budget.json": {
+      "parent": "experiments/E142_dual_geometry/evaluation/budget.json",
+      "sha256": "c93f71d7664f6359a87aa740bf08108782ea40146bf329f9a3be7f7afac3fe61"
+    },
+    "evaluation/repair/__init__.py": {
+      "parent": "experiments/E142_dual_geometry/evaluation/repair/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evaluation/repair/backend/__init__.py": {
+      "parent": "experiments/E142_dual_geometry/evaluation/repair/backend/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evaluation/repair/backend/conic_geometry.py": {
+      "parent": "experiments/E142_dual_geometry/evaluation/repair/backend/conic_geometry.py",
+      "sha256": "8d611db3bee47499c77b64039eee09718607f356cd251df5792314a53bcdcd63"
+    },
+    "evaluation/repair/backend/frozen/__init__.py": {
+      "parent": "experiments/E142_dual_geometry/evaluation/repair/backend/frozen/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evaluation/repair/backend/frozen/canonical_geometry.py": {
+      "parent": "experiments/E142_dual_geometry/evaluation/repair/backend/frozen/canonical_geometry.py",
+      "sha256": "c1dcfd377ad33cdb85954c01917e762f87360deb43b1d5cce9b92c1b003fa2e4"
+    },
+    "evaluation/repair/backend/frozen/feasible.py": {
+      "parent": "experiments/E142_dual_geometry/evaluation/repair/backend/frozen/feasible.py",
+      "sha256": "9cfe70894d80fbe54ccaa1c3de60ef4ab111ac9b4472286d1ae6a0c5a1fdc756"
+    },
+    "evaluation/repair/backend/frozen/global_refine.py": {
+      "parent": "experiments/E142_dual_geometry/evaluation/repair/backend/frozen/global_refine.py",
+      "sha256": "cd43991827597dfc4c5635cddb26f597774c680a24658237e5f443e9fbbca60c"
+    },
+    "evaluation/repair/backend/frozen/packing.py": {
+      "parent": "experiments/E142_dual_geometry/evaluation/repair/backend/frozen/packing.py",
+      "sha256": "25d20592fded9939f590be886e85083a47c5bb03a28c6f9bfe4a89097f863f0d"
+    },
+    "evaluation/repair/backend/frozen/postprocess.py": {
+      "parent": "experiments/E142_dual_geometry/evaluation/repair/backend/frozen/postprocess.py",
+      "sha256": "da0e1572a822a589968a19e67e2d36dd5133c7d17b7ea9443bd743ee4653a272"
+    },
+    "evaluation/repair/backend/frozen/shape_lp.py": {
+      "parent": "experiments/E142_dual_geometry/evaluation/repair/backend/frozen/shape_lp.py",
+      "sha256": "6de2773cfd981723e55a1d317ad9422e8fee76b393d740acaf70007594bc8a9f"
+    },
+    "evaluation/repair/backend/frozen/solver.py": {
+      "parent": "experiments/E142_dual_geometry/evaluation/repair/backend/frozen/solver.py",
+      "sha256": "ed874db1bac7205d5e1d80350b1d4e82d3c56eb2bb44b9f08ceb256244d24ea0"
+    },
+    "evaluation/repair/backend/frozen/topology_mip.py": {
+      "parent": "experiments/E142_dual_geometry/evaluation/repair/backend/frozen/topology_mip.py",
+      "sha256": "2ba0f2612f598f5e8d6e80a3ee1f74ad4941b78a3e9163f2d4acd7db5588da1a"
+    },
+    "evaluation/repair/backend/guard.py": {
+      "parent": "experiments/E142_dual_geometry/evaluation/repair/backend/guard.py",
+      "sha256": "eb36fbbcea1b694c7fb40fa0b36e3ed659ac66563be583f177fb6bb9e3c35bd7"
+    },
+    "evaluation/repair/backend/observe.py": {
+      "parent": "experiments/E142_dual_geometry/evaluation/repair/backend/observe.py",
+      "sha256": "b924be6a40f157e2d2204e358990797192e10a6320e3e3c3399d044918b25dd8"
+    },
+    "evaluation/repair/backend/reduction.py": {
+      "parent": "experiments/E142_dual_geometry/evaluation/repair/backend/reduction.py",
+      "sha256": "d8ba6af127d9b08469b198f7ed38849e14ac566db58bfab855797920c92012ed"
+    },
+    "evaluation/repair/backend/rescue.py": {
+      "parent": "experiments/E142_dual_geometry/evaluation/repair/backend/rescue.py",
+      "sha256": "ada10eea489e0f7d65a2f6dd0a20358d33d08808f3dfef6a19c0583139f206e0"
+    },
+    "evaluation/repair/canonical.py": {
+      "parent": "experiments/E142_dual_geometry/evaluation/repair/canonical.py",
+      "sha256": "9f7da6983541a3c8b0d57c8f869c6905c24f2bc4eb3643e0ed9e0a718d2abf2c"
+    },
+    "evaluation/repair/canonical_native.py": {
+      "parent": "experiments/E142_dual_geometry/evaluation/repair/canonical_native.py",
+      "sha256": "e350394ce13f8bb20e53d03494912f9367d29c9f68809ad16c4314a45709718b"
+    },
+    "evaluation/repair/canonical_py.py": {
+      "parent": "experiments/E142_dual_geometry/evaluation/repair/canonical_py.py",
+      "sha256": "b5b99c1f77756aa318fe5cb0e7fa82935844752b4fa815ab80367adb34e00195"
+    },
+    "evaluation/repair/certify_polish.py": {
+      "parent": "experiments/E142_dual_geometry/evaluation/repair/certify_polish.py",
+      "sha256": "e9605d50ff79de47f6f2b85d7e761d954d8784ad9e7ee2aec2c38b9f010c43e4"
+    },
+    "evaluation/repair/fast_geometry.py": {
+      "parent": "experiments/E142_dual_geometry/evaluation/repair/fast_geometry.py",
+      "sha256": "88729dd286d0e2c8444e0cc0d3508f8fc19cafb69f14b94fe0004c10b9b6ee0e"
+    },
+    "evaluation/repair/legal_seed.py": {
+      "parent": "experiments/E142_dual_geometry/evaluation/repair/legal_seed.py",
+      "sha256": "45a6d0ee77c7cceafd05f41f9317f72ebdbf56dd45fc566da04952810e3a7588"
+    },
+    "evaluation/repair/projection.py": {
+      "parent": "experiments/E142_dual_geometry/evaluation/repair/projection.py",
+      "sha256": "50863404a74aaa8658d95a3327b07b6ccd6908434570f7ecb0f041ed7841e593"
+    },
+    "evaluation/repair/solver.py": {
+      "parent": "experiments/E142_dual_geometry/evaluation/repair/solver.py",
+      "sha256": "6c4310ac9ae58ea5fa85732548e14e44f33ccb331f3bc69071a3582cd4fb8f2e"
+    },
+    "evaluation/run.py": {
+      "parent": "experiments/E142_dual_geometry/evaluation/run.py",
+      "sha256": "c3a6cd5b5930b609d9497afc7af6ead4c79335c0ec2b275ccf4d837137ba5345"
+    },
+    "evaluation/solver.py": {
+      "parent": "experiments/E142_dual_geometry/evaluation/solver.py",
+      "sha256": "9e97f7f7148ed8ed732e86f9f7de78493167269930e9f0c09feb5680f188557a"
+    },
+    "features.py": {
+      "parent": "experiments/E142_dual_geometry/features.py",
+      "sha256": "097a04bd1259a76b9fce23e5e533f7a22beece7a2f7af0435c3f560696c32dd1"
+    },
+    "geometry_feedback.py": {
+      "parent": "experiments/E142_dual_geometry/geometry_feedback.py",
+      "sha256": "8e66a511ce8c4804dbd4ee67f09b84f1b707a7f278f58e1acd07f344adb74f0c"
+    },
+    "group_tree.py": {
+      "parent": "experiments/E142_dual_geometry/group_tree.py",
+      "sha256": "f5ceff218b44b16f164f71a95ecabde59c6f531ac8ce385d235bbb5d01254964"
+    },
+    "io.py": {
+      "parent": "experiments/E142_dual_geometry/io.py",
+      "sha256": "8f380ab01a1133a4bbfab09607e74495ceb1a2f024127a1539f38d00801d3c44"
+    },
+    "loss.py": {
+      "parent": "experiments/E142_dual_geometry/loss.py",
+      "sha256": "734115345e175f3e3706c0218040577649b907678b8210b2378eb28850077742"
+    },
+    "loss_config.py": {
+      "parent": "experiments/E142_dual_geometry/loss_config.py",
+      "sha256": "9ff02cc2a2a45a6960d059ea6f26ccd4f1132d47dbef29eaf45dda0f32e561d0"
+    },
+    "model.py": {
+      "parent": "experiments/E142_dual_geometry/model.py",
+      "sha256": "05adcdad7207b21143e4841f7ddb0a945431975a73dc40e99aa570ee0d5b268e"
+    },
+    "original_model.py": {
+      "parent": "experiments/E142_dual_geometry/original_model.py",
+      "sha256": "0d5f7a0f897653155d5405e07aab9357b46b52bca4ddedd4b2cb11f05151dc82"
+    },
+    "ports.py": {
+      "parent": "experiments/E142_dual_geometry/ports.py",
+      "sha256": "431b54476e7de8a94c12cf935a30a3b49b911e208305fbe6bb7b23d72e37dbef"
+    },
+    "quality_reporting.py": {
+      "parent": "experiments/E142_dual_geometry/quality_reporting.py",
+      "sha256": "13ca8565bd8c8596b2ea3602114cc8e8609c4ebdfb98c5ff005a4c7f50280f18"
+    },
+    "resident.py": {
+      "parent": "experiments/E142_dual_geometry/resident.py",
+      "sha256": "f76073f5756a59187ecfc1b90752f4db063e81555bad51835712a731d529cd27"
+    },
+    "run_queue.py": {
+      "parent": "experiments/E142_dual_geometry/run_queue.py",
+      "sha256": "24e21ae286e9c7cd24953410ff3b23ebacbedd02a4672e97bb12f6e31290df37"
+    },
+    "schedule.py": {
+      "parent": "experiments/E142_dual_geometry/schedule.py",
+      "sha256": "8d5dfd1a04a0b02965f91ed3be47c94371a28147705f02fa52e144c9d57c597a"
+    },
+    "simple_loss.py": {
+      "parent": "experiments/E142_dual_geometry/simple_loss.py",
+      "sha256": "fcd0827c829ee2466298eb61c1213b1fb12ae7f54afaef0f8e53a86033478238"
+    },
+    "step_control.py": {
+      "parent": "experiments/E142_dual_geometry/step_control.py",
+      "sha256": "795ddb45dd257e123f1880eea28b58502711807ee643bfcb51a7e72d484952da"
+    },
+    "train.py": {
+      "parent": "experiments/E142_dual_geometry/train.py",
+      "sha256": "baf131d27d088b3946416246142f273ff7dda998cdaccd9dbcaa29477aaa45dd"
+    }
+  },
+  "variant": "no_relation_value"
+}

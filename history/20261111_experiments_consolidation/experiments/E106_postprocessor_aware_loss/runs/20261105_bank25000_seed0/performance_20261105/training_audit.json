@@ -1,0 +1,52 @@
+{
+  "status": "inspected_without_modifying_live_training",
+  "progress": {
+    "epoch": 24,
+    "step": 12300,
+    "tier": 2,
+    "bad": 6,
+    "best": 2.496825092783198,
+    "best_epoch": 7,
+    "plateau_best": 2.5269725841656325,
+    "elapsed_seconds": 1582.6594493999946
+  },
+  "lr_drops": [
+    {
+      "epoch": 12,
+      "lr": 0.0001
+    },
+    {
+      "epoch": 18,
+      "lr": 3e-05
+    }
+  ],
+  "initial_validation": {
+    "total": 3.442370781838894,
+    "value": 1.9572160923182964,
+    "directions": 0.4225564172490294,
+    "auxiliary": 10.625983226776123
+  },
+  "best_validation": {
+    "total": 2.496825092783198,
+    "value": 1.936184596978128,
+    "directions": 0.42247916748603437,
+    "auxiliary": 1.3816136787682771
+  },
+  "component_improvement_fraction": {
+    "total": 0.2746786296363436,
+    "value": 0.010745617421966388,
+    "directions": 0.00018281526404918163,
+    "auxiliary": 0.8699778035328734
+  },
+  "estimated_fit_and_validation_GPU_input_cache_MiB": 757.0343017578125,
+  "profiler_scope": "Same5fit cases,one disposable profiled update;concurrent GPU use and profiler/cold module loading distort times;counts indicate launch overhead,not a speedup measurement.",
+  "candidate_priorities": [
+    "Reduce kernel launch overhead with a registered CUDA-graph engine using supported shapes/RNG handling",
+    "Remove repeated host assembly/blocking copies via prepacked inputs, pinned prefetch or ~757MiB unique-case GPU cache",
+    "Measure fused AdamW and aggregate monitor scalars to reduce synchronization"
+  ],
+  "live_scientific_sources_unchanged": true,
+  "formal_training_restarted": false,
+  "new_Q_calls": 0,
+  "test_read": false
+}

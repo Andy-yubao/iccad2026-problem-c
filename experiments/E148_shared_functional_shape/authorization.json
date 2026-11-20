@@ -1,0 +1,17 @@
+{
+  "scope": "E148.shared_functional_shape.v1.seed0",
+  "training_enabled": true,
+  "allowed_arms": [
+    "e148_shared_functional_shape"
+  ],
+  "prepared_arms": [
+    "e148_shared_functional_shape"
+  ],
+  "automatic_evaluation": true,
+  "automatic_retry": false,
+  "test_read": false,
+  "note": "2026-11-17 user: first sublayer alone reads problem; no blank feedback; accept shape responses; prepare and launch background. Correction: train all networks together, supervise only layers4/8/12 with .1/.1/.8.",
+  "activated_at": "2026-11-17T06:59:54.877374+00:00",
+  "preflight_sha256": "518c7d70185783d6e7d1a9708f846fe6fc4ef7dd7b7e78664772d055c39e1178",
+  "activation": "Explicit user invocation of run_queue --start"
+}

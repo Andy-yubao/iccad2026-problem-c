@@ -1,0 +1,26 @@
+{
+  "status": "stopped_before_evaluation",
+  "training_exit_code": 1,
+  "training": {
+    "status": "error",
+    "error": "RuntimeError('Numerical guard rejected candidate before AdamW')",
+    "epochs": 20,
+    "steps": 20350,
+    "best_epoch": 18,
+    "best_fixed_loss": 0.5035831927061081,
+    "elapsed_seconds": 3101.1717515999467,
+    "train_monitor_last4": [
+      0.5359675929546356,
+      0.5049291314780712,
+      0.5142054789066315,
+      0.5334868168234825
+    ],
+    "train_plateau_observed": false,
+    "convergence": "not established",
+    "test_read": false,
+    "postprocessing_calls": 0,
+    "next_stage": "frozen best dev500 only if normal early_stop; managed by pipeline"
+  },
+  "test_read": false,
+  "no_automatic_retry": true
+}

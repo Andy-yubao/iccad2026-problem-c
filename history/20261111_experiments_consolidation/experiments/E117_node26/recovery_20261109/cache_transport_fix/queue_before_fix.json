@@ -1,0 +1,17 @@
+{
+  "status": "user_stop",
+  "pid": 33172,
+  "started_at": "2026-11-09T02:55:03.537694+00:00",
+  "active": {
+    "stage": "node26",
+    "pid": 11320,
+    "started_at": "2026-11-09T02:55:03.555906+00:00"
+  },
+  "completed": [],
+  "test_read": false,
+  "automatic_evaluation": true,
+  "recovery_id": "20261109_1",
+  "error": "InterruptedError('Stopped; no next stage')",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E117_node26\\run_queue.py\", line 72, in main\n    launch('node26','train',['--arm','node26',*(['--resume','--authorized-recovery'] if args.authorized_recovery else [])])\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E117_node26\\run_queue.py\", line 68, in launch\n    if stopped():raise InterruptedError('Stopped; no next stage')\nInterruptedError: Stopped; no next stage\n",
+  "updated_at": "2026-11-09T03:03:59.376823+00:00"
+}

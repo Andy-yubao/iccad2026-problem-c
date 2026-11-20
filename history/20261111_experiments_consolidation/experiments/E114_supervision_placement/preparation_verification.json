@@ -1,0 +1,34 @@
+{
+  "status": "prepared_training_disabled",
+  "implementation_check": "passed",
+  "training_started": false,
+  "optimizer_updates": 0,
+  "arms": [
+    "terminal",
+    "dense",
+    "staged"
+  ],
+  "parameters": 612307,
+  "test_read": false,
+  "automatic_queue": false,
+  "full_dataset_prepared_by_E108": true,
+  "actual_optimizer_update_tested": false,
+  "preflight_sources_match_verified": true,
+  "training_entry_refusal_checked": [
+    "terminal",
+    "dense",
+    "staged"
+  ],
+  "refusal_before_data_or_CUDA": true,
+  "run_directories_created": 0,
+  "checkpoints_created": 0,
+  "training_authorization_enabled": false,
+  "STOP_preserved": true,
+  "old_STOP_sha256": {
+    "experiments/E112_deep_geometry_budget/STOP": "e6b8d9b06e8e5cd702ce3ce820355b95879b02dd3bd0b0784aecdf7acae459c8",
+    "experiments/E112_deep_geometry_budget/QUEUE_STOP": "b9ea0a6be323b87022c64d451980fc7ac6e81876b29c68ae574657c3de65c527",
+    "experiments/E113_deep_head_budget/STOP": "887e15973fae01427bf4598d75082182f5575fcccddccaaed51c00a2dcaecf6c"
+  },
+  "no_subprocesses_or_background_queue_started": true,
+  "note": "Only finite five-train-case forward/backward/CUDA graph inspection ran; no Adam update or formal training."
+}

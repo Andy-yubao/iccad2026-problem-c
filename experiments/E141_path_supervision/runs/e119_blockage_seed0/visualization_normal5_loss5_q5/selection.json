@@ -1,0 +1,112 @@
+{
+  "arm": "e119_blockage",
+  "seed": 20261116,
+  "ordinary": [
+    112,
+    114,
+    335,
+    214,
+    450
+  ],
+  "worst_loss": [
+    293,
+    455,
+    263,
+    129,
+    420
+  ],
+  "worst_Q": [
+    358,
+    23,
+    483,
+    43,
+    174
+  ],
+  "entries": [
+    {
+      "category": "普通例",
+      "rank": 1,
+      "index": 112
+    },
+    {
+      "category": "普通例",
+      "rank": 2,
+      "index": 114
+    },
+    {
+      "category": "普通例",
+      "rank": 3,
+      "index": 335
+    },
+    {
+      "category": "普通例",
+      "rank": 4,
+      "index": 214
+    },
+    {
+      "category": "普通例",
+      "rank": 5,
+      "index": 450
+    },
+    {
+      "category": "Loss最差",
+      "rank": 1,
+      "index": 293
+    },
+    {
+      "category": "Loss最差",
+      "rank": 2,
+      "index": 455
+    },
+    {
+      "category": "Loss最差",
+      "rank": 3,
+      "index": 263
+    },
+    {
+      "category": "Loss最差",
+      "rank": 4,
+      "index": 129
+    },
+    {
+      "category": "Loss最差",
+      "rank": 5,
+      "index": 420
+    },
+    {
+      "category": "Q最差",
+      "rank": 1,
+      "index": 358
+    },
+    {
+      "category": "Q最差",
+      "rank": 2,
+      "index": 23
+    },
+    {
+      "category": "Q最差",
+      "rank": 3,
+      "index": 483
+    },
+    {
+      "category": "Q最差",
+      "rank": 4,
+      "index": 43
+    },
+    {
+      "category": "Q最差",
+      "rank": 5,
+      "index": 174
+    }
+  ],
+  "duplicates_preserved": true,
+  "normal_rule": "Same five random dev cases for both arms, excluding union of both arms worst-Loss/Q sets",
+  "loss_rule": "Saved per-case own aggregate dev Loss at this frozen own-Loss-best; descending, dev index tie-break",
+  "Q_rule": "Saved final postprocessed per-case Q descending, dev index tie-break",
+  "checkpoint_sha256": "7dba21d622db5368dccc8a39bf9caeaf96b63226264c205cf71edd5a655eb7dd",
+  "best_epoch": 55,
+  "training": false,
+  "postprocessing_calls": 0,
+  "Q_calls": 0,
+  "test_read": false
+}

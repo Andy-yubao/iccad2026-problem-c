@@ -1,0 +1,43 @@
+{
+  "revision": "E103.global_independent_LossQ.v1",
+  "authorization": "User explicitly corrected objective to pooled cross-problem Loss-Q statistics, old data not used, two current models only, requested analysis and Loss comparison figures.",
+  "models": [
+    {
+      "id": "enhanced_best71",
+      "checkpoint": "experiments/E103_offline_loss_alignment/assets/e98_generalization/best.pt",
+      "sha256": "3f7ca0086af8a13bd52eedf0635117312e5c0a72e80e423e9cee3db5ca9b87ea"
+    },
+    {
+      "id": "current_best29",
+      "checkpoint": "experiments/E103_offline_loss_alignment/runs/20261104_learned_v1_lr1e3_seed0/checkpoints/best.pt",
+      "sha256": "85d21d2dee2a6266894a9bf0036210c3a0ff7c2290ca0a6ec0b4e32784c84325"
+    }
+  ],
+  "current_training_coefficients": {
+    "position": 0.6635742095117481,
+    "shape": 0.14678150047973748,
+    "penetration": 0.20175720946322662,
+    "module_load_mean": 0.08060221885152805,
+    "module_max_excess10": 0.06275008399971584,
+    "wirelength": 1.717430989723426e-16,
+    "compactness": 0.03897289214696773,
+    "boundary_contribution": 0.7392811545028284,
+    "grouping_contribution": 1.502357909467406,
+    "mib_contribution": 0.4189601832672195
+  },
+  "sampling": "2000 fresh distinct original train problems uniformly without replacement after excluding old1000; random balanced model assignment1000 each; one draft/problem; no pairing or matching by Q/Loss.",
+  "fit": 1400,
+  "check": 600,
+  "split": "Balanced700/300 per source before any Q observed. Global fit-only centering/scaling; no within-problem centering, differences or ranks.",
+  "observations": "Generate all2000 drafts/Q anew, same E98 fixed-depth postprocessor; four CPU1 workers. Raw dataset tensor cache allowed; no old draft/Loss/Q labels or prior fitted weights used.",
+  "statistics": "Unweighted global Pearson/Spearman; primary nonnegative least squares with free intercept on standardized raw Q/ten terms. No hyperparameter search or prior penalty. Convert coefficients to raw units, normalize physical coefficient total to original E98.",
+  "retained_data": "All Q values including equal1 and high tails, all memberships and source IDs retained. No clipping/winsorizing for primary correlations.",
+  "secondary_diagnostics": "Per-source correlations, partial Pearson controlling linear module countN, fit-only partial correlations controlling other9 terms, signed standardized regression diagnostic; primary remains pooled cross-problem association.",
+  "bootstrap": "128 source-worker cluster resamples for coefficient stability and heldout Pearson-gain interval; do not select bootstrap winners.",
+  "figures": "Standalone PNG/PDF: original/current/new Loss vs Q on600 check observations, full range plus explicitly labeled body zoom; feature correlations and joint standardized coefficients.",
+  "neural_training_started": false,
+  "test_read": false,
+  "maximum_new_observations": 2000,
+  "caveat": "Problem difficulty and size confounding intentionally retained for primary goal, association not causal training usefulness. All observations are from source-network training pool.",
+  "stop": "Newrun STOP or package STOP; accepted case boundary stop; no extra sources, model training, or automatic retries."
+}

@@ -1,0 +1,89 @@
+{
+  "status": "failed",
+  "formal_training_started": false,
+  "formal_optimizer_updates": 0,
+  "unique_train_cases": 5,
+  "dev_payloads": 0,
+  "test_payloads": 0,
+  "postprocessing_calls": 0,
+  "Q_calls": 0,
+  "ctrl_c_resume_verified": false,
+  "cache": {
+    "key": "a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148",
+    "roles": {
+      "train": {
+        "members": 36000,
+        "chunks": 141,
+        "all_chunk_bytes_hashed": true
+      },
+      "dev_monitor500": {
+        "members": 500,
+        "chunks": 8,
+        "all_chunk_bytes_hashed": true
+      }
+    }
+  },
+  "initial_state_sha256": "aa52592d9afa93c47150069dd22a6b8ff4c13d11cc45bcf0db410ce8a3d95b45",
+  "input_checks": {
+    "label_isolation": true,
+    "independent_relation_reconstruction": true,
+    "node_permutation_equivariance": true,
+    "empty_sets_and_padding": true,
+    "cpu_cuda_close": true,
+    "axis_swap_involution": true,
+    "final_loss_exact": true
+  },
+  "raw_to_cached_public_input_exact": true,
+  "disposable_optimizer_updates": 1,
+  "disposable_loss": 33.68413543701172,
+  "gradient_norm": 511.05224609375,
+  "capture_preserves_parameters": true,
+  "all_branches_have_gradients": true,
+  "relative_update_bound_verified": true,
+  "parameters": 1335363,
+  "peak_allocated_bytes": 924255744,
+  "execution_path": "FP32 CUDA graph",
+  "real_inference_path_checked_on_train_member": true,
+  "resume_checks": [
+    {
+      "arm": "standard256",
+      "pause_after_steps": 2,
+      "resume_to_steps": 3,
+      "paused_cursor": 64,
+      "resumed_cursor": 96,
+      "bitwise_equal": {
+        "model": true,
+        "optimizer": true,
+        "scheduler": true,
+        "rng": true,
+        "projection": true,
+        "progress_order": true,
+        "progress_cursor": true,
+        "progress_step": true,
+        "progress_seen": true,
+        "progress_epoch": true,
+        "progress_pending_monitor": true,
+        "progress_best": true,
+        "progress_best_epoch": true
+      },
+      "paused_seconds": 0.5745143999993161,
+      "resumed_seconds": 0.9314598000019032,
+      "signal": "signal.raise_signal(SIGINT) through the actual training handler",
+      "unique_train_cases": 5,
+      "formal_updates": 0,
+      "disposable_updates": 6,
+      "dev_payloads": 0,
+      "test_payloads": 0
+    }
+  ],
+  "queue_signal": {
+    "SIGINT_pauses_worker": true,
+    "no_next_stage_after_pause": true,
+    "explicit_resume_advances": true,
+    "simulated_workers_only": true,
+    "real_postprocessing_calls": 0
+  },
+  "error": "RuntimeError('Controller short check failed: evaluation')",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E137_standard_transformer256\\preflight.py\", line 169, in main\n    if completed.returncode:raise RuntimeError('Controller short check failed: '+mode)\nRuntimeError: Controller short check failed: evaluation\n",
+  "elapsed_seconds": 156.63132659999974
+}

@@ -1,0 +1,66 @@
+<div id="iccad-stage12">
+  <h2>4+12 · Reference → 逐层草稿 → 后处理</h2>
+  <div class="viz-controls">
+    <label class="form-label">样例组<select class="form-select" id="tri-group"><option value="fixed">固定5例 · train</option><option value="worst">最差5例 · dev500</option></select></label>
+    <label class="form-label">样例<select class="form-select" id="tri-case"></select></label>
+  </div>
+  <div class="viz-row"><label class="form-label" for="tri-layer">草稿层 <output id="tri-depth" class="tabular-nums">12 / 12</output></label><input class="form-range" id="tri-layer" type="range" min="1" max="12" value="12" step="1" aria-label="第1到12层草稿"></div>
+  <div class="viz-row"><label class="form-check"><input class="form-check-input" id="tri-overlap" type="checkbox" checked><span class="form-check-label">草稿重叠红框</span></label></div>
+  <p class="text-small tabular-nums" id="tri-meta" aria-live="polite"></p>
+  <div class="tri-panels">
+    <section><h3>Reference</h3><canvas id="tri-reference" width="900" height="900" role="img" aria-label="原始参考布局"></canvas></section>
+    <section><h3 id="tri-draft-label">Draft · 第12层</h3><canvas id="tri-draft" width="900" height="900" role="img" aria-label="当前层模型实际草稿"></canvas></section>
+    <section><h3>后处理结果</h3><canvas id="tri-final" width="900" height="900" role="img" aria-label="最终硬合法布局"></canvas></section>
+  </div>
+  <p id="tri-selection" class="text-small" aria-live="polite">点击模块可在三栏同时定位；再次点击取消。</p>
+  <div id="tri-legend" aria-label="模块与约束图例"></div>
+  <p class="text-small tabular-nums" id="tri-detail"></p>
+</div>
+<style>
+#iccad-stage12{color:var(--foreground);display:grid;gap:calc(var(--font-size-base)*.75)}
+#iccad-stage12 .tri-panels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--font-size-base)*.75)}
+#iccad-stage12 section{min-width:0;display:grid;gap:calc(var(--font-size-base)*.25)}
+#iccad-stage12 canvas{display:block;width:100%;height:auto;aspect-ratio:1}
+#iccad-stage12 select{max-width:100%}
+#iccad-stage12 #tri-meta,#iccad-stage12 #tri-detail{overflow-wrap:anywhere}
+#iccad-stage12 .tri-legend-row{display:flex;align-items:baseline;flex-wrap:wrap;gap:calc(var(--font-size-base)*.35);margin-bottom:calc(var(--font-size-base)*.4)}
+#iccad-stage12 .tri-legend-row strong{font-weight:500;min-width:5em}
+#iccad-stage12 .tri-legend-row button{font-variant-numeric:tabular-nums}
+#iccad-stage12 #tri-legend{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;padding:12px;border:1px solid var(--border)}
+#iccad-stage12 .tri-key{display:inline-flex;align-items:center;gap:7px}
+#iccad-stage12 .tri-swatch{display:inline-block;width:24px;height:13px;border:1px solid #475569}
+@media(max-width:620px){#iccad-stage12 .tri-panels{grid-template-columns:1fr}}
+</style>
+<script>
+(()=>{
+ const root=document.getElementById('iccad-stage12'),data=__DATA__;
+ const el=id=>root.querySelector('#tri-'+id),canvases=['reference','draft','final'].map(el);
+ let selected=0,module=-1;
+ const cases=()=>data.cases.filter(c=>c.group===el('group').value);
+ const fmt=(n,k=3)=>Number(n).toFixed(k);
+ function color(name){const v=getComputedStyle(root).getPropertyValue('--'+name).trim();return v||getComputedStyle(root).color}
+ function intersects(p){let hits=new Set();for(let i=0;i<p.length;i++)for(let j=0;j<i;j++){let a=p[i],b=p[j];if(Math.min(a[0]+a[2],b[0]+b[2])-Math.max(a[0],b[0])>1e-5&&Math.min(a[1]+a[3],b[1]+b[3])-Math.max(a[1],b[1])>1e-5){hits.add(i);hits.add(j)}}return hits}
+ const sides=[[1,'L'],[2,'R'],[4,'T'],[8,'B']];
+ function attributes(c,i){const f=c.constraints[i];return [f[3]>0?'G'+f[3]:'',f[0]?'F':'',f[1]?'P':'',sides.filter(([bit])=>f[4]&bit).map(([,letter])=>letter).join('/')].filter(Boolean).join(' · ')||'无附加约束'}
+ function draw(cv,p,c,overlap,failed){
+  const ctx=cv.getContext('2d'),L=c.bounds,pad=30,s=(cv.width-2*pad)/(L[1]-L[0]);
+  const x=v=>pad+(v-L[0])*s,y=v=>cv.height-pad-(v-L[2])*s,hits=overlap?intersects(p):new Set(),font=Math.max(20,11*cv.width/(cv.clientWidth||450));
+  ctx.clearRect(0,0,cv.width,cv.height);ctx.strokeStyle=color('border');ctx.lineWidth=1;ctx.strokeRect(pad,pad,cv.width-2*pad,cv.height-2*pad);
+  const lo=[Math.min(...p.map(r=>r[0])),Math.min(...p.map(r=>r[1]))],hi=[Math.max(...p.map(r=>r[0]+r[2])),Math.max(...p.map(r=>r[1]+r[3]))];
+  ctx.strokeStyle=color('muted-foreground');ctx.setLineDash([8,6]);ctx.strokeRect(x(lo[0]),y(hi[1]),(hi[0]-lo[0])*s,(hi[1]-lo[1])*s);ctx.setLineDash([]);
+  p.forEach((r,i)=>{let xx=x(r[0]),yy=y(r[1]+r[3]),w=r[2]*s,h=r[3]*s;ctx.globalAlpha=module>=0&&i!==module?.18:.78;const fill=c.group_colors[String(c.constraints[i][3])];ctx.fillStyle=fill?`rgb(${fill.join(',')})`:'#e5e7eb';ctx.fillRect(xx,yy,w,h);ctx.globalAlpha=module>=0&&i!==module?.18:1;ctx.strokeStyle=hits.has(i)?'#dc2626':'#475569';ctx.lineWidth=module===i?4:hits.has(i)?3:1;ctx.strokeRect(xx,yy,w,h)});
+  // E6 block labels: number, group ID, then fixed/preplaced flags.
+  p.forEach((r,i)=>{if(module>=0&&module!==i)return;let xx=x(r[0]+r[2]/2),yy=y(r[1]+r[3]/2),f=c.constraints[i],lines=[String(i)];if(f[3]>0)lines.push('G'+f[3]);if(f[0]||f[1])lines.push([f[0]?'F':'',f[1]?'P':''].filter(Boolean).join(' '));const size=module===i?font:Math.max(11,Math.min(font,r[2]*s/(Math.max(...lines.map(t=>t.length))*.65+1),r[3]*s/(lines.length*1.15)));ctx.globalAlpha=1;ctx.font=`${size}px system-ui`;ctx.textAlign='center';ctx.textBaseline='middle';const width=Math.max(...lines.map(t=>ctx.measureText(t).width)),height=size*1.07*lines.length;ctx.globalAlpha=.7;ctx.fillStyle=color('background');ctx.fillRect(xx-width/2-1,yy-height/2,width+2,height);ctx.globalAlpha=1;ctx.fillStyle=color('foreground');lines.forEach((line,j)=>ctx.fillText(line,xx,yy+(j-(lines.length-1)/2)*size*1.07))});
+  // Boundary badges refer to each stage's own bbox, using pre-rounded coordinates.
+  p.forEach((r,i)=>{if(module>=0&&module!==i)return;const locations=[[1,'L',r[0],r[1]+r[3]/2,1,0],[2,'R',r[0]+r[2],r[1]+r[3]/2,-1,0],[4,'T',r[0]+r[2]/2,r[1]+r[3],0,1],[8,'B',r[0]+r[2]/2,r[1],0,-1]];for(const [bit,letter,bx,by,dx,dy] of locations){if(!(c.constraints[i][4]&bit))continue;const size=Math.max(12,font*.74),xx=x(bx)+dx*size*.52,yy=y(by)+dy*size*.6;ctx.globalAlpha=1;ctx.fillStyle=failed[i].includes(bit)?'#b91c1c':'#15803d';ctx.fillRect(xx-size*.44,yy-size*.52,size*.88,size*1.04);ctx.fillStyle='#ffffff';ctx.font=`500 ${size}px system-ui`;ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(letter,xx,yy)}});
+  ctx.globalAlpha=1;ctx.textBaseline='alphabetic';ctx.fillStyle=color('muted-foreground');ctx.font='19px system-ui';ctx.textAlign='left';ctx.fillText(`${fmt(L[0],0)}, ${fmt(L[2],0)}`,pad,cv.height-7);ctx.textAlign='right';ctx.fillText(`${fmt(L[1],0)}, ${fmt(L[3],0)}`,cv.width-pad,22)
+ }
+ function legend(){const c=cases()[selected],box=el('legend');box.replaceChildren();function key(label,fill,border='1px solid #475569'){let item=document.createElement('span'),swatch=document.createElement('i'),text=document.createElement('span');item.className='tri-key';swatch.className='tri-swatch';swatch.style.background=fill;swatch.style.border=border;text.textContent=label;item.append(swatch,text);box.append(item)}for(const [g,rgb] of Object.entries(c.group_colors))key('分组 G'+g,`rgb(${rgb.join(',')})`);key('无分组','#e5e7eb');key('L/R/T/B 满足','#15803d');key('L/R/T/B 违反','#b91c1c');key('重叠模块','transparent','2px solid #dc2626');key('当前布局外框','transparent','1px dashed #64748b');let text=document.createElement('span');text.textContent='数字：模块编号 · F：固定形状 · P：预放置';box.append(text)}
+ function render(){let c=cases()[selected],d=+el('layer').value;el('depth').textContent=d+' / 12';el('draft-label').textContent='Draft · 第'+d+'层'+([4,12].includes(d)?'（直接监督）':'');el('meta').textContent=`${c.label} · N=${c.n} · best epoch 48 · ${c.member[0]} : ${c.member[1]}`;draw(canvases[0],c.reference,c,false,c.boundary_status.reference);draw(canvases[1],c.layers[d-1],c,el('overlap').checked,c.boundary_status.layers[d-1]);draw(canvases[2],c.final,c,false,c.boundary_status.final);el('selection').textContent=module<0?'点击模块可在三栏同时定位；再次点击取消。':`模块 ${module} · ${attributes(c,module)}（再次点击取消定位）`;el('detail').textContent=`第${d}层重复覆盖 ${fmt(c.coverage[d-1]*100,2)}% · 最终 Q ${fmt(c.Q,6)} · 硬合法 · 边界违规 ${c.boundary} · 分组违规 ${c.grouping}`}
+ function options(){selected=0;module=-1;el('case').replaceChildren();cases().forEach((c,i)=>{let o=document.createElement('option');o.value=i;o.textContent=`${c.label} · N=${c.n}`;el('case').append(o)});legend();render()}
+ el('group').addEventListener('change',options);el('case').addEventListener('change',()=>{selected=+el('case').value;module=-1;legend();render()});el('layer').addEventListener('input',render);el('overlap').addEventListener('change',render);
+ canvases.forEach((cv,k)=>cv.addEventListener('click',event=>{const c=cases()[selected],p=k===0?c.reference:k===2?c.final:c.layers[+el('layer').value-1],rect=cv.getBoundingClientRect(),s=(cv.width-60)/(c.bounds[1]-c.bounds[0]),x=((event.clientX-rect.left)*cv.width/rect.width-30)/s+c.bounds[0],y=(cv.height-30-(event.clientY-rect.top)*cv.height/rect.height)/s+c.bounds[2];let hit=-1;p.forEach((r,i)=>{if(x>=r[0]&&x<=r[0]+r[2]&&y>=r[1]&&y<=r[1]+r[3])hit=i});module=module===hit?-1:hit;render()}));
+ new ResizeObserver(render).observe(root);
+ new MutationObserver(render).observe(document.documentElement,{attributes:true,attributeFilter:['class','style','data-theme']});options();
+})();
+</script>

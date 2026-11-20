@@ -1,0 +1,103 @@
+{
+  "reference": {
+    "topology_similarity": 1.0,
+    "direction_match": 1.0,
+    "neighborhood_match": 1.0,
+    "reference_near_directed_edges": 116,
+    "predicted_near_directed_edges": 116,
+    "eligible_directed_edges": 240,
+    "loss": 0.0,
+    "gradient_norm": 0.0
+  },
+  "translated": {
+    "topology_similarity": 1.0,
+    "direction_match": 1.0,
+    "neighborhood_match": 1.0,
+    "reference_near_directed_edges": 116,
+    "predicted_near_directed_edges": 116,
+    "eligible_directed_edges": 240,
+    "loss": 0.0,
+    "gradient_norm": 0.0
+  },
+  "centers_scaled": {
+    "topology_similarity": 1.0,
+    "direction_match": 1.0,
+    "neighborhood_match": 1.0,
+    "reference_near_directed_edges": 116,
+    "predicted_near_directed_edges": 116,
+    "eligible_directed_edges": 240,
+    "loss": 0.0,
+    "gradient_norm": 0.0
+  },
+  "tiny_jitter_at_neighbor_cutoff_ties": {
+    "topology_similarity": 1.0,
+    "direction_match": 1.0,
+    "neighborhood_match": 1.0,
+    "reference_near_directed_edges": 116,
+    "predicted_near_directed_edges": 96,
+    "eligible_directed_edges": 240,
+    "loss": 0.0,
+    "gradient_norm": 0.0
+  },
+  "coincident_collapse": {
+    "topology_similarity": 0.0,
+    "direction_match": 0.0,
+    "neighborhood_match": 0.5,
+    "reference_near_directed_edges": 116,
+    "predicted_near_directed_edges": 240,
+    "eligible_directed_edges": 240,
+    "loss": 0.07122389489862835,
+    "gradient_norm": 0.38297656679445385
+  },
+  "random_identity_permutation": {
+    "topology_similarity": 0.12220982142857142,
+    "direction_match": 0.21875,
+    "neighborhood_match": 0.5725446428571429,
+    "reference_near_directed_edges": 116,
+    "predicted_near_directed_edges": 116,
+    "eligible_directed_edges": 240,
+    "loss": 0.2945228748352725,
+    "gradient_norm": 0.016419047899724745
+  },
+  "larger_rectangles_same_centers": {
+    "topology_similarity": 1.0,
+    "direction_match": 1.0,
+    "neighborhood_match": 1.0,
+    "reference_near_directed_edges": 116,
+    "predicted_near_directed_edges": 116,
+    "eligible_directed_edges": 240
+  },
+  "same_orders_changed_neighbors": {
+    "topology_similarity": 0.8125,
+    "direction_match": 1.0,
+    "neighborhood_match": 0.8125,
+    "reference_near_directed_edges": 5,
+    "predicted_near_directed_edges": 4,
+    "eligible_directed_edges": 12
+  },
+  "intact_clusters_exchanged": {
+    "topology_similarity": 0.5,
+    "direction_match": 0.5,
+    "neighborhood_match": 1.0,
+    "reference_near_directed_edges": 12,
+    "predicted_near_directed_edges": 12,
+    "eligible_directed_edges": 30
+  },
+  "verification": {
+    "status": "passed",
+    "translation_and_scale_invariant": true,
+    "shape_and_overlap_independent_at_fixed_centers": true,
+    "reference_score_one_and_loss_zero": true,
+    "collapse_score_zero_and_nonzero_finite_gradient": true,
+    "local_and_global_failure_modes_detected": true,
+    "equivariant_under_id_permutation_with_distance_ties": true,
+    "PP_relations_excluded_only_from_scoring": true,
+    "ambiguous_neighbor_cutoff_ties_do_not_force_arbitrary_labels": true,
+    "finite_difference_gradient_check_passed": true,
+    "global_expansion_does_not_improve_surrogate": true,
+    "synthetic_only": true,
+    "training": false,
+    "optimizer_updates": 0,
+    "dataset_payloads": 0
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "observed_at": "2026-11-09T02:45:05.644868+00:00",
+  "status": "unexpected_process_exit",
+  "processes": {
+    "21000": {
+      "active": false,
+      "open_error": 87
+    },
+    "46476": {
+      "active": false,
+      "open_error": 87
+    }
+  },
+  "last_heartbeat": {
+    "status": "data_preparation",
+    "activity": "capturing FP32 train graph; no optimizer updates during capture",
+    "pid": 46476,
+    "loaded": 401,
+    "count": 500,
+    "epoch": 0,
+    "step": 0,
+    "cursor": 0,
+    "elapsed_seconds": 898.8229922000319,
+    "utc": "2026-11-09T02:42:39Z",
+    "test_read": false,
+    "postprocessing_calls": 0
+  },
+  "formal_updates": 0,
+  "last_saved_checkpoint_status": "data_preparation",
+  "stderr_empty": true,
+  "reason": "unknown; no traceback recorded",
+  "automatic_restart": false,
+  "data_generation_repeated": false,
+  "CPU_preprocessing_repeated": true,
+  "static_tensor_cache_implemented": false
+}

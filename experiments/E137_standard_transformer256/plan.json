@@ -1,0 +1,63 @@
+{
+  "dataset_report_sha256": "3a79fd9eb2636578fa4df876ccac51699eab04cd59179027488aa7d8c334928a",
+  "payload_checksums_sha256": "f8eeb86da003c9901b73541eb13cc8e16cad9cd963dcf74a0edddf4a1a5abe54",
+  "required_cache_key": "a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148",
+  "preflight_train_indices": [
+    10841,
+    12651,
+    6417,
+    4280,
+    17946
+  ],
+  "experiment": "E137_standard_transformer256",
+  "revision": "E137.standard_transformer256.v1.seed0",
+  "status": "authorized_preparing_implementation_gate",
+  "authorization": "2026-11-14 user accepted plan; prepare then directly launch hidden background training and planned evaluation",
+  "train_count": 36000,
+  "train_monitor_count": 500,
+  "dev_monitor_count": 500,
+  "seed": 0,
+  "batch_size": 32,
+  "precision": "FP32 deterministic; TF32 disabled",
+  "threads": 4,
+  "parameters": {
+    "standard256": 1335363
+  },
+  "maximum_seconds": 14400,
+  "maximum_epochs": 200,
+  "max_nodes": 120,
+  "max_pins": 145,
+  "cache_build_workers": 4,
+  "cache_policy": "Reuse complete existing verified parent36k cache; no rebuild",
+  "initialization": "PyTorch defaults; model.py construction order; scratch seed0",
+  "learning_rates": [
+    0.0003,
+    0.0001,
+    3e-05,
+    1e-05
+  ],
+  "warmup": "first1125 accepted updates linear3e-5->3e-4",
+  "scheduler": "14 protected epochs; meaningful=max(1e-5,abs(best)*1e-4); patience6; lowest>=8 complete epochs and8 bad epochs",
+  "optimizer": "AdamW betas(.9,.999) eps1e-8 decay.0003; clip1; per-module displacement bound.005",
+  "loss": "Copied exact E136 base_per_case complete public-priority-v1, final coefficient1",
+  "augmentation": "axis swap P=.5; independent address domain20261114137 per member/epoch random128 slots",
+  "address_diagnostic_epoch": 1000000,
+  "automatic_retry": false,
+  "test_read": false,
+  "engine": "FP32 CUDA graph subject to preparation capture gate; no silent fallback",
+  "terminal_evaluation": "sole final-Loss-best; original dev500; unchanged E98.depth_budget.v1",
+  "comparison_controls": [
+    {
+      "label": "E134_stride3",
+      "result": "experiments/E134_supervision_interval/runs/e119_stride3_seed0/evaluation_no_mib_dev500/results.json",
+      "results_sha256": "56bc475d5ae62d6faf69ad0d215cc028da2e7468d5c6df1c4355e718f5075e56",
+      "checkpoint_sha256": "1f69a681713255a7adfca09357d70065ad7dff4d62f1a6294a7c233e30ad1df1"
+    },
+    {
+      "label": "E136_D",
+      "result": "experiments/E136_frontend_F_linear/runs/e119_D_seed0/evaluation_no_mib_dev500/results.json",
+      "results_sha256": "c046563b9d5f46b94ab8ed4df97ba0a03ae4527de61b99c868087452248c11e5",
+      "checkpoint_sha256": "b945bd76df74f5a5ae8d61beeba58f682a88929430bc26fb9a98f3fc5ea85951"
+    }
+  ]
+}

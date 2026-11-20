@@ -1,0 +1,190 @@
+{
+  "copy_policy": "Independent experiment-local copies; no private cross-experiment imports",
+  "sources": {
+    "__init__.py": {
+      "source": "experiments/E114_supervision_placement/__init__.py",
+      "sha256": "e88603c7289d0636a073fae6a35658f4829f4459cad9a1e7d1d91874c3e78960"
+    },
+    "augmentation.py": {
+      "source": "experiments/E114_supervision_placement/augmentation.py",
+      "sha256": "dba0658829115b08184fadec488ef0b56fe0adf0e8452cb240029d5c5c4de87c"
+    },
+    "batches.py": {
+      "source": "experiments/E114_supervision_placement/batches.py",
+      "sha256": "7d8aaccb6b27ee4ea261d7a9c9bebfedfe484181ee00e5d7f6ccb27d0639be54"
+    },
+    "captured_projection.py": {
+      "source": "experiments/E114_supervision_placement/captured_projection.py",
+      "sha256": "7f19baba25bc52a686e08a1af32236bffa8b47300cac96c52914b3b81d88131a"
+    },
+    "cuda_step.py": {
+      "source": "experiments/E114_supervision_placement/cuda_step.py",
+      "sha256": "cd5eddd01dc44b33da1c57c13261b27e1f7ef232b81c425e57080501a25ce7f1"
+    },
+    "data.py": {
+      "source": "experiments/E114_supervision_placement/data.py",
+      "sha256": "5055f1a6f97b1ea6cfe77952fccbb56ac3a57d63e7c24e391d0ba29160ec6ce5"
+    },
+    "features.py": {
+      "source": "experiments/E114_supervision_placement/features.py",
+      "sha256": "097a04bd1259a76b9fce23e5e533f7a22beece7a2f7af0435c3f560696c32dd1"
+    },
+    "group_tree.py": {
+      "source": "experiments/E114_supervision_placement/group_tree.py",
+      "sha256": "867ca3b84848ae78da25dd2a2db16018d722102c7bb5a34644492451efef65fd"
+    },
+    "io.py": {
+      "source": "experiments/E114_supervision_placement/io.py",
+      "sha256": "d4aef673463486cf495aeb2947ba2b51089fdbe4b6930ea0157a3a738f2ac708"
+    },
+    "loss_config.py": {
+      "source": "experiments/E114_supervision_placement/loss_config.py",
+      "sha256": "70130eb80100b0aed6ce7de9bbe1c005c48014189ac26fb8610985b0c16daa50"
+    },
+    "loss.py": {
+      "source": "experiments/E114_supervision_placement/loss.py",
+      "sha256": "e814051b85d63379eebe9b5fbe259d80b371a38a44d275429ccc58b41f4a7d9c"
+    },
+    "ports.py": {
+      "source": "experiments/E114_supervision_placement/ports.py",
+      "sha256": "431b54476e7de8a94c12cf935a30a3b49b911e208305fbe6bb7b23d72e37dbef"
+    },
+    "resident.py": {
+      "source": "experiments/E114_supervision_placement/resident.py",
+      "sha256": "f76073f5756a59187ecfc1b90752f4db063e81555bad51835712a731d529cd27"
+    },
+    "schedule.py": {
+      "source": "experiments/E114_supervision_placement/schedule.py",
+      "sha256": "8d5dfd1a04a0b02965f91ed3be47c94371a28147705f02fa52e144c9d57c597a"
+    },
+    "simple_loss.py": {
+      "source": "experiments/E114_supervision_placement/simple_loss.py",
+      "sha256": "fcd0827c829ee2466298eb61c1213b1fb12ae7f54afaef0f8e53a86033478238"
+    },
+    "step_control.py": {
+      "source": "experiments/E114_supervision_placement/step_control.py",
+      "sha256": "795ddb45dd257e123f1880eea28b58502711807ee643bfcb51a7e72d484952da"
+    },
+    "train.py": {
+      "source": "experiments/E114_supervision_placement/train.py",
+      "sha256": "fcde062f1a3cf66001eb4b4f9e47b5c1cd59db16b09a506484857f5fb0b0eb0f"
+    },
+    "original_model.py": {
+      "source": "experiments/E114_supervision_placement/model.py",
+      "sha256": "0d5f7a0f897653155d5405e07aab9357b46b52bca4ddedd4b2cb11f05151dc82"
+    },
+    "evaluation/budget.json": {
+      "source": "experiments/E114_supervision_placement/evaluation_staged/budget.json",
+      "sha256": "c93f71d7664f6359a87aa740bf08108782ea40146bf329f9a3be7f7afac3fe61"
+    },
+    "evaluation/run.py": {
+      "source": "experiments/E114_supervision_placement/evaluation_staged/run.py",
+      "sha256": "21511c426f8e3931a8af990ceb330a406b629f24d1ded773cfa1d403a34092ab"
+    },
+    "evaluation/solver.py": {
+      "source": "experiments/E114_supervision_placement/evaluation_staged/solver.py",
+      "sha256": "689e2d00958b257207a4b3c509ca93df0f35d5d65d24219777cdfc2dd1cd6877"
+    },
+    "evaluation/__init__.py": {
+      "source": "experiments/E114_supervision_placement/evaluation_staged/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evaluation/repair/canonical.py": {
+      "source": "experiments/E114_supervision_placement/evaluation_staged/repair/canonical.py",
+      "sha256": "9f7da6983541a3c8b0d57c8f869c6905c24f2bc4eb3643e0ed9e0a718d2abf2c"
+    },
+    "evaluation/repair/canonical_native.py": {
+      "source": "experiments/E114_supervision_placement/evaluation_staged/repair/canonical_native.py",
+      "sha256": "e350394ce13f8bb20e53d03494912f9367d29c9f68809ad16c4314a45709718b"
+    },
+    "evaluation/repair/canonical_py.py": {
+      "source": "experiments/E114_supervision_placement/evaluation_staged/repair/canonical_py.py",
+      "sha256": "b5b99c1f77756aa318fe5cb0e7fa82935844752b4fa815ab80367adb34e00195"
+    },
+    "evaluation/repair/certify_polish.py": {
+      "source": "experiments/E114_supervision_placement/evaluation_staged/repair/certify_polish.py",
+      "sha256": "e9605d50ff79de47f6f2b85d7e761d954d8784ad9e7ee2aec2c38b9f010c43e4"
+    },
+    "evaluation/repair/fast_geometry.py": {
+      "source": "experiments/E114_supervision_placement/evaluation_staged/repair/fast_geometry.py",
+      "sha256": "88729dd286d0e2c8444e0cc0d3508f8fc19cafb69f14b94fe0004c10b9b6ee0e"
+    },
+    "evaluation/repair/legal_seed.py": {
+      "source": "experiments/E114_supervision_placement/evaluation_staged/repair/legal_seed.py",
+      "sha256": "45a6d0ee77c7cceafd05f41f9317f72ebdbf56dd45fc566da04952810e3a7588"
+    },
+    "evaluation/repair/projection.py": {
+      "source": "experiments/E114_supervision_placement/evaluation_staged/repair/projection.py",
+      "sha256": "50863404a74aaa8658d95a3327b07b6ccd6908434570f7ecb0f041ed7841e593"
+    },
+    "evaluation/repair/solver.py": {
+      "source": "experiments/E114_supervision_placement/evaluation_staged/repair/solver.py",
+      "sha256": "6c4310ac9ae58ea5fa85732548e14e44f33ccb331f3bc69071a3582cd4fb8f2e"
+    },
+    "evaluation/repair/__init__.py": {
+      "source": "experiments/E114_supervision_placement/evaluation_staged/repair/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evaluation/repair/backend/conic_geometry.py": {
+      "source": "experiments/E114_supervision_placement/evaluation_staged/repair/backend/conic_geometry.py",
+      "sha256": "8d611db3bee47499c77b64039eee09718607f356cd251df5792314a53bcdcd63"
+    },
+    "evaluation/repair/backend/guard.py": {
+      "source": "experiments/E114_supervision_placement/evaluation_staged/repair/backend/guard.py",
+      "sha256": "eb36fbbcea1b694c7fb40fa0b36e3ed659ac66563be583f177fb6bb9e3c35bd7"
+    },
+    "evaluation/repair/backend/observe.py": {
+      "source": "experiments/E114_supervision_placement/evaluation_staged/repair/backend/observe.py",
+      "sha256": "b924be6a40f157e2d2204e358990797192e10a6320e3e3c3399d044918b25dd8"
+    },
+    "evaluation/repair/backend/reduction.py": {
+      "source": "experiments/E114_supervision_placement/evaluation_staged/repair/backend/reduction.py",
+      "sha256": "d8ba6af127d9b08469b198f7ed38849e14ac566db58bfab855797920c92012ed"
+    },
+    "evaluation/repair/backend/rescue.py": {
+      "source": "experiments/E114_supervision_placement/evaluation_staged/repair/backend/rescue.py",
+      "sha256": "ada10eea489e0f7d65a2f6dd0a20358d33d08808f3dfef6a19c0583139f206e0"
+    },
+    "evaluation/repair/backend/__init__.py": {
+      "source": "experiments/E114_supervision_placement/evaluation_staged/repair/backend/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evaluation/repair/backend/frozen/canonical_geometry.py": {
+      "source": "experiments/E114_supervision_placement/evaluation_staged/repair/backend/frozen/canonical_geometry.py",
+      "sha256": "c1dcfd377ad33cdb85954c01917e762f87360deb43b1d5cce9b92c1b003fa2e4"
+    },
+    "evaluation/repair/backend/frozen/feasible.py": {
+      "source": "experiments/E114_supervision_placement/evaluation_staged/repair/backend/frozen/feasible.py",
+      "sha256": "9cfe70894d80fbe54ccaa1c3de60ef4ab111ac9b4472286d1ae6a0c5a1fdc756"
+    },
+    "evaluation/repair/backend/frozen/global_refine.py": {
+      "source": "experiments/E114_supervision_placement/evaluation_staged/repair/backend/frozen/global_refine.py",
+      "sha256": "cd43991827597dfc4c5635cddb26f597774c680a24658237e5f443e9fbbca60c"
+    },
+    "evaluation/repair/backend/frozen/packing.py": {
+      "source": "experiments/E114_supervision_placement/evaluation_staged/repair/backend/frozen/packing.py",
+      "sha256": "25d20592fded9939f590be886e85083a47c5bb03a28c6f9bfe4a89097f863f0d"
+    },
+    "evaluation/repair/backend/frozen/postprocess.py": {
+      "source": "experiments/E114_supervision_placement/evaluation_staged/repair/backend/frozen/postprocess.py",
+      "sha256": "da0e1572a822a589968a19e67e2d36dd5133c7d17b7ea9443bd743ee4653a272"
+    },
+    "evaluation/repair/backend/frozen/shape_lp.py": {
+      "source": "experiments/E114_supervision_placement/evaluation_staged/repair/backend/frozen/shape_lp.py",
+      "sha256": "6de2773cfd981723e55a1d317ad9422e8fee76b393d740acaf70007594bc8a9f"
+    },
+    "evaluation/repair/backend/frozen/solver.py": {
+      "source": "experiments/E114_supervision_placement/evaluation_staged/repair/backend/frozen/solver.py",
+      "sha256": "ed874db1bac7205d5e1d80350b1d4e82d3c56eb2bb44b9f08ceb256244d24ea0"
+    },
+    "evaluation/repair/backend/frozen/topology_mip.py": {
+      "source": "experiments/E114_supervision_placement/evaluation_staged/repair/backend/frozen/topology_mip.py",
+      "sha256": "2ba0f2612f598f5e8d6e80a3ee1f74ad4941b78a3e9163f2d4acd7db5588da1a"
+    },
+    "evaluation/repair/backend/frozen/__init__.py": {
+      "source": "experiments/E114_supervision_placement/evaluation_staged/repair/backend/frozen/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "reference_conversation": "6af11b3f-eb70-83e8-af5c-d5db8ecdd30b"
+}

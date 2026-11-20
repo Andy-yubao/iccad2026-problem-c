@@ -1,0 +1,10 @@
+{
+  "first_comparison_error": {
+    "L_parameter_difference": 0.0010264664888381958,
+    "L_moment_difference": 0.006015929859131575,
+    "cause": "Scratch legacy Adam mutated aliased CPU scalar step in loaded reference state; comparison now clones original optimizer state for each path. Formal state was not advanced."
+  },
+  "F_capture_decision": "Not deployed: small five-step FP32 branch differences and no measured speed improvement. F retains original update path. L comparison is the only new formal numerical path.",
+  "no_formal_updates_during_checks": true,
+  "test_read": false
+}

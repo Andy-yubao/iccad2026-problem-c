@@ -1,0 +1,22 @@
+{
+  "scope": "E135.initial_supervision.v1.seed0",
+  "user_authorized": true,
+  "training_enabled": true,
+  "allowed_arms": [
+    "e119_A",
+    "e119_B",
+    "e119_C"
+  ],
+  "prepared_arms": [
+    "e119_A",
+    "e119_B",
+    "e119_C"
+  ],
+  "automatic_evaluation": true,
+  "test_read": false,
+  "automatic_retry": false,
+  "note": "2026-11-14 user explicitly specified A/B/C, authorized preparation followed by background training and automatic postprocessing; activation allowed only after passed preparation gate",
+  "activated_at": "2026-11-13T16:47:47.718981+00:00",
+  "preflight_sha256": "45971fee0f71ec3e23d79e92a6916c33a2382ee7a3ec07d27655bf6963cd396a",
+  "activation": "2026-11-14 user authorized preparation then background start of A/B/C with automatic postprocessing"
+}

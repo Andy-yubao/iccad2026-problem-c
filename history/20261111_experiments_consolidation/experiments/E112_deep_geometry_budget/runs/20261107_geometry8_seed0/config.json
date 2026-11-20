@@ -1,0 +1,326 @@
+{
+  "identity": {
+    "revision": "E112_deep_geometry_budget.v1",
+    "plan": {
+      "experiment": "E112_deep_geometry_budget",
+      "run": "20261107_geometry8_seed0",
+      "authorization": "2026-11-07 user authorized exactly two sequential experiments: deepen geometry subnetwork and deepen shared readout, keep parameter budget comparable to A, may reduce outer depth; automatically validate and show same five cases after training.",
+      "scope": "one scratch seed0 candidate, then frozen best original dev500 plus same-five layer display; no control retraining/test/additional candidates",
+      "architecture": {
+        "width": 96,
+        "layers": 8,
+        "rectangle": true,
+        "ffn_dropout": 0.1,
+        "residual_dropout": 0.05,
+        "critical_hidden": 168
+      },
+      "parameters": 1466915,
+      "trainable_parameters": 1466915,
+      "initialization": "Scratch seed0/fresh AdamW. Common input/retained eight blocks/state embedding use A seed0 init; targeted critical subnetwork expanded near identity; never warm-start A best.",
+      "data": "reference_workset_v5 original16k, MIB public mean-area transform E14.mean_area.v1; no new members; validated v6 cache prefix only",
+      "train_count": 16000,
+      "train_monitor_count": 500,
+      "dev_monitor_count": 500,
+      "batch_size": 32,
+      "precision": "FP32, deterministic algorithms, no AMP or numerical-path changes inside run",
+      "cublas_workspace_config": ":4096:8, set at package import before CUDA initialization",
+      "seed": 0,
+      "threads": 4,
+      "maximum_seconds": 14400,
+      "maximum_epochs": 200,
+      "lr_levels": [
+        0.001,
+        0.00025,
+        0.0001,
+        5e-05
+      ],
+      "protection_epochs": 14,
+      "scheduler_baseline_epoch": 15,
+      "patience": 3,
+      "minimum_meaningful_absolute": 1e-05,
+      "minimum_meaningful_relative": 0.001,
+      "best_minimum_absolute_improvement": 1e-05,
+      "minimum_lowest_lr_complete_epochs": 2,
+      "optimizer": "AdamW weight_decay0.0003, global gradient clip1; per-module joint proposed-update bound0.005",
+      "loss": "Unchanged original per-layer ten terms; fixed half terminal + half mean preceding seven; no coefficient search",
+      "selection": "same fixed per-case total for backward/train500/dev500; best, LR and early stop use dev500 arithmetic mean per current protocol; train plateau reported independently, dev early-stop is not proof of train convergence",
+      "engine": "Original FP32 CUDA graph/AdamW/per-module bound; geometry MLP only uses deterministic activation recomputation (no RNG in that subnetwork), preserving batch32/objective/precision",
+      "network_ports": "per-module total weight and weighted centroid only; full port edges used only in loss",
+      "stop": "STOP file or SIGINT: finish accepted update, save exact latest and exit; no next phase; budget exhaustion distinct from convergence",
+      "preflight_train_indices": [
+        1683,
+        10027,
+        5474,
+        10140,
+        15001
+      ],
+      "numerical_guards": "nonfinite, per-case loss>=1000, mean loss>=1000 or unclipped gradient norm>=10000 rejected before Adam; no skip or retry",
+      "test_read": false,
+      "postprocessing_calls": 0,
+      "future_weight_learning": "prepared separately; old stopped run remains stopped; no automatic transition",
+      "augmentation": {
+        "axis_swap_probability": 0.5,
+        "seed_rule": "SeedSequence([20261104,seed,epoch]); member-index flags; independent sampling and Dropout streams",
+        "monitoring": "unaugmented original train500/dev500, eval mode; same fixed per-case Loss"
+      },
+      "revision": "E112_deep_geometry_budget.v1",
+      "numerical_path": "New architecture registered; no bit-exact claim versus A. Geometry bias activation recomputation only for memory; shared head candidate has no checkpointing.",
+      "source_copies": {
+        "__init__.py": {
+          "source": "experiments/E109_deep_supervision_shared/__init__.py",
+          "sha256": "e88603c7289d0636a073fae6a35658f4829f4459cad9a1e7d1d91874c3e78960"
+        },
+        "augmentation.py": {
+          "source": "experiments/E109_deep_supervision_shared/augmentation.py",
+          "sha256": "32e2601a2071e47e7dd344148d146c7ee16040804efedfa2bd341d14863908e3"
+        },
+        "batches.py": {
+          "source": "experiments/E109_deep_supervision_shared/batches.py",
+          "sha256": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92"
+        },
+        "cache.py": {
+          "source": "experiments/E109_deep_supervision_shared/cache.py",
+          "sha256": "1818c741d3326a996b13733b313b16d46a7a7992413d277106e69684ae1a376e"
+        },
+        "captured_projection.py": {
+          "source": "experiments/E109_deep_supervision_shared/captured_projection.py",
+          "sha256": "dd031332127edd706c0e09f49a07f5e6133f5a9cd0f7fcd69d2246644cbb74c9"
+        },
+        "cuda_step.py": {
+          "source": "experiments/E109_deep_supervision_shared/cuda_step.py",
+          "sha256": "cd5eddd01dc44b33da1c57c13261b27e1f7ef232b81c425e57080501a25ce7f1"
+        },
+        "data.py": {
+          "source": "experiments/E109_deep_supervision_shared/data.py",
+          "sha256": "1e43fe61a6d4dde4007295f817db927d75cd61439239423621ef65bf826e0d66"
+        },
+        "dataset_view.py": {
+          "source": "experiments/E109_deep_supervision_shared/dataset_view.py",
+          "sha256": "4f0bcb1e15171d57ed1d0198560744a1ca2fd14b9bed46deac9def45d46752ee"
+        },
+        "features.py": {
+          "source": "experiments/E109_deep_supervision_shared/features.py",
+          "sha256": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73"
+        },
+        "group_tree.py": {
+          "source": "experiments/E109_deep_supervision_shared/group_tree.py",
+          "sha256": "867ca3b84848ae78da25dd2a2db16018d722102c7bb5a34644492451efef65fd"
+        },
+        "io.py": {
+          "source": "experiments/E109_deep_supervision_shared/io.py",
+          "sha256": "f2a7b2d8c6283abdcaf3d5435ed86f9450f83807b000756edfa1347bf3060651"
+        },
+        "loss.py": {
+          "source": "experiments/E109_deep_supervision_shared/loss.py",
+          "sha256": "9fce4ae8e9e2d8118142aaa9b5aea15c70ca08ea65e8038b2789fb9e5f8116a2"
+        },
+        "loss_config.py": {
+          "source": "experiments/E109_deep_supervision_shared/loss_config.py",
+          "sha256": "4f1d9783a1b1e02b94b62c322ea5db7d003cdcd9aa78ff300993244206456b83"
+        },
+        "model.py": {
+          "source": "experiments/E109_deep_supervision_shared/model.py",
+          "sha256": "7a5dea6e8520c8c185d4380ad0ec029103944f9619a7c262e4c10f7e777ce51d"
+        },
+        "ports.py": {
+          "source": "experiments/E109_deep_supervision_shared/ports.py",
+          "sha256": "431b54476e7de8a94c12cf935a30a3b49b911e208305fbe6bb7b23d72e37dbef"
+        },
+        "resident.py": {
+          "source": "experiments/E109_deep_supervision_shared/resident.py",
+          "sha256": "a70da9f834fd05091ab011459e34fcff214bd41cb753f98ee9c088975c0a3c81"
+        },
+        "schedule.py": {
+          "source": "experiments/E109_deep_supervision_shared/schedule.py",
+          "sha256": "4b784b3d501dcc7d84b1b4a77f5e40809b89293ceb1c455814cc9c9e251c62e8"
+        },
+        "simple_loss.py": {
+          "source": "experiments/E109_deep_supervision_shared/simple_loss.py",
+          "sha256": "e96cc9272aa1e3b13a6f93b3674674df280e709c4ecde7098ad0dc1b73b8bfd3"
+        },
+        "step_control.py": {
+          "source": "experiments/E109_deep_supervision_shared/step_control.py",
+          "sha256": "795ddb45dd257e123f1880eea28b58502711807ee643bfcb51a7e72d484952da"
+        },
+        "train.py": {
+          "source": "experiments/E109_deep_supervision_shared/train.py",
+          "sha256": "d0c11a466198caf0447fbd3e36d6f260e5dc2a2bea912f2f9ce0700d96be0790"
+        },
+        "v6_registry.py": {
+          "source": "experiments/E109_deep_supervision_shared/v6_registry.py",
+          "sha256": "17c5bee855e76dcb445c9ae924bdb04df7c8966581f58f80aad2d51acb07b594"
+        }
+      },
+      "historical_control": "E109 A completed best61/results reused, no retraining",
+      "layer_supervision": {
+        "weights": [
+          0.07142857142857142,
+          0.07142857142857142,
+          0.07142857142857142,
+          0.07142857142857142,
+          0.07142857142857142,
+          0.07142857142857142,
+          0.07142857142857142,
+          0.5
+        ],
+        "initial_readout": false
+      },
+      "readout": {
+        "independent": false,
+        "count": 1
+      },
+      "scope_exception": "Architecture-budget comparison explicitly retains A original16k/MIB/locked-channel historical task, preventing task migration confounding; new40k remains unused. General new rules not changed.",
+      "path_adapter": "Raw roots compared to exact archived paths.json; current config only adds unused random_reference40k_root; archived cache stays immutable",
+      "ordering": "A -> B -> E111 progressive stages -> three terminal dev500 evaluations; errors/user stop do not advance",
+      "queue": "E112 train/dev500/five-case display -> E113 train/dev500/five-case display -> combined display",
+      "evaluation_authorization": "User explicitly requested fixed500 verification after the three trained models complete; original dev_monitor500, identical E98.depth_budget.v1 postprocessing and historical scoring retained",
+      "budget_interpretation": "Same original wall-clock and epoch limits; extra losses may reduce accepted updates under the wall limit. Report real steps/epochs/time, do not claim equal training work.",
+      "parameter_budget": {
+        "baseline_A": 1471539,
+        "candidate": 1466915,
+        "relative_change": -0.0031422884476728363,
+        "comparison": "budget reallocation: outer depth12->8 and targeted internal width/depth change; not isolated depth effect, equal parameters do not imply equal FLOPs"
+      },
+      "critical_subnetwork": {
+        "kind": "geometry",
+        "dimensions": [
+          19,
+          168,
+          168,
+          168,
+          4
+        ],
+        "residual": "two hidden-to-hidden linear maps with SiLU; residual adds to first hidden activation",
+        "initialization": "Common 12-block A constructor RNG retained, prune suffix; inherited leading input/output weights; extra units fresh deterministic derived CPU seed without moving global RNG; residual final linear scaled .01, not zero due relative update gate"
+      },
+      "evaluation": "After each candidate trains: unique own-Loss best, original fixed dev500/E98.depth_budget.v1; five original training members for layer display; no100 three-phase gallery",
+      "numerical_initialization_note": "Residual last linear is small nonzero (.01 of standard initialization), preserving original .5% relative update guards; do not zero-initialize a guarded parameter group.",
+      "reusable_visualization": "visualization/layer_capture.py observer (caller owns forward), layer_budget_viewer.py for saved frames; no100-image gallery"
+    },
+    "sources": {
+      "datasets/__init__.py": "03c36f364366be6c8a5091d6bd3dbec0788d7871747acdeac5fa89d4974cec21",
+      "datasets/cases.py": "1fd51addaaae38164c22f1946712665beebac700054db4bb07ed4f9d44e0b168",
+      "datasets/expanded_reference/__init__.py": "b54991bdcbd4f194f31b9bcdf1bc9bc49da39f90089d9fa044668779a4b6a7af",
+      "datasets/paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+      "datasets/public_member_inputs.py": "6d525fa963d098051648b01d6bc75fb8a032dd5746529fb3c750afe2b5e8bb09",
+      "datasets/quality_layouts.py": "94f374fa9562770a9c7deadb645d73c3af1fc1a20251f98f1dce4ac575820191",
+      "datasets/random_reference.py": "a42742bec678b4b7d0f9642541a11d05849cf4b2bd1db1be3e92a03c898fc214",
+      "datasets/reference_layouts.py": "f6aeeba298a163b7d506c67e3fba024cd3a191c3aae1116fc6b5d294431db9b5",
+      "datasets/worksets.py": "013087151ab8e1195d7d2757e777839f521486425eeaff4c45fed4e370df233c",
+      "experiments/E112_deep_geometry_budget/__init__.py": "e88603c7289d0636a073fae6a35658f4829f4459cad9a1e7d1d91874c3e78960",
+      "experiments/E112_deep_geometry_budget/augmentation.py": "32e2601a2071e47e7dd344148d146c7ee16040804efedfa2bd341d14863908e3",
+      "experiments/E112_deep_geometry_budget/batches.py": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92",
+      "experiments/E112_deep_geometry_budget/cache.py": "1818c741d3326a996b13733b313b16d46a7a7992413d277106e69684ae1a376e",
+      "experiments/E112_deep_geometry_budget/captured_projection.py": "dd031332127edd706c0e09f49a07f5e6133f5a9cd0f7fcd69d2246644cbb74c9",
+      "experiments/E112_deep_geometry_budget/cuda_step.py": "cd5eddd01dc44b33da1c57c13261b27e1f7ef232b81c425e57080501a25ce7f1",
+      "experiments/E112_deep_geometry_budget/data.py": "1e43fe61a6d4dde4007295f817db927d75cd61439239423621ef65bf826e0d66",
+      "experiments/E112_deep_geometry_budget/dataset_view.py": "4f0bcb1e15171d57ed1d0198560744a1ca2fd14b9bed46deac9def45d46752ee",
+      "experiments/E112_deep_geometry_budget/diagnostics/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "experiments/E112_deep_geometry_budget/diagnostics/layer_trace.py": "be65306e280a2dc7eb897c89032f30cd6f536c828b42fa5a85894ff603a1088f",
+      "experiments/E112_deep_geometry_budget/evaluation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "experiments/E112_deep_geometry_budget/evaluation/budget.json": "c93f71d7664f6359a87aa740bf08108782ea40146bf329f9a3be7f7afac3fe61",
+      "experiments/E112_deep_geometry_budget/evaluation/repair/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "experiments/E112_deep_geometry_budget/evaluation/repair/backend/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "experiments/E112_deep_geometry_budget/evaluation/repair/backend/conic_geometry.py": "8d611db3bee47499c77b64039eee09718607f356cd251df5792314a53bcdcd63",
+      "experiments/E112_deep_geometry_budget/evaluation/repair/backend/frozen/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "experiments/E112_deep_geometry_budget/evaluation/repair/backend/frozen/canonical_geometry.py": "c1dcfd377ad33cdb85954c01917e762f87360deb43b1d5cce9b92c1b003fa2e4",
+      "experiments/E112_deep_geometry_budget/evaluation/repair/backend/frozen/feasible.py": "9cfe70894d80fbe54ccaa1c3de60ef4ab111ac9b4472286d1ae6a0c5a1fdc756",
+      "experiments/E112_deep_geometry_budget/evaluation/repair/backend/frozen/global_refine.py": "cd43991827597dfc4c5635cddb26f597774c680a24658237e5f443e9fbbca60c",
+      "experiments/E112_deep_geometry_budget/evaluation/repair/backend/frozen/packing.py": "25d20592fded9939f590be886e85083a47c5bb03a28c6f9bfe4a89097f863f0d",
+      "experiments/E112_deep_geometry_budget/evaluation/repair/backend/frozen/postprocess.py": "da0e1572a822a589968a19e67e2d36dd5133c7d17b7ea9443bd743ee4653a272",
+      "experiments/E112_deep_geometry_budget/evaluation/repair/backend/frozen/shape_lp.py": "6de2773cfd981723e55a1d317ad9422e8fee76b393d740acaf70007594bc8a9f",
+      "experiments/E112_deep_geometry_budget/evaluation/repair/backend/frozen/solver.py": "ed874db1bac7205d5e1d80350b1d4e82d3c56eb2bb44b9f08ceb256244d24ea0",
+      "experiments/E112_deep_geometry_budget/evaluation/repair/backend/frozen/topology_mip.py": "2ba0f2612f598f5e8d6e80a3ee1f74ad4941b78a3e9163f2d4acd7db5588da1a",
+      "experiments/E112_deep_geometry_budget/evaluation/repair/backend/guard.py": "eb36fbbcea1b694c7fb40fa0b36e3ed659ac66563be583f177fb6bb9e3c35bd7",
+      "experiments/E112_deep_geometry_budget/evaluation/repair/backend/observe.py": "b924be6a40f157e2d2204e358990797192e10a6320e3e3c3399d044918b25dd8",
+      "experiments/E112_deep_geometry_budget/evaluation/repair/backend/reduction.py": "d8ba6af127d9b08469b198f7ed38849e14ac566db58bfab855797920c92012ed",
+      "experiments/E112_deep_geometry_budget/evaluation/repair/backend/rescue.py": "ada10eea489e0f7d65a2f6dd0a20358d33d08808f3dfef6a19c0583139f206e0",
+      "experiments/E112_deep_geometry_budget/evaluation/repair/canonical.py": "9f7da6983541a3c8b0d57c8f869c6905c24f2bc4eb3643e0ed9e0a718d2abf2c",
+      "experiments/E112_deep_geometry_budget/evaluation/repair/canonical_native.py": "e350394ce13f8bb20e53d03494912f9367d29c9f68809ad16c4314a45709718b",
+      "experiments/E112_deep_geometry_budget/evaluation/repair/canonical_py.py": "b5b99c1f77756aa318fe5cb0e7fa82935844752b4fa815ab80367adb34e00195",
+      "experiments/E112_deep_geometry_budget/evaluation/repair/certify_polish.py": "e9605d50ff79de47f6f2b85d7e761d954d8784ad9e7ee2aec2c38b9f010c43e4",
+      "experiments/E112_deep_geometry_budget/evaluation/repair/fast_geometry.py": "88729dd286d0e2c8444e0cc0d3508f8fc19cafb69f14b94fe0004c10b9b6ee0e",
+      "experiments/E112_deep_geometry_budget/evaluation/repair/legal_seed.py": "45a6d0ee77c7cceafd05f41f9317f72ebdbf56dd45fc566da04952810e3a7588",
+      "experiments/E112_deep_geometry_budget/evaluation/repair/projection.py": "50863404a74aaa8658d95a3327b07b6ccd6908434570f7ecb0f041ed7841e593",
+      "experiments/E112_deep_geometry_budget/evaluation/repair/solver.py": "6c4310ac9ae58ea5fa85732548e14e44f33ccb331f3bc69071a3582cd4fb8f2e",
+      "experiments/E112_deep_geometry_budget/evaluation/run.py": "4a9c9cb05f917301bce2f3476dc5688975c032493ffd2c55fa9bb4c628a86ced",
+      "experiments/E112_deep_geometry_budget/evaluation/solver.py": "689e2d00958b257207a4b3c509ca93df0f35d5d65d24219777cdfc2dd1cd6877",
+      "experiments/E112_deep_geometry_budget/evaluation/source_manifest.json": "9b3395fd059eb16d88e0b8d830ad1805f818c20d68157140c622b53c6efa3a57",
+      "experiments/E112_deep_geometry_budget/features.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+      "experiments/E112_deep_geometry_budget/group_tree.py": "867ca3b84848ae78da25dd2a2db16018d722102c7bb5a34644492451efef65fd",
+      "experiments/E112_deep_geometry_budget/io.py": "1cbf733134bfcbc93056a18c41c0102af22848ad9e0e33c9483f1950fc2c5f9d",
+      "experiments/E112_deep_geometry_budget/loss.py": "530238999d0e96606ad97dc0829b5b540b2a088bd4d87e38513b1128be969a5d",
+      "experiments/E112_deep_geometry_budget/loss_config.py": "4772b864f53330a2bd69c3a3c6b7056ae4269044b137b064bb1e465dc5afc03b",
+      "experiments/E112_deep_geometry_budget/model.py": "e2d0812579aceb22f877cbe82203c4c598cf9c9358ebb6f099f0ad0ee3b2566a",
+      "experiments/E112_deep_geometry_budget/plan.json": "1e111eabfbf110bcfe1b631f808883da3f5cf2cc9e4d6eec10b3126be7b6c29b",
+      "experiments/E112_deep_geometry_budget/ports.py": "431b54476e7de8a94c12cf935a30a3b49b911e208305fbe6bb7b23d72e37dbef",
+      "experiments/E112_deep_geometry_budget/preflight.py": "db70a52d78af28b0478fef245ea4249b9053d0737f674d01a55c31947c1d943e",
+      "experiments/E112_deep_geometry_budget/provenance.json": "56c163de01050b21905795a8a76fba11a44444add9c07d94ef200ae53857f2b4",
+      "experiments/E112_deep_geometry_budget/README.md": "9dae2e70081a82e99429bb183e581c63d5207f8c9e7ac7b12eb8df96b16aee3b",
+      "experiments/E112_deep_geometry_budget/reference_model.py": "7a5dea6e8520c8c185d4380ad0ec029103944f9619a7c262e4c10f7e777ce51d",
+      "experiments/E112_deep_geometry_budget/resident.py": "a70da9f834fd05091ab011459e34fcff214bd41cb753f98ee9c088975c0a3c81",
+      "experiments/E112_deep_geometry_budget/run_queue.py": "c7923fc6cc93631da5d7f14e684dd6a139895ba9519b5b010f96919532f201a1",
+      "experiments/E112_deep_geometry_budget/schedule.py": "4b784b3d501dcc7d84b1b4a77f5e40809b89293ceb1c455814cc9c9e251c62e8",
+      "experiments/E112_deep_geometry_budget/simple_loss.py": "e96cc9272aa1e3b13a6f93b3674674df280e709c4ecde7098ad0dc1b73b8bfd3",
+      "experiments/E112_deep_geometry_budget/step_control.py": "795ddb45dd257e123f1880eea28b58502711807ee643bfcb51a7e72d484952da",
+      "experiments/E112_deep_geometry_budget/train.py": "d4f139dac06ba2d7ef300e496d471fea3ac3d63c391e5e67a3749a8a10acad03",
+      "experiments/E112_deep_geometry_budget/v6_registry.py": "17c5bee855e76dcb445c9ae924bdb04df7c8966581f58f80aad2d51acb07b594",
+      "protocol/paths.json": "11dc5f19c3da22f9d37db341b0606bcc4b514bfe39264fc7ffed27c13b098270",
+      "protocol/reference_workset_v5.json": "1409ccf825b9c7cae1097a22e8dc4068e1283d79541c85ce54c5627d0c2b4208",
+      "protocol/reference_workset_v6.json": "2fe459b0a785ffb6995dd3e5966cd47337b948b15ec4bb4d4c19ffe169e404ae",
+      "protocol/split_v1.json": "a1f23edae03194c1155d260415482d892e4cb5ad66170abc93af04aafc8cefbd",
+      "visualization/layer_budget_viewer.py": "df1834056815101e2a2b5d9e93c331639012015fb818712f2dfe22a7388d6a02",
+      "visualization/layer_capture.py": "4d5a426da3a212c6e3bdf307831e8e8123348ad5159140fd89ee04fc32f298d4",
+      "visualization/layer_comparison.py": "d25f3058bb5b736fec6415617f34066ed31453667949bbec04c4dd3a98de66dd",
+      "visualization/layer_trace.py": "bc4ac8adfbfd6bba062528ab1feed5bc680109636dd558216990ec0efb748ab9",
+      "visualization/raster_layouts.py": "a2964ab7e7d598a47f079caecf4dbae888e5feda519cecde5620584a6474558d"
+    },
+    "loss": {
+      "base_loss": {
+        "coefficients": {
+          "position": 1.0,
+          "shape": 0.25,
+          "penetration": 0.08975162861857286,
+          "module_load_mean": 0.08975162861857286,
+          "module_max_excess10": 0.08975162861857286,
+          "wirelength": 0.16684160541676146,
+          "compactness": 0.16684160541676146,
+          "boundary_contribution": 0.6673664216670459,
+          "grouping_contribution": 0.6673664216670459,
+          "mib_contribution": 0.6673664216670459
+        },
+        "dynamic_weights": false,
+        "aggregation": "within layout as registered, then arithmetic mean over layouts",
+        "soft_normalization": "shared public nb+ng+nm, preserving E90/E94 soft aggregation",
+        "source": "E90/E94 fixed F objective expanded into ten coefficient-controlled terms"
+      },
+      "layer_weights": [
+        0.07142857142857142,
+        0.07142857142857142,
+        0.07142857142857142,
+        0.07142857142857142,
+        0.07142857142857142,
+        0.07142857142857142,
+        0.07142857142857142,
+        0.5
+      ],
+      "aggregation": "same original per-layout loss at each actual block output; fixed weighted sum; then arithmetic layout mean",
+      "initial_readout_supervised": false,
+      "same_objective_backward_monitor_best_lr_earlystop": true
+    },
+    "registry_sha256": "1409ccf825b9c7cae1097a22e8dc4068e1283d79541c85ce54c5627d0c2b4208",
+    "paths_sha256": "11dc5f19c3da22f9d37db341b0606bcc4b514bfe39264fc7ffed27c13b098270",
+    "torch": "2.7.1+cu128",
+    "cuda": "12.8",
+    "gpu": "NVIDIA GeForce RTX 5080 Laptop GPU",
+    "numpy": "1.26.4"
+  },
+  "argv": [
+    "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+    "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E112_deep_geometry_budget\\train.py"
+  ],
+  "git_commit": "ccfbd6f78254a5e774d7298946c7de15b3a285d8",
+  "uncommitted_source_snapshot": true,
+  "test_read": false,
+  "parent_checkpoint": null
+}

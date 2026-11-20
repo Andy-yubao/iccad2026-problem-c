@@ -1,0 +1,46 @@
+{
+  "status": "failed",
+  "formal_training_started": false,
+  "test_payloads": 0,
+  "dev_payloads": 0,
+  "disposable_updates": 0,
+  "members": [
+    [
+      "worker_15/layouts_2912.th",
+      36
+    ],
+    [
+      "worker_82/layouts_6608.th",
+      92
+    ],
+    [
+      "worker_79/layouts_8176.th",
+      42
+    ],
+    [
+      "worker_74/layouts_9632.th",
+      31
+    ],
+    [
+      "worker_70/layouts_8400.th",
+      31
+    ]
+  ],
+  "stages": {
+    "e153_initial": {
+      "parameters": 116043,
+      "trainable_parameters": 116043,
+      "public_path_exact": true,
+      "MIB_id_invariance": true,
+      "module_port_permutation": true,
+      "axis_swap": true,
+      "all_new_branches_have_gradient": true,
+      "capture_without_updates": true,
+      "serialized_next_update_bitwise": true,
+      "frozen_L0": false,
+      "disposable_updates": 5
+    }
+  },
+  "error": "TypeError('~ (operator.invert) is only implemented on integer and Boolean-type tensors')",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E153_mib_role_topology\\preflight.py\", line 52, in main\n    with torch.no_grad():states=model(g)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1751, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1762, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E153_mib_role_topology\\model.py\", line 27, in forward\n    output=self.units[index](g,state,condition);states.extend(output.unbind(0));state=output[-1]\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1751, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1762, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E153_mib_role_topology\\refinement.py\", line 88, in forward\n    dynamic=torch.cat((module_features(p,g),shape_features(p,g),extra_features(p,g)),-1)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\site-packages\\torch\\utils\\_contextlib.py\", line 116, in decorate_context\n    return func(*args, **kwargs)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E153_mib_role_topology\\shape_feedback.py\", line 60, in shape_features\n    responses.append((measurements(trial_lo,trial_wh,linked=True)-base).asinh())\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E153_mib_role_topology\\shape_feedback.py\", line 40, in measurements\n    contact=contact.masked_fill(~same,float('inf')).amin(-1)\nTypeError: ~ (operator.invert) is only implemented on integer and Boolean-type tensors\n"
+}

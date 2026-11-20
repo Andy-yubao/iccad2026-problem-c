@@ -1,0 +1,27 @@
+{
+  "parent_best": "experiments\\E111_progressive_depth\\runs\\20261107_depth08_seed0\\checkpoints\\best.pt",
+  "parent_sha256": "7dd393273173161c17627a92db72e5e7dea11e376651126d4fe546bbd2e33bd3",
+  "parent_result": {
+    "status": "early_stop",
+    "error": null,
+    "epochs": 44,
+    "steps": 22000,
+    "best_epoch": 44,
+    "best_fixed_loss": 0.3816125112473965,
+    "active_depth": 8,
+    "cumulative_elapsed_seconds": 3614.6160529000044,
+    "elapsed_seconds": 1698.1851959999767,
+    "train_monitor_last4": [
+      0.3823264452815056,
+      0.38223235216736795,
+      0.3818294855058193,
+      0.38081388130784033
+    ],
+    "train_plateau_observed": false,
+    "convergence": "operational dev plateau; train plateau separate",
+    "test_read": false,
+    "postprocessing_calls": 0,
+    "next_stage": "next four layers only after early_stop; orchestrated by the authorized queue"
+  },
+  "transition": "freeze old weights; new four plus shared head; inherit full best Adam/RNG; restart original LR and scheduler; charge all previous actual time"
+}

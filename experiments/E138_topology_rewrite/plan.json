@@ -1,0 +1,105 @@
+{
+  "experiment": "E138 latent topology rewrite",
+  "revision": "E138.topology_rewrite.v1.seed0",
+  "status": "prepared",
+  "authorization": "2026-11-15 user authorized exactly three new training experiments, background launch and automatic original postprocessing",
+  "architecture": {
+    "e119": "same 712275 parameters; 6 rectangle refinement blocks and 6 geometry-free latent planning blocks; public context restart at 4/7/10"
+  },
+  "parameters": {
+    "e119": 712275
+  },
+  "trainable_parameters": {
+    "e119": 712275
+  },
+  "arms": {
+    "e119_A": {
+      "architecture": "latent public-context restart",
+      "loss": "J = .8 L12 + .2/3 (L3+L6+L9)",
+      "recovery": false
+    },
+    "e119_B": {
+      "architecture": "same as A",
+      "loss": "J = .8 Jclean + .2 L12_corrupted",
+      "recovery": true
+    },
+    "e119_C": {
+      "architecture": "same as A/B",
+      "loss": "J = .8 [.8 L12 + .2/3 (F3+F6+F9)] + .2 L12_corrupted",
+      "recovery": true
+    }
+  },
+  "seed": 0,
+  "batch_size": 32,
+  "precision": "FP32; deterministic; TF32 disabled",
+  "threads": 4,
+  "train_count": 36000,
+  "train_monitor_count": 500,
+  "dev_monitor_count": 500,
+  "dataset": "random_reference40k.v1; original public areas; test sealed",
+  "data_migration": "Same E134 frozen train36000/train-monitor500/dev500, compatible existing cache only",
+  "no_mib": true,
+  "predict_all_modules": true,
+  "hard_specification_enforcement": "postprocessing only",
+  "initialization": "scratch seed0, exact same initial tensor values as E134 E119; existing best63 is evaluation control, never a warm start",
+  "optimizer": "AdamW weight_decay.0003, global gradient clip1, joint per-module relative update bound.005",
+  "lr_levels": [
+    0.001,
+    0.00025,
+    0.0001,
+    5e-05
+  ],
+  "protection_epochs": 14,
+  "scheduler_baseline_epoch": 15,
+  "patience": 3,
+  "minimum_meaningful_absolute": 1e-05,
+  "minimum_meaningful_relative": 0.001,
+  "best_minimum_absolute_improvement": 1e-05,
+  "minimum_lowest_lr_complete_epochs": 2,
+  "maximum_seconds": 14400,
+  "maximum_epochs": 200,
+  "budget": "Per arm4h/200epoch caps; report seen/steps/epochs/time separately, not equal training work",
+  "selection": "One fixed own dev objective consistently for backward/monitor/best/LR/earlystop; report common clean final Loss. Never Q selection.",
+  "resume": "Ctrl+C pauses at accepted update/case boundary. Restore model/Adam/RNG/permutation/cursor/seen/LR/earlystop/projection; cumulative budget never reset. Evaluation resumes committed case prefix.",
+  "numerical_guards": "Nonfinite or case/mean Loss>=1000 or unclipped grad norm>=10000: reject before Adam; no skip/retry",
+  "augmentation": "P=.5 axis swap; flags indexed by seed/epoch/member, independent of dropout",
+  "engine": "CUDA graph forward/loss/backward/clip; original AdamW and captured module step protection",
+  "stop": "Experiment STOP, per-run STOP, SIGINT; save accepted cursor and exit, no next arm",
+  "preflight_train_indices": [
+    10841,
+    12651,
+    6417,
+    4280,
+    17946
+  ],
+  "preflight": "Only existing5 cached train members; one disposable guarded update per arm; original initialization, public input boundary, corruption, objective and finite-grad checks; no dev/test/postprocess payload calls; inherited resume engine with static checkpoint contract review.",
+  "comparison": "Primary common clean final complete Loss, components and same postprocessed Q/tails/runtime; own objectives not directly ranked. Exact source seed/data/parameter controls, but recovery arms use extra forward compute and may see fewer steps at4h.",
+  "reporting": "new own Loss and original_final_total diagnostic; all quality/latency/fallback/hard checks reported independently",
+  "terminal_evaluation": "automatic sole own-Loss best, fixed dev500, original E98.depth_budget.v1, no MIB Q; no test or plots",
+  "historical_standards": "E74/E105/A numbers are historical context until matched new task evaluation",
+  "test_read": false,
+  "postprocessing_calls": 0,
+  "automatic_queue": true,
+  "dataset_report_sha256": "3a79fd9eb2636578fa4df876ccac51699eab04cd59179027488aa7d8c334928a",
+  "payload_checksums_sha256": "f8eeb86da003c9901b73541eb13cc8e16cad9cd963dcf74a0edddf4a1a5abe54",
+  "queue": "A train -> freeze -> original dev500 postprocess -> structural audit, then B then C. Stop/error blocks later phases; no automatic retry or new seeds.",
+  "cache_build_workers": 4,
+  "required_cache_key": "a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148",
+  "cache_policy": "Reuse complete existing shared train36000/dev500 cache, no regenerated samples or repeated static preprocessing",
+  "loss": "fixed public-priority-v1 complete final Loss; A original layer weights; B recovery mixture; C coarse intermediate F plus same recovery mixture",
+  "architecture_parent": "E134 E119 stride3; same tensor names and initialization; latent planners replace coordinate-conditioned refinement at 4/5,7/8,10/11",
+  "new_candidates": 3,
+  "automatic_retry": false,
+  "baseline": {
+    "checkpoint": "experiments/E134_supervision_interval/runs/e119_stride3_seed0/checkpoints/best.pt",
+    "checkpoint_sha256": "1f69a681713255a7adfca09357d70065ad7dff4d62f1a6294a7c233e30ad1df1",
+    "full_final_dev_loss": 0.3343625856339931,
+    "mixed_Q": 1.018624,
+    "reuse_only": true,
+    "trajectory_sha256": "c7928f4d0ee6a9b6d7d6234faf187dacd54ba1256f2117478eb5583ff75d3466",
+    "trajectory_manifest_sha256": "aaadec9f91bdc77b6f0ac64e4a298e8c9d51fcb17f37945b84fdf1f9851c68a3"
+  },
+  "dataset_exception": "Retain matched36k rather than default16k to reuse E134 control; identical frozen train/train500/dev500 and cache. No new examples.",
+  "corruption": "At one stage3/6/9 per case, randomly swap centers of 25% non-P modules in disjoint pairs, keep module dimensions; detach the corrupted state only, restart planner hidden from public context, no clean geometry-hidden bypass. Train RNG saved; monitoring deterministic public-feature/node-count pattern.",
+  "coarse_F": "center tolerance .25 sqrt(area) Huber + .05 free logshape squared + F/P public dimension + P public center + .25 strongest violated reference-separated axis order per module-axis; no collision/wire/bbox intermediate penalty"
+}

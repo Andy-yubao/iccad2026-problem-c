@@ -1,0 +1,93 @@
+{
+  "revision": "E103.E98_enhanced.reference075.posttrain.dev500.v1",
+  "authorization": "User requested one small ablation: original E98 reference position/shape weights times.75, posttrain from penultimate LR, no15epoch forced stop, automatically evaluate500 after training; background launch when ready.",
+  "source_checkpoint": "experiments/E103_offline_loss_alignment/assets/e98_generalization/best.pt",
+  "source_sha256": "3f7ca0086af8a13bd52eedf0635117312e5c0a72e80e423e9cee3db5ca9b87ea",
+  "parent_best_epoch": 71,
+  "coefficients": {
+    "position": 0.75,
+    "shape": 0.1875,
+    "penetration": 0.08975162861857286,
+    "module_load_mean": 0.08975162861857286,
+    "module_max_excess10": 0.08975162861857286,
+    "wirelength": 0.16684160541676146,
+    "compactness": 0.16684160541676146,
+    "boundary_contribution": 0.6673664216670459,
+    "grouping_contribution": 0.6673664216670459,
+    "mib_contribution": 0.6673664216670459
+  },
+  "coefficient_policy": "position1→.75, shape.25→.1875; other8 exact original E98 values; no sum normalization; no learned/canonical/global fitted coefficients.",
+  "model": {
+    "width": 96,
+    "layers": 12,
+    "rectangle": true,
+    "ffn_dropout": 0.1,
+    "residual_dropout": 0.05
+  },
+  "data": "Original v5 train16000; fixed train/dev monitoring500 each; public MIB mean-area task; test sealed",
+  "batch_size": 32,
+  "precision": "FP32 deterministic CUDA, no AMP or TF32",
+  "augmentation": "Original .5 probability stateless XY transposition; fixed/preplaced positions, fixed shapes, boundary bits, pins, masks and reference targets transformed together; unchanged copied implementation",
+  "optimizer": {
+    "name": "AdamW",
+    "fresh_momentum": true,
+    "fresh_age": true,
+    "weight_decay": 0.0003,
+    "clip_norm": 1.0,
+    "max_module_relative_update": 0.005
+  },
+  "rng": "Inherit frozen parent RNG; independent new phase, continue parent epoch71 sample/augmentation seed stream; within-phase complete state restoration",
+  "phase": {
+    "phase": 1,
+    "sampler_seed": 0,
+    "epoch_offset": 71
+  },
+  "lr_tiers": [
+    0.0001,
+    5e-05
+  ],
+  "protection_epochs": 0,
+  "scheduler_baseline_epoch": 0,
+  "plateau_patience": 3,
+  "minimum_meaningful_absolute": 1e-05,
+  "minimum_meaningful_relative": 0.001,
+  "best_minimum_absolute": 1e-05,
+  "early_stop": "After reaching5e-5, three consecutive validation-Loss stalls stop. No protected epochs or extra minimum hold. On each drop reset per-tier plateau reference to current validation Loss.",
+  "maximum_epochs": null,
+  "maximum_seconds": null,
+  "objective": "Exact ten unweighted E98 components at original network state, multiplied by the registered learned-v1 coefficients; arithmetic mean per sample; identical for backprop/train/dev/best/LR/earlystop",
+  "selection": "Only own fixed dev500 Loss; epoch0 eligible; Q never selects epochs or changes weights",
+  "preservation": "New run only; parent and all historical best/latest/STOPs intact; own best/latest retain optimizer, RNG, sampler order/cursor, projection and scheduler",
+  "terminal": "Train one candidate to own-devLoss normal earlystop with no cap; freeze own-Loss best; automatically evaluate originaldev500 with unchanged E98 fixed-depth repair; reuse parent evaluation; report then stop. Test sealed.",
+  "numerical_guards": "Original finite/Loss<1000/gradient norm<10000 before AdamW; no batch skipping, guard relaxation or automatic retry",
+  "evidence_boundary": "One ablation from original augmented E98 best71; parent frozen. Effects include extra training; no claim of pure coefficient causality without trained control.",
+  "stop": "Create this package STOP or newrun STOP; accepted batch boundary saves latest and stops; no E98 STOP removal",
+  "implementation_indices": [
+    1683,
+    5474,
+    10027,
+    10140,
+    15001
+  ],
+  "test_read": false,
+  "initial_coefficients": {
+    "position": 1.0,
+    "shape": 0.25,
+    "penetration": 0.08975162861857286,
+    "module_load_mean": 0.08975162861857286,
+    "module_max_excess10": 0.08975162861857286,
+    "wirelength": 0.16684160541676146,
+    "compactness": 0.16684160541676146,
+    "boundary_contribution": 0.6673664216670459,
+    "grouping_contribution": 0.6673664216670459,
+    "mib_contribution": 0.6673664216670459
+  },
+  "validation": {
+    "panel": "original frozen dev_monitor500",
+    "cases": 500,
+    "postprocessor": "E98 fixed-depth v1 unmodified",
+    "selection": "unique own-Loss best frozen beforeQ",
+    "training_source": "original E98 augmented best71",
+    "test_read": false
+  }
+}

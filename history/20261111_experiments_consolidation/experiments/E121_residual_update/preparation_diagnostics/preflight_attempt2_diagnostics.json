@@ -1,0 +1,28 @@
+{
+  "status": "error",
+  "unique_train_cases": 5,
+  "dev_payloads": 0,
+  "test_read": false,
+  "optimizer_updates": 0,
+  "formal_training_started": false,
+  "resume_tested": false,
+  "initial_eval_diagnostics": {
+    "total": 13808.173828125,
+    "max_case": 20946.953125,
+    "max_state": 252.63394165039062,
+    "layer4_total": 32.45027160644531,
+    "layer12_total": 17252.10546875
+  },
+  "rejected_before_Adam": {
+    "total": 29761.14453125,
+    "max_case": 50454.8671875,
+    "gradient_norm": 933092.3125,
+    "output_max": 317.5731201171875,
+    "finite": true,
+    "projection_steps": 0,
+    "optimizer_state_entries": 0
+  },
+  "error": "RuntimeError('Numerical guard rejected candidate before AdamW')",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E121_residual_update\\inspect.py\", line 64, in main\n    values,norm=cap.replay();torch.cuda.synchronize()\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E121_residual_update\\cuda_step.py\", line 46, in replay\n    raise RuntimeError('Numerical guard rejected candidate before AdamW')\nRuntimeError: Numerical guard rejected candidate before AdamW\n",
+  "elapsed_seconds": 26.865980500006117
+}

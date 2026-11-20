@@ -1,0 +1,110 @@
+{
+  "revision": "E156.two_s0.v1.seed0",
+  "status": "authorized_S0_only",
+  "authorization": "2026-11-19 user approved the complete two-S0 supervision and input-perturbation plan; implement, prepare and launch in background. Freeze E155 best51. No S1/S2 or postprocessing.",
+  "seed": 0,
+  "train_count": 36000,
+  "train_monitor_count": 500,
+  "dev_monitor_count": 500,
+  "batch_size": 64,
+  "steps_per_epoch": 563,
+  "dataset": "random_mib40k_v1; fulltrain36000; own stratified train_monitor500/dev_monitor500",
+  "registry_sha256": "487e5e1693dadc637c8e3c15c3ff55aa5781aa896f09e3b11fb093f25c1c611c",
+  "data_identity": "fc066a67bbe9fa7097742d15f50a3a5b48c56493315053a0ade3d5aa4e8a2fa8",
+  "parameters": {
+    "e156_s0_backend": 397035
+  },
+  "trainable_parameters": {
+    "e156_s0_backend": 280992
+  },
+  "maximum_epochs": 200,
+  "maximum_seconds": 14400,
+  "training_budget_note": "Same four-LR plateau engine, batch64,36k,4h/200epoch cap; two shared S0 calls (four sublayers), parent frozen",
+  "lr_levels": [
+    0.001,
+    0.00025,
+    0.0001,
+    5e-05
+  ],
+  "stages": [
+    "Freeze E155 best51; scratch enhanced condition encoder and one double-layer S0 used twice; freeze own-Loss dev500 best then stop"
+  ],
+  "preflight_train_indices": [
+    0,
+    1,
+    2,
+    18000,
+    35999
+  ],
+  "initialization": "E155 best51 only for frozen L0; all S0 and enhanced condition encoder parameters scratch seed0; no optimizer migration",
+  "loss": {
+    "e156_s0_backend": {
+      "version": "E156.two_shared_S0.v1",
+      "arm": "e156_s0_backend",
+      "layer_weights": {
+        "2": 0.2,
+        "4": 0.8
+      },
+      "reference_coefficients": {
+        "2": 0.75,
+        "4": 0.75
+      },
+      "no_absolute_overlap_layers": [
+        2,
+        4
+      ],
+      "grouping_bottleneck_weight_by_layer": {
+        "2": 0.2,
+        "4": 0.2
+      },
+      "mib_weight": 0.6673664216670459,
+      "relative_overlap_weight": 0.08975162861857286,
+      "relative_overlap_baseline": "unperturbed frozen L0",
+      "total": ".2*L2_base+.8*L4_base+A*relu(overlap4-stopgrad(overlap0))",
+      "predict_all": true,
+      "perturbation": "train-only:75%clean/12.5%jitter(.1sqrt(area))/12.5%one nearest-center swap",
+      "validation_perturbation": false,
+      "S2_drift_coefficient": 0.0
+    }
+  },
+  "prediction_boundary": "All F/P positions and shapes predicted; specifications enforced by postprocessing only",
+  "target": {
+    "grouping_satisfied_cases": 475,
+    "total_cases": 500,
+    "hard_legal_cases": 500
+  },
+  "static_condition": "Independent enhanced role/MIB/port encoders for L0 and backend; all functional sublayers receive enhanced static condition; only layouts cross repeated unit calls",
+  "S0": "Gated group displacement plus member reordering, two calls, bounded by group local scale; no reward for changing topology on its own",
+  "MIB": "Same-master relations separate from grouping; continuous log-shape consistency; linked group shape probes; compatible shared postprocessing dimensions including fallback",
+  "no_mib_policy_exception": "This E155 design restores MIB on the registered historical mean-area task, leaving historical no-MIB runs unchanged",
+  "test_read": false,
+  "automatic_retry": false,
+  "comparison_arms": 0,
+  "cache_owner": "datasets/random_mib40k_v1",
+  "backend_training_enabled": false,
+  "postprocessing_enabled": false,
+  "parent_initial": {
+    "arm": "e155_initial",
+    "checkpoint": "experiments/E155_fresh_mib_l0/runs/e155_initial_seed0/checkpoints/best.pt",
+    "checkpoint_sha256": "9ebc94592228ab539f5a9fb5bf857f803376abf9cbc80abb021519b5f24f7289",
+    "best_epoch": 51,
+    "selection_loss": 0.3603668349683285
+  },
+  "model": {
+    "width": 64,
+    "layers": 4,
+    "initial_layers": 2,
+    "phase": "backend",
+    "S0_calls": 2,
+    "shared": true
+  },
+  "perturbation": {
+    "clean_probability": 0.75,
+    "jitter_probability": 0.125,
+    "nearest_center_swap_probability": 0.125,
+    "jitter_scale": 0.1,
+    "reference_and_public_inputs_changed": false,
+    "validation": "clean L0 only"
+  },
+  "monitoring": "L0/L2/L4 weighted components, overlap, minimum-group-tree straight-center-segment obstruction, strict separated-pair side reversals and beneficial side-reversal cases; diagnostics do not select weights"
+}

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Draft · 草稿评分</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<header><div><span class="eyebrow">FLOORSET / HUMAN FEEDBACK</span><h1 id="title">草稿评分</h1></div><div class="status"><span id="progress">正在加载…</span><progress id="bar" max="100" value="0"></progress><span id="saved" role="status">连接中</span></div></header>
+<main>
+<div id="error" class="error" role="alert" hidden></div>
+<section class="intro"><strong id="rubric-target">只评价中间的网络草稿</strong><span id="rubric-scale">1 差 · 2 一般 · 3 好。参考布局与后处理结果用于辅助观察。</span><small id="scope"></small></section>
+<div class="workspace">
+<section class="viewer"><div class="toolbar"><div class="tabs" id="views"><button data-view="all" class="active">三相对照</button><button data-view="reference">原参考</button><button data-view="raw">草稿放大</button><button data-view="final">后处理</button></div><label>缩放 <select id="zoom"><option value="1">适应窗口</option><option value="1.5">150%</option><option value="2">200%</option><option value="3">300%</option></select></label></div><div id="viewport"><img id="image" alt="原参考、网络草稿、常规后处理三相图"><canvas id="focus" hidden aria-label="选中阶段的放大布局"></canvas><div id="loading">正在载入布局…</div></div><div class="image-caption"><span id="case">—</span><span>颜色：分组 · 纹理：同形组 · 红框：重叠 · F/P：固定形状/预放置</span></div></section>
+<aside>
+<section class="card"><span class="eyebrow">YOUR JUDGEMENT</span><h2 id="rubric-prompt">这张草稿怎么样？</h2><div id="scores" class="scores"><button data-score="1"><b>1</b><span>差</span></button><button data-score="2"><b>2</b><span>一般</span></button><button data-score="3"><b>3</b><span>好</span></button></div><label class="check"><input type="checkbox" id="auto" checked>打分保存后自动下一张</label><div id="dimension-questions"></div><label for="note">这张图的观察 <small>可选</small></label><textarea id="note" rows="4" placeholder="直觉、疑点、反例都可以，暂时不需要精确定义。"></textarea><label for="tags">观察维度 / 标签 <small>可自由扩展</small></label><input id="tags" placeholder="如：局部拥挤，组间位置，形状"><div class="row"><button id="save-note">保存备注</button><button id="clear" class="quiet">清除本例评分</button></div><p class="hint">快捷键 1 / 2 / 3 打分，← / → 切换；输入文字时不触发快捷键。</p></section>
+<section class="card navigation"><div class="row"><button id="prev">← 上一张</button><button id="next">下一张 →</button></div><button id="unrated">前往下一张未评分</button><label for="jump">跳到展示序号</label><div class="row"><input id="jump" type="number" min="1" value="1"><button id="go">前往</button></div></section>
+<details class="card" id="metrics"><summary>查看本例数值（辅助参考）</summary><p class="hint">打开会记录一次“看过指标”，便于后续分析评分偏差。</p><pre id="numbers"></pre></details>
+</aside></div>
+<section class="card reflection"><div><span class="eyebrow">AFTER REVIEW</span><h2>整轮评价与新的猜想</h2><p>可以很模糊。保留原话，后续再用数据验证；不会把猜测直接当成结论。</p><p id="distribution" class="hint"></p></div><div><textarea id="feedback" rows="5" placeholder="打分后可在这里写，也可以回到聊天叙述。例如：总感觉某类模块容易挤在一起，但还不确定。"></textarea><div class="row"><button id="save-feedback">保存整轮评价</button><button id="finish" class="primary">完成本轮评分</button></div></div></section>
+<footer><span id="completion">评分逐次保存在本机，可随时离开并继续。</span><div><a href="/api/export.json" download>导出完整记录 JSON</a><a href="/api/export.csv" download>导出评分 CSV</a></div></footer>
+</main><script src="/app.js"></script>
+</body></html>

@@ -1,0 +1,107 @@
+{
+  "revision": "E155.fresh_mib_l0.v1.seed0",
+  "status": "authorized_L0_only",
+  "authorization": "2026-11-19 user authorized scratch L0 retraining on the fresh shape-corrected dataset; start in background after preparation. No previous weights, backend, postprocessing or test use.",
+  "seed": 0,
+  "train_count": 36000,
+  "train_monitor_count": 500,
+  "dev_monitor_count": 500,
+  "batch_size": 64,
+  "steps_per_epoch": 563,
+  "dataset": "random_mib40k_v1; fulltrain36000; own stratified train_monitor500/dev_monitor500",
+  "registry_sha256": "487e5e1693dadc637c8e3c15c3ff55aa5781aa896f09e3b11fb093f25c1c611c",
+  "data_identity": "fc066a67bbe9fa7097742d15f50a3a5b48c56493315053a0ade3d5aa4e8a2fa8",
+  "parameters": {
+    "e155_initial": 116043,
+    "e155_backend": 733575
+  },
+  "trainable_parameters": {
+    "e155_initial": 116043,
+    "e155_backend": 617532
+  },
+  "maximum_epochs": 200,
+  "maximum_seconds": 14400,
+  "training_budget_note": "Same E154 L0 scratch engine/model/Loss and LR/earlystop; only dataset and supervision change. 4h/200epoch maximum, batch64 with32-case tail.",
+  "lr_levels": [
+    0.001,
+    0.00025,
+    0.0001,
+    5e-05
+  ],
+  "stages": [
+    "Scratch L0 only; freeze own-Loss dev500 best; stop"
+  ],
+  "preflight_train_indices": [
+    0,
+    1,
+    2,
+    18000,
+    35999
+  ],
+  "initialization": "Scratch seed0 only; no historical weights or Adam",
+  "loss": {
+    "e155_initial": {
+      "version": "E155.mib_grouping.v1",
+      "arm": "e155_initial",
+      "layer_weights": {
+        "0": 1.0
+      },
+      "reference_coefficients": {
+        "0": 1.0
+      },
+      "no_overlap_layers": [
+        0
+      ],
+      "mib": true,
+      "predict_all": true,
+      "grouping_bottleneck_weight_by_layer": {
+        "0": 0.0
+      },
+      "mib_weight": 0.6673664216670459,
+      "S2_drift_coefficient": 0.2
+    },
+    "e155_backend": {
+      "version": "E155.mib_grouping.v1",
+      "arm": "e155_backend",
+      "layer_weights": {
+        "4": 0.1,
+        "8": 0.1,
+        "12": 0.8
+      },
+      "reference_coefficients": {
+        "4": 0.75,
+        "8": 0.0,
+        "12": 0.0
+      },
+      "no_overlap_layers": [
+        4
+      ],
+      "mib": true,
+      "predict_all": true,
+      "grouping_bottleneck_weight_by_layer": {
+        "4": 0.2,
+        "8": 0.0,
+        "12": 0.0
+      },
+      "mib_weight": 0.6673664216670459,
+      "S2_drift_coefficient": 0.2
+    }
+  },
+  "prediction_boundary": "All F/P positions and shapes predicted; specifications enforced by postprocessing only",
+  "target": {
+    "grouping_satisfied_cases": 475,
+    "total_cases": 500,
+    "hard_legal_cases": 500
+  },
+  "static_condition": "Independent enhanced role/MIB/port encoders for L0 and backend; all functional sublayers receive enhanced static condition; only layouts cross repeated unit calls",
+  "S0": "Gated group displacement plus member reordering, two calls, bounded by group local scale; no reward for changing topology on its own",
+  "MIB": "Same-master relations separate from grouping; continuous log-shape consistency; linked group shape probes; compatible shared postprocessing dimensions including fallback",
+  "no_mib_policy_exception": "This E155 design restores MIB on the registered historical mean-area task, leaving historical no-MIB runs unchanged",
+  "test_read": false,
+  "automatic_retry": false,
+  "comparison_arms": 0,
+  "cache_owner": "datasets/random_mib40k_v1",
+  "backend_training_enabled": false,
+  "postprocessing_enabled": false,
+  "training_backend_enabled": false
+}

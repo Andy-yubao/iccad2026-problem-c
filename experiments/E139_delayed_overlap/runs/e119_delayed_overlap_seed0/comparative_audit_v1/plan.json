@@ -1,0 +1,71 @@
+{
+  "revision": "E139.vs.E134_stride3.topology_audit.v1",
+  "authorization": "2026-11-15 user requests other-metric comparison and topology audit, especially grouping; frozen best only; no training or new postprocessing",
+  "cases": 500,
+  "reference_model": "E134 e119_stride3 best63",
+  "candidate_model": "E139 best42",
+  "paired_source_cluster_bootstrap": {
+    "replicates": 2000,
+    "seed": 20261115,
+    "unit": "source shard; same case weighting as reported statistic",
+    "interval": "95% percentile, descriptive multiple exploratory metrics, not confirmatory familywise significance"
+  },
+  "direct_score_analysis": "Read saved final/raw metrics only. Decompose exact saved final Q change by four-player Shapley arithmetic: clamped HPWL gap, clamped area gap, grouping/maxsoft, boundary/maxsoft. Reconstruct saved scores before attribution; no new layout scoring.",
+  "layer_capture": "E139 actual shared-head S0..S12 on identical dev500/public inputs; original model forward with head hooks, CUDA graph. Validate S12 bitwise against original saved draft. Reuse verified E134 all-layer arrays; no intervention.",
+  "primary_topology": [
+    "reference local direction accuracy/K6 recall and clear separation intent, reference not unique optimum",
+    "same-group contact MST mean/bottleneck, near connectivity thresholds .01/.02/.05; outside-group centerline and straight-contact-sweep blockers",
+    "fixed E134 S3 blocked group-MST-edge cohort: unblocked AND original-edge contact or within-group minimax bottleneck <= half original, compared both at S3 and S12; own S3 cohorts also reported",
+    "complete separated-side exchange after S3 using prior conservative .02 margin, nonP-P pairs only; local order reversals separately",
+    "reference-separated but opposite-side wrong S3 relations, fixed baseline and own model cohorts; later strong and center-direction correction",
+    "fixed baseline S3 outward-blocked boundary cohort; clearance plus edge gap .01/.02/.05",
+    "largest axis-aligned empty rectangle inside bbox at S3/S12; actual occupancy verification"
+  ],
+  "secondary": [
+    "per-group IDs and actual final connected components; paired improvement/regression tables",
+    "grouping changes versus Q/latency and tail cases, descriptive only",
+    "common complete Loss components for all layers, same definitions; original aggregates not ranked"
+  ],
+  "primitives": {
+    "experiments\\E134_supervision_interval\\runs\\e119_stride3_seed0\\layer_analysis_v1\\topology.py": {
+      "sha256": "1eac1a3964e1ea265a3652cf1c2b37a8109425d4be2cdf27c1a89d6548eb6a1b",
+      "functions": [
+        "ratio",
+        "center_setup",
+        "center_metrics",
+        "intent"
+      ]
+    },
+    "experiments\\E134_supervision_interval\\audit_unsupervised.py": {
+      "sha256": "38a7cd77939ef774733a20f5023f672505c9e0e4e7b62607444407fe9d0f4bbc",
+      "functions": [
+        "largest_empty",
+        "blockers",
+        "boundary",
+        "pair_motion"
+      ]
+    },
+    "experiments\\E138_topology_rewrite\\diagnostics.py": {
+      "sha256": "e388206672903674bc73cf2160f436804c76baaf9343d1ca6cce777010d65a69",
+      "functions": [
+        "relation_metrics"
+      ]
+    }
+  },
+  "protected_input_sha256": {
+    "experiments\\E134_supervision_interval\\runs\\e119_stride3_seed0\\layer_analysis_v1\\manifest.json": "aaadec9f91bdc77b6f0ac64e4a298e8c9d51fcb17f37945b84fdf1f9851c68a3",
+    "experiments\\E134_supervision_interval\\runs\\e119_stride3_seed0\\layer_analysis_v1\\states.npy": "241d3f234f60c2e5a8853e1ddf4a31d70b5c3a64df51fea2f499733fae357dbc",
+    "experiments\\E134_supervision_interval\\runs\\e119_stride3_seed0\\layer_analysis_v1\\positions.npy": "c7928f4d0ee6a9b6d7d6234faf187dacd54ba1256f2117478eb5583ff75d3466",
+    "experiments\\E134_supervision_interval\\runs\\e119_stride3_seed0\\layer_analysis_v1\\losses.npy": "99d7472c4aa9debc7ca315821200ee51ec1c9cc8ea5443aec30a93935e7d6f38",
+    "experiments\\E134_supervision_interval\\runs\\e119_stride3_seed0\\checkpoints\\best.pt": "1f69a681713255a7adfca09357d70065ad7dff4d62f1a6294a7c233e30ad1df1",
+    "experiments\\E139_delayed_overlap\\runs\\e119_delayed_overlap_seed0\\checkpoints\\best.pt": "b50a4e0820c25bc07661797efaae4b6a7c7c97d800688104d57aeab9989835e6",
+    "experiments\\E139_delayed_overlap\\runs\\e119_delayed_overlap_seed0\\evaluation_no_mib_dev500\\results.json": "748ff8713e979bd11342cf32e0db1c1e8440da2064570fd0c388a0fc27697015",
+    "scoring\\draft_geometry.py": "64b6190ea92c0c081daf0a0e3894448c7db332a05034d8beef47adb8bc7afa7f",
+    "third_party\\FloorSet\\iccad2026contest\\iccad2026_evaluate.py": "64db37865b42baf11add62bdbf035690dca086cd4be7b5b4e58db756f20d8498"
+  },
+  "training": false,
+  "optimizer_updates": 0,
+  "postprocessing_calls": 0,
+  "new_layout_score_calls": 0,
+  "test_read": false
+}

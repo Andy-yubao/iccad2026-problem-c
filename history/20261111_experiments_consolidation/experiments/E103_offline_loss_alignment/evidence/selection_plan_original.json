@@ -1,0 +1,42 @@
+{
+  "experiment": "E103_offline_loss_alignment",
+  "status": "models_staged_awaiting_user_review",
+  "authorization": "User requested abandoning E98, opening independent research and selecting/staging suitable fully trained models first; report model choices before database generation.",
+  "objective": "Learn and validate differentiable draft Loss aligned with final quality after one frozen fixed-depth postprocessor; offline within-problem ranking, local direction checks, then limited matched-start training only after objective registration.",
+  "database": {
+    "planned_cases": 1000,
+    "drafts_per_case": 5,
+    "planned_core_drafts": 5000,
+    "population": "original fixed v5 train16000; keep original split membership; sample same1000 without replacement after selection review",
+    "source_model_ids": [
+      "e42",
+      "e68",
+      "e70",
+      "e71",
+      "e98_generalization"
+    ],
+    "draft_rule": "Exactly one unperturbed neural draft from each of five distinct completed model weights for every case; do not use five checkpoints from one run or perturbations to fill quota",
+    "perturbations": "Optional later explicitly registered auxiliary checks; not used to replace any of the five core model drafts",
+    "all_models_completed_normal_early_stop": true,
+    "convergence_scope": "Operational validation-based stopping; does not claim global convergence or flat training Loss",
+    "sampling_started": false
+  },
+  "scope": {
+    "current_stage": "model selection, independent weight/source/evidence copies and CPU strict-load verification only",
+    "database_generation_started": false,
+    "inference_calls": 0,
+    "postprocessing_calls": 0,
+    "loss_fitting_started": false,
+    "formal_training_started": false,
+    "test_read": false,
+    "dev_postprocessing_Q_for_weight_fitting": false,
+    "automatic_wakeups": false
+  },
+  "public_task": "Public MIB mean-area transform from protocol, same IDs and scale for all sources; reference used only for Loss/supervision, never network inputs",
+  "archived_port_representation": "For historical E68/E70/E71 frozen inference only, retain their original public full-port readers and14-dimensional input; compressing their inputs would change the selected function. New trainable architecture is not introduced here.",
+  "evaluation": "Later stage will freeze an independent local fixed-depth evaluator copied with provenance; regenerate all5000 Q labels with that one evaluator rather than mixing historical clock/depth Q",
+  "analysis": "Store actual independent Loss terms; fit nonnegative scale-constrained regularized within-case ranking weights. Split by case and examine leave-one-model-source-out behavior; mixed-Q objective includes equal and official size weighting.",
+  "decision": "Check unseen-case ranking/regret and local Loss-descent/Q direction before actual training; fixed own-Loss controls within-phase monitoring/best/LR/earlystop; Q is the outer alignment criterion, not hidden checkpoint selection.",
+  "protection": "All E98 STOPs and historical evidence remain; no E98 restarts; original model paths remain unchanged; E101/E102 untouched.",
+  "next_stage": "Report five model choices to user first; no database or training automatically launched in this turn."
+}

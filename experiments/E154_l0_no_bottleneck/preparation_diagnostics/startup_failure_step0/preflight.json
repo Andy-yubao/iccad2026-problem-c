@@ -1,0 +1,9 @@
+{
+  "status": "failed",
+  "formal_training_started": false,
+  "test_payloads": 0,
+  "dev_payloads": 0,
+  "formal_training_updates": 0,
+  "error": "AssertionError()",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E154_l0_no_bottleneck\\preflight.py\", line 33, in main\n    assert not json.loads((HERE/'authorization.json').read_text())['training_enabled'] and not (HERE/'runs').exists()\nAssertionError\n"
+}

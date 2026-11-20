@@ -1,0 +1,151 @@
+{
+  "status": "passed",
+  "unique_train_cases": 5,
+  "optimizer_updates": 0,
+  "real_optimizer_update_tested": false,
+  "training_started": false,
+  "dev_tensor_payloads": 0,
+  "raw_payload_reads": 0,
+  "test_read": false,
+  "postprocessing_calls": 0,
+  "model_checkpoint_reads": 0,
+  "resume_tested": false,
+  "launch_blocked_before_runtime": {
+    "full": true,
+    "pure": true
+  },
+  "cache_inventory_metadata_only": {
+    "train": {
+      "count": 16000,
+      "chunks": 141,
+      "tensor_payloads_opened": 0
+    },
+    "dev_monitor500": {
+      "count": 500,
+      "chunks": 8,
+      "tensor_payloads_opened": 0
+    }
+  },
+  "members": [
+    [
+      "worker_68/layouts_2128.th",
+      101
+    ],
+    [
+      "worker_72/layouts_4704.th",
+      108
+    ],
+    [
+      "worker_23/layouts_7056.th",
+      77
+    ],
+    [
+      "worker_29/layouts_2464.th",
+      67
+    ],
+    [
+      "worker_29/layouts_9520.th",
+      16
+    ]
+  ],
+  "subset_local_indices": [
+    6963,
+    4506,
+    10463,
+    3453,
+    10262
+  ],
+  "shared_cache_chunks": {
+    "datasets/static_tensor_cache_v1/a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148/train/0031.pt": "ea712ba2158501e4f70dc670165bf5b3bfacef751002bd499cdd1cf76f297258",
+    "datasets/static_tensor_cache_v1/a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148/train/0040.pt": "9896f648b98a91aa7c540ce5b1fd7d6ec578178364846b00658482fc02dae5e7",
+    "datasets/static_tensor_cache_v1/a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148/train/0061.pt": "0b3bffedc39bb41f2193f13980bff76ab47131a9d66924ca6f75c2f4d26732ef",
+    "datasets/static_tensor_cache_v1/a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148/train/0091.pt": "513b73a64ffd4fdf55b6a51c431c3b6bf14b1b243551017693971a8e1cceada6",
+    "datasets/static_tensor_cache_v1/a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148/train/0092.pt": "a51b7832921e34ce7f7655c5cb0d52c65dbbed5823cd74072338db25068afd08"
+  },
+  "shared_cache_reused_without_rebuild": true,
+  "common_initial_tensor_count": 94,
+  "common_initial_tensors_exact": true,
+  "global_CPU_CUDA_RNG_preserved_by_build": true,
+  "GPU": "NVIDIA GeForce RTX 5080 Laptop GPU",
+  "arms": {
+    "full": {
+      "parameters": 786195,
+      "prediction_head_calls": 1,
+      "all_six_blocks_receive_gradients": true,
+      "CPU_final_loss": 16.454174041748047,
+      "initial_address_rename_output_RMS": 0.07621636241674423,
+      "address_invariance_claimed": false,
+      "CUDA_graph_forward_backward_passed": true,
+      "batch_size": 32,
+      "total": 14.853438377380371,
+      "max_case_loss": 23.053150177001953,
+      "unclipped_gradient_norm": 257.4696044921875,
+      "peak_allocated_bytes": 423202816,
+      "parameters_unchanged": true,
+      "optimizer_state_empty": true,
+      "optimizer_updates": 0
+    },
+    "pure": {
+      "parameters": 674979,
+      "prediction_head_calls": 1,
+      "all_six_blocks_receive_gradients": true,
+      "CPU_final_loss": 20.86562728881836,
+      "initial_address_rename_output_RMS": 0.056265827268362045,
+      "address_invariance_claimed": false,
+      "CUDA_graph_forward_backward_passed": true,
+      "batch_size": 32,
+      "total": 20.266864776611328,
+      "max_case_loss": 29.86321258544922,
+      "unclipped_gradient_norm": 512.5005493164062,
+      "peak_allocated_bytes": 466930176,
+      "parameters_unchanged": true,
+      "optimizer_state_empty": true,
+      "optimizer_updates": 0
+    }
+  },
+  "sources": {
+    "datasets/paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+    "datasets/random_reference.py": "a42742bec678b4b7d0f9642541a11d05849cf4b2bd1db1be3e92a03c898fc214",
+    "datasets/random_reference16k.py": "a33cc4d5d8e69148e1b01ee5ebca5b507d51fb46f1530709242a1ae232fe9bac",
+    "experiments/E132_relation_input_96x6/__init__.py": "ad94a3d5c065f9e6ff84aef34d2d8721754fae35ff141996d447c7eb5ec0c521",
+    "experiments/E132_relation_input_96x6/addresses.py": "2a89ba44bb7180487bd3b27740edab51dcb24e0cfbb6ae245b6a64c50fb6ca97",
+    "experiments/E132_relation_input_96x6/augmentation.py": "dba0658829115b08184fadec488ef0b56fe0adf0e8452cb240029d5c5c4de87c",
+    "experiments/E132_relation_input_96x6/batches.py": "0109ce5d26bddd6c4733df64580b5dc06c34a562adb23942ce7f85e77522391e",
+    "experiments/E132_relation_input_96x6/captured_projection.py": "7f19baba25bc52a686e08a1af32236bffa8b47300cac96c52914b3b81d88131a",
+    "experiments/E132_relation_input_96x6/control.py": "08367dfa29ba531d66d61e972bdebe607a0b5a87f896fcc599ff784ce2caea22",
+    "experiments/E132_relation_input_96x6/cuda_step.py": "5cd0eb9eeec1db4597e90605680068aa5b493b2b4e2dd88d86aaa08b2e1fc338",
+    "experiments/E132_relation_input_96x6/data.py": "e5168d2a6b9a9f634d0b7077188e3b3d13c1c3285dbcccf1509101bc161e6c0a",
+    "experiments/E132_relation_input_96x6/group_tree.py": "867ca3b84848ae78da25dd2a2db16018d722102c7bb5a34644492451efef65fd",
+    "experiments/E132_relation_input_96x6/inspect.py": "f67f1efaf409bc6c04e0ad92de3d86eb4593f393ba74963c66258805659f0e07",
+    "experiments/E132_relation_input_96x6/io.py": "58ebd0a8ff073d4be1e6bb54756080ab4b7b27ab6c7a04e23f79b0734a042410",
+    "experiments/E132_relation_input_96x6/loss.py": "0a397a20a19a41b8a68a975fd04afba6ed64c5db2868a073a3c1bd37f4166fd3",
+    "experiments/E132_relation_input_96x6/loss_config.py": "a4ba7f2d6e919dcc08100edc205bbc308f3d16614d602abc62408db78358f596",
+    "experiments/E132_relation_input_96x6/model.py": "c5beb999306c8a74c691ea48dc37dcbf58c81866fe1e79c3286c322c8c45bbc3",
+    "experiments/E132_relation_input_96x6/plan.json": "b7d4255fe54847e1ce698514c9742a89d8ab740ea6926634fba76633b8d9c641",
+    "experiments/E132_relation_input_96x6/provenance.json": "8212025bbb0a49b2bec18b6f7ebd9396430f8d5f21eb71afaea5b4896c84993a",
+    "experiments/E132_relation_input_96x6/README.md": "b08e297d739c17b38f18b713d8c882f8f2635972c9d253a646e4d49e86457c25",
+    "experiments/E132_relation_input_96x6/resident.py": "f76073f5756a59187ecfc1b90752f4db063e81555bad51835712a731d529cd27",
+    "experiments/E132_relation_input_96x6/runtime.py": "453600302d7423a84aaced26d42df6a629f270fb554ca6f154115590a7bd9293",
+    "experiments/E132_relation_input_96x6/schedule.py": "a01667f069a436eb3900bbd849eecd71e540e28eff7504118ce039ffecad2de5",
+    "experiments/E132_relation_input_96x6/simple_loss.py": "fcd0827c829ee2466298eb61c1213b1fb12ae7f54afaef0f8e53a86033478238",
+    "experiments/E132_relation_input_96x6/step_control.py": "795ddb45dd257e123f1880eea28b58502711807ee643bfcb51a7e72d484952da",
+    "experiments/E132_relation_input_96x6/train.py": "6c822390033baf48eb938cb808611b0c1b883c44e6151e3d200c7f770e9e4f20",
+    "protocol/model_prediction_boundary_v1.json": "d975980890f717590aafb6bceb34aa8052f0d895e8940e41e6a65e9426c9705a",
+    "protocol/paths.json": "11dc5f19c3da22f9d37db341b0606bcc4b514bfe39264fc7ffed27c13b098270",
+    "protocol/random_reference16k_v1.json": "ef09a04d37540cc3e8f60cc25955278aee3c0b960807f0ad7c0ba9b0cec396ea",
+    "protocol/random_reference40k_v1.json": "f899e114b91bc05a0688898dd9b6f251acba2c95e35fb5baca8fd5cf17979540",
+    "protocol/research_no_mib_v1.json": "a62e8eb2fcfc629d21f4e7d58f49be29daae07efa5b5bdf93c82dd1b98ed1043",
+    "protocol/research_training16k_v1.json": "f8f97afaaade4ef196ad3d0684d8d803e5950c6006e301f6b06652246c21b2af"
+  },
+  "descriptor_relations_reconstructed_exact": true,
+  "endpoint_renaming_consistent": true,
+  "group_label_rename_invariant": true,
+  "input_row_permutation_with_addresses_equivariant": true,
+  "labels_excluded": true,
+  "no_F_P_overwrite": true,
+  "no_geometric_feedback": true,
+  "pure_blocks_have_no_relation_arguments": true,
+  "cache_unchanged": true,
+  "torch": "2.7.1+cu128",
+  "elapsed_seconds": 32.25660199999402
+}

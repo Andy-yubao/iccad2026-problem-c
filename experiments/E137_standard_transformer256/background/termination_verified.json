@@ -1,0 +1,43 @@
+{
+  "status": "terminated_by_user",
+  "verified_at": "2026-11-14T13:24:14.744851+00:00",
+  "queue_exit_state": {
+    "status": "paused",
+    "queue_id": "813c63ef56e74c0c9f0f5581553f577d",
+    "started_at": "2026-11-14T11:51:04.830613+00:00",
+    "completed": [],
+    "active": null,
+    "sessions": 1,
+    "pid": 28596,
+    "updated_at": "2026-11-14T13:23:08.728573+00:00"
+  },
+  "training_result": {
+    "status": "user_stop",
+    "error": null,
+    "epochs": 107,
+    "steps": 120375,
+    "best_epoch": 104,
+    "best_fixed_loss": 1.0034666673541068,
+    "elapsed_seconds": 5436.090681900001,
+    "train_monitor_last4": [
+      0.9856021793484688,
+      0.9733593605160713,
+      0.9850618733167649,
+      0.9765503633618354
+    ],
+    "train_plateau_observed": false,
+    "convergence": "not established",
+    "test_read": false,
+    "postprocessing_calls": 0,
+    "next_stage": "freeze own-Loss best then fixed dev500 through authorized queue"
+  },
+  "process_ids_verified_exited": [
+    23160,
+    28596
+  ],
+  "best_and_latest_preserved": true,
+  "training_enabled": false,
+  "subsequent_stages_disabled": true,
+  "postprocessing_calls": 0,
+  "test_read": false
+}

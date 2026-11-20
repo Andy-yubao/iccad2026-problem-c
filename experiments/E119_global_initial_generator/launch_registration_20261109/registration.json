@@ -1,0 +1,17 @@
+{
+  "authorization": "2026-11-09 user explicitly requested prepare then direct background startup on36k, automatic fixed500; do not wait for formal training",
+  "arm": "global2",
+  "preflight_sha256": "ef25d8d10c132c19433654d58159310637cfc4982ee2ed979c80752510afcb4a",
+  "seed": 0,
+  "maximum_seconds": 14400,
+  "maximum_epochs": 200,
+  "cache_members": {
+    "train": 36000,
+    "dev": 500
+  },
+  "baseline": "E114 staged best48 and existing evaluation reused; never retrained",
+  "scientific_limit": "E119 adds2 initial context blocks before S0 and carries contextual h forward, no direct S0 Loss; more parameters/compute and extra dropout draws; not an isolated readout-only change",
+  "evaluation": "own Loss-best frozen before Q; original fixeddev500/E98.depth_budget.v1; no MIB local Q; no test or new plots",
+  "failure": "stop queue, no next stage, no automatic retry",
+  "other_STOP_untouched": true
+}

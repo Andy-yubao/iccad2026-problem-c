@@ -1,0 +1,16 @@
+{
+  "scope": "E152.s2_local_repair.v2.seed0",
+  "training_enabled": true,
+  "allowed_arms": [
+    "e152_s2_ref",
+    "e152_s2_no_ref"
+  ],
+  "prepared_arms": [
+    "e152_s2_ref",
+    "e152_s2_no_ref"
+  ],
+  "test_read": false,
+  "note": "2026-11-18 user discarded all E152 v1 results and authorized a fresh redo: original 36k train; LR 1e-4 down to 5e-5; at most 10 epochs per arm. Same A/B S2-only objective and E151 best45 initialization.",
+  "activated_at": "2026-11-18T11:08:28.523585+00:00",
+  "preflight_sha256": "6003397a24664cb312eac49ddb8935bcab32ba1d9f0dd3cb7c93cfc927a0e66e"
+}

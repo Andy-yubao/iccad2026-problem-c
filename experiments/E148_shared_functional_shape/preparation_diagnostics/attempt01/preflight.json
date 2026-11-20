@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "formal_training_started": false,
+  "dev_payloads": 0,
+  "test_payloads": 0,
+  "postprocessing_calls": 0,
+  "Q_calls": 0,
+  "error": "AssertionError()",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E148_shared_functional_shape\\preflight.py\", line 197, in main\n    result['synthetic']=synthetic();print('Independent shape oracle and unchanged E14249 passed',flush=True)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E148_shared_functional_shape\\preflight.py\", line 84, in synthetic\n    assert (HERE/'geometry_feedback.py').read_bytes()==(ROOT/'experiments/E142_dual_geometry/geometry_feedback.py').read_bytes()\nAssertionError\n",
+  "elapsed_seconds": 0.5505549999943469
+}

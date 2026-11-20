@@ -1,0 +1,22 @@
+{
+  "scope": "E114.three_arms.seed0",
+  "preparation_enabled": true,
+  "training_enabled": true,
+  "allowed_arms": [
+    "staged"
+  ],
+  "user_instruction": "在后台启动训练",
+  "actual_updates_authorized": true,
+  "automatic_queue": false,
+  "test_read": false,
+  "authorized_at": "2026-11-07T09:14:52.119273+00:00",
+  "limits": "Exactly3 scratch seed0 arms, original per-arm4h/200epoch limits; no old runs, test, automatic Q evaluation",
+  "latest_instruction": "User explicitly authorized resume4+12 followed by new9-layer1+9; both36k",
+  "evaluation_authorized": [
+    "terminal",
+    "dense"
+  ],
+  "resume_authorized": true,
+  "new_queue": "experiments/E115_first_head_supervision/run_pair_queue.py",
+  "old_three_arm_queue_restart_authorized": false
+}

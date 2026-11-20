@@ -1,0 +1,5267 @@
+{
+  "population": {
+    "R": 3620,
+    "RB": 499,
+    "L": 4573,
+    "B": 1753,
+    "LB": 500,
+    "RT": 499,
+    "T": 1291,
+    "LT": 500
+  },
+  "preplaced_population": {
+    "B": 127,
+    "L": 197,
+    "T": 62,
+    "RT": 36,
+    "LB": 43,
+    "R": 161,
+    "LT": 29,
+    "RB": 42
+  },
+  "reference_violations": {
+    "R": 500,
+    "RT": 168,
+    "RB": 126,
+    "T": 116,
+    "LT": 75
+  },
+  "models": {
+    "e152_s2_ref": {
+      "count": 24,
+      "types": {
+        "RT": 10,
+        "L": 1,
+        "RB": 6,
+        "R": 6,
+        "LT": 1
+      },
+      "failed_sides": {
+        "RT": 7,
+        "L": 1,
+        "R": 15,
+        "T": 1
+      },
+      "rows": [
+        {
+          "index": 4,
+          "module": 57,
+          "type": "RT",
+          "failed": [
+            "R",
+            "T"
+          ],
+          "gaps": {
+            "R": 0.31054622067313176,
+            "T": 1.0
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [
+            "T"
+          ],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 106.0,
+              "reference_edge": 106.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            },
+            {
+              "side": "T",
+              "anchor_edge": 231.0,
+              "reference_edge": 232.0,
+              "hard_preplaced_conflicts": [
+                39
+              ],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 1.0
+            }
+          ],
+          "reference_module_position": [
+            80.0,
+            205.0,
+            26.0,
+            26.0
+          ],
+          "public_module_spec": [
+            80.0,
+            205.0,
+            26.0,
+            26.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "T"
+          ],
+          "reference_required_gaps": {
+            "R": 0.0,
+            "T": 1.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 106.0,
+              "current_bbox_edge": 106.31054622067313,
+              "bbox_extreme_modules": [
+                5,
+                11,
+                22,
+                30,
+                40,
+                44,
+                50,
+                54,
+                63
+              ],
+              "modules_beyond_target": [
+                5,
+                11,
+                22,
+                30,
+                40,
+                44,
+                50,
+                54,
+                63
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "failed_side": "T",
+              "boundary_target": 231.0,
+              "current_bbox_edge": 232.0,
+              "bbox_extreme_modules": [
+                39,
+                47,
+                48
+              ],
+              "modules_beyond_target": [
+                39,
+                47,
+                48
+              ],
+              "extreme_modules_preplaced": [
+                1,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 18,
+          "module": 25,
+          "type": "L",
+          "failed": [
+            "L"
+          ],
+          "gaps": {
+            "L": 4.0
+          },
+          "fixed": 0,
+          "preplaced": 0,
+          "unavoidable_failed_sides_from_public_hard_constraints": [],
+          "hard_conflict_details": [],
+          "reference_module_position": [
+            0.0,
+            44.0,
+            13.0,
+            10.0
+          ],
+          "public_module_spec": [
+            -1.0,
+            -1.0,
+            -1.0,
+            -1.0
+          ],
+          "reference_also_fails_same_module": false,
+          "reference_failed_sides": [],
+          "reference_required_gaps": {
+            "L": 0.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "L",
+              "boundary_target": 4.0,
+              "current_bbox_edge": 0.0,
+              "bbox_extreme_modules": [
+                5,
+                19,
+                27,
+                29,
+                30,
+                35,
+                37,
+                40,
+                52,
+                57,
+                58,
+                60,
+                62
+              ],
+              "modules_beyond_target": [
+                5,
+                19,
+                27,
+                29,
+                30,
+                35,
+                37,
+                40,
+                52,
+                57,
+                58,
+                60,
+                62
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 24,
+          "module": 2,
+          "type": "RT",
+          "failed": [
+            "R",
+            "T"
+          ],
+          "gaps": {
+            "R": 11.410587575199315,
+            "T": 1.4192183710838435
+          },
+          "fixed": 1,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 96.0,
+              "reference_edge": 98.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            },
+            {
+              "side": "T",
+              "anchor_edge": 154.0,
+              "reference_edge": 157.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            }
+          ],
+          "reference_module_position": [
+            84.0,
+            150.0,
+            12.0,
+            4.0
+          ],
+          "public_module_spec": [
+            84.0,
+            150.0,
+            12.0,
+            4.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R",
+            "T"
+          ],
+          "reference_required_gaps": {
+            "R": 2.0,
+            "T": 3.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 96.0,
+              "current_bbox_edge": 107.41058757519932,
+              "bbox_extreme_modules": [
+                4,
+                10,
+                11,
+                23,
+                31,
+                37,
+                46
+              ],
+              "modules_beyond_target": [
+                4,
+                10,
+                11,
+                23,
+                31,
+                37,
+                46
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "failed_side": "T",
+              "boundary_target": 154.0,
+              "current_bbox_edge": 155.41921837108384,
+              "bbox_extreme_modules": [
+                0,
+                21,
+                39,
+                45
+              ],
+              "modules_beyond_target": [
+                0,
+                21,
+                39,
+                45
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 35,
+          "module": 35,
+          "type": "RB",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 1.0,
+            "B": 0.0
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 78.0,
+              "reference_edge": 79.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            }
+          ],
+          "reference_module_position": [
+            56.0,
+            0.0,
+            22.0,
+            17.0
+          ],
+          "public_module_spec": [
+            56.0,
+            0.0,
+            22.0,
+            17.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R"
+          ],
+          "reference_required_gaps": {
+            "R": 1.0,
+            "B": 0.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 78.0,
+              "current_bbox_edge": 79.0,
+              "bbox_extreme_modules": [
+                0,
+                5,
+                20,
+                27,
+                34,
+                49,
+                50,
+                55,
+                56
+              ],
+              "modules_beyond_target": [
+                0,
+                5,
+                20,
+                27,
+                34,
+                49,
+                50,
+                55,
+                56
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 68,
+          "module": 37,
+          "type": "RT",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 1.0,
+            "T": 0.0
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [
+            "R"
+          ],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 117.0,
+              "reference_edge": 118.0,
+              "hard_preplaced_conflicts": [
+                78
+              ],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 1.0
+            }
+          ],
+          "reference_module_position": [
+            101.0,
+            210.0,
+            16.0,
+            11.0
+          ],
+          "public_module_spec": [
+            101.0,
+            210.0,
+            16.0,
+            11.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R"
+          ],
+          "reference_required_gaps": {
+            "R": 1.0,
+            "T": 0.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 117.0,
+              "current_bbox_edge": 118.0,
+              "bbox_extreme_modules": [
+                3,
+                6,
+                19,
+                28,
+                35,
+                47,
+                61,
+                78,
+                85,
+                87
+              ],
+              "modules_beyond_target": [
+                3,
+                6,
+                19,
+                28,
+                35,
+                47,
+                61,
+                78,
+                85,
+                87
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 81,
+          "module": 24,
+          "type": "RT",
+          "failed": [
+            "R",
+            "T"
+          ],
+          "gaps": {
+            "R": 0.29007500647276174,
+            "T": 0.29007500705483835
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 110.0,
+              "reference_edge": 110.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            },
+            {
+              "side": "T",
+              "anchor_edge": 165.0,
+              "reference_edge": 165.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            }
+          ],
+          "reference_module_position": [
+            84.0,
+            150.0,
+            26.0,
+            15.0
+          ],
+          "public_module_spec": [
+            84.0,
+            150.0,
+            26.0,
+            15.0
+          ],
+          "reference_also_fails_same_module": false,
+          "reference_failed_sides": [],
+          "reference_required_gaps": {
+            "R": 0.0,
+            "T": 0.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 110.0,
+              "current_bbox_edge": 110.29007500647276,
+              "bbox_extreme_modules": [
+                6,
+                8,
+                12,
+                20,
+                39,
+                48,
+                49
+              ],
+              "modules_beyond_target": [
+                6,
+                8,
+                12,
+                20,
+                39,
+                48,
+                49
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "failed_side": "T",
+              "boundary_target": 165.0,
+              "current_bbox_edge": 165.29007500705484,
+              "bbox_extreme_modules": [
+                5,
+                7,
+                11,
+                27
+              ],
+              "modules_beyond_target": [
+                5,
+                7,
+                11,
+                27
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 92,
+          "module": 59,
+          "type": "R",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 1.5189276013843482
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 122.0,
+              "reference_edge": 122.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            }
+          ],
+          "reference_module_position": [
+            93.0,
+            51.0,
+            29.0,
+            27.0
+          ],
+          "public_module_spec": [
+            93.0,
+            51.0,
+            29.0,
+            27.0
+          ],
+          "reference_also_fails_same_module": false,
+          "reference_failed_sides": [],
+          "reference_required_gaps": {
+            "R": 0.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 122.0,
+              "current_bbox_edge": 123.51892760138435,
+              "bbox_extreme_modules": [
+                12,
+                18,
+                23,
+                24,
+                25,
+                43,
+                65,
+                70,
+                72
+              ],
+              "modules_beyond_target": [
+                12,
+                18,
+                23,
+                24,
+                25,
+                43,
+                65,
+                70,
+                72
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 97,
+          "module": 25,
+          "type": "RB",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 1.0,
+            "B": 0.0
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [
+            "R"
+          ],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 112.0,
+              "reference_edge": 113.0,
+              "hard_preplaced_conflicts": [
+                53
+              ],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 1.0
+            }
+          ],
+          "reference_module_position": [
+            100.0,
+            0.0,
+            12.0,
+            24.0
+          ],
+          "public_module_spec": [
+            100.0,
+            0.0,
+            12.0,
+            24.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R"
+          ],
+          "reference_required_gaps": {
+            "R": 1.0,
+            "B": 0.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 112.0,
+              "current_bbox_edge": 113.0,
+              "bbox_extreme_modules": [
+                14,
+                15,
+                22,
+                23,
+                24,
+                31,
+                53,
+                73
+              ],
+              "modules_beyond_target": [
+                14,
+                15,
+                22,
+                23,
+                24,
+                31,
+                53,
+                73
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 124,
+          "module": 16,
+          "type": "R",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 1.1872650980221806
+          },
+          "fixed": 1,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [
+            "R"
+          ],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 99.0,
+              "reference_edge": 101.0,
+              "hard_preplaced_conflicts": [
+                60
+              ],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 1.0
+            }
+          ],
+          "reference_module_position": [
+            84.0,
+            167.0,
+            15.0,
+            9.0
+          ],
+          "public_module_spec": [
+            84.0,
+            167.0,
+            15.0,
+            9.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R"
+          ],
+          "reference_required_gaps": {
+            "R": 2.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 99.0,
+              "current_bbox_edge": 100.18726509802218,
+              "bbox_extreme_modules": [
+                3,
+                21,
+                23,
+                34,
+                52,
+                56,
+                63
+              ],
+              "modules_beyond_target": [
+                3,
+                21,
+                23,
+                34,
+                52,
+                56,
+                60,
+                63
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 124,
+          "module": 60,
+          "type": "RT",
+          "failed": [
+            "R",
+            "T"
+          ],
+          "gaps": {
+            "R": 0.1872650980221806,
+            "T": 0.1872650935256388
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 100.0,
+              "reference_edge": 101.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            },
+            {
+              "side": "T",
+              "anchor_edge": 188.0,
+              "reference_edge": 190.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            }
+          ],
+          "reference_module_position": [
+            84.0,
+            176.0,
+            16.0,
+            12.0
+          ],
+          "public_module_spec": [
+            84.0,
+            176.0,
+            16.0,
+            12.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R",
+            "T"
+          ],
+          "reference_required_gaps": {
+            "R": 1.0,
+            "T": 2.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 100.0,
+              "current_bbox_edge": 100.18726509802218,
+              "bbox_extreme_modules": [
+                3,
+                21,
+                23,
+                34,
+                52,
+                56,
+                63
+              ],
+              "modules_beyond_target": [
+                3,
+                21,
+                23,
+                34,
+                52,
+                56,
+                63
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "failed_side": "T",
+              "boundary_target": 188.0,
+              "current_bbox_edge": 188.18726509352564,
+              "bbox_extreme_modules": [
+                29,
+                30,
+                39,
+                51
+              ],
+              "modules_beyond_target": [
+                29,
+                30,
+                39,
+                51
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 157,
+          "module": 69,
+          "type": "R",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 3.0
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [
+            "R"
+          ],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 127.0,
+              "reference_edge": 130.0,
+              "hard_preplaced_conflicts": [
+                47,
+                76
+              ],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 3.0
+            }
+          ],
+          "reference_module_position": [
+            108.0,
+            178.0,
+            19.0,
+            8.0
+          ],
+          "public_module_spec": [
+            108.0,
+            178.0,
+            19.0,
+            8.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R"
+          ],
+          "reference_required_gaps": {
+            "R": 3.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 127.0,
+              "current_bbox_edge": 130.0,
+              "bbox_extreme_modules": [
+                1,
+                37,
+                45,
+                47,
+                55,
+                58,
+                74,
+                75,
+                76,
+                78,
+                80,
+                83,
+                87,
+                102
+              ],
+              "modules_beyond_target": [
+                1,
+                37,
+                45,
+                47,
+                55,
+                58,
+                74,
+                75,
+                76,
+                78,
+                80,
+                83,
+                87,
+                102
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 161,
+          "module": 23,
+          "type": "RT",
+          "failed": [
+            "R",
+            "T"
+          ],
+          "gaps": {
+            "R": 0.269318504826515,
+            "T": 0.2693185055250069
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 110.0,
+              "reference_edge": 110.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            },
+            {
+              "side": "T",
+              "anchor_edge": 229.0,
+              "reference_edge": 229.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            }
+          ],
+          "reference_module_position": [
+            90.0,
+            202.0,
+            20.0,
+            27.0
+          ],
+          "public_module_spec": [
+            90.0,
+            202.0,
+            20.0,
+            27.0
+          ],
+          "reference_also_fails_same_module": false,
+          "reference_failed_sides": [],
+          "reference_required_gaps": {
+            "R": 0.0,
+            "T": 0.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 110.0,
+              "current_bbox_edge": 110.26931850482651,
+              "bbox_extreme_modules": [
+                6,
+                20,
+                57,
+                58,
+                59,
+                65,
+                66,
+                72,
+                78,
+                83
+              ],
+              "modules_beyond_target": [
+                6,
+                20,
+                57,
+                58,
+                59,
+                65,
+                66,
+                72,
+                78,
+                83
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "failed_side": "T",
+              "boundary_target": 229.0,
+              "current_bbox_edge": 229.269318505525,
+              "bbox_extreme_modules": [
+                24,
+                30,
+                47
+              ],
+              "modules_beyond_target": [
+                24,
+                30,
+                47
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 174,
+          "module": 9,
+          "type": "RT",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 4.579699921436259,
+            "T": 0.0
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 52.0,
+              "reference_edge": 57.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            }
+          ],
+          "reference_module_position": [
+            45.0,
+            140.0,
+            7.0,
+            6.0
+          ],
+          "public_module_spec": [
+            45.0,
+            140.0,
+            7.0,
+            6.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R"
+          ],
+          "reference_required_gaps": {
+            "R": 5.0,
+            "T": 0.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 52.0,
+              "current_bbox_edge": 56.57969992143626,
+              "bbox_extreme_modules": [
+                4,
+                5,
+                7,
+                14,
+                16,
+                23,
+                24,
+                29
+              ],
+              "modules_beyond_target": [
+                4,
+                5,
+                7,
+                14,
+                16,
+                23,
+                24,
+                29
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 209,
+          "module": 16,
+          "type": "LT",
+          "failed": [
+            "T"
+          ],
+          "gaps": {
+            "L": 0.0,
+            "T": 1.0
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [
+            "T"
+          ],
+          "hard_conflict_details": [
+            {
+              "side": "T",
+              "anchor_edge": 202.0,
+              "reference_edge": 203.0,
+              "hard_preplaced_conflicts": [
+                37
+              ],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 1.0
+            }
+          ],
+          "reference_module_position": [
+            0.0,
+            177.0,
+            18.0,
+            25.0
+          ],
+          "public_module_spec": [
+            0.0,
+            177.0,
+            18.0,
+            25.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "T"
+          ],
+          "reference_required_gaps": {
+            "L": 0.0,
+            "T": 1.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "T",
+              "boundary_target": 202.0,
+              "current_bbox_edge": 203.0,
+              "bbox_extreme_modules": [
+                33,
+                37,
+                38,
+                62
+              ],
+              "modules_beyond_target": [
+                33,
+                37,
+                38,
+                62
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                1,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 215,
+          "module": 42,
+          "type": "RT",
+          "failed": [
+            "R",
+            "T"
+          ],
+          "gaps": {
+            "R": 1.0541664226475405,
+            "T": 1.054166421512491
+          },
+          "fixed": 1,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 93.0,
+              "reference_edge": 93.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            },
+            {
+              "side": "T",
+              "anchor_edge": 196.0,
+              "reference_edge": 198.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            }
+          ],
+          "reference_module_position": [
+            82.0,
+            183.0,
+            11.0,
+            13.0
+          ],
+          "public_module_spec": [
+            82.0,
+            183.0,
+            11.0,
+            13.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "T"
+          ],
+          "reference_required_gaps": {
+            "R": 0.0,
+            "T": 2.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 93.0,
+              "current_bbox_edge": 94.05416642264754,
+              "bbox_extreme_modules": [
+                8,
+                10,
+                20,
+                22,
+                25,
+                34,
+                41,
+                49,
+                53,
+                62
+              ],
+              "modules_beyond_target": [
+                8,
+                10,
+                20,
+                22,
+                25,
+                34,
+                41,
+                49,
+                53,
+                62
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "failed_side": "T",
+              "boundary_target": 196.0,
+              "current_bbox_edge": 197.0541664215125,
+              "bbox_extreme_modules": [
+                3,
+                43,
+                52,
+                63
+              ],
+              "modules_beyond_target": [
+                3,
+                43,
+                52,
+                63
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 218,
+          "module": 22,
+          "type": "RT",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 1.0000000009167707,
+            "T": 0.0
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [
+            "R"
+          ],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 106.0,
+              "reference_edge": 107.0,
+              "hard_preplaced_conflicts": [
+                50
+              ],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 1.0
+            }
+          ],
+          "reference_module_position": [
+            87.0,
+            174.0,
+            19.0,
+            11.0
+          ],
+          "public_module_spec": [
+            87.0,
+            174.0,
+            19.0,
+            11.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R"
+          ],
+          "reference_required_gaps": {
+            "R": 1.0,
+            "T": 0.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 106.0,
+              "current_bbox_edge": 107.00000000091677,
+              "bbox_extreme_modules": [
+                3,
+                12,
+                27,
+                28,
+                45,
+                46,
+                47,
+                50,
+                52
+              ],
+              "modules_beyond_target": [
+                3,
+                12,
+                27,
+                28,
+                45,
+                46,
+                47,
+                50,
+                52
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 261,
+          "module": 12,
+          "type": "R",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 0.07900418530334719
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 104.0,
+              "reference_edge": 104.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            }
+          ],
+          "reference_module_position": [
+            91.0,
+            24.0,
+            13.0,
+            29.0
+          ],
+          "public_module_spec": [
+            91.0,
+            24.0,
+            13.0,
+            29.0
+          ],
+          "reference_also_fails_same_module": false,
+          "reference_failed_sides": [],
+          "reference_required_gaps": {
+            "R": 0.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 104.0,
+              "current_bbox_edge": 104.07900418530335,
+              "bbox_extreme_modules": [
+                1,
+                6,
+                11,
+                18,
+                19,
+                28
+              ],
+              "modules_beyond_target": [
+                1,
+                6,
+                11,
+                18,
+                19,
+                28
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 283,
+          "module": 57,
+          "type": "RB",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 1.0,
+            "B": 0.0
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [
+            "R"
+          ],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 106.0,
+              "reference_edge": 107.0,
+              "hard_preplaced_conflicts": [
+                82
+              ],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 1.0
+            }
+          ],
+          "reference_module_position": [
+            84.0,
+            0.0,
+            22.0,
+            18.0
+          ],
+          "public_module_spec": [
+            84.0,
+            0.0,
+            22.0,
+            18.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R"
+          ],
+          "reference_required_gaps": {
+            "R": 1.0,
+            "B": 0.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 106.0,
+              "current_bbox_edge": 107.0,
+              "bbox_extreme_modules": [
+                4,
+                7,
+                10,
+                12,
+                20,
+                31,
+                41,
+                43,
+                48,
+                59,
+                69,
+                74,
+                82
+              ],
+              "modules_beyond_target": [
+                4,
+                7,
+                10,
+                12,
+                20,
+                31,
+                41,
+                43,
+                48,
+                59,
+                69,
+                74,
+                82
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "index": 300,
+          "module": 92,
+          "type": "R",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 2.0
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [
+            "R"
+          ],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 105.0,
+              "reference_edge": 107.0,
+              "hard_preplaced_conflicts": [
+                15
+              ],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 2.0
+            }
+          ],
+          "reference_module_position": [
+            71.0,
+            112.0,
+            34.0,
+            24.0
+          ],
+          "public_module_spec": [
+            71.0,
+            112.0,
+            34.0,
+            24.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R"
+          ],
+          "reference_required_gaps": {
+            "R": 2.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 105.0,
+              "current_bbox_edge": 107.0,
+              "bbox_extreme_modules": [
+                7,
+                9,
+                11,
+                13,
+                15,
+                19,
+                26,
+                27,
+                47,
+                50,
+                53,
+                58,
+                69,
+                84,
+                96
+              ],
+              "modules_beyond_target": [
+                7,
+                9,
+                11,
+                13,
+                15,
+                19,
+                26,
+                27,
+                47,
+                50,
+                53,
+                58,
+                69,
+                84,
+                96
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 342,
+          "module": 42,
+          "type": "RB",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 2.0,
+            "B": 0.0
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [
+            "R"
+          ],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 98.0,
+              "reference_edge": 100.0,
+              "hard_preplaced_conflicts": [
+                2
+              ],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 2.0
+            }
+          ],
+          "reference_module_position": [
+            77.0,
+            0.0,
+            21.0,
+            20.0
+          ],
+          "public_module_spec": [
+            77.0,
+            0.0,
+            21.0,
+            20.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R"
+          ],
+          "reference_required_gaps": {
+            "R": 2.0,
+            "B": 0.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 98.0,
+              "current_bbox_edge": 100.0,
+              "bbox_extreme_modules": [
+                0,
+                2,
+                3,
+                12,
+                29,
+                30,
+                33,
+                37,
+                53,
+                55,
+                56,
+                62,
+                64
+              ],
+              "modules_beyond_target": [
+                0,
+                2,
+                3,
+                12,
+                29,
+                30,
+                33,
+                37,
+                53,
+                55,
+                56,
+                62,
+                64
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 357,
+          "module": 52,
+          "type": "RB",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 1.4779563817719463,
+            "B": 0.0
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 112.0,
+              "reference_edge": 116.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            }
+          ],
+          "reference_module_position": [
+            99.0,
+            0.0,
+            13.0,
+            6.0
+          ],
+          "public_module_spec": [
+            99.0,
+            0.0,
+            13.0,
+            6.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R"
+          ],
+          "reference_required_gaps": {
+            "R": 4.0,
+            "B": 0.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 112.0,
+              "current_bbox_edge": 113.47795638177195,
+              "bbox_extreme_modules": [
+                17,
+                32,
+                40,
+                44,
+                51,
+                55,
+                56,
+                58,
+                76
+              ],
+              "modules_beyond_target": [
+                17,
+                32,
+                40,
+                44,
+                51,
+                55,
+                56,
+                58,
+                76
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 393,
+          "module": 22,
+          "type": "R",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 1.0
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [
+            "R"
+          ],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 94.0,
+              "reference_edge": 95.0,
+              "hard_preplaced_conflicts": [
+                81
+              ],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 1.0
+            }
+          ],
+          "reference_module_position": [
+            76.0,
+            15.0,
+            18.0,
+            10.0
+          ],
+          "public_module_spec": [
+            76.0,
+            15.0,
+            18.0,
+            10.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R"
+          ],
+          "reference_required_gaps": {
+            "R": 1.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 94.0,
+              "current_bbox_edge": 95.0,
+              "bbox_extreme_modules": [
+                1,
+                8,
+                19,
+                25,
+                30,
+                36,
+                39,
+                55,
+                59,
+                62,
+                64,
+                81,
+                83
+              ],
+              "modules_beyond_target": [
+                1,
+                8,
+                19,
+                25,
+                30,
+                36,
+                39,
+                55,
+                59,
+                62,
+                64,
+                81,
+                83
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 458,
+          "module": 40,
+          "type": "RT",
+          "failed": [
+            "R",
+            "T"
+          ],
+          "gaps": {
+            "R": 0.21769699854485225,
+            "T": 0.21769699876313098
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 113.0,
+              "reference_edge": 115.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            },
+            {
+              "side": "T",
+              "anchor_edge": 306.0,
+              "reference_edge": 306.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            }
+          ],
+          "reference_module_position": [
+            88.0,
+            279.0,
+            25.0,
+            27.0
+          ],
+          "public_module_spec": [
+            88.0,
+            279.0,
+            25.0,
+            27.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R"
+          ],
+          "reference_required_gaps": {
+            "R": 2.0,
+            "T": 0.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 113.0,
+              "current_bbox_edge": 113.21769699854485,
+              "bbox_extreme_modules": [
+                0,
+                10,
+                14,
+                21,
+                23,
+                31,
+                37,
+                49,
+                54,
+                64,
+                82,
+                85,
+                86,
+                89
+              ],
+              "modules_beyond_target": [
+                0,
+                10,
+                14,
+                21,
+                23,
+                31,
+                37,
+                49,
+                54,
+                64,
+                82,
+                85,
+                86,
+                89
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "failed_side": "T",
+              "boundary_target": 306.0,
+              "current_bbox_edge": 306.21769699876313,
+              "bbox_extreme_modules": [
+                8,
+                18,
+                22,
+                104
+              ],
+              "modules_beyond_target": [
+                8,
+                18,
+                22,
+                104
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 499,
+          "module": 21,
+          "type": "RB",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 1.0,
+            "B": 0.0
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [
+            "R"
+          ],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 106.0,
+              "reference_edge": 107.0,
+              "hard_preplaced_conflicts": [
+                82
+              ],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 1.0
+            }
+          ],
+          "reference_module_position": [
+            86.0,
+            0.0,
+            20.0,
+            31.0
+          ],
+          "public_module_spec": [
+            86.0,
+            0.0,
+            20.0,
+            31.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R"
+          ],
+          "reference_required_gaps": {
+            "R": 1.0,
+            "B": 0.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 106.0,
+              "current_bbox_edge": 107.0,
+              "bbox_extreme_modules": [
+                2,
+                9,
+                16,
+                18,
+                27,
+                34,
+                48,
+                59,
+                74,
+                82,
+                85,
+                101,
+                104,
+                107,
+                112
+              ],
+              "modules_beyond_target": [
+                2,
+                9,
+                16,
+                18,
+                27,
+                34,
+                48,
+                59,
+                74,
+                82,
+                85,
+                101,
+                104,
+                107,
+                112
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "unavoidable_boundary_violation_modules": 12,
+      "all_failed_sides_unavoidable_modules": 11,
+      "types_with_denominators": {
+        "RT": {
+          "violations": 10,
+          "total_constraints": 499,
+          "rate": 0.02004008016032064
+        },
+        "L": {
+          "violations": 1,
+          "total_constraints": 4573,
+          "rate": 0.00021867483052700635
+        },
+        "RB": {
+          "violations": 6,
+          "total_constraints": 499,
+          "rate": 0.012024048096192385
+        },
+        "R": {
+          "violations": 6,
+          "total_constraints": 3620,
+          "rate": 0.0016574585635359116
+        },
+        "LT": {
+          "violations": 1,
+          "total_constraints": 500,
+          "rate": 0.002
+        }
+      },
+      "preplaced_violation_modules": 23,
+      "reference_also_violates_modules": 19,
+      "all_positive_failed_gaps": [
+        0.31054622067313176,
+        1.0,
+        4.0,
+        11.410587575199315,
+        1.4192183710838435,
+        1.0,
+        1.0,
+        0.29007500647276174,
+        0.29007500705483835,
+        1.5189276013843482,
+        1.0,
+        1.1872650980221806,
+        0.1872650980221806,
+        0.1872650935256388,
+        3.0,
+        0.269318504826515,
+        0.2693185055250069,
+        4.579699921436259,
+        1.0,
+        1.0541664226475405,
+        1.054166421512491,
+        1.0000000009167707,
+        0.07900418530334719,
+        1.0,
+        2.0,
+        2.0,
+        1.4779563817719463,
+        1.0,
+        0.21769699854485225,
+        0.21769699876313098,
+        1.0
+      ]
+    },
+    "e152_s2_no_ref": {
+      "count": 29,
+      "types": {
+        "RT": 9,
+        "L": 2,
+        "R": 10,
+        "RB": 6,
+        "LT": 1,
+        "T": 1
+      },
+      "failed_sides": {
+        "RT": 6,
+        "L": 2,
+        "R": 19,
+        "T": 2
+      },
+      "rows": [
+        {
+          "index": 4,
+          "module": 57,
+          "type": "RT",
+          "failed": [
+            "R",
+            "T"
+          ],
+          "gaps": {
+            "R": 0.1184600386332022,
+            "T": 1.0
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [
+            "T"
+          ],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 106.0,
+              "reference_edge": 106.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            },
+            {
+              "side": "T",
+              "anchor_edge": 231.0,
+              "reference_edge": 232.0,
+              "hard_preplaced_conflicts": [
+                39
+              ],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 1.0
+            }
+          ],
+          "reference_module_position": [
+            80.0,
+            205.0,
+            26.0,
+            26.0
+          ],
+          "public_module_spec": [
+            80.0,
+            205.0,
+            26.0,
+            26.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "T"
+          ],
+          "reference_required_gaps": {
+            "R": 0.0,
+            "T": 1.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 106.0,
+              "current_bbox_edge": 106.1184600386332,
+              "bbox_extreme_modules": [
+                5,
+                11,
+                22,
+                30,
+                40,
+                44,
+                50,
+                54,
+                63
+              ],
+              "modules_beyond_target": [
+                5,
+                11,
+                22,
+                30,
+                40,
+                44,
+                50,
+                54,
+                63
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "failed_side": "T",
+              "boundary_target": 231.0,
+              "current_bbox_edge": 232.0,
+              "bbox_extreme_modules": [
+                39,
+                47,
+                48
+              ],
+              "modules_beyond_target": [
+                39,
+                47,
+                48
+              ],
+              "extreme_modules_preplaced": [
+                1,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 18,
+          "module": 25,
+          "type": "L",
+          "failed": [
+            "L"
+          ],
+          "gaps": {
+            "L": 4.0
+          },
+          "fixed": 0,
+          "preplaced": 0,
+          "unavoidable_failed_sides_from_public_hard_constraints": [],
+          "hard_conflict_details": [],
+          "reference_module_position": [
+            0.0,
+            44.0,
+            13.0,
+            10.0
+          ],
+          "public_module_spec": [
+            -1.0,
+            -1.0,
+            -1.0,
+            -1.0
+          ],
+          "reference_also_fails_same_module": false,
+          "reference_failed_sides": [],
+          "reference_required_gaps": {
+            "L": 0.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "L",
+              "boundary_target": 4.0,
+              "current_bbox_edge": 0.0,
+              "bbox_extreme_modules": [
+                5,
+                19,
+                27,
+                29,
+                30,
+                35,
+                37,
+                40,
+                52,
+                57,
+                58,
+                60,
+                62
+              ],
+              "modules_beyond_target": [
+                5,
+                19,
+                27,
+                29,
+                30,
+                35,
+                37,
+                40,
+                52,
+                57,
+                58,
+                60,
+                62
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 24,
+          "module": 2,
+          "type": "RT",
+          "failed": [
+            "R",
+            "T"
+          ],
+          "gaps": {
+            "R": 11.604932718531927,
+            "T": 1.3703269537945744
+          },
+          "fixed": 1,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 96.0,
+              "reference_edge": 98.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            },
+            {
+              "side": "T",
+              "anchor_edge": 154.0,
+              "reference_edge": 157.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            }
+          ],
+          "reference_module_position": [
+            84.0,
+            150.0,
+            12.0,
+            4.0
+          ],
+          "public_module_spec": [
+            84.0,
+            150.0,
+            12.0,
+            4.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R",
+            "T"
+          ],
+          "reference_required_gaps": {
+            "R": 2.0,
+            "T": 3.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 96.0,
+              "current_bbox_edge": 107.60493271853193,
+              "bbox_extreme_modules": [
+                4,
+                10,
+                11,
+                23,
+                31,
+                37,
+                46
+              ],
+              "modules_beyond_target": [
+                4,
+                10,
+                11,
+                23,
+                31,
+                37,
+                46
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "failed_side": "T",
+              "boundary_target": 154.0,
+              "current_bbox_edge": 155.37032695379457,
+              "bbox_extreme_modules": [
+                0,
+                21,
+                39,
+                45
+              ],
+              "modules_beyond_target": [
+                0,
+                21,
+                39,
+                45
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 27,
+          "module": 32,
+          "type": "R",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 0.11571815170464106
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 93.0,
+              "reference_edge": 93.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            }
+          ],
+          "reference_module_position": [
+            69.0,
+            62.0,
+            24.0,
+            9.0
+          ],
+          "public_module_spec": [
+            69.0,
+            62.0,
+            24.0,
+            9.0
+          ],
+          "reference_also_fails_same_module": false,
+          "reference_failed_sides": [],
+          "reference_required_gaps": {
+            "R": 0.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 93.0,
+              "current_bbox_edge": 93.11571815170464,
+              "bbox_extreme_modules": [
+                3,
+                5,
+                8,
+                17,
+                22,
+                29,
+                31,
+                38
+              ],
+              "modules_beyond_target": [
+                3,
+                5,
+                8,
+                17,
+                22,
+                29,
+                31,
+                38
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 35,
+          "module": 35,
+          "type": "RB",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 1.0000000002037268,
+            "B": 0.0
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 78.0,
+              "reference_edge": 79.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            }
+          ],
+          "reference_module_position": [
+            56.0,
+            0.0,
+            22.0,
+            17.0
+          ],
+          "public_module_spec": [
+            56.0,
+            0.0,
+            22.0,
+            17.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R"
+          ],
+          "reference_required_gaps": {
+            "R": 1.0,
+            "B": 0.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 78.0,
+              "current_bbox_edge": 79.00000000020373,
+              "bbox_extreme_modules": [
+                0,
+                5,
+                20,
+                27,
+                34,
+                49,
+                50,
+                55,
+                56
+              ],
+              "modules_beyond_target": [
+                0,
+                5,
+                20,
+                27,
+                34,
+                49,
+                50,
+                55,
+                56
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 60,
+          "module": 9,
+          "type": "L",
+          "failed": [
+            "L"
+          ],
+          "gaps": {
+            "L": 4.067006965808105
+          },
+          "fixed": 0,
+          "preplaced": 0,
+          "unavoidable_failed_sides_from_public_hard_constraints": [],
+          "hard_conflict_details": [],
+          "reference_module_position": [
+            0.0,
+            33.0,
+            27.0,
+            13.0
+          ],
+          "public_module_spec": [
+            -1.0,
+            -1.0,
+            -1.0,
+            -1.0
+          ],
+          "reference_also_fails_same_module": false,
+          "reference_failed_sides": [],
+          "reference_required_gaps": {
+            "L": 0.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "L",
+              "boundary_target": 4.067006965808105,
+              "current_bbox_edge": 0.0,
+              "bbox_extreme_modules": [
+                1,
+                7,
+                11,
+                14,
+                15,
+                16
+              ],
+              "modules_beyond_target": [
+                1,
+                7,
+                11,
+                14,
+                15,
+                16
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 68,
+          "module": 37,
+          "type": "RT",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 1.0000000006402843,
+            "T": 0.0
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [
+            "R"
+          ],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 117.0,
+              "reference_edge": 118.0,
+              "hard_preplaced_conflicts": [
+                78
+              ],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 1.0
+            }
+          ],
+          "reference_module_position": [
+            101.0,
+            210.0,
+            16.0,
+            11.0
+          ],
+          "public_module_spec": [
+            101.0,
+            210.0,
+            16.0,
+            11.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R"
+          ],
+          "reference_required_gaps": {
+            "R": 1.0,
+            "T": 0.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 117.0,
+              "current_bbox_edge": 118.00000000064028,
+              "bbox_extreme_modules": [
+                3,
+                6,
+                19,
+                28,
+                35,
+                47,
+                61,
+                78,
+                85,
+                87
+              ],
+              "modules_beyond_target": [
+                3,
+                6,
+                19,
+                28,
+                35,
+                47,
+                61,
+                78,
+                85,
+                87
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 92,
+          "module": 59,
+          "type": "R",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 2.7310403158917325
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 122.0,
+              "reference_edge": 122.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            }
+          ],
+          "reference_module_position": [
+            93.0,
+            51.0,
+            29.0,
+            27.0
+          ],
+          "public_module_spec": [
+            93.0,
+            51.0,
+            29.0,
+            27.0
+          ],
+          "reference_also_fails_same_module": false,
+          "reference_failed_sides": [],
+          "reference_required_gaps": {
+            "R": 0.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 122.0,
+              "current_bbox_edge": 124.73104031589173,
+              "bbox_extreme_modules": [
+                12,
+                18,
+                23,
+                24,
+                25,
+                43,
+                65,
+                70,
+                72
+              ],
+              "modules_beyond_target": [
+                12,
+                18,
+                23,
+                24,
+                25,
+                43,
+                65,
+                70,
+                72
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 97,
+          "module": 25,
+          "type": "RB",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 1.0,
+            "B": 0.0
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [
+            "R"
+          ],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 112.0,
+              "reference_edge": 113.0,
+              "hard_preplaced_conflicts": [
+                53
+              ],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 1.0
+            }
+          ],
+          "reference_module_position": [
+            100.0,
+            0.0,
+            12.0,
+            24.0
+          ],
+          "public_module_spec": [
+            100.0,
+            0.0,
+            12.0,
+            24.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R"
+          ],
+          "reference_required_gaps": {
+            "R": 1.0,
+            "B": 0.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 112.0,
+              "current_bbox_edge": 113.0,
+              "bbox_extreme_modules": [
+                14,
+                15,
+                22,
+                23,
+                24,
+                31,
+                53,
+                73
+              ],
+              "modules_beyond_target": [
+                14,
+                15,
+                22,
+                23,
+                24,
+                31,
+                53,
+                73
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 124,
+          "module": 16,
+          "type": "R",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 1.0712544955167687
+          },
+          "fixed": 1,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [
+            "R"
+          ],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 99.0,
+              "reference_edge": 101.0,
+              "hard_preplaced_conflicts": [
+                60
+              ],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 1.0
+            }
+          ],
+          "reference_module_position": [
+            84.0,
+            167.0,
+            15.0,
+            9.0
+          ],
+          "public_module_spec": [
+            84.0,
+            167.0,
+            15.0,
+            9.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R"
+          ],
+          "reference_required_gaps": {
+            "R": 2.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 99.0,
+              "current_bbox_edge": 100.07125449551677,
+              "bbox_extreme_modules": [
+                3,
+                21,
+                23,
+                34,
+                52,
+                56,
+                63
+              ],
+              "modules_beyond_target": [
+                3,
+                21,
+                23,
+                34,
+                52,
+                56,
+                60,
+                63
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 124,
+          "module": 60,
+          "type": "RT",
+          "failed": [
+            "R",
+            "T"
+          ],
+          "gaps": {
+            "R": 0.07125449551676866,
+            "T": 0.07125449436716735
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 100.0,
+              "reference_edge": 101.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            },
+            {
+              "side": "T",
+              "anchor_edge": 188.0,
+              "reference_edge": 190.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            }
+          ],
+          "reference_module_position": [
+            84.0,
+            176.0,
+            16.0,
+            12.0
+          ],
+          "public_module_spec": [
+            84.0,
+            176.0,
+            16.0,
+            12.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R",
+            "T"
+          ],
+          "reference_required_gaps": {
+            "R": 1.0,
+            "T": 2.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 100.0,
+              "current_bbox_edge": 100.07125449551677,
+              "bbox_extreme_modules": [
+                3,
+                21,
+                23,
+                34,
+                52,
+                56,
+                63
+              ],
+              "modules_beyond_target": [
+                3,
+                21,
+                23,
+                34,
+                52,
+                56,
+                63
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "failed_side": "T",
+              "boundary_target": 188.0,
+              "current_bbox_edge": 188.07125449436717,
+              "bbox_extreme_modules": [
+                29,
+                30,
+                39,
+                51
+              ],
+              "modules_beyond_target": [
+                29,
+                30,
+                39,
+                51
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 157,
+          "module": 69,
+          "type": "R",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 3.0
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [
+            "R"
+          ],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 127.0,
+              "reference_edge": 130.0,
+              "hard_preplaced_conflicts": [
+                47,
+                76
+              ],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 3.0
+            }
+          ],
+          "reference_module_position": [
+            108.0,
+            178.0,
+            19.0,
+            8.0
+          ],
+          "public_module_spec": [
+            108.0,
+            178.0,
+            19.0,
+            8.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R"
+          ],
+          "reference_required_gaps": {
+            "R": 3.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 127.0,
+              "current_bbox_edge": 130.0,
+              "bbox_extreme_modules": [
+                1,
+                37,
+                45,
+                47,
+                55,
+                58,
+                74,
+                75,
+                76,
+                78,
+                80,
+                83,
+                87,
+                102
+              ],
+              "modules_beyond_target": [
+                1,
+                37,
+                45,
+                47,
+                55,
+                58,
+                74,
+                75,
+                76,
+                78,
+                80,
+                83,
+                87,
+                102
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 161,
+          "module": 23,
+          "type": "RT",
+          "failed": [
+            "R",
+            "T"
+          ],
+          "gaps": {
+            "R": 0.2401275375741534,
+            "T": 0.24012753574061207
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 110.0,
+              "reference_edge": 110.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            },
+            {
+              "side": "T",
+              "anchor_edge": 229.0,
+              "reference_edge": 229.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            }
+          ],
+          "reference_module_position": [
+            90.0,
+            202.0,
+            20.0,
+            27.0
+          ],
+          "public_module_spec": [
+            90.0,
+            202.0,
+            20.0,
+            27.0
+          ],
+          "reference_also_fails_same_module": false,
+          "reference_failed_sides": [],
+          "reference_required_gaps": {
+            "R": 0.0,
+            "T": 0.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 110.0,
+              "current_bbox_edge": 110.24012753757415,
+              "bbox_extreme_modules": [
+                6,
+                20,
+                57,
+                58,
+                59,
+                65,
+                66,
+                72,
+                78,
+                83
+              ],
+              "modules_beyond_target": [
+                6,
+                20,
+                57,
+                58,
+                59,
+                65,
+                66,
+                72,
+                78,
+                83
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "failed_side": "T",
+              "boundary_target": 229.0,
+              "current_bbox_edge": 229.2401275357406,
+              "bbox_extreme_modules": [
+                24,
+                30,
+                47
+              ],
+              "modules_beyond_target": [
+                24,
+                30,
+                47
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 174,
+          "module": 9,
+          "type": "RT",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 4.739375056189601,
+            "T": 0.0
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 52.0,
+              "reference_edge": 57.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            }
+          ],
+          "reference_module_position": [
+            45.0,
+            140.0,
+            7.0,
+            6.0
+          ],
+          "public_module_spec": [
+            45.0,
+            140.0,
+            7.0,
+            6.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R"
+          ],
+          "reference_required_gaps": {
+            "R": 5.0,
+            "T": 0.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 52.0,
+              "current_bbox_edge": 56.7393750561896,
+              "bbox_extreme_modules": [
+                4,
+                5,
+                7,
+                14,
+                16,
+                23,
+                24,
+                29
+              ],
+              "modules_beyond_target": [
+                4,
+                5,
+                7,
+                14,
+                16,
+                23,
+                24,
+                29
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 209,
+          "module": 16,
+          "type": "LT",
+          "failed": [
+            "T"
+          ],
+          "gaps": {
+            "L": 0.0,
+            "T": 1.0
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [
+            "T"
+          ],
+          "hard_conflict_details": [
+            {
+              "side": "T",
+              "anchor_edge": 202.0,
+              "reference_edge": 203.0,
+              "hard_preplaced_conflicts": [
+                37
+              ],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 1.0
+            }
+          ],
+          "reference_module_position": [
+            0.0,
+            177.0,
+            18.0,
+            25.0
+          ],
+          "public_module_spec": [
+            0.0,
+            177.0,
+            18.0,
+            25.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "T"
+          ],
+          "reference_required_gaps": {
+            "L": 0.0,
+            "T": 1.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "T",
+              "boundary_target": 202.0,
+              "current_bbox_edge": 203.0,
+              "bbox_extreme_modules": [
+                33,
+                37,
+                38,
+                62
+              ],
+              "modules_beyond_target": [
+                33,
+                37,
+                38,
+                62
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                1,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 215,
+          "module": 42,
+          "type": "RT",
+          "failed": [
+            "R",
+            "T"
+          ],
+          "gaps": {
+            "R": 0.6436252209823579,
+            "T": 0.6436252016428625
+          },
+          "fixed": 1,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 93.0,
+              "reference_edge": 93.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            },
+            {
+              "side": "T",
+              "anchor_edge": 196.0,
+              "reference_edge": 198.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            }
+          ],
+          "reference_module_position": [
+            82.0,
+            183.0,
+            11.0,
+            13.0
+          ],
+          "public_module_spec": [
+            82.0,
+            183.0,
+            11.0,
+            13.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "T"
+          ],
+          "reference_required_gaps": {
+            "R": 0.0,
+            "T": 2.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 93.0,
+              "current_bbox_edge": 93.64362522098236,
+              "bbox_extreme_modules": [
+                8,
+                10,
+                20,
+                22,
+                25,
+                34,
+                41,
+                49,
+                53,
+                62
+              ],
+              "modules_beyond_target": [
+                8,
+                10,
+                20,
+                22,
+                25,
+                34,
+                41,
+                49,
+                53,
+                62
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "failed_side": "T",
+              "boundary_target": 196.0,
+              "current_bbox_edge": 196.64362520164286,
+              "bbox_extreme_modules": [
+                3,
+                43,
+                52,
+                63
+              ],
+              "modules_beyond_target": [
+                3,
+                43,
+                52,
+                63
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 218,
+          "module": 22,
+          "type": "RT",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 1.0000000038271537,
+            "T": 0.0
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [
+            "R"
+          ],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 106.0,
+              "reference_edge": 107.0,
+              "hard_preplaced_conflicts": [
+                50
+              ],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 1.0
+            }
+          ],
+          "reference_module_position": [
+            87.0,
+            174.0,
+            19.0,
+            11.0
+          ],
+          "public_module_spec": [
+            87.0,
+            174.0,
+            19.0,
+            11.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R"
+          ],
+          "reference_required_gaps": {
+            "R": 1.0,
+            "T": 0.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 106.0,
+              "current_bbox_edge": 107.00000000382715,
+              "bbox_extreme_modules": [
+                3,
+                12,
+                27,
+                28,
+                45,
+                46,
+                47,
+                50,
+                52
+              ],
+              "modules_beyond_target": [
+                3,
+                12,
+                27,
+                28,
+                32,
+                45,
+                46,
+                47,
+                50,
+                52
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 228,
+          "module": 67,
+          "type": "T",
+          "failed": [
+            "T"
+          ],
+          "gaps": {
+            "T": 0.4427695926569868
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [],
+          "hard_conflict_details": [
+            {
+              "side": "T",
+              "anchor_edge": 216.0,
+              "reference_edge": 220.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            }
+          ],
+          "reference_module_position": [
+            23.0,
+            207.0,
+            6.0,
+            9.0
+          ],
+          "public_module_spec": [
+            23.0,
+            207.0,
+            6.0,
+            9.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "T"
+          ],
+          "reference_required_gaps": {
+            "T": 4.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "T",
+              "boundary_target": 216.0,
+              "current_bbox_edge": 216.442769592657,
+              "bbox_extreme_modules": [
+                6,
+                23,
+                36,
+                40,
+                71
+              ],
+              "modules_beyond_target": [
+                6,
+                23,
+                36,
+                40,
+                71
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 261,
+          "module": 12,
+          "type": "R",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 0.025298660446424037
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 104.0,
+              "reference_edge": 104.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            }
+          ],
+          "reference_module_position": [
+            91.0,
+            24.0,
+            13.0,
+            29.0
+          ],
+          "public_module_spec": [
+            91.0,
+            24.0,
+            13.0,
+            29.0
+          ],
+          "reference_also_fails_same_module": false,
+          "reference_failed_sides": [],
+          "reference_required_gaps": {
+            "R": 0.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 104.0,
+              "current_bbox_edge": 104.02529866044642,
+              "bbox_extreme_modules": [
+                1,
+                6,
+                11,
+                18,
+                19,
+                28
+              ],
+              "modules_beyond_target": [
+                1,
+                6,
+                11,
+                18,
+                19,
+                28
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 264,
+          "module": 7,
+          "type": "R",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 12.52499194185657
+          },
+          "fixed": 0,
+          "preplaced": 0,
+          "unavoidable_failed_sides_from_public_hard_constraints": [],
+          "hard_conflict_details": [],
+          "reference_module_position": [
+            76.0,
+            49.0,
+            12.0,
+            5.0
+          ],
+          "public_module_spec": [
+            -1.0,
+            -1.0,
+            -1.0,
+            -1.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R"
+          ],
+          "reference_required_gaps": {
+            "R": 3.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 81.48827621847158,
+              "current_bbox_edge": 94.01326816032815,
+              "bbox_extreme_modules": [
+                2,
+                8,
+                24,
+                35
+              ],
+              "modules_beyond_target": [
+                2,
+                8,
+                24,
+                35
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 283,
+          "module": 57,
+          "type": "RB",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 1.0,
+            "B": 0.0
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [
+            "R"
+          ],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 106.0,
+              "reference_edge": 107.0,
+              "hard_preplaced_conflicts": [
+                82
+              ],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 1.0
+            }
+          ],
+          "reference_module_position": [
+            84.0,
+            0.0,
+            22.0,
+            18.0
+          ],
+          "public_module_spec": [
+            84.0,
+            0.0,
+            22.0,
+            18.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R"
+          ],
+          "reference_required_gaps": {
+            "R": 1.0,
+            "B": 0.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 106.0,
+              "current_bbox_edge": 107.0,
+              "bbox_extreme_modules": [
+                4,
+                7,
+                10,
+                12,
+                20,
+                31,
+                41,
+                43,
+                48,
+                59,
+                69,
+                74,
+                82
+              ],
+              "modules_beyond_target": [
+                4,
+                7,
+                10,
+                12,
+                20,
+                31,
+                41,
+                43,
+                48,
+                59,
+                69,
+                74,
+                82
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "index": 300,
+          "module": 92,
+          "type": "R",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 2.0
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [
+            "R"
+          ],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 105.0,
+              "reference_edge": 107.0,
+              "hard_preplaced_conflicts": [
+                15
+              ],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 2.0
+            }
+          ],
+          "reference_module_position": [
+            71.0,
+            112.0,
+            34.0,
+            24.0
+          ],
+          "public_module_spec": [
+            71.0,
+            112.0,
+            34.0,
+            24.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R"
+          ],
+          "reference_required_gaps": {
+            "R": 2.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 105.0,
+              "current_bbox_edge": 107.0,
+              "bbox_extreme_modules": [
+                7,
+                9,
+                11,
+                13,
+                15,
+                19,
+                26,
+                27,
+                47,
+                50,
+                53,
+                58,
+                69,
+                84,
+                96
+              ],
+              "modules_beyond_target": [
+                7,
+                9,
+                11,
+                13,
+                15,
+                19,
+                26,
+                27,
+                47,
+                50,
+                53,
+                58,
+                69,
+                84,
+                96
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 342,
+          "module": 42,
+          "type": "RB",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 2.0,
+            "B": 0.0
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [
+            "R"
+          ],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 98.0,
+              "reference_edge": 100.0,
+              "hard_preplaced_conflicts": [
+                2
+              ],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 2.0
+            }
+          ],
+          "reference_module_position": [
+            77.0,
+            0.0,
+            21.0,
+            20.0
+          ],
+          "public_module_spec": [
+            77.0,
+            0.0,
+            21.0,
+            20.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R"
+          ],
+          "reference_required_gaps": {
+            "R": 2.0,
+            "B": 0.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 98.0,
+              "current_bbox_edge": 100.0,
+              "bbox_extreme_modules": [
+                0,
+                2,
+                3,
+                12,
+                29,
+                30,
+                33,
+                37,
+                53,
+                55,
+                56,
+                62,
+                64
+              ],
+              "modules_beyond_target": [
+                0,
+                2,
+                3,
+                9,
+                12,
+                29,
+                30,
+                33,
+                37,
+                53,
+                55,
+                56,
+                62,
+                64
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 357,
+          "module": 52,
+          "type": "RB",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 1.5098919025622308,
+            "B": 0.0
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 112.0,
+              "reference_edge": 116.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            }
+          ],
+          "reference_module_position": [
+            99.0,
+            0.0,
+            13.0,
+            6.0
+          ],
+          "public_module_spec": [
+            99.0,
+            0.0,
+            13.0,
+            6.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R"
+          ],
+          "reference_required_gaps": {
+            "R": 4.0,
+            "B": 0.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 112.0,
+              "current_bbox_edge": 113.50989190256223,
+              "bbox_extreme_modules": [
+                17,
+                32,
+                40,
+                44,
+                51,
+                55,
+                56,
+                58,
+                76
+              ],
+              "modules_beyond_target": [
+                17,
+                32,
+                40,
+                44,
+                51,
+                55,
+                56,
+                58,
+                76
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 368,
+          "module": 75,
+          "type": "R",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 0.10346210213901941
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 121.0,
+              "reference_edge": 122.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            }
+          ],
+          "reference_module_position": [
+            98.0,
+            170.0,
+            23.0,
+            23.0
+          ],
+          "public_module_spec": [
+            98.0,
+            170.0,
+            23.0,
+            23.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R"
+          ],
+          "reference_required_gaps": {
+            "R": 1.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 121.0,
+              "current_bbox_edge": 121.10346210213902,
+              "bbox_extreme_modules": [
+                3,
+                9,
+                14,
+                17,
+                21,
+                23,
+                26,
+                43,
+                52,
+                58,
+                67,
+                81,
+                83,
+                86
+              ],
+              "modules_beyond_target": [
+                3,
+                9,
+                14,
+                17,
+                21,
+                23,
+                26,
+                43,
+                52,
+                58,
+                67,
+                81,
+                83,
+                86
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 393,
+          "module": 22,
+          "type": "R",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 1.0
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [
+            "R"
+          ],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 94.0,
+              "reference_edge": 95.0,
+              "hard_preplaced_conflicts": [
+                81
+              ],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 1.0
+            }
+          ],
+          "reference_module_position": [
+            76.0,
+            15.0,
+            18.0,
+            10.0
+          ],
+          "public_module_spec": [
+            76.0,
+            15.0,
+            18.0,
+            10.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R"
+          ],
+          "reference_required_gaps": {
+            "R": 1.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 94.0,
+              "current_bbox_edge": 95.0,
+              "bbox_extreme_modules": [
+                1,
+                8,
+                19,
+                25,
+                30,
+                36,
+                39,
+                55,
+                59,
+                62,
+                64,
+                81,
+                83
+              ],
+              "modules_beyond_target": [
+                1,
+                8,
+                19,
+                25,
+                30,
+                36,
+                39,
+                55,
+                59,
+                62,
+                64,
+                81,
+                83
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 409,
+          "module": 25,
+          "type": "R",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 16.70753195504949
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 103.0,
+              "reference_edge": 103.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            }
+          ],
+          "reference_module_position": [
+            90.0,
+            36.0,
+            13.0,
+            9.0
+          ],
+          "public_module_spec": [
+            90.0,
+            36.0,
+            13.0,
+            9.0
+          ],
+          "reference_also_fails_same_module": false,
+          "reference_failed_sides": [],
+          "reference_required_gaps": {
+            "R": 0.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 103.0,
+              "current_bbox_edge": 119.70753195504949,
+              "bbox_extreme_modules": [
+                9,
+                31,
+                38,
+                46,
+                50,
+                59,
+                63,
+                93,
+                94,
+                96,
+                98,
+                102,
+                103,
+                104
+              ],
+              "modules_beyond_target": [
+                9,
+                31,
+                37,
+                38,
+                46,
+                50,
+                59,
+                60,
+                62,
+                63,
+                66,
+                68,
+                93,
+                94,
+                96,
+                98,
+                102,
+                103,
+                104
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 458,
+          "module": 40,
+          "type": "RT",
+          "failed": [
+            "R",
+            "T"
+          ],
+          "gaps": {
+            "R": 0.3318273953773314,
+            "T": 0.33182738086907193
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 113.0,
+              "reference_edge": 115.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            },
+            {
+              "side": "T",
+              "anchor_edge": 306.0,
+              "reference_edge": 306.0,
+              "hard_preplaced_conflicts": [],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 0.0
+            }
+          ],
+          "reference_module_position": [
+            88.0,
+            279.0,
+            25.0,
+            27.0
+          ],
+          "public_module_spec": [
+            88.0,
+            279.0,
+            25.0,
+            27.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R"
+          ],
+          "reference_required_gaps": {
+            "R": 2.0,
+            "T": 0.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 113.0,
+              "current_bbox_edge": 113.33182739537733,
+              "bbox_extreme_modules": [
+                0,
+                10,
+                14,
+                21,
+                23,
+                31,
+                37,
+                49,
+                54,
+                64,
+                82,
+                85,
+                86,
+                89
+              ],
+              "modules_beyond_target": [
+                0,
+                10,
+                14,
+                21,
+                23,
+                31,
+                37,
+                49,
+                54,
+                64,
+                82,
+                85,
+                86,
+                89
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "failed_side": "T",
+              "boundary_target": 306.0,
+              "current_bbox_edge": 306.3318273808691,
+              "bbox_extreme_modules": [
+                8,
+                18,
+                22,
+                104
+              ],
+              "modules_beyond_target": [
+                8,
+                18,
+                22,
+                104
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "index": 499,
+          "module": 21,
+          "type": "RB",
+          "failed": [
+            "R"
+          ],
+          "gaps": {
+            "R": 1.0,
+            "B": 0.0
+          },
+          "fixed": 0,
+          "preplaced": 1,
+          "unavoidable_failed_sides_from_public_hard_constraints": [
+            "R"
+          ],
+          "hard_conflict_details": [
+            {
+              "side": "R",
+              "anchor_edge": 106.0,
+              "reference_edge": 107.0,
+              "hard_preplaced_conflicts": [
+                82
+              ],
+              "hard_dimension_conflicts": [],
+              "minimum_forced_gap": 1.0
+            }
+          ],
+          "reference_module_position": [
+            86.0,
+            0.0,
+            20.0,
+            31.0
+          ],
+          "public_module_spec": [
+            86.0,
+            0.0,
+            20.0,
+            31.0
+          ],
+          "reference_also_fails_same_module": true,
+          "reference_failed_sides": [
+            "R"
+          ],
+          "reference_required_gaps": {
+            "R": 1.0,
+            "B": 0.0
+          },
+          "protrusions": [
+            {
+              "failed_side": "R",
+              "boundary_target": 106.0,
+              "current_bbox_edge": 107.0,
+              "bbox_extreme_modules": [
+                2,
+                9,
+                16,
+                18,
+                27,
+                34,
+                48,
+                59,
+                74,
+                82,
+                85,
+                101,
+                107,
+                112
+              ],
+              "modules_beyond_target": [
+                2,
+                9,
+                16,
+                18,
+                27,
+                34,
+                48,
+                59,
+                74,
+                82,
+                85,
+                101,
+                107,
+                112
+              ],
+              "extreme_modules_preplaced": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "unavoidable_boundary_violation_modules": 12,
+      "all_failed_sides_unavoidable_modules": 11,
+      "types_with_denominators": {
+        "RT": {
+          "violations": 9,
+          "total_constraints": 499,
+          "rate": 0.018036072144288578
+        },
+        "L": {
+          "violations": 2,
+          "total_constraints": 4573,
+          "rate": 0.0004373496610540127
+        },
+        "R": {
+          "violations": 10,
+          "total_constraints": 3620,
+          "rate": 0.0027624309392265192
+        },
+        "RB": {
+          "violations": 6,
+          "total_constraints": 499,
+          "rate": 0.012024048096192385
+        },
+        "LT": {
+          "violations": 1,
+          "total_constraints": 500,
+          "rate": 0.002
+        },
+        "T": {
+          "violations": 1,
+          "total_constraints": 1291,
+          "rate": 0.000774593338497289
+        }
+      },
+      "preplaced_violation_modules": 26,
+      "reference_also_violates_modules": 22,
+      "all_positive_failed_gaps": [
+        0.1184600386332022,
+        1.0,
+        4.0,
+        11.604932718531927,
+        1.3703269537945744,
+        0.11571815170464106,
+        1.0000000002037268,
+        4.067006965808105,
+        1.0000000006402843,
+        2.7310403158917325,
+        1.0,
+        1.0712544955167687,
+        0.07125449551676866,
+        0.07125449436716735,
+        3.0,
+        0.2401275375741534,
+        0.24012753574061207,
+        4.739375056189601,
+        1.0,
+        0.6436252209823579,
+        0.6436252016428625,
+        1.0000000038271537,
+        0.4427695926569868,
+        0.025298660446424037,
+        12.52499194185657,
+        1.0,
+        2.0,
+        2.0,
+        1.5098919025622308,
+        0.10346210213901941,
+        1.0,
+        16.70753195504949,
+        0.3318273953773314,
+        0.33182738086907193,
+        1.0
+      ]
+    }
+  },
+  "definitions": {
+    "TR": "bitmask6 = R2 | T4; RT in machine records means the same corner",
+    "boundary": "Count one block if any requested edge fails abs(gap)<1e-6",
+    "unavoidable": "For a P-constrained offending block, another immutable P endpoint extends farther, or a locked width/height cannot fit its upper limit with nonnegative coordinates; sufficient lower-bound proof only",
+    "attribution": "An unavoidable soft violation is not proof of a postprocessor defect. Remaining failures need candidate-level analysis; no claim of repairability from this bound alone"
+  },
+  "training": false,
+  "solver_calls": 0,
+  "Q_calls": 0,
+  "test_read": false
+}

@@ -1,0 +1,67 @@
+{
+  "dataset_report_sha256": "3a79fd9eb2636578fa4df876ccac51699eab04cd59179027488aa7d8c334928a",
+  "payload_checksums_sha256": "f8eeb86da003c9901b73541eb13cc8e16cad9cd963dcf74a0edddf4a1a5abe54",
+  "required_cache_key": "a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148",
+  "role_cache_root": "experiments/E149_role_initial/role_cache_v1",
+  "cache_build_workers": 4,
+  "preflight_train_indices": [
+    10841,
+    12651,
+    6417,
+    4280,
+    17946
+  ],
+  "revision": "E152.s2_local_repair.v1.seed0",
+  "authorization": "2026-11-18 user approved A/B S2-only fine-tuning and launch. L8 drift coefficient 0.2 and exactly five epochs per arm.",
+  "seed": 0,
+  "parent": {
+    "checkpoint": "experiments/E151_frozen_role_initial/runs/e151_frozen_role_initial_seed0/checkpoints/best.pt",
+    "checkpoint_sha256": "06855b8dd5bd331026cd67d09cf3cc2d50a8741243b17a7b5fcd8678495b989d",
+    "best_epoch": 45
+  },
+  "source_dataset": "random_reference16k.v1",
+  "subset_registry_sha256": "ef09a04d37540cc3e8f60cc25955278aee3c0b960807f0ad7c0ba9b0cec396ea",
+  "train_count": 16000,
+  "train_monitor_count": 500,
+  "dev_monitor_count": 500,
+  "batch_size": 64,
+  "steps_per_epoch": 250,
+  "maximum_epochs": 5,
+  "maximum_steps": 1250,
+  "maximum_seconds": 7200,
+  "parameters": 681141,
+  "trainable_parameters": 157406,
+  "optimizer": "Fresh AdamW on unit[2] only; weight_decay .0003, clip norm 1, 0.5% per-trainable-module displacement guard",
+  "numerical_guards": "Same E151 finite, mean/per-case Loss <1000, unclipped norm<10000 before Adam; no skipped batches",
+  "lr_first": 0.0001,
+  "lr_last": 2e-05,
+  "lr_schedule": "Matched cosine indexed by accepted update 0..1249",
+  "selection": "Fixed dev500 own-Loss arithmetic mean, epoch0..5; paired epoch5 diagnostic; unique best before Q",
+  "weights": {
+    "e152_s2_ref": 1.0,
+    "e152_s2_no_ref": 0.0
+  },
+  "drift_weight": 0.2,
+  "center_tolerance": 0.05,
+  "ratio_tolerance": 0.1,
+  "ratio_weight": 0.25,
+  "huber_beta": 0.1,
+  "overlap_threshold": 0.01,
+  "overlap_drift_weight": 0.25,
+  "phase": "Both arms load identical E151 best45; frozen prefix eval; actual S2x2; objective at true L12 only",
+  "augmentation": "Original axis exchange from public condition, deterministic by seed/epoch/subset member",
+  "validation_arms": [
+    "e151_best45",
+    "e152_s2_ref",
+    "e152_s2_no_ref"
+  ],
+  "postprocessor": "Frozen local copy of E148 E98.depth_budget.v1, original dev500, no MIB",
+  "automatic_retry": false,
+  "test_read": false,
+  "stage_diagnostics": "L8/L10/L12 collision, displacement and retained contacts plus fixed lowest-overlap quartile and Q",
+  "budgets": "Five complete epochs per arm; 2-hour per-arm fail-safe; STOP or error stops queue",
+  "paired_order": [
+    "e152_s2_ref",
+    "e152_s2_no_ref"
+  ]
+}

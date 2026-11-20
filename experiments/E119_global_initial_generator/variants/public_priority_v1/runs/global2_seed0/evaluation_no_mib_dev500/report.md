@@ -1,0 +1,36 @@
+# E119 public_priority_v1 global2：固定dev500验证
+
+唯一own-Loss best在Q评价前冻结；原始面积/无MIB，全模块真实草稿。
+
+```json
+{
+  "status": "complete",
+  "arm": "global2",
+  "count": 500,
+  "checkpoint_sha256": "8f27eadefd3b6243cec90de8cbd83446e0ef49b23f358f5db6ce31c813e96312",
+  "best_epoch": 56,
+  "parameters": 712275,
+  "weighted_Q": 1.0428392722630977,
+  "mean_Q": 1.0244506846944046,
+  "mixed_Q": 1.0336449784787511,
+  "hard_legal": 500,
+  "raw_hard_legal": 0,
+  "fallbacks": 0,
+  "mean_complete_seconds": 0.2072965317998023,
+  "p95_complete_seconds": 0.5322002850072749,
+  "max_complete_seconds": 1.861311000000569,
+  "over250ms": 137,
+  "max_Q": 3.542685296251243,
+  "p95_Q": 1.0909844010331073,
+  "raw_repeated_coverage": 0.0576320525218092,
+  "raw_bbox_over_area": 1.0272713422326343,
+  "common_final_dev_loss": 0.3382001991271973,
+  "own_selection_loss": 0.36780083295702937,
+  "scoring_policy": "local research Q without MIB, original areas/specs; not official contest score",
+  "training_seconds": 7592.045184699993,
+  "training_epochs": 59,
+  "elapsed_seconds": 228.66385049998644,
+  "test_read": false,
+  "selection_frozen_before_Q": true
+}
+```

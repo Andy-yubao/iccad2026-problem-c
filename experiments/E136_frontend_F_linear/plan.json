@@ -1,0 +1,138 @@
+{
+  "experiment": "E136 E119 D: S0 frontend F with linear auxiliary weights",
+  "revision": "E136.frontend_F_linear.v1.seed0",
+  "status": "registered_for_authorized_launch",
+  "authorization": "2026-11-14 user requested S0=F and linear increasing weights; prepare then background start; retain automatic postprocessing and checkpoint/resume",
+  "architecture": {
+    "e119": "Unchanged E119 two-global + 12 geometry blocks; return existing S0 before S1"
+  },
+  "parameters": {
+    "e119": 712275
+  },
+  "trainable_parameters": {
+    "e119": 712275
+  },
+  "arms": {
+    "e119_D": {
+      "layer_weights": {
+        "0": 0.03333333333333333,
+        "3": 0.044444444444444446,
+        "6": 0.05555555555555555,
+        "9": 0.06666666666666667,
+        "12": 0.8
+      },
+      "s0_loss": "F: center_tolerance + .05*free_shape + public_shape + public_preplaced_position",
+      "linear_auxiliary_ratio": [
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  },
+  "seed": 0,
+  "batch_size": 32,
+  "precision": "FP32; deterministic; TF32 disabled",
+  "threads": 4,
+  "train_count": 36000,
+  "train_monitor_count": 500,
+  "dev_monitor_count": 500,
+  "dataset": "random_reference40k.v1; original public areas; test sealed",
+  "data_migration": "Same E134 frozen train36000/train-monitor500/dev500, compatible existing cache only",
+  "no_mib": true,
+  "predict_all_modules": true,
+  "hard_specification_enforcement": "postprocessing only",
+  "initialization": "scratch seed0; exact E135/E134 E119 initialization; no warm start from C or historical checkpoint",
+  "optimizer": "AdamW weight_decay.0003, global gradient clip1, joint per-module relative update bound.005",
+  "lr_levels": [
+    0.001,
+    0.00025,
+    0.0001,
+    5e-05
+  ],
+  "protection_epochs": 14,
+  "scheduler_baseline_epoch": 15,
+  "patience": 3,
+  "minimum_meaningful_absolute": 1e-05,
+  "minimum_meaningful_relative": 0.001,
+  "best_minimum_absolute_improvement": 1e-05,
+  "minimum_lowest_lr_complete_epochs": 2,
+  "maximum_seconds": 14400,
+  "maximum_epochs": 200,
+  "budget": "Per arm4h/200epoch caps; report seen/steps/epochs/time separately, not equal training work",
+  "selection": "Each fixed own-Loss dev500 arithmetic mean for best/LR/earlystop; no Q selection",
+  "resume": "Ctrl+C pauses at accepted update/case boundary. Restore model/Adam/RNG/permutation/cursor/seen/LR/earlystop/projection; cumulative budget never reset. Evaluation resumes committed case prefix.",
+  "numerical_guards": "Nonfinite or case/mean Loss>=1000 or unclipped grad norm>=10000: reject before Adam; no skip/retry",
+  "augmentation": "P=.5 axis swap; flags indexed by seed/epoch/member, independent of dropout",
+  "engine": "CUDA graph forward/loss/backward/clip; original AdamW and captured module step protection",
+  "stop": "Experiment STOP, per-run STOP, SIGINT; save accepted cursor and exit, no next arm",
+  "preflight_train_indices": [
+    10841,
+    12651,
+    6417,
+    4280,
+    17946
+  ],
+  "preflight": "Only the registered five cached train cases: exact F/weights/init/input and one guarded disposable update. Resume/queue/evaluation proofs inherited from passed E135 after identity-normalized engine source equality; no repeated interruption simulation or real dev/test/postprocessing during preparation",
+  "comparison": "Complete the S0 full/F x equal/linear comparison using frozen E135 A/B/C without retraining them; include saved E134 stride3",
+  "reporting": "new own Loss and original_final_total diagnostic; all quality/latency/fallback/hard checks reported independently",
+  "terminal_evaluation": "automatic sole own-Loss best, fixed dev500, original E98.depth_budget.v1, no MIB Q; no test or plots",
+  "historical_standards": "E74/E105/A numbers are historical context until matched new task evaluation",
+  "test_read": false,
+  "postprocessing_calls": 0,
+  "automatic_queue": true,
+  "dataset_report_sha256": "3a79fd9eb2636578fa4df876ccac51699eab04cd59179027488aa7d8c334928a",
+  "payload_checksums_sha256": "f8eeb86da003c9901b73541eb13cc8e16cad9cd963dcf74a0edddf4a1a5abe54",
+  "queue": "single D train -> freeze unique own-Loss best -> automatic original dev500 postprocessing -> compare with saved E135 A/B/C and E134 stride3",
+  "cache_build_workers": 4,
+  "required_cache_key": "a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148",
+  "cache_policy": "Reuse complete existing shared train36000/dev500 cache, no regenerated samples or repeated static preprocessing",
+  "loss": "S0 uses unchanged E135 C frontend F; S3/S6/S9/S12 use unchanged full public-priority-v1; exact E135 B layer weights",
+  "architecture_parent": "E135 E119, unchanged two-global plus twelve refinement layers and shared head",
+  "new_candidates": 1,
+  "automatic_retry": false,
+  "frontend_F": {
+    "center_tolerance_per_axis_sqrt_area": 0.25,
+    "huber_beta": 0.1,
+    "center_subset": "valid and not P; per-axis mean over subset",
+    "free_shape_subset": "valid and not (F or P)",
+    "free_shape_weight": 0.05,
+    "public_shape_weight": 1.0,
+    "public_preplaced_position_weight": 1.0,
+    "empty_subset": 0.0,
+    "no_geometric_overwrite": true
+  },
+  "baseline": {
+    "experiment": "E134_supervision_interval",
+    "arm": "e119_stride3",
+    "best_epoch": 63,
+    "checkpoint_sha256": "1f69a681713255a7adfca09357d70065ad7dff4d62f1a6294a7c233e30ad1df1",
+    "rerun": false
+  },
+  "comparison_controls": [
+    {
+      "label": "E134_stride3",
+      "result": "experiments/E134_supervision_interval/runs/e119_stride3_seed0/evaluation_no_mib_dev500/results.json",
+      "results_sha256": "56bc475d5ae62d6faf69ad0d215cc028da2e7468d5c6df1c4355e718f5075e56",
+      "checkpoint_sha256": "1f69a681713255a7adfca09357d70065ad7dff4d62f1a6294a7c233e30ad1df1"
+    },
+    {
+      "label": "E135_A",
+      "result": "experiments/E135_initial_supervision/runs/e119_A_seed0/evaluation_no_mib_dev500/results.json",
+      "results_sha256": "a8d1cfd95434b3f6a2408ba1e0da27fb372d7e8c8101dd7e390b654eac9e8ef7",
+      "checkpoint_sha256": "8937d5a1f882605158bff5654d447ec2990211bc5324dd44b283ae35b198bf4c"
+    },
+    {
+      "label": "E135_B",
+      "result": "experiments/E135_initial_supervision/runs/e119_B_seed0/evaluation_no_mib_dev500/results.json",
+      "results_sha256": "125a1b5030cbb58d35330b06a3fb0d203b3a00e7f8aa2d0ca044817a64c6bd18",
+      "checkpoint_sha256": "4190a7e828bed4d831dea48285ea14ab674d86017af6db2e4c5f669c8a0dd850"
+    },
+    {
+      "label": "E135_C",
+      "result": "experiments/E135_initial_supervision/runs/e119_C_seed0/evaluation_no_mib_dev500/results.json",
+      "results_sha256": "346e71fc37d47a6d5a1646d1fd70542246593baa8fe232a13efddc9f4acbb12a",
+      "checkpoint_sha256": "9c05fb6e1b1e00a3312683d73849b26565d8888678b2bb9ece813077d6dcc56c"
+    }
+  ]
+}

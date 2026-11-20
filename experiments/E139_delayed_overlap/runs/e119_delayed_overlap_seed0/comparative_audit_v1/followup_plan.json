@@ -1,0 +1,9 @@
+{
+  "reason": "Primary audit shows weak net Q gain, opposite results for grouping score and geometric bottlenecks, only 7 vs 2 complete exchanges. Quantify tail dependence and conservative margin sensitivity without changing primary metrics.",
+  "tail_sensitivity": "Post hoc drop dev481, the largest favorable mixed-Q contributor; also drop dev481 and dev397 (top two). Renormalize original mean and exp(N/12) weighted Q on remaining members. No checkpoint/step/model selection.",
+  "exchange_sensitivity": "Repeat complete exchanges after S3 at gaps/crossing margins .005/.02/.05 typical side; count events/cases only, retain primary .02.",
+  "cohort_uncertainty": "Source-shard bootstrap pooled repaired-edge fraction differences within each fixed cohort; primary 1170 cohort and symmetric E139 own1936 cohort.",
+  "training": false,
+  "postprocessing_calls": 0,
+  "test_read": false
+}

@@ -1,0 +1,1 @@
+2026-11-08 用户授权后台后处理评价：E114 staged best48 → E115 first9 best50，原 random40k 固定 dev500，同 E98.depth_budget.v1 复制后处理、原面积/规格、忽略 MIB、本地研究 Q 与原硬检查。只评价唯一 own-Loss-best，不读 test、不训练。已完成 terminal/dense 结果只读复用。错误或用户停止不推进、不自动重试。队列状态位于 experiments/E115_first_head_supervision/evaluation/queue_state.json；STOP 位于该 evaluation 目录或各 run/evaluation_no_mib_dev500。

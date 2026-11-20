@@ -1,0 +1,7 @@
+{
+  "reason": "Primary audit found only two conservative complete side exchanges, nontrivial barrier clearance, and deteriorated final Loss under all-unsupervised feedback holds. Add transparent sensitivity checks and isolate only the first rebound readout in each window.",
+  "passage_sensitivity": "Repeat multi-step separated-side exchange detection at normalized gap/crossing margins 0.005,0.02,0.05; retain center-crossing step as well as exchange-completion step. Also report center-order crossings during orthogonal overlap without requiring initial and final full separation, and near-tie thresholds 0.02/0.05/0.10.",
+  "feedback_rebound_only": "Hold only S4, only S7, only S10, or all S4/S7/S10 feedback states. Keep their hidden-state evolution and raw outputs. Resume feedback acceptance at S5/S8/S11. Fixed layer IDs, no reference-dependent gating or routing.",
+  "geometry_controls": "Verify exact maximum empty rectangle calculation against brute-force edge enumeration on deterministic small rectangle sets, and verify zero occupied-area intersection on randomly selected actual layouts. Report reference center-line barrier incidence with the same geometric thresholds.",
+  "limitations": "Follow-up definitions recorded after viewing primary results; no additional training, postprocessing or Q. Crossings remain discrete-output proxies; hold feedback changes both state embedding and attention geometry."
+}

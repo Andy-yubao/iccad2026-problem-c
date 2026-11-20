@@ -1,0 +1,23 @@
+{
+  "status": "failed",
+  "formal_training_updates": 0,
+  "test_payloads": 0,
+  "dev_payloads": 0,
+  "stages": {
+    "e157_s1": {
+      "parameters": 676993,
+      "trainable_parameters": 279958,
+      "frozen_prefix_exact": true,
+      "registered_parent_inference_exact": true,
+      "no_reference_or_bottleneck": true,
+      "absolute_overlap_full": true,
+      "loss_sum": true,
+      "axis_transpose": true,
+      "all_new_branches_have_gradients": true,
+      "GPU64_tail32": true,
+      "serialized_next_update_bitwise": true
+    }
+  },
+  "error": "AssertionError()",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E157_sequential_s1_s2\\preflight.py\", line 69, in main\n    zero=drift_terms(out[8],within,batch);assert not (zero[0]+zero[1]).any()\nAssertionError\n"
+}

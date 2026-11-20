@@ -1,0 +1,67 @@
+{
+  "task": "E102.semantic_masked_image.v2",
+  "date": "2026-11-06",
+  "status": "redesign_implementation_and_bounded_learning_check_only",
+  "formal_training_authorized": false,
+  "old_run": "20261106_rgb512_canvas_v2_seed0 remains user-paused; both STOP files preserved",
+  "objective": "Original-reference picture similarity, module identity and visible edges; no geometry extraction, repairs or Q",
+  "members": "Unchanged reference_workset_v5 train16k/dev2k/test2k; train/dev monitoring500; test sealed",
+  "area_transform": "none",
+  "reference_input_rule": "Reference labels are supervision and the training-only corrupted denoising state. Public conditioning never contains reference geometry; generation starts entirely masked and takes public inputs only.",
+  "representation": "512x512 discrete image: background0, module i uses class i+1; direct palette display only. Target comes from original rectangle pixel-center rasterization, never reverse-engineered from RGB.",
+  "canvas": "Preserve registered public canvas_v2, kappa1.5 margin0.05 including public terminal and preplaced extents; never fit by reference",
+  "architecture": {
+    "widths": [
+      48,
+      64,
+      128,
+      192,
+      256
+    ],
+    "dim": 192,
+    "module_layers": 6,
+    "descriptor": 32
+  },
+  "architecture_description": "Conditional residual U-Net, full-resolution image features, skips, module cross-attention at128/64/32 and decoder128/64, dynamic per-module pixel classifiers at512. Global pooled conditioning is auxiliary.",
+  "generation": "MaskGIT-inspired iterative masked semantic-image generation; 16 rounds, cosine mask schedule, stochastic proposals fading to final argmax. Not a claim to implement DDPM or full D3PM variational training.",
+  "corruption": "Cosine random hidden-pixel ratio, minimum0.05, plus25% fully-masked training examples",
+  "loss": "Fixed per-image L=class-balanced masked CE + module-mean soft Dice +0.2 balanced pixel-boundary BCE. CE=mean across visible foreground module classes +0.25 background mean. No RGB-MSE objective, no geometric or MIB penalties.",
+  "selection": "Same fixed composite loss for backward/monitor/best/LR/early stop. Fixed member-derived corruption seeds for monitoring; sampling images never select checkpoint/seed.",
+  "formal_proposal": {
+    "initialization": "fresh; do not warm-start RGB weights",
+    "batch": 2,
+    "precision": "FP32",
+    "seed": 0,
+    "lr": 0.0002,
+    "weight_decay": 0.0001,
+    "max_epochs": 100,
+    "max_hours": 8,
+    "launch": "commands only; not launched"
+  },
+  "necessary_learning_check": {
+    "role": "train_monitor500",
+    "members": 1,
+    "selection": "same metadata rule near n=21 used by original five-case check",
+    "resolution": 512,
+    "batch": 1,
+    "steps": 250,
+    "max_seconds": 180,
+    "lr": 0.0003,
+    "evaluation": "fixed all-masked reconstruction before/after, plus public-only16-round generation; no dev or test",
+    "gate": "end all-masked module-mean image IoU>=0.75 and visible recovery of colored module regions; failure does not auto-extend or start formal training",
+    "purpose": "Necessary response to actual flat-loss/gray-image failure; one bounded fit check, not a generalization claim"
+  },
+  "limitations": [
+    "A categorical head prevents gray averaging in display but does not guarantee correct identities or boundaries",
+    "Auxiliary boundary-head accuracy alone cannot establish segmentation boundary accuracy",
+    "A small fit demonstrates fitting capacity only",
+    "Sampling a plausible layout need not reproduce the single paired reference; non-unique inputs remain a limitation",
+    "No classifier-free guidance or best-of-N reference selection",
+    "No guarantee of achieving the desired visual result without observed evidence"
+  ],
+  "sources": [
+    "https://arxiv.org/abs/2202.04200",
+    "https://arxiv.org/abs/2112.01527",
+    "https://arxiv.org/abs/2107.03006"
+  ]
+}

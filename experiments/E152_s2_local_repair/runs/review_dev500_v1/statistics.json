@@ -1,0 +1,263 @@
+{
+  "status": "complete",
+  "scope": "Original fixed dev500; E152 v2 frozen own-Loss best",
+  "models": {
+    "e152_s2_ref": {
+      "best_epoch": 10,
+      "mixed_Q": 1.0087515635304842,
+      "draft": {
+        "count": 500,
+        "hard_legal": 0,
+        "soft_satisfied_cases": 0,
+        "violations": {
+          "grouping_violations": {
+            "total": 2188,
+            "cases": 488,
+            "max": 14
+          },
+          "boundary_violations": {
+            "total": 8087,
+            "cases": 500,
+            "max": 32
+          },
+          "total_soft_violations": {
+            "total": 10275,
+            "cases": 500,
+            "max": 42
+          },
+          "fixed_violations": {
+            "total": 3494,
+            "cases": 500,
+            "max": 17
+          },
+          "preplaced_violations": {
+            "total": 1408,
+            "cases": 500,
+            "max": 10
+          }
+        },
+        "soft_violation_rate_micro": 0.4862524253466471,
+        "mean_per_case_soft_violation_rate": 0.48921828937295014,
+        "bbox_reference_ratio": {
+          "mean": 0.9927199043716596,
+          "p95": 1.002566654339352,
+          "maximum": 1.0191206565557493,
+          "counts_strictly_above": {
+            "1.0": 65,
+            "1.05": 0,
+            "1.1": 0,
+            "1.2": 0
+          },
+          "above1p2_indices": [],
+          "top10_indices": [
+            351,
+            202,
+            315,
+            402,
+            232,
+            430,
+            263,
+            303,
+            220,
+            141
+          ]
+        }
+      },
+      "final": {
+        "count": 500,
+        "hard_legal": 500,
+        "soft_satisfied_cases": 425,
+        "violations": {
+          "grouping_violations": {
+            "total": 65,
+            "cases": 58,
+            "max": 3
+          },
+          "boundary_violations": {
+            "total": 24,
+            "cases": 23,
+            "max": 2
+          },
+          "total_soft_violations": {
+            "total": 89,
+            "cases": 75,
+            "max": 3
+          },
+          "fixed_violations": {
+            "total": 0,
+            "cases": 0,
+            "max": 0
+          },
+          "preplaced_violations": {
+            "total": 0,
+            "cases": 0,
+            "max": 0
+          }
+        },
+        "soft_violation_rate_micro": 0.004211821494486773,
+        "mean_per_case_soft_violation_rate": 0.004379370362981822,
+        "bbox_reference_ratio": {
+          "mean": 0.9871008212256862,
+          "p95": 1.0085511923489,
+          "maximum": 1.1007457688045441,
+          "counts_strictly_above": {
+            "1.0": 54,
+            "1.05": 1,
+            "1.1": 1,
+            "1.2": 0
+          },
+          "above1p2_indices": [],
+          "top10_indices": [
+            43,
+            293,
+            315,
+            90,
+            287,
+            24,
+            402,
+            417,
+            191,
+            268
+          ]
+        }
+      }
+    },
+    "e152_s2_no_ref": {
+      "best_epoch": 8,
+      "mixed_Q": 1.0096917699696992,
+      "draft": {
+        "count": 500,
+        "hard_legal": 0,
+        "soft_satisfied_cases": 0,
+        "violations": {
+          "grouping_violations": {
+            "total": 2596,
+            "cases": 491,
+            "max": 17
+          },
+          "boundary_violations": {
+            "total": 5921,
+            "cases": 500,
+            "max": 21
+          },
+          "total_soft_violations": {
+            "total": 8517,
+            "cases": 500,
+            "max": 37
+          },
+          "fixed_violations": {
+            "total": 3496,
+            "cases": 500,
+            "max": 17
+          },
+          "preplaced_violations": {
+            "total": 1408,
+            "cases": 500,
+            "max": 10
+          }
+        },
+        "soft_violation_rate_micro": 0.4030571198712792,
+        "mean_per_case_soft_violation_rate": 0.4042788823061882,
+        "bbox_reference_ratio": {
+          "mean": 0.9894411009251496,
+          "p95": 1.0022385014617532,
+          "maximum": 1.0248239240103985,
+          "counts_strictly_above": {
+            "1.0": 48,
+            "1.05": 0,
+            "1.1": 0,
+            "1.2": 0
+          },
+          "above1p2_indices": [],
+          "top10_indices": [
+            351,
+            430,
+            315,
+            402,
+            202,
+            220,
+            263,
+            303,
+            141,
+            358
+          ]
+        }
+      },
+      "final": {
+        "count": 500,
+        "hard_legal": 500,
+        "soft_satisfied_cases": 419,
+        "violations": {
+          "grouping_violations": {
+            "total": 69,
+            "cases": 60,
+            "max": 3
+          },
+          "boundary_violations": {
+            "total": 29,
+            "cases": 28,
+            "max": 2
+          },
+          "total_soft_violations": {
+            "total": 98,
+            "cases": 81,
+            "max": 3
+          },
+          "fixed_violations": {
+            "total": 0,
+            "cases": 0,
+            "max": 0
+          },
+          "preplaced_violations": {
+            "total": 0,
+            "cases": 0,
+            "max": 0
+          }
+        },
+        "soft_violation_rate_micro": 0.004637736027637121,
+        "mean_per_case_soft_violation_rate": 0.004936898119299717,
+        "bbox_reference_ratio": {
+          "mean": 0.9862352376017259,
+          "p95": 1.0073664220706982,
+          "maximum": 1.0900887330864653,
+          "counts_strictly_above": {
+            "1.0": 54,
+            "1.05": 2,
+            "1.1": 0,
+            "1.2": 0
+          },
+          "above1p2_indices": [],
+          "top10_indices": [
+            409,
+            43,
+            422,
+            24,
+            417,
+            287,
+            351,
+            315,
+            292,
+            120
+          ]
+        }
+      }
+    }
+  },
+  "paired": {
+    "both_satisfy": 408,
+    "A_satisfies_B_violates": 17,
+    "B_satisfies_A_violates": 11,
+    "both_violate": 64
+  },
+  "definitions": {
+    "soft": "Grouping plus boundary only; original areas, no MIB; F/P remain hard constraints",
+    "grouping": "Sum of polygon union connected components minus one per group; draft overlaps may hide disconnection",
+    "boundary": "One violation per constrained block if any required side/corner fails; not one per edge",
+    "abnormal_area": "Strictly final tight bbox area / actual reference tight bbox area >1.2; saved baseline verified against actual reference for all500"
+  },
+  "source_results_reused": true,
+  "training": false,
+  "postprocessing_calls": 0,
+  "Q_calls": 0,
+  "test_read": false
+}

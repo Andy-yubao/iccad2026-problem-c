@@ -1,0 +1,17 @@
+{
+  "authorization": "2026-11-09 user explicitly requested prepare then direct background startup on36k, automatic fixed500; do not wait for formal training",
+  "arm": "first12",
+  "preflight_sha256": "ddb7e7e372d77aecade559feec2fd43136e8ee15234993f462c850d8a308b8c1",
+  "seed": 0,
+  "maximum_seconds": 14400,
+  "maximum_epochs": 200,
+  "cache_members": {
+    "train": 36000,
+    "dev": 500
+  },
+  "baseline": "E114 staged best48 and existing evaluation reused; never retrained",
+  "scientific_limit": "Only auxiliary supervision moves from layer4 to layer1, same .2 weight, original12-block model",
+  "evaluation": "own Loss-best frozen before Q; original fixeddev500/E98.depth_budget.v1; no MIB local Q; no test or new plots",
+  "failure": "stop queue, no next stage, no automatic retry",
+  "other_STOP_untouched": true
+}

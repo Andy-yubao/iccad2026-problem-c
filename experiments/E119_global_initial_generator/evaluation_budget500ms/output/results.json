@@ -1,0 +1,51 @@
+{
+  "status": "complete",
+  "experiment": "E119",
+  "count": 500,
+  "checkpoint_sha256": "5be725ec4394f696fb07e7d6df08eadd81ab0c6d1de738a410250c1659ed6799",
+  "best_epoch": 55,
+  "own_selection_loss": 0.356844794601202,
+  "common_final_dev_loss": 0.3331280593574047,
+  "weighted_Q": 1.018326616900823,
+  "mean_Q": 1.018038038573141,
+  "mixed_Q": 1.018182327736982,
+  "hard_legal": 500,
+  "fallbacks": 0,
+  "max_Q": 1.462907810035139,
+  "p95_Q": 1.0833258779949653,
+  "improved": 140,
+  "tied": 331,
+  "worsened": 29,
+  "raw_drafts_reused": 500,
+  "exact_draft_matches": 500,
+  "budget_sha256": "c0998bb49577a1925d1c15dc33cf6b748bb33333b54a269b0bbe96ce9e413cb8",
+  "work_budget_multiplier": 3,
+  "target_mean_complete_seconds": 0.5,
+  "wall_clock_cutoff": false,
+  "measured_repair_seconds": {
+    "mean": 0.33048532900074495,
+    "p95": 1.030531259975396,
+    "maximum": 2.291585800005123,
+    "over500ms": 81
+  },
+  "measured_replay_pipeline_seconds": {
+    "mean": 0.33199543359933886,
+    "p95": 1.0334178000106475,
+    "maximum": 2.294684500026051,
+    "over500ms": 82
+  },
+  "estimated_complete_seconds": {
+    "mean": 0.3406785027986625,
+    "p95": 1.0414519449986983,
+    "maximum": 2.302521900041029,
+    "over500ms": 84
+  },
+  "mean_input_read_seconds": 0.0026660330003360285,
+  "mean_scoring_seconds": 0.04465514780022204,
+  "timing_scope": "Estimated complete = historical measured input/features/transfer/network time + newly measured input-copy/repair/hard-check time; not a fresh measured end-to-end inference",
+  "elapsed_seconds": 228.4122556000366,
+  "scoring_policy": "Original areas/specs; local research Q without MIB; neutral runtime factor1",
+  "test_read": false,
+  "checkpoint_reselected": false,
+  "automatic_retry": false
+}

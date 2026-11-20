@@ -1,0 +1,19 @@
+{
+  "status": "needs_attention",
+  "queue_id": "e77a84f59dee45039d6cb15a8bfa8f95",
+  "started_at": "2026-11-13T09:09:32.453361+00:00",
+  "completed": [
+    "e119_stride3:train",
+    "e119_stride3:freeze",
+    "e119_stride3:evaluation",
+    "e119_stride2:train",
+    "e119_stride2:freeze",
+    "e119_stride2:evaluation"
+  ],
+  "active": null,
+  "sessions": 1,
+  "pid": 15788,
+  "error": "RuntimeError('e120_stride3 train failed; no automatic retry')",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E134_supervision_interval\\run_queue.py\", line 151, in main\n    else:complete=launch(arm,phase)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E134_supervision_interval\\run_queue.py\", line 137, in launch\n    if result['status'] in ('error','failed') or code!=0:raise RuntimeError(f'{arm} {phase} failed; no automatic retry')\nRuntimeError: e120_stride3 train failed; no automatic retry\n",
+  "updated_at": "2026-11-13T15:34:57.378741+00:00"
+}

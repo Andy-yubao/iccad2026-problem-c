@@ -1,0 +1,26 @@
+{
+  "created_at": "2026-11-06T16:47:30.993128+00:00",
+  "authorized_models": [
+    "E109_deep_supervision_shared",
+    "E110_deep_supervision_heads",
+    "E111_progressive_depth"
+  ],
+  "authorized_operations": "A/B scratch training; progressive depth4/8/12 with frozen prefix weights and trainable shared head; inherit best Adam/RNG, reset original LR and stage budget, only early-stop advances intermediate stages; then three frozen-best dev500s",
+  "no_control_retraining": true,
+  "new40k_held_unused": true,
+  "test_read": false,
+  "old_STOP_files_untouched": true,
+  "protected_hashes": {
+    "experiments/E98_loss_weight_learning/runs/20261104_generalization96_seed0/checkpoints/best.pt": "3f7ca0086af8a13bd52eedf0635117312e5c0a72e80e423e9cee3db5ca9b87ea",
+    "experiments/E98_loss_weight_learning/runs/20261104_generalization96_seed0/results.json": "650a2cb3532ca350ee103784bb32246892d527a9fc345b5df9944c2c48c3f207",
+    "experiments/E98_loss_weight_learning/runs/20261104_generalization96_seed0/evaluation_depth_dev500/results.json": "dc2625734d349edf68f3a7006573dfba29ae4db1f095e85da16b2401ddb3e9c9",
+    "protocol/reference_workset_v5.json": "1409ccf825b9c7cae1097a22e8dc4068e1283d79541c85ce54c5627d0c2b4208",
+    "protocol/reference_workset_v6.json": "2fe459b0a785ffb6995dd3e5966cd47337b948b15ec4bb4d4c19ffe169e404ae",
+    "protocol/split_v1.json": "a1f23edae03194c1155d260415482d892e4cb5ad66170abc93af04aafc8cefbd"
+  },
+  "gates": {
+    "E109_deep_supervision_shared": "d3c7c5b44b3d4cd82e121382cfbcd8ca26cb14ea404e5c8010d06476f9838470",
+    "E110_deep_supervision_heads": "f0b61a9c662a1bc546d0453db762b6af95747288642016a1aea89a65ca194a9c",
+    "E111_progressive_depth": "367462c909820520c594eea00ae5e3168096d86344f68697a0f246bbd48c61a6"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "experiment": "E131_relation_input",
+  "copies": {
+    "simple_loss.py": {
+      "source": "experiments/E119_global_initial_generator/variants/public_priority_v1/simple_loss.py",
+      "sha256": "fcd0827c829ee2466298eb61c1213b1fb12ae7f54afaef0f8e53a86033478238",
+      "copy_sha256": "fcd0827c829ee2466298eb61c1213b1fb12ae7f54afaef0f8e53a86033478238"
+    },
+    "group_tree.py": {
+      "source": "experiments/E119_global_initial_generator/variants/public_priority_v1/group_tree.py",
+      "sha256": "867ca3b84848ae78da25dd2a2db16018d722102c7bb5a34644492451efef65fd",
+      "copy_sha256": "867ca3b84848ae78da25dd2a2db16018d722102c7bb5a34644492451efef65fd"
+    },
+    "resident.py": {
+      "source": "experiments/E119_global_initial_generator/variants/public_priority_v1/resident.py",
+      "sha256": "f76073f5756a59187ecfc1b90752f4db063e81555bad51835712a731d529cd27",
+      "copy_sha256": "f76073f5756a59187ecfc1b90752f4db063e81555bad51835712a731d529cd27"
+    },
+    "augmentation.py": {
+      "source": "experiments/E119_global_initial_generator/variants/public_priority_v1/augmentation.py",
+      "sha256": "dba0658829115b08184fadec488ef0b56fe0adf0e8452cb240029d5c5c4de87c",
+      "copy_sha256": "dba0658829115b08184fadec488ef0b56fe0adf0e8452cb240029d5c5c4de87c"
+    },
+    "step_control.py": {
+      "source": "experiments/E119_global_initial_generator/variants/public_priority_v1/step_control.py",
+      "sha256": "795ddb45dd257e123f1880eea28b58502711807ee643bfcb51a7e72d484952da",
+      "copy_sha256": "795ddb45dd257e123f1880eea28b58502711807ee643bfcb51a7e72d484952da"
+    },
+    "captured_projection.py": {
+      "source": "experiments/E119_global_initial_generator/variants/public_priority_v1/captured_projection.py",
+      "sha256": "7f19baba25bc52a686e08a1af32236bffa8b47300cac96c52914b3b81d88131a",
+      "copy_sha256": "7f19baba25bc52a686e08a1af32236bffa8b47300cac96c52914b3b81d88131a"
+    },
+    "loss.py": {
+      "source": "experiments/E119_global_initial_generator/variants/public_priority_v1/loss.py",
+      "source_sha256": "e1d60a67b12a28b581ee8a7c3d468478885a61978fb4110a2fa37f82d896a7e9",
+      "change": "Single final BxNx3 objective; all base/public hard terms and coefficients unchanged."
+    },
+    "runtime.py": {
+      "source": "experiments/E119_global_initial_generator/variants/public_priority_v1/train.py",
+      "source_sha256": "9d64b29d7e2b8b5be454b785fa9c6f1f6ccaaf8fd71cb1f5ce8cd4ceb72e4553",
+      "change": "Independent final-only two-arm runtime; frozen16k cache view; fixed address augmentation; training interlock; no terminal evaluation/postprocessing"
+    },
+    "cuda_step.py": {
+      "source": "experiments/E119_global_initial_generator/variants/public_priority_v1/cuda_step.py",
+      "source_sha256": "cd5eddd01dc44b33da1c57c13261b27e1f7ef232b81c425e57080501a25ce7f1",
+      "change": "One final output; explicit backward-only preparation mode; training replay cannot update in preparation"
+    },
+    "io.py": {
+      "source": "experiments/E119_global_initial_generator/variants/public_priority_v1/io.py",
+      "source_sha256": "49133d3d90299cf2ec575b270521e283b48898165c3d1895f93bc3ea82fc0373",
+      "change": "Local atomic evidence and snapshots without evaluation source dependencies"
+    }
+  },
+  "scope": "Independent local algorithms; only shared datasets helpers/cache; no historical restore or checkpoint load",
+  "new_files": [
+    "model.py",
+    "addresses.py",
+    "control.py",
+    "data.py",
+    "inspect.py",
+    "train.py",
+    "schedule.py",
+    "batches.py",
+    "loss_config.py",
+    "__init__.py"
+  ],
+  "historical_definition_source": "history/20261111_experiments_consolidation/experiments/E116_first_draft_comparison/model.py",
+  "historical_definition_sha256": "e67cdfe9fae1f1411c55fad07e614d256e23305d02643013e51c734e4d680657"
+}

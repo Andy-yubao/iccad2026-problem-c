@@ -1,0 +1,23 @@
+{
+  "user_authorization": "E119-based residual experiment; prepare then background start. User final confirmation: original head onlyS0,12 independent64->3 Linear deltas, eta1, S-state recurrence",
+  "preflight_sha256": "3d482d9ccc2504e567fe28f77163d18206fdcdb0211badbe74ab6378e02540c5",
+  "parameters": 714615,
+  "seed": 0,
+  "delta_head_seed": 20261109121,
+  "delta_initial_gain": 0.01,
+  "eta": 1,
+  "initialization_repair": "Original default random delta gain caused finite Loss29761/grad933092, rejected before Adam. Fixed small nonzero .01 initialization only; no eta/LR/guard changes or candidate scan; failed evidence retained",
+  "compatible_E119_initial_tensors": 254,
+  "cache_members": {
+    "train": 36000,
+    "dev": 500
+  },
+  "training": "36k,4+12,FP32/batch32,original augmentation/AdamW/LR/guards,4h200epochs",
+  "evaluation": "own Loss-best fixeddev500 original E98.depth_budget.v1, original areas/noMIB/all-module predictions/hard checks/full latency",
+  "no_test": true,
+  "no_plots": true,
+  "no_automatic_retry": true,
+  "baseline_not_retrained": true,
+  "other_STOP_untouched": true,
+  "disposable_update_discarded": true
+}

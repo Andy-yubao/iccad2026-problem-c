@@ -1,0 +1,74 @@
+{
+  "status": "complete",
+  "finished": true,
+  "terminal": {
+    "count": 500,
+    "hard_legal": 500,
+    "weighted_Q": 1.0285554390334937,
+    "mean_Q": 1.0441402507255502,
+    "p95_Q": 1.166916752763718,
+    "max_Q": 1.6226136262508175,
+    "mean_complete_seconds": 0.2322925222007907,
+    "p95_complete_seconds": 0.5212836950006021,
+    "fallbacks": 0,
+    "raw_hard_legal": 0,
+    "draft_module_pass10_fraction": 0.4737131078869893,
+    "draft_worst_module_coverage_mean": 0.5140527861896524
+  },
+  "gallery_count": 100,
+  "threads": {
+    "torch_intra": 1,
+    "torch_inter": 1,
+    "pools": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libopenblas",
+        "filepath": "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\Lib\\site-packages\\numpy.libs\\libopenblas64__v0.3.23-293-gc2f4bdbb-gcc_10_3_0-2bde3a66a51006b2b53eb373ff767a3f.dll",
+        "version": "0.3.23.dev",
+        "threading_layer": "pthreads",
+        "architecture": "Prescott"
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libiomp",
+        "filepath": "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\Lib\\site-packages\\torch\\lib\\libiomp5md.dll",
+        "version": null
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libiomp",
+        "filepath": "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\Lib\\site-packages\\torch\\lib\\libiompstubs5md.dll",
+        "version": null
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\Lib\\site-packages\\scipy.libs\\libscipy_openblas-f07f5a5d207a3a47104dca54d6d0c86a.dll",
+        "version": "0.3.28",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "vcomp",
+        "filepath": "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\vcomp140.dll",
+        "version": null
+      }
+    ],
+    "workers": 1,
+    "concurrent_requests": 1
+  },
+  "checkpoint_sha256": "1df099d624797d3e61fd332b7ffafed8ebc213f73758649e2a34054b395201d1",
+  "test_read": false,
+  "elapsed_seconds": 295.06751310000254
+}

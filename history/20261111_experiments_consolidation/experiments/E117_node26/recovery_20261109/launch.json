@@ -1,0 +1,37 @@
+{
+  "method": "Hidden Windows scheduled task independent of command runner Job",
+  "task_name": "Codex_ICCAD_E117_Node26_Recovery_20261109_1",
+  "task_hidden": true,
+  "task_restart_count": 0,
+  "task_execution_limit": "PT8H",
+  "task_user": "yuche",
+  "controller_pid": 51536,
+  "trainer_pid": 51384,
+  "scope": "one explicit recovery; 36k4+12; auto fixed dev500; no recurrence or retry",
+  "original_controller_argument_error_archived": "recovery_20261109/controller_argument_fix; no trainer was spawned in that attempt",
+  "state_at_registration": {
+    "status": "data_preparation",
+    "activity": "building persistent static tensor cache",
+    "pid": 11320,
+    "cache_built": 7422,
+    "cache_reused": 2,
+    "cache_requested": 36000,
+    "cache_role": "train",
+    "loaded": 7424,
+    "count": 36000,
+    "cache_key": "a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148",
+    "epoch": 0,
+    "step": 0,
+    "cursor": 0,
+    "elapsed_seconds": 1066.1967291000183,
+    "utc": "2026-11-09T02:57:53Z",
+    "test_read": false,
+    "postprocessing_calls": 0
+  },
+  "test_read": false,
+  "formal_updates_observed": 1234,
+  "cache_complete": {
+    "train": 36000,
+    "dev": 500
+  }
+}

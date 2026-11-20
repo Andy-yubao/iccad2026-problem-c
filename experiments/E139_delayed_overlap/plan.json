@@ -1,0 +1,118 @@
+{
+  "experiment": "E139 delayed overlap supervision",
+  "revision": "E139.delayed_overlap.v1.seed0",
+  "status": "preparation_only",
+  "authorization": "2026-11-15 user: prepare experiment and training entry only; do not start training",
+  "architecture": {
+    "e119": "unchanged E119 two-global + pair-bias 12-layer model"
+  },
+  "parameters": {
+    "e119": 712275
+  },
+  "trainable_parameters": {
+    "e119": 712275
+  },
+  "arms": {
+    "e119_delayed_overlap": {
+      "layer_weights": {
+        "2": 0.05,
+        "6": 0.05,
+        "8": 0.05,
+        "10": 0.05,
+        "12": 0.8
+      },
+      "auxiliary_layers": [
+        2,
+        6,
+        8,
+        10
+      ],
+      "no_overlap_layers": [
+        2,
+        6
+      ],
+      "full_loss_layers": [
+        8,
+        10,
+        12
+      ],
+      "auxiliary_total": 0.2,
+      "terminal_layer": 12,
+      "terminal_weight": 0.8
+    }
+  },
+  "seed": 0,
+  "batch_size": 32,
+  "precision": "FP32; deterministic; TF32 disabled",
+  "threads": 4,
+  "train_count": 36000,
+  "train_monitor_count": 500,
+  "dev_monitor_count": 500,
+  "dataset": "random_reference40k.v1; original public areas; test sealed",
+  "data_migration": "Explicit continuation of current 36k supervision study, reusing E134 members/cache and monitoring panels; no new sampling",
+  "no_mib": true,
+  "predict_all_modules": true,
+  "hard_specification_enforcement": "postprocessing only",
+  "initialization": "scratch seed0; exact E134 E119 initialization; no historical checkpoint",
+  "optimizer": "AdamW weight_decay.0003, global gradient clip1, joint per-module relative update bound.005",
+  "lr_levels": [
+    0.001,
+    0.00025,
+    0.0001,
+    5e-05
+  ],
+  "protection_epochs": 14,
+  "scheduler_baseline_epoch": 15,
+  "patience": 3,
+  "minimum_meaningful_absolute": 1e-05,
+  "minimum_meaningful_relative": 0.001,
+  "best_minimum_absolute_improvement": 1e-05,
+  "minimum_lowest_lr_complete_epochs": 2,
+  "maximum_seconds": 14400,
+  "maximum_epochs": 200,
+  "budget": "Per arm4h/200epoch caps; report seen/steps/epochs/time separately, not equal training work",
+  "selection": "Each fixed own-Loss dev500 arithmetic mean for best/LR/earlystop; no Q selection",
+  "resume": "Ctrl+C pauses at accepted update/case boundary. Restore model/Adam/RNG/permutation/cursor/seen/LR/earlystop/projection; cumulative budget never reset. Evaluation resumes committed case prefix.",
+  "numerical_guards": "Nonfinite or case/mean Loss>=1000 or unclipped grad norm>=10000: reject before Adam; no skip/retry",
+  "augmentation": "P=.5 axis swap; flags indexed by seed/epoch/member, independent of dropout",
+  "engine": "CUDA graph forward/loss/backward/clip; original AdamW and captured module step protection",
+  "stop": "Experiment STOP, per-run STOP, SIGINT; save accepted cursor and exit, no next arm",
+  "preflight_train_indices": [
+    10841,
+    12651,
+    6417,
+    4280,
+    17946
+  ],
+  "preflight": "Original five cached training cases only; objective and gradient checks plus disposable guarded update; inherited continuation engine proof. No formal training/dev/test/postprocessing.",
+  "comparison": "Reuse frozen E134 stride3 and stride2 results; changed layer schedule and collision placement are joint changes, no causal isolation or multi-seed reliability claim",
+  "reporting": "new own Loss and original_final_total diagnostic; all quality/latency/fallback/hard checks reported independently",
+  "terminal_evaluation": "automatic sole own-Loss best, fixed dev500, original E98.depth_budget.v1, no MIB Q; no test or plots",
+  "historical_standards": "E74/E105/A numbers are historical context until matched new task evaluation",
+  "test_read": false,
+  "postprocessing_calls": 0,
+  "automatic_queue": true,
+  "dataset_report_sha256": "3a79fd9eb2636578fa4df876ccac51699eab04cd59179027488aa7d8c334928a",
+  "payload_checksums_sha256": "f8eeb86da003c9901b73541eb13cc8e16cad9cd963dcf74a0edddf4a1a5abe54",
+  "queue": "Prepared single arm: explicit --start -> training -> sole own-Loss-best freeze -> original dev500 evaluation; never auto-launch during preparation",
+  "cache_build_workers": 4,
+  "required_cache_key": "a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148",
+  "cache_policy": "Reuse complete existing shared train36000/dev500 cache, no regenerated samples or repeated static preprocessing",
+  "loss": "0.05*(L2_without_overlap + L6_without_overlap + L8_full + L10_full) + 0.8*L12_full",
+  "architecture_parent": "E119 global2",
+  "new_candidates": 1,
+  "automatic_retry": false,
+  "overlap_omission": "Only direct overlap group removed at S2/S6; raw collision diagnostics retained. No geometry bypass, detach, channel masking or draft overwrite.",
+  "comparison_controls": [
+    {
+      "arm": "e119_stride3",
+      "result": "experiments/E134_supervision_interval/runs/e119_stride3_seed0/evaluation_no_mib_dev500/results.json",
+      "results_sha256": "56bc475d5ae62d6faf69ad0d215cc028da2e7468d5c6df1c4355e718f5075e56"
+    },
+    {
+      "arm": "e119_stride2",
+      "result": "experiments/E134_supervision_interval/runs/e119_stride2_seed0/evaluation_no_mib_dev500/results.json",
+      "results_sha256": "6355a59efdbb2873b08f918db0f798423dfd47bd68114252109f3ce0aa0d78e1"
+    }
+  ]
+}

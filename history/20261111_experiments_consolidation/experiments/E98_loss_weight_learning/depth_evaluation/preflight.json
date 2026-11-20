@@ -1,0 +1,136 @@
+{
+  "status": "passed",
+  "unique_train_cases": 5,
+  "cases": [
+    {
+      "member": [
+        "worker_54/layouts_4928.th",
+        15
+      ],
+      "n": 36,
+      "identical_geometry": true,
+      "work": {
+        "shape_calls": 4,
+        "projection_calls": 1,
+        "rescue_seeds": 0,
+        "shape_native_iterations": 92
+      },
+      "seconds": [
+        0.06286599999293685,
+        0.06219220001366921
+      ],
+      "all_hard_legal": true
+    },
+    {
+      "member": [
+        "worker_52/layouts_1344.th",
+        81
+      ],
+      "n": 74,
+      "identical_geometry": true,
+      "work": {
+        "shape_calls": 4,
+        "projection_calls": 1,
+        "rescue_seeds": 0,
+        "shape_native_iterations": 91
+      },
+      "seconds": [
+        0.1380298000003677,
+        0.1340384999930393
+      ],
+      "all_hard_legal": true
+    },
+    {
+      "member": [
+        "worker_19/layouts_6944.th",
+        74
+      ],
+      "n": 98,
+      "identical_geometry": true,
+      "work": {
+        "shape_calls": 9,
+        "projection_calls": 2,
+        "rescue_seeds": 1,
+        "shape_native_iterations": 224
+      },
+      "seconds": [
+        0.7391348000091966,
+        0.7197199999936856
+      ],
+      "all_hard_legal": true
+    },
+    {
+      "member": [
+        "worker_35/layouts_2800.th",
+        80
+      ],
+      "n": 113,
+      "identical_geometry": true,
+      "work": {
+        "shape_calls": 8,
+        "projection_calls": 1,
+        "rescue_seeds": 0,
+        "shape_native_iterations": 199
+      },
+      "seconds": [
+        0.4134300999867264,
+        0.4031689999974333
+      ],
+      "all_hard_legal": true
+    },
+    {
+      "member": [
+        "worker_94/layouts_7504.th",
+        44
+      ],
+      "n": 21,
+      "identical_geometry": true,
+      "work": {
+        "shape_calls": 4,
+        "projection_calls": 1,
+        "rescue_seeds": 0,
+        "shape_native_iterations": 71
+      },
+      "seconds": [
+        0.035048000019742176,
+        0.03469189998577349
+      ],
+      "all_hard_legal": true
+    }
+  ],
+  "sources": {
+    "experiments/E98_loss_weight_learning/depth_evaluation/__init__.py": "c7a208bd6dec2638828df0b165524eed3318498b956fb3a5a5425b3a0485df06",
+    "experiments/E98_loss_weight_learning/depth_evaluation/preflight.py": "37937a4f6c3891ec90642516d7aafa667d9a986591ad925d947a401e567020d0",
+    "experiments/E98_loss_weight_learning/depth_evaluation/repair/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/E98_loss_weight_learning/depth_evaluation/repair/backend/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/E98_loss_weight_learning/depth_evaluation/repair/backend/conic_geometry.py": "8d611db3bee47499c77b64039eee09718607f356cd251df5792314a53bcdcd63",
+    "experiments/E98_loss_weight_learning/depth_evaluation/repair/backend/frozen/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/E98_loss_weight_learning/depth_evaluation/repair/backend/frozen/canonical_geometry.py": "c1dcfd377ad33cdb85954c01917e762f87360deb43b1d5cce9b92c1b003fa2e4",
+    "experiments/E98_loss_weight_learning/depth_evaluation/repair/backend/frozen/feasible.py": "9cfe70894d80fbe54ccaa1c3de60ef4ab111ac9b4472286d1ae6a0c5a1fdc756",
+    "experiments/E98_loss_weight_learning/depth_evaluation/repair/backend/frozen/global_refine.py": "cd43991827597dfc4c5635cddb26f597774c680a24658237e5f443e9fbbca60c",
+    "experiments/E98_loss_weight_learning/depth_evaluation/repair/backend/frozen/packing.py": "25d20592fded9939f590be886e85083a47c5bb03a28c6f9bfe4a89097f863f0d",
+    "experiments/E98_loss_weight_learning/depth_evaluation/repair/backend/frozen/postprocess.py": "da0e1572a822a589968a19e67e2d36dd5133c7d17b7ea9443bd743ee4653a272",
+    "experiments/E98_loss_weight_learning/depth_evaluation/repair/backend/frozen/shape_lp.py": "6de2773cfd981723e55a1d317ad9422e8fee76b393d740acaf70007594bc8a9f",
+    "experiments/E98_loss_weight_learning/depth_evaluation/repair/backend/frozen/solver.py": "ed874db1bac7205d5e1d80350b1d4e82d3c56eb2bb44b9f08ceb256244d24ea0",
+    "experiments/E98_loss_weight_learning/depth_evaluation/repair/backend/frozen/topology_mip.py": "2ba0f2612f598f5e8d6e80a3ee1f74ad4941b78a3e9163f2d4acd7db5588da1a",
+    "experiments/E98_loss_weight_learning/depth_evaluation/repair/backend/guard.py": "eb36fbbcea1b694c7fb40fa0b36e3ed659ac66563be583f177fb6bb9e3c35bd7",
+    "experiments/E98_loss_weight_learning/depth_evaluation/repair/backend/observe.py": "b924be6a40f157e2d2204e358990797192e10a6320e3e3c3399d044918b25dd8",
+    "experiments/E98_loss_weight_learning/depth_evaluation/repair/backend/reduction.py": "d8ba6af127d9b08469b198f7ed38849e14ac566db58bfab855797920c92012ed",
+    "experiments/E98_loss_weight_learning/depth_evaluation/repair/backend/rescue.py": "ada10eea489e0f7d65a2f6dd0a20358d33d08808f3dfef6a19c0583139f206e0",
+    "experiments/E98_loss_weight_learning/depth_evaluation/repair/canonical.py": "9f7da6983541a3c8b0d57c8f869c6905c24f2bc4eb3643e0ed9e0a718d2abf2c",
+    "experiments/E98_loss_weight_learning/depth_evaluation/repair/canonical_native.py": "e350394ce13f8bb20e53d03494912f9367d29c9f68809ad16c4314a45709718b",
+    "experiments/E98_loss_weight_learning/depth_evaluation/repair/canonical_py.py": "b5b99c1f77756aa318fe5cb0e7fa82935844752b4fa815ab80367adb34e00195",
+    "experiments/E98_loss_weight_learning/depth_evaluation/repair/certify_polish.py": "e9605d50ff79de47f6f2b85d7e761d954d8784ad9e7ee2aec2c38b9f010c43e4",
+    "experiments/E98_loss_weight_learning/depth_evaluation/repair/fast_geometry.py": "88729dd286d0e2c8444e0cc0d3508f8fc19cafb69f14b94fe0004c10b9b6ee0e",
+    "experiments/E98_loss_weight_learning/depth_evaluation/repair/legal_seed.py": "45a6d0ee77c7cceafd05f41f9317f72ebdbf56dd45fc566da04952810e3a7588",
+    "experiments/E98_loss_weight_learning/depth_evaluation/repair/projection.py": "50863404a74aaa8658d95a3327b07b6ccd6908434570f7ecb0f041ed7841e593",
+    "experiments/E98_loss_weight_learning/depth_evaluation/repair/solver.py": "6c4310ac9ae58ea5fa85732548e14e44f33ccb331f3bc69071a3582cd4fb8f2e",
+    "experiments/E98_loss_weight_learning/depth_evaluation/solver.py": "689e2d00958b257207a4b3c509ca93df0f35d5d65d24219777cdfc2dd1cd6877",
+    "experiments/E98_loss_weight_learning/depth_evaluation/budget.json": "c93f71d7664f6359a87aa740bf08108782ea40146bf329f9a3be7f7afac3fe61"
+  },
+  "test_read": false,
+  "dev_payloads": 0,
+  "network_calls": 0,
+  "note": "CPU reproduction during separate baseline training; not an uncontended latency benchmark",
+  "elapsed_seconds": 18.85242599999765
+}

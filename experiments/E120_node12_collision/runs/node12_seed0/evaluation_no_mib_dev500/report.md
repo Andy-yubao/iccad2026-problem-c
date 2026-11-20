@@ -1,0 +1,36 @@
+# E120_node12_collision node12：固定dev500验证
+
+唯一own-Loss best在Q评价前冻结；原始面积/无MIB，全模块真实草稿。
+
+```json
+{
+  "status": "complete",
+  "arm": "node12",
+  "count": 500,
+  "checkpoint_sha256": "5350641a65f1aae515c6c63e55438ddfce7003919288879f13f81ea6a03e2b42",
+  "best_epoch": 79,
+  "parameters": 725619,
+  "weighted_Q": 1.0458553399592514,
+  "mean_Q": 1.0321531858541193,
+  "mixed_Q": 1.0390042629066853,
+  "hard_legal": 500,
+  "raw_hard_legal": 0,
+  "fallbacks": 0,
+  "mean_complete_seconds": 0.21561952740233392,
+  "p95_complete_seconds": 0.5717120700137455,
+  "max_complete_seconds": 1.5593557000393048,
+  "over250ms": 149,
+  "max_Q": 2.6195732675870835,
+  "p95_Q": 1.1091729263571173,
+  "raw_repeated_coverage": 0.040822022580016215,
+  "raw_bbox_over_area": 1.0222575818271402,
+  "common_final_dev_loss": 0.33413420189917087,
+  "own_selection_loss": 0.35420646479725837,
+  "scoring_policy": "local research Q without MIB, original areas/specs; not official contest score",
+  "training_seconds": 7386.6411287999945,
+  "training_epochs": 80,
+  "elapsed_seconds": 235.26579490001313,
+  "test_read": false,
+  "selection_frozen_before_Q": true
+}
+```

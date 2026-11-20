@@ -1,0 +1,63 @@
+{
+  "details": {
+    "mean_total": 5.305843353271484,
+    "max_case": 49.702369689941406,
+    "parent_mean": 3.205592155456543,
+    "parent_max": 6.351263999938965,
+    "relative_mean_limit": 9.616776466369629,
+    "max_relative_case_ratio": 13.19502067565918,
+    "gradient_norm": 482.23175048828125,
+    "absolute_case_limit": 1000.0,
+    "gradient_limit": 10000.0,
+    "mean_terms": {
+      "area_excess": 0.053613487631082535,
+      "overlap_region_fraction": 0.05331611633300781,
+      "tail": 0.27496403455734253,
+      "whitespace": 0.09669755399227142,
+      "N10": 29.09375,
+      "N10_fraction": 0.40906527638435364,
+      "max_covered_fraction": 0.4084930717945099,
+      "bbox_over_A": 1.0477609634399414,
+      "penetration": 0.012154880911111832,
+      "position": 0.2547425329685211,
+      "shape": 0.18743248283863068,
+      "wirelength": 0.30387359857559204,
+      "soft_original": 0.009394006803631783,
+      "boundary": 0.004944558255374432,
+      "grouping": 0.016427066177129745,
+      "mib": 0.013109332881867886,
+      "soft_barrier": 0.8746451139450073,
+      "wire_barrier": 0.0,
+      "trust": 0.26429617404937744,
+      "legacy_E105_total": 0.40526309609413147,
+      "area_excess_scaled": 0.9941389560699463,
+      "tail_scaled": 1.0109390020370483,
+      "whitespace_scaled": 1.1994433403015137,
+      "total": 5.305843353271484
+    },
+    "finite": true
+  },
+  "violations": [
+    {
+      "batch_index": 0,
+      "member": [
+        "worker_40/layouts_9296.th",
+        69
+      ],
+      "loss": 49.702369689941406,
+      "parent_loss": 3.766752004623413,
+      "case_limit": 37.667518615722656
+    }
+  ],
+  "mean_exceeded": false,
+  "all_losses_finite": true,
+  "accepted_updates": 22,
+  "cursor": 704,
+  "projection_steps": 22,
+  "optimizer_steps": [
+    22
+  ],
+  "status": "error",
+  "best_epoch": 0,
+  "test_read": false
+}

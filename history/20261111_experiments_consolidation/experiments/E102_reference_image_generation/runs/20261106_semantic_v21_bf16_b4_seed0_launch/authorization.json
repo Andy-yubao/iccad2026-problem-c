@@ -1,0 +1,10 @@
+{
+  "user_request": "好的。请使用新的训练方式续训。准备好后后台启动训练。",
+  "background_training_authorized": true,
+  "scope": "One BF16 batch4 migration from complete12297 latest; inherited budget, data, objective and state; fixed monitoring and images; no test, no automatic retry or extra candidate.",
+  "run": "experiments/E102_reference_image_generation/runs/20261106_semantic_v21_bf16_b4_seed0",
+  "cache": "experiments/E102_reference_image_generation/runs/prepared_semantic_v21_20261106",
+  "gallery": "visualization/E102_reference_image_generation/20261106_semantic_v21_bf16_b4_seed0",
+  "parent_run": "experiments/E102_reference_image_generation/runs/20261106_semantic_v21_seed0",
+  "short_check_gate": "four next train members, one actual BF16 batch4 update; finite gradient/parameters; mean Loss difference<=2% against FP32 reference; no resume simulation"
+}

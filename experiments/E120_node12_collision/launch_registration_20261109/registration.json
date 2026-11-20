@@ -1,0 +1,19 @@
+{
+  "authorization": "2026-11-09 user approved Node12 exact formulas and explicitly requested preparation then background start",
+  "experiment": "E120_node12_collision",
+  "arm": "node12",
+  "seed": 0,
+  "parameters": 725619,
+  "preflight_sha256": "fff729b1ff1925ae740624dc8f8abacd769ee3df193ea5ef1f0d77797ead32ee",
+  "formula_sha256": "d24d29c0abf188cc64df8e76823526c8ba201336ed435bb125e07757f4826c4b",
+  "cache_members": {
+    "train": 36000,
+    "dev": 500
+  },
+  "training": "36k scratch seed0,4+12,FP32 batch32,original augmentation/LR/guards,4h/200epochs",
+  "automatic_evaluation": "sole own-Loss best frozen before fixeddev500 original E98.depth_budget.v1; no test or plots",
+  "baseline": "E119 best55 read-only; no retrain or resume",
+  "launch": "independent hidden Windows task, no recurring trigger or automatic retries",
+  "other_STOP_untouched": true,
+  "disposable_update_discarded": true
+}

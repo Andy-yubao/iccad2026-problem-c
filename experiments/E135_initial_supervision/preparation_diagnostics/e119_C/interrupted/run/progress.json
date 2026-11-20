@@ -1,0 +1,159 @@
+{
+  "status": "user_stop",
+  "finished": false,
+  "epoch": 0,
+  "step": 3,
+  "cursor": 96,
+  "seen_count": 96,
+  "best": 32.863834381103516,
+  "best_epoch": 0,
+  "lr": 0.001,
+  "scheduler": {
+    "best": null,
+    "lr_bad": 0,
+    "early_bad": 0,
+    "drops": 0,
+    "last_drop_epoch": null,
+    "lowest_completed_epochs": 0
+  },
+  "history": [
+    {
+      "epoch": 0,
+      "step": 0,
+      "train_monitor": {
+        "reference_weighted": 14.769038963317872,
+        "overlap_weighted": 3.11482093334198,
+        "wire_compact_weighted": 0.17040574699640273,
+        "grouping_weighted": 0.5341746747493744,
+        "boundary_weighted": 1.547602927684784,
+        "public_shape_weighted": 0.46642693877220154,
+        "public_preplaced_position_weighted": 12.261363983154297,
+        "total": 32.863834381103516,
+        "s0_F_center_tolerance": 5.171403646469116,
+        "s0_F_free_shape": 0.3034201979637146,
+        "s0_F_public_shape": 0.17377027422189711,
+        "s0_F_public_preplaced_position": 4.046107292175293,
+        "s0_F_public_shape_count": 10.4,
+        "s0_F_public_preplaced_count": 2.4,
+        "s0_F_total": 9.406452178955078,
+        "layer00_total": 9.406452178955078,
+        "final_total": 37.168358612060544,
+        "original_final_total": 22.665755462646484,
+        "layer03_total": 17.67020492553711,
+        "layer06_total": 14.4985746383667,
+        "layer09_total": 21.007698440551756,
+        "layer12_total": 37.168358612060544,
+        "count": 5,
+        "p95": 41.24345245361328,
+        "max": 41.703407287597656,
+        "worst_member": [
+          "worker_85/layouts_6160.th",
+          10
+        ],
+        "per_case_total": [
+          39.40363311767578,
+          30.316625595092773,
+          41.703407287597656,
+          25.93634033203125,
+          26.959165573120117
+        ]
+      },
+      "dev_monitor": {
+        "reference_weighted": 14.769038963317872,
+        "overlap_weighted": 3.11482093334198,
+        "wire_compact_weighted": 0.17040574699640273,
+        "grouping_weighted": 0.5341746747493744,
+        "boundary_weighted": 1.547602927684784,
+        "public_shape_weighted": 0.46642693877220154,
+        "public_preplaced_position_weighted": 12.261363983154297,
+        "total": 32.863834381103516,
+        "s0_F_center_tolerance": 5.171403646469116,
+        "s0_F_free_shape": 0.3034201979637146,
+        "s0_F_public_shape": 0.17377027422189711,
+        "s0_F_public_preplaced_position": 4.046107292175293,
+        "s0_F_public_shape_count": 10.4,
+        "s0_F_public_preplaced_count": 2.4,
+        "s0_F_total": 9.406452178955078,
+        "layer00_total": 9.406452178955078,
+        "final_total": 37.168358612060544,
+        "original_final_total": 22.665755462646484,
+        "layer03_total": 17.67020492553711,
+        "layer06_total": 14.4985746383667,
+        "layer09_total": 21.007698440551756,
+        "layer12_total": 37.168358612060544,
+        "count": 5,
+        "p95": 41.24345245361328,
+        "max": 41.703407287597656,
+        "worst_member": [
+          "worker_85/layouts_6160.th",
+          10
+        ],
+        "per_case_total": [
+          39.40363311767578,
+          30.316625595092773,
+          41.703407287597656,
+          25.93634033203125,
+          26.959165573120117
+        ]
+      },
+      "train_monitor_seen": 0,
+      "loss": {
+        "version": "E135.initial_supervision.v1",
+        "coefficients": {
+          "reference_scale": 1.0,
+          "public_shape_weight": 1.0,
+          "public_preplaced_position_weight": 1.0,
+          "grouping_multiplier": 1.0,
+          "boundary_multiplier": 1.0
+        },
+        "A": 0.08975162861857286,
+        "B": 0.3336832108335229,
+        "layer_weights": {
+          "0": 0.05,
+          "3": 0.05,
+          "6": 0.05,
+          "9": 0.05,
+          "12": 0.8
+        },
+        "normalization": "per-case means within each constrained subset; zero if subset empty",
+        "shape": "F or P log width/height vs public immutable dimensions; Huber beta .1",
+        "position": "P raw center vs public specified center, scaled by sqrt(spec area); Huber beta .1",
+        "raw_domain": "public hard targets bypass decode clamps in loss only; predictions unchanged",
+        "all_modules_predicted": true,
+        "specification_overwrite": false,
+        "MIB": false,
+        "fixed_during_run": true,
+        "same_backward_monitor_best_lr_earlystop": true,
+        "historical_original_loss": "diagnostic only",
+        "training_authorized": false,
+        "arm": "e119_C",
+        "s0_objective": "frontend_F",
+        "frontend_F": {
+          "center_deadband_sqrt_area": 0.25,
+          "center_huber_beta": 0.1,
+          "center_subset": "valid non-P",
+          "free_shape_subset": "valid non-F/P",
+          "free_shape_coefficient": 0.05,
+          "public_dimension_coefficient": 1.0,
+          "public_position_coefficient": 1.0
+        },
+        "selection": "Unique own fixed aggregate Loss best; never Q",
+        "common_final_new": "final_total diagnostic only",
+        "common_final_original": "original_final_total diagnostic only"
+      },
+      "lr_next": 0.001,
+      "scheduler": {
+        "best": null,
+        "lr_bad": 0,
+        "early_bad": 0,
+        "drops": 0,
+        "last_drop_epoch": null,
+        "lowest_completed_epochs": 0
+      },
+      "elapsed_seconds": 29.307214600004954
+    }
+  ],
+  "elapsed_seconds": 58.78560110001126,
+  "test_read": false,
+  "postprocessing_calls": 0
+}

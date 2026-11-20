@@ -1,0 +1,25 @@
+{
+  "status": "needs_attention",
+  "controller_pid": 19316,
+  "started_at": "2026-11-12T15:49:13.257469+00:00",
+  "active": {
+    "stage": "startup_check",
+    "pid": 42436,
+    "started_at": "2026-11-12T15:49:13.657993+00:00"
+  },
+  "completed": [],
+  "order": [
+    "disposable_startup_update",
+    "scratch_fm_train",
+    "freeze_unique_FM_Loss_best",
+    "Euler8_dev500_and_train5_step_diagnostics"
+  ],
+  "automatic_retry": false,
+  "total_budget_seconds": 28800,
+  "test_read": false,
+  "error": "RuntimeError('startup_check exited1; no retry')",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E133_flow_matching\\supervisor.py\", line 72, in main\n    beat();launch('startup_check','startup_check')\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E133_flow_matching\\supervisor.py\", line 69, in launch\n    raise RuntimeError(f'{stage} exited{child.returncode}; no retry')\nRuntimeError: startup_check exited1; no retry\n",
+  "finalization_over_budget_seconds": 0.0,
+  "pipeline_elapsed_seconds": 20.442514181137085,
+  "updated_at": "2026-11-12T15:49:33.698970+00:00"
+}

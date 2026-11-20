@@ -1,0 +1,22 @@
+{
+  "experiment": "E110_deep_supervision_heads",
+  "checkpoint": "experiments\\E110_deep_supervision_heads\\runs\\20261107_heads_seed0\\checkpoints\\best.pt",
+  "checkpoint_sha256": "8f8641fc872bdca2be618719de193eb383d97ed80ef2e122069c8f7365a50c40",
+  "active_depth": 12,
+  "best_epoch": 56,
+  "indices": [
+    314,
+    36,
+    22,
+    62,
+    75
+  ],
+  "model_source_sha256": "727aab3712cb59dfc02d19050543be89ee0ac4c381fdb3521c686fb47ad12cd3",
+  "diagnostic_source_sha256": "9b67804c2f1d3868adb96b47068052d382608d94dbd740aef4b36b1b9fcc0e94",
+  "inference": "CPU FP32 eval/no_grad batch1; original registered inputs retained",
+  "direct_supervision": "layers1..12",
+  "test_read": false,
+  "training": false,
+  "postprocessing_calls": 0,
+  "Q_calls": 0
+}

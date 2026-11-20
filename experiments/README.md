@@ -1,20 +1,16 @@
-# 当前实验区
+# 实验入口
 
-- [E116](E116_first_draft_comparison/RUNNING.md)：原结构前4层 vs 新版首稿生成阶段（4个Attention＋SwiGLU块、末端全局条件读出）；冻结16k、唯一末端Loss。已获后台启动授权，original4→new_first串行，各4h/200轮；错误/用户停止不推进，无Q/后处理/test。
+| 目录 | 角色 |
+|---|---|
+| `E119_global_initial_generator/` | 主要研究基线global2 best55；含独立public_priority_v1变体和已授权test500历史评价 |
+| `E120_node12_collision/` | Node12结构对照，训练/原dev500已完成 |
+| `E131_relation_input/` | 旧64×4关系输入，用户停止，不自动恢复 |
+| `E132_relation_input_96x6/` | full/pure训练已完成，无后处理/Q授权 |
+| `E133_flow_matching/` | FM训练已完成；原自动评价失败现场保留，独立成功评价在evaluation_quality_20261113 |
+| `E134_supervision_interval/` | E119间隔2/3两组已完成训练/原dev500；E120间隔3门禁停止，用户放弃后续E120，间隔2未启动；保留失败现场 |
+| `E135_initial_supervision/` | E119 S0监督 A/B/C及自动原dev500后处理全部完成，均500/500最终硬合法；结果在runs/results_review.md，S0–S12展示在各run/visualization_dev15_loss |
+| `E136_frontend_F_linear/` | D：训练和原dev500已完成，best46/混合Q1.021426；Reference与五组草稿/原后处理的逐题统计在runs/statistics_dev500_v1 |
 
-这里保留E98、E101–E113的现行路径与必要资产依赖，便于追溯和后续经授权复用；不代表这些实验正在运行。
+具体身份看 `plan.json`、`authorization.json`、冻结权重记录；实际状态看 `queue_state.json` 和run内结果。文档和旧true开关不构成新的启动授权。长期结果留所属实验，公用数据/评分/展示不在实验间复制调用。
 
-- [E112](E112_deep_geometry_budget/README.md)、[E113](E113_deep_head_budget/README.md)：近A总参数预算的8图块几何/预测头加深，已授权串行后台训练并自动验证/五例展示；真实阶段见E112队列。
-- [E109](E109_deep_supervision_shared/README.md)：已完成的共享头逐层监督A，用户选择的重要研究基线；[E110](E110_deep_supervision_heads/README.md)、[E111](E111_progressive_depth/README.md)也已完成训练/固定dev500。
-
-- [E108](E108_random_reference40k/README.md)：新随机36k/2k/2k原始reference数据及图片准备，后续忽略MIB，本次无训练。
-
-- [E101](E101_final_c5_solver/README.md)：原C5交付与不同重训权重身份。
-- [E102](E102_reference_image_generation/README.md)：独立图片兴趣实验，2026-11-06已授权单次后台训练与visualization下固定100例图片对比；实时阶段见run状态。
-- [E98](E98_loss_weight_learning/README.md)：已放弃调权搜索，固定基线保护。
-- [E103](E103_offline_loss_alignment/README.md)：离线/全局统计与两个已完成续训。
-- [E104](E104_scaling32k/README.md)、[E105](E105_gated_prenorm_placer/README.md)：完成的扩容/结构候选。
-- [E106](E106_postprocessor_aware_loss/README.md)：代理完成但方向未合格，未训练布局器。
-- [E107](E107_geometry_posttrain/README.md)：门禁停止，未做终末后处理。
-
-[带日期状态](../docs/current_status.md) · [全部历史实际目录](../docs/experiment_catalog.md) · [有价值的研究结论](../docs/research_history.md)。所有旧命令只追溯，不自动恢复STOP或完成任务。
+退役实验实际位置见 [完整目录](../docs/experiment_catalog.md)。E101交付及E98、E102–E118、E121–E130位于 `history/20261111_experiments_consolidation/experiments/`。本次整理未恢复旧实验、训练或评价。

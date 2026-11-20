@@ -1,0 +1,111 @@
+{
+  "status": "passed",
+  "files": [
+    {
+      "file": "model.py",
+      "sha256": "0aef1463849544327b75926f818653acc16c97ae33c39a8154f46b7e8359b4b3",
+      "identical": true
+    },
+    {
+      "file": "features.py",
+      "sha256": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+      "identical": true
+    },
+    {
+      "file": "batches.py",
+      "sha256": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92",
+      "identical": true
+    },
+    {
+      "file": "data.py",
+      "sha256": "1e43fe61a6d4dde4007295f817db927d75cd61439239423621ef65bf826e0d66",
+      "identical": true
+    },
+    {
+      "file": "cache.py",
+      "sha256": "f25d5d52383d21b199765110ac5241ddd909c332bc964895cfc45432a7a91df7",
+      "identical": true
+    },
+    {
+      "file": "dataset_view.py",
+      "sha256": "c2f558f8a26982d52a68fb3f74fcf491d3469c4a7a1ecf78f6ca655300917ad9",
+      "identical": true
+    },
+    {
+      "file": "ports.py",
+      "sha256": "431b54476e7de8a94c12cf935a30a3b49b911e208305fbe6bb7b23d72e37dbef",
+      "identical": true
+    },
+    {
+      "file": "resident.py",
+      "sha256": "a70da9f834fd05091ab011459e34fcff214bd41cb753f98ee9c088975c0a3c81",
+      "identical": true
+    },
+    {
+      "file": "augmentation.py",
+      "sha256": "1df813ddb66732d0775206e6a6df3346aa341f66b17f17b72f9a4cde5f73fe01",
+      "identical": true
+    },
+    {
+      "file": "simple_loss.py",
+      "sha256": "e96cc9272aa1e3b13a6f93b3674674df280e709c4ecde7098ad0dc1b73b8bfd3",
+      "identical": true
+    },
+    {
+      "file": "group_tree.py",
+      "sha256": "867ca3b84848ae78da25dd2a2db16018d722102c7bb5a34644492451efef65fd",
+      "identical": true
+    },
+    {
+      "file": "step_control.py",
+      "sha256": "795ddb45dd257e123f1880eea28b58502711807ee643bfcb51a7e72d484952da",
+      "identical": true
+    },
+    {
+      "file": "captured_projection.py",
+      "sha256": "dd031332127edd706c0e09f49a07f5e6133f5a9cd0f7fcd69d2246644cbb74c9",
+      "identical": true
+    },
+    {
+      "file": "predictor.py",
+      "sha256": "48a14f43d2ee4e42fe441b12f9ab637120ce9f55a402015c6b47d3f062f6c7cb",
+      "identical": true
+    }
+  ],
+  "plan_fields": {
+    "architecture": {
+      "width": 128,
+      "layers": 16,
+      "rectangle": true,
+      "ffn_dropout": 0.1,
+      "residual_dropout": 0.05,
+      "gate_init": 0.1
+    },
+    "parameters": 3490819,
+    "train_count": 32000,
+    "train_monitor_count": 500,
+    "dev_monitor_count": 500,
+    "data": "reference_workset_v6 frozen train first32000; original v5 first16000 nested unchanged; identical module-count histogram; prior E58/E74/E101 expansion exposure, not new unseen data",
+    "batch_size": 32,
+    "precision": "FP32, deterministic algorithms, no AMP or numerical-path changes inside run",
+    "seed": 0,
+    "threads": 4,
+    "maximum_seconds": null,
+    "maximum_epochs": null,
+    "optimizer": "AdamW weight_decay0.0003, global gradient clip1; per-module joint proposed-update bound0.005",
+    "augmentation": {
+      "axis_swap_probability": 0.5,
+      "seed_rule": "SeedSequence([20261104,seed,epoch]); member-index flags; independent sampling and Dropout streams",
+      "monitoring": "unaugmented original train500/dev500, eval mode; same fixed per-case Loss"
+    },
+    "network_ports": "per-module total weight and weighted centroid only; full port edges used only in loss"
+  },
+  "changes": [
+    "warm start E105 best58",
+    "new geometry/ref10 objective and frozen train500 scales",
+    "fresh AdamW and LR1e-4->5e-5 without protection",
+    "frozen parent and clean student trust forward",
+    "strict per-batch absolute and relative explosion abort"
+  ],
+  "test_read": false
+}

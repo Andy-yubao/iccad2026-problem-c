@@ -1,0 +1,306 @@
+{
+  "status": "models_staged_for_user_review",
+  "models": [
+    {
+      "id": "e42",
+      "experiment": "E42",
+      "owner": "history/20261103_final_delivery_consolidation/experiments/E42_joint_regularization",
+      "run": "20261023_rectangle_w96d12_ab_seed0",
+      "reason": "Historical mature reference/geometric baseline; compressed public port summaries; supplies a classic draft family.",
+      "chinese_reason": "历史成熟基线，提供原始reference/几何目标下的草稿风格。",
+      "origin_run": "history/20261103_final_delivery_consolidation/experiments/E42_joint_regularization/runs/20261023_rectangle_w96d12_ab_seed0",
+      "source_checkpoint": "history/20261103_final_delivery_consolidation/experiments/E42_joint_regularization/runs/20261023_rectangle_w96d12_ab_seed0/checkpoints/best.pt",
+      "checkpoint": "experiments/E103_offline_loss_alignment/assets/e42/best.pt",
+      "checkpoint_sha256": "12878108e9a58b8c195b314ba6586686c2a6e2796c1f4b6443e102b4db4224a6",
+      "model_tensor_sha256": "ebda320b22c2ad70e55ed8c52295a71502a9b038badaf6c41eebc0311cdf0d9d",
+      "model_config": {
+        "width": 96,
+        "layers": 12,
+        "rectangle": true,
+        "ffn_dropout": 0.05
+      },
+      "parameters": 1471539,
+      "stop_reason": "early_stop",
+      "completed_epochs": 54,
+      "best_epoch": 51,
+      "steps": 27000,
+      "copied_sources": [
+        {
+          "source": "history/20261103_final_delivery_consolidation/experiments/E42_joint_regularization/model.py",
+          "copy": "experiments/E103_offline_loss_alignment/sources/e42/model.py",
+          "sha256": "0d71c96c75976dc57d589d5709639291d1a30addffa8a5f0f2c53e2cb88a9089"
+        },
+        {
+          "source": "history/20261103_final_delivery_consolidation/experiments/E42_joint_regularization/features.py",
+          "copy": "experiments/E103_offline_loss_alignment/sources/e42/features.py",
+          "sha256": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73"
+        },
+        {
+          "source": "history/20261103_final_delivery_consolidation/experiments/E42_joint_regularization/batches.py",
+          "copy": "experiments/E103_offline_loss_alignment/sources/e42/batches.py",
+          "sha256": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92"
+        }
+      ],
+      "strict_state_load": true,
+      "finite_weights": true,
+      "source_matches_training_checkpoint_identity": true,
+      "evidence": {
+        "results_sha256": "4df4d8b740f774a5cafa30d41662a497a8231e2461111bd0ddf56272a76f5d6b",
+        "config_sha256": "b6d264c1a73815af7d95297ee0021e79ee8b4e358a1d9937fe5c532cc907719e"
+      },
+      "input_contract": "Original public-input representation retained; no labels/reference positions in network inputs",
+      "convergence_scope": "Completed original validation-based early stopping; not proof of global optimization or flat train Loss"
+    },
+    {
+      "id": "e68",
+      "experiment": "E68",
+      "owner": "history/20261029_model_research_consolidation/experiments/E68_port_tokens",
+      "run": "20261028_full_ports_nosummary_v2_seed0",
+      "reason": "Full public-port representation trained from scratch with original G; separates representation diversity from later task losses.",
+      "chinese_reason": "完整端口表示、原G目标；提供不同输入表示下的成熟草稿。",
+      "origin_run": "history/20261029_model_research_consolidation/experiments/E68_port_tokens/runs/20261028_full_ports_nosummary_v2_seed0",
+      "source_checkpoint": "history/20261029_model_research_consolidation/experiments/E68_port_tokens/runs/20261028_full_ports_nosummary_v2_seed0/checkpoints/best.pt",
+      "checkpoint": "experiments/E103_offline_loss_alignment/assets/e68/best.pt",
+      "checkpoint_sha256": "6ba07f27ec94274dc0601532693e8a405c803eb6e201b8ec50c20876cc587aad",
+      "model_tensor_sha256": "1729db68eab58f95eba8b21a7a8f4ffbb086a589181f5a8aa901fccd09103cc6",
+      "model_config": {
+        "width": 96,
+        "layers": 12,
+        "rectangle": true,
+        "ffn_dropout": 0.05,
+        "port_mode": "full",
+        "port_width": 24,
+        "port_scale": 0.1
+      },
+      "parameters": 1532883,
+      "stop_reason": "early_stop",
+      "completed_epochs": 57,
+      "best_epoch": 54,
+      "steps": 28500,
+      "copied_sources": [
+        {
+          "source": "history/20261029_model_research_consolidation/experiments/E68_port_tokens/model.py",
+          "copy": "experiments/E103_offline_loss_alignment/sources/e68/model.py",
+          "sha256": "f199c8a17416bb3acdb200a6e9a49f611afed22db67fc3eba47fa465b9dfa4e6"
+        },
+        {
+          "source": "history/20261029_model_research_consolidation/experiments/E68_port_tokens/features.py",
+          "copy": "experiments/E103_offline_loss_alignment/sources/e68/features.py",
+          "sha256": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73"
+        },
+        {
+          "source": "history/20261029_model_research_consolidation/experiments/E68_port_tokens/batches.py",
+          "copy": "experiments/E103_offline_loss_alignment/sources/e68/batches.py",
+          "sha256": "f93adb83e5d3728fae2544d2d49cdc37f5994daf5be8b5488b343379148fe32c"
+        },
+        {
+          "source": "history/20261029_model_research_consolidation/experiments/E68_port_tokens/base_model.py",
+          "copy": "experiments/E103_offline_loss_alignment/sources/e68/base_model.py",
+          "sha256": "0d71c96c75976dc57d589d5709639291d1a30addffa8a5f0f2c53e2cb88a9089"
+        },
+        {
+          "source": "history/20261029_model_research_consolidation/experiments/E68_port_tokens/ports.py",
+          "copy": "experiments/E103_offline_loss_alignment/sources/e68/ports.py",
+          "sha256": "98ca52b7ca6385095052e61ff745fa02271afa0bbe4fa173cf289bd94501443b"
+        }
+      ],
+      "strict_state_load": true,
+      "finite_weights": true,
+      "source_matches_training_checkpoint_identity": true,
+      "evidence": {
+        "results_sha256": "f016586251a43839c1f9e490a4601677c9df22dce3b88464c755e064ab26df71",
+        "config_sha256": "60aeca78ed4fce85ade7e5489b7ea8ed1e1bcbe2b8212a88d83f83b8d593a217"
+      },
+      "input_contract": "Original public-input representation retained; no labels/reference positions in network inputs",
+      "convergence_scope": "Completed original validation-based early stopping; not proof of global optimization or flat train Loss"
+    },
+    {
+      "id": "e70",
+      "experiment": "E70",
+      "owner": "history/20261029_model_research_consolidation/experiments/E70_reference_task_loss",
+      "run": "20261028_full_ports_taskloss_v1_seed0",
+      "reason": "Independent scratch training with explicit public task/overlap/wirelength objective; adds a different geometry trade-off.",
+      "chinese_reason": "独立从头训练的任务Loss模型，提供避碰、线长与紧凑度的不同取舍。",
+      "origin_run": "history/20261029_model_research_consolidation/experiments/E70_reference_task_loss/runs/20261028_full_ports_taskloss_v1_seed0",
+      "source_checkpoint": "history/20261029_model_research_consolidation/experiments/E70_reference_task_loss/runs/20261028_full_ports_taskloss_v1_seed0/checkpoints/best.pt",
+      "checkpoint": "experiments/E103_offline_loss_alignment/assets/e70/best.pt",
+      "checkpoint_sha256": "613e79ad60210124344d8d9055a83b9aad9b221a1371389d5439446080d0d8a5",
+      "model_tensor_sha256": "96db389ea84f3e2af983a7b63a4a3eebd6370e2aa9f2aa0091634076dc5d31e3",
+      "model_config": {
+        "width": 96,
+        "layers": 12,
+        "rectangle": true,
+        "ffn_dropout": 0.05,
+        "port_mode": "full",
+        "port_width": 24,
+        "port_scale": 0.1
+      },
+      "parameters": 1532883,
+      "stop_reason": "early_stop",
+      "completed_epochs": 74,
+      "best_epoch": 71,
+      "steps": 37000,
+      "copied_sources": [
+        {
+          "source": "history/20261029_model_research_consolidation/experiments/E70_reference_task_loss/model.py",
+          "copy": "experiments/E103_offline_loss_alignment/sources/e70/model.py",
+          "sha256": "f199c8a17416bb3acdb200a6e9a49f611afed22db67fc3eba47fa465b9dfa4e6"
+        },
+        {
+          "source": "history/20261029_model_research_consolidation/experiments/E70_reference_task_loss/features.py",
+          "copy": "experiments/E103_offline_loss_alignment/sources/e70/features.py",
+          "sha256": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73"
+        },
+        {
+          "source": "history/20261029_model_research_consolidation/experiments/E70_reference_task_loss/batches.py",
+          "copy": "experiments/E103_offline_loss_alignment/sources/e70/batches.py",
+          "sha256": "833f4b882bb9905d3ea5d2f9be25209daa8339ed029c1538ad7b045c2d4b26ae"
+        },
+        {
+          "source": "history/20261029_model_research_consolidation/experiments/E70_reference_task_loss/base_model.py",
+          "copy": "experiments/E103_offline_loss_alignment/sources/e70/base_model.py",
+          "sha256": "0d71c96c75976dc57d589d5709639291d1a30addffa8a5f0f2c53e2cb88a9089"
+        },
+        {
+          "source": "history/20261029_model_research_consolidation/experiments/E70_reference_task_loss/ports.py",
+          "copy": "experiments/E103_offline_loss_alignment/sources/e70/ports.py",
+          "sha256": "939436630a478758511f3c3adfb185db0cde33bb7d606fbbc8ae45117d69c740"
+        }
+      ],
+      "strict_state_load": true,
+      "finite_weights": true,
+      "source_matches_training_checkpoint_identity": true,
+      "evidence": {
+        "results_sha256": "882245d9d0e318cffcefdadbbc0f432feb4641a536f4dcb7e9ab0b170b85e19a",
+        "config_sha256": "b204233f506621bd209753979b503da7289a2179cfa871601be8177fe02c4826"
+      },
+      "input_contract": "Original public-input representation retained; no labels/reference positions in network inputs",
+      "convergence_scope": "Completed original validation-based early stopping; not proof of global optimization or flat train Loss"
+    },
+    {
+      "id": "e71",
+      "experiment": "E71",
+      "owner": "history/20261101_research_consolidation/experiments/E71_density_reference_curriculum",
+      "run": "20261028_full_ports_density_curriculum_v1_seed0",
+      "reason": "Completed density plus reference-curriculum training; adds compactness/interior-space organization behavior.",
+      "chinese_reason": "密度项＋reference课程训练，补充紧凑布局与空间组织取舍。",
+      "origin_run": "history/20261101_research_consolidation/experiments/E71_density_reference_curriculum/runs/20261028_full_ports_density_curriculum_v1_seed0",
+      "source_checkpoint": "history/20261101_research_consolidation/experiments/E71_density_reference_curriculum/runs/20261028_full_ports_density_curriculum_v1_seed0/checkpoints/best.pt",
+      "checkpoint": "experiments/E103_offline_loss_alignment/assets/e71/best.pt",
+      "checkpoint_sha256": "c151dcd017f62654fb01f492097057a1893d1f6f275f69e274f6fde90dd50f14",
+      "model_tensor_sha256": "37c9cf4a6aa590970a1316ca8d772141901d9294216e74c5a1775ea26881342e",
+      "model_config": {
+        "width": 96,
+        "layers": 12,
+        "rectangle": true,
+        "ffn_dropout": 0.05,
+        "port_mode": "full",
+        "port_width": 24,
+        "port_scale": 0.1
+      },
+      "parameters": 1532883,
+      "stop_reason": "early_stop",
+      "completed_epochs": 70,
+      "best_epoch": 67,
+      "steps": 35000,
+      "copied_sources": [
+        {
+          "source": "history/20261101_research_consolidation/experiments/E71_density_reference_curriculum/model.py",
+          "copy": "experiments/E103_offline_loss_alignment/sources/e71/model.py",
+          "sha256": "f199c8a17416bb3acdb200a6e9a49f611afed22db67fc3eba47fa465b9dfa4e6"
+        },
+        {
+          "source": "history/20261101_research_consolidation/experiments/E71_density_reference_curriculum/features.py",
+          "copy": "experiments/E103_offline_loss_alignment/sources/e71/features.py",
+          "sha256": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73"
+        },
+        {
+          "source": "history/20261101_research_consolidation/experiments/E71_density_reference_curriculum/batches.py",
+          "copy": "experiments/E103_offline_loss_alignment/sources/e71/batches.py",
+          "sha256": "833f4b882bb9905d3ea5d2f9be25209daa8339ed029c1538ad7b045c2d4b26ae"
+        },
+        {
+          "source": "history/20261101_research_consolidation/experiments/E71_density_reference_curriculum/base_model.py",
+          "copy": "experiments/E103_offline_loss_alignment/sources/e71/base_model.py",
+          "sha256": "0d71c96c75976dc57d589d5709639291d1a30addffa8a5f0f2c53e2cb88a9089"
+        },
+        {
+          "source": "history/20261101_research_consolidation/experiments/E71_density_reference_curriculum/ports.py",
+          "copy": "experiments/E103_offline_loss_alignment/sources/e71/ports.py",
+          "sha256": "431b54476e7de8a94c12cf935a30a3b49b911e208305fbe6bb7b23d72e37dbef"
+        }
+      ],
+      "strict_state_load": true,
+      "finite_weights": true,
+      "source_matches_training_checkpoint_identity": true,
+      "evidence": {
+        "results_sha256": "3ab3a318f0f6fdf20f8c749d5ae89c0caed1fa2e649b4b8c49e38e0449f2644f",
+        "config_sha256": "f7ddd6de1c14c475a0574b7e0f8481850ebc2ffd0d0649cf4606fec3a4bb1b91"
+      },
+      "input_contract": "Original public-input representation retained; no labels/reference positions in network inputs",
+      "convergence_scope": "Completed original validation-based early stopping; not proof of global optimization or flat train Loss"
+    },
+    {
+      "id": "e98_generalization",
+      "experiment": "E98 generalization baseline",
+      "owner": "experiments/E98_loss_weight_learning",
+      "run": "20261104_generalization96_seed0",
+      "reason": "Completed scratch-trained enhanced baseline with axis-swap and stronger dropout; current unmodified mature baseline, not any discarded search branch.",
+      "chinese_reason": "轴交换与增强Dropout的独立成熟基线；只取泛化基线，不取已放弃调权分支。",
+      "origin_run": "experiments/E98_loss_weight_learning/runs/20261104_generalization96_seed0",
+      "source_checkpoint": "experiments/E98_loss_weight_learning/runs/20261104_generalization96_seed0/checkpoints/best.pt",
+      "checkpoint": "experiments/E103_offline_loss_alignment/assets/e98_generalization/best.pt",
+      "checkpoint_sha256": "3f7ca0086af8a13bd52eedf0635117312e5c0a72e80e423e9cee3db5ca9b87ea",
+      "model_tensor_sha256": "67e4ca2a8c01c8f06656b1d9c0b9967cf7fae3ed6874fda2452b546d65539010",
+      "model_config": {
+        "width": 96,
+        "layers": 12,
+        "rectangle": true,
+        "ffn_dropout": 0.1,
+        "residual_dropout": 0.05
+      },
+      "parameters": 1471539,
+      "stop_reason": "early_stop",
+      "completed_epochs": 71,
+      "best_epoch": 71,
+      "steps": 35500,
+      "copied_sources": [
+        {
+          "source": "experiments/E98_loss_weight_learning/generalization_baseline/model.py",
+          "copy": "experiments/E103_offline_loss_alignment/sources/e98_generalization/model.py",
+          "sha256": "f530ecb88ce14df5985f20f8150bc60d74e8f4533e8ec79f2e9a8842e0c9d93b"
+        },
+        {
+          "source": "experiments/E98_loss_weight_learning/features.py",
+          "copy": "experiments/E103_offline_loss_alignment/sources/e98_generalization/features.py",
+          "sha256": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73"
+        },
+        {
+          "source": "experiments/E98_loss_weight_learning/batches.py",
+          "copy": "experiments/E103_offline_loss_alignment/sources/e98_generalization/batches.py",
+          "sha256": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92"
+        },
+        {
+          "source": "experiments/E98_loss_weight_learning/ports.py",
+          "copy": "experiments/E103_offline_loss_alignment/sources/e98_generalization/ports.py",
+          "sha256": "431b54476e7de8a94c12cf935a30a3b49b911e208305fbe6bb7b23d72e37dbef"
+        }
+      ],
+      "strict_state_load": true,
+      "finite_weights": true,
+      "source_matches_training_checkpoint_identity": true,
+      "evidence": {
+        "results_sha256": "650a2cb3532ca350ee103784bb32246892d527a9fc345b5df9944c2c48c3f207",
+        "config_sha256": "9a8dd35cd4409685accaf11d6926e880da00e9664656216b54941c8cca8bfaba"
+      },
+      "input_contract": "Original public-input representation retained; no labels/reference positions in network inputs",
+      "convergence_scope": "Completed original validation-based early stopping; not proof of global optimization or flat train Loss"
+    }
+  ],
+  "count": 5,
+  "distinct_model_tensor_hashes": 5,
+  "dataset_payloads_read": 0,
+  "generated_drafts": 0,
+  "postprocessing_calls": 0,
+  "test_read": false
+}

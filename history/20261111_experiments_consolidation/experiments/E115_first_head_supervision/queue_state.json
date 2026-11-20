@@ -1,0 +1,48 @@
+{
+  "status": "complete",
+  "pid": 14464,
+  "started_at": "2026-11-07T15:53:42.151963+00:00",
+  "jobs": [
+    {
+      "experiment": "E114_supervision_placement",
+      "arm": "staged",
+      "resume": true,
+      "log": "staged_resume"
+    },
+    {
+      "experiment": "E115_first_head_supervision",
+      "arm": "first9",
+      "resume": false,
+      "log": "first9"
+    }
+  ],
+  "completed": [
+    {
+      "experiment": "E114_supervision_placement",
+      "arm": "staged",
+      "resume": true,
+      "log": "staged_resume",
+      "status": "early_stop",
+      "epochs": 49,
+      "steps": 55125,
+      "completed_at": "2026-11-07T17:34:39.354525+00:00"
+    },
+    {
+      "experiment": "E115_first_head_supervision",
+      "arm": "first9",
+      "resume": false,
+      "log": "first9",
+      "status": "early_stop",
+      "epochs": 50,
+      "steps": 56250,
+      "completed_at": "2026-11-07T19:08:20.265782+00:00"
+    }
+  ],
+  "active": null,
+  "data": "Same parent train36000 and original train/dev500 as E114 completed two arms",
+  "test_read": false,
+  "automatic_Q_evaluation": false,
+  "scope": "Only E114 staged resume -> E115 first9 scratch",
+  "updated_at": "2026-11-07T19:08:20.266780+00:00",
+  "completed_at": "2026-11-07T19:08:20.266780+00:00"
+}

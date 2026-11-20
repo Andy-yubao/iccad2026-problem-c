@@ -1,0 +1,49 @@
+{
+  "status": "failed",
+  "formal_training_started": false,
+  "unique_training_cases": 5,
+  "dev_payloads": 0,
+  "test_payloads": 0,
+  "postprocessing_calls": 0,
+  "Q_calls": 0,
+  "cache": {
+    "train": {
+      "members": 36000,
+      "chunks": 141,
+      "metadata_only": true
+    },
+    "dev_monitor500": {
+      "members": 500,
+      "chunks": 8,
+      "metadata_only": true
+    }
+  },
+  "strong_order": {
+    "wrong_order_has_restoring_gradient": true,
+    "loss": 2.200000047683716
+  },
+  "members": [
+    [
+      "worker_31/layouts_3136.th",
+      43
+    ],
+    [
+      "worker_60/layouts_9184.th",
+      21
+    ],
+    [
+      "worker_85/layouts_6160.th",
+      10
+    ],
+    [
+      "worker_43/layouts_6496.th",
+      1
+    ],
+    [
+      "worker_24/layouts_9072.th",
+      53
+    ]
+  ],
+  "error": "TypeError(\"argsort() received an invalid combination of arguments - got (int, stable=bool), but expected one of:\\n * (*, bool stable, int dim = -1, bool descending = False)\\n * (int dim = -1, bool descending = False)\\n      didn't match because some of the keywords were incorrect: stable\\n * (name dim, bool descending = False)\\n      didn't match because some of the keywords were incorrect: stable\\n\")",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E138_topology_rewrite\\preflight.py\", line 92, in main\n    partner,_=model.corruption_pattern(public)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E138_topology_rewrite\\e119_model.py\", line 69, in corruption_pattern\n    order=score.masked_fill(~eligible,2.).argsort(-1,stable=True)\nTypeError: argsort() received an invalid combination of arguments - got (int, stable=bool), but expected one of:\n * (*, bool stable, int dim = -1, bool descending = False)\n * (int dim = -1, bool descending = False)\n      didn't match because some of the keywords were incorrect: stable\n * (name dim, bool descending = False)\n      didn't match because some of the keywords were incorrect: stable\n\n"
+}

@@ -1,0 +1,76 @@
+{
+  "authorization": "2026-11-18 user requested directly attaching trained initial generator to existing downstream networks and examining Loss",
+  "initial_checkpoint": {
+    "checkpoint": "experiments\\E149_role_initial\\runs\\e149_role_initial_seed0\\checkpoints\\best.pt",
+    "checkpoint_sha256": "d121e2a6b89dccf469aeae7127bfa6888ec5fcd79590a3c42096b66daaf35132",
+    "best_epoch": 52,
+    "selection": "initial_no_overlap dev500 arithmetic mean",
+    "own_selection_loss": 0.38238882398605345
+  },
+  "refiner_checkpoint": {
+    "checkpoint": "experiments/E148_shared_functional_shape/runs/e148_shared_functional_shape_seed0/checkpoints/best.pt",
+    "checkpoint_sha256": "20d2e619a985067bd7fb279c350edeef7881b715bed7cb28a1889adcd05d4dfd",
+    "arm": "e148_shared_functional_shape",
+    "best_epoch": 46,
+    "own_selection_loss": 0.30993410532176496,
+    "common_final_dev_loss": 0.2971848521232605,
+    "common_final_train_loss": 0.2831054771989584,
+    "own_new_final_dev_loss": 0.2986479883342981,
+    "training_seconds": 11070.616320399975,
+    "training_epochs": 49,
+    "training_steps": 27587,
+    "parameters": 678941,
+    "frozen_before_Q": true
+  },
+  "routes": {
+    "standard": [
+      0,
+      0,
+      1,
+      1,
+      2,
+      2
+    ],
+    "extended": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2
+    ]
+  },
+  "interface": "Only raw normalized center_x/center_y/log_aspect from E149; E148 uses its own public-only encoder, resets dynamic hidden at every two-layer unit",
+  "dataset": "Original fixed dev500, exact same order, CPU role cache reused, batch64",
+  "metrics": "Complete original single-output Loss and no-overlap Loss at initial and every real sublayer; same coefficients, no auxiliary weighting",
+  "selection": "Original frozen own-Loss-best E149 best52 and E148 best46, no new weight/depth selection",
+  "diagnostic_source_sha256": "f6df9b1f01504800cd325e3df93ca150ee8c6578e6cc408bd72fb2e6fe12f135",
+  "isolated_refiner_sources": {
+    "model.py": {
+      "source": "experiments\\E148_shared_functional_shape\\model.py",
+      "sha256": "66e900878cbb16d45756603bc437532d619928bd49512c063db7769089aa986b"
+    },
+    "geometry_feedback.py": {
+      "source": "experiments\\E148_shared_functional_shape\\geometry_feedback.py",
+      "sha256": "8e66a511ce8c4804dbd4ee67f09b84f1b707a7f278f58e1acd07f344adb74f0c"
+    },
+    "shape_feedback.py": {
+      "source": "experiments\\E148_shared_functional_shape\\shape_feedback.py",
+      "sha256": "2e362a9beeb43b0d7cc2d67bd333646cb84c1f8d4b8aa98c0b07420ecc08e742"
+    },
+    "e119_model.py": {
+      "source": "experiments\\E148_shared_functional_shape\\e119_model.py",
+      "sha256": "437bb5027389269b5ee08cfc98e7e65e8cab2dd2dbf5c3415618ba122f9dc636"
+    },
+    "original_model.py": {
+      "source": "experiments\\E148_shared_functional_shape\\original_model.py",
+      "sha256": "0d5f7a0f897653155d5405e07aab9357b46b52bca4ddedd4b2cb11f05151dc82"
+    }
+  },
+  "optimizer_updates": 0,
+  "postprocessing_calls": 0,
+  "Q_calls": 0,
+  "test_read": false
+}

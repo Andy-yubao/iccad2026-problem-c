@@ -1,0 +1,105 @@
+{
+  "models": {
+    "e152_s2_ref": {
+      "ordinary20": {
+        "S0": {
+          "cases": 20,
+          "cases_with_complete_side_swap": 2,
+          "complete_side_swap_pairs": 8,
+          "group_near_edges_added": 29,
+          "group_near_edges_removed": 9
+        },
+        "S1": {
+          "cases": 20,
+          "cases_with_complete_side_swap": 0,
+          "complete_side_swap_pairs": 0,
+          "group_near_edges_added": 34,
+          "group_near_edges_removed": 22
+        },
+        "S2": {
+          "cases": 20,
+          "cases_with_complete_side_swap": 0,
+          "complete_side_swap_pairs": 0,
+          "group_near_edges_added": 76,
+          "group_near_edges_removed": 30
+        }
+      },
+      "all_selected_unique": {
+        "S0": {
+          "cases": 29,
+          "cases_with_complete_side_swap": 4,
+          "complete_side_swap_pairs": 12,
+          "group_near_edges_added": 37,
+          "group_near_edges_removed": 9
+        },
+        "S1": {
+          "cases": 29,
+          "cases_with_complete_side_swap": 0,
+          "complete_side_swap_pairs": 0,
+          "group_near_edges_added": 40,
+          "group_near_edges_removed": 29
+        },
+        "S2": {
+          "cases": 29,
+          "cases_with_complete_side_swap": 0,
+          "complete_side_swap_pairs": 0,
+          "group_near_edges_added": 97,
+          "group_near_edges_removed": 34
+        }
+      }
+    },
+    "e152_s2_no_ref": {
+      "ordinary20": {
+        "S0": {
+          "cases": 20,
+          "cases_with_complete_side_swap": 2,
+          "complete_side_swap_pairs": 8,
+          "group_near_edges_added": 29,
+          "group_near_edges_removed": 9
+        },
+        "S1": {
+          "cases": 20,
+          "cases_with_complete_side_swap": 0,
+          "complete_side_swap_pairs": 0,
+          "group_near_edges_added": 34,
+          "group_near_edges_removed": 22
+        },
+        "S2": {
+          "cases": 20,
+          "cases_with_complete_side_swap": 0,
+          "complete_side_swap_pairs": 0,
+          "group_near_edges_added": 105,
+          "group_near_edges_removed": 28
+        }
+      },
+      "all_selected_unique": {
+        "S0": {
+          "cases": 29,
+          "cases_with_complete_side_swap": 3,
+          "complete_side_swap_pairs": 11,
+          "group_near_edges_added": 33,
+          "group_near_edges_removed": 10
+        },
+        "S1": {
+          "cases": 29,
+          "cases_with_complete_side_swap": 0,
+          "complete_side_swap_pairs": 0,
+          "group_near_edges_added": 40,
+          "group_near_edges_removed": 26
+        },
+        "S2": {
+          "cases": 29,
+          "cases_with_complete_side_swap": 0,
+          "complete_side_swap_pairs": 0,
+          "group_near_edges_added": 119,
+          "group_near_edges_removed": 33
+        }
+      }
+    }
+  },
+  "matched_cases_checked": 23,
+  "L0_through_L8_bitwise_equal": true,
+  "warning": "Selected cases only; strict separated-pair reversal and near-contact diagnostics are not an exhaustive topology test",
+  "complete_swap_definition": "Pair completely separated along x or y at input and output, order reversed; separation margin > 1% of min module sqrt(public area) at both endpoints",
+  "near_contact_definition": "Same-group edge distance <=1% min sqrt(public area), orthogonal overlap > same tolerance; excludes corner-only contact"
+}

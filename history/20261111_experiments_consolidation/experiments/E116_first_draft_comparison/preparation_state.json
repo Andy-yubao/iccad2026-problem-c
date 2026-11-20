@@ -1,0 +1,31 @@
+{
+  "status": "prepared_training_disabled",
+  "experiment": "E116_first_draft_comparison",
+  "arms": {
+    "original4": 207987,
+    "new_first": 209891
+  },
+  "preflight_status": "passed",
+  "preflight_sha256": "b6684e43fa73fa2e25fad62288fd571b7ea8bfc0e4091cb0278261e28f89dc38",
+  "source_identity_matches": true,
+  "training_enabled": false,
+  "actual_updates_authorized": false,
+  "optimizer_updates": 0,
+  "training_started": false,
+  "run_directories": 0,
+  "checkpoints": 0,
+  "automatic_queue": false,
+  "train_payload_members": 5,
+  "dev_payloads": 0,
+  "test_payloads": 0,
+  "postprocessing_calls": 0,
+  "Q_evaluations": 0,
+  "old_experiment_sources_unchanged": true,
+  "STOP_present": true,
+  "both_launch_entries_rejected": {
+    "original4": true,
+    "new_first": true
+  },
+  "failure_evidence": "preflight_attempt1_cublas.json",
+  "note": "Only preparation; no background job and no new training authorization."
+}

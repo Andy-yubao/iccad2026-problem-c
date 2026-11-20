@@ -1,0 +1,26 @@
+{
+  "status": "priority_evaluation_registered",
+  "old_controller": {
+    "controller.py": "ff5d654527bfd7b959390e11e00524c4d603cc67711f8319699de76942a41415",
+    "evaluate.py": "7b6e4253c4cfbd9ac4b66ff1e5a8965b10d5e75a6bc4ef98d5e81761ff90188d",
+    "prepare.py": "c833fed3c6390997d1590cb29570a9cadee274195717ecc90190f8011d8e5653",
+    "plan.json": "fcdd9a8ffa8519fc904c37f3ae3eaf6a528b5f550b387102da60e9a7c40fbd47",
+    "sources.json": "f3736de11e3bdcb553cf915e0733a49b99038152eb616e639985873be0bbeb3d"
+  },
+  "new_controller": {
+    "controller.py": "adb271f32ff509acc2cb0bf7b404f88540366b1a69cf47736e9073c88665d6b5",
+    "evaluate.py": "37b43ebc86eebdb2f271e6a9fa4445388d40878acfebc9d19378b239f36401d8",
+    "prepare.py": "c833fed3c6390997d1590cb29570a9cadee274195717ecc90190f8011d8e5653",
+    "plan.json": "83d587b5bb081b99785a1542e7e1843e280a1ba80077d5eb4ca44119b644b5dd",
+    "sources.json": "f3736de11e3bdcb553cf915e0733a49b99038152eb616e639985873be0bbeb3d"
+  },
+  "change": "Scheduling-only: accept verified user-stopped predecessor instead of requiring completed64k chain",
+  "model_sha256": "028ea3aa124c8cd9e7c3cc7bf8587c699ab9b4932f256899e3780d4d8c8816e0",
+  "solver_sources_unchanged": true,
+  "members_unchanged": true,
+  "old_queue_stopped": true,
+  "training_stop_verification_sha256": "d5ebc1408ad264229a8e14a6945afe0b35d35aad83579c027385869f50b7ddb6",
+  "test_payloads_read_before_change": false,
+  "no_training_auto_resume": true,
+  "initial_guard_rejection": "Scheduling registration had not completed; controller guard rejected before any evaluation; source archive LF bytes restored and old SHA verified"
+}

@@ -1,0 +1,370 @@
+{
+  "status": "complete",
+  "count": 500,
+  "source_shards": 299,
+  "best_epoch": 46,
+  "checkpoint_sha256": "20d2e619a985067bd7fb279c350edeef7881b715bed7cb28a1889adcd05d4dfd",
+  "associations": {
+    "L4_full_vs_L12_full": {
+      "pearson_r": 0.9401352924307951,
+      "spearman_rho": 0.9279248316993268,
+      "pearson_cluster95": [
+        0.9241894970671638,
+        0.9532732190981618
+      ],
+      "spearman_cluster95": [
+        0.9108022672076315,
+        0.9400105637302182
+      ],
+      "descriptive_linear_R_squared": 0.8838543680739366,
+      "tail_overlap": {
+        "50": {
+          "final_worst_count": 50,
+          "also_L4_worst_same_count": 42,
+          "fraction": 0.84,
+          "expected_overlap_if_independent": 5.0,
+          "also_L4_worst100_count": 49,
+          "final_worst_L4_loss_mean": 0.919045786857605,
+          "others_L4_loss_mean": 0.4956617604692777
+        },
+        "100": {
+          "final_worst_count": 100,
+          "also_L4_worst_same_count": 81,
+          "fraction": 0.81,
+          "expected_overlap_if_independent": 20.0,
+          "also_L4_worst100_count": 81,
+          "final_worst_L4_loss_mean": 0.8131823134422302,
+          "others_L4_loss_mean": 0.4692046255245805
+        }
+      },
+      "L4_quintiles": [
+        {
+          "quintile": 1,
+          "count": 100,
+          "L4_mean": 0.33465769574046134,
+          "final_mean": 0.14873178072273732
+        },
+        {
+          "quintile": 2,
+          "count": 100,
+          "L4_mean": 0.41589795023202897,
+          "final_mean": 0.20293786689639093
+        },
+        {
+          "quintile": 3,
+          "count": 100,
+          "L4_mean": 0.49845139861106874,
+          "final_mean": 0.26433762729167937
+        },
+        {
+          "quintile": 4,
+          "count": 100,
+          "L4_mean": 0.6110882008075714,
+          "final_mean": 0.3590096555650234
+        },
+        {
+          "quintile": 5,
+          "count": 100,
+          "L4_mean": 0.8299055701494217,
+          "final_mean": 0.5182230111956596
+        }
+      ]
+    },
+    "L4_full_vs_L16_full": {
+      "pearson_r": 0.9336021423860517,
+      "spearman_rho": 0.9176771747086988,
+      "pearson_cluster95": [
+        0.915378429843063,
+        0.9485647084031114
+      ],
+      "spearman_cluster95": [
+        0.8978675512100882,
+        0.9314697807225002
+      ],
+      "descriptive_linear_R_squared": 0.8716129602678254,
+      "tail_overlap": {
+        "50": {
+          "final_worst_count": 50,
+          "also_L4_worst_same_count": 41,
+          "fraction": 0.82,
+          "expected_overlap_if_independent": 5.0,
+          "also_L4_worst100_count": 49,
+          "final_worst_L4_loss_mean": 0.9187675034999847,
+          "others_L4_loss_mean": 0.49569268084234663
+        },
+        "100": {
+          "final_worst_count": 100,
+          "also_L4_worst_same_count": 80,
+          "fraction": 0.8,
+          "expected_overlap_if_independent": 20.0,
+          "also_L4_worst100_count": 80,
+          "final_worst_L4_loss_mean": 0.8118562036752701,
+          "others_L4_loss_mean": 0.4695361529663205
+        }
+      },
+      "L4_quintiles": [
+        {
+          "quintile": 1,
+          "count": 100,
+          "L4_mean": 0.33465769574046134,
+          "final_mean": 0.14712933599948883
+        },
+        {
+          "quintile": 2,
+          "count": 100,
+          "L4_mean": 0.41589795023202897,
+          "final_mean": 0.20077915892004966
+        },
+        {
+          "quintile": 3,
+          "count": 100,
+          "L4_mean": 0.49845139861106874,
+          "final_mean": 0.2594525595009327
+        },
+        {
+          "quintile": 4,
+          "count": 100,
+          "L4_mean": 0.6110882008075714,
+          "final_mean": 0.3534698534011841
+        },
+        {
+          "quintile": 5,
+          "count": 100,
+          "L4_mean": 0.8299055701494217,
+          "final_mean": 0.5117430558800697
+        }
+      ]
+    },
+    "L4_stage_no_overlap_vs_L12_full": {
+      "pearson_r": 0.9682506152081003,
+      "spearman_rho": 0.9549738268146792,
+      "pearson_cluster95": [
+        0.9580214878972982,
+        0.9755248801916531
+      ],
+      "spearman_cluster95": [
+        0.9425073384112128,
+        0.9633531673516134
+      ],
+      "descriptive_linear_R_squared": 0.9375092538508647,
+      "tail_overlap": {
+        "50": {
+          "final_worst_count": 50,
+          "also_L4_worst_same_count": 47,
+          "fraction": 0.94,
+          "expected_overlap_if_independent": 5.0,
+          "also_L4_worst100_count": 50,
+          "final_worst_L4_loss_mean": 0.6289090430736541,
+          "others_L4_loss_mean": 0.3158011125193702
+        },
+        "100": {
+          "final_worst_count": 100,
+          "also_L4_worst_same_count": 86,
+          "fraction": 0.86,
+          "expected_overlap_if_independent": 20.0,
+          "also_L4_worst100_count": 86,
+          "final_worst_L4_loss_mean": 0.5454194515943527,
+          "others_L4_loss_mean": 0.29753501906991003
+        }
+      },
+      "L4_quintiles": [
+        {
+          "quintile": 1,
+          "count": 100,
+          "L4_mean": 0.21353875413537027,
+          "final_mean": 0.14586070843040944
+        },
+        {
+          "quintile": 2,
+          "count": 100,
+          "L4_mean": 0.2626761810481548,
+          "final_mean": 0.2010772109031677
+        },
+        {
+          "quintile": 3,
+          "count": 100,
+          "L4_mean": 0.3174682104587555,
+          "final_mean": 0.2678933051228523
+        },
+        {
+          "quintile": 4,
+          "count": 100,
+          "L4_mean": 0.39186185896396636,
+          "final_mean": 0.35612851291894915
+        },
+        {
+          "quintile": 5,
+          "count": 100,
+          "L4_mean": 0.550014523267746,
+          "final_mean": 0.5222802042961121
+        }
+      ]
+    },
+    "L4_stage_no_overlap_vs_L16_full": {
+      "pearson_r": 0.9626489083443166,
+      "spearman_rho": 0.9449488904743355,
+      "pearson_cluster95": [
+        0.9502387816385987,
+        0.9711665209742605
+      ],
+      "spearman_cluster95": [
+        0.9297688319006713,
+        0.9552192746887964
+      ],
+      "descriptive_linear_R_squared": 0.9266929207365044,
+      "tail_overlap": {
+        "50": {
+          "final_worst_count": 50,
+          "also_L4_worst_same_count": 45,
+          "fraction": 0.9,
+          "expected_overlap_if_independent": 5.0,
+          "also_L4_worst100_count": 50,
+          "final_worst_L4_loss_mean": 0.6262555426359177,
+          "others_L4_loss_mean": 0.31609594590134094
+        },
+        "100": {
+          "final_worst_count": 100,
+          "also_L4_worst_same_count": 83,
+          "fraction": 0.83,
+          "expected_overlap_if_independent": 20.0,
+          "also_L4_worst100_count": 83,
+          "final_worst_L4_loss_mean": 0.5437040415406227,
+          "others_L4_loss_mean": 0.29796387158334253
+        }
+      },
+      "L4_quintiles": [
+        {
+          "quintile": 1,
+          "count": 100,
+          "L4_mean": 0.21353875413537027,
+          "final_mean": 0.14488643556833267
+        },
+        {
+          "quintile": 2,
+          "count": 100,
+          "L4_mean": 0.2626761810481548,
+          "final_mean": 0.1974990940093994
+        },
+        {
+          "quintile": 3,
+          "count": 100,
+          "L4_mean": 0.3174682104587555,
+          "final_mean": 0.2640726053714752
+        },
+        {
+          "quintile": 4,
+          "count": 100,
+          "L4_mean": 0.39186185896396636,
+          "final_mean": 0.351723250746727
+        },
+        {
+          "quintile": 5,
+          "count": 100,
+          "L4_mean": 0.550014523267746,
+          "final_mean": 0.5143925780057907
+        }
+      ]
+    }
+  },
+  "L4_component_vs_final": {
+    "reference_weighted": {
+      "L12_full": {
+        "pearson_r": 0.9716939601269176,
+        "spearman_rho": 0.959820095280381
+      },
+      "L16_full": {
+        "pearson_r": 0.9665278402724097,
+        "spearman_rho": 0.9503235452941811
+      }
+    },
+    "overlap_weighted": {
+      "L12_full": {
+        "pearson_r": 0.7263331787674785,
+        "spearman_rho": 0.741127188508754
+      },
+      "L16_full": {
+        "pearson_r": 0.7192215859512732,
+        "spearman_rho": 0.731815631262525
+      }
+    },
+    "wire_compact_weighted": {
+      "L12_full": {
+        "pearson_r": -0.3623831848135007,
+        "spearman_rho": -0.32925770103080415
+      },
+      "L16_full": {
+        "pearson_r": -0.3630772589727121,
+        "spearman_rho": -0.3291770607082428
+      }
+    },
+    "grouping_weighted": {
+      "L12_full": {
+        "pearson_r": 0.3417157365513738,
+        "spearman_rho": 0.38816574466297865
+      },
+      "L16_full": {
+        "pearson_r": 0.33615453237134657,
+        "spearman_rho": 0.38086731546926184
+      }
+    },
+    "boundary_weighted": {
+      "L12_full": {
+        "pearson_r": 0.4328472803021678,
+        "spearman_rho": 0.3989816279265117
+      },
+      "L16_full": {
+        "pearson_r": 0.4269129918796299,
+        "spearman_rho": 0.39055375421501687
+      }
+    },
+    "public_shape_weighted": {
+      "L12_full": {
+        "pearson_r": 0.0031473752843829174,
+        "spearman_rho": 0.021669398677594712
+      },
+      "L16_full": {
+        "pearson_r": 0.00351194649519131,
+        "spearman_rho": 0.022583322333289333
+      }
+    },
+    "public_preplaced_position_weighted": {
+      "L12_full": {
+        "pearson_r": -0.02368080968041604,
+        "spearman_rho": -0.011536846147384589
+      },
+      "L16_full": {
+        "pearson_r": -0.026706933662893097,
+        "spearman_rho": -0.010972747890991563
+      }
+    }
+  },
+  "full_loss_without_reference_component": {
+    "L12": {
+      "pearson_r": 0.6220436287724279,
+      "spearman_rho": 0.6187722030888123
+    },
+    "L16": {
+      "pearson_r": 0.5027172171550801,
+      "spearman_rho": 0.49151236604946413
+    }
+  },
+  "means": {
+    "L4_full": 0.5380001631081104,
+    "L4_stage_no_overlap": 0.3471119055747986,
+    "L12_full": 0.2986479883342981,
+    "L16_full": 0.294514792740345
+  },
+  "notes": [
+    "All measurements are paired frozen best46 dev500 records; no new model inference or data sampling.",
+    "L4 stage objective excludes direct overlap exactly as training; full L4 includes it. Neither is multiplied by auxiliary weight. Final Loss is single output full Loss.",
+    "Correlation and descriptive R-squared are in-sample association, not causal attribution or held-out prediction accuracy.",
+    "Reference fitting appears in both early and final totals; correlation alone does not establish that early topology causes final errors.",
+    "Bootstrap respects repeated cases sharing299 source shards; single checkpoint and repeatedly used dev500 still limit generalization."
+  ],
+  "training_updates": 0,
+  "inference_calls": 0,
+  "postprocessing_calls": 0,
+  "Q_calls": 0,
+  "test_read": false,
+  "elapsed_seconds": 5.936029700038489
+}

@@ -1,0 +1,106 @@
+{
+  "revision": "E154.mib_role_topology.v1.seed0",
+  "status": "authorized_L0_only",
+  "authorization": "2026-11-19 user authorized scratch L0 retraining without grouping bottleneck. Only future S0/L4 gets bottleneck at absolute weight0.2; backend training/evaluation not authorized in this run.",
+  "seed": 0,
+  "train_count": 32000,
+  "train_monitor_count": 500,
+  "dev_monitor_count": 500,
+  "batch_size": 64,
+  "steps_per_epoch": 500,
+  "dataset": "reference_workset_v6 train prefix32000; fixed original train_monitor500/dev_monitor500",
+  "registry_sha256": "2fe459b0a785ffb6995dd3e5966cd47337b948b15ec4bb4d4c19ffe169e404ae",
+  "data_identity": "6d52ec3f8852049e136fdd67478d7aa001e1a8999588ae30b3d03427805d4b2c",
+  "parameters": {
+    "e154_initial": 116043,
+    "e154_backend": 733575
+  },
+  "trainable_parameters": {
+    "e154_initial": 116043,
+    "e154_backend": 617532
+  },
+  "maximum_epochs": 200,
+  "maximum_seconds": 14400,
+  "training_budget_note": "Unchanged E153 L0 scratch engine, seed0, batch64,32k,4h/200epoch, same LR/earlystop. No old weights/Adam.",
+  "lr_levels": [
+    0.001,
+    0.00025,
+    0.0001,
+    5e-05
+  ],
+  "stages": [
+    "scratch L0 only; freeze own-Loss dev500 best; stop"
+  ],
+  "preflight_train_indices": [
+    0,
+    1,
+    2,
+    16000,
+    31999
+  ],
+  "initialization": "No historical checkpoints or optimizers; stage2 uses only this experiment newly trained L0",
+  "loss": {
+    "e154_initial": {
+      "version": "E154.mib_grouping.v1",
+      "arm": "e154_initial",
+      "layer_weights": {
+        "0": 1.0
+      },
+      "reference_coefficients": {
+        "0": 1.0
+      },
+      "no_overlap_layers": [
+        0
+      ],
+      "mib": true,
+      "predict_all": true,
+      "grouping_bottleneck_weight_by_layer": {
+        "0": 0.0
+      },
+      "mib_weight": 0.6673664216670459,
+      "S2_drift_coefficient": 0.2
+    },
+    "e154_backend": {
+      "version": "E154.mib_grouping.v1",
+      "arm": "e154_backend",
+      "layer_weights": {
+        "4": 0.1,
+        "8": 0.1,
+        "12": 0.8
+      },
+      "reference_coefficients": {
+        "4": 0.75,
+        "8": 0.0,
+        "12": 0.0
+      },
+      "no_overlap_layers": [
+        4
+      ],
+      "mib": true,
+      "predict_all": true,
+      "grouping_bottleneck_weight_by_layer": {
+        "4": 0.2,
+        "8": 0.0,
+        "12": 0.0
+      },
+      "mib_weight": 0.6673664216670459,
+      "S2_drift_coefficient": 0.2
+    }
+  },
+  "prediction_boundary": "All F/P positions and shapes predicted; specifications enforced by postprocessing only",
+  "target": {
+    "grouping_satisfied_cases": 475,
+    "total_cases": 500,
+    "hard_legal_cases": 500
+  },
+  "static_condition": "Independent enhanced role/MIB/port encoders for L0 and backend; all functional sublayers receive enhanced static condition; only layouts cross repeated unit calls",
+  "S0": "Gated group displacement plus member reordering, two calls, bounded by group local scale; no reward for changing topology on its own",
+  "MIB": "Same-master relations separate from grouping; continuous log-shape consistency; linked group shape probes; compatible shared postprocessing dimensions including fallback",
+  "no_mib_policy_exception": "This E154 design restores MIB on the registered historical mean-area task, leaving historical no-MIB runs unchanged",
+  "test_read": false,
+  "automatic_retry": false,
+  "comparison_arms": 0,
+  "cache_owner": "experiments/E153_mib_role_topology",
+  "backend_training_enabled": false,
+  "postprocessing_enabled": false
+}

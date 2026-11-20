@@ -1,0 +1,40 @@
+{
+  "status": "failed",
+  "formal_training_started": false,
+  "formal_optimizer_updates": 0,
+  "unique_train_cases": 5,
+  "dev_payloads": 0,
+  "test_payloads": 0,
+  "postprocessing_calls": 0,
+  "Q_calls": 0,
+  "ctrl_c_resume_verified": false,
+  "cache": {
+    "key": "a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148",
+    "roles": {
+      "train": {
+        "members": 36000,
+        "chunks": 141,
+        "all_chunk_bytes_hashed": true
+      },
+      "dev_monitor500": {
+        "members": 500,
+        "chunks": 8,
+        "all_chunk_bytes_hashed": true
+      }
+    }
+  },
+  "initial_state_sha256": "aa52592d9afa93c47150069dd22a6b8ff4c13d11cc45bcf0db410ce8a3d95b45",
+  "input_checks": {
+    "label_isolation": true,
+    "independent_relation_reconstruction": true,
+    "node_permutation_equivariance": true,
+    "empty_sets_and_padding": true,
+    "cpu_cuda_close": true,
+    "axis_swap_involution": true,
+    "final_loss_exact": true
+  },
+  "raw_to_cached_public_input_exact": true,
+  "error": "RuntimeError('CUDA error: operation failed due to a previous error during capture\\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\\n')",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E137_standard_transformer256\\cuda_step.py\", line 29, in __init__\n    output=model(inputs_only(augmented))\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1751, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1762, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E137_standard_transformer256\\model.py\", line 100, in forward\n    own, relation, global_info, pins, weights = public_descriptor(g)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E137_standard_transformer256\\model.py\", line 39, in public_descriptor\n    bits = torch.tensor((1, 2, 4, 8), dtype=g['constraints'].dtype, device=v.device)\nRuntimeError: CUDA error: operation not permitted when stream is capturing\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E137_standard_transformer256\\preflight.py\", line 138, in main\n    cap=CapturedStep(model,optimizer,gpu_batch,'standard256')\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E137_standard_transformer256\\cuda_step.py\", line 26, in __init__\n    with torch.cuda.graph(self.graph,stream=stream):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\site-packages\\torch\\cuda\\graphs.py\", line 186, in __exit__\n    self.cuda_graph.capture_end()\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\site-packages\\torch\\cuda\\graphs.py\", line 84, in capture_end\n    super().capture_end()\nRuntimeError: CUDA error: operation failed due to a previous error during capture\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n\n",
+  "elapsed_seconds": 55.33455090000098
+}

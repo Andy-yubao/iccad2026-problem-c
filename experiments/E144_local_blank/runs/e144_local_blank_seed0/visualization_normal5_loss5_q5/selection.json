@@ -1,0 +1,112 @@
+{
+  "arm": "e144_local_blank",
+  "seed": 20261117,
+  "ordinary": [
+    457,
+    77,
+    13,
+    125,
+    107
+  ],
+  "worst_loss": [
+    293,
+    263,
+    455,
+    197,
+    129
+  ],
+  "worst_Q": [
+    358,
+    481,
+    217,
+    43,
+    9
+  ],
+  "entries": [
+    {
+      "category": "普通例",
+      "rank": 1,
+      "index": 457
+    },
+    {
+      "category": "普通例",
+      "rank": 2,
+      "index": 77
+    },
+    {
+      "category": "普通例",
+      "rank": 3,
+      "index": 13
+    },
+    {
+      "category": "普通例",
+      "rank": 4,
+      "index": 125
+    },
+    {
+      "category": "普通例",
+      "rank": 5,
+      "index": 107
+    },
+    {
+      "category": "Loss最差",
+      "rank": 1,
+      "index": 293
+    },
+    {
+      "category": "Loss最差",
+      "rank": 2,
+      "index": 263
+    },
+    {
+      "category": "Loss最差",
+      "rank": 3,
+      "index": 455
+    },
+    {
+      "category": "Loss最差",
+      "rank": 4,
+      "index": 197
+    },
+    {
+      "category": "Loss最差",
+      "rank": 5,
+      "index": 129
+    },
+    {
+      "category": "Q最差",
+      "rank": 1,
+      "index": 358
+    },
+    {
+      "category": "Q最差",
+      "rank": 2,
+      "index": 481
+    },
+    {
+      "category": "Q最差",
+      "rank": 3,
+      "index": 217
+    },
+    {
+      "category": "Q最差",
+      "rank": 4,
+      "index": 43
+    },
+    {
+      "category": "Q最差",
+      "rank": 5,
+      "index": 9
+    }
+  ],
+  "duplicates_preserved": true,
+  "normal_rule": "Same five cases for all four models; seed20261117; excludes union of four own worst5 Loss/Q sets",
+  "loss_rule": "Saved per-case own aggregate dev Loss at this frozen own-Loss-best; descending, dev index tie-break",
+  "Q_rule": "Saved final postprocessed per-case Q descending, dev index tie-break",
+  "checkpoint_sha256": "0e7209200dccb686b904117dff485e9be58779651fb95e0988a7b09df8f5697d",
+  "best_epoch": 63,
+  "training": false,
+  "postprocessing_calls": 0,
+  "Q_calls": 0,
+  "test_read": false
+}

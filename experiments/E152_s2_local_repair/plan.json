@@ -1,0 +1,71 @@
+{
+  "dataset_report_sha256": "3a79fd9eb2636578fa4df876ccac51699eab04cd59179027488aa7d8c334928a",
+  "payload_checksums_sha256": "f8eeb86da003c9901b73541eb13cc8e16cad9cd963dcf74a0edddf4a1a5abe54",
+  "required_cache_key": "a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148",
+  "role_cache_root": "experiments/E149_role_initial/role_cache_v1",
+  "cache_build_workers": 4,
+  "preflight_train_indices": [
+    10841,
+    12651,
+    6417,
+    4280,
+    17946
+  ],
+  "revision": "E152.s2_local_repair.v2.seed0",
+  "authorization": "2026-11-18 user discarded all E152 v1 results and authorized a fresh redo: original 36k train; LR 1e-4 down to 5e-5; at most 10 epochs per arm. Same A/B S2-only objective and E151 best45 initialization.",
+  "seed": 0,
+  "parent": {
+    "checkpoint": "experiments/E151_frozen_role_initial/runs/e151_frozen_role_initial_seed0/checkpoints/best.pt",
+    "checkpoint_sha256": "06855b8dd5bd331026cd67d09cf3cc2d50a8741243b17a7b5fcd8678495b989d",
+    "best_epoch": 45
+  },
+  "source_dataset": "random_reference40k.v1 (original train36k)",
+  "train_count": 36000,
+  "train_monitor_count": 500,
+  "dev_monitor_count": 500,
+  "batch_size": 64,
+  "steps_per_epoch": 563,
+  "maximum_epochs": 10,
+  "maximum_steps": 5630,
+  "maximum_seconds": 7200,
+  "parameters": 681141,
+  "trainable_parameters": 157406,
+  "optimizer": "Fresh AdamW on unit[2] only; weight_decay .0003, clip norm 1, 0.5% per-trainable-module displacement guard",
+  "numerical_guards": "Same E151 finite, mean/per-case Loss <1000, unclipped norm<10000 before Adam; no skipped batches",
+  "lr_first": 0.0001,
+  "lr_last": 5e-05,
+  "lr_schedule": "Matched cosine indexed by accepted update 0..5629; endpoints 1e-4 and 5e-5",
+  "selection": "Fixed original dev500 own-Loss arithmetic mean, epoch0..10; paired final epoch diagnostic; unique best before Q",
+  "weights": {
+    "e152_s2_ref": 1.0,
+    "e152_s2_no_ref": 0.0
+  },
+  "drift_weight": 0.2,
+  "center_tolerance": 0.05,
+  "ratio_tolerance": 0.1,
+  "ratio_weight": 0.25,
+  "huber_beta": 0.1,
+  "overlap_threshold": 0.01,
+  "overlap_drift_weight": 0.25,
+  "phase": "Both arms load identical E151 best45; frozen prefix eval; actual S2x2; objective at true L12 only",
+  "augmentation": "Original axis exchange from public condition, deterministic by seed/epoch/original36k member",
+  "validation_arms": [
+    "e151_best45",
+    "e152_s2_ref",
+    "e152_s2_no_ref"
+  ],
+  "postprocessor": "Frozen local copy of E148 E98.depth_budget.v1, original dev500, no MIB",
+  "automatic_retry": false,
+  "test_read": false,
+  "stage_diagnostics": "L8/L10/L12 collision, displacement and retained contacts plus fixed lowest-overlap quartile and Q",
+  "budgets": "At most 10 epochs per arm (563 batches/epoch including final32); existing 2-hour per-arm fail-safe; STOP or error stops queue",
+  "paired_order": [
+    "e152_s2_ref",
+    "e152_s2_no_ref"
+  ],
+  "registry_sha256": "f899e114b91bc05a0688898dd9b6f251acba2c95e35fb5baca8fd5cf17979540",
+  "reset": "Fresh model from pinned E151 best45 and fresh AdamW; no E152 v1 weights, optimizer, progress or best are reused",
+  "superseded_results": "history/E152_discarded_v1_20261118; discarded from current selection and comparison",
+  "engine": "Original FP32 CUDA graph64 plus eager final32, shared Adam/projection/guards",
+  "train_monitor": "Original random_reference40k_v1 train_monitor500, same as E151"
+}

@@ -1,1 +1,1 @@
-"""Shared, presentation-only layout visualization."""
+"""One saved-layout style: G colors, black frames, constraint legend."""

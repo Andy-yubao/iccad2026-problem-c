@@ -1,0 +1,294 @@
+{
+  "models": {
+    "E139": {
+      "best_epoch": 42,
+      "parameters": 712275,
+      "train": {
+        "total": 0.34501630705595016,
+        "final_total": 0.3345721433311701,
+        "reference_weighted": 0.23790254935622215,
+        "overlap_weighted": 0.03876926687918603,
+        "wire_compact_weighted": 0.054289723932743075,
+        "grouping_weighted": 0.003348256372148171,
+        "boundary_weighted": 0.0023845075067365543,
+        "public_shape_weighted": 0.0009295253512682393,
+        "public_preplaced_position_weighted": 0.007392479321773862
+      },
+      "dev": {
+        "total": 0.3638085096180439,
+        "final_total": 0.3540139120519161,
+        "reference_weighted": 0.25438190218806267,
+        "overlap_weighted": 0.04083561893552542,
+        "wire_compact_weighted": 0.05403630219399929,
+        "grouping_weighted": 0.003895801576320082,
+        "boundary_weighted": 0.002462067531654611,
+        "public_shape_weighted": 0.0010684669116744771,
+        "public_preplaced_position_weighted": 0.0071283490323985465
+      },
+      "layer_totals": {
+        "2": 0.42812173160910605,
+        "6": 0.35675410747528075,
+        "8": 0.42832838279008867,
+        "10": 0.39874322882294655,
+        "12": 0.3540139120519161
+      },
+      "evaluation": {
+        "status": "complete",
+        "arm": "e119_delayed_overlap",
+        "count": 500,
+        "checkpoint_sha256": "b50a4e0820c25bc07661797efaae4b6a7c7c97d800688104d57aeab9989835e6",
+        "best_epoch": 42,
+        "parameters": 712275,
+        "weighted_Q": 1.014796743492212,
+        "mean_Q": 1.0188924739010359,
+        "mixed_Q": 1.016844608696624,
+        "hard_legal": 500,
+        "raw_hard_legal": 0,
+        "fallbacks": 0,
+        "mean_complete_seconds": 0.1732569970000768,
+        "p95_complete_seconds": 0.40643929500001813,
+        "max_complete_seconds": 1.0816114999906858,
+        "over250ms": 124,
+        "max_Q": 1.2924238882708865,
+        "p95_Q": 1.0908667688669718,
+        "raw_repeated_coverage": 0.059758433227887355,
+        "raw_bbox_over_area": 1.026768906341922,
+        "common_final_dev_loss": 0.34631712979078294,
+        "common_final_new_dev_loss": 0.3540139120519161,
+        "own_selection_loss": 0.3638085096180439,
+        "training_seconds": 6968.34522670001,
+        "training_epochs": 45,
+        "scoring_policy": "Original areas/no MIB local research Q; neutral runtime1; not official contest score",
+        "elapsed_seconds": 190.1840333,
+        "test_read": false,
+        "selection_frozen_before_Q": true
+      },
+      "training": {
+        "status": "early_stop",
+        "error": null,
+        "epochs": 45,
+        "steps": 50625,
+        "best_epoch": 42,
+        "best_fixed_loss": 0.3638085096180439,
+        "elapsed_seconds": 6968.34522670001,
+        "train_monitor_last4": [
+          0.34501630705595016,
+          0.3478840462565422,
+          0.3455750696063042,
+          0.3444650920629501
+        ],
+        "train_plateau_observed": false,
+        "convergence": "operational dev plateau; train plateau separate",
+        "test_read": false,
+        "postprocessing_calls": 0,
+        "next_stage": "freeze own-Loss best then fixed dev500 through authorized queue"
+      },
+      "soft": {
+        "draft": {
+          "grouping_violations": {
+            "total": 2320,
+            "violating_cases": 490
+          },
+          "boundary_violations": {
+            "total": 6830,
+            "violating_cases": 500
+          },
+          "total_soft_violations": {
+            "total": 9150,
+            "violating_cases": 500
+          },
+          "grouping_satisfied": 10,
+          "boundary_satisfied": 0,
+          "all_soft_satisfied": 0
+        },
+        "final": {
+          "grouping_violations": {
+            "total": 83,
+            "violating_cases": 76
+          },
+          "boundary_violations": {
+            "total": 54,
+            "violating_cases": 49
+          },
+          "total_soft_violations": {
+            "total": 137,
+            "violating_cases": 116
+          },
+          "grouping_satisfied": 424,
+          "boundary_satisfied": 451,
+          "all_soft_satisfied": 384
+        }
+      },
+      "epoch42": {
+        "train_monitor": 0.34501630705595016,
+        "dev_monitor": 0.3638085096180439
+      },
+      "best_step": 47250
+    },
+    "E142": {
+      "best_epoch": 55,
+      "parameters": 895123,
+      "train": {
+        "total": 0.30762152910232543,
+        "final_total": 0.29590809340775015,
+        "reference_weighted": 0.22211121920496224,
+        "overlap_weighted": 0.02420572380768135,
+        "wire_compact_weighted": 0.053795399256050584,
+        "grouping_weighted": 0.002602850214811042,
+        "boundary_weighted": 0.0014848448152188212,
+        "public_shape_weighted": 0.0007319233923044522,
+        "public_preplaced_position_weighted": 0.0026895697202999145
+      },
+      "dev": {
+        "total": 0.32332361543178556,
+        "final_total": 0.3119647831469774,
+        "reference_weighted": 0.2361923325508833,
+        "overlap_weighted": 0.025536234363913536,
+        "wire_compact_weighted": 0.05355792786180973,
+        "grouping_weighted": 0.002954716730862856,
+        "boundary_weighted": 0.0015279564370284787,
+        "public_shape_weighted": 0.0007444461728300666,
+        "public_preplaced_position_weighted": 0.002810002754631569
+      },
+      "layer_totals": {
+        "2": 0.4105053486227989,
+        "6": 0.32487536981701853,
+        "8": 0.3921758002340794,
+        "10": 0.3474791484773159,
+        "12": 0.3119647831469774
+      },
+      "evaluation": {
+        "status": "complete",
+        "arm": "e142_dual_geometry",
+        "count": 500,
+        "checkpoint_sha256": "9799b60053fd38d78f86141b51d9b1933ba817d237cabc5c1859f4003fd24553",
+        "best_epoch": 55,
+        "parameters": 895123,
+        "weighted_Q": 1.0097933732497069,
+        "mean_Q": 1.0152612703287964,
+        "mixed_Q": 1.0125273217892516,
+        "hard_legal": 500,
+        "raw_hard_legal": 0,
+        "fallbacks": 0,
+        "mean_complete_seconds": 0.18364548959943933,
+        "p95_complete_seconds": 0.4314279199868903,
+        "max_complete_seconds": 0.7980883000127506,
+        "over250ms": 110,
+        "max_Q": 1.4596152924302932,
+        "p95_Q": 1.0793445309167522,
+        "raw_repeated_coverage": 0.04253890086666175,
+        "raw_bbox_over_area": 1.023907276309339,
+        "common_final_dev_loss": 0.309354896992445,
+        "common_final_new_dev_loss": 0.3119647831469774,
+        "own_selection_loss": 0.32332361543178556,
+        "training_seconds": 12929.780351399997,
+        "training_epochs": 58,
+        "scoring_policy": "Original areas/no MIB local research Q; neutral runtime1; not official contest score",
+        "elapsed_seconds": 209.7974768000131,
+        "test_read": false,
+        "selection_frozen_before_Q": true
+      },
+      "training": {
+        "status": "early_stop",
+        "error": null,
+        "epochs": 58,
+        "steps": 32654,
+        "best_epoch": 55,
+        "best_fixed_loss": 0.32332361543178556,
+        "elapsed_seconds": 12929.780351399997,
+        "train_monitor_last4": [
+          0.30762152910232543,
+          0.3082991245687008,
+          0.3078620673716068,
+          0.30649970534443854
+        ],
+        "train_plateau_observed": false,
+        "convergence": "operational dev plateau; train plateau separate",
+        "test_read": false,
+        "postprocessing_calls": 0,
+        "next_stage": "freeze own-Loss best then fixed dev500 through authorized queue"
+      },
+      "soft": {
+        "draft": {
+          "grouping_violations": {
+            "total": 2399,
+            "violating_cases": 489
+          },
+          "boundary_violations": {
+            "total": 7594,
+            "violating_cases": 500
+          },
+          "total_soft_violations": {
+            "total": 9993,
+            "violating_cases": 500
+          },
+          "grouping_satisfied": 11,
+          "boundary_satisfied": 0,
+          "all_soft_satisfied": 0
+        },
+        "final": {
+          "grouping_violations": {
+            "total": 76,
+            "violating_cases": 70
+          },
+          "boundary_violations": {
+            "total": 43,
+            "violating_cases": 39
+          },
+          "total_soft_violations": {
+            "total": 119,
+            "violating_cases": 98
+          },
+          "grouping_satisfied": 430,
+          "boundary_satisfied": 461,
+          "all_soft_satisfied": 402
+        }
+      },
+      "epoch42": {
+        "train_monitor": 0.3196517664641142,
+        "dev_monitor": 0.33485483199357985
+      },
+      "best_step": 30965
+    }
+  },
+  "paired_final": {
+    "grouping_violations": {
+      "improved": 42,
+      "worsened": 36,
+      "same": 422,
+      "old_fail_new_pass": 39,
+      "old_pass_new_fail": 33
+    },
+    "boundary_violations": {
+      "improved": 18,
+      "worsened": 8,
+      "same": 474,
+      "old_fail_new_pass": 17,
+      "old_pass_new_fail": 7
+    },
+    "total_soft_violations": {
+      "improved": 56,
+      "worsened": 38,
+      "same": 406,
+      "old_fail_new_pass": 46,
+      "old_pass_new_fail": 28
+    },
+    "cost": {
+      "improved": 209,
+      "worsened": 111,
+      "same": 180
+    }
+  },
+  "parameter_additions": {
+    "fusion": 148992,
+    "edge_encoder": 6912,
+    "receiver_sender": 12288,
+    "relation_value": 6144,
+    "demand_encoder": 8512
+  },
+  "notes": [
+    "Same E139 objective and fixed panels; loss term table is supervision-weighted aggregate, not S12-only.",
+    "Historical batch32 vs new64; best42 vs55; different parameters and adaptive stopping. No causal isolation.",
+    "Only saved records read; no inference, new scoring, postprocessing or topology audit."
+  ]
+}

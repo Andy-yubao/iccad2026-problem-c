@@ -1,0 +1,13 @@
+{
+  "status": "needs_attention",
+  "pid": 22280,
+  "started_at": "2026-11-09T02:54:16.216628+00:00",
+  "active": null,
+  "completed": [],
+  "test_read": false,
+  "automatic_evaluation": true,
+  "recovery_id": "20261109_1",
+  "error": "AttributeError(\"'list' object has no attribute 'authorized_recovery'\")",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E117_node26\\run_queue.py\", line 72, in main\n    launch('node26','train',['--arm','node26',*(['--resume','--authorized-recovery'] if args.authorized_recovery else [])])\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E117_node26\\run_queue.py\", line 60, in launch\n    logs=OWNER/'launch_logs'/('recovery1' if args.authorized_recovery else 'initial');logs.mkdir(parents=True,exist_ok=True)\nAttributeError: 'list' object has no attribute 'authorized_recovery'\n",
+  "updated_at": "2026-11-09T02:54:16.216628+00:00"
+}

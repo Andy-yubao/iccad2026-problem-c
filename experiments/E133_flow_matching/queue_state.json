@@ -1,0 +1,38 @@
+{
+  "status": "needs_attention",
+  "controller_pid": 13420,
+  "started_at": "2026-11-12T15:54:49.385998+00:00",
+  "active": {
+    "stage": "evaluation",
+    "pid": 41168,
+    "started_at": "2026-11-12T21:13:34.919604+00:00"
+  },
+  "completed": [
+    {
+      "stage": "startup_check",
+      "completed_at": "2026-11-12T15:55:09.850045+00:00"
+    },
+    {
+      "stage": "train",
+      "completed_at": "2026-11-12T21:13:32.575206+00:00"
+    },
+    {
+      "stage": "freeze_unique_FM_Loss_best",
+      "completed_at": "2026-11-12T21:13:34.397311+00:00"
+    }
+  ],
+  "order": [
+    "disposable_startup_update",
+    "scratch_fm_train",
+    "freeze_unique_FM_Loss_best",
+    "Euler8_dev500_and_train5_step_diagnostics"
+  ],
+  "automatic_retry": false,
+  "total_budget_seconds": 28800,
+  "test_read": false,
+  "error": "RuntimeError('evaluation exited1; no retry')",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E133_flow_matching\\supervisor.py\", line 82, in main\n    launch('evaluation','evaluation.run')\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E133_flow_matching\\supervisor.py\", line 76, in launch\n    raise RuntimeError(f'{stage} exited{child.returncode}; no retry')\nRuntimeError: evaluation exited1; no retry\n",
+  "finalization_over_budget_seconds": 0.0,
+  "pipeline_elapsed_seconds": 19486.720839738846,
+  "updated_at": "2026-11-12T21:13:59.976295+00:00"
+}

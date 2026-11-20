@@ -1,0 +1,21 @@
+{
+  "scope": "E141.path_supervision.v1.seed0",
+  "training_enabled": true,
+  "allowed_arms": [
+    "e119_blockage",
+    "e119_layerwise",
+    "e119_combined"
+  ],
+  "prepared_arms": [
+    "e119_blockage",
+    "e119_layerwise",
+    "e119_combined"
+  ],
+  "automatic_evaluation": true,
+  "automatic_retry": false,
+  "test_read": false,
+  "authorization": "2026-11-16 explicit user: prepare and background start three batch64 experiments; automatically evaluate fixed dev500 after each. Confirmed E134 stride3 base; S1..S12 dense with .2/11 auxiliaries and .8 final; no G/Bx4.",
+  "activated_at": "2026-11-15T16:29:41.055965+00:00",
+  "preflight_sha256": "d13f3b1b7f0377f80d2ffdd72aa91279b6a2b5e80e08868443990ef818f08c07",
+  "activation": "Explicit user invocation of run_queue --start"
+}

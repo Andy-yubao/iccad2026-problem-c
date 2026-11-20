@@ -1,0 +1,97 @@
+{
+  "status": "failed",
+  "formal_training_started": false,
+  "dev_payloads": 0,
+  "test_payloads": 0,
+  "postprocessing_calls": 0,
+  "Q_calls": 0,
+  "synthetic": {
+    "independent_numpy_shape_oracle": true,
+    "padding_singleton_origin_finite": true,
+    "original_49_bitwise": true,
+    "scale_translation_invariance": true,
+    "F_P_not_overwritten": true,
+    "blank_statistics": false
+  },
+  "cache": {
+    "key": "a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148",
+    "coverage": {
+      "train": 36000,
+      "dev_monitor500": 500
+    },
+    "metadata_only": true
+  },
+  "inherited_engine": {
+    "parent_sha256": "f35ffb61b97262ae544790dac795a59120e678d6047a1880d11a1c0eccf418c9",
+    "checked_files": [
+      "train.py",
+      "cuda_step.py",
+      "captured_projection.py",
+      "step_control.py",
+      "resident.py",
+      "schedule.py"
+    ]
+  },
+  "members": [
+    [
+      "worker_31/layouts_3136.th",
+      43
+    ],
+    [
+      "worker_60/layouts_9184.th",
+      21
+    ],
+    [
+      "worker_85/layouts_6160.th",
+      10
+    ],
+    [
+      "worker_43/layouts_6496.th",
+      1
+    ],
+    [
+      "worker_24/layouts_9072.th",
+      53
+    ]
+  ],
+  "objective": {
+    "base_terms_and_coefficients_exact": true,
+    "loss_and_gradient_exact": true,
+    "layers": [
+      4,
+      8,
+      12
+    ],
+    "weights": [
+      0.1,
+      0.1,
+      0.8
+    ],
+    "no_overlap": [
+      4
+    ]
+  },
+  "interfaces": {
+    "shared_unit_calls": [
+      2,
+      2,
+      2
+    ],
+    "first_static_input": 81,
+    "second_dynamic_only_input": 65,
+    "hidden_cuts_all_five_verified": true,
+    "internal_hidden_retained": true,
+    "initial_hidden_isolated": true,
+    "layout_gradients_across_cuts": true,
+    "repeat_operator_bitwise": true
+  },
+  "public_boundary": {
+    "labels_rejected": true,
+    "pair18_exact": true,
+    "predict_all_F_P": true,
+    "node_permutation": true
+  },
+  "error": "RuntimeError('CUDA error: operation failed due to a previous error during capture\\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\\n')",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E148_shared_functional_shape\\cuda_step.py\", line 29, in __init__\n    output=model(inputs_only(augmented))\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1751, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1762, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E148_shared_functional_shape\\model.py\", line 106, in forward\n    emitted=self.units[index](g,state,problem_condition)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1751, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1762, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E148_shared_functional_shape\\model.py\", line 78, in forward\n    dynamic=torch.cat((module_features(p,g),shape_features(p,g)),-1)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\site-packages\\torch\\utils\\_contextlib.py\", line 116, in decorate_context\n    return func(*args, **kwargs)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E148_shared_functional_shape\\shape_feedback.py\", line 19, in shape_features\n    bits=torch.tensor((1,2,4,8),device=p.device,dtype=g['constraints'].dtype)\nRuntimeError: CUDA error: operation not permitted when stream is capturing\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E148_shared_functional_shape\\preflight.py\", line 238, in main\n    t=time.perf_counter();cap=CapturedStep(model,optimizer,pack.batch([i%5 for i in range(64)]),ARMS[0]);capture_seconds=time.perf_counter()-t\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E148_shared_functional_shape\\cuda_step.py\", line 26, in __init__\n    with torch.cuda.graph(self.graph,stream=stream):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\site-packages\\torch\\cuda\\graphs.py\", line 186, in __exit__\n    self.cuda_graph.capture_end()\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\site-packages\\torch\\cuda\\graphs.py\", line 84, in capture_end\n    super().capture_end()\nRuntimeError: CUDA error: operation failed due to a previous error during capture\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n\n",
+  "elapsed_seconds": 37.85538789999555
+}

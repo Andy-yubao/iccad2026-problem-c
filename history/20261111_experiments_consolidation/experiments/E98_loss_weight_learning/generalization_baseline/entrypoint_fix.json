@@ -1,0 +1,10 @@
+{
+  "reason": "Remove duplicate obsolete preflight.verify entrypoint and use run-specific lock; no model/Loss/augmentation/optimizer/scheduler/data-loop changes",
+  "changed_sources": [
+    "experiments/E98_loss_weight_learning/generalization_baseline/train.py"
+  ],
+  "before_sha256": "fc055ceb12d2db4297204a494611ff7fbe43b44f7716fb6e03d85f1c6336fb22",
+  "after_sha256": "c717027b5289bd625586c4e4cdbdf9c3d74b9a9face055b0c895de0080e33270",
+  "actual_five_case_update_evidence": "preflight_passed_before_entrypointfix.json",
+  "formal_run_created": false
+}

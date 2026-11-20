@@ -1,0 +1,17 @@
+{
+  "scope": "E116.first_draft_comparison.seed0",
+  "preparation_enabled": true,
+  "training_enabled": false,
+  "actual_updates_authorized": false,
+  "allowed_arms": [],
+  "prepared_arms": [
+    "original4",
+    "new_first"
+  ],
+  "user_instruction": "准备原结构4层 vs 四个Attention推理块+门控FFN+一次全局条件读出；后续层全部砍掉，只比较Loss，先不启动训练",
+  "automatic_queue": false,
+  "test_read": false,
+  "q_evaluation": false,
+  "postprocessing": false,
+  "limits": "Five unique train members for implementation checks; zero optimizer updates; no runs/checkpoints"
+}

@@ -1,0 +1,73 @@
+{
+  "status": "error",
+  "unique_train_cases": 5,
+  "optimizer_updates": 0,
+  "real_optimizer_update_tested": false,
+  "training_started": false,
+  "dev_tensor_payloads": 0,
+  "raw_payload_reads": 0,
+  "test_read": false,
+  "postprocessing_calls": 0,
+  "model_checkpoint_reads": 0,
+  "resume_tested": false,
+  "launch_blocked_before_runtime": {
+    "full": true,
+    "pure": true
+  },
+  "cache_inventory_metadata_only": {
+    "train": {
+      "count": 16000,
+      "chunks": 141,
+      "tensor_payloads_opened": 0
+    },
+    "dev_monitor500": {
+      "count": 500,
+      "chunks": 8,
+      "tensor_payloads_opened": 0
+    }
+  },
+  "members": [
+    [
+      "worker_68/layouts_2128.th",
+      101
+    ],
+    [
+      "worker_72/layouts_4704.th",
+      108
+    ],
+    [
+      "worker_23/layouts_7056.th",
+      77
+    ],
+    [
+      "worker_29/layouts_2464.th",
+      67
+    ],
+    [
+      "worker_29/layouts_9520.th",
+      16
+    ]
+  ],
+  "subset_local_indices": [
+    6963,
+    4506,
+    10463,
+    3453,
+    10262
+  ],
+  "shared_cache_chunks": {
+    "datasets/static_tensor_cache_v1/a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148/train/0031.pt": "ea712ba2158501e4f70dc670165bf5b3bfacef751002bd499cdd1cf76f297258",
+    "datasets/static_tensor_cache_v1/a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148/train/0040.pt": "9896f648b98a91aa7c540ce5b1fd7d6ec578178364846b00658482fc02dae5e7",
+    "datasets/static_tensor_cache_v1/a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148/train/0061.pt": "0b3bffedc39bb41f2193f13980bff76ab47131a9d66924ca6f75c2f4d26732ef",
+    "datasets/static_tensor_cache_v1/a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148/train/0091.pt": "513b73a64ffd4fdf55b6a51c431c3b6bf14b1b243551017693971a8e1cceada6",
+    "datasets/static_tensor_cache_v1/a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148/train/0092.pt": "a51b7832921e34ce7f7655c5cb0d52c65dbbed5823cd74072338db25068afd08"
+  },
+  "shared_cache_reused_without_rebuild": true,
+  "common_initial_tensor_count": 66,
+  "common_initial_tensors_exact": true,
+  "global_CPU_CUDA_RNG_preserved_by_build": true,
+  "GPU": "NVIDIA GeForce RTX 5080 Laptop GPU",
+  "error": "RuntimeError('CUDA error: operation failed due to a previous error during capture\\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\\n')",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E131_relation_input\\cuda_step.py\", line 33, in __init__\n    output = model(inputs_only(batch))\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1751, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1762, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E131_relation_input\\model.py\", line 107, in forward\n    h = self.input(relation_descriptor(g)) * valid[..., None]\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E131_relation_input\\model.py\", line 27, in relation_descriptor\n    wire = torch.zeros((b, n, 128), device=f.device, dtype=f.dtype).scatter(\nRuntimeError: CUDA error: operation not permitted when stream is capturing\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E131_relation_input\\inspect.py\", line 197, in main\n    cap = CapturedStep(model, optimizer, gpu_batch, arm)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E131_relation_input\\cuda_step.py\", line 30, in __init__\n    with torch.cuda.graph(self.graph, stream=stream):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\site-packages\\torch\\cuda\\graphs.py\", line 186, in __exit__\n    self.cuda_graph.capture_end()\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\site-packages\\torch\\cuda\\graphs.py\", line 84, in capture_end\n    super().capture_end()\nRuntimeError: CUDA error: operation failed due to a previous error during capture\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n\n",
+  "elapsed_seconds": 31.304729299998144
+}

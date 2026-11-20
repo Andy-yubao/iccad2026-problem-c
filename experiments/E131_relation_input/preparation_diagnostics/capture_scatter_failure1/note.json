@@ -1,0 +1,6 @@
+{
+  "stage": "preparation_only",
+  "optimizer_updates": 0,
+  "error": "Deterministic scatter not CUDA-graph-capturable in this runtime",
+  "fix": "Equivalent permutation via one-hot inverse argmax and gather; no feature/Loss/model-parameter change"
+}

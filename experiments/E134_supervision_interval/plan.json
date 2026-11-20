@@ -1,0 +1,125 @@
+{
+  "experiment": "E134 E119/E120 x supervision interval2/3",
+  "revision": "E134.supervision_interval.v1.seed0",
+  "status": "preparation_only",
+  "authorization": "2026-11-13 user confirmed four cells; prepare only and provide launch command; automatic original dev500 postprocessing; Ctrl+C checkpoint/resume required",
+  "architecture": {
+    "e119": "original two-global + pair-bias 12-layer model",
+    "e120": "original two-global + Node12 Q/K 12-layer model"
+  },
+  "parameters": {
+    "e119": 712275,
+    "e120": 725619
+  },
+  "trainable_parameters": {
+    "e119": 712275,
+    "e120": 725619
+  },
+  "arms": {
+    "e119_stride3": {
+      "auxiliary_layers": [
+        3,
+        6,
+        9
+      ],
+      "auxiliary_total": 0.2,
+      "terminal_layer": 12,
+      "terminal_weight": 0.8
+    },
+    "e119_stride2": {
+      "auxiliary_layers": [
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "auxiliary_total": 0.2,
+      "terminal_layer": 12,
+      "terminal_weight": 0.8
+    },
+    "e120_stride3": {
+      "auxiliary_layers": [
+        3,
+        6,
+        9
+      ],
+      "auxiliary_total": 0.2,
+      "terminal_layer": 12,
+      "terminal_weight": 0.8
+    },
+    "e120_stride2": {
+      "auxiliary_layers": [
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "auxiliary_total": 0.2,
+      "terminal_layer": 12,
+      "terminal_weight": 0.8
+    }
+  },
+  "seed": 0,
+  "batch_size": 32,
+  "precision": "FP32; deterministic; TF32 disabled",
+  "threads": 4,
+  "train_count": 36000,
+  "train_monitor_count": 500,
+  "dev_monitor_count": 500,
+  "dataset": "random_reference40k.v1; original public areas; test sealed",
+  "data_migration": "New default task; not a controlled comparison to historical16k/MIB/masked A or E105",
+  "no_mib": true,
+  "predict_all_modules": true,
+  "hard_specification_enforcement": "postprocessing only",
+  "initialization": "scratch seed0; same architecture initialization exact across supervision intervals; no historical checkpoint warm start",
+  "optimizer": "AdamW weight_decay.0003, global gradient clip1, joint per-module relative update bound.005",
+  "lr_levels": [
+    0.001,
+    0.00025,
+    0.0001,
+    5e-05
+  ],
+  "protection_epochs": 14,
+  "scheduler_baseline_epoch": 15,
+  "patience": 3,
+  "minimum_meaningful_absolute": 1e-05,
+  "minimum_meaningful_relative": 0.001,
+  "best_minimum_absolute_improvement": 1e-05,
+  "minimum_lowest_lr_complete_epochs": 2,
+  "maximum_seconds": 14400,
+  "maximum_epochs": 200,
+  "budget": "Per arm4h/200epoch caps; report seen/steps/epochs/time separately, not equal training work",
+  "selection": "Each fixed own-Loss dev500 arithmetic mean for best/LR/earlystop; no Q selection",
+  "resume": "Ctrl+C pauses at accepted update/case boundary. Restore model/Adam/RNG/permutation/cursor/seen/LR/earlystop/projection; cumulative budget never reset. Evaluation resumes committed case prefix.",
+  "numerical_guards": "Nonfinite or case/mean Loss>=1000 or unclipped grad norm>=10000: reject before Adam; no skip/retry",
+  "augmentation": "P=.5 axis swap; flags indexed by seed/epoch/member, independent of dropout",
+  "engine": "CUDA graph forward/loss/backward/clip; original AdamW and captured module step protection",
+  "stop": "Experiment STOP, per-run STOP, SIGINT; save accepted cursor and exit, no next arm",
+  "preflight_train_indices": [
+    10841,
+    12651,
+    6417,
+    4280,
+    17946
+  ],
+  "preflight": "Only original five cached training members; disposable per-cell guarded update, Ctrl+C checkpoint/resume equivalence tests; no formal run/dev/test payloads or postprocessing",
+  "comparison": "Four cells compared within this run. Historical E119 Q~1.02 is not a reliable reference or required target.",
+  "reporting": "new own Loss and original_final_total diagnostic; all quality/latency/fallback/hard checks reported independently",
+  "terminal_evaluation": "automatic sole own-Loss best, fixed dev500, original E98.depth_budget.v1, no MIB Q; no test or plots",
+  "historical_standards": "E74/E105/A numbers are historical context until matched new task evaluation",
+  "test_read": false,
+  "postprocessing_calls": 0,
+  "automatic_queue": true,
+  "dataset_report_sha256": "3a79fd9eb2636578fa4df876ccac51699eab04cd59179027488aa7d8c334928a",
+  "payload_checksums_sha256": "f8eeb86da003c9901b73541eb13cc8e16cad9cd963dcf74a0edddf4a1a5abe54",
+  "queue": "sequential four cells: train -> frozen own-Loss best -> original dev500 postprocess for each; explicit --start/--resume only",
+  "cache_build_workers": 4,
+  "required_cache_key": "a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148",
+  "cache_policy": "Reuse complete existing shared train36000/dev500 cache, no regenerated samples or repeated static preprocessing",
+  "loss": "fixed public-priority v1: original terms + public F/P dimensions weight1 and P center weight1; interval-specific layers, auxiliary total.2 and terminal.8",
+  "architecture_parent": "E119 global2",
+  "new_candidates": 4,
+  "automatic_retry": false
+}

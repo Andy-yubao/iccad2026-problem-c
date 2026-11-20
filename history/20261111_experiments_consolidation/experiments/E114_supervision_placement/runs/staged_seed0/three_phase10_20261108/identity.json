@@ -1,0 +1,12 @@
+{
+  "experiment": "E114_supervision_placement",
+  "arm": "staged",
+  "best_epoch": 48,
+  "checkpoint_sha256": "bd6906668cc2584133bb863590825874a951e7c24d8085280b7fd821c13f6937",
+  "test_read": false,
+  "training": false,
+  "dev_postprocessing_calls": 0,
+  "train_postprocessing_calls": 5,
+  "selection": "fixed original train5 plus largest final per-case Q in existing dev500; all500 retained in scores",
+  "inference": "same GPU FP32 eval CUDA-graph public adapter as completed evaluation; saved worst5 final coordinates reused; regenerated final drafts match saved evaluation"
+}

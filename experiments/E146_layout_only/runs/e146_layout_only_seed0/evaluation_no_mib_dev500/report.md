@@ -1,0 +1,35 @@
+# E146 e146_layout_only 原固定dev500
+
+```json
+{
+  "status": "complete",
+  "arm": "e146_layout_only",
+  "count": 500,
+  "checkpoint_sha256": "886da064523d452534fd3441106f34a1a5f52238f7a60694639dd17ff06ab10c",
+  "best_epoch": 45,
+  "parameters": 895123,
+  "weighted_Q": 1.044746324165243,
+  "mean_Q": 1.0263714335310214,
+  "mixed_Q": 1.0355588788481322,
+  "hard_legal": 500,
+  "raw_hard_legal": 0,
+  "fallbacks": 0,
+  "mean_complete_seconds": 0.21278919079940534,
+  "p95_complete_seconds": 0.510121910017915,
+  "max_complete_seconds": 1.9708887000160757,
+  "over250ms": 146,
+  "max_Q": 3.6512090654228464,
+  "p95_Q": 1.093009694085651,
+  "raw_repeated_coverage": 0.05297480170464792,
+  "raw_bbox_over_area": 1.0263582574442394,
+  "common_final_dev_loss": 0.3348414464741945,
+  "common_final_new_dev_loss": 0.33606795759499075,
+  "own_selection_loss": 0.3428802440464497,
+  "training_seconds": 10646.900916100014,
+  "training_epochs": 48,
+  "scoring_policy": "Original areas/no MIB local research Q; neutral runtime1; not official contest score",
+  "elapsed_seconds": 221.17072560000815,
+  "test_read": false,
+  "selection_frozen_before_Q": true
+}
+```

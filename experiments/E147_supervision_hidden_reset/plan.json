@@ -1,0 +1,129 @@
+{
+  "experiment": "E147 hidden reset after supervised layers only",
+  "revision": "E147.supervision_hidden_reset.v1.seed0",
+  "status": "authorized_preparation",
+  "authorization": "2026-11-17 user confirmed only S2->S3, S6->S7, S8->S9, S10->S11 reset hidden transmission, other layers retain it; prepare and launch in background. Same E142 settings and automatic original dev500.",
+  "architecture": {
+    "e147": "E142 with hidden reset immediately after supervised readouts only"
+  },
+  "parameters": {
+    "e147": 895123
+  },
+  "trainable_parameters": {
+    "e147": 895123
+  },
+  "arms": {
+    "e147_supervision_hidden_reset": {
+      "layer_weights": {
+        "2": 0.05,
+        "6": 0.05,
+        "8": 0.05,
+        "10": 0.05,
+        "12": 0.8
+      },
+      "no_overlap_layers": [
+        2,
+        6
+      ],
+      "full_loss_layers": [
+        8,
+        10,
+        12
+      ]
+    }
+  },
+  "seed": 0,
+  "batch_size": 64,
+  "precision": "FP32; deterministic; TF32 disabled",
+  "threads": 4,
+  "train_count": 36000,
+  "train_monitor_count": 500,
+  "dev_monitor_count": 500,
+  "dataset": "random_reference40k.v1; original public areas; test sealed",
+  "data_migration": "Explicit continuation of current 36k supervision study, reusing E134 members/cache and monitoring panels; no new sampling",
+  "no_mib": true,
+  "predict_all_modules": true,
+  "hard_specification_enforcement": "postprocessing only",
+  "initialization": "Scratch seed0. Retained parameters equal E142 scratch initialization; no trained checkpoint or optimizer loaded.",
+  "optimizer": "AdamW weight_decay.0003, global gradient clip1, joint per-module relative update bound.005",
+  "lr_levels": [
+    0.001,
+    0.00025,
+    0.0001,
+    5e-05
+  ],
+  "protection_epochs": 14,
+  "scheduler_baseline_epoch": 15,
+  "patience": 3,
+  "minimum_meaningful_absolute": 1e-05,
+  "minimum_meaningful_relative": 0.001,
+  "best_minimum_absolute_improvement": 1e-05,
+  "minimum_lowest_lr_complete_epochs": 2,
+  "maximum_seconds": 14400,
+  "maximum_epochs": 200,
+  "budget": "Per arm4h/200epoch caps; report seen/steps/epochs/time separately, not equal training work",
+  "selection": "Each fixed own-Loss dev500 arithmetic mean for best/LR/earlystop; no Q selection",
+  "resume": "Ctrl+C pauses at accepted update/case boundary. Restore model/Adam/RNG/permutation/cursor/seen/LR/earlystop/projection; cumulative budget never reset. Evaluation resumes committed case prefix.",
+  "numerical_guards": "Nonfinite or case/mean Loss>=1000 or unclipped grad norm>=10000: reject before Adam; no skip/retry",
+  "augmentation": "P=.5 axis swap; flags indexed by seed/epoch/member, independent of dropout",
+  "engine": "E141 deterministic FP32 CUDA graph64 plus eager final32; original AdamW/projection/guards",
+  "stop": "Experiment STOP, per-run STOP, SIGINT; save accepted cursor and exit, no next arm",
+  "preflight_train_indices": [
+    10841,
+    12651,
+    6417,
+    4280,
+    17946
+  ],
+  "preflight": "Exact E142 scratch parameters, unchanged feedback/pair18/E139 objective and gradients, interventions on all 12 hidden edges holding emitted layouts fixed, original five train cases, short guarded CUDA64/tail32 run. Resume engine inherited unchanged from verified E146/E142.",
+  "comparison": "E142 control with same parameters, seed0,36k,batch64, objective and schedule; only supervised-layer hidden resets differ; adaptive single-seed result.",
+  "reporting": "new own Loss and original_final_total diagnostic; all quality/latency/fallback/hard checks reported independently",
+  "terminal_evaluation": "Automatic own-Loss-best on original fixed dev500, E98.depth_budget.v1, no test; [Q] summary in evaluation and queue logs",
+  "historical_standards": "E74/E105/A numbers are historical context until matched new task evaluation",
+  "test_read": false,
+  "postprocessing_calls": 0,
+  "automatic_queue": true,
+  "dataset_report_sha256": "3a79fd9eb2636578fa4df876ccac51699eab04cd59179027488aa7d8c334928a",
+  "payload_checksums_sha256": "f8eeb86da003c9901b73541eb13cc8e16cad9cd963dcf74a0edddf4a1a5abe54",
+  "queue": "Single train -> frozen own-Loss-best -> original fixed dev500/postprocessing/hard checks -> immediate Q logs -> E142 comparison",
+  "cache_build_workers": 4,
+  "required_cache_key": "a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148",
+  "cache_policy": "Reuse complete existing shared train36000/dev500 cache, no regenerated samples or repeated static preprocessing",
+  "loss": "Exact E139 objective; no obstruction Loss, no G/B x4, no new proposal loss",
+  "architecture_parent": "E119 global2",
+  "new_candidates": 1,
+  "automatic_retry": false,
+  "overlap_omission": "Only direct overlap group removed at S2/S6; raw collision diagnostics retained. No geometry bypass, detach, channel masking or draft overwrite.",
+  "monitor_batch_size": 64,
+  "batch_tail": "562 batches64 plus one32 per full epoch; no dropped or repeated rows",
+  "dynamic_module_features": 49,
+  "module_encoder_input": 65,
+  "local_demand_width": 64,
+  "relation_width": 8,
+  "node_feedback": "Current decoded layout/public specs only; detached geometric summaries, shared demand encoder, per-layer fusion; see DESIGN.md",
+  "pair_feedback": "Original pair18 attention bias retained. Original receiver-aware relation values retained.",
+  "comparison_control": {
+    "result": "experiments/E142_dual_geometry/runs/e142_dual_geometry_seed0/evaluation_no_mib_dev500/results.json",
+    "result_sha256": "702881c9c951b1efc668796ff59dc63bc2d90bce4fb47a791bc7994c63f6906d",
+    "checkpoint": "experiments/E142_dual_geometry/runs/e142_dual_geometry_seed0/checkpoints/best.pt",
+    "checkpoint_sha256": "9799b60053fd38d78f86141b51d9b1933ba817d237cabc5c1859f4003fd24553"
+  },
+  "hidden_propagation": "After S2/S6/S8/S10, next layer starts from public static embedding, prior-layout embedding and current geometric demand. All other edges carry original hidden context, including S0->S1. Layout and its original gradient channels always retained; no detach.",
+  "preflight_parent_sha256": "bf569bfb87d4792886570e2ab865ff86e38bd6a7812aeb2d8d1ac990371fc758",
+  "hidden_reset_after_layers": [
+    2,
+    6,
+    8,
+    10
+  ],
+  "hidden_retained_after_layers": [
+    0,
+    1,
+    3,
+    4,
+    5,
+    7,
+    9,
+    11
+  ]
+}

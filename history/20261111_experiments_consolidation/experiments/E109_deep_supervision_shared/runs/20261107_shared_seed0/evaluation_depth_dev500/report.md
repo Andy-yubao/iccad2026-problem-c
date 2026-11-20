@@ -1,0 +1,30 @@
+# E109_deep_supervision_shared：固定dev500终末验证
+
+唯一own-Loss best在Q评价前冻结。历史MIB及固定规格路径保留；测试未读，未按Q选权重。
+
+```json
+{
+  "status": "complete",
+  "count": 500,
+  "checkpoint_sha256": "5123c81c1eabd3b5fdf4eb2824caf8fbd334108610b8b3bf9f5dd059e7b02a02",
+  "best_epoch": 61,
+  "weighted_Q": 1.0382414235413178,
+  "mean_Q": 1.0469292978600886,
+  "mixed_Q": 1.0425853607007032,
+  "hard_legal": 500,
+  "raw_hard_legal": 0,
+  "fallbacks": 0,
+  "mean_complete_seconds": 0.23427605660061818,
+  "p95_complete_seconds": 0.5804768499961929,
+  "max_complete_seconds": 1.4713814000133425,
+  "over250ms": 169,
+  "max_Q": 3.4755862322370317,
+  "p95_Q": 1.1522833403632375,
+  "training_selection_loss": 0.40640707343816757,
+  "test_read": false,
+  "selection_frozen_before_Q": true,
+  "elapsed_seconds": 301.98442719999
+}
+```
+
+[同100例reference/L/最终图](gallery/index.html)

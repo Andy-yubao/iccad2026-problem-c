@@ -1,0 +1,272 @@
+{
+  "scope": "E144-E147 frozen own-Loss-best, original fixed dev500; no new training/postprocessing/Q scoring",
+  "cells": [
+    {
+      "directory": "E144_local_blank",
+      "arm": "e144_local_blank",
+      "label": "新几何反馈",
+      "best_epoch": 63,
+      "checkpoint_sha256": "0e7209200dccb686b904117dff485e9be58779651fb95e0988a7b09df8f5697d",
+      "loss": {
+        "total": 0.31691062153875826,
+        "reference_weighted": 0.23235164464265107,
+        "overlap_weighted": 0.023522013422101737,
+        "grouping_weighted": 0.0029243920961162075,
+        "boundary_weighted": 0.0013738637355854735,
+        "public_shape_weighted": 0.0008806851298140827,
+        "public_preplaced_position_weighted": 0.0026314235737518172,
+        "final_total": 0.3065609202980995,
+        "wirelength_weighted": 0.04957663782109337,
+        "compactness_weighted": 0.0036499584985135963
+      },
+      "Q": {
+        "mixed_Q": 1.0282702771863548,
+        "weighted_Q": 1.035953582307334,
+        "mean_Q": 1.0205869720653757,
+        "hard_legal": 500,
+        "count": 500
+      },
+      "raw_soft": {
+        "grouping": 2379,
+        "boundary": 7309,
+        "total": 9688,
+        "cases_any": 500,
+        "cases_all_satisfied": 0
+      },
+      "final_soft": {
+        "grouping": 84,
+        "boundary": 59,
+        "total": 143,
+        "cases_any": 95,
+        "cases_all_satisfied": 405
+      },
+      "worst_loss": [
+        293,
+        263,
+        455,
+        197,
+        129
+      ],
+      "worst_Q": [
+        358,
+        481,
+        217,
+        43,
+        9
+      ],
+      "evaluation_path": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E144_local_blank\\runs\\e144_local_blank_seed0\\evaluation_no_mib_dev500\\results.json"
+    },
+    {
+      "directory": "E145_no_relation_value",
+      "arm": "e145_no_relation_value",
+      "label": "去掉关系value ψ",
+      "best_epoch": 55,
+      "checkpoint_sha256": "ad6354a51443dc1b3a77e08ee2b1f3490ede16701f0f0fe87c3533fa8e4e49e6",
+      "loss": {
+        "total": 0.3316553899794817,
+        "reference_weighted": 0.23808845258504152,
+        "overlap_weighted": 0.030203165926970543,
+        "grouping_weighted": 0.003490244061104022,
+        "boundary_weighted": 0.0017046640954795293,
+        "public_shape_weighted": 0.000882150753212045,
+        "public_preplaced_position_weighted": 0.003237317392457044,
+        "final_total": 0.3213774737864733,
+        "wirelength_weighted": 0.049628291931675804,
+        "compactness_weighted": 0.004421101211283918
+      },
+      "Q": {
+        "mixed_Q": 1.0148337208210894,
+        "weighted_Q": 1.0125909176013608,
+        "mean_Q": 1.0170765240408182,
+        "hard_legal": 500,
+        "count": 500
+      },
+      "raw_soft": {
+        "grouping": 2392,
+        "boundary": 6731,
+        "total": 9123,
+        "cases_any": 500,
+        "cases_all_satisfied": 0
+      },
+      "final_soft": {
+        "grouping": 77,
+        "boundary": 61,
+        "total": 138,
+        "cases_any": 114,
+        "cases_all_satisfied": 386
+      },
+      "worst_loss": [
+        293,
+        455,
+        197,
+        263,
+        129
+      ],
+      "worst_Q": [
+        24,
+        119,
+        376,
+        117,
+        366
+      ],
+      "evaluation_path": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E145_no_relation_value\\runs\\e145_no_relation_value_seed0\\evaluation_no_mib_dev500\\results.json"
+    },
+    {
+      "directory": "E146_layout_only",
+      "arm": "e146_layout_only",
+      "label": "每层仅传布局",
+      "best_epoch": 45,
+      "checkpoint_sha256": "886da064523d452534fd3441106f34a1a5f52238f7a60694639dd17ff06ab10c",
+      "loss": {
+        "total": 0.3428802440464497,
+        "reference_weighted": 0.24931858912855387,
+        "overlap_weighted": 0.03259619703516364,
+        "grouping_weighted": 0.003457582574454136,
+        "boundary_weighted": 0.0016351814855006524,
+        "public_shape_weighted": 0.0007171584182215157,
+        "public_preplaced_position_weighted": 0.0009807252249047452,
+        "final_total": 0.33606795759499075,
+        "wirelength_weighted": 0.04975241024510872,
+        "compactness_weighted": 0.00442239716441933
+      },
+      "Q": {
+        "mixed_Q": 1.0355588788481322,
+        "weighted_Q": 1.044746324165243,
+        "mean_Q": 1.0263714335310214,
+        "hard_legal": 500,
+        "count": 500
+      },
+      "raw_soft": {
+        "grouping": 2639,
+        "boundary": 6916,
+        "total": 9555,
+        "cases_any": 500,
+        "cases_all_satisfied": 0
+      },
+      "final_soft": {
+        "grouping": 107,
+        "boundary": 74,
+        "total": 181,
+        "cases_any": 127,
+        "cases_all_satisfied": 373
+      },
+      "worst_loss": [
+        293,
+        263,
+        455,
+        129,
+        197
+      ],
+      "worst_Q": [
+        358,
+        481,
+        475,
+        217,
+        174
+      ],
+      "evaluation_path": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E146_layout_only\\runs\\e146_layout_only_seed0\\evaluation_no_mib_dev500\\results.json"
+    },
+    {
+      "directory": "E147_supervision_hidden_reset",
+      "arm": "e147_supervision_hidden_reset",
+      "label": "监督层后仅传布局",
+      "best_epoch": 46,
+      "checkpoint_sha256": "db80adec8f772d0575082c7c47cbfe4dee55847ca30af561af4cddea5e155bb8",
+      "loss": {
+        "total": 0.33367720381915567,
+        "reference_weighted": 0.24182007033377886,
+        "overlap_weighted": 0.030396769443526865,
+        "grouping_weighted": 0.003354114634654252,
+        "boundary_weighted": 0.0013966220560250803,
+        "public_shape_weighted": 0.0006987358902551933,
+        "public_preplaced_position_weighted": 0.0018361111013509798,
+        "final_total": 0.32755503396689895,
+        "wirelength_weighted": 0.04966639114433815,
+        "compactness_weighted": 0.0045083874945635455
+      },
+      "Q": {
+        "mixed_Q": 1.0186277246315965,
+        "weighted_Q": 1.0164968918651045,
+        "mean_Q": 1.0207585573980884,
+        "hard_legal": 500,
+        "count": 500
+      },
+      "raw_soft": {
+        "grouping": 2571,
+        "boundary": 7820,
+        "total": 10391,
+        "cases_any": 500,
+        "cases_all_satisfied": 0
+      },
+      "final_soft": {
+        "grouping": 95,
+        "boundary": 62,
+        "total": 157,
+        "cases_any": 120,
+        "cases_all_satisfied": 380
+      },
+      "worst_loss": [
+        293,
+        455,
+        263,
+        129,
+        475
+      ],
+      "worst_Q": [
+        481,
+        345,
+        386,
+        93,
+        293
+      ],
+      "evaluation_path": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E147_supervision_hidden_reset\\runs\\e147_supervision_hidden_reset_seed0\\evaluation_no_mib_dev500\\results.json"
+    }
+  ],
+  "ordinary": [
+    457,
+    77,
+    13,
+    125,
+    107
+  ],
+  "ordinary_rule": "Same five cases for all four models; seed20261117; excludes union of four own worst5 Loss/Q sets",
+  "duplicates_preserved": true,
+  "galleries": [
+    {
+      "experiment": "E144",
+      "directory": "E144_local_blank",
+      "arm": "e144_local_blank",
+      "port": 8797,
+      "url": "http://127.0.0.1:8797/",
+      "data": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E144_local_blank\\runs\\e144_local_blank_seed0\\visualization_normal5_loss5_q5\\data.json",
+      "folder": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E144_local_blank\\runs\\e144_local_blank_seed0\\visualization_normal5_loss5_q5"
+    },
+    {
+      "experiment": "E145",
+      "directory": "E145_no_relation_value",
+      "arm": "e145_no_relation_value",
+      "port": 8798,
+      "url": "http://127.0.0.1:8798/",
+      "data": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E145_no_relation_value\\runs\\e145_no_relation_value_seed0\\visualization_normal5_loss5_q5\\data.json",
+      "folder": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E145_no_relation_value\\runs\\e145_no_relation_value_seed0\\visualization_normal5_loss5_q5"
+    },
+    {
+      "experiment": "E146",
+      "directory": "E146_layout_only",
+      "arm": "e146_layout_only",
+      "port": 8799,
+      "url": "http://127.0.0.1:8799/",
+      "data": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E146_layout_only\\runs\\e146_layout_only_seed0\\visualization_normal5_loss5_q5\\data.json",
+      "folder": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E146_layout_only\\runs\\e146_layout_only_seed0\\visualization_normal5_loss5_q5"
+    },
+    {
+      "experiment": "E147",
+      "directory": "E147_supervision_hidden_reset",
+      "arm": "e147_supervision_hidden_reset",
+      "port": 8800,
+      "url": "http://127.0.0.1:8800/",
+      "data": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E147_supervision_hidden_reset\\runs\\e147_supervision_hidden_reset_seed0\\visualization_normal5_loss5_q5\\data.json",
+      "folder": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E147_supervision_hidden_reset\\runs\\e147_supervision_hidden_reset_seed0\\visualization_normal5_loss5_q5"
+    }
+  ]
+}

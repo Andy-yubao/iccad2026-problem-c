@@ -1,0 +1,212 @@
+{
+  "status": "verified_complete",
+  "created_utc": "2026-11-11T08:17:37.359563+00:00",
+  "authorization": "User 2026-11-11: 按工作区整理规范和历史归档要求，把 experiments 整理为仅保留 E119_global_initial_generator 与 E120_node12_collision；其余实验原件同盘归档，不删除唯一证据",
+  "pre_move_checks": {
+    "queue_states": "所有已登记实验 queue_state.json status=complete（E119/E120/E121-E130）",
+    "live_processes": "记录的队列控制器PID均不在存活进程列表；移动前30分钟 experiments 下零文件写入",
+    "reparse_points": "experiments 全树扫描 junction/symlink 数量为0（隔离运行根内为同卷硬链接，rename 不破坏）",
+    "runtime_references": "protocol/paths.json 与 datasets/、scoring/ 源码均不引用 experiments 目录；E119/E120 为自包含本地算法副本，不引用其他实验"
+  },
+  "move_method": "逐目录同卷 rename（mv），rename 不改写内容；移动后用独立工具重新枚举并核对",
+  "verification": {
+    "method": "移动前（PowerShell）与移动后（Python）各生成逐文件清单：相对路径/字节大小/UTC mtime；≤8MiB 文件两侧各算 SHA256。比较结果：文件集合完全一致，大小全部相等，140906 个 SHA256 全部相等，mtime 解析后最大差 1e-06 秒（时间戳精度舍入）",
+    "long_path_note": "E101 隔离运行根（runs/20261103_replay 与 runs/20261104_chain64k_seed0 的 s42/s74/sf）内含整棵 history 缓存结构；归档位置前缀更长后，部分深层路径超过 Win32 MAX_PATH 260，PowerShell 5.1 无法访问。读取该子树须用支持长路径的工具（Python 3.6+ 或 \\\\?\\ 前缀）。移动前清单无任何访问错误，说明全部文件在原位置均于 MAX_PATH 内、被完整记录",
+    "pre_manifest": "verification/premove_manifest.csv",
+    "post_manifest": "verification/postmove_manifest.csv",
+    "result_record": "verification/verify_result.txt",
+    "files_compared": 145392,
+    "sha256_compared": 140906,
+    "max_mtime_delta_seconds": 1e-06,
+    "verified_utc": "2026-11-11T08:17:37.359563+00:00"
+  },
+  "kept_in_experiments": [
+    "E119_global_initial_generator",
+    "E120_node12_collision",
+    "README.md（重写为当前区导航）",
+    "__init__.py"
+  ],
+  "deleted_rebuildable": [
+    "experiments/__pycache__（唯一 __init__.cpython-310.pyc，可重建缓存）"
+  ],
+  "total_file_count": 145392,
+  "total_bytes": 256551060683,
+  "moves": [
+    {
+      "old": "experiments/E101_final_c5_solver",
+      "new": "history/20261111_experiments_consolidation/experiments/E101_final_c5_solver",
+      "file_count": 67348,
+      "bytes": 250286581271
+    },
+    {
+      "old": "experiments/E102_reference_image_generation",
+      "new": "history/20261111_experiments_consolidation/experiments/E102_reference_image_generation",
+      "file_count": 34247,
+      "bytes": 1632600245
+    },
+    {
+      "old": "experiments/E103_offline_loss_alignment",
+      "new": "history/20261111_experiments_consolidation/experiments/E103_offline_loss_alignment",
+      "file_count": 8615,
+      "bytes": 922757953
+    },
+    {
+      "old": "experiments/E104_scaling32k",
+      "new": "history/20261111_experiments_consolidation/experiments/E104_scaling32k",
+      "file_count": 788,
+      "bytes": 270078649
+    },
+    {
+      "old": "experiments/E105_gated_prenorm_placer",
+      "new": "history/20261111_experiments_consolidation/experiments/E105_gated_prenorm_placer",
+      "file_count": 738,
+      "bytes": 138837011
+    },
+    {
+      "old": "experiments/E106_postprocessor_aware_loss",
+      "new": "history/20261111_experiments_consolidation/experiments/E106_postprocessor_aware_loss",
+      "file_count": 10110,
+      "bytes": 1229126606
+    },
+    {
+      "old": "experiments/E107_geometry_posttrain",
+      "new": "history/20261111_experiments_consolidation/experiments/E107_geometry_posttrain",
+      "file_count": 147,
+      "bytes": 120168341
+    },
+    {
+      "old": "experiments/E108_random_reference40k",
+      "new": "history/20261111_experiments_consolidation/experiments/E108_random_reference40k",
+      "file_count": 23,
+      "bytes": 166553
+    },
+    {
+      "old": "experiments/E109_deep_supervision_shared",
+      "new": "history/20261111_experiments_consolidation/experiments/E109_deep_supervision_shared",
+      "file_count": 753,
+      "bytes": 86659934
+    },
+    {
+      "old": "experiments/E110_deep_supervision_heads",
+      "new": "history/20261111_experiments_consolidation/experiments/E110_deep_supervision_heads",
+      "file_count": 743,
+      "bytes": 89209439
+    },
+    {
+      "old": "experiments/E111_progressive_depth",
+      "new": "history/20261111_experiments_consolidation/experiments/E111_progressive_depth",
+      "file_count": 780,
+      "bytes": 145812683
+    },
+    {
+      "old": "experiments/E112_deep_geometry_budget",
+      "new": "history/20261111_experiments_consolidation/experiments/E112_deep_geometry_budget",
+      "file_count": 136,
+      "bytes": 41236595
+    },
+    {
+      "old": "experiments/E113_deep_head_budget",
+      "new": "history/20261111_experiments_consolidation/experiments/E113_deep_head_budget",
+      "file_count": 111,
+      "bytes": 508398
+    },
+    {
+      "old": "experiments/E114_supervision_placement",
+      "new": "history/20261111_experiments_consolidation/experiments/E114_supervision_placement",
+      "file_count": 2252,
+      "bytes": 110850972
+    },
+    {
+      "old": "experiments/E115_first_head_supervision",
+      "new": "history/20261111_experiments_consolidation/experiments/E115_first_head_supervision",
+      "file_count": 616,
+      "bytes": 34816117
+    },
+    {
+      "old": "experiments/E116_first_draft_comparison",
+      "new": "history/20261111_experiments_consolidation/experiments/E116_first_draft_comparison",
+      "file_count": 73,
+      "bytes": 19638875
+    },
+    {
+      "old": "experiments/E117_node26",
+      "new": "history/20261111_experiments_consolidation/experiments/E117_node26",
+      "file_count": 631,
+      "bytes": 42476456
+    },
+    {
+      "old": "experiments/E118_first12_supervision",
+      "new": "history/20261111_experiments_consolidation/experiments/E118_first12_supervision",
+      "file_count": 595,
+      "bytes": 32961203
+    },
+    {
+      "old": "experiments/E121_residual_update",
+      "new": "history/20261111_experiments_consolidation/experiments/E121_residual_update",
+      "file_count": 599,
+      "bytes": 35444407
+    },
+    {
+      "old": "experiments/E122_global2_scaling16",
+      "new": "history/20261111_experiments_consolidation/experiments/E122_global2_scaling16",
+      "file_count": 597,
+      "bytes": 40423415
+    },
+    {
+      "old": "experiments/E123_node12_scaling16",
+      "new": "history/20261111_experiments_consolidation/experiments/E123_node12_scaling16",
+      "file_count": 601,
+      "bytes": 41538639
+    },
+    {
+      "old": "experiments/E124_residual_scaling16",
+      "new": "history/20261111_experiments_consolidation/experiments/E124_residual_scaling16",
+      "file_count": 599,
+      "bytes": 53511767
+    },
+    {
+      "old": "experiments/E125_global2_ref04",
+      "new": "history/20261111_experiments_consolidation/experiments/E125_global2_ref04",
+      "file_count": 597,
+      "bytes": 35675622
+    },
+    {
+      "old": "experiments/E126_global2_refsplit",
+      "new": "history/20261111_experiments_consolidation/experiments/E126_global2_refsplit",
+      "file_count": 593,
+      "bytes": 36074235
+    },
+    {
+      "old": "experiments/E127_node12_ref04",
+      "new": "history/20261111_experiments_consolidation/experiments/E127_node12_ref04",
+      "file_count": 594,
+      "bytes": 36433713
+    },
+    {
+      "old": "experiments/E128_node12_refsplit",
+      "new": "history/20261111_experiments_consolidation/experiments/E128_node12_refsplit",
+      "file_count": 594,
+      "bytes": 38412431
+    },
+    {
+      "old": "experiments/E129_global2_s0ref",
+      "new": "history/20261111_experiments_consolidation/experiments/E129_global2_s0ref",
+      "file_count": 597,
+      "bytes": 36624898
+    },
+    {
+      "old": "experiments/E130_node12_s0ref",
+      "new": "history/20261111_experiments_consolidation/experiments/E130_node12_s0ref",
+      "file_count": 594,
+      "bytes": 36422988
+    },
+    {
+      "old": "experiments/E98_loss_weight_learning",
+      "new": "history/20261111_experiments_consolidation/experiments/E98_loss_weight_learning",
+      "file_count": 10721,
+      "bytes": 956011267
+    }
+  ],
+  "references_note": "docs/output/visualization 历史条目中的 experiments/<archived> 相对链接指向旧位置，按本 manifest 解释，不批改冻结证据；.gitignore 中指向旧路径的规则成为 no-op，保留",
+  "e98_note": "E98 曾于 2026-11-04 从 history/20261103_final_delivery_consolidation 迁回 experiments（该归档 E98_restore_20261104.json），本次按用户指令再次归档；历史记录保持不变"
+}

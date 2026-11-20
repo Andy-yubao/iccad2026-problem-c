@@ -1,0 +1,103 @@
+{
+  "revision": "E101.all_stages64k.normal_earlystop.v1",
+  "registered_utc": "2026-11-03T23:25:18.274202+00:00",
+  "authorization": "User2026-11-04: prepare E42(64k)->E74(64k)->C5F(64k)->freeze->dev500->registered repeatedtest2000; then start autonomously in background",
+  "question": "Does the same staged training recipe benefit from using the original nested64k in all three stages?",
+  "members": {
+    "version": "original frozen v6 nested64k",
+    "train": 64000,
+    "dev_parent": 2000,
+    "train_monitor": 500,
+    "dev_monitor": 500,
+    "test": 2000,
+    "split": "original split_v1 unchanged",
+    "exposure": "E42 previously16k/E74 previously32k/F previously16k; C3 F warm start already has historical training exposure; existing2000 test previously exposed"
+  },
+  "stages": [
+    {
+      "name": "E42",
+      "initialization": "random96x12",
+      "train_size": 64000,
+      "backward": "original eight-term G; geometry ramp over first2 fractional epochs",
+      "selection": "historical G+occupancy exception; unchanged best/LR/earlystop",
+      "lr": [
+        0.001,
+        0.00025,
+        0.0001,
+        5e-05
+      ],
+      "protection_epochs": 15
+    },
+    {
+      "name": "E74",
+      "initialization": "this run E42 unique best; exact96to192 widening; graph-local frozen; fresh AdamW",
+      "train_size": 64000,
+      "loss": "original fixed G+0.5 collision-gated C",
+      "selection": "same total dev500 mean",
+      "lr": [
+        0.001,
+        0.00025,
+        0.0001,
+        5e-05
+      ],
+      "protection_epochs": 15
+    },
+    {
+      "name": "C5F",
+      "initialization": "historical C3 F warm start as preceding replay; this run E74 L frozen; fresh AdamW",
+      "train_size": 64000,
+      "loss": "unchanged original C5 count-weighted teacher/clearance/public boundary+dynamic MST",
+      "selection": "same total dev500 mean",
+      "lr": [
+        0.00025,
+        0.0001,
+        5e-05,
+        2e-05
+      ],
+      "protection_epochs": 0
+    }
+  ],
+  "training": {
+    "seed": 0,
+    "batch": 32,
+    "precision": "FP32, no AMP/TF32",
+    "weight_decay": 0.0003,
+    "clip": 1,
+    "epochs": null,
+    "seconds": null,
+    "stop": "original normal plateau earlystop; numerical gate/error or explicit STOP",
+    "state": "separate best/latest with optimizer/RNG/order/cursor/scheduler/elapsed; fresh optimizers between stages"
+  },
+  "teacher": {
+    "prefix": "original E85 target+usable train16k and dev500 unchanged",
+    "extension": 48000,
+    "source": "same frozen E85 model SHA02c172.. and original FULL repair, frozen source snapshot",
+    "source_never": "C5-generated replacement targets",
+    "generation": "only additional train indices16000..63999, per original member index seed, four CPU workers, solver_threads2; no test",
+    "base": "new E74 supplies input drafts only",
+    "representation": "same center/log-aspect supervision and nominal-area limitation, no area head"
+  },
+  "engineering": {
+    "E42": "same dynamic shapes and eager loss/backward; exact cached FP32 values, per-batch disk read",
+    "E74": "same fixed120 CUDA backward graph/AdamW/projection; CPU disk memmap pinned batch instead of entire-dataset VRAM; same values and order",
+    "F": "existing exact disk memmap path; original F graph/AdamW",
+    "numerics": "new data run and registered I/O migration, no claim of bit-identical64k trajectories",
+    "verification": "same5 train members across old/expanded prefixes: exact CPU cache equality, one discarded actual update per stage, original teacher plus full solver and official scorer; no resume pretest"
+  },
+  "evaluation": {
+    "order": "all stages earlystop -> unique stage-own-loss best freeze -> dev500 -> repeated registered2000",
+    "repair": "original complete E85 single-thread final repair unchanged",
+    "gallery": "same100 reference/L/F/final, no UI auto-open",
+    "timing": "complete batch1 resident requests; hard legality/Q/time separate; mean/P95/max and250ms exceeded; cold/disk/scoring/gallery separate",
+    "test_feedback": false,
+    "scope": "repeated previously exposed2000; not fresh unseen holdout or official contest score"
+  },
+  "execution": {
+    "background": true,
+    "serial_after": "20261103_replay evaluation complete",
+    "preflight_before_training": true,
+    "automatic_wakeup": false,
+    "retry": "error records and exits; no infinite retry"
+  },
+  "comparison": "Freeze design before reading the preceding evaluation results; larger data may worsen quality; compare frozen runs without test-driven retraining or checkpoint selection"
+}

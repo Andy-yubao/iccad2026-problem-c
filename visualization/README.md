@@ -1,72 +1,113 @@
-# 公共布局绘图
+# 布局可视化
 
-`layer_capture.py`提供网络无关的只读readout钩子，调用方仍拥有模型和前向，不在展示模块中训练或执行模型。`layer_budget_viewer.py`消费保存的坐标，支持8/12等不同外层数；按外层完成比例比较时明确显示最近真实层，不插值、不声称等算力。当前E112/E113自动更新[同五例入口](critical_budget/20261107_pair/index.html)，A已有帧只读复用。
+只维护这一套：原 E6 的 Set3 分组色、无分组灰色、模块黑框。模块内标编号和 G/F/P，L/R/T/B 徽记表示当前布局下的边界满足/违反，底部统一图例。无 MIB 编号、纹理、图例或计数。网页与 PNG 采用相同配色和约束语义。
 
-2026-11-07当前展示改为[同五例逐层对比](layer_comparisons/20261107_same_train5/index.html)，不再以100例三相图为默认入口。`layer_comparison.py`只读取已保存的逐层坐标，支持原E98/A/B/分阶段最终模型同层比较，以及分阶段4/8层best各自的真实输出。样例、ID、颜色和全模型全层范围固定；不自动打开界面，不运行模型或后处理。历史100例图片保留。
+## 直接调用
 
-`layer_trace.py`用于只读层间诊断：读取已保存的真实head输出，固定模块ID颜色与全阶段共同坐标范围，生成中间层图、分支幅度曲线和本地交互入口；不运行网络、修复或Q。首个结果为E98 best71五个原登记训练样例，见[诊断报告](../experiments/E98_loss_weight_learning/runs/20261106_layer_diagnosis5/report.md)。
-
-E102纯图像任务使用`raster_layouts.py`：按固定模块ID配色、公开画布和矩形亚像素覆盖渲染原始reference训练图片，并生成不同分辨率／模型输出的纯图片对照。该路径不调用几何描述、实例提取、修复或评分；没有文字、纹理、人工小模块放大或评分控件。既有几何布局绘图路径保持原样。
-
-E102正式训练的同例reference／生成图片对比保存在[E102_reference_image_generation](E102_reference_image_generation/README.md)，由`image_gallery.py`生成不含评分控件的本地HTML及原尺寸图片。每次发布保存epoch／step与成员来源，入口指向最新已完整发布的图集，不自动打开页面。
-
-布局图统一调用此目录。按用户2026-10-17的要求，从实际生成其偏好图集的 `experiments/intent_aware_repair/plot_gallery.py` 提取绘图实现，未根据截图反推。来源和原源码快照哈希见 [origin.json](origin.json)。原始15例图集、坐标、配置与历史快照不改写。
-
-保留Set3分组配色、MIB组纹理、模块编号/G/M/F/P标签、L/R/T/B状态徽记、重叠红轮廓、自身bbox虚线、三栏共享范围、底部统计和图例。每张PNG为3315×1989左右（19.5×11.7英寸、170dpi）。
-
-显式`stages`支持1～3个已保存布局；默认三栏保持原像素输出不变，单栏/双栏按实际列数安排画布和图例，避免空列。返回的`axes_bounds`可用于纯展示总览缩略图，不更改坐标或指标。
-
-```python
-from visualization.layouts import plot_case, plot_evaluation_case
-
-# 原E6图集格式：panel/case_id/constraints，variants下reference/raw/final。
-# 每个阶段含positions(XYWH)，可附metrics和soft_details。
-plot_case(saved_row, output_png, stages=(
-    ('reference', 'Reference layout'),
-    ('raw', 'Model proposal'),
-    ('final', 'Current postprocessing'),
-))
-
-# E7已保存的评价格式（reference_positions、命名模型的raw_positions/final）。
-plot_evaluation_case(saved_evaluation_row, 'attention_geometry', output_png)
-```
-
-调用方负责样本选择、读取既有JSON和图集索引。模块只接收坐标、约束和已存指标，不读取数据集、不推理、不修复、不产生官方分数。E7适配器复用原gallery.py的几何状态描述代码，为徽记/连通分量/形状数提供显示信息；这些描述不回写官方评分。缺失官方指标显示n/a，缺失布局明确显示不可用，不用别的布局替代。
-
-当前接入：E6 `plot_gallery.py`、E7 `render.py`、本次test100运行入口。历史输出保留；其他历史独立脚本仅供复现，不批量重写。新布局绘图应调用本模块，模型、损失和求解算法继续按实验独立维护。
-
-## 可复用草稿评分前端
-
-2026-10-25用户更新：以后不自动启动评分界面。默认仅展示reference／当前模型draft／此前最优模型draft的同例对比；下述评分功能仅在用户明确重新要求评分时使用。历史记录保留。
-
-只浏览已保存布局、不要求评分时，可用[saved_gallery.py](saved_gallery.py)的`write_gallery(folder, manifest)`生成只读`index.html`。支持分组、逐例切换、三列/单列、缩放及原高清图；单列裁切使用`plot_case`返回的`axes_bounds`。清单仅含图片路径和展示指标，不读取数据或运行模型。首个实例为[E50的35例对照](../experiments/E50_anytime_quality/runs/20261025_full500_review/analysis.md)。可直接打开生成的HTML，也可在本地用`python -m http.server 8766 --bind 127.0.0.1 --directory <图集目录>`浏览。既有评分前端和评分数据保持独立。
-
-[review.py](review.py)及[review_web](review_web/)提供本地逐张评分：三相对照、单阶段放大、缩放、1/2/3快捷键、自动下一张、回看改分、未评分导航、自由备注/标签、整轮评价、断点恢复及JSON/CSV导出。评分只评价草稿：1差、2一般、3好。Q/Loss等辅助数值默认折叠，展开会记录；PNG不嵌入这些数值。反馈研究原则见[执行协议8.1](../docs/protocol.md#81-草稿模型的人类反馈研究原则2026-10-24)。
-
-实验先生成三相图及`runs/<round>/manifest.json`，再启动：
+在项目根目录运行，使用现有环境：
 
 ```powershell
-& '.\.conda\envs\iccad2026\python.exe' -m visualization.review --session 'experiments/<实验>/runs/<round>' --port 8765
+# E119 best55：10普通例＋5最坏例，reference／真实12层滑块／原后处理
+& .\.conda\envs\iccad2026\python.exe -B -m visualization --e119 --port 8779
+
+# E120 best79：同规则10普通例＋5最坏例、真实12层滑块，同一套界面
+& .\.conda\envs\iccad2026\python.exe -B -m visualization --e120 --port 8781
+
+# E134已完成的E119两组：同一界面，显示每层新Loss与分项
+& .\.conda\envs\iccad2026\python.exe -B -m visualization --data experiments/E134_supervision_interval/runs/e119_stride3_seed0/visualization_dev15_loss/data.json --port 8782
+& .\.conda\envs\iccad2026\python.exe -B -m visualization --data experiments/E134_supervision_interval/runs/e119_stride2_seed0/visualization_dev15_loss/data.json --port 8783
+
+# E135 A/B/C：每组相同普通10例＋各自最坏5例，S0–S12与逐层Loss
+& .\.conda\envs\iccad2026\python.exe -B -m visualization --data experiments/E135_initial_supervision/runs/e119_A_seed0/visualization_dev15_loss/data.json --port 8784
+& .\.conda\envs\iccad2026\python.exe -B -m visualization --data experiments/E135_initial_supervision/runs/e119_B_seed0/visualization_dev15_loss/data.json --port 8785
+& .\.conda\envs\iccad2026\python.exe -B -m visualization --data experiments/E135_initial_supervision/runs/e119_C_seed0/visualization_dev15_loss/data.json --port 8786
+
+# 带12层滑块的真实历史样例，同一套界面
+& .\.conda\envs\iccad2026\python.exe -B -m visualization --data visualization/data/E114_saved12.json --port 8780
+
+# 使用同一样式导出 PNG，不启动服务
+& .\.conda\envs\iccad2026\python.exe -B -m visualization --e119 --case 0 --png visualization/data/E119_preview.png
+& .\.conda\envs\iccad2026\python.exe -B -m visualization --data visualization/data/E114_saved12.json --case 0 --layer 6 --png visualization/data/E114_layer6_preview.png
 ```
 
-访问`http://127.0.0.1:8765/`。关闭服务不丢评分；同一目录重新启动恢复原顺序和进度。首次接入E42的抽样/补生成入口为[prepare_review.py](../experiments/E42_joint_regularization/prepare_review.py)，一键启动见[E42说明](../experiments/E42_joint_regularization/README.md)。后续实验只需产生相同展示清单，不导入E42私有算法。
+网址为 `http://127.0.0.1:<port>/`，E119/E120默认端口分别为8779/8781。只监听本机，不打开浏览器。服务只开放页面及所选结果的读取接口，无训练、推理、修复、Q重评或评分写入功能。`--e119`/`--e120` 读取各自实验的 `visualization/20261113_dev15/data.json`；E119若没有这份展示数据，才浏览原dev500末层结果。后者按需读取已有dev NPZ并核对成员/权重身份，不重建训练张量。
 
-最小清单字段如下。`axes_bounds`来自`plot_case`返回值，是相对整幅PNG的三个绘图区`[left,bottom,width,height]`；放大功能直接裁切既有PNG，不另画布局。
+后台运行（日志写入可重建的 `.cache/visualization/`）：
+
+```powershell
+$workspacePath = (Get-Location).Path
+$viewerLogs = Join-Path $workspacePath '.cache\visualization'
+New-Item -ItemType Directory -Path $viewerLogs -Force | Out-Null
+$viewerProcess = Start-Process -FilePath "$workspacePath\.conda\envs\iccad2026\pythonw.exe" -ArgumentList @('-B','-m','visualization','--e119','--port','8779') -WorkingDirectory $workspacePath -WindowStyle Hidden -RedirectStandardOutput "$viewerLogs\e119.stdout.log" -RedirectStandardError "$viewerLogs\e119.stderr.log" -PassThru
+$viewerProcess.Id
+```
+
+停止服务时使用上一步返回的进程号：`Stop-Process -Id <进程号>`。
+
+## 中间层与数据接口
+
+2026-11-16用户要求：后续含S0读出的模型展示应同时保存并显示真实S0，滑块从S0开始。S0须由模型实际head调用捕获，不能复制S1或补造缺失状态。既有只保存S1–S12的展示在后续重新采集时补充，本轮设计讨论不自动重跑采集。
+
+E135 使用真实 S0–S12 共13个状态，显式保存 `layer_ids: [0,1,...,12]`，共享界面按实际层号显示。三组使用 seed20261114 抽取相同普通10例，排除三组最坏5例的并集；最坏例各按自己的已存最终Q排序。每层都显示共同完整新Loss；“监督目标Loss”显示实际目标，C 的 S0 为 F，并列出四项组成。均未乘层权重，未直接监督的层在目标列显示 —。末层与原评价草稿逐位一致，后处理/Q复用原件；选择和核验记录均在各 run 的 `visualization_dev15_loss/`。原始结果对比见 `experiments/E135_initial_supervision/runs/results_review.md`。
+
+其他数据不提供 `layer_ids` 时仍按1开始编号。PNG 的 `--layer` 使用实际层号，E135 的 S0 可用 `--layer 0`；`layers` 中不得补造未保存状态。
+
+滑块只在真实保存了多个中间层时出现，选择1–12层只改变中栏，reference 和后处理保持固定。所有层共用坐标范围与模块编号。E119原评价未保存中间层；2026-11-13用户请求展示后，仅对固定15例补存真实12层，末层与原评价逐位一致，后处理坐标原样复用。选择记录在该实验 `visualization/20261113_dev15/selection.json`：普通10例用seed20261113从排除最坏5的剩余成员中固定随机无放回抽样，最坏5按原dev500最终Q降序、index升序破同分。不训练、不重跑后处理/Q、不读test。
+
+`E114_saved12.json` 是原 E114 best48 的固定训练5例＋原 dev 最差5例，仍只是同一界面的历史数据示例。
+
+E134两组E119使用相同随机普通10例，各自按已完成最终Q选最坏5例，排除两组最坏例的并集后再抽普通例。每例保存12层真实草稿及 `layer_losses`，为相同public_priority_v1本层完整Loss及已计系数的分项，未乘监督层权重；这是当前单例数值，不是dev500均值。滑块同步切换Loss，表格列出12层并标示监督权重，未直接监督的层也按同一公式诊断。既有未保存Loss的数据明确显示未保存，不伪造为0。
+
+E120 best79按相同抽样、排序和采集规则独立生成15例；最坏例按E120自己的原评价Q确定，不冒称与E119是同一组配对成员。数据/选择/校验记录在E120的同名展示目录，末层与E120原草稿逐位一致，后处理复用原坐标。
+
+新结果使用一个 JSON，传给 `--data`，不再新增专用网页或服务器：
 
 ```json
 {
-  "schema_version": 1,
-  "session_id": "unique_round",
-  "title": "模型 / 草稿评分",
-  "display_note": "数据角色、草稿及最终布局来源与已知限制",
-  "rubric": {"version": 1, "target": "raw_draft_only", "scale": {"1": "差", "2": "一般", "3": "好"}},
-  "selection": {"seed": 20261024, "source_run": "...", "data_policy": "..."},
-  "cases": [{"id": "case_0001", "n": 20, "member": ["worker_0/layouts_0.th", 1], "image": "images/case_0001.png", "axes_bounds": [[0.035,0.3,0.3,0.5],[0.358,0.3,0.3,0.5],[0.681,0.3,0.3,0.5]], "auxiliary": {"后处理Q": 1.02}}]
+  "title": "模型与checkpoint身份",
+  "note": "成员选择和来源说明",
+  "identity": {"checkpoint_sha256": "实际哈希"},
+  "cases": [{
+    "label": "样例名",
+    "member": ["来源分片", 0],
+    "n": 1,
+    "constraints": [[0, 0, 0, 1, 0]],
+    "reference": [[0, 0, 2, 3]],
+    "draft": [[0.1, 0, 2, 3]],
+    "final": [[0, 0, 2, 3]]
+  }]
 }
 ```
 
-清单顺序就是展示顺序，抽样、随机化和来源验证由实验负责。评分后清单哈希与数据库绑定，变更清单须新建评分轮次。`ratings.sqlite3`使用事务和完整同步写入，记录当前分数及UTC时间的所有变更事件，含所用标准版本与看过指标的事件；多页面版本冲突明确拒绝写入，避免覆盖。自由标签支持增加观察维度，不能把旧分数自动解释为新标签。JSON导出包含不可变清单、当前状态及全部历史；CSV保留逐例分数、备注、标签，文本公式仅在CSV中加转义，JSON原话保持不变。
+坐标为 `N×4` 的 XYWH；约束列为 `[F,P,忽略列,G,boundary_bits]`，边界位 L/R/T/B=1/2/4/8。编号从0开始。可用 `layers: [第1层XYWH, …, 第12层XYWH]` 替代 `draft`；只能放实际保存的输出。未保存 reference/final 时留空或省略，页面会明确标注。可选 `metrics` 字段为 `Q/hard_legal/complete_ms`，只显示已存值。
 
-保存备注不会自动打分；离开当前图片前会保存备注，关闭页面时对未保存文字提示。评分保存成功后才自动下一张；图片失败则禁用评分。全100例都有分数才可标记本轮完成，未完成期间不显示分数分布。整轮评价可留空并回到聊天叙述。所有反馈文件留本机；工具不调用模型、数据集、后处理或评分器，不把分数接入训练。服务仅监听127.0.0.1，仅开放清单中图片和固定资源；不开放整个工作区。
+Python 调用为 `visualization.layouts.render(case, path, layer=6)`。已有评估脚本的 `plot_case` 调用仍可用；`layer_capture.py` 保留只读 hook；`layer_comparison.py` 只兼容旧脚本的几何统计导入，不包含第二套界面。
 
-2026-10-24扩展：清单可用`view_stages`指定两栏A/B或三栏名称；`rubric.target_label/prompt/instructions/scale`设置该轮评分含义。`rubric.questions`可添加可选维度，每项提供`prompt`及1/2/3的`scale`，持久保存为`ratings[id].dimensions`，未知维度拒绝写入。原单例草稿评分默认含义保持不变。E42的整齐对照使用独立会话和rubric v2，主分1=A更整齐/2=差不多/3=B更整齐，另可选可修复性/留白偏好；不能与旧“1差/2一般/3好”混为同一变量。可选维度先选择，按主分时一并保存；同一可选项再点一次可清除为未回答。CSV追加dimensions列，JSON保留原始字典及历史。
+## 文件职责
+
+| 文件 | 职责 |
+|---|---|
+| `viewer.py` / `viewer.html` | 唯一网页入口和交互；支持任意已存层数 |
+| `style.py` | 统一配色、坐标校验、共享坐标范围与边界标记 |
+| `layouts.py` | 同款 PNG 导出及旧调用适配 |
+| `layer_capture.py` | 由调用方掌管模型前向的只读观察工具 |
+| `data/` | 已存真实坐标示例与样式预览，不放另一套 UI |
+
+旧版网页、评分器、图像实验及专用脚本已移到 `history/20261113_workspace_cleanup/visualization_legacy/`，不再作为现行入口。
+
+## E152 v2：普通20例、Loss最差5例、Q最差5例
+
+2026-11-18 按用户请求采集，两组共用固定普通20例，各自追加自身最佳点保存的逐题Loss最差5例及原后处理Q最差5例；极端类别重合时仍保留两个展示条目。A保留reference、best10；B无reference、best8。数据分别位于：
+
+- `experiments/E152_s2_local_repair/runs/e152_s2_ref_seed0/visualization_normal20_loss5_q5/data.json`
+- `experiments/E152_s2_local_repair/runs/e152_s2_no_ref_seed0/visualization_normal20_loss5_q5/data.json`
+
+服务启动后本机端口为8812（A）和8813（B）。统一入口仍为 `python -B -m visualization --data <对应data.json> --port <端口>`。两组完整统计与采集记录在 `experiments/E152_s2_local_repair/runs/review_dev500_v1/`。
+
+本模型的功能单元S0/S1/S2与历史展示的逐层S编号不同：L0为初始布局，S0对应L0→L4，S1对应L4→L8，S2对应L8→L12。数据可用可选 `layer_labels`（与真实 `layer_ids` 一一对应）标清这些含义；旧数据不设置时仍沿用原编号。两组都保存真实L0–L12，不把“仅S2可训练”误作“只显示S2”。逐题记录含完整换侧与同组近接触边变化诊断；这些几何指标不能单独证明拓扑不变。后处理与Q直接复用，不重跑求解器。
+
+## E156 暂停最新权重的训练10例
+
+`experiments/E156_two_s0_stage/runs/visualization_train10_latest_v1/data.json` 使用暂停时latest（step26942），每个N区间随机一个已见训练例，保存实际L0/L2/L4。端口8824。Reference为形状修正监督，不保证合法；未推理未训练后层、未后处理，训练继续暂停。同目录png含10张Reference/L0/L2/L4四栏图及zip。
+
+可选字段 `hide_missing_final:true` 让网页与render隐藏未保存的后处理栏；`reference_label` 标记参考含义；`loss_columns:[[key,label],...]`、`loss_label`、`loss_caption` 可明确当前实验的Loss口径，未设置时保持原列和文案。不新增网页入口。

@@ -1,0 +1,24 @@
+{
+  "scope": "E134.supervision_interval.v1.seed0",
+  "training_enabled": false,
+  "allowed_arms": [],
+  "prepared_arms": [
+    "e119_stride3",
+    "e119_stride2",
+    "e120_stride3",
+    "e120_stride2"
+  ],
+  "automatic_evaluation": true,
+  "test_read": false,
+  "automatic_retry": false,
+  "note": "Prepared only. Explicit user launch command --start creates the activation receipt; no automatic background launch.",
+  "activated_at": "2026-11-13T09:09:32.453361+00:00",
+  "preflight_sha256": "c9c9f8bf64e1cbbc4d44e0993a9c7d722ea104973ac87fd0edb0353c86e7c5b2",
+  "activation": "Explicit user invocation of run_queue --start",
+  "cancelled_arms": [
+    "e120_stride3",
+    "e120_stride2"
+  ],
+  "user_decision": "2026-11-13 user abandons further E120 research; preserve failure; only visualize completed E119 runs",
+  "cancelled_at": "2026-11-13T15:49:46.691641+00:00"
+}

@@ -1,0 +1,35 @@
+# E138 e119_B 原固定dev500
+
+```json
+{
+  "status": "complete",
+  "arm": "e119_B",
+  "count": 500,
+  "checkpoint_sha256": "1cd7a70a8ffb199c2c1d4a1430de6c7f7faf1631640bc2fe3c36e8a6efb97481",
+  "best_epoch": 56,
+  "parameters": 712275,
+  "weighted_Q": 1.0375211454792075,
+  "mean_Q": 1.0309768678248026,
+  "mixed_Q": 1.0342490066520051,
+  "hard_legal": 500,
+  "raw_hard_legal": 0,
+  "fallbacks": 0,
+  "mean_complete_seconds": 0.21457214100002603,
+  "p95_complete_seconds": 0.5553760850027171,
+  "max_complete_seconds": 1.4942654999977094,
+  "over250ms": 154,
+  "max_Q": 2.1354315737385536,
+  "p95_Q": 1.1132853629101855,
+  "raw_repeated_coverage": 0.08038301899642934,
+  "raw_bbox_over_area": 1.02893264499911,
+  "common_final_dev_loss": 0.3693480413556099,
+  "common_final_new_dev_loss": 0.37226739919185636,
+  "own_selection_loss": 0.39286858397722246,
+  "training_seconds": 13764.661144900005,
+  "training_epochs": 59,
+  "scoring_policy": "Original areas/no MIB local research Q; neutral runtime1; not official contest score",
+  "elapsed_seconds": 217.64447819999623,
+  "test_read": false,
+  "selection_frozen_before_Q": true
+}
+```

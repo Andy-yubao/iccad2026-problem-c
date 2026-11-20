@@ -1,0 +1,42 @@
+{
+  "event": "precision_migration_baseline",
+  "steps": 12297,
+  "seen_count": 24594,
+  "train": {
+    "loss": 1.99168000125885,
+    "all_masked_loss": 3.005726308822632,
+    "random_masked_loss": 0.977633713979274,
+    "ce": 1.4166034841537476,
+    "dice": 0.49698014378547667,
+    "boundary": 0.3904819066524506,
+    "module_mean_IoU": 0.2237407386302948,
+    "foreground_pixel_accuracy": 0.4142082576751709
+  },
+  "dev": {
+    "loss": 1.900402364730835,
+    "all_masked_loss": 2.956277675628662,
+    "random_masked_loss": 0.8445270275175571,
+    "ce": 1.3435231251716613,
+    "dice": 0.4816110646724701,
+    "boundary": 0.3763408203125,
+    "module_mean_IoU": 0.2250532613992691,
+    "foreground_pixel_accuracy": 0.4160097007751465
+  },
+  "train_loss": 1.99168000125885,
+  "dev_loss": 1.900402364730835,
+  "inherited_best_bf16": {
+    "loss": 1.86226042842865,
+    "all_masked_loss": 2.878192720413208,
+    "random_masked_loss": 0.8463281443417072,
+    "ce": 1.3009782547950746,
+    "dice": 0.48497583866119387,
+    "boundary": 0.38153175163269043,
+    "module_mean_IoU": 0.23439722108840944,
+    "foreground_pixel_accuracy": 0.4420616683959961
+  },
+  "precision": "BF16",
+  "lr": 0.0002,
+  "stale_preserved": 1,
+  "scheduler_bad_events_preserved": 1,
+  "test_read": false
+}

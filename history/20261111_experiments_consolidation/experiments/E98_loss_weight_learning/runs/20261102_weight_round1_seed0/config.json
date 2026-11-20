@@ -1,0 +1,389 @@
+{
+  "identity": {
+    "plan": {
+      "authorization": "用户：好了，基线已经准备完毕。现在开始尝试Loss调权。同样要求后台运行。",
+      "revision": "E98.train_feedback.direct_search.round1.v1",
+      "run": "runs/20261102_weight_round1_seed0",
+      "parent_checkpoint": "experiments/E98_loss_weight_learning/runs/20261102_fixed_rich96_seed0/checkpoints/best.pt",
+      "parent_sha256": "1df099d624797d3e61fd332b7ffafed8ebc213f73758649e2a34054b395201d1",
+      "parent_epoch": 58,
+      "parent_step": 29000,
+      "architecture": {
+        "width": 96,
+        "layers": 12,
+        "rectangle": true,
+        "ffn_dropout": 0.05
+      },
+      "parameters": 1471539,
+      "maximum_seconds": 3600,
+      "outer_rounds": 1,
+      "training_arms": [
+        "control",
+        "plus",
+        "minus"
+      ],
+      "epochs_per_arm": 4,
+      "updates_per_arm": 2000,
+      "batch_size": 32,
+      "learning_rate": 5e-05,
+      "optimizer": "inherit same best58 AdamW moments/ages, retain decay.0003, clip1 and joint update bound.005; new fixed-Loss phase",
+      "seed": 0,
+      "sampler_epoch_offset": 58,
+      "coefficient_base": {
+        "position": 1.0,
+        "shape": 0.25,
+        "penetration": 0.08975162861857286,
+        "module_load_mean": 0.08975162861857286,
+        "module_max_excess10": 0.08975162861857286,
+        "wirelength": 0.16684160541676146,
+        "compactness": 0.16684160541676146,
+        "boundary_contribution": 0.6673664216670459,
+        "grouping_contribution": 0.6673664216670459,
+        "mib_contribution": 0.6673664216670459
+      },
+      "log_perturbation": 0.22314355131420976,
+      "direction": [
+        1.0,
+        1.0,
+        -1.0,
+        -1.0,
+        1.0,
+        1.0,
+        -1.0,
+        1.0,
+        -1.0,
+        -1.0
+      ],
+      "coefficients": {
+        "control": {
+          "position": 1.0,
+          "shape": 0.25,
+          "penetration": 0.08975162861857286,
+          "module_load_mean": 0.08975162861857286,
+          "module_max_excess10": 0.08975162861857286,
+          "wirelength": 0.16684160541676146,
+          "compactness": 0.16684160541676146,
+          "boundary_contribution": 0.6673664216670459,
+          "grouping_contribution": 0.6673664216670459,
+          "mib_contribution": 0.6673664216670459
+        },
+        "plus": {
+          "position": 1.1862203142327061,
+          "shape": 0.29655507855817653,
+          "penetration": 0.0681377312658052,
+          "module_load_mean": 0.0681377312658052,
+          "module_max_excess10": 0.10646520510282063,
+          "wirelength": 0.1979109016045599,
+          "compactness": 0.12666297702691837,
+          "boundary_contribution": 0.7916436064182396,
+          "grouping_contribution": 0.5066519081076735,
+          "mib_contribution": 0.5066519081076735
+        },
+        "minus": {
+          "position": 0.8030251162011424,
+          "shape": 0.2007562790502856,
+          "penetration": 0.11261376875104881,
+          "module_load_mean": 0.11261376875104881,
+          "module_max_excess10": 0.07207281200067124,
+          "wirelength": 0.13397799957698,
+          "compactness": 0.20934062433903125,
+          "boundary_contribution": 0.53591199830792,
+          "grouping_contribution": 0.837362497356125,
+          "mib_contribution": 0.837362497356125
+        }
+      },
+      "coefficient_rule": "multiplicative symmetric log perturbation, same total coefficient sum; no formula/normalization changes",
+      "feedback_panel": [
+        {
+          "train_index": 8255,
+          "member": [
+            "worker_13/layouts_5264.th",
+            63
+          ],
+          "n": 21
+        },
+        {
+          "train_index": 11983,
+          "member": [
+            "worker_48/layouts_784.th",
+            16
+          ],
+          "n": 25
+        },
+        {
+          "train_index": 6563,
+          "member": [
+            "worker_67/layouts_9072.th",
+            104
+          ],
+          "n": 29
+        },
+        {
+          "train_index": 5340,
+          "member": [
+            "worker_8/layouts_6832.th",
+            71
+          ],
+          "n": 33
+        },
+        {
+          "train_index": 11130,
+          "member": [
+            "worker_32/layouts_6496.th",
+            15
+          ],
+          "n": 38
+        },
+        {
+          "train_index": 1537,
+          "member": [
+            "worker_49/layouts_112.th",
+            20
+          ],
+          "n": 42
+        },
+        {
+          "train_index": 8700,
+          "member": [
+            "worker_29/layouts_8512.th",
+            57
+          ],
+          "n": 46
+        },
+        {
+          "train_index": 6157,
+          "member": [
+            "worker_36/layouts_4928.th",
+            93
+          ],
+          "n": 51
+        },
+        {
+          "train_index": 355,
+          "member": [
+            "worker_84/layouts_5264.th",
+            104
+          ],
+          "n": 55
+        },
+        {
+          "train_index": 9744,
+          "member": [
+            "worker_29/layouts_9632.th",
+            52
+          ],
+          "n": 59
+        },
+        {
+          "train_index": 11427,
+          "member": [
+            "worker_75/layouts_1344.th",
+            93
+          ],
+          "n": 63
+        },
+        {
+          "train_index": 3388,
+          "member": [
+            "worker_1/layouts_1232.th",
+            88
+          ],
+          "n": 68
+        },
+        {
+          "train_index": 13129,
+          "member": [
+            "worker_62/layouts_6944.th",
+            19
+          ],
+          "n": 72
+        },
+        {
+          "train_index": 7177,
+          "member": [
+            "worker_65/layouts_2352.th",
+            12
+          ],
+          "n": 77
+        },
+        {
+          "train_index": 14159,
+          "member": [
+            "worker_29/layouts_1344.th",
+            27
+          ],
+          "n": 82
+        },
+        {
+          "train_index": 14328,
+          "member": [
+            "worker_12/layouts_8736.th",
+            83
+          ],
+          "n": 86
+        },
+        {
+          "train_index": 4443,
+          "member": [
+            "worker_94/layouts_2576.th",
+            62
+          ],
+          "n": 90
+        },
+        {
+          "train_index": 9306,
+          "member": [
+            "worker_18/layouts_8064.th",
+            34
+          ],
+          "n": 95
+        },
+        {
+          "train_index": 13970,
+          "member": [
+            "worker_38/layouts_2016.th",
+            40
+          ],
+          "n": 99
+        },
+        {
+          "train_index": 3006,
+          "member": [
+            "worker_48/layouts_2800.th",
+            54
+          ],
+          "n": 103
+        },
+        {
+          "train_index": 14096,
+          "member": [
+            "worker_84/layouts_1568.th",
+            102
+          ],
+          "n": 107
+        },
+        {
+          "train_index": 7916,
+          "member": [
+            "worker_24/layouts_5600.th",
+            45
+          ],
+          "n": 112
+        },
+        {
+          "train_index": 3395,
+          "member": [
+            "worker_83/layouts_2576.th",
+            4
+          ],
+          "n": 116
+        },
+        {
+          "train_index": 2195,
+          "member": [
+            "worker_93/layouts_8960.th",
+            60
+          ],
+          "n": 120
+        }
+      ],
+      "feedback_repeats": 2,
+      "feedback_order": [
+        "base",
+        "control",
+        "plus",
+        "minus"
+      ],
+      "repeat_order": "forward then reverse arm order; same panel order",
+      "minimum_absolute_gain_per_repeat": 0.0001,
+      "feedback_objective": "official neutral-time Q with exp(N/12) layout weighting, hard feasibility required, complete singlethread repair fixed",
+      "branch_selection": "evaluate exactly terminal2000 for all branches; own-train-Loss best saved only, not candidate for Q re-selection",
+      "branch_monitoring": "same fixed branch Loss train500 every epoch; no dev reads until selection frozen; no LR/early-stop decisions inside fixed2000 budget",
+      "data": "original frozen v5 train16k; public mean-area transform; existing monitors and split unchanged",
+      "validation": "once selected.json is frozen, terminal control and selected fixed dev500, no controller feedback; reuse control when selected=control",
+      "preflight_train_indices": [
+        1683,
+        5474,
+        10027,
+        10140,
+        15001
+      ],
+      "source_baseline_evaluation_plan_sha256": "f7abba1fb93c5285af67485d04dff5ebec183591f68e0cd3deda9f5a654b2ac2",
+      "test_read": false,
+      "automatic_wakeups": false,
+      "next_outer_round": "not authorized by this pilot"
+    },
+    "sources": {
+      "experiments/E98_loss_weight_learning/weight_learning/engine.py": "941021e29b11bc2512ac856426c4410f4bff189326836a3907376b15026c36db",
+      "experiments/E98_loss_weight_learning/weight_learning/preflight.py": "9af2c4b53be6434a89273fbb9a2fe8f7116b37fab5bcc66ac083c8554b358fa5",
+      "experiments/E98_loss_weight_learning/weight_learning/run.py": "35f86f3fbf9ba10bc6eaa918fa529e5b294a92f5b5343171640ca14bea95d2b2",
+      "experiments/E98_loss_weight_learning/weight_learning/__init__.py": "2dfb7d31fa51ec5e861630aefe81ca90d3cf41b6cbe4d3c7b92be681d0efef68",
+      "experiments/E98_loss_weight_learning/weight_learning/plan.json": "bc04a4ae0975e53c05c3330ca07040257712913efe3d7f7315e6f099512182ce",
+      "experiments/E98_loss_weight_learning/weight_learning/README.md": "8a7c8014b21663103d9bf7b57f08b0f3cfaf7a17c6cbb22129ddac22647cdd0a",
+      "experiments/E98_loss_weight_learning/model.py": "0d71c96c75976dc57d589d5709639291d1a30addffa8a5f0f2c53e2cb88a9089",
+      "experiments/E98_loss_weight_learning/features.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+      "experiments/E98_loss_weight_learning/batches.py": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92",
+      "experiments/E98_loss_weight_learning/data.py": "1e43fe61a6d4dde4007295f817db927d75cd61439239423621ef65bf826e0d66",
+      "experiments/E98_loss_weight_learning/resident.py": "a70da9f834fd05091ab011459e34fcff214bd41cb753f98ee9c088975c0a3c81",
+      "experiments/E98_loss_weight_learning/ports.py": "431b54476e7de8a94c12cf935a30a3b49b911e208305fbe6bb7b23d72e37dbef",
+      "experiments/E98_loss_weight_learning/cache.py": "ac3e95aa991fa434967583f472931375960241d1e97a0c0e6c7072c2e70e74bb",
+      "experiments/E98_loss_weight_learning/io.py": "8744d4dc2f0faaf9de18deb38051e5e334cac43529eaa97357941fcede3730c1",
+      "experiments/E98_loss_weight_learning/simple_loss.py": "e96cc9272aa1e3b13a6f93b3674674df280e709c4ecde7098ad0dc1b73b8bfd3",
+      "experiments/E98_loss_weight_learning/loss.py": "45e9c4d5c7a57e583302355d215e8b3c1eaaaa53733792f91059fc8a7f1ec400",
+      "experiments/E98_loss_weight_learning/loss_config.py": "f3e0a1219b87262a6ea9c9a6a9af5aee31eed4fd6c878ecfb5170f061f0349e1",
+      "experiments/E98_loss_weight_learning/group_tree.py": "867ca3b84848ae78da25dd2a2db16018d722102c7bb5a34644492451efef65fd",
+      "experiments/E98_loss_weight_learning/captured_projection.py": "dd031332127edd706c0e09f49a07f5e6133f5a9cd0f7fcd69d2246644cbb74c9",
+      "experiments/E98_loss_weight_learning/step_control.py": "795ddb45dd257e123f1880eea28b58502711807ee643bfcb51a7e72d484952da",
+      "experiments/E98_loss_weight_learning/train.py": "d3f01fab5628fb3b8175be3de7e6e0ed97c1fd2c96c3c6a8067f8e21c73677b5",
+      "experiments/E98_loss_weight_learning/qualification/__init__.py": "13d536fe0196a9c4f5693cd4859c4e6bae6f1ed0dfefc3be5f24f4c955e21b03",
+      "experiments/E98_loss_weight_learning/qualification/evaluate.py": "64ec87e5ca2117a7e76319fbe5f72a394bb9722dc5e46cfb4e21102f30d29109",
+      "experiments/E98_loss_weight_learning/qualification/metrics.py": "13f381b6bb22693354f1824715b989793597395ace81200f64fb2b1d7bd6d243",
+      "experiments/E98_loss_weight_learning/qualification/plan.json": "f7abba1fb93c5285af67485d04dff5ebec183591f68e0cd3deda9f5a654b2ac2",
+      "experiments/E98_loss_weight_learning/qualification/repair/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "experiments/E98_loss_weight_learning/qualification/repair/backend/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "experiments/E98_loss_weight_learning/qualification/repair/backend/conic_geometry.py": "8d611db3bee47499c77b64039eee09718607f356cd251df5792314a53bcdcd63",
+      "experiments/E98_loss_weight_learning/qualification/repair/backend/frozen/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "experiments/E98_loss_weight_learning/qualification/repair/backend/frozen/canonical_geometry.py": "c1dcfd377ad33cdb85954c01917e762f87360deb43b1d5cce9b92c1b003fa2e4",
+      "experiments/E98_loss_weight_learning/qualification/repair/backend/frozen/feasible.py": "9cfe70894d80fbe54ccaa1c3de60ef4ab111ac9b4472286d1ae6a0c5a1fdc756",
+      "experiments/E98_loss_weight_learning/qualification/repair/backend/frozen/global_refine.py": "cd43991827597dfc4c5635cddb26f597774c680a24658237e5f443e9fbbca60c",
+      "experiments/E98_loss_weight_learning/qualification/repair/backend/frozen/packing.py": "3c0500b7fee120807e6bd3fa8e9f115e476782af1a3e7620859c6651a089ef30",
+      "experiments/E98_loss_weight_learning/qualification/repair/backend/frozen/postprocess.py": "da0e1572a822a589968a19e67e2d36dd5133c7d17b7ea9443bd743ee4653a272",
+      "experiments/E98_loss_weight_learning/qualification/repair/backend/frozen/shape_lp.py": "6de2773cfd981723e55a1d317ad9422e8fee76b393d740acaf70007594bc8a9f",
+      "experiments/E98_loss_weight_learning/qualification/repair/backend/frozen/solver.py": "ed874db1bac7205d5e1d80350b1d4e82d3c56eb2bb44b9f08ceb256244d24ea0",
+      "experiments/E98_loss_weight_learning/qualification/repair/backend/frozen/topology_mip.py": "2ba0f2612f598f5e8d6e80a3ee1f74ad4941b78a3e9163f2d4acd7db5588da1a",
+      "experiments/E98_loss_weight_learning/qualification/repair/backend/guard.py": "eb36fbbcea1b694c7fb40fa0b36e3ed659ac66563be583f177fb6bb9e3c35bd7",
+      "experiments/E98_loss_weight_learning/qualification/repair/backend/observe.py": "b924be6a40f157e2d2204e358990797192e10a6320e3e3c3399d044918b25dd8",
+      "experiments/E98_loss_weight_learning/qualification/repair/backend/reduction.py": "d8ba6af127d9b08469b198f7ed38849e14ac566db58bfab855797920c92012ed",
+      "experiments/E98_loss_weight_learning/qualification/repair/backend/rescue.py": "ada10eea489e0f7d65a2f6dd0a20358d33d08808f3dfef6a19c0583139f206e0",
+      "experiments/E98_loss_weight_learning/qualification/repair/canonical.py": "9f7da6983541a3c8b0d57c8f869c6905c24f2bc4eb3643e0ed9e0a718d2abf2c",
+      "experiments/E98_loss_weight_learning/qualification/repair/canonical_native.py": "e350394ce13f8bb20e53d03494912f9367d29c9f68809ad16c4314a45709718b",
+      "experiments/E98_loss_weight_learning/qualification/repair/canonical_py.py": "b5b99c1f77756aa318fe5cb0e7fa82935844752b4fa815ab80367adb34e00195",
+      "experiments/E98_loss_weight_learning/qualification/repair/certify_polish.py": "4cdc5c8e368f2ade78d6adcd046d3eb8163b33bda04cfb819e38418671f36094",
+      "experiments/E98_loss_weight_learning/qualification/repair/fast_geometry.py": "5440a4deaa85397ff47f4323b4106d559e508c3f7af8f37953fea37cdfcdbf02",
+      "experiments/E98_loss_weight_learning/qualification/repair/legal_seed.py": "45a6d0ee77c7cceafd05f41f9317f72ebdbf56dd45fc566da04952810e3a7588",
+      "experiments/E98_loss_weight_learning/qualification/repair/projection.py": "7f43f22c1ded622268a4c73a26e0103d4e30edfd027089b80845a7195ee4cbff",
+      "experiments/E98_loss_weight_learning/qualification/repair/solver.py": "6c4310ac9ae58ea5fa85732548e14e44f33ccb331f3bc69071a3582cd4fb8f2e",
+      "scoring/__init__.py": "933bf2be947e20bae164511f26afaa84c2f331d0dbdebc417d235db8358a9247",
+      "scoring/checks.py": "738f6b57e20dce58516f3f10d83689f8df273a84a02b2dce99c6ccc1f904763a",
+      "scoring/evaluation.py": "356e0d1c788c6f25154b33fb1c2455388317d2cc0dd96ca50d7357c58612c611",
+      "scoring/official.py": "478fbc228a56ec4b336b5d8687a44b22b749f30aae09372f57c08e7124270e03",
+      "visualization/layouts.py": "d58adf2d222344cebb3d0f975f3cadd496593e5bd8d195f185a07d64a68edaee",
+      "datasets/cases.py": "1fd51addaaae38164c22f1946712665beebac700054db4bb07ed4f9d44e0b168",
+      "datasets/paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+      "datasets/public_member_inputs.py": "6d525fa963d098051648b01d6bc75fb8a032dd5746529fb3c750afe2b5e8bb09",
+      "datasets/quality_layouts.py": "94f374fa9562770a9c7deadb645d73c3af1fc1a20251f98f1dce4ac575820191",
+      "datasets/reference_layouts.py": "f6aeeba298a163b7d506c67e3fba024cd3a191c3aae1116fc6b5d294431db9b5",
+      "datasets/worksets.py": "013087151ab8e1195d7d2757e777839f521486425eeaff4c45fed4e370df233c",
+      "datasets/__init__.py": "03c36f364366be6c8a5091d6bd3dbec0788d7871747acdeac5fa89d4974cec21",
+      "protocol/paths.json": "7a28cd42de0f10809500c43c48836576361e67a72e723f7b32a404186df9b419",
+      "protocol/reference_workset_v5.json": "1409ccf825b9c7cae1097a22e8dc4068e1283d79541c85ce54c5627d0c2b4208",
+      "protocol/reference_workset_v6.json": "2fe459b0a785ffb6995dd3e5966cd47337b948b15ec4bb4d4c19ffe169e404ae",
+      "protocol/split_v1.json": "a1f23edae03194c1155d260415482d892e4cb5ad66170abc93af04aafc8cefbd",
+      "datasets/expanded_reference/__init__.py": "b54991bdcbd4f194f31b9bcdf1bc9bc49da39f90089d9fa044668779a4b6a7af"
+    },
+    "parent_sha256": "1df099d624797d3e61fd332b7ffafed8ebc213f73758649e2a34054b395201d1"
+  },
+  "parent_full_budget_seconds": 3305.772642799988,
+  "original_baseline_complete_seconds": 3465.580786599996,
+  "test_read": false
+}

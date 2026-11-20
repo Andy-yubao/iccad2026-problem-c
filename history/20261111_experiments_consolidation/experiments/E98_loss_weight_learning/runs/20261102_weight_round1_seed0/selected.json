@@ -1,0 +1,26 @@
+{
+  "status": "frozen_before_dev",
+  "selected_arm": "plus",
+  "checkpoint": "experiments/E98_loss_weight_learning/runs/20261102_weight_round1_seed0/branches/plus/checkpoints/latest.pt",
+  "checkpoint_sha256": "94c5086a354a444e28016337baa37f42a777cbd9aafc1d60674fbfcee708839c",
+  "coefficients": {
+    "position": 1.1862203142327061,
+    "shape": 0.29655507855817653,
+    "penetration": 0.0681377312658052,
+    "module_load_mean": 0.0681377312658052,
+    "module_max_excess10": 0.10646520510282063,
+    "wirelength": 0.1979109016045599,
+    "compactness": 0.12666297702691837,
+    "boundary_contribution": 0.7916436064182396,
+    "grouping_contribution": 0.5066519081076735,
+    "mib_contribution": 0.5066519081076735
+  },
+  "coefficient_changed": true,
+  "accepted_candidates": [
+    "plus"
+  ],
+  "feedback_source": "24 frozen train members only, two repeats, no dev reads",
+  "selection_rule": "candidate must beat control by >0.0001 on BOTH feedback repeats",
+  "validation_may_change_selection": false,
+  "test_read": false
+}

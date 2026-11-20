@@ -1,0 +1,19 @@
+{
+  "status": "error",
+  "arm": "node12",
+  "unique_train_cases": 5,
+  "dev_payloads": 0,
+  "test_read": false,
+  "optimizer_updates": 0,
+  "formal_training_started": false,
+  "resume_tested": false,
+  "initial_eval_diagnostics": {
+    "total": 88.87495422363281,
+    "layer02_total": 15.926566123962402,
+    "layer08_total": 21.968303680419922,
+    "layer16_total": 106.3568344116211
+  },
+  "error": "FileNotFoundError(2, 'No such file or directory')",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E123_node12_scaling16\\inspect.py\", line 118, in main\n    peak_allocated_bytes=torch.cuda.max_memory_allocated(),sources=sources())\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E123_node12_scaling16\\io.py\", line 53, in sources\n    return {p.relative_to(ROOT).as_posix(): sha(p) for p in sorted(set(files))}\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E123_node12_scaling16\\io.py\", line 53, in <dictcomp>\n    return {p.relative_to(ROOT).as_posix(): sha(p) for p in sorted(set(files))}\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E123_node12_scaling16\\io.py\", line 18, in sha\n    return hashlib.sha256(Path(path).read_bytes()).hexdigest()\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\pathlib.py\", line 1126, in read_bytes\n    with self.open(mode='rb') as f:\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\pathlib.py\", line 1119, in open\n    return self._accessor.open(self, mode, buffering, encoding, errors,\nFileNotFoundError: [Errno 2] No such file or directory: 'E:\\\\project\\\\ICCAD\\\\2026\\\\problemC\\\\experiments\\\\E123_node12_scaling16\\\\formula_spec.md'\n",
+  "elapsed_seconds": 27.000907200039364
+}

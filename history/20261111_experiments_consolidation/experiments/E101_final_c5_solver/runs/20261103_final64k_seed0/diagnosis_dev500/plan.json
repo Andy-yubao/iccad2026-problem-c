@@ -1,0 +1,28 @@
+{
+  "registered_utc": "2026-11-03T14:32:21.724574+00:00",
+  "scope": "Read-only training/dev diagnosis requested by user after full dev500; final model and test selection unchanged",
+  "panels": [
+    "original train_monitor500",
+    "original dev_monitor500"
+  ],
+  "comparisons": [
+    "saved Q decomposition and paired deltas",
+    "historical exact own-Loss records",
+    "FP32 eval/no_grad original and retrained L/F on both original E85 and current C5 teacher labels",
+    "four component combinations as raw-output-only attribution, no final solver runs",
+    "saved deployment vs recomputed batch32 drafts and cached L consistency",
+    "exact per-module overlap union metrics"
+  ],
+  "restrictions": [
+    "no optimizer updates",
+    "no solver calls",
+    "no checkpoint search",
+    "no test payload/results used in analysis",
+    "wait for ongoing final timed evaluation to finish before GPU diagnostics"
+  ],
+  "geometry_metric_source": {
+    "file": "history\\20261103_final_delivery_consolidation\\experiments\\E97_gpu_hybrid_solver\\draft_metrics.py",
+    "sha256": "28fc6ce71a0d9e06937b32c595d90ce1553df7f6fb5b185d04051d2910d01190"
+  },
+  "failure_attribution": "Separate verified mechanism from hypotheses; data quantity/L weights/teacher source changed together; not a controlled scaling experiment"
+}

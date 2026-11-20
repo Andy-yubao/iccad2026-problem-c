@@ -1,0 +1,8 @@
+{
+  "stage": "preparation disposable startup capture",
+  "accepted_optimizer_updates": 0,
+  "formal_training_started": false,
+  "error": "CUDA graph backward legacy-stream dependency; absent in CPU-then-CUDA preflight",
+  "correction": "default-stream eager backward warmup before side-stream capture; no objective/architecture changes",
+  "pipeline_budget_preserved": true
+}

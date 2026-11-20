@@ -1,160 +1,99 @@
-# 全部实验实际目录索引
+# 实验位置索引
 
-生成：2026-11-05。只列实际实验根，不展开run隔离副本、资产或数据。目录存在不等于完成训练；状态与结论见[当前状态](current_status.md)、[研究综合](research_history.md)。同一编号可在多次归档中有不同阶段副本，不静默选择“最新版”。
+[E157 依次训练S1再S2](../experiments/E157_sequential_s1_s2/README.md)：2026-11-20用户明确改为顺序训练并授权后台启动。冻结E156 best79；先训练S1编码器/共享双层S1两次（L6/L8 .2/.8），冻结own-best后，再新建S2编码器/共享双层S2两次（L10/L12 .2/.8）。完整公开Loss，reference及grouping瓶颈监督为0；仅S2 L12加0.2容差移动项，重叠模块减轻移动惩罚。两阶段各279958可训练参数、36k/batch64、各4h/200轮上限；两阶段冻结/恢复/梯度及完整MIB后处理短检通过后启动。最后唯一S2 best运行新dev500完整MIB评价，不读test。队列与日志以实验内记录为准。
 
-历史README保留原相对路径和命令，可能需要对应manifest解释；不直接执行旧启动入口。
+[E156 两次共享S0](../experiments/E156_two_s0_stage/README.md) 已用满原4小时预算，完成80轮及第81轮部分更新，best79 dev Loss0.189882已冻结。未启动S1/S2；父权重现供E157顺序训练使用。
 
-## 当前保留路径
+[E155 新形状修正版L0](../experiments/E155_fresh_mib_l0/README.md) 已完成，best51固定train500/dev500 Loss为0.360470/0.360367，父权重SHA已冻结。新36k、MIB形状修正监督；本轮未训练后段、未后处理。
 
-| 实验 | 原标题 |
+[E154 移除瓶颈项后重训 L0](../experiments/E154_l0_no_bottleneck/README.md)：已完成53轮正常早停，own-Loss-best为第50轮，原固定train500 Loss0.372355/dev500 Loss0.368000，best已冻结；没有启动后段或后处理。新选[MIB结构挑战dev500](../datasets/mib_dev500_challenge_v1/report.md)及独立CPU缓存已完成，按36k的N分布分配、公开约束复杂度择优，未改变E154原监测和选模结果。后续瓶颈监督仅S0/L4系数0.2，L0/L8/L12为0。
+
+E153两阶段及完整MIB dev500已完成：最终500/500硬合法、MIB全满足，grouping453/500（90.6%），混合Q1.043412；未达到95%目标。[Loss与后处理审计](../experiments/E153_mib_role_topology/runs/loss_postprocessing_audit_v1/report.md)记录了总Loss口径变化及9个外框异常案例。
+
+[E153 MIB与增强题目编码](../experiments/E153_mib_role_topology/README.md) 已按用户要求完成一个scratch方案的准备与检查：原MIB32k/train500/dev500不改划分；先处理数据，L0及所有后层使用增强条件，S0 reference为0.75并加入分组/成员重排。先训L0再训后段，无历史权重迁移。数据处理、全数据尺寸压力检查、两阶段梯度/恢复检查和完整MIB后处理短检均通过；用户已于2026-11-18授权启动，后台依次训练L0与后段，完成后自动原dev500完整MIB评价；实时状态见实验内记录。
+
+[E152 只微调 S2 的 A/B 对照](../experiments/E152_s2_local_repair/README.md) v2 两组已完成原36k、各10轮训练及原dev500。A保留reference（best10），B去掉（best8），最终均500/500硬合法，混合Q为1.008752/1.009692，软约束全满足425/419题，均无外框超过reference1.2倍的题。[统计与逐阶段展示](../experiments/E152_s2_local_repair/runs/review_dev500_v1/report.md) 按本轮用户请求生成；旧版结果已作废。
+
+[E151 固定 E149 初稿并重训后段](../experiments/E151_frozen_role_initial/README.md) 含冻结初始化、后段联合训练和 dev500 S1 阶段审计。训练总目标为 L4/L8/L12 的 0.1/0.1/0.8。
+
+[E150 新初稿与原后段联合训练](../experiments/E150_role_joint/README.md)：2026-11-18用户授权准备通过后后台启动：E149新角色初稿＋E148原12层后续结构，681141参数全部scratch seed0联合训练。L0/L4/L8辅助各1/15、L12为.8；L0和L4去直接overlap，L8/L12完整。只传布局跨双层单元，初稿也直接监督。原36k/batch64/4h，基础及E149角色缓存复用；只记录Loss，无后处理/Q/test。准备检查已通过，状态以实验内记录为准。
+
+[E149 结构角色初稿独立训练](../experiments/E149_role_initial/README.md)：2026-11-17用户授权准备通过后后台启动，只训练带结构角色编码的初稿生成器。两层width64、完整引用端口token、多跳/锚点角色和静态关系bias，共107739参数；无S0/S1/S2后段。初稿唯一输出直接监督，完整去掉overlap组、其余原Loss系数保持。原36k/batch64、4h/200epoch、原train500/dev500，基础缓存复用，仅新建公开role sidecar；只记录Loss，无后处理/Q/test。准备检查已通过，实时状态以实验内记录为准。
+
+[E148 联合双层功能网络与形变反馈](../experiments/E148_shared_functional_shape/README.md)：2026-11-17按用户修订完成准备并后台启动。三套双层单元按S0/S0/S1/S1/S2/S2共享调用，跨单元仅传布局，第一子层读取纯题目条件、第二子层不重复注入。保留E142原49维反馈、无空白统计，新增16维等面积形变响应；678941参数联合scratch seed0。仅4/8/12层监督，权重.1/.1/.8，4去直接overlap、8/12完整；原36k/batch64、整个候选4h上限及自动原dev500。准备检查已通过；实时状态以实验内记录为准。
+
+[E147 监督层后清除隐藏传递](../experiments/E147_supervision_hidden_reset/README.md)：2026-11-17用户授权准备后后台启动。仅S2→S3、S6→S7、S8→S9、S10→S11重建隐藏输入，其余层保留隐藏传递，布局及其梯度始终传递。E142原49维反馈、pair bias/ψ、895123参数、batch64/36k、E139监督、scratch seed0及原4h/早停设置保持。训练后自动原固定dev500和Q日志；实时状态以实验内记录为准。
+
+
+[E144/E145/E146 三组E142对照](../experiments/E144_local_blank/README.md)：2026-11-16用户授权准备后后台依次scratch训练，每组自动原固定dev500。E144为截断至对应边长的脱离距离＋0.25边长新条带空白比例（894867参数）；E145仅移除ψ关系value、保留pair bias（869779）；E146层间仅传布局，每层从公开静态属性重构输入，不传前层或S0隐藏状态（895123）。均batch64、原36k、E139监督和原优化/早停/4h上限；准备检查已通过。整体实时状态在E144 `background/suite_state.json`，总日志 `background/suite.stdout.log`；Q逐组写日志，错误/STOP阻断后续。
+
+
+2026-11-16核对。目录存在不代表可以启动；状态和权重身份看实验自身记录。
+
+## 现有实验
+
+[E143 四方向可移动距离实验](../experiments/E143_directional_travel/README.md)：2026-11-16用户授权准备通过后后台scratch训练，仅改E142方向反馈：阈值0.1、连续首次越阈距离、到边界/对应边长双上限，保留0.25s响应、删除1.0s响应。45维动态输入、894867参数，其他E142设置及E139监督保持；准备检查通过，自动原固定dev500和Q日志。实时状态看实验内记录。
+
+[E142 模块动态需求与关系value实验](../experiments/E142_dual_geometry/README.md)：2026-11-16用户授权准备通过后后台scratch训练，batch64、895123参数、冻结36k；监督/Loss完整复用E139（S2/S6去overlap，S8/S10/S12完整，.05/.05/.05/.05/.8），不加入阻隔Loss。49维动态摘要经需求编码进入QKV，原18维pair bias保留，新增接收者相关pair value。启动前检查已通过，随后自动原固定dev500/原后处理/独立硬检查，Q摘要进入日志。实时状态以实验内记录为准，暂无新结果。
+
+[E141 三组路径阻隔/逐层监督实验](../experiments/E141_path_supervision/README.md)：2026-11-16用户授权准备并后台依次训练，batch64、scratch seed0、冻结36k；每组成功后自动原dev500后处理/独立硬检查。实验一S3/6/9/12完整监督加阻隔项；二为S1–S12逐层监督（仅S3/6/9/12含overlap）；三为组合。S0不监督、末层.8、辅助共.2、不沿用G/B×4。准备与实时状态以实验内 `preflight.json` / `queue_state.json` 为准；暂无新结果。
+
+最新：[E140_frontend_gb4结果](../experiments/E140_frontend_gb4/result_review.md)，56轮正常早停/best53、原dev500后处理complete。混合Q1.039537，全部软约束满足378/500，分组/贴边违规106/82，差于E139；最终500/500硬合法。相对E139仅S2/S6原加权G/B各×4，后面三层及其余设置保持，无新拓扑指标；不追加运行。
+
+[E139_delayed_overlap](../experiments/E139_delayed_overlap/README.md)，45轮正常早停、best42，原dev500后处理complete，混合Q1.016845、最终500/500硬合法。[与E134每三层的其他指标及拓扑审计](../experiments/E139_delayed_overlap/runs/e119_delayed_overlap_seed0/comparative_audit_v1/findings.md) 已完成：最终grouping违规104→83，但严格固定坏关系修复无整体优势，尚无可靠拓扑突破证据。原E119、36k、scratch seed0；S2/S6无直接碰撞项、S8/S10/S12完整Loss，前四项各.05、S12为.8。原现场保留，不追加运行。
+
+[E138_topology_rewrite](../experiments/E138_topology_rewrite/outcome_20261115.md)，A/B/C训练、原dev500后处理和结构诊断均complete；混合Q1.028175/1.034249/1.045416，均差于E134对照1.018624。用户于2026-11-15宣告本轮隐空间重规划路线失败，原现场保留，不追加运行。
+
+[E137_standard_transformer256](../experiments/E137_standard_transformer256/README.md) 已按用户要求终止于107完整轮/120375接受步；best104及latest保留，授权关闭、STOP保留，未执行后处理/Q和地址诊断，不自行恢复。
+
+| 实验 | 实际目录 |
 |---|---|
-| [E116_first_draft_comparison](../experiments/E116_first_draft_comparison/RUNNING.md) | 原结构前4层 vs 四个隐藏Attention＋门控FFN、唯一全局条件读出；16k/最终Loss，获授权后台串行训练 |
-| [E115_first_head_supervision](../experiments/E115_first_head_supervision/README.md) | 36k九图块、大首头1+9监督；队列先恢复E114 4+12 |
-| [E114_supervision_placement](../experiments/E114_supervision_placement/README.md) | 64维12图块小模型：末层/密集/4与12层监督，仅准备未训练 |
-| [E112_deep_geometry_budget](../experiments/E112_deep_geometry_budget/README.md) | 8图块＋更深几何关系MLP，近A参数预算 |
-| [E113_deep_head_budget](../experiments/E113_deep_head_budget/README.md) | 8图块＋更深共享预测头，近A参数预算 |
-| [E109_deep_supervision_shared](../experiments/E109_deep_supervision_shared/README.md) | A：共享预测头逐层监督，原E98条件 |
-| [E110_deep_supervision_heads](../experiments/E110_deep_supervision_heads/README.md) | B：独立预测头逐层监督，原E98条件 |
-| [E111_progressive_depth](../experiments/E111_progressive_depth/README.md) | 4→8→12层，只训练新四层与共享头，末层Loss |
-| [E108_random_reference40k](../experiments/E108_random_reference40k/README.md) | E108：独立随机40k原始reference数据及图片准备，无训练 |
-| [E98_loss_weight_learning](../experiments/E98_loss_weight_learning/README.md) | E98：已停止的调权方向与受保护基线 |
-| [E101_final_c5_solver](../experiments/E101_final_c5_solver/README.md) | E101：原C5交付与重训证据 |
-| [E102_reference_image_generation](../experiments/E102_reference_image_generation/README.md) | E102：题目输入到 reference 风格图片 |
-| [E103_offline_loss_alignment](../experiments/E103_offline_loss_alignment/README.md) | E103：Loss对齐的离线与真实训练研究 |
-| [E104_scaling32k](../experiments/E104_scaling32k/README.md) | E104：32k、128×16 泛化增强版扩容实验 |
-| [E105_gated_prenorm_placer](../experiments/E105_gated_prenorm_placer/README.md) | E105：方案一，完整前置归一化＋残差门控＋SwiGLU |
-| [E106_postprocessor_aware_loss](../experiments/E106_postprocessor_aware_loss/README.md) | E106：后处理感知的可微Loss |
-| [E107_geometry_posttrain](../experiments/E107_geometry_posttrain/README.md) | E107：E105局部几何后训练，reference10% |
+| E119 | [E119_global_initial_generator](../experiments/E119_global_initial_generator/) |
+| E120 | [E120_node12_collision](../experiments/E120_node12_collision/) |
+| E131 | [E131_relation_input](../experiments/E131_relation_input/) |
+| E132 | [E132_relation_input_96x6](../experiments/E132_relation_input_96x6/) |
+| E133 | [E133_flow_matching](../experiments/E133_flow_matching/) |
 
-## 20261018_E10_consolidation
+新增入口：[E134_supervision_interval](../experiments/E134_supervision_interval/README.md)，E119间隔2/3已完成，E120放弃并保留停止现场；[E135_initial_supervision](../experiments/E135_initial_supervision/README.md)，E119 S0监督 A/B/C与自动原dev500已全部完成，结果对比在 `runs/results_review.md`，S0–S12逐层Loss展示在各run的 `visualization_dev15_loss/`。
 
-| 实验 | 原标题 |
+## 近期归档
+
+现行新增：[E136_frontend_F_linear](../experiments/E136_frontend_F_linear/README.md)，D（S0 F＋线性增权），准备通过后按用户授权后台启动；自动后处理并复用既有对照，运行状态以实验内记录为准。
+
+下列29个实验统一位于 [history/20261111_experiments_consolidation/experiments/](../history/20261111_experiments_consolidation/experiments/)，完整迁移/哈希见其 [归档说明](../history/20261111_experiments_consolidation/README.md)。
+
+| 实验 | 该归档内目录 |
 |---|---|
-| [conflict_local_repair](../history/20261018_E10_consolidation/experiments/conflict_local_repair/README.md) | E5：冲突驱动局部重构探针 |
-| [graph_proposal](../history/20261018_E10_consolidation/experiments/graph_proposal/README.md) | E1：图条件布局提议 |
-| [intent_aware_repair](../history/20261018_E10_consolidation/experiments/intent_aware_repair/README.md) | E6：面向可修复布局的生成与意图感知修复 |
-| [masked_construction](../history/20261018_E10_consolidation/experiments/masked_construction/README.md) | E3：带规则候选的逐步构造 |
-| [repair_friendly_draft](../history/20261018_E10_consolidation/experiments/repair_friendly_draft/README.md) | E7：降低修复难度的布局草稿（已终止） |
-| [topology_geometry](../history/20261018_E10_consolidation/experiments/topology_geometry/README.md) | E2：分离关系 → 固定形状几何 |
-| [E8_fast_robust_postprocess](../history/20261018_E10_consolidation/experiments/E8_fast_robust_postprocess/README.md) | E8：快速、稳定的高质量后处理与模型联调 |
-| [E9_model_postprocess_alignment](../history/20261018_E10_consolidation/experiments/E9_model_postprocess_alignment/README.md) | E9：面向 E8 后处理的模型改进 |
+| E98 | `E98_loss_weight_learning/` |
+| E101 | `E101_final_c5_solver/` |
+| E102 | `E102_reference_image_generation/` |
+| E103 | `E103_offline_loss_alignment/` |
+| E104 | `E104_scaling32k/` |
+| E105 | `E105_gated_prenorm_placer/` |
+| E106 | `E106_postprocessor_aware_loss/` |
+| E107 | `E107_geometry_posttrain/` |
+| E108 | `E108_random_reference40k/` |
+| E109 | `E109_deep_supervision_shared/` |
+| E110 | `E110_deep_supervision_heads/` |
+| E111 | `E111_progressive_depth/` |
+| E112 | `E112_deep_geometry_budget/` |
+| E113 | `E113_deep_head_budget/` |
+| E114 | `E114_supervision_placement/` |
+| E115 | `E115_first_head_supervision/` |
+| E116 | `E116_first_draft_comparison/` |
+| E117 | `E117_node26/` |
+| E118 | `E118_first12_supervision/` |
+| E121 | `E121_residual_update/` |
+| E122 | `E122_global2_scaling16/` |
+| E123 | `E123_node12_scaling16/` |
+| E124 | `E124_residual_scaling16/` |
+| E125 | `E125_global2_ref04/` |
+| E126 | `E126_global2_refsplit/` |
+| E127 | `E127_node12_ref04/` |
+| E128 | `E128_node12_refsplit/` |
+| E129 | `E129_global2_s0ref/` |
+| E130 | `E130_node12_s0ref/` |
 
-## 20261020_E25_consolidation
+竞赛交付是E101原C5＋完整后处理，E119是研究基线。E101部分隔离运行根超过MAX_PATH，读取使用Windows长路径。更早E1–E97按归档事件导航见 [history/README](../history/README.md)，不把旧路径/授权当现行入口。
 
-| 实验 | 原标题 |
-|---|---|
-| [E10_integrated_baseline](../history/20261020_E25_consolidation/experiments/E10_integrated_baseline/README.md) | E10：E7 模型与 E8 后处理联合基线 |
-| [E11_short_budget_diagnosis](../history/20261020_E25_consolidation/experiments/E11_short_budget_diagnosis/README.md) | E11：短预算下草图与结构的作用诊断 |
-| [E12_distillation_readiness](../history/20261020_E25_consolidation/experiments/E12_distillation_readiness/README.md) | E12：教师—学生表示—轻量投影的蒸馏准备 |
-| [E13_solver_distillation](../history/20261020_E25_consolidation/experiments/E13_solver_distillation/README.md) | E13：几何与结构蒸馏 |
-| [E14_stable_teacher](../history/20261020_E25_consolidation/experiments/E14_stable_teacher/README.md) | E14：MIB 修正与尾部稳定性 |
-| [E15_quality_curriculum](../history/20261020_E25_consolidation/experiments/E15_quality_curriculum/README.md) | E15：从头训练与质量目标渐进对照 |
-| [E16_reference_curriculum](../history/20261020_E25_consolidation/experiments/E16_reference_curriculum/README.md) | E16：原参考监督与质量目标渐进对照 |
-| [E17_e10_geometry_v5](../history/20261020_E25_consolidation/experiments/E17_e10_geometry_v5/README.md) | E17：E10几何训练方法在当前v5数据上的对照 |
-| [E18_fast_postprocess](../history/20261020_E25_consolidation/experiments/E18_fast_postprocess/README.md) | E18：固定E17模型的快速后处理 |
-| [E19_mib_consistent_geometry](../history/20261020_E25_consolidation/experiments/E19_mib_consistent_geometry/README.md) | E19：训练与部署一致的MIB形状解码 |
-| [E20_mib_fast_pipeline](../history/20261020_E25_consolidation/experiments/E20_mib_fast_pipeline/README.md) | E20：MIB一致性模型与快速后处理联合流程 |
-| [E21_original_model_fast](../history/20261020_E25_consolidation/experiments/E21_original_model_fast/README.md) | E21：保留原E10模型的同版快速后处理对照 |
-| [E22_native_geometry](../history/20261020_E25_consolidation/experiments/E22_native_geometry/README.md) | E22：剩余Python接触运算的原生实现 |
-| [E24_reference_fast](../history/20261020_E25_consolidation/experiments/E24_reference_fast/README.md) | E24：冻结E17与原生快速路径的直接对照 |
-
-## 20261021_E29_consolidation
-
-| 实验 | 原标题 |
-|---|---|
-| [E23_capacity_geometry](../history/20261021_E29_consolidation/experiments/E23_capacity_geometry/README.md) | E23：持续参考监督下的容量对照 |
-| [E26_tail_constraints](../history/20261021_E29_consolidation/experiments/E26_tail_constraints/README.md) | E26：尾部软约束的协调修复 |
-| [E27_overlap_weight](../history/20261021_E29_consolidation/experiments/E27_overlap_weight/README.md) | E27：单独提高重叠穿透惩罚 |
-| [E28_iterative_draft](../history/20261021_E29_consolidation/experiments/E28_iterative_draft/README.md) | E28：保留端点信息的学习式迭代草稿 |
-
-## 20261026_flash_pro_consolidation
-
-| 实验 | 原标题 |
-|---|---|
-| [baseline](../history/20261026_flash_pro_consolidation/experiments/baseline/README.md) | 无训练硬约束基线 |
-| [E25_integrated_baseline](../history/20261026_flash_pro_consolidation/experiments/E25_integrated_baseline/README.md) | E25：冻结整合参照 |
-| [E30_stable_fast_geometry](../history/20261026_flash_pro_consolidation/experiments/E30_stable_fast_geometry/README.md) | E30：两线程下的质量、速度与尾部稳定性 |
-| [E31_conic_workspace_reuse](../history/20261026_flash_pro_consolidation/experiments/E31_conic_workspace_reuse/README.md) | E31：锥求解器工作区复用的可行性 |
-| [E32_learned_relation_feedback](../history/20261026_flash_pro_consolidation/experiments/E32_learned_relation_feedback/README.md) | E32：学习关系决策与锥求解器反馈 |
-| [E33_learned_solver_portfolio](../history/20261026_flash_pro_consolidation/experiments/E33_learned_solver_portfolio/README.md) | E33：从训练反事实中学习求解策略选择 |
-| [E34_sparse_contact_feedback](../history/20261026_flash_pro_consolidation/experiments/E34_sparse_contact_feedback/README.md) | E34：相同关系权重的稀疏接触推理 |
-| [E35_optimizer_attribution](../history/20261026_flash_pro_consolidation/experiments/E35_optimizer_attribution/README.md) | E35：E25优化器的触发与贡献归因 |
-| [E36_persistent_conflict_repair](../history/20261026_flash_pro_consolidation/experiments/E36_persistent_conflict_repair/README.md) | E36：持续冲突的局部修复与阶段控制 |
-| [E37_radial_draft_expansion](../history/20261026_flash_pro_consolidation/experiments/E37_radial_draft_expansion/README.md) | E37：draft位置径向扩展5%的受控研究 |
-| [E38_model_architecture](../history/20261026_flash_pro_consolidation/experiments/E38_model_architecture/README.md) | E38：面向高质量draft的模型容量与结构研究 |
-| [E39_rectangular_attention](../history/20261026_flash_pro_consolidation/experiments/E39_rectangular_attention/README.md) | E39：矩形感知注意力 |
-| [E40_endpoint_constraint_tokens](../history/20261026_flash_pro_consolidation/experiments/E40_endpoint_constraint_tokens/README.md) | E40：外部端点与约束对象的分层交互 |
-| [E41_rectangular_depth](../history/20261026_flash_pro_consolidation/experiments/E41_rectangular_depth/README.md) | E41：E39矩形注意力继续扩深 |
-| [E43_overlap_area_loss](../history/20261026_flash_pro_consolidation/experiments/E43_overlap_area_loss/README.md) | E43：联合正则化矩形96×12，新增重叠面积训练损失 |
-| [E44_near_limit_proposals](../history/20261026_flash_pro_consolidation/experiments/E44_near_limit_proposals/README.md) | 接近加权 Q=1.01 的结构生成研究（当前单例预算 2 秒） |
-| [E45_draft_fidelity](../history/20261026_flash_pro_consolidation/experiments/E45_draft_fidelity/README.md) | E45：持续尊重原始 draft 的后处理 |
-| [E46_global_draft_refinement](../history/20261026_flash_pro_consolidation/experiments/E46_global_draft_refinement/README.md) | E46：全局布局保持与质量/速度联合优化 |
-| [E47_draft_topology_confidence](../history/20261026_flash_pro_consolidation/experiments/E47_draft_topology_confidence/README.md) | E47：保留完整draft的全局关系与置信度研究 |
-| [E48_quality_potential](../history/20261026_flash_pro_consolidation/experiments/E48_quality_potential/README.md) | E48：5秒质量优先的draft潜力评估求解器 |
-| [E49_monotone_quality](../history/20261026_flash_pro_consolidation/experiments/E49_monotone_quality/README.md) | E49：逐例质量保护与5秒后处理优化 |
-| [E51_module_overlap](../history/20261026_flash_pro_consolidation/experiments/E51_module_overlap/README.md) | E51：逐模块相对重叠、面积重要性与连续个数因子 |
-| [E52_training_throughput](../history/20261026_flash_pro_consolidation/experiments/E52_training_throughput/README.md) | E52：相同模型与统一Loss的训练吞吐优化 |
-| [E53_loss_geometry](../history/20261026_flash_pro_consolidation/experiments/E53_loss_geometry/README.md) | E53：冻结模型与flash，只研究固定Loss |
-| [E54_reference_extremes](../history/20261026_flash_pro_consolidation/experiments/E54_reference_extremes/README.md) | E54：不参考reference／只参考reference |
-
-## 20261029_model_research_consolidation
-
-| 实验 | 原标题 |
-|---|---|
-| [E55_reference_position_shape](../history/20261029_model_research_consolidation/experiments/E55_reference_position_shape/README.md) | E55：只拟合 reference 的位置与形状 |
-| [E56_e55_geometry_finetune](../history/20261029_model_research_consolidation/experiments/E56_e55_geometry_finetune/README.md) | E56：E55 best40 的 E42 Loss 后训练 |
-| [E57_capacity_data_diagnosis](../history/20261029_model_research_consolidation/experiments/E57_capacity_data_diagnosis/README.md) | E57：当前架构表达能力与训练规模诊断 |
-| [E58_training_data_v6](../history/20261029_model_research_consolidation/experiments/E58_training_data_v6/README.md) | E58：v6训练数据扩展至64k与缓存准备 |
-| [E59_centerline_overlap](../history/20261029_model_research_consolidation/experiments/E59_centerline_overlap/README.md) | E59：中心连线分离损失与扩大训练 |
-| [E60_scaling_diagnosis](../history/20261029_model_research_consolidation/experiments/E60_scaling_diagnosis/README.md) | E60：扩大训练规模与归一化的诊断 |
-| [E61_explosion_replay](../history/20261029_model_research_consolidation/experiments/E61_explosion_replay/README.md) | E61：爆炸首次更新复现与无图聚合前归一化重训 |
-| [E62_e42_loss_update_audit](../history/20261029_model_research_consolidation/experiments/E62_e42_loss_update_audit/README.md) | E62：E42实际Adam更新与Loss阻力检查 |
-| [E63_e42_center_relaxation](../history/20261029_model_research_consolidation/experiments/E63_e42_center_relaxation/README.md) | E63：E42 温和放宽中心约束后训练 |
-| [E64_e42_unified_retrain](../history/20261029_model_research_consolidation/experiments/E64_e42_unified_retrain/README.md) | E64：E42统一固定Loss从头重训 |
-| [E65_geometry_messages](../history/20261029_model_research_consolidation/experiments/E65_geometry_messages/README.md) | E65：冻结G下的几何消息与匹配容量对照 |
-| [E66_shared_refinement](../history/20261029_model_research_consolidation/experiments/E66_shared_refinement/README.md) | E66：冻结G下的增量输出与共享迭代修正 |
-| [E67_multiscale_tokens](../history/20261029_model_research_consolidation/experiments/E67_multiscale_tokens/README.md) | E67：冻结G下的多尺度分组与全局对照 |
-| [E68_port_tokens](../history/20261029_model_research_consolidation/experiments/E68_port_tokens/README.md) | E68 v2：完整端口组合方案 |
-| [E70_reference_task_loss](../history/20261029_model_research_consolidation/experiments/E70_reference_task_loss/README.md) | E70：新任务Loss＋完整端口 |
-
-## 20261101_research_consolidation
-
-| 实验 | 原标题 |
-|---|---|
-| [E69_case_loss_statistics](../history/20261101_research_consolidation/experiments/E69_case_loss_statistics/README.md) | E69：不同案例的Loss差异与草稿质量统计 |
-| [E71_density_reference_curriculum](../history/20261101_research_consolidation/experiments/E71_density_reference_curriculum/README.md) | E71：温和reference日程＋内部密度＋紧凑约束 |
-| [E72_topology_posttrain](../history/20261101_research_consolidation/experiments/E72_topology_posttrain/README.md) | E72：扩大模型＋近邻拓扑监督后训练 |
-| [E73_wide_robust_posttrain](../history/20261101_research_consolidation/experiments/E73_wide_robust_posttrain/README.md) | E73：保留图聚合映射的宽模型后训练 |
-| [E75_collision_box_finetune](../history/20261101_research_consolidation/experiments/E75_collision_box_finetune/README.md) | E75：E74候选上的真实交面积与外框后训练 |
-| [E76_bounded_refinement](../history/20261101_research_consolidation/experiments/E76_bounded_refinement/README.md) | E76：冻结E74主干，只学习有界局部修正 |
-| [E77_compact_refinement](../history/20261101_research_consolidation/experiments/E77_compact_refinement/README.md) | E77：固定E74预测外框，学习内部重排 |
-| [E78_connectivity_posttrain](../history/20261101_research_consolidation/experiments/E78_connectivity_posttrain/README.md) | E78：同形组协调输出与固定模块通道后训练 |
-| [E79_center_refinement](../history/20261101_research_consolidation/experiments/E79_center_refinement/README.md) | E79：保留E78同形尺寸，单独学习中心修正 |
-| [E80_modular_transfer](../history/20261101_research_consolidation/experiments/E80_modular_transfer/README.md) | E80：冻结修正模型，替换布局模型 |
-| [E82_global_pressure_refinement](../history/20261101_research_consolidation/experiments/E82_global_pressure_refinement/README.md) | E82：冻结修正模型，补充全局公共通道信息 |
-| [E83_strategy_attribution](../history/20261101_research_consolidation/experiments/E83_strategy_attribution/README.md) | E83：先用两个零训练对照拆解策略贡献 |
-| [E84_loss_control](../history/20261101_research_consolidation/experiments/E84_loss_control/README.md) | E84：同一初始化、同一模型，单独检验新增Loss目标包 |
-| [E86_independent_global_corrector](../history/20261101_research_consolidation/experiments/E86_independent_global_corrector/README.md) | E86：独立全局神经修正网络 |
-| [E87_simple_supervised_placer](../history/20261101_research_consolidation/experiments/E87_simple_supervised_placer/README.md) | E87：监督布局器的简化Loss与稀疏数据研究方案 |
-| [E88_sparse_training](../history/20261101_research_consolidation/experiments/E88_sparse_training/README.md) | E88：第二优先级，真实稀疏样本覆盖 |
-| [E89_spatial_neural_refinement](../history/20261101_research_consolidation/experiments/E89_spatial_neural_refinement/README.md) | E89：第三优先级，二维神经空间模块 |
-| [E91_e74_32k_scratch](../history/20261101_research_consolidation/experiments/E91_e74_32k_scratch/README.md) | E91：E74的32k数据和192×12结构，使用新Loss从头训练 |
-| [E92_two_stage_placer](../history/20261101_research_consolidation/experiments/E92_two_stage_placer/README.md) | E92：布局网络前训练／后训练规范 v1 |
-| [E93_matched_posttrain](../history/20261101_research_consolidation/experiments/E93_matched_posttrain/README.md) | E93：P best36共同起点的匹配后训练 |
-| [E94_posttrain_lr_reset](../history/20261101_research_consolidation/experiments/E94_posttrain_lr_reset/README.md) | E94：后训练学习率重置到1e-3 |
-
-## 20261103_final_delivery_consolidation
-
-| 实验 | 原标题 |
-|---|---|
-| [E42_joint_regularization](../history/20261103_final_delivery_consolidation/experiments/E42_joint_regularization/README.md) | E42：12层矩形注意力的联合正则化AB |
-| [E50_anytime_quality](../history/20261103_final_delivery_consolidation/experiments/E50_anytime_quality/README.md) | E50：并行保护轨迹与约束反馈驱动的随时可用求解器 |
-| [E74_collision_32k_posttrain](../history/20261103_final_delivery_consolidation/experiments/E74_collision_32k_posttrain/README.md) | E74：真实碰撞门控Loss＋冻结嵌套32k后训练 |
-| [E81_multisource_refinement](../history/20261103_final_delivery_consolidation/experiments/E81_multisource_refinement/README.md) | E81：小布局模型＋暖启动加宽的独立修正模型 |
-| [E85_cooperative_space_refinement](../history/20261103_final_delivery_consolidation/experiments/E85_cooperative_space_refinement/README.md) | E85：E74上的协同空间修正 |
-| [E90_auxiliary_weight_placer](../history/20261103_final_delivery_consolidation/experiments/E90_auxiliary_weight_placer/README.md) | E90：提高E87辅助权重的固定Loss对照 |
-| [E95_single_pass_corrector](../history/20261103_final_delivery_consolidation/experiments/E95_single_pass_corrector/README.md) | E95：独立全局修正器 |
-| [E96_port_compression](../history/20261103_final_delivery_consolidation/experiments/E96_port_compression/README.md) | E96：完全压缩的独立全局修正器 |
-| [E97_gpu_hybrid_solver](../history/20261103_final_delivery_consolidation/experiments/E97_gpu_hybrid_solver/README.md) | E97：GPU混合神经网络与几何求解 |
-| [E99_attraction_repulsion](../history/20261103_final_delivery_consolidation/experiments/E99_attraction_repulsion/README.md) | E99：有界矩形中心吸引—排斥 |
-| [E100_relation_guided_placer](../history/20261103_final_delivery_consolidation/experiments/E100_relation_guided_placer/README.md) | E100：关系引导的同时布局网络 |
+2026-11-13的旧文档与全部旧可视化见 [本次清理归档](../history/20261113_workspace_cleanup/README.md)。现行展示只调用 `visualization`；历史实验私有显示脚本不作为第二套默认。

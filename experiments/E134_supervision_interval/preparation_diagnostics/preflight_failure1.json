@@ -1,0 +1,190 @@
+{
+  "status": "failed",
+  "formal_training_started": false,
+  "unique_train_cases": 5,
+  "dev_payloads": 0,
+  "test_payloads": 0,
+  "postprocessing_calls": 0,
+  "Q_calls": 0,
+  "ctrl_c_resume_verified": false,
+  "cache": {
+    "key": "a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148",
+    "roles": {
+      "train": {
+        "members": 36000,
+        "chunks": 141,
+        "metadata_coverage_complete": true,
+        "tensor_payloads_read": false,
+        "chunk_sha256_rechecked_on_actual_load": true
+      },
+      "dev_monitor500": {
+        "members": 500,
+        "chunks": 8,
+        "metadata_coverage_complete": true,
+        "tensor_payloads_read": false,
+        "chunk_sha256_rechecked_on_actual_load": true
+      }
+    }
+  },
+  "members": [
+    [
+      "worker_31/layouts_3136.th",
+      43
+    ],
+    [
+      "worker_60/layouts_9184.th",
+      21
+    ],
+    [
+      "worker_85/layouts_6160.th",
+      10
+    ],
+    [
+      "worker_43/layouts_6496.th",
+      1
+    ],
+    [
+      "worker_24/layouts_9072.th",
+      53
+    ]
+  ],
+  "arms": [
+    {
+      "arm": "e119_stride3",
+      "parameters": 712275,
+      "initial_state_sha256": "6aeb57e4bed2e093d537eb31a96f5faa350662d1398a505bedf5043a7906e88a",
+      "weights": {
+        "3": 0.06666666666666667,
+        "6": 0.06666666666666667,
+        "9": 0.06666666666666667,
+        "12": 0.8
+      },
+      "disposable_optimizer_updates": 1,
+      "total": 37.282814025878906,
+      "gradient_norm": 533.3538208007812,
+      "capture_no_parameter_updates": true,
+      "full_prediction_channels": true,
+      "parent_initialization_exact": true
+    },
+    {
+      "arm": "e119_stride2",
+      "parameters": 712275,
+      "initial_state_sha256": "6aeb57e4bed2e093d537eb31a96f5faa350662d1398a505bedf5043a7906e88a",
+      "weights": {
+        "2": 0.04,
+        "4": 0.04,
+        "6": 0.04,
+        "8": 0.04,
+        "10": 0.04,
+        "12": 0.8
+      },
+      "disposable_optimizer_updates": 1,
+      "total": 37.60395050048828,
+      "gradient_norm": 537.0442504882812,
+      "capture_no_parameter_updates": true,
+      "full_prediction_channels": true,
+      "parent_initialization_exact": true
+    },
+    {
+      "arm": "e120_stride3",
+      "parameters": 725619,
+      "initial_state_sha256": "ae578f7216fa001f329d09bd8b1ed83d6c31f6fa5e7ec3bcae307c9cc4362f50",
+      "weights": {
+        "3": 0.06666666666666667,
+        "6": 0.06666666666666667,
+        "9": 0.06666666666666667,
+        "12": 0.8
+      },
+      "disposable_optimizer_updates": 1,
+      "total": 36.83120346069336,
+      "gradient_norm": 543.3374633789062,
+      "capture_no_parameter_updates": true,
+      "full_prediction_channels": true,
+      "parent_initialization_exact": true
+    },
+    {
+      "arm": "e120_stride2",
+      "parameters": 725619,
+      "initial_state_sha256": "ae578f7216fa001f329d09bd8b1ed83d6c31f6fa5e7ec3bcae307c9cc4362f50",
+      "weights": {
+        "2": 0.04,
+        "4": 0.04,
+        "6": 0.04,
+        "8": 0.04,
+        "10": 0.04,
+        "12": 0.8
+      },
+      "disposable_optimizer_updates": 1,
+      "total": 37.14958953857422,
+      "gradient_norm": 549.91650390625,
+      "capture_no_parameter_updates": true,
+      "full_prediction_channels": true,
+      "parent_initialization_exact": true
+    }
+  ],
+  "resume_checks": [
+    {
+      "arm": "e119_stride2",
+      "pause_after_steps": 2,
+      "resume_to_steps": 3,
+      "paused_cursor": 64,
+      "resumed_cursor": 96,
+      "bitwise_equal": {
+        "model": true,
+        "optimizer": true,
+        "scheduler": true,
+        "rng": true,
+        "projection": true,
+        "progress_order": true,
+        "progress_cursor": true,
+        "progress_step": true,
+        "progress_seen": true,
+        "progress_epoch": true,
+        "progress_pending_monitor": true,
+        "progress_best": true,
+        "progress_best_epoch": true
+      },
+      "paused_seconds": 28.4999836999923,
+      "resumed_seconds": 55.516048599994974,
+      "signal": "signal.raise_signal(SIGINT) through the actual training handler",
+      "unique_train_cases": 5,
+      "formal_updates": 0,
+      "disposable_updates": 6,
+      "dev_payloads": 0,
+      "test_payloads": 0
+    },
+    {
+      "arm": "e120_stride2",
+      "pause_after_steps": 2,
+      "resume_to_steps": 3,
+      "paused_cursor": 64,
+      "resumed_cursor": 96,
+      "bitwise_equal": {
+        "model": true,
+        "optimizer": true,
+        "scheduler": true,
+        "rng": true,
+        "projection": true,
+        "progress_order": true,
+        "progress_cursor": true,
+        "progress_step": true,
+        "progress_seen": true,
+        "progress_epoch": true,
+        "progress_pending_monitor": true,
+        "progress_best": true,
+        "progress_best_epoch": true
+      },
+      "paused_seconds": 27.395573299989337,
+      "resumed_seconds": 52.807989399996586,
+      "signal": "signal.raise_signal(SIGINT) through the actual training handler",
+      "unique_train_cases": 5,
+      "formal_updates": 0,
+      "disposable_updates": 6,
+      "dev_payloads": 0,
+      "test_payloads": 0
+    }
+  ],
+  "error": "RuntimeError('Queue SIGINT/resume test failed')",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E134_supervision_interval\\preflight.py\", line 119, in main\n    print(child.stdout);print(child.stderr);raise RuntimeError('Queue SIGINT/resume test failed')\nRuntimeError: Queue SIGINT/resume test failed\n",
+  "elapsed_seconds": 247.5021548999939
+}

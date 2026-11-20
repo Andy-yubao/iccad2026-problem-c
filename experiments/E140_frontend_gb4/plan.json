@@ -1,0 +1,143 @@
+{
+  "experiment": "E140 early grouping/boundary x4 versus E139",
+  "revision": "E140.frontend_gb4.v1.seed0",
+  "status": "preparation_only",
+  "authorization": "2026-11-15 user: prepare one E139-controlled experiment; enhance grouping/boundary at S2/S6 only; later three unchanged; no training launch requested",
+  "architecture": {
+    "e119": "unchanged E119 two-global + pair-bias 12-layer model"
+  },
+  "parameters": {
+    "e119": 712275
+  },
+  "trainable_parameters": {
+    "e119": 712275
+  },
+  "arms": {
+    "e119_front_gb4": {
+      "layer_weights": {
+        "2": 0.05,
+        "6": 0.05,
+        "8": 0.05,
+        "10": 0.05,
+        "12": 0.8
+      },
+      "auxiliary_layers": [
+        2,
+        6,
+        8,
+        10
+      ],
+      "no_overlap_layers": [
+        2,
+        6
+      ],
+      "full_loss_layers": [
+        8,
+        10,
+        12
+      ],
+      "auxiliary_total": 0.2,
+      "terminal_layer": 12,
+      "terminal_weight": 0.8,
+      "grouping_multipliers": {
+        "2": 4,
+        "6": 4,
+        "8": 1,
+        "10": 1,
+        "12": 1
+      },
+      "boundary_multipliers": {
+        "2": 4,
+        "6": 4,
+        "8": 1,
+        "10": 1,
+        "12": 1
+      }
+    }
+  },
+  "seed": 0,
+  "batch_size": 32,
+  "precision": "FP32; deterministic; TF32 disabled",
+  "threads": 4,
+  "train_count": 36000,
+  "train_monitor_count": 500,
+  "dev_monitor_count": 500,
+  "dataset": "random_reference40k.v1; original public areas; test sealed",
+  "data_migration": "Explicit continuation of current 36k supervision study, reusing E134 members/cache and monitoring panels; no new sampling",
+  "no_mib": true,
+  "predict_all_modules": true,
+  "hard_specification_enforcement": "postprocessing only",
+  "initialization": "scratch seed0; exact same initial tensors as E139; no warm start",
+  "optimizer": "AdamW weight_decay.0003, global gradient clip1, joint per-module relative update bound.005",
+  "lr_levels": [
+    0.001,
+    0.00025,
+    0.0001,
+    5e-05
+  ],
+  "protection_epochs": 14,
+  "scheduler_baseline_epoch": 15,
+  "patience": 3,
+  "minimum_meaningful_absolute": 1e-05,
+  "minimum_meaningful_relative": 0.001,
+  "best_minimum_absolute_improvement": 1e-05,
+  "minimum_lowest_lr_complete_epochs": 2,
+  "maximum_seconds": 14400,
+  "maximum_epochs": 200,
+  "budget": "Per arm4h/200epoch caps; report seen/steps/epochs/time separately, not equal training work",
+  "selection": "Each fixed own-Loss dev500 arithmetic mean for best/LR/earlystop; no Q selection",
+  "resume": "Ctrl+C pauses at accepted update/case boundary. Restore model/Adam/RNG/permutation/cursor/seen/LR/earlystop/projection; cumulative budget never reset. Evaluation resumes committed case prefix.",
+  "numerical_guards": "Nonfinite or case/mean Loss>=1000 or unclipped grad norm>=10000: reject before Adam; no skip/retry",
+  "augmentation": "P=.5 axis swap; flags indexed by seed/epoch/member, independent of dropout",
+  "engine": "CUDA graph forward/loss/backward/clip; original AdamW and captured module step protection",
+  "stop": "Experiment STOP, per-run STOP, SIGINT; save accepted cursor and exit, no next arm",
+  "preflight_train_indices": [
+    10841,
+    12651,
+    6417,
+    4280,
+    17946
+  ],
+  "preflight": "Original five cached train cases; parent-equivalent full Loss/late layers, early x4 terms and aggregate delta/gradients, single disposable guarded update. Inherited continuation source proof; no formal run/dev/test/postprocessing.",
+  "comparison": "Sole new training arm versus frozen E139 best42; only S2/S6 grouping/boundary coefficients change. Same seed/data/init/schedule/budgets; adaptive stopping may differ; single seed does not establish reliability.",
+  "reporting": "new own Loss and original_final_total diagnostic; all quality/latency/fallback/hard checks reported independently",
+  "terminal_evaluation": "automatic sole own-Loss best, fixed dev500, original E98.depth_budget.v1, no MIB Q; no test or plots",
+  "historical_standards": "E74/E105/A numbers are historical context until matched new task evaluation",
+  "test_read": false,
+  "postprocessing_calls": 0,
+  "automatic_queue": true,
+  "dataset_report_sha256": "3a79fd9eb2636578fa4df876ccac51699eab04cd59179027488aa7d8c334928a",
+  "payload_checksums_sha256": "f8eeb86da003c9901b73541eb13cc8e16cad9cd963dcf74a0edddf4a1a5abe54",
+  "queue": "Prepared single arm: explicit --start -> train -> sole own-Loss-best freeze -> original dev500 postprocessing -> comparison with frozen existing E139; no auto-launch during preparation",
+  "cache_build_workers": 4,
+  "required_cache_key": "a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148",
+  "cache_policy": "Reuse complete existing shared train36000/dev500 cache, no regenerated samples or repeated static preprocessing",
+  "loss": "E139 aggregate + 0.15*(G2+B2+G6+B6), where G/B are original weighted per-layer contributions; S2/S6 overlap remains zero",
+  "architecture_parent": "E119 global2",
+  "new_candidates": 1,
+  "automatic_retry": false,
+  "overlap_omission": "Only direct overlap group removed at S2/S6; raw collision diagnostics retained. No geometry bypass, detach, channel masking or draft overwrite.",
+  "comparison_controls": [
+    {
+      "arm": "e119_delayed_overlap",
+      "result": "experiments/E139_delayed_overlap/runs/e119_delayed_overlap_seed0/evaluation_no_mib_dev500/results.json",
+      "results_sha256": "748ff8713e979bd11342cf32e0db1c1e8440da2064570fd0c388a0fc27697015",
+      "checkpoint": "experiments/E139_delayed_overlap/runs/e119_delayed_overlap_seed0/checkpoints/best.pt",
+      "checkpoint_sha256": "b50a4e0820c25bc07661797efaae4b6a7c7c97d800688104d57aeab9989835e6",
+      "best_epoch": 42
+    }
+  ],
+  "topology_similarity_in_training": false,
+  "loss_coefficients_frozen": true,
+  "early_gb_multiplier": 4,
+  "enhanced_layers": [
+    2,
+    6
+  ],
+  "unchanged_full_layers": [
+    8,
+    10,
+    12
+  ],
+  "reference_loss_unchanged": true
+}

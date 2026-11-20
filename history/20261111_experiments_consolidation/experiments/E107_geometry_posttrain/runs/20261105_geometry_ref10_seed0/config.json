@@ -1,0 +1,2262 @@
+{
+  "identity": {
+    "revision": "E107.geometry_union_ref10.posttrain.v1",
+    "plan": {
+      "experiment": "E107_geometry_posttrain",
+      "run": "20261105_geometry_ref10_seed0",
+      "authorization": "User authorized geometry-centered E105 posttraining with reference weights10% (position .1,shape .025), strict immediate Loss-explosion termination, direct background launch after preparation",
+      "scope": "one E105 best58 warm posttrain candidate; new fixed geometry Loss, strict explosion stop; normal early-stop then same dev500 depth evaluation, report and stop",
+      "architecture": {
+        "width": 128,
+        "layers": 16,
+        "rectangle": true,
+        "ffn_dropout": 0.1,
+        "residual_dropout": 0.05,
+        "gate_init": 0.1
+      },
+      "parameters": 3490819,
+      "trainable_parameters": 3490819,
+      "initialization": "E105 frozen best58 model tensors only; new Loss stage, fresh AdamW/RNG/order/counters and LR1e-4; parent optimizer/budget not inherited; original evidence protected",
+      "data": "reference_workset_v6 frozen train first32000; original v5 first16000 nested unchanged; identical module-count histogram; prior E58/E74/E101 expansion exposure, not new unseen data",
+      "train_count": 32000,
+      "train_monitor_count": 500,
+      "dev_monitor_count": 500,
+      "batch_size": 32,
+      "precision": "FP32, deterministic algorithms, no AMP or numerical-path changes inside run",
+      "cublas_workspace_config": ":4096:8, set at package import before CUDA initialization",
+      "seed": 0,
+      "threads": 4,
+      "maximum_seconds": null,
+      "maximum_epochs": null,
+      "lr_levels": [
+        0.0001,
+        5e-05
+      ],
+      "protection_epochs": 0,
+      "scheduler_baseline_epoch": 0,
+      "patience": 3,
+      "minimum_meaningful_absolute": 1e-05,
+      "minimum_meaningful_relative": 0.001,
+      "best_minimum_absolute_improvement": 1e-05,
+      "minimum_lowest_lr_complete_epochs": 2,
+      "optimizer": "AdamW weight_decay0.0003, global gradient clip1; per-module joint proposed-update bound0.005",
+      "loss": "registered E107 fixed union-area geometry objective; reference position .1 shape .025; fixed train500 normalization; soft/wire preservation and E105 local trust",
+      "selection": "same fixed per-case total for backward/train500/dev500; best, LR and early stop use dev500 arithmetic mean per current protocol; train plateau reported independently, dev early-stop is not proof of train convergence",
+      "engine": "registered FP32 CUDA graph: frozen-parent eval + student deterministic trust forward + student Dropout forward/backward, existing AdamW and projection; CPU cache/pinned batches",
+      "network_ports": "per-module total weight and weighted centroid only; full port edges used only in loss",
+      "stop": "STOP file or SIGINT: finish accepted update, save exact latest and exit; no next phase; budget exhaustion distinct from convergence",
+      "preflight_train_indices": [
+        1683,
+        5474,
+        10140,
+        31001,
+        19746
+      ],
+      "numerical_guards": {
+        "nonfinite": "any model output, Loss term or gradient norm aborts before AdamW",
+        "absolute_mean_limit": 1000.0,
+        "absolute_case_limit": 1000.0,
+        "unclipped_gradient_limit": 10000.0,
+        "relative_batch": "max(3*same-frozen-parent batch mean, parent batch mean+5)",
+        "relative_case": "max(10*same-frozen-parent case Loss, parent case Loss+20)",
+        "action": "immediately reject update, save failure diagnostics and latest/best, write STOP, stop controller and forbid evaluation; no skip, retry or automatic LR reduction"
+      },
+      "test_read": false,
+      "postprocessing_calls": "500 terminal dev500 only; no training feedback",
+      "future_weight_learning": "none",
+      "augmentation": {
+        "axis_swap_probability": 0.5,
+        "seed_rule": "SeedSequence([20261104,seed,epoch]); member-index flags; independent sampling and Dropout streams",
+        "monitoring": "unaugmented original train500/dev500, eval mode; same fixed per-case Loss"
+      },
+      "revision": "E107.geometry_union_ref10.posttrain.v1",
+      "numerical_path": "new registered gated full pre-norm and SwiGLU architecture, same FP32 backward/AdamW/projection engine and numerical guards",
+      "source_copies": "provenance.json",
+      "comparison": {
+        "baseline": "experiments/E105_gated_prenorm_placer/runs/20261105_gated128x16_seed0",
+        "interpretation": "E107 warm stage changes Loss, compare new-Loss parent epoch0 and candidate; old E105 Loss not directly comparable; terminal same dev500/solver, no Q reselection",
+        "loss": "same original fixed ten E104 coefficients, not E103 learned coefficients",
+        "metrics": "same fixed train500/dev500 Loss, absolute and relative gaps; unique best terminal threeQ, raw/final legality, overlap/bbox, full mean/P95/max latency and >250ms; cold/disk/bulk separate"
+      },
+      "baseline_evaluation_sha256": "4dbc42b6b632dd0b824676161c7b92967efe3458ac8708779cc2b73cc2f35e8f",
+      "baseline_progress_sha256": "0979e30d4817c0166973fb3feb2963e092dc659761501f4cebbb08a5c0659b33",
+      "execution_status": "registered_for_preparation",
+      "latest_authorization": "2026-11-05 user: reference10%, strict Loss explosion detection and immediate abort, prepare and background-start",
+      "training_hold": "none; direct start explicitly authorized",
+      "gates": "one sigmoid scalar per layer per attention/local/FFN/geometry branch, initialized .1, no scan",
+      "ffn": "SwiGLU middle width256=2*width; ffn_dropout .10 after gated product, residual_dropout .05 on each attention/local/FFN message; geometry feedback has no additional Dropout",
+      "geometry_feedback": "shared Linear3->128, SiLU, Linear128->128, then per-layer geometry LayerNorm and gate; state masked as E104",
+      "head": "shared head preceded by dedicated shared LayerNorm; same unconstrained3 state and public decoder",
+      "alignment": "non_loss_alignment.json",
+      "parent_checkpoint": "assets/parent_best58.pt",
+      "parent_checkpoint_sha256": "d91da003b5168b634f54c3a80647deea219f16d14074942f66730966ec9ca240",
+      "geometry_loss": {
+        "area": "(sum_module_area-union_area)/sum_module_area; report depth>=2 area separately",
+        "tail": "mean[e/(e+.05)+e],e=relu(exact_covered_fraction-.1)",
+        "whitespace": "(bbox_area-union_area)/bbox_area",
+        "normalization": "means over unaugmented frozen train_monitor500 from E105 best58, fixed before training; three scaled main terms weight1 each",
+        "reference": {
+          "position": 0.1,
+          "shape": 0.025
+        },
+        "soft": "original 2B shared-denominator soft + 2*sum normalized squared upper-bound violations; bound=max(frozen-parent same-case raw boundary/group/mib, [.01,.01,.0025])",
+        "wire": "original .5B wirelength + squared ratio excess above1.05*parent wire (floor1e-4)",
+        "trust": "deterministic eval-mode student vs frozen eval parent, centers radius .1*sqrt(area), log-aspect radius .1; mean squared hinge beyond radius; weight1",
+        "exactness": "rectangle event-grid area/coverage differentiable almost everywhere; only threshold-count smoothed; no raster proxy",
+        "auxiliary_penetration_weight": 0.05
+      },
+      "dropout_and_trust": "same FFN.1/residual.05 and 50%axis-swap; main geometry/reference/soft terms use training Dropout output; trust alone uses clean eval-mode student so unchanged E105 does not incur drift from Dropout",
+      "normalization_sha256": "b69322c86678c32d499181ff238a814ff65a4eaa474898cbe5b27613288323ea",
+      "non_loss_alignment_sha256": "8e52f13a7f3454040e9c6dd4deaa3f273e6a50db161187410a3c5ef98b1d88b6",
+      "sort_backward_implementation": "detached stable argsort + explicit permutation bmm; same sorted values and a.e. gradient, avoids native deterministic sort scatter during graph capture; train500 scales reused without refit"
+    },
+    "sources": {
+      "datasets/__init__.py": "03c36f364366be6c8a5091d6bd3dbec0788d7871747acdeac5fa89d4974cec21",
+      "datasets/cases.py": "1fd51addaaae38164c22f1946712665beebac700054db4bb07ed4f9d44e0b168",
+      "datasets/expanded_reference/__init__.py": "b54991bdcbd4f194f31b9bcdf1bc9bc49da39f90089d9fa044668779a4b6a7af",
+      "datasets/paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+      "datasets/public_member_inputs.py": "6d525fa963d098051648b01d6bc75fb8a032dd5746529fb3c750afe2b5e8bb09",
+      "datasets/quality_layouts.py": "94f374fa9562770a9c7deadb645d73c3af1fc1a20251f98f1dce4ac575820191",
+      "datasets/reference_layouts.py": "f6aeeba298a163b7d506c67e3fba024cd3a191c3aae1116fc6b5d294431db9b5",
+      "datasets/worksets.py": "013087151ab8e1195d7d2757e777839f521486425eeaff4c45fed4e370df233c",
+      "experiments/E107_geometry_posttrain/__init__.py": "8e1474fdb56276b7ea75ba97f6a2a13df8d15aac433a7ba45f0fe5148a3becd4",
+      "experiments/E107_geometry_posttrain/augmentation.py": "1df813ddb66732d0775206e6a6df3346aa341f66b17f17b72f9a4cde5f73fe01",
+      "experiments/E107_geometry_posttrain/batches.py": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92",
+      "experiments/E107_geometry_posttrain/cache.py": "f25d5d52383d21b199765110ac5241ddd909c332bc964895cfc45432a7a91df7",
+      "experiments/E107_geometry_posttrain/calibrate.py": "90ace297a5dfd11b42e8886d0160a1aac08d1be13ba8db24bd1807c7231e461e",
+      "experiments/E107_geometry_posttrain/captured_projection.py": "dd031332127edd706c0e09f49a07f5e6133f5a9cd0f7fcd69d2246644cbb74c9",
+      "experiments/E107_geometry_posttrain/cuda_step.py": "6010a676a53d9e7cb7fcc9d6de04c29adbb41bfbf40ca19d777d35fcb246392e",
+      "experiments/E107_geometry_posttrain/data.py": "1e43fe61a6d4dde4007295f817db927d75cd61439239423621ef65bf826e0d66",
+      "experiments/E107_geometry_posttrain/dataset_view.py": "c2f558f8a26982d52a68fb3f74fcf491d3469c4a7a1ecf78f6ca655300917ad9",
+      "experiments/E107_geometry_posttrain/depth_evaluation/__init__.py": "c7a208bd6dec2638828df0b165524eed3318498b956fb3a5a5425b3a0485df06",
+      "experiments/E107_geometry_posttrain/depth_evaluation/budget.json": "c93f71d7664f6359a87aa740bf08108782ea40146bf329f9a3be7f7afac3fe61",
+      "experiments/E107_geometry_posttrain/depth_evaluation/repair/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "experiments/E107_geometry_posttrain/depth_evaluation/repair/backend/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "experiments/E107_geometry_posttrain/depth_evaluation/repair/backend/conic_geometry.py": "8d611db3bee47499c77b64039eee09718607f356cd251df5792314a53bcdcd63",
+      "experiments/E107_geometry_posttrain/depth_evaluation/repair/backend/frozen/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "experiments/E107_geometry_posttrain/depth_evaluation/repair/backend/frozen/canonical_geometry.py": "c1dcfd377ad33cdb85954c01917e762f87360deb43b1d5cce9b92c1b003fa2e4",
+      "experiments/E107_geometry_posttrain/depth_evaluation/repair/backend/frozen/feasible.py": "9cfe70894d80fbe54ccaa1c3de60ef4ab111ac9b4472286d1ae6a0c5a1fdc756",
+      "experiments/E107_geometry_posttrain/depth_evaluation/repair/backend/frozen/global_refine.py": "cd43991827597dfc4c5635cddb26f597774c680a24658237e5f443e9fbbca60c",
+      "experiments/E107_geometry_posttrain/depth_evaluation/repair/backend/frozen/packing.py": "25d20592fded9939f590be886e85083a47c5bb03a28c6f9bfe4a89097f863f0d",
+      "experiments/E107_geometry_posttrain/depth_evaluation/repair/backend/frozen/postprocess.py": "da0e1572a822a589968a19e67e2d36dd5133c7d17b7ea9443bd743ee4653a272",
+      "experiments/E107_geometry_posttrain/depth_evaluation/repair/backend/frozen/shape_lp.py": "6de2773cfd981723e55a1d317ad9422e8fee76b393d740acaf70007594bc8a9f",
+      "experiments/E107_geometry_posttrain/depth_evaluation/repair/backend/frozen/solver.py": "ed874db1bac7205d5e1d80350b1d4e82d3c56eb2bb44b9f08ceb256244d24ea0",
+      "experiments/E107_geometry_posttrain/depth_evaluation/repair/backend/frozen/topology_mip.py": "2ba0f2612f598f5e8d6e80a3ee1f74ad4941b78a3e9163f2d4acd7db5588da1a",
+      "experiments/E107_geometry_posttrain/depth_evaluation/repair/backend/guard.py": "eb36fbbcea1b694c7fb40fa0b36e3ed659ac66563be583f177fb6bb9e3c35bd7",
+      "experiments/E107_geometry_posttrain/depth_evaluation/repair/backend/observe.py": "b924be6a40f157e2d2204e358990797192e10a6320e3e3c3399d044918b25dd8",
+      "experiments/E107_geometry_posttrain/depth_evaluation/repair/backend/reduction.py": "d8ba6af127d9b08469b198f7ed38849e14ac566db58bfab855797920c92012ed",
+      "experiments/E107_geometry_posttrain/depth_evaluation/repair/backend/rescue.py": "ada10eea489e0f7d65a2f6dd0a20358d33d08808f3dfef6a19c0583139f206e0",
+      "experiments/E107_geometry_posttrain/depth_evaluation/repair/canonical.py": "9f7da6983541a3c8b0d57c8f869c6905c24f2bc4eb3643e0ed9e0a718d2abf2c",
+      "experiments/E107_geometry_posttrain/depth_evaluation/repair/canonical_native.py": "e350394ce13f8bb20e53d03494912f9367d29c9f68809ad16c4314a45709718b",
+      "experiments/E107_geometry_posttrain/depth_evaluation/repair/canonical_py.py": "b5b99c1f77756aa318fe5cb0e7fa82935844752b4fa815ab80367adb34e00195",
+      "experiments/E107_geometry_posttrain/depth_evaluation/repair/certify_polish.py": "e9605d50ff79de47f6f2b85d7e761d954d8784ad9e7ee2aec2c38b9f010c43e4",
+      "experiments/E107_geometry_posttrain/depth_evaluation/repair/fast_geometry.py": "88729dd286d0e2c8444e0cc0d3508f8fc19cafb69f14b94fe0004c10b9b6ee0e",
+      "experiments/E107_geometry_posttrain/depth_evaluation/repair/legal_seed.py": "45a6d0ee77c7cceafd05f41f9317f72ebdbf56dd45fc566da04952810e3a7588",
+      "experiments/E107_geometry_posttrain/depth_evaluation/repair/projection.py": "50863404a74aaa8658d95a3327b07b6ccd6908434570f7ecb0f041ed7841e593",
+      "experiments/E107_geometry_posttrain/depth_evaluation/repair/solver.py": "6c4310ac9ae58ea5fa85732548e14e44f33ccb331f3bc69071a3582cd4fb8f2e",
+      "experiments/E107_geometry_posttrain/depth_evaluation/solver.py": "689e2d00958b257207a4b3c509ca93df0f35d5d65d24219777cdfc2dd1cd6877",
+      "experiments/E107_geometry_posttrain/evaluate.py": "9624c0fbc2c01be8f94472916bce462b4f3ad36cfa6bd21fecc7265c14eef98c",
+      "experiments/E107_geometry_posttrain/features.py": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73",
+      "experiments/E107_geometry_posttrain/geometry.py": "42cb704026fef8d57bdf575c6b88af597376546d8ba3a49da968ffb7289d06cf",
+      "experiments/E107_geometry_posttrain/group_tree.py": "867ca3b84848ae78da25dd2a2db16018d722102c7bb5a34644492451efef65fd",
+      "experiments/E107_geometry_posttrain/guards.py": "18f30cdd990c619da15d443d302c95f894ccf3cbaa8a455b8b06bbe7cb8e0549",
+      "experiments/E107_geometry_posttrain/io.py": "8ab40d3523d37f5a158eaa300fe4d8fa49da4c774428d92044c530ee7d9f5069",
+      "experiments/E107_geometry_posttrain/launch.ps1": "2f7201b8b4b6342cde9a4062494a3facc5a599d6fd238dce918baf36ad1101e3",
+      "experiments/E107_geometry_posttrain/loss.py": "340f037171f96be979ade63b0f65c95315e085209255f67675250abc12c5e1e6",
+      "experiments/E107_geometry_posttrain/loss_config.py": "d3c0550b03b8ebdb48d01457a3b2aca03958c4c3564e7864aabdbedf297d3b66",
+      "experiments/E107_geometry_posttrain/metrics.py": "13f381b6bb22693354f1824715b989793597395ace81200f64fb2b1d7bd6d243",
+      "experiments/E107_geometry_posttrain/model.py": "0aef1463849544327b75926f818653acc16c97ae33c39a8154f46b7e8359b4b3",
+      "experiments/E107_geometry_posttrain/non_loss_alignment.json": "8e52f13a7f3454040e9c6dd4deaa3f273e6a50db161187410a3c5ef98b1d88b6",
+      "experiments/E107_geometry_posttrain/normalization.json": "b69322c86678c32d499181ff238a814ff65a4eaa474898cbe5b27613288323ea",
+      "experiments/E107_geometry_posttrain/pipeline.py": "c79717c73cd78a893e2d0aa6ec250c70d7a3545de31bbf12b5604ec9951cf867",
+      "experiments/E107_geometry_posttrain/plan.json": "6b658fa3b95a43d66b57d4faa8e4ad6c1fba676604413e0d315195355a3a4a17",
+      "experiments/E107_geometry_posttrain/ports.py": "431b54476e7de8a94c12cf935a30a3b49b911e208305fbe6bb7b23d72e37dbef",
+      "experiments/E107_geometry_posttrain/predictor.py": "48a14f43d2ee4e42fe441b12f9ab637120ce9f55a402015c6b47d3f062f6c7cb",
+      "experiments/E107_geometry_posttrain/preflight.py": "eb094afbecef80466cadea251500bba13812f77d0a329e7b0d6f22e237f7dd26",
+      "experiments/E107_geometry_posttrain/provenance.json": "6aa093e9aa77cffb6d3528a3bd0bfb50f86571860605f49da00eda092e36e860",
+      "experiments/E107_geometry_posttrain/README.md": "f9258e584a421fbb40cbc0c029aec7e535e8eff1db561b63c82f298cdb42a81c",
+      "experiments/E107_geometry_posttrain/resident.py": "a70da9f834fd05091ab011459e34fcff214bd41cb753f98ee9c088975c0a3c81",
+      "experiments/E107_geometry_posttrain/runtime.py": "840a40555432959245ce4eb306cca56cd030a0f8f8f3731267d6cf01b7ea87aa",
+      "experiments/E107_geometry_posttrain/schedule.py": "6f26e2997c02fd145aae73762ce4558c55b573d2c6743503ec15f4902221b145",
+      "experiments/E107_geometry_posttrain/shortcheck.py": "b0fbcba6ed0223eb2747fb66198665c2771cd9ad7f4558aadb479da5f5a526af",
+      "experiments/E107_geometry_posttrain/simple_loss.py": "e96cc9272aa1e3b13a6f93b3674674df280e709c4ecde7098ad0dc1b73b8bfd3",
+      "experiments/E107_geometry_posttrain/step_control.py": "795ddb45dd257e123f1880eea28b58502711807ee643bfcb51a7e72d484952da",
+      "experiments/E107_geometry_posttrain/train.py": "d56ac4ce148c7a6d292c4ac9af8e666250ee416e73bac5838c4fe105f5b17e35",
+      "protocol/paths.json": "7a28cd42de0f10809500c43c48836576361e67a72e723f7b32a404186df9b419",
+      "protocol/reference_workset_v5.json": "1409ccf825b9c7cae1097a22e8dc4068e1283d79541c85ce54c5627d0c2b4208",
+      "protocol/reference_workset_v6.json": "2fe459b0a785ffb6995dd3e5966cd47337b948b15ec4bb4d4c19ffe169e404ae",
+      "protocol/split_v1.json": "a1f23edae03194c1155d260415482d892e4cb5ad66170abc93af04aafc8cefbd",
+      "scoring/__init__.py": "933bf2be947e20bae164511f26afaa84c2f331d0dbdebc417d235db8358a9247",
+      "scoring/checks.py": "738f6b57e20dce58516f3f10d83689f8df273a84a02b2dce99c6ccc1f904763a",
+      "scoring/evaluation.py": "356e0d1c788c6f25154b33fb1c2455388317d2cc0dd96ca50d7357c58612c611",
+      "scoring/official.py": "478fbc228a56ec4b336b5d8687a44b22b749f30aae09372f57c08e7124270e03",
+      "third_party/FloorSet/cost.py": "b60561556f79aa41c196c8fcaddea57840aab41059c76dbc3f80b4fdde6b48c3",
+      "third_party/FloorSet/iccad2026contest/iccad2026_evaluate.py": "64db37865b42baf11add62bdbf035690dca086cd4be7b5b4e58db756f20d8498",
+      "third_party/FloorSet/utils.py": "9299d9257f5bd932001896307f2296b51cc5567f44150db5514f357ed93c121e",
+      "visualization/layouts.py": "d58adf2d222344cebb3d0f975f3cadd496593e5bd8d195f185a07d64a68edaee"
+    },
+    "loss": {
+      "revision": "E107.union_geometry.ref10.v1",
+      "coefficients": {
+        "position": 0.1,
+        "shape": 0.025,
+        "area_excess_scaled": 1.0,
+        "tail_scaled": 1.0,
+        "whitespace_scaled": 1.0,
+        "soft_original": 0.6673664216670459,
+        "soft_barrier": 2.0,
+        "wirelength": 0.16684160541676146,
+        "wire_barrier": 1.0,
+        "trust": 1.0,
+        "penetration": 0.05
+      },
+      "normalization": {
+        "status": "frozen_train500",
+        "scales": {
+          "area_excess": 0.053929567098617556,
+          "tail": 0.27198871655017137,
+          "whitespace": 0.08061869633197784
+        },
+        "floor": 0.0001,
+        "count": 500,
+        "members": [
+          [
+            "worker_19/layouts_8064.th",
+            30
+          ],
+          [
+            "worker_56/layouts_1792.th",
+            94
+          ],
+          [
+            "worker_95/layouts_2688.th",
+            98
+          ],
+          [
+            "worker_10/layouts_7728.th",
+            97
+          ],
+          [
+            "worker_53/layouts_9072.th",
+            86
+          ],
+          [
+            "worker_12/layouts_5600.th",
+            17
+          ],
+          [
+            "worker_84/layouts_1568.th",
+            102
+          ],
+          [
+            "worker_79/layouts_9632.th",
+            106
+          ],
+          [
+            "worker_42/layouts_8176.th",
+            25
+          ],
+          [
+            "worker_70/layouts_5488.th",
+            110
+          ],
+          [
+            "worker_97/layouts_3584.th",
+            44
+          ],
+          [
+            "worker_25/layouts_2464.th",
+            20
+          ],
+          [
+            "worker_93/layouts_8176.th",
+            80
+          ],
+          [
+            "worker_46/layouts_5824.th",
+            34
+          ],
+          [
+            "worker_89/layouts_7168.th",
+            8
+          ],
+          [
+            "worker_59/layouts_1680.th",
+            73
+          ],
+          [
+            "worker_36/layouts_4816.th",
+            87
+          ],
+          [
+            "worker_90/layouts_1344.th",
+            85
+          ],
+          [
+            "worker_40/layouts_5824.th",
+            41
+          ],
+          [
+            "worker_97/layouts_6272.th",
+            109
+          ],
+          [
+            "worker_29/layouts_1344.th",
+            27
+          ],
+          [
+            "worker_21/layouts_9632.th",
+            55
+          ],
+          [
+            "worker_19/layouts_8400.th",
+            28
+          ],
+          [
+            "worker_54/layouts_8064.th",
+            48
+          ],
+          [
+            "worker_33/layouts_1344.th",
+            51
+          ],
+          [
+            "worker_78/layouts_7504.th",
+            74
+          ],
+          [
+            "worker_47/layouts_2800.th",
+            69
+          ],
+          [
+            "worker_27/layouts_7728.th",
+            97
+          ],
+          [
+            "worker_21/layouts_5040.th",
+            109
+          ],
+          [
+            "worker_94/layouts_9968.th",
+            70
+          ],
+          [
+            "worker_67/layouts_3360.th",
+            16
+          ],
+          [
+            "worker_31/layouts_6832.th",
+            108
+          ],
+          [
+            "worker_2/layouts_4480.th",
+            83
+          ],
+          [
+            "worker_60/layouts_4592.th",
+            95
+          ],
+          [
+            "worker_74/layouts_4144.th",
+            8
+          ],
+          [
+            "worker_32/layouts_9408.th",
+            90
+          ],
+          [
+            "worker_73/layouts_1120.th",
+            95
+          ],
+          [
+            "worker_92/layouts_3248.th",
+            6
+          ],
+          [
+            "worker_57/layouts_8960.th",
+            109
+          ],
+          [
+            "worker_13/layouts_2688.th",
+            76
+          ],
+          [
+            "worker_69/layouts_8064.th",
+            30
+          ],
+          [
+            "worker_40/layouts_1344.th",
+            46
+          ],
+          [
+            "worker_28/layouts_9072.th",
+            55
+          ],
+          [
+            "worker_63/layouts_8736.th",
+            82
+          ],
+          [
+            "worker_36/layouts_6272.th",
+            64
+          ],
+          [
+            "worker_4/layouts_9632.th",
+            91
+          ],
+          [
+            "worker_41/layouts_4368.th",
+            57
+          ],
+          [
+            "worker_63/layouts_7952.th",
+            60
+          ],
+          [
+            "worker_39/layouts_4256.th",
+            53
+          ],
+          [
+            "worker_88/layouts_9184.th",
+            2
+          ],
+          [
+            "worker_13/layouts_6384.th",
+            63
+          ],
+          [
+            "worker_79/layouts_2352.th",
+            78
+          ],
+          [
+            "worker_85/layouts_3920.th",
+            88
+          ],
+          [
+            "worker_72/layouts_6608.th",
+            52
+          ],
+          [
+            "worker_53/layouts_8624.th",
+            56
+          ],
+          [
+            "worker_47/layouts_6832.th",
+            39
+          ],
+          [
+            "worker_67/layouts_3696.th",
+            19
+          ],
+          [
+            "worker_9/layouts_8176.th",
+            74
+          ],
+          [
+            "worker_30/layouts_2688.th",
+            102
+          ],
+          [
+            "worker_32/layouts_7952.th",
+            66
+          ],
+          [
+            "worker_61/layouts_9408.th",
+            16
+          ],
+          [
+            "worker_74/layouts_9632.th",
+            57
+          ],
+          [
+            "worker_13/layouts_3584.th",
+            19
+          ],
+          [
+            "worker_32/layouts_1344.th",
+            17
+          ],
+          [
+            "worker_50/layouts_9632.th",
+            56
+          ],
+          [
+            "worker_40/layouts_9408.th",
+            35
+          ],
+          [
+            "worker_44/layouts_4480.th",
+            6
+          ],
+          [
+            "worker_69/layouts_9072.th",
+            55
+          ],
+          [
+            "worker_47/layouts_2800.th",
+            57
+          ],
+          [
+            "worker_32/layouts_7056.th",
+            92
+          ],
+          [
+            "worker_90/layouts_5376.th",
+            71
+          ],
+          [
+            "worker_83/layouts_4032.th",
+            37
+          ],
+          [
+            "worker_9/layouts_9632.th",
+            100
+          ],
+          [
+            "worker_88/layouts_8624.th",
+            50
+          ],
+          [
+            "worker_22/layouts_7840.th",
+            29
+          ],
+          [
+            "worker_48/layouts_2800.th",
+            54
+          ],
+          [
+            "worker_75/layouts_1904.th",
+            18
+          ],
+          [
+            "worker_15/layouts_3360.th",
+            55
+          ],
+          [
+            "worker_77/layouts_7952.th",
+            107
+          ],
+          [
+            "worker_19/layouts_4816.th",
+            11
+          ],
+          [
+            "worker_90/layouts_7392.th",
+            83
+          ],
+          [
+            "worker_13/layouts_7504.th",
+            66
+          ],
+          [
+            "worker_19/layouts_5824.th",
+            4
+          ],
+          [
+            "worker_24/layouts_5600.th",
+            45
+          ],
+          [
+            "worker_28/layouts_2800.th",
+            93
+          ],
+          [
+            "worker_75/layouts_6048.th",
+            40
+          ],
+          [
+            "worker_13/layouts_5264.th",
+            63
+          ],
+          [
+            "worker_38/layouts_2016.th",
+            40
+          ],
+          [
+            "worker_32/layouts_6720.th",
+            46
+          ],
+          [
+            "worker_99/layouts_3808.th",
+            26
+          ],
+          [
+            "worker_65/layouts_7840.th",
+            93
+          ],
+          [
+            "worker_8/layouts_2016.th",
+            21
+          ],
+          [
+            "worker_94/layouts_8624.th",
+            107
+          ],
+          [
+            "worker_85/layouts_8736.th",
+            81
+          ],
+          [
+            "worker_26/layouts_8176.th",
+            53
+          ],
+          [
+            "worker_49/layouts_8624.th",
+            74
+          ],
+          [
+            "worker_40/layouts_5040.th",
+            15
+          ],
+          [
+            "worker_42/layouts_6048.th",
+            39
+          ],
+          [
+            "worker_92/layouts_4816.th",
+            98
+          ],
+          [
+            "worker_9/layouts_1456.th",
+            11
+          ],
+          [
+            "worker_97/layouts_1792.th",
+            81
+          ],
+          [
+            "worker_91/layouts_2240.th",
+            71
+          ],
+          [
+            "worker_48/layouts_5488.th",
+            83
+          ],
+          [
+            "worker_36/layouts_1568.th",
+            111
+          ],
+          [
+            "worker_39/layouts_5264.th",
+            104
+          ],
+          [
+            "worker_74/layouts_3472.th",
+            5
+          ],
+          [
+            "worker_13/layouts_8848.th",
+            79
+          ],
+          [
+            "worker_93/layouts_5152.th",
+            106
+          ],
+          [
+            "worker_12/layouts_7504.th",
+            6
+          ],
+          [
+            "worker_64/layouts_4480.th",
+            61
+          ],
+          [
+            "worker_88/layouts_4368.th",
+            68
+          ],
+          [
+            "worker_9/layouts_3248.th",
+            88
+          ],
+          [
+            "worker_61/layouts_8848.th",
+            99
+          ],
+          [
+            "worker_76/layouts_8064.th",
+            36
+          ],
+          [
+            "worker_97/layouts_6608.th",
+            110
+          ],
+          [
+            "worker_10/layouts_4256.th",
+            68
+          ],
+          [
+            "worker_97/layouts_6272.th",
+            68
+          ],
+          [
+            "worker_21/layouts_4144.th",
+            95
+          ],
+          [
+            "worker_47/layouts_6272.th",
+            5
+          ],
+          [
+            "worker_49/layouts_1456.th",
+            90
+          ],
+          [
+            "worker_82/layouts_1792.th",
+            71
+          ],
+          [
+            "worker_37/layouts_5376.th",
+            34
+          ],
+          [
+            "worker_82/layouts_4032.th",
+            22
+          ],
+          [
+            "worker_9/layouts_6720.th",
+            31
+          ],
+          [
+            "worker_66/layouts_3248.th",
+            27
+          ],
+          [
+            "worker_43/layouts_6384.th",
+            13
+          ],
+          [
+            "worker_47/layouts_5600.th",
+            79
+          ],
+          [
+            "worker_60/layouts_6496.th",
+            50
+          ],
+          [
+            "worker_40/layouts_6720.th",
+            75
+          ],
+          [
+            "worker_16/layouts_112.th",
+            24
+          ],
+          [
+            "worker_47/layouts_4704.th",
+            51
+          ],
+          [
+            "worker_37/layouts_6160.th",
+            77
+          ],
+          [
+            "worker_79/layouts_9856.th",
+            71
+          ],
+          [
+            "worker_28/layouts_2688.th",
+            53
+          ],
+          [
+            "worker_8/layouts_7728.th",
+            20
+          ],
+          [
+            "worker_61/layouts_6944.th",
+            62
+          ],
+          [
+            "worker_93/layouts_8960.th",
+            60
+          ],
+          [
+            "worker_60/layouts_2464.th",
+            65
+          ],
+          [
+            "worker_94/layouts_6272.th",
+            42
+          ],
+          [
+            "worker_46/layouts_5264.th",
+            111
+          ],
+          [
+            "worker_12/layouts_4032.th",
+            30
+          ],
+          [
+            "worker_15/layouts_2128.th",
+            45
+          ],
+          [
+            "worker_46/layouts_4032.th",
+            90
+          ],
+          [
+            "worker_4/layouts_8064.th",
+            110
+          ],
+          [
+            "worker_9/layouts_8064.th",
+            93
+          ],
+          [
+            "worker_93/layouts_1792.th",
+            61
+          ],
+          [
+            "worker_48/layouts_5824.th",
+            66
+          ],
+          [
+            "worker_43/layouts_7728.th",
+            79
+          ],
+          [
+            "worker_15/layouts_672.th",
+            55
+          ],
+          [
+            "worker_32/layouts_1232.th",
+            14
+          ],
+          [
+            "worker_12/layouts_8736.th",
+            83
+          ],
+          [
+            "worker_30/layouts_784.th",
+            47
+          ],
+          [
+            "worker_59/layouts_3248.th",
+            15
+          ],
+          [
+            "worker_52/layouts_3920.th",
+            87
+          ],
+          [
+            "worker_96/layouts_6944.th",
+            3
+          ],
+          [
+            "worker_39/layouts_9520.th",
+            87
+          ],
+          [
+            "worker_59/layouts_8960.th",
+            71
+          ],
+          [
+            "worker_11/layouts_3248.th",
+            17
+          ],
+          [
+            "worker_71/layouts_2016.th",
+            31
+          ],
+          [
+            "worker_61/layouts_5152.th",
+            20
+          ],
+          [
+            "worker_46/layouts_6944.th",
+            15
+          ],
+          [
+            "worker_80/layouts_7280.th",
+            80
+          ],
+          [
+            "worker_35/layouts_2352.th",
+            103
+          ],
+          [
+            "worker_56/layouts_5824.th",
+            9
+          ],
+          [
+            "worker_68/layouts_1680.th",
+            72
+          ],
+          [
+            "worker_30/layouts_2240.th",
+            68
+          ],
+          [
+            "worker_79/layouts_1568.th",
+            78
+          ],
+          [
+            "worker_14/layouts_112.th",
+            21
+          ],
+          [
+            "worker_88/layouts_8624.th",
+            27
+          ],
+          [
+            "worker_42/layouts_1344.th",
+            78
+          ],
+          [
+            "worker_27/layouts_6832.th",
+            29
+          ],
+          [
+            "worker_67/layouts_9072.th",
+            104
+          ],
+          [
+            "worker_69/layouts_4144.th",
+            22
+          ],
+          [
+            "worker_80/layouts_6832.th",
+            80
+          ],
+          [
+            "worker_98/layouts_7056.th",
+            1
+          ],
+          [
+            "worker_37/layouts_4928.th",
+            72
+          ],
+          [
+            "worker_76/layouts_9744.th",
+            109
+          ],
+          [
+            "worker_56/layouts_8400.th",
+            36
+          ],
+          [
+            "worker_17/layouts_6720.th",
+            89
+          ],
+          [
+            "worker_91/layouts_5936.th",
+            54
+          ],
+          [
+            "worker_19/layouts_4256.th",
+            85
+          ],
+          [
+            "worker_97/layouts_5936.th",
+            45
+          ],
+          [
+            "worker_88/layouts_5264.th",
+            37
+          ],
+          [
+            "worker_80/layouts_3696.th",
+            31
+          ],
+          [
+            "worker_5/layouts_3024.th",
+            46
+          ],
+          [
+            "worker_51/layouts_3584.th",
+            52
+          ],
+          [
+            "worker_12/layouts_6160.th",
+            12
+          ],
+          [
+            "worker_41/layouts_5152.th",
+            55
+          ],
+          [
+            "worker_53/layouts_2464.th",
+            83
+          ],
+          [
+            "worker_94/layouts_1008.th",
+            99
+          ],
+          [
+            "worker_65/layouts_1568.th",
+            90
+          ],
+          [
+            "worker_20/layouts_6496.th",
+            87
+          ],
+          [
+            "worker_71/layouts_9072.th",
+            25
+          ],
+          [
+            "worker_55/layouts_3360.th",
+            99
+          ],
+          [
+            "worker_33/layouts_5488.th",
+            17
+          ],
+          [
+            "worker_57/layouts_7728.th",
+            31
+          ],
+          [
+            "worker_98/layouts_1456.th",
+            22
+          ],
+          [
+            "worker_71/layouts_9296.th",
+            35
+          ],
+          [
+            "worker_71/layouts_3920.th",
+            66
+          ],
+          [
+            "worker_6/layouts_6944.th",
+            48
+          ],
+          [
+            "worker_83/layouts_6720.th",
+            0
+          ],
+          [
+            "worker_96/layouts_5824.th",
+            58
+          ],
+          [
+            "worker_17/layouts_9072.th",
+            21
+          ],
+          [
+            "worker_55/layouts_2352.th",
+            48
+          ],
+          [
+            "worker_69/layouts_1456.th",
+            58
+          ],
+          [
+            "worker_10/layouts_1680.th",
+            58
+          ],
+          [
+            "worker_19/layouts_2800.th",
+            49
+          ],
+          [
+            "worker_89/layouts_6832.th",
+            51
+          ],
+          [
+            "worker_32/layouts_9408.th",
+            106
+          ],
+          [
+            "worker_19/layouts_8512.th",
+            104
+          ],
+          [
+            "worker_12/layouts_2464.th",
+            64
+          ],
+          [
+            "worker_10/layouts_8848.th",
+            72
+          ],
+          [
+            "worker_79/layouts_3248.th",
+            16
+          ],
+          [
+            "worker_62/layouts_6944.th",
+            19
+          ],
+          [
+            "worker_3/layouts_5824.th",
+            34
+          ],
+          [
+            "worker_76/layouts_1792.th",
+            83
+          ],
+          [
+            "worker_47/layouts_3472.th",
+            50
+          ],
+          [
+            "worker_57/layouts_4144.th",
+            9
+          ],
+          [
+            "worker_27/layouts_5376.th",
+            60
+          ],
+          [
+            "worker_8/layouts_8512.th",
+            53
+          ],
+          [
+            "worker_63/layouts_7728.th",
+            44
+          ],
+          [
+            "worker_48/layouts_1232.th",
+            21
+          ],
+          [
+            "worker_11/layouts_8848.th",
+            80
+          ],
+          [
+            "worker_65/layouts_6272.th",
+            90
+          ],
+          [
+            "worker_24/layouts_2240.th",
+            49
+          ],
+          [
+            "worker_3/layouts_2800.th",
+            58
+          ],
+          [
+            "worker_86/layouts_4256.th",
+            11
+          ],
+          [
+            "worker_59/layouts_6944.th",
+            7
+          ],
+          [
+            "worker_29/layouts_4256.th",
+            94
+          ],
+          [
+            "worker_75/layouts_1344.th",
+            93
+          ],
+          [
+            "worker_34/layouts_5040.th",
+            43
+          ],
+          [
+            "worker_90/layouts_5152.th",
+            54
+          ],
+          [
+            "worker_73/layouts_9296.th",
+            77
+          ],
+          [
+            "worker_76/layouts_1456.th",
+            35
+          ],
+          [
+            "worker_59/layouts_6832.th",
+            36
+          ],
+          [
+            "worker_28/layouts_9744.th",
+            78
+          ],
+          [
+            "worker_73/layouts_6720.th",
+            9
+          ],
+          [
+            "worker_43/layouts_8288.th",
+            57
+          ],
+          [
+            "worker_43/layouts_7728.th",
+            8
+          ],
+          [
+            "worker_56/layouts_3696.th",
+            19
+          ],
+          [
+            "worker_78/layouts_3024.th",
+            109
+          ],
+          [
+            "worker_42/layouts_6608.th",
+            53
+          ],
+          [
+            "worker_5/layouts_8288.th",
+            69
+          ],
+          [
+            "worker_88/layouts_6048.th",
+            39
+          ],
+          [
+            "worker_68/layouts_6720.th",
+            49
+          ],
+          [
+            "worker_50/layouts_8736.th",
+            36
+          ],
+          [
+            "worker_88/layouts_448.th",
+            35
+          ],
+          [
+            "worker_84/layouts_7504.th",
+            38
+          ],
+          [
+            "worker_75/layouts_5488.th",
+            35
+          ],
+          [
+            "worker_51/layouts_6496.th",
+            73
+          ],
+          [
+            "worker_82/layouts_3360.th",
+            19
+          ],
+          [
+            "worker_97/layouts_6272.th",
+            73
+          ],
+          [
+            "worker_70/layouts_4480.th",
+            88
+          ],
+          [
+            "worker_48/layouts_1344.th",
+            67
+          ],
+          [
+            "worker_74/layouts_896.th",
+            39
+          ],
+          [
+            "worker_36/layouts_224.th",
+            22
+          ],
+          [
+            "worker_16/layouts_3584.th",
+            21
+          ],
+          [
+            "worker_1/layouts_1232.th",
+            68
+          ],
+          [
+            "worker_56/layouts_5040.th",
+            5
+          ],
+          [
+            "worker_96/layouts_9968.th",
+            54
+          ],
+          [
+            "worker_74/layouts_2240.th",
+            3
+          ],
+          [
+            "worker_19/layouts_3024.th",
+            0
+          ],
+          [
+            "worker_2/layouts_5936.th",
+            17
+          ],
+          [
+            "worker_94/layouts_6608.th",
+            12
+          ],
+          [
+            "worker_73/layouts_7952.th",
+            5
+          ],
+          [
+            "worker_21/layouts_2912.th",
+            55
+          ],
+          [
+            "worker_24/layouts_8288.th",
+            78
+          ],
+          [
+            "worker_16/layouts_5600.th",
+            9
+          ],
+          [
+            "worker_45/layouts_7616.th",
+            47
+          ],
+          [
+            "worker_20/layouts_3360.th",
+            99
+          ],
+          [
+            "worker_36/layouts_6272.th",
+            23
+          ],
+          [
+            "worker_10/layouts_3360.th",
+            86
+          ],
+          [
+            "worker_59/layouts_3584.th",
+            35
+          ],
+          [
+            "worker_59/layouts_2912.th",
+            37
+          ],
+          [
+            "worker_67/layouts_7504.th",
+            51
+          ],
+          [
+            "worker_93/layouts_8736.th",
+            75
+          ],
+          [
+            "worker_30/layouts_9632.th",
+            23
+          ],
+          [
+            "worker_36/layouts_7504.th",
+            86
+          ],
+          [
+            "worker_97/layouts_4032.th",
+            19
+          ],
+          [
+            "worker_29/layouts_4368.th",
+            85
+          ],
+          [
+            "worker_98/layouts_4032.th",
+            54
+          ],
+          [
+            "worker_66/layouts_1568.th",
+            27
+          ],
+          [
+            "worker_83/layouts_7952.th",
+            54
+          ],
+          [
+            "worker_40/layouts_9296.th",
+            55
+          ],
+          [
+            "worker_8/layouts_5040.th",
+            8
+          ],
+          [
+            "worker_68/layouts_3808.th",
+            103
+          ],
+          [
+            "worker_86/layouts_5488.th",
+            108
+          ],
+          [
+            "worker_96/layouts_560.th",
+            76
+          ],
+          [
+            "worker_40/layouts_9072.th",
+            4
+          ],
+          [
+            "worker_18/layouts_5376.th",
+            68
+          ],
+          [
+            "worker_18/layouts_8064.th",
+            34
+          ],
+          [
+            "worker_56/layouts_3920.th",
+            94
+          ],
+          [
+            "worker_35/layouts_2464.th",
+            43
+          ],
+          [
+            "worker_47/layouts_1344.th",
+            19
+          ],
+          [
+            "worker_12/layouts_5600.th",
+            18
+          ],
+          [
+            "worker_32/layouts_336.th",
+            19
+          ],
+          [
+            "worker_66/layouts_5824.th",
+            81
+          ],
+          [
+            "worker_75/layouts_6384.th",
+            33
+          ],
+          [
+            "worker_87/layouts_2240.th",
+            26
+          ],
+          [
+            "worker_82/layouts_1904.th",
+            0
+          ],
+          [
+            "worker_73/layouts_5376.th",
+            26
+          ],
+          [
+            "worker_18/layouts_6496.th",
+            98
+          ],
+          [
+            "worker_0/layouts_7840.th",
+            42
+          ],
+          [
+            "worker_6/layouts_1008.th",
+            103
+          ],
+          [
+            "worker_96/layouts_9968.th",
+            21
+          ],
+          [
+            "worker_17/layouts_8512.th",
+            24
+          ],
+          [
+            "worker_58/layouts_7280.th",
+            16
+          ],
+          [
+            "worker_83/layouts_2576.th",
+            4
+          ],
+          [
+            "worker_64/layouts_672.th",
+            86
+          ],
+          [
+            "worker_9/layouts_4144.th",
+            94
+          ],
+          [
+            "worker_80/layouts_8848.th",
+            86
+          ],
+          [
+            "worker_8/layouts_560.th",
+            40
+          ],
+          [
+            "worker_21/layouts_5040.th",
+            94
+          ],
+          [
+            "worker_61/layouts_896.th",
+            80
+          ],
+          [
+            "worker_65/layouts_7056.th",
+            57
+          ],
+          [
+            "worker_29/layouts_1568.th",
+            2
+          ],
+          [
+            "worker_59/layouts_1680.th",
+            14
+          ],
+          [
+            "worker_25/layouts_7728.th",
+            62
+          ],
+          [
+            "worker_58/layouts_9856.th",
+            93
+          ],
+          [
+            "worker_87/layouts_2128.th",
+            82
+          ],
+          [
+            "worker_48/layouts_6832.th",
+            90
+          ],
+          [
+            "worker_51/layouts_3136.th",
+            44
+          ],
+          [
+            "worker_37/layouts_1008.th",
+            16
+          ],
+          [
+            "worker_56/layouts_3920.th",
+            0
+          ],
+          [
+            "worker_27/layouts_3248.th",
+            50
+          ],
+          [
+            "worker_36/layouts_7616.th",
+            17
+          ],
+          [
+            "worker_38/layouts_1904.th",
+            82
+          ],
+          [
+            "worker_53/layouts_4816.th",
+            109
+          ],
+          [
+            "worker_9/layouts_4592.th",
+            60
+          ],
+          [
+            "worker_12/layouts_4480.th",
+            25
+          ],
+          [
+            "worker_65/layouts_9968.th",
+            4
+          ],
+          [
+            "worker_69/layouts_8512.th",
+            82
+          ],
+          [
+            "worker_13/layouts_9744.th",
+            105
+          ],
+          [
+            "worker_50/layouts_5712.th",
+            13
+          ],
+          [
+            "worker_74/layouts_9072.th",
+            40
+          ],
+          [
+            "worker_18/layouts_1232.th",
+            87
+          ],
+          [
+            "worker_19/layouts_8736.th",
+            30
+          ],
+          [
+            "worker_7/layouts_2240.th",
+            30
+          ],
+          [
+            "worker_90/layouts_9856.th",
+            22
+          ],
+          [
+            "worker_57/layouts_6496.th",
+            91
+          ],
+          [
+            "worker_73/layouts_6608.th",
+            56
+          ],
+          [
+            "worker_62/layouts_7616.th",
+            54
+          ],
+          [
+            "worker_84/layouts_5264.th",
+            104
+          ],
+          [
+            "worker_67/layouts_3696.th",
+            89
+          ],
+          [
+            "worker_49/layouts_112.th",
+            20
+          ],
+          [
+            "worker_65/layouts_2352.th",
+            26
+          ],
+          [
+            "worker_12/layouts_6160.th",
+            63
+          ],
+          [
+            "worker_64/layouts_4704.th",
+            67
+          ],
+          [
+            "worker_61/layouts_2464.th",
+            35
+          ],
+          [
+            "worker_36/layouts_4928.th",
+            106
+          ],
+          [
+            "worker_12/layouts_3248.th",
+            64
+          ],
+          [
+            "worker_43/layouts_4592.th",
+            3
+          ],
+          [
+            "worker_20/layouts_4704.th",
+            86
+          ],
+          [
+            "worker_79/layouts_1008.th",
+            84
+          ],
+          [
+            "worker_65/layouts_2352.th",
+            12
+          ],
+          [
+            "worker_77/layouts_9072.th",
+            99
+          ],
+          [
+            "worker_77/layouts_8400.th",
+            49
+          ],
+          [
+            "worker_18/layouts_336.th",
+            62
+          ],
+          [
+            "worker_19/layouts_2800.th",
+            29
+          ],
+          [
+            "worker_26/layouts_1120.th",
+            63
+          ],
+          [
+            "worker_80/layouts_3696.th",
+            105
+          ],
+          [
+            "worker_93/layouts_1792.th",
+            50
+          ],
+          [
+            "worker_56/layouts_672.th",
+            84
+          ],
+          [
+            "worker_71/layouts_2800.th",
+            66
+          ],
+          [
+            "worker_3/layouts_448.th",
+            97
+          ],
+          [
+            "worker_94/layouts_2576.th",
+            62
+          ],
+          [
+            "worker_48/layouts_784.th",
+            16
+          ],
+          [
+            "worker_13/layouts_8848.th",
+            52
+          ],
+          [
+            "worker_57/layouts_9184.th",
+            72
+          ],
+          [
+            "worker_45/layouts_8960.th",
+            105
+          ],
+          [
+            "worker_41/layouts_7616.th",
+            33
+          ],
+          [
+            "worker_88/layouts_2128.th",
+            31
+          ],
+          [
+            "worker_77/layouts_2016.th",
+            110
+          ],
+          [
+            "worker_57/layouts_2576.th",
+            79
+          ],
+          [
+            "worker_88/layouts_1792.th",
+            83
+          ],
+          [
+            "worker_73/layouts_4256.th",
+            59
+          ],
+          [
+            "worker_24/layouts_3248.th",
+            105
+          ],
+          [
+            "worker_96/layouts_1456.th",
+            95
+          ],
+          [
+            "worker_33/layouts_5824.th",
+            0
+          ],
+          [
+            "worker_50/layouts_7840.th",
+            0
+          ],
+          [
+            "worker_62/layouts_6832.th",
+            38
+          ],
+          [
+            "worker_12/layouts_9072.th",
+            25
+          ],
+          [
+            "worker_77/layouts_9072.th",
+            4
+          ],
+          [
+            "worker_51/layouts_7728.th",
+            32
+          ],
+          [
+            "worker_18/layouts_1232.th",
+            62
+          ],
+          [
+            "worker_35/layouts_7952.th",
+            72
+          ],
+          [
+            "worker_10/layouts_3136.th",
+            47
+          ],
+          [
+            "worker_75/layouts_5152.th",
+            75
+          ],
+          [
+            "worker_63/layouts_7280.th",
+            65
+          ],
+          [
+            "worker_32/layouts_5152.th",
+            97
+          ],
+          [
+            "worker_40/layouts_6608.th",
+            51
+          ],
+          [
+            "worker_96/layouts_6832.th",
+            107
+          ],
+          [
+            "worker_90/layouts_2800.th",
+            16
+          ],
+          [
+            "worker_74/layouts_9632.th",
+            34
+          ],
+          [
+            "worker_41/layouts_8512.th",
+            49
+          ],
+          [
+            "worker_38/layouts_8960.th",
+            65
+          ],
+          [
+            "worker_59/layouts_336.th",
+            40
+          ],
+          [
+            "worker_58/layouts_3360.th",
+            38
+          ],
+          [
+            "worker_10/layouts_6608.th",
+            94
+          ],
+          [
+            "worker_64/layouts_8960.th",
+            58
+          ],
+          [
+            "worker_3/layouts_7952.th",
+            101
+          ],
+          [
+            "worker_45/layouts_2016.th",
+            89
+          ],
+          [
+            "worker_46/layouts_6496.th",
+            33
+          ],
+          [
+            "worker_35/layouts_8624.th",
+            22
+          ],
+          [
+            "worker_17/layouts_9632.th",
+            82
+          ],
+          [
+            "worker_29/layouts_8512.th",
+            57
+          ],
+          [
+            "worker_40/layouts_672.th",
+            31
+          ],
+          [
+            "worker_44/layouts_3024.th",
+            29
+          ],
+          [
+            "worker_31/layouts_1120.th",
+            70
+          ],
+          [
+            "worker_68/layouts_8064.th",
+            44
+          ],
+          [
+            "worker_20/layouts_6160.th",
+            8
+          ],
+          [
+            "worker_90/layouts_2912.th",
+            47
+          ],
+          [
+            "worker_88/layouts_7392.th",
+            3
+          ],
+          [
+            "worker_71/layouts_3920.th",
+            107
+          ],
+          [
+            "worker_8/layouts_6832.th",
+            71
+          ],
+          [
+            "worker_43/layouts_9184.th",
+            77
+          ],
+          [
+            "worker_80/layouts_8736.th",
+            37
+          ],
+          [
+            "worker_44/layouts_1120.th",
+            88
+          ],
+          [
+            "worker_53/layouts_7504.th",
+            102
+          ],
+          [
+            "worker_38/layouts_4816.th",
+            33
+          ],
+          [
+            "worker_90/layouts_1568.th",
+            94
+          ],
+          [
+            "worker_51/layouts_8400.th",
+            50
+          ],
+          [
+            "worker_61/layouts_336.th",
+            49
+          ],
+          [
+            "worker_58/layouts_5152.th",
+            29
+          ],
+          [
+            "worker_93/layouts_112.th",
+            86
+          ],
+          [
+            "worker_95/layouts_4480.th",
+            60
+          ],
+          [
+            "worker_50/layouts_9744.th",
+            1
+          ],
+          [
+            "worker_96/layouts_4032.th",
+            109
+          ],
+          [
+            "worker_68/layouts_2800.th",
+            90
+          ],
+          [
+            "worker_45/layouts_7952.th",
+            75
+          ],
+          [
+            "worker_95/layouts_1568.th",
+            96
+          ],
+          [
+            "worker_51/layouts_3248.th",
+            97
+          ],
+          [
+            "worker_63/layouts_3024.th",
+            64
+          ],
+          [
+            "worker_29/layouts_9632.th",
+            52
+          ],
+          [
+            "worker_46/layouts_8400.th",
+            86
+          ],
+          [
+            "worker_46/layouts_9072.th",
+            10
+          ],
+          [
+            "worker_67/layouts_7280.th",
+            3
+          ],
+          [
+            "worker_20/layouts_3696.th",
+            71
+          ],
+          [
+            "worker_23/layouts_1456.th",
+            61
+          ],
+          [
+            "worker_51/layouts_5600.th",
+            78
+          ],
+          [
+            "worker_28/layouts_784.th",
+            23
+          ],
+          [
+            "worker_35/layouts_4928.th",
+            50
+          ],
+          [
+            "worker_32/layouts_6496.th",
+            15
+          ],
+          [
+            "worker_1/layouts_1232.th",
+            88
+          ],
+          [
+            "worker_0/layouts_4032.th",
+            27
+          ],
+          [
+            "worker_38/layouts_6720.th",
+            81
+          ],
+          [
+            "worker_99/layouts_1792.th",
+            0
+          ],
+          [
+            "worker_45/layouts_6608.th",
+            93
+          ],
+          [
+            "worker_90/layouts_672.th",
+            9
+          ],
+          [
+            "worker_50/layouts_4256.th",
+            81
+          ],
+          [
+            "worker_48/layouts_1568.th",
+            30
+          ],
+          [
+            "worker_96/layouts_8960.th",
+            67
+          ],
+          [
+            "worker_81/layouts_5264.th",
+            94
+          ],
+          [
+            "worker_12/layouts_3360.th",
+            110
+          ],
+          [
+            "worker_3/layouts_4032.th",
+            48
+          ],
+          [
+            "worker_22/layouts_1008.th",
+            20
+          ],
+          [
+            "worker_30/layouts_9520.th",
+            66
+          ],
+          [
+            "worker_78/layouts_6384.th",
+            105
+          ],
+          [
+            "worker_20/layouts_9520.th",
+            0
+          ],
+          [
+            "worker_1/layouts_112.th",
+            39
+          ],
+          [
+            "worker_71/layouts_1904.th",
+            11
+          ],
+          [
+            "worker_20/layouts_1568.th",
+            37
+          ],
+          [
+            "worker_66/layouts_4816.th",
+            87
+          ],
+          [
+            "worker_61/layouts_7728.th",
+            80
+          ],
+          [
+            "worker_79/layouts_6160.th",
+            62
+          ],
+          [
+            "worker_13/layouts_4032.th",
+            88
+          ],
+          [
+            "worker_25/layouts_3360.th",
+            0
+          ],
+          [
+            "worker_36/layouts_4928.th",
+            93
+          ],
+          [
+            "worker_25/layouts_9744.th",
+            57
+          ],
+          [
+            "worker_88/layouts_2352.th",
+            8
+          ],
+          [
+            "worker_35/layouts_3808.th",
+            109
+          ],
+          [
+            "worker_4/layouts_5600.th",
+            1
+          ],
+          [
+            "worker_26/layouts_7280.th",
+            8
+          ],
+          [
+            "worker_92/layouts_5264.th",
+            2
+          ],
+          [
+            "worker_98/layouts_4704.th",
+            15
+          ],
+          [
+            "worker_16/layouts_9296.th",
+            35
+          ],
+          [
+            "worker_58/layouts_7840.th",
+            92
+          ],
+          [
+            "worker_15/layouts_2800.th",
+            21
+          ],
+          [
+            "worker_86/layouts_9968.th",
+            46
+          ],
+          [
+            "worker_0/layouts_4256.th",
+            86
+          ],
+          [
+            "worker_25/layouts_3136.th",
+            97
+          ],
+          [
+            "worker_77/layouts_1232.th",
+            8
+          ],
+          [
+            "worker_29/layouts_1680.th",
+            26
+          ],
+          [
+            "worker_61/layouts_6160.th",
+            63
+          ],
+          [
+            "worker_19/layouts_224.th",
+            2
+          ],
+          [
+            "worker_92/layouts_2016.th",
+            67
+          ],
+          [
+            "worker_28/layouts_7056.th",
+            3
+          ],
+          [
+            "worker_65/layouts_1792.th",
+            107
+          ],
+          [
+            "worker_1/layouts_6720.th",
+            25
+          ],
+          [
+            "worker_93/layouts_3472.th",
+            69
+          ],
+          [
+            "worker_17/layouts_4480.th",
+            74
+          ],
+          [
+            "worker_28/layouts_5824.th",
+            101
+          ],
+          [
+            "worker_95/layouts_3360.th",
+            107
+          ],
+          [
+            "worker_37/layouts_6384.th",
+            68
+          ],
+          [
+            "worker_68/layouts_5376.th",
+            62
+          ],
+          [
+            "worker_74/layouts_4592.th",
+            20
+          ],
+          [
+            "worker_78/layouts_7616.th",
+            25
+          ],
+          [
+            "worker_78/layouts_6608.th",
+            94
+          ],
+          [
+            "worker_96/layouts_1792.th",
+            3
+          ],
+          [
+            "worker_60/layouts_9856.th",
+            97
+          ]
+        ],
+        "parent_sha256": "d91da003b5168b634f54c3a80647deea219f16d14074942f66730966ec9ca240",
+        "registry_sha256": "2fe459b0a785ffb6995dd3e5966cd47337b948b15ec4bb4d4c19ffe169e404ae",
+        "augmentation": false,
+        "student_updates": 0,
+        "dev_payloads": 0,
+        "test_read": false,
+        "elapsed_seconds": 50.11299520000466
+      },
+      "soft_tolerances": [
+        0.01,
+        0.01,
+        0.0025
+      ],
+      "trust_center_radius": 0.1,
+      "trust_log_aspect_radius": 0.1,
+      "tail_threshold": 0.1,
+      "tail_smooth_width": 0.05,
+      "aggregation": "layout terms then arithmetic mean",
+      "reference_position": 0.1,
+      "reference_shape": 0.025,
+      "monitoring": "same fixed loss; eval/no augmentation; trust always deterministic student eval"
+    },
+    "registry_sha256": "2fe459b0a785ffb6995dd3e5966cd47337b948b15ec4bb4d4c19ffe169e404ae",
+    "paths_sha256": "7a28cd42de0f10809500c43c48836576361e67a72e723f7b32a404186df9b419",
+    "torch": "2.7.1+cu128",
+    "cuda": "12.8",
+    "gpu": "NVIDIA GeForce RTX 5080 Laptop GPU",
+    "numpy": "1.26.4"
+  },
+  "argv": [
+    "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+    "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E107_geometry_posttrain\\train.py"
+  ],
+  "git_commit": "ccfbd6f78254a5e774d7298946c7de15b3a285d8",
+  "uncommitted_source_snapshot": true,
+  "test_read": false,
+  "parent_checkpoint": "assets/parent_best58.pt",
+  "parent_checkpoint_sha256": "d91da003b5168b634f54c3a80647deea219f16d14074942f66730966ec9ca240"
+}

@@ -1,0 +1,35 @@
+# E141 e119_layerwise 原固定dev500
+
+```json
+{
+  "status": "complete",
+  "arm": "e119_layerwise",
+  "count": 500,
+  "checkpoint_sha256": "f945a993c7a425c26d7e5646f58603b8eb363c441d087093af99d165939217c9",
+  "best_epoch": 60,
+  "parameters": 712275,
+  "weighted_Q": 1.0220311619078188,
+  "mean_Q": 1.0242203625402024,
+  "mixed_Q": 1.0231257622240106,
+  "hard_legal": 500,
+  "raw_hard_legal": 0,
+  "fallbacks": 0,
+  "mean_complete_seconds": 0.18514016480062856,
+  "p95_complete_seconds": 0.4562400899856583,
+  "max_complete_seconds": 0.8244650000124238,
+  "over250ms": 123,
+  "max_Q": 1.5006934781630614,
+  "p95_Q": 1.1051709180756477,
+  "raw_repeated_coverage": 0.07068960774023983,
+  "raw_bbox_over_area": 1.0308001954476367,
+  "common_final_dev_loss": 0.3630982895791531,
+  "common_final_new_dev_loss": 0.3718901107609272,
+  "own_selection_loss": 0.3811735089421272,
+  "training_seconds": 11116.85631470001,
+  "training_epochs": 63,
+  "scoring_policy": "Original areas/no MIB local research Q; neutral runtime1; not official contest score",
+  "elapsed_seconds": 192.077222300024,
+  "test_read": false,
+  "selection_frozen_before_Q": true
+}
+```

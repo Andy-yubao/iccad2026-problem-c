@@ -1,0 +1,22 @@
+"""Reusable, read-only browser for saved layout comparison PNGs; no solver access."""
+from pathlib import Path
+import json
+from html import escape
+
+def write_gallery(folder,manifest):
+    """Create a self-contained index using only saved images and diagnostic metadata."""
+    payload=json.dumps(manifest,ensure_ascii=False).replace('<','\\u003c')
+    html='''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>布局对照</title>
+<style>body{margin:0;background:#eef2f5;color:#182936;font:15px system-ui}header{padding:16px 24px;background:white;position:sticky;top:0;z-index:2;box-shadow:0 1px 8px #ccd}h1{font-size:21px;margin:0 0 8px}p{margin:7px 0}button,select{font:inherit;padding:7px 12px;margin:4px;border:1px solid #acbec9;border-radius:7px;background:white;cursor:pointer}button.active{background:#175e61;color:white}.bar{display:flex;align-items:center;flex-wrap:wrap;gap:6px}#meta{font-variant-numeric:tabular-nums;color:#365465}#viewport{overflow:auto;margin:12px;background:white}canvas{display:block;margin:auto}details{margin:14px 24px}a{color:#17676a}</style>
+<header><h1 id="title"></h1><p id="note"></p><div id="groups" class="bar"></div><div class="bar"><button id="prev">← 上一例</button><select id="cases"></select><button id="next">下一例 →</button><select id="stage"><option value="-1">三列完整对照</option><option value="0">只看草稿</option><option value="1">只看常规后处理</option><option value="2">只看E50</option></select><label>放大 <input id="zoom" type="range" min="75" max="250" value="100"></label><a id="original" target="_blank">原始高清图</a></div><p id="meta"></p></header>
+<div id="viewport"><canvas id="canvas"></canvas></div><details><summary>查看本例完整诊断数字</summary><pre id="numbers"></pre></details>
+<script>const manifest=__DATA__;let group=manifest.groups[0].key,ordinal=0,list=[],pic=new Image();const $=id=>document.getElementById(id);$('title').textContent=manifest.title;$('note').textContent=manifest.note;document.title=manifest.title;
+function selectGroup(key){group=key;ordinal=0;list=manifest.cases.filter(c=>c.group===key);$('groups').replaceChildren(...manifest.groups.map(g=>{let b=document.createElement('button');b.textContent=g.label;b.className=g.key===key?'active':'';b.onclick=()=>selectGroup(g.key);return b}));$('cases').replaceChildren(...list.map((c,i)=>{let o=document.createElement('option');o.value=i;o.textContent=`${i+1}/${list.length} · index${c.id}`;return o}));show()}
+function show(){const c=list[ordinal],m=c.metrics;$('cases').value=ordinal;$('meta').textContent=`index${c.id} · ${m.n}模块 ｜ Q：${m.old_Q.toFixed(5)} → ${m.new_Q.toFixed(5)} ｜ D：${m.old_D.toFixed(3)} → ${m.new_D.toFixed(3)} ｜ 平均中心移动 ${m.mean_movement_module_units.toFixed(2)} 个模块尺度，P95 ${m.p95_movement_module_units.toFixed(2)} ｜ 已找到最好Q ${m.best_found_Q.toFixed(5)}`;$('numbers').textContent=JSON.stringify(m,null,2);$('original').href=c.image;pic.onload=draw;pic.src=c.image;$('prev').disabled=ordinal===0;$('next').disabled=ordinal===list.length-1}
+function draw(){if(!pic.complete)return;const stage=Number($('stage').value),z=Number($('zoom').value)/100,c=$('canvas');let sx=0,sy=0,sw=pic.width,sh=pic.height;if(stage>=0){const a=list[ordinal].axes_bounds[stage],pad=.025;sx=Math.max(0,(a[0]-pad)*pic.width);sy=Math.max(0,(1-a[1]-a[3]-pad)*pic.height);sw=Math.min(pic.width-sx,(a[2]+2*pad)*pic.width);sh=Math.min(pic.height-sy,(a[3]+2*pad)*pic.height)}const w=($('viewport').clientWidth-24)*z;c.width=Math.round(w);c.height=Math.round(w*sh/sw);c.getContext('2d').drawImage(pic,sx,sy,sw,sh,0,0,c.width,c.height)}
+$('prev').onclick=()=>{if(ordinal>0){ordinal--;show()}};$('next').onclick=()=>{if(ordinal<list.length-1){ordinal++;show()}};$('cases').onchange=()=>{ordinal=Number($('cases').value);show()};$('zoom').oninput=draw;$('stage').onchange=draw;window.onresize=draw;document.addEventListener('keydown',e=>{if(e.target.matches('select,input'))return;if(e.key==='ArrowLeft')$('prev').click();if(e.key==='ArrowRight')$('next').click()});selectGroup(group);</script></html>'''
+    labels=manifest.get('stage_labels',['草稿','常规后处理','E50'])
+    if len(labels)!=3:raise ValueError('Expected three stage labels')
+    for index,default in enumerate(('草稿','常规后处理','E50')):
+        html=html.replace(f'<option value="{index}">只看{default}</option>',f'<option value="{index}">只看{escape(labels[index])}</option>')
+    Path(folder,'index.html').write_text(html.replace('__DATA__',payload),encoding='utf-8')

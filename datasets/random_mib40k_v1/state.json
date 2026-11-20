@@ -1,0 +1,33 @@
+{
+  "status": "complete",
+  "phase": "complete",
+  "pid": 41436,
+  "scanned": 112000,
+  "compatible_seen": 54599,
+  "rejections": {
+    "train": {
+      "mean_area_incompatible_with_locked_shape": 36909,
+      "locked_dimensions_disagree": 14310
+    },
+    "dev": {
+      "locked_dimensions_disagree": 884,
+      "mean_area_incompatible_with_locked_shape": 2297
+    },
+    "test": {
+      "mean_area_incompatible_with_locked_shape": 2255,
+      "locked_dimensions_disagree": 746
+    }
+  },
+  "selected": {
+    "train": 36000,
+    "dev": 2000,
+    "test": 2000
+  },
+  "test_free_labels_read": false,
+  "training_started": false,
+  "role": "test",
+  "completed": 38000,
+  "total": 38000,
+  "elapsed_seconds": 286.02610250000726,
+  "identity": "fc066a67bbe9fa7097742d15f50a3a5b48c56493315053a0ade3d5aa4e8a2fa8"
+}

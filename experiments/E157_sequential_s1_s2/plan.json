@@ -1,0 +1,115 @@
+{
+  "revision": "E157.sequential_s1_s2.v1.seed0",
+  "status": "authorized_sequential",
+  "authorization": "2026-11-20 user corrected joint training to sequential: freeze completed S0, train S1 then freeze its own best and train S2; prepare then launch in background. Terminal fixed dev500 full-MIB evaluation retained.",
+  "seed": 0,
+  "train_count": 36000,
+  "train_monitor_count": 500,
+  "dev_monitor_count": 500,
+  "batch_size": 64,
+  "steps_per_epoch": 563,
+  "dataset": "random_mib40k_v1; fulltrain36000; own stratified train_monitor500/dev_monitor500",
+  "registry_sha256": "487e5e1693dadc637c8e3c15c3ff55aa5781aa896f09e3b11fb093f25c1c611c",
+  "data_identity": "fc066a67bbe9fa7097742d15f50a3a5b48c56493315053a0ade3d5aa4e8a2fa8",
+  "parameters": {
+    "e157_s1": 676993,
+    "e157_s2": 956951
+  },
+  "trainable_parameters": {
+    "e157_s1": 279958,
+    "e157_s2": 279958
+  },
+  "maximum_epochs": 200,
+  "maximum_seconds": 14400,
+  "training_budget_note": "Each new stage independently at most4h/200epochs, batch64/tail32, seed0, original four-LR schedule and guards. Historical E156 budget stays closed.",
+  "lr_levels": [
+    0.001,
+    0.00025,
+    0.0001,
+    5e-05
+  ],
+  "stages": [
+    "Freeze E156 best79 frontend; scratch S1 encoder and shared S1 twice; freeze own-Loss-best",
+    "Freeze frontend and own S1 best; scratch S2 encoder and shared S2 twice; freeze own-Loss-best",
+    "Fixed new dev500 full-MIB postprocessing and scoring"
+  ],
+  "preflight_train_indices": [
+    0,
+    1,
+    2,
+    18000,
+    35999
+  ],
+  "initialization": "E156 best79 contains frozen E155 L0 and S0 encoder/unit. No older S1/S2 or Adam weights; own S1 best transferred only as frozen prefix to S2.",
+  "loss": {
+    "e157_s1": {
+      "version": "E157.sequential_public.v1",
+      "arm": "e157_s1",
+      "layer_weights": {
+        "6": 0.2,
+        "8": 0.8
+      },
+      "reference_weight": 0.0,
+      "grouping_bottleneck_weight": 0.0,
+      "absolute_overlap_weight": 0.08975162861857286,
+      "mib_weight": 0.6673664216670459,
+      "predict_all": true,
+      "layout_perturbation": false,
+      "S2_drift_weight": 0.0,
+      "drift_scope": "L12 only, inside0.8 terminal layer weight; baseline frozen L8",
+      "drift_center_tolerance": 0.05,
+      "drift_log_ratio_tolerance": 0.1,
+      "drift_ratio_weight": 0.25,
+      "drift_huber_beta": 0.1,
+      "overlap_relief_threshold": 0.01,
+      "overlap_relief_weight": 0.25
+    },
+    "e157_s2": {
+      "version": "E157.sequential_public.v1",
+      "arm": "e157_s2",
+      "layer_weights": {
+        "10": 0.2,
+        "12": 0.8
+      },
+      "reference_weight": 0.0,
+      "grouping_bottleneck_weight": 0.0,
+      "absolute_overlap_weight": 0.08975162861857286,
+      "mib_weight": 0.6673664216670459,
+      "predict_all": true,
+      "layout_perturbation": false,
+      "S2_drift_weight": 0.2,
+      "drift_scope": "L12 only, inside0.8 terminal layer weight; baseline frozen L8",
+      "drift_center_tolerance": 0.05,
+      "drift_log_ratio_tolerance": 0.1,
+      "drift_ratio_weight": 0.25,
+      "drift_huber_beta": 0.1,
+      "overlap_relief_threshold": 0.01,
+      "overlap_relief_weight": 0.25
+    }
+  },
+  "prediction_boundary": "All F/P positions and shapes predicted; specifications enforced by postprocessing only",
+  "target": {
+    "grouping_satisfied_cases": 475,
+    "total_cases": 500,
+    "hard_legal_cases": 500
+  },
+  "static_condition": "Immutable enhanced role/MIB/port features at all layers; frozen S0 encoder, independently trainable S1 encoder then frozen, fresh S2 encoder.",
+  "S0": "Gated group displacement plus member reordering, two calls, bounded by group local scale; no reward for changing topology on its own",
+  "MIB": "Same-master relations separate from grouping; continuous log-shape consistency; linked group shape probes; compatible shared postprocessing dimensions including fallback",
+  "no_mib_policy_exception": "Authorized new random_mib40k_v1 mean-area derived MIB research; original references remain evaluation baselines; old no-MIB experiments unchanged.",
+  "test_read": false,
+  "automatic_retry": false,
+  "comparison_arms": 0,
+  "cache_owner": "datasets/random_mib40k_v1",
+  "postprocessing_enabled": true,
+  "model": "S0/S0 frozen; S1/S1 trained first; S2/S2 trained second. Double-layer units shared within each stage; stage-owned enhanced encoders; only layouts cross calls.",
+  "perturbation": "No layout perturbation in either stage; frozen frontend eval; original axis-swap training augmentation retained.",
+  "parent_s0": {
+    "arm": "e156_s0_backend",
+    "checkpoint": "experiments/E156_two_s0_stage/runs/e156_s0_backend_seed0/checkpoints/best.pt",
+    "checkpoint_sha256": "5df543f525b037ee7c2e2bb5c0be37fad3f2101f8e1393e4930aee3889d2f5fa",
+    "best_epoch": 79,
+    "selection_loss": 0.18988205093145372
+  },
+  "monitoring": "Same public Loss at frozen L4 and stage exits; overlap, grouping, boundary, MIB, bbox, blockage and side-reversal diagnostics; no Q selection."
+}

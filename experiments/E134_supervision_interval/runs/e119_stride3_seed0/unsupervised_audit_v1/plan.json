@@ -1,0 +1,25 @@
+{
+  "scope": "Frozen E134 E119 stride3 best63; audit S3-S12 on the identical dev500; no training or postprocessing",
+  "checkpoint_sha256": "1f69a681713255a7adfca09357d70065ad7dff4d62f1a6294a7c233e30ad1df1",
+  "observations": {
+    "motion": "Center movement / sqrt(public module area), both raw and after removing per-case median translation. Large move >=0.5; sensitivity >=0.25 and >=1.0.",
+    "local_order": "Fixed symmetric S3 K6 neighbor pairs, excluding P-P. Adjacent clear center-axis sign reversals require both margins >=0.05 average sqrt(pair areas); unresolved is reported separately.",
+    "passage": "Follow all non-P-P pairs from S3. A complete side exchange requires an earlier clearly rectangle-separated axis state and a later opposite clearly separated state (gap >=0.02 local pair scale). At an intervening center-order crossing, linearly interpolated orthogonal projections must overlap by >=0.02 local scale. This is an observable discrete-trajectory proxy, not a measured continuous network path.",
+    "group_barrier": "Fix contact-distance MST group-member edges at S3. Track each edge and every foreign module, without rebuilding the tree later. A center-line barrier intersects the middle 70% of the endpoint-center segment and the foreign rectangle interior inset by 0.02 sqrt(foreign public area). Initial problematic edges additionally require contact distance >0.05. Track persistent all-clear, original-blocker clearance, new blockers, and all-clear with >=50% contact-distance reduction. A segment obstacle is not an all-path infeasibility certificate.",
+    "boundary": "Track fixed required module-side pairs from S3. Gap normalized by sqrt(public module area). Initial bad gap >0.10; fixed persistent repair gap <=0.01, sensitivity <=0.02/0.05. Shadow blockers are foreign rectangle centers farther outward by >0.05 local, with tangent projection overlap >=10% of shorter side. Track initial bad-and-blocked requirements separately.",
+    "void": "Exact largest axis-aligned empty rectangle within the current outer bbox, using all rectangle edge coordinates and an occupancy histogram. Also decompose outer bbox/public area, exact union whitespace and overlap. Fix high-void cohort to S3 top100; substantial void reduction >=20% and >=0.5 percentage point of bbox, persistent to S12.",
+    "temporary_excursion": "For windows 3->6,6->9,9->12, track large >=0.5 local center moves at unsupervised outputs that are undone at the endpoint (net excursion <=50% of peak). Also report loss sacrifice with endpoint improvement; descriptive, not causation."
+  },
+  "interventions": {
+    "skip": "Individually bypass blocks 4/5,7/8,10/11 (including their state injection), keeping every other original block. Reuse prior all-six-block skip as secondary comparison.",
+    "hold_feedback": "Keep every hidden-state block and every raw readout, but hold feedback state at S3 through blocks4,5,6; at S6 through7,8,9; or at S9 through10,11,12. Test each window and all windows. Accepted state updates resume at supervised outputs. This suppresses explicit unsupervised coordinate/shape feedback, not hidden computation.",
+    "controls": "Original model manual forward must match all stored S0-S12 bitwise. All intervention prefixes before their first affected block must match bitwise. No optimizer, checkpoint mutation, new scoring or test reads.",
+    "interpretation": "Fixed-weight off-trajectory sensitivity only: cannot establish irreducible layer necessity or the result of retraining a shallower model; hold-feedback also changes state injection and attention bias and does not isolate visual crossings alone."
+  },
+  "statistics": "Case-equal means, same-source-shard paired bootstrap (2000 replicates, seed20261115). Events also reported as raw counts and conditional persistent repair denominators. No event is discarded because final outcome is poor.",
+  "examples": "Deterministic examples: persistent group-barrier case near median initial problematic-edge count; case with most persistently cleared fixed group edges; largest S3 void among high-void cases retaining >=80% at S12. Examples illustrative; population counts remain primary.",
+  "training": false,
+  "postprocessing_calls": 0,
+  "Q_calls": 0,
+  "test_read": false
+}

@@ -1,0 +1,152 @@
+{
+  "status": "passed",
+  "cases": 500,
+  "source_shards": 299,
+  "original_weights_and_sources_unchanged": true,
+  "original_positions_sha256": "c7928f4d0ee6a9b6d7d6234faf187dacd54ba1256f2117478eb5583ff75d3466",
+  "observations": {
+    "cases": 500,
+    "seconds": 39.82780079999793,
+    "positions_sha256": "c7928f4d0ee6a9b6d7d6234faf187dacd54ba1256f2117478eb5583ff75d3466",
+    "source_sha256": "796d91f19b2734a73e1aa29f685e87c96356f1c09c6a1ac250d51c5bf85c40e0",
+    "plan_sha256": "b81b3dc67c991c329fc733bc9b711d24692e4a8ca716ce4020562f3e29f61a97"
+  },
+  "interventions": {
+    "modes": {
+      "original": {
+        "kind": "none",
+        "targets": [],
+        "mean_final_loss": 0.3343625856339931,
+        "prefix_bitwise_unchanged": true
+      },
+      "skip45": {
+        "kind": "skip",
+        "targets": [
+          4,
+          5
+        ],
+        "mean_final_loss": 0.37946111288666723,
+        "prefix_bitwise_unchanged": true
+      },
+      "skip78": {
+        "kind": "skip",
+        "targets": [
+          7,
+          8
+        ],
+        "mean_final_loss": 0.3891027812808752,
+        "prefix_bitwise_unchanged": true
+      },
+      "skip1011": {
+        "kind": "skip",
+        "targets": [
+          10,
+          11
+        ],
+        "mean_final_loss": 0.3772535861134529,
+        "prefix_bitwise_unchanged": true
+      },
+      "hold45": {
+        "kind": "hold",
+        "targets": [
+          4,
+          5
+        ],
+        "mean_final_loss": 0.3527215125411749,
+        "prefix_bitwise_unchanged": true
+      },
+      "hold78": {
+        "kind": "hold",
+        "targets": [
+          7,
+          8
+        ],
+        "mean_final_loss": 0.35138626158237457,
+        "prefix_bitwise_unchanged": true
+      },
+      "hold1011": {
+        "kind": "hold",
+        "targets": [
+          10,
+          11
+        ],
+        "mean_final_loss": 0.37543992790579794,
+        "prefix_bitwise_unchanged": true
+      },
+      "hold_all": {
+        "kind": "hold",
+        "targets": [
+          4,
+          5,
+          7,
+          8,
+          10,
+          11
+        ],
+        "mean_final_loss": 0.428021812081337,
+        "prefix_bitwise_unchanged": true
+      }
+    },
+    "seconds": 99.2234372999992,
+    "weights_unchanged": true,
+    "original_all_states_and_supervised_losses_bitwise_equal": true,
+    "source_sha256": "796d91f19b2734a73e1aa29f685e87c96356f1c09c6a1ac250d51c5bf85c40e0",
+    "training": false,
+    "postprocessing_calls": 0,
+    "Q_calls": 0,
+    "test_read": false
+  },
+  "followup_passed": true,
+  "rebound_interventions": {
+    "modes": {
+      "hold4": {
+        "kind": "hold",
+        "targets": [
+          4
+        ],
+        "mean_final_loss": 0.33515721222758293,
+        "prefix_bitwise_unchanged": true
+      },
+      "hold7": {
+        "kind": "hold",
+        "targets": [
+          7
+        ],
+        "mean_final_loss": 0.3383280283510685,
+        "prefix_bitwise_unchanged": true
+      },
+      "hold10": {
+        "kind": "hold",
+        "targets": [
+          10
+        ],
+        "mean_final_loss": 0.343826387912035,
+        "prefix_bitwise_unchanged": true
+      },
+      "hold_rebounds": {
+        "kind": "hold",
+        "targets": [
+          4,
+          7,
+          10
+        ],
+        "mean_final_loss": 0.3472152349501848,
+        "prefix_bitwise_unchanged": true
+      }
+    },
+    "seconds": 55.02317530000073,
+    "weights_unchanged": true,
+    "original_control": "reuse primary bitwise verified original control",
+    "source_sha256": "38a7cd77939ef774733a20f5023f672505c9e0e4e7b62607444407fe9d0f4bbc",
+    "training": false,
+    "postprocessing_calls": 0,
+    "Q_calls": 0,
+    "test_read": false
+  },
+  "training": false,
+  "postprocessing_calls": 0,
+  "Q_calls": 0,
+  "test_read": false,
+  "plan_sha256": "b81b3dc67c991c329fc733bc9b711d24692e4a8ca716ce4020562f3e29f61a97",
+  "report_source_sha256": "4d12e3629d247475d4b18f28cf7de6d515fad06b100638b71e20bed245be71b7"
+}

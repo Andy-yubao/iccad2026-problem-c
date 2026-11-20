@@ -1,0 +1,37 @@
+{
+  "status": "prepared_training_disabled",
+  "experiment": "experiments/E131_relation_input",
+  "preflight_status": "passed",
+  "source_identity_matches": true,
+  "protected_source_copies_unchanged": true,
+  "base_loss_source_exact": true,
+  "parameters": {
+    "full": 268387,
+    "pure": 235331
+  },
+  "common_initial_tensors": 66,
+  "unique_train_cases": 5,
+  "optimizer_updates": 0,
+  "training_started": false,
+  "raw_payload_reads": 0,
+  "dev_tensor_payloads": 0,
+  "test_read": false,
+  "postprocessing_calls": 0,
+  "runs_created": 0,
+  "checkpoints_created": 0,
+  "background_tasks_started": 0,
+  "real_optimizer_update_tested": false,
+  "resume_tested": false,
+  "training_enabled": false,
+  "STOP_present": true,
+  "launch_interlocks": {
+    "full": {
+      "exit_code": 1,
+      "blocked": true
+    },
+    "pure": {
+      "exit_code": 1,
+      "blocked": true
+    }
+  }
+}

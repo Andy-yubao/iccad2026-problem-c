@@ -1,0 +1,5 @@
+{
+  "status": "failed",
+  "error": "RuntimeError('Inplace update to inference tensor outside InferenceMode is not allowed.You can make a clone to get a normal tensor before doing inplace update.See https://github.com/pytorch/rfcs/pull/17 for more details.')",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E134_supervision_interval\\runs\\e119_stride3_seed0\\layer_analysis_v1\\capture.py\", line 190, in main\n    gradients(checkpoint,rows,pack)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E134_supervision_interval\\runs\\e119_stride3_seed0\\layer_analysis_v1\\capture.py\", line 102, in gradients\n    batch=pack.batch(range(start,min(start+32,500)));states=model(inputs_only(batch))\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E134_supervision_interval\\resident.py\", line 43, in batch\n    for value in host.values():value.zero_()\nRuntimeError: Inplace update to inference tensor outside InferenceMode is not allowed.You can make a clone to get a normal tensor before doing inplace update.See https://github.com/pytorch/rfcs/pull/17 for more details.\n"
+}

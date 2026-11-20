@@ -1,0 +1,133 @@
+{
+  "experiment": "E151 frozen E149 best52 L0 with freshly trained E148-style backend",
+  "revision": "E151.frozen_role_initial.v1.seed0",
+  "status": "authorized_preparation",
+  "authorization": "2026-11-18 user authorized fixed E149 best52 L0 and training an adapted backend, directly launched after preparation; audit L4 to L8 overlap and stage quality on original dev500.",
+  "architecture": {
+    "e151": "E149 role initial107739 + E148 public encoder101184 + three reusable two-layer units472218, original12 refinements"
+  },
+  "parameters": {
+    "e151": 681141
+  },
+  "trainable_parameters": {
+    "e151": 573402
+  },
+  "seed": 0,
+  "batch_size": 64,
+  "precision": "FP32; deterministic; TF32 disabled",
+  "threads": 4,
+  "train_count": 36000,
+  "train_monitor_count": 500,
+  "dev_monitor_count": 500,
+  "dataset": "random_reference40k.v1; original public areas; test sealed",
+  "data_migration": "Same original 36k, fixed train500/dev500 and cache as E148/E150 for this paired stage study.",
+  "no_mib": true,
+  "predict_all_modules": true,
+  "hard_specification_enforcement": "postprocessing only",
+  "initialization": "L0 loaded from pinned E149 best52; frozen eval. Public encoder and S0/S1/S2 scratch seed0, fresh AdamW for trainable backend only; disposable preflight discarded.",
+  "optimizer": "AdamW weight_decay.0003, global gradient clip1, joint per-module relative update bound.005",
+  "lr_levels": [
+    0.001,
+    0.00025,
+    0.0001,
+    5e-05
+  ],
+  "protection_epochs": 14,
+  "scheduler_baseline_epoch": 15,
+  "patience": 3,
+  "minimum_meaningful_absolute": 1e-05,
+  "minimum_meaningful_relative": 0.001,
+  "best_minimum_absolute_improvement": 1e-05,
+  "minimum_lowest_lr_complete_epochs": 2,
+  "maximum_seconds": 14400,
+  "maximum_epochs": 200,
+  "budget": "One whole joint candidate4h/200epoch, batch64/tail32, original FP32/Adam/guards/schedule",
+  "selection": "Each fixed own-Loss dev500 arithmetic mean for best/LR/earlystop; no Q selection",
+  "resume": "Pause at accepted training update, restore model/Adam/RNG/permutation/cursor/seen/LR/early stop/projection and cumulative budget. If paused in terminal audit, restart audit only.",
+  "numerical_guards": "Nonfinite or case/mean Loss>=1000 or unclipped grad norm>=10000: reject before Adam; no skip/retry",
+  "augmentation": "P=.5 axis swap; flags indexed by seed/epoch/member, independent of dropout",
+  "engine": "E141 deterministic FP32 CUDA graph64 plus eager final32; original AdamW/projection/guards",
+  "stop": "Experiment STOP, per-run STOP, SIGINT; save accepted cursor and exit, no next arm",
+  "preflight_train_indices": [
+    10841,
+    12651,
+    6417,
+    4280,
+    17946
+  ],
+  "preflight": "Frozen checkpoint/hash/parameter/eval invariance, exact E148 objective, 13 real readouts, layout-path gradients, label isolation, CUDA64/tail32, serialized next update equivalence.",
+  "comparison": "Historical paired E148/E150 results are descriptive; initialization and auxiliary weighting differ. Diagnose whether L4 advantage is retained at L8 and measure within-case collision reduction.",
+  "reporting": "Same L4/L8/L12 weighted objective for monitoring and selection. After freeze, original dev500 paired stage audit and complete Loss components.",
+  "terminal_evaluation": "Read-only dev500 audit, compare stage Loss and L4-to-L8 weighted overlap reduction on matching cases against archived E148/E150; report G/B and public F/P errors. No postprocessing/Q/test.",
+  "historical_standards": "E74/E105/A numbers are historical context until matched new task evaluation",
+  "test_read": false,
+  "postprocessing_calls": 0,
+  "automatic_queue": true,
+  "dataset_report_sha256": "3a79fd9eb2636578fa4df876ccac51699eab04cd59179027488aa7d8c334928a",
+  "payload_checksums_sha256": "f8eeb86da003c9901b73541eb13cc8e16cad9cd963dcf74a0edddf4a1a5abe54",
+  "queue": "Train one backend -> freeze own-Loss best -> original dev500 stage Loss and geometry-component audit",
+  "cache_build_workers": 4,
+  "required_cache_key": "a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148",
+  "cache_policy": "Reuse original shared CPU cache and complete E149 public-role sidecars; features/batches/ports/role producer byte-identical",
+  "loss": "Use E148 weights .1/.1/.8 and original base coefficients. L4 omits entire direct overlap group; L8/L12 full. L0 excluded from the objective.",
+  "architecture_parent": "Independent E147 numerical engine / E142 pair and node feedback",
+  "new_candidates": 1,
+  "automatic_retry": false,
+  "overlap_omission": "L4 omits the entire direct overlap group; F/P predictions are never masked or overwritten.",
+  "monitor_batch_size": 64,
+  "batch_tail": "562 batches64 plus one32 per full epoch; no dropped or repeated rows",
+  "training_mode": "E149 L0 eval + no-grad throughout. One joint backend optimizer, end-to-end layout gradients across all backend unit boundaries.",
+  "supervision": {
+    "L4": 0.1,
+    "L8": 0.1,
+    "L12": 0.8
+  },
+  "role_features": 16,
+  "port_features": 4,
+  "pair_features": 6,
+  "automatic_evaluation": true,
+  "Q_calls": 0,
+  "no_overlap_layers": [
+    4
+  ],
+  "full_loss_layers": [
+    8,
+    12
+  ],
+  "unit_order": [
+    0,
+    0,
+    1,
+    1,
+    2,
+    2
+  ],
+  "initial_readout_in_returned_states": true,
+  "role_cache_root": "experiments/E149_role_initial/role_cache_v1",
+  "role_cache_policy": "Require complete identity-compatible E149 public-role sidecars, no rebuilding or copying payloads",
+  "parent_initial": {
+    "checkpoint": "experiments/E149_role_initial/runs/e149_role_initial_seed0/checkpoints/best.pt",
+    "checkpoint_sha256": "d121e2a6b89dccf469aeae7127bfa6888ec5fcd79590a3c42096b66daaf35132",
+    "best_epoch": 52,
+    "selection": "initial_no_overlap dev500 arithmetic mean",
+    "own_selection_loss": 0.38238882398605345
+  },
+  "baselines": {
+    "E148": {
+      "path": "experiments/E148_shared_functional_shape/runs/e148_shared_functional_shape_seed0/insert_s0_s1_dev500_v1/per_case.json",
+      "sha256": "2d4c60db4f8848476c9214cefb82e07e8a142a775a3dc9d4fb68f42a0697daaa"
+    },
+    "E150": {
+      "path": "experiments/E150_role_joint/runs/e150_role_joint_seed0/visualization_dev500_layer_loss/per_case_loss.json",
+      "sha256": "ae9bbd114312cbe15132430b41a386953639dce8fbb7076150700bd5065cc249"
+    },
+    "E150_columns": {
+      "path": "experiments/E150_role_joint/runs/e150_role_joint_seed0/visualization_dev500_layer_loss/layer_loss_summary.json",
+      "sha256": "22641e21880bbecfb58bc1b74bed71b20b98753c8e5f5936d0857a902d47b980"
+    },
+    "E149_loss": {
+      "path": "experiments/E149_role_initial/loss_results.json",
+      "sha256": "9ae80f3bed1b75d39fcd245f5ca9e97288f3e63476d1f4b04841b691acc55767"
+    }
+  }
+}

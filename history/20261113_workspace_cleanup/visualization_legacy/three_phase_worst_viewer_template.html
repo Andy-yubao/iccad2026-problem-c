@@ -1,0 +1,116 @@
+<div id="iccad-worst-budget">
+  <h2>4+12 · 大预算后处理最差10例</h2>
+  <div class="viz-controls">
+    <label class="form-label">样例<select class="form-select" id="bw-case" aria-label="按最终Q降序选择最差样例"></select></label>
+    <label class="form-check"><input class="form-check-input" id="bw-overlap" type="checkbox" checked><span class="form-check-label">草稿重叠红框</span></label>
+  </div>
+  <div class="viz-row"><label class="form-label" for="bw-layer">草稿层 <output id="bw-depth" class="tabular-nums">12 / 12</output></label><div class="bw-slider"><input class="form-range" id="bw-layer" type="range" min="1" max="12" value="12" step="1" aria-label="第1到12层真实草稿"></div></div>
+  <p class="text-small tabular-nums" id="bw-meta" aria-live="polite"></p>
+  <div class="bw-panels">
+    <section><h3>Reference</h3><canvas id="bw-reference" width="1000" height="1000" role="img" aria-label="原始参考布局；模块编号与另外两栏一致"></canvas></section>
+    <section><h3 id="bw-draft-label">Draft · 第12层</h3><canvas id="bw-draft" width="1000" height="1000" role="img" aria-label="当前层模型真实草稿；点击模块可在三栏定位"></canvas></section>
+    <section><h3>后处理 · 3倍预算</h3><canvas id="bw-final" width="1000" height="1000" role="img" aria-label="已完成评价保存的最终硬合法布局；切层时保持不变"></canvas></section>
+  </div>
+  <p id="bw-selection" class="text-small" aria-live="polite">全部模块</p>
+  <div id="bw-legend" aria-label="分组颜色、模块编号与约束统一图例"></div>
+  <p class="text-small tabular-nums" id="bw-detail"></p>
+</div>
+<style>
+#iccad-worst-budget{color:var(--foreground);display:grid;gap:calc(var(--font-size-base)*.75)}
+#iccad-worst-budget .bw-slider{flex:1;min-width:160px}
+#iccad-worst-budget .bw-panels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--font-size-base)*.75)}
+#iccad-worst-budget section{min-width:0;display:grid;gap:calc(var(--font-size-base)*.25)}
+#iccad-worst-budget canvas{display:block;width:100%;height:auto;aspect-ratio:1}
+#iccad-worst-budget #bw-meta,#iccad-worst-budget #bw-detail{overflow-wrap:anywhere}
+#iccad-worst-budget #bw-legend{display:flex;flex-wrap:wrap;gap:calc(var(--font-size-base)*.7) calc(var(--font-size-base)*1.2);align-items:center}
+#iccad-worst-budget .bw-key{display:inline-flex;align-items:center;gap:calc(var(--font-size-base)*.4)}
+#iccad-worst-budget .bw-swatch{display:inline-block;width:24px;height:13px}
+@media(max-width:620px){#iccad-worst-budget .bw-panels{grid-template-columns:1fr}}
+</style>
+<script>
+(()=>{
+ const root=document.getElementById('iccad-worst-budget'),data=__DATA__,cases=data.cases;
+ const el=id=>root.querySelector('#bw-'+id),canvases=['reference','draft','final'].map(el);
+ const sides=[[1,'L'],[2,'R'],[4,'T'],[8,'B']];
+ let selected=0,module=-1;
+ const fmt=(n,k=3)=>Number(n).toFixed(k);
+ function color(name){const css=getComputedStyle(root);return css.getPropertyValue('--'+name).trim()||css.color}
+ function intersects(p){const hit=new Set();for(let i=0;i<p.length;i++)for(let j=0;j<i;j++){const a=p[i],b=p[j];if(Math.min(a[0]+a[2],b[0]+b[2])-Math.max(a[0],b[0])>1e-5&&Math.min(a[1]+a[3],b[1]+b[3])-Math.max(a[1],b[1])>1e-5){hit.add(i);hit.add(j)}}return hit}
+ function attributes(c,i){const f=c.constraints[i];return [f[3]>0?'G'+f[3]:'',f[0]?'F':'',f[1]?'P':'',sides.filter(([bit])=>f[4]&bit).map(([,letter])=>letter).join('/')].filter(Boolean).join(' · ')||'无附加约束'}
+ function draw(cv,p,c,overlap,failed){
+  const ctx=cv.getContext('2d'),L=c.bounds,pad=34,s=(cv.width-2*pad)/(L[1]-L[0]),ratio=cv.width/Math.max(cv.clientWidth,1);
+  const x=v=>pad+(v-L[0])*s,y=v=>cv.height-pad-(v-L[2])*s,hits=overlap?intersects(p):new Set();
+  const base=parseFloat(getComputedStyle(root).fontSize)||14,font=Math.max(11,base*.8)*ratio,large=base*ratio;
+  ctx.clearRect(0,0,cv.width,cv.height);
+  const lo=[Math.min(...p.map(r=>r[0])),Math.min(...p.map(r=>r[1]))],hi=[Math.max(...p.map(r=>r[0]+r[2])),Math.max(...p.map(r=>r[1]+r[3]))];
+  ctx.strokeStyle=color('muted-foreground');ctx.lineWidth=ratio;ctx.setLineDash([4*ratio,3*ratio]);ctx.strokeRect(x(lo[0]),y(hi[1]),(hi[0]-lo[0])*s,(hi[1]-lo[1])*s);ctx.setLineDash([]);
+  p.forEach((r,i)=>{
+   const xx=x(r[0]),yy=y(r[1]+r[3]),w=r[2]*s,h=r[3]*s,fill=c.group_colors[String(c.constraints[i][3])];
+   ctx.globalAlpha=module>=0&&i!==module?.16:.78;ctx.fillStyle=fill?`rgb(${fill.join(',')})`:color('muted');ctx.fillRect(xx,yy,w,h);
+   ctx.globalAlpha=module>=0&&i!==module?.16:1;ctx.strokeStyle=hits.has(i)?color('red'):color('muted-foreground');ctx.lineWidth=(module===i?2.5:hits.has(i)?1.8:.65)*ratio;ctx.strokeRect(xx,yy,w,h);
+  });
+  p.forEach((r,i)=>{
+   if(module>=0&&module!==i)return;
+   const xx=x(r[0]+r[2]/2),yy=y(r[1]+r[3]/2),f=c.constraints[i],lines=[String(i)],size=module===i?large:font;
+   if(f[3]>0)lines.push('G'+f[3]);if(f[0]||f[1])lines.push([f[0]?'F':'',f[1]?'P':''].filter(Boolean).join(' '));
+   ctx.font=`${size}px system-ui`;ctx.textAlign='center';ctx.textBaseline='middle';
+   const width=Math.max(...lines.map(t=>ctx.measureText(t).width)),height=size*1.04*lines.length;
+   ctx.globalAlpha=.8;ctx.fillStyle=color('background');ctx.fillRect(xx-width/2-ratio,yy-height/2,width+2*ratio,height);
+   ctx.globalAlpha=1;ctx.fillStyle=color('foreground');lines.forEach((line,j)=>ctx.fillText(line,xx,yy+(j-(lines.length-1)/2)*size*1.04));
+  });
+  p.forEach((r,i)=>{
+   if(module>=0&&module!==i)return;
+   const locations=[[1,'L',r[0],r[1]+r[3]/2,1,0],[2,'R',r[0]+r[2],r[1]+r[3]/2,-1,0],[4,'T',r[0]+r[2]/2,r[1]+r[3],0,1],[8,'B',r[0]+r[2]/2,r[1],0,-1]];
+   for(const [bit,letter,bx,by,dx,dy] of locations){
+    if(!(c.constraints[i][4]&bit))continue;
+    const size=font,xx=x(bx)+dx*size*.5,yy=y(by)+dy*size*.6;
+    ctx.globalAlpha=1;ctx.fillStyle=failed[i].includes(bit)?color('red'):color('green');ctx.fillRect(xx-size*.43,yy-size*.52,size*.86,size*1.04);
+    ctx.fillStyle=color('background');ctx.font=`500 ${size}px system-ui`;ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(letter,xx,yy);
+   }
+  });
+  ctx.globalAlpha=1;ctx.textBaseline='alphabetic';ctx.fillStyle=color('muted-foreground');ctx.font=`${font}px system-ui`;
+  ctx.textAlign='left';ctx.fillText(`${fmt(L[0],0)}, ${fmt(L[2],0)}`,pad,cv.height-3*ratio);
+  ctx.textAlign='right';ctx.fillText(`${fmt(L[1],0)}, ${fmt(L[3],0)}`,cv.width-pad,font);
+ }
+ function legend(){
+  const c=cases[selected],box=el('legend');box.replaceChildren();
+  function key(label,fill,border){const item=document.createElement('span'),swatch=document.createElement('i'),text=document.createElement('span');item.className='bw-key';swatch.className='bw-swatch';swatch.style.background=fill;if(border)swatch.style.border=border;text.textContent=label;item.append(swatch,text);box.append(item)}
+  for(const [g,rgb] of Object.entries(c.group_colors))key('分组 G'+g,`rgb(${rgb.join(',')})`);
+  key('无分组',color('muted'));key('L/R/T/B 满足',color('green'));key('L/R/T/B 违反',color('red'));key('重叠模块','transparent','2px solid '+color('red'));key('布局外框','transparent','1px dashed '+color('muted-foreground'));
+  const text=document.createElement('span');text.textContent='数字：模块编号 · F：固定形状 · P：预放置';box.append(text);
+ }
+ function render(){
+  const c=cases[selected],d=+el('layer').value;
+  el('depth').textContent=d+' / 12';el('draft-label').textContent='Draft · 第'+d+'层'+([4,12].includes(d)?'（直接监督）':'');
+  el('meta').textContent=`${c.label} · dev #${c.evaluation_index} · N=${c.n} · best epoch 48 · ${c.member[0]} : ${c.member[1]}`;
+  draw(canvases[0],c.reference,c,false,c.boundary_status.reference);draw(canvases[1],c.layers[d-1],c,el('overlap').checked,c.boundary_status.layers[d-1]);draw(canvases[2],c.final,c,false,c.boundary_status.final);
+  el('selection').textContent=module<0?'全部模块':`模块 ${module} · ${attributes(c,module)}（再次点击取消定位）`;
+  el('detail').textContent=`第${d}层重复覆盖 ${fmt(c.coverage[d-1]*100,2)}% · 最终 Q ${fmt(c.Q,6)}（原预算 ${fmt(c.old_Q,6)}） · 完整耗时 ${fmt(c.complete_seconds*1000,1)} ms · 硬合法 · 边界违规 ${c.boundary} · 分组违规 ${c.grouping}`;
+  root.dataset.evaluationIndex=String(c.evaluation_index);root.dataset.layer=String(d);root.dataset.selectedModule=String(module);
+ }
+ function save(){
+  if(!window.openai?.setWidgetState)return;
+  const c=cases[selected];window.openai.setWidgetState({modelContent:{display_id:'e114-budget3x-worst10',evaluation_index:c.evaluation_index,rank:c.rank,member:c.member,layer:+el('layer').value,module},privateContent:{overlap:el('overlap').checked}}).catch(()=>{});
+ }
+ function apply(snapshot){
+  const state=snapshot?.modelContent;if(!state||state.display_id!=='e114-budget3x-worst10')return;
+  const index=cases.findIndex(c=>c.evaluation_index===state.evaluation_index);if(index>=0)selected=index;
+  el('case').value=String(selected);el('layer').value=String(Math.max(1,Math.min(12,Number(state.layer)||12)));
+  module=Number.isInteger(state.module)&&state.module>=0&&state.module<cases[selected].n?state.module:-1;
+  if(typeof snapshot.privateContent?.overlap==='boolean')el('overlap').checked=snapshot.privateContent.overlap;
+ }
+ cases.forEach((c,i)=>{const option=document.createElement('option');option.value=String(i);option.textContent=`${c.label} · dev #${c.evaluation_index} · N=${c.n}`;el('case').append(option)});
+ apply(window.openai?.widgetState);
+ el('case').addEventListener('change',()=>{selected=+el('case').value;module=-1;legend();render();save()});
+ el('layer').addEventListener('input',()=>{render();save()});el('overlap').addEventListener('change',()=>{render();save()});
+ canvases.forEach((cv,k)=>cv.addEventListener('click',event=>{
+  const c=cases[selected],p=k===0?c.reference:k===2?c.final:c.layers[+el('layer').value-1],rect=cv.getBoundingClientRect(),s=(cv.width-68)/(c.bounds[1]-c.bounds[0]);
+  const x=((event.clientX-rect.left)*cv.width/rect.width-34)/s+c.bounds[0],y=(cv.height-34-(event.clientY-rect.top)*cv.height/rect.height)/s+c.bounds[2];
+  let hit=-1;p.forEach((r,i)=>{if(x>=r[0]&&x<=r[0]+r[2]&&y>=r[1]&&y<=r[1]+r[3])hit=i});module=module===hit?-1:hit;render();save();
+ }));
+ new ResizeObserver(render).observe(root);
+ new MutationObserver(()=>{legend();render()}).observe(document.documentElement,{attributes:true,attributeFilter:['class','style','data-theme']});
+ window.addEventListener('openai:set_globals',event=>{apply(event.detail?.globals?.widgetState);legend();render()});
+ legend();render();
+})();
+</script>

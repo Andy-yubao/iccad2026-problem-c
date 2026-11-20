@@ -1,0 +1,164 @@
+{
+  "experiment": "E111_progressive_depth",
+  "run": "20261107_depth{04,08,12}_seed0",
+  "authorization": "2026-11-07 user authorized a third experiment after A/B; four new layers per stage, terminal-layer-only Loss; clarification: freeze old layers, continue updating readout; accepted own-Loss-best/Adam handoff and original LR reset, 4h/200 epochs per stage; advance only on normal early stop.",
+  "scope": "three stages depth4,8,12, then frozen final model dev500; no extra candidate, old run restart, test, or Q selection",
+  "architecture": {
+    "width": 96,
+    "layers": 12,
+    "rectangle": true,
+    "ffn_dropout": 0.1,
+    "residual_dropout": 0.05
+  },
+  "parameters": 1471539,
+  "trainable_parameters": "stage-dependent: input/state embedding+blocks1..4+head; then only blocks5..8+head; then blocks9..12+head",
+  "initialization": "all parameters random, seed0, fresh AdamW; no parent weights or state",
+  "data": "reference_workset_v5 original16k, MIB public mean-area transform E14.mean_area.v1; no new members; validated v6 cache prefix only",
+  "train_count": 16000,
+  "train_monitor_count": 500,
+  "dev_monitor_count": 500,
+  "batch_size": 32,
+  "precision": "FP32, deterministic algorithms, no AMP or numerical-path changes inside run",
+  "cublas_workspace_config": ":4096:8, set at package import before CUDA initialization",
+  "seed": 0,
+  "threads": 4,
+  "maximum_seconds": 14400,
+  "maximum_epochs": 200,
+  "lr_levels": [
+    0.001,
+    0.00025,
+    0.0001,
+    5e-05
+  ],
+  "protection_epochs": 14,
+  "scheduler_baseline_epoch": 15,
+  "patience": 3,
+  "minimum_meaningful_absolute": 1e-05,
+  "minimum_meaningful_relative": 0.001,
+  "best_minimum_absolute_improvement": 1e-05,
+  "minimum_lowest_lr_complete_epochs": 2,
+  "optimizer": "AdamW weight_decay0.0003, global gradient clip1; per-module joint proposed-update bound0.005",
+  "loss": "ten existing terms, fixed E90/E94 F coefficients, shared soft denominator unchanged; explicit vector in loss_config.py",
+  "selection": "same fixed per-case total for backward/train500/dev500; best, LR and early stop use dev500 arithmetic mean per current protocol; train plateau reported independently, dev early-stop is not proof of train convergence",
+  "engine": "CPU verified read-only cache, pinned batches, FP32 CUDA graph for model/loss/backward/clip and update projection, AdamW outside graph",
+  "network_ports": "per-module total weight and weighted centroid only; full port edges used only in loss",
+  "stop": "STOP file or SIGINT: finish accepted update, save exact latest and exit; no next phase; budget exhaustion distinct from convergence",
+  "preflight_train_indices": [
+    1683,
+    10027,
+    5474,
+    10140,
+    15001
+  ],
+  "numerical_guards": "nonfinite, per-case loss>=1000, mean loss>=1000 or unclipped gradient norm>=10000 rejected before Adam; no skip or retry",
+  "test_read": false,
+  "postprocessing_calls": 0,
+  "future_weight_learning": "prepared separately; old stopped run remains stopped; no automatic transition",
+  "augmentation": {
+    "axis_swap_probability": 0.5,
+    "seed_rule": "SeedSequence([20261104,seed,epoch]); member-index flags; independent sampling and Dropout streams",
+    "monitoring": "unaugmented original train500/dev500, eval mode; same fixed per-case Loss"
+  },
+  "revision": "E111.progressive.v1",
+  "numerical_path": "new registered Dropout and exact axis-swap objectives inside existing FP32 backward CUDA graph, original AdamW and update projection",
+  "source_copies": {
+    "features.py": {
+      "source": "experiments/E98_loss_weight_learning/features.py",
+      "sha256": "e8b70ccebe18486922e60bfc7e79875c3f5ad43f45e46c1e712325a73aff1a73"
+    },
+    "batches.py": {
+      "source": "experiments/E98_loss_weight_learning/batches.py",
+      "sha256": "72022c0c00fed37ea7395c1873f8ef9e4b6e0c3735c34629d55709e118e84c92"
+    },
+    "data.py": {
+      "source": "experiments/E98_loss_weight_learning/data.py",
+      "sha256": "1e43fe61a6d4dde4007295f817db927d75cd61439239423621ef65bf826e0d66"
+    },
+    "dataset_view.py": {
+      "source": "experiments/E98_loss_weight_learning/dataset_view.py",
+      "sha256": "4f0bcb1e15171d57ed1d0198560744a1ca2fd14b9bed46deac9def45d46752ee"
+    },
+    "ports.py": {
+      "source": "experiments/E98_loss_weight_learning/ports.py",
+      "sha256": "431b54476e7de8a94c12cf935a30a3b49b911e208305fbe6bb7b23d72e37dbef"
+    },
+    "resident.py": {
+      "source": "experiments/E98_loss_weight_learning/resident.py",
+      "sha256": "a70da9f834fd05091ab011459e34fcff214bd41cb753f98ee9c088975c0a3c81"
+    },
+    "simple_loss.py": {
+      "source": "experiments/E98_loss_weight_learning/simple_loss.py",
+      "sha256": "e96cc9272aa1e3b13a6f93b3674674df280e709c4ecde7098ad0dc1b73b8bfd3"
+    },
+    "group_tree.py": {
+      "source": "experiments/E98_loss_weight_learning/group_tree.py",
+      "sha256": "867ca3b84848ae78da25dd2a2db16018d722102c7bb5a34644492451efef65fd"
+    },
+    "schedule.py": {
+      "source": "experiments/E98_loss_weight_learning/schedule.py",
+      "sha256": "4b784b3d501dcc7d84b1b4a77f5e40809b89293ceb1c455814cc9c9e251c62e8"
+    },
+    "captured_projection.py": {
+      "source": "experiments/E98_loss_weight_learning/captured_projection.py",
+      "sha256": "dd031332127edd706c0e09f49a07f5e6133f5a9cd0f7fcd69d2246644cbb74c9"
+    },
+    "step_control.py": {
+      "source": "experiments/E98_loss_weight_learning/step_control.py",
+      "sha256": "795ddb45dd257e123f1880eea28b58502711807ee643bfcb51a7e72d484952da"
+    },
+    "loss.py": {
+      "source": "experiments/E98_loss_weight_learning/loss.py",
+      "sha256": "45e9c4d5c7a57e583302355d215e8b3c1eaaaa53733792f91059fc8a7f1ec400"
+    },
+    "loss_config.py": {
+      "source": "experiments/E98_loss_weight_learning/loss_config.py",
+      "sha256": "f3e0a1219b87262a6ea9c9a6a9af5aee31eed4fd6c878ecfb5170f061f0349e1"
+    },
+    "model.py": {
+      "source": "experiments/E98_loss_weight_learning/generalization_baseline/model.py",
+      "sha256": "f530ecb88ce14df5985f20f8150bc60d74e8f4533e8ec79f2e9a8842e0c9d93b"
+    },
+    "cuda_step.py": {
+      "source": "experiments/E98_loss_weight_learning/generalization_baseline/cuda_step.py",
+      "sha256": "bb1c2aa301e1929594e2e7cd0d83316cd212bc13380cb3be89464f8ce1331665"
+    },
+    "augmentation.py": {
+      "source": "experiments/E98_loss_weight_learning/generalization_baseline/augmentation.py",
+      "sha256": "32e2601a2071e47e7dd344148d146c7ee16040804efedfa2bd341d14863908e3"
+    },
+    "train.py": {
+      "source": "experiments/E98_loss_weight_learning/generalization_baseline/train.py",
+      "sha256": "c717027b5289bd625586c4e4cdbdf9c3d74b9a9face055b0c895de0080e33270"
+    },
+    "cache.py": {
+      "adapter_copy": "experiments/E109_deep_supervision_shared/cache.py",
+      "note": "Independent local copy; no private cross-experiment imports"
+    },
+    "v6_registry.py": {
+      "adapter_copy": "experiments/E109_deep_supervision_shared/v6_registry.py",
+      "note": "Independent local copy; no private cross-experiment imports"
+    },
+    "io.py": {
+      "adapter_copy": "experiments/E109_deep_supervision_shared/io.py",
+      "note": "Independent local copy; no private cross-experiment imports"
+    },
+    "__init__.py": {
+      "adapter_copy": "experiments/E109_deep_supervision_shared/__init__.py",
+      "note": "Independent local copy; no private cross-experiment imports"
+    }
+  },
+  "stages": [
+    4,
+    8,
+    12
+  ],
+  "supervision": "original ten-term Loss on current terminal readout only; no layerwise supervision",
+  "handoff": "Previous stage own-dev-Loss best model and complete associated Adam/RNG; Adam state for frozen parameters retained; new-layer Adam starts on first use; LR/scheduler/epoch cursor reset as a new objective stage; charge all actual previous time, not just best time",
+  "frozen_definition": "Old block/input/state-embedding weights frozen after stage1. Shared head stays trainable and changes old feedback, so prior intermediate outputs are not functionally frozen. Keep historical Dropout in all active blocks.",
+  "inactive_layers": "All 12 initialized at seed0 in original constructor order from the start; inactive suffix not forwarded or trained",
+  "scope_exception": "Historical E98 MIB, original16k and fixed/preplaced channel behavior retained solely for requested controlled comparison; new40k held unused",
+  "evaluation": "After all A/B/C training, fixed original dev_monitor500 with E98.depth_budget.v1; original baseline result reused",
+  "queue": "E109 A -> E110 B -> E111 depth4/8/12 -> frozen own-best dev500 each, exactly once",
+  "evaluation_authorization": "User explicitly requested fixed500 verification after the three trained models complete; original dev_monitor500, identical E98.depth_budget.v1 postprocessing and historical scoring retained",
+  "budget_interpretation": "Same original wall-clock and epoch limits; extra losses may reduce accepted updates under the wall limit. Report real steps/epochs/time, do not claim equal training work."
+}

@@ -1,0 +1,85 @@
+{
+  "modes": {
+    "original": {
+      "kind": "none",
+      "targets": [],
+      "mean_final_loss": 0.3343625856339931,
+      "prefix_bitwise_unchanged": true
+    },
+    "skip45": {
+      "kind": "skip",
+      "targets": [
+        4,
+        5
+      ],
+      "mean_final_loss": 0.37946111288666723,
+      "prefix_bitwise_unchanged": true
+    },
+    "skip78": {
+      "kind": "skip",
+      "targets": [
+        7,
+        8
+      ],
+      "mean_final_loss": 0.3891027812808752,
+      "prefix_bitwise_unchanged": true
+    },
+    "skip1011": {
+      "kind": "skip",
+      "targets": [
+        10,
+        11
+      ],
+      "mean_final_loss": 0.3772535861134529,
+      "prefix_bitwise_unchanged": true
+    },
+    "hold45": {
+      "kind": "hold",
+      "targets": [
+        4,
+        5
+      ],
+      "mean_final_loss": 0.3527215125411749,
+      "prefix_bitwise_unchanged": true
+    },
+    "hold78": {
+      "kind": "hold",
+      "targets": [
+        7,
+        8
+      ],
+      "mean_final_loss": 0.35138626158237457,
+      "prefix_bitwise_unchanged": true
+    },
+    "hold1011": {
+      "kind": "hold",
+      "targets": [
+        10,
+        11
+      ],
+      "mean_final_loss": 0.37543992790579794,
+      "prefix_bitwise_unchanged": true
+    },
+    "hold_all": {
+      "kind": "hold",
+      "targets": [
+        4,
+        5,
+        7,
+        8,
+        10,
+        11
+      ],
+      "mean_final_loss": 0.428021812081337,
+      "prefix_bitwise_unchanged": true
+    }
+  },
+  "seconds": 99.2234372999992,
+  "weights_unchanged": true,
+  "original_all_states_and_supervised_losses_bitwise_equal": true,
+  "source_sha256": "796d91f19b2734a73e1aa29f685e87c96356f1c09c6a1ac250d51c5bf85c40e0",
+  "training": false,
+  "postprocessing_calls": 0,
+  "Q_calls": 0,
+  "test_read": false
+}

@@ -1,0 +1,214 @@
+{
+  "status": "preparing",
+  "formal_training_started": false,
+  "dev_payloads": 0,
+  "test_payloads": 0,
+  "postprocessing_calls": 0,
+  "arms": [
+    {
+      "arm": "e119_blockage",
+      "objective": {
+        "original_components_exact": true,
+        "aggregate_exact": true,
+        "layer_gradient_scope": true,
+        "overlap_scope": true,
+        "original_GB_not_multiplied": true,
+        "common_final_preserved": true
+      },
+      "initial_state_sha256": "6aeb57e4bed2e093d537eb31a96f5faa350662d1398a505bedf5043a7906e88a",
+      "batch64": true,
+      "tail32": true,
+      "capture_no_updates": true,
+      "checkpoint_tail_replay_exact": true,
+      "main_graph_after_tail": true,
+      "disposable_updates_executed": 4,
+      "capture_seconds": 5.697753000000375,
+      "first_step_seconds": 0.6606003000051714,
+      "peak_allocated_bytes": 5673793536,
+      "peak_reserved_bytes": 8914993152,
+      "loss": 23.263675689697266,
+      "gradient_norm": 484.9850769042969,
+      "weights": {
+        "3": 0.06666666666666667,
+        "6": 0.06666666666666667,
+        "9": 0.06666666666666667,
+        "12": 0.8
+      }
+    },
+    {
+      "arm": "e119_layerwise",
+      "objective": {
+        "original_components_exact": true,
+        "aggregate_exact": true,
+        "layer_gradient_scope": true,
+        "overlap_scope": true,
+        "original_GB_not_multiplied": true,
+        "common_final_preserved": true
+      },
+      "initial_state_sha256": "6aeb57e4bed2e093d537eb31a96f5faa350662d1398a505bedf5043a7906e88a",
+      "batch64": true,
+      "tail32": true,
+      "capture_no_updates": true,
+      "checkpoint_tail_replay_exact": true,
+      "main_graph_after_tail": true,
+      "disposable_updates_executed": 4,
+      "capture_seconds": 8.4174076999916,
+      "first_step_seconds": 0.7490221000043675,
+      "peak_allocated_bytes": 6164468224,
+      "peak_reserved_bytes": 10051649536,
+      "loss": 19.11264419555664,
+      "gradient_norm": 235.8723907470703,
+      "weights": {
+        "1": 0.018181818181818184,
+        "2": 0.018181818181818184,
+        "3": 0.018181818181818184,
+        "4": 0.018181818181818184,
+        "5": 0.018181818181818184,
+        "6": 0.018181818181818184,
+        "7": 0.018181818181818184,
+        "8": 0.018181818181818184,
+        "9": 0.018181818181818184,
+        "10": 0.018181818181818184,
+        "11": 0.018181818181818184,
+        "12": 0.8
+      }
+    },
+    {
+      "arm": "e119_combined",
+      "objective": {
+        "original_components_exact": true,
+        "aggregate_exact": true,
+        "layer_gradient_scope": true,
+        "overlap_scope": true,
+        "original_GB_not_multiplied": true,
+        "common_final_preserved": true
+      },
+      "initial_state_sha256": "6aeb57e4bed2e093d537eb31a96f5faa350662d1398a505bedf5043a7906e88a",
+      "batch64": true,
+      "tail32": true,
+      "capture_no_updates": true,
+      "checkpoint_tail_replay_exact": true,
+      "main_graph_after_tail": true,
+      "disposable_updates_executed": 4,
+      "capture_seconds": 11.85285880000447,
+      "first_step_seconds": 1.2272591999935685,
+      "peak_allocated_bytes": 8988336128,
+      "peak_reserved_bytes": 14724104192,
+      "loss": 23.008441925048828,
+      "gradient_norm": 497.4588928222656,
+      "weights": {
+        "1": 0.018181818181818184,
+        "2": 0.018181818181818184,
+        "3": 0.018181818181818184,
+        "4": 0.018181818181818184,
+        "5": 0.018181818181818184,
+        "6": 0.018181818181818184,
+        "7": 0.018181818181818184,
+        "8": 0.018181818181818184,
+        "9": 0.018181818181818184,
+        "10": 0.018181818181818184,
+        "11": 0.018181818181818184,
+        "12": 0.8
+      }
+    }
+  ],
+  "synthetic": {
+    "clear_zero": true,
+    "blocked_positive": true,
+    "all_four_boundary_directions": true,
+    "existing_overlap_not_counted_as_path": true,
+    "contact_zero": true,
+    "group_relay_excluded": true,
+    "finite_difference": true,
+    "translation_scale_axis_invariance": true,
+    "reverse_direction": true
+  },
+  "cache": {
+    "train": 36000,
+    "dev_monitor500": 500
+  },
+  "inherited_controller": {
+    "parent_preflight_sha256": "3e15bd4a703a002e09ffbcf9e21cc7987a195c4c9607f55c376199d78f013574",
+    "previous_signal_and_evaluation_prefix_checks": {
+      "mode": "Inherited E139/E134 continuation proof with source identity/report substitutions and registered early G/B multipliers only",
+      "parent_preflight_sha256": "2bc54c7c241b63b75f9665fda57c0597536c77c063c648d36cfe569925249cf2",
+      "checked_files": [
+        "__init__.py",
+        "augmentation.py",
+        "batches.py",
+        "captured_projection.py",
+        "cuda_step.py",
+        "data.py",
+        "features.py",
+        "group_tree.py",
+        "ports.py",
+        "resident.py",
+        "schedule.py",
+        "simple_loss.py",
+        "step_control.py",
+        "original_model.py",
+        "e119_model.py",
+        "model.py",
+        "io.py",
+        "train.py",
+        "run_queue.py",
+        "loss.py",
+        "evaluation/run.py",
+        "evaluation/solver.py",
+        "evaluation/__init__.py",
+        "evaluation/repair/canonical.py",
+        "evaluation/repair/canonical_native.py",
+        "evaluation/repair/canonical_py.py",
+        "evaluation/repair/certify_polish.py",
+        "evaluation/repair/fast_geometry.py",
+        "evaluation/repair/legal_seed.py",
+        "evaluation/repair/projection.py",
+        "evaluation/repair/solver.py",
+        "evaluation/repair/__init__.py",
+        "evaluation/repair/backend/conic_geometry.py",
+        "evaluation/repair/backend/guard.py",
+        "evaluation/repair/backend/observe.py",
+        "evaluation/repair/backend/reduction.py",
+        "evaluation/repair/backend/rescue.py",
+        "evaluation/repair/backend/__init__.py",
+        "evaluation/repair/backend/frozen/canonical_geometry.py",
+        "evaluation/repair/backend/frozen/feasible.py",
+        "evaluation/repair/backend/frozen/global_refine.py",
+        "evaluation/repair/backend/frozen/packing.py",
+        "evaluation/repair/backend/frozen/postprocess.py",
+        "evaluation/repair/backend/frozen/shape_lp.py",
+        "evaluation/repair/backend/frozen/solver.py",
+        "evaluation/repair/backend/frozen/topology_mip.py",
+        "evaluation/repair/backend/frozen/__init__.py",
+        "evaluation/budget.json"
+      ],
+      "training_resume_verified": true,
+      "queue_resume_verified": true,
+      "evaluation_prefix_verified": true,
+      "new_interruption_simulations": 0
+    },
+    "new_signal_simulations": 0
+  },
+  "members": [
+    [
+      "worker_31/layouts_3136.th",
+      43
+    ],
+    [
+      "worker_60/layouts_9184.th",
+      21
+    ],
+    [
+      "worker_85/layouts_6160.th",
+      10
+    ],
+    [
+      "worker_43/layouts_6496.th",
+      1
+    ],
+    [
+      "worker_24/layouts_9072.th",
+      53
+    ]
+  ]
+}

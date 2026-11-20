@@ -1,0 +1,48 @@
+{
+  "authorization": "User requested correlation between quality at L4 after two S0 calls and final output Loss on same500; no Q analysis",
+  "checkpoint_sha256": "20d2e619a985067bd7fb279c350edeef7881b715bed7cb28a1889adcd05d4dfd",
+  "best_epoch": 46,
+  "source_records": {
+    "stage_cases": {
+      "path": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E148_shared_functional_shape\\runs\\e148_shared_functional_shape_seed0\\insert_s0_s1_dev500_v1\\per_case.json",
+      "sha256": "2d4c60db4f8848476c9214cefb82e07e8a142a775a3dc9d4fb68f42a0697daaa"
+    },
+    "stage_result": {
+      "path": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E148_shared_functional_shape\\runs\\e148_shared_functional_shape_seed0\\insert_s0_s1_dev500_v1\\results.json",
+      "sha256": "0a0b50a6280cff7078e49d100fbbc92890f71f7e675389b77d0178fbc3e4ed7b"
+    },
+    "extended_cases": {
+      "path": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E148_shared_functional_shape\\runs\\e148_shared_functional_shape_seed0\\add_s1_s2_dev500_v1\\per_case.json",
+      "sha256": "33e280f7d293411b37b950fa08846738919d16d57b69ff9835301696f3242473"
+    },
+    "extended_result": {
+      "path": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E148_shared_functional_shape\\runs\\e148_shared_functional_shape_seed0\\add_s1_s2_dev500_v1\\results.json",
+      "sha256": "0ca8b1fe2c9d7805bec34493b7de9dfa2b3cd31798f81f863bb3ff2bd92df66a"
+    },
+    "frozen": {
+      "path": "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E148_shared_functional_shape\\evaluation\\frozen_e148_shared_functional_shape.json",
+      "sha256": "be601f069ce1713305fc80c7520393e45622b8303b25002838b02b81f048ed62"
+    }
+  },
+  "primary": "Original12-layer L12 full Loss vs original L4; secondary current extended16-layer final Loss",
+  "L4_measures": [
+    "complete full Loss",
+    "registered stage objective excluding direct overlap"
+  ],
+  "correlation": [
+    "Pearson linear association",
+    "Spearman rank association"
+  ],
+  "uncertainty": {
+    "method": "Source-shard cluster percentile bootstrap, resample299 shards with replacement retaining all their cases",
+    "replicates": 2000,
+    "seed": 20261117
+  },
+  "tails": "Top50 and top100 highest losses; stable ordering by original case index for exact ties",
+  "inference_calls": 0,
+  "training_updates": 0,
+  "postprocessing_calls": 0,
+  "Q_calls": 0,
+  "test_read": false,
+  "diagnostic_source_sha256": "537b8c0c3c3832a10e97f95c2fed0e8e9e347945e8865e7d0f81c4daf84f8d80"
+}

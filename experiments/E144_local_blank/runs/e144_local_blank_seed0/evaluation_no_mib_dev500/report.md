@@ -1,0 +1,35 @@
+# E144 e144_local_blank 原固定dev500
+
+```json
+{
+  "status": "complete",
+  "arm": "e144_local_blank",
+  "count": 500,
+  "checkpoint_sha256": "0e7209200dccb686b904117dff485e9be58779651fb95e0988a7b09df8f5697d",
+  "best_epoch": 63,
+  "parameters": 894867,
+  "weighted_Q": 1.035953582307334,
+  "mean_Q": 1.0205869720653757,
+  "mixed_Q": 1.0282702771863548,
+  "hard_legal": 500,
+  "raw_hard_legal": 0,
+  "fallbacks": 0,
+  "mean_complete_seconds": 0.1985240865990054,
+  "p95_complete_seconds": 0.4353389799784053,
+  "max_complete_seconds": 1.5364371000032406,
+  "over250ms": 123,
+  "max_Q": 3.1603650471185643,
+  "p95_Q": 1.0908292963274,
+  "raw_repeated_coverage": 0.04044592406744269,
+  "raw_bbox_over_area": 1.0213570078375174,
+  "common_final_dev_loss": 0.3038970050811768,
+  "common_final_new_dev_loss": 0.3065609202980995,
+  "own_selection_loss": 0.31691062153875826,
+  "training_seconds": 14169.228320399998,
+  "training_epochs": 63,
+  "scoring_policy": "Original areas/no MIB local research Q; neutral runtime1; not official contest score",
+  "elapsed_seconds": 211.4456377000024,
+  "test_read": false,
+  "selection_frozen_before_Q": true
+}
+```

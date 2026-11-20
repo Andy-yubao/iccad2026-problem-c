@@ -1,0 +1,23 @@
+{
+  "scope": "E116.first_draft_comparison.seed0",
+  "preparation_enabled": true,
+  "training_enabled": true,
+  "actual_updates_authorized": true,
+  "allowed_arms": [
+    "original4",
+    "new_first"
+  ],
+  "prepared_arms": [
+    "original4",
+    "new_first"
+  ],
+  "user_instruction": "好的。后台启动训练",
+  "automatic_queue": true,
+  "test_read": false,
+  "q_evaluation": false,
+  "postprocessing": false,
+  "limits": "Exactly two scratch seed0 arms original4 then new_first; fixed16k; per arm4h/200epochs; original model/Loss/FP32/batch32/guards unchanged; error/user stop prevents advancement; no Q/test/postprocessing",
+  "authorized_at": "2026-11-08T12:49:58.273512+00:00",
+  "previous_preparation_instruction_preserved": "launch_registration_20261108/prepared_authorization.json",
+  "queue_module": "experiments.E116_first_draft_comparison.launch_registration_20261108.run_queue"
+}

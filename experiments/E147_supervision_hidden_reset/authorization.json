@@ -1,0 +1,17 @@
+{
+  "scope": "E147.supervision_hidden_reset.v1.seed0",
+  "training_enabled": true,
+  "allowed_arms": [
+    "e147_supervision_hidden_reset"
+  ],
+  "prepared_arms": [
+    "e147_supervision_hidden_reset"
+  ],
+  "automatic_evaluation": true,
+  "automatic_retry": false,
+  "test_read": false,
+  "note": "2026-11-17 user confirmed only S2->S3, S6->S7, S8->S9, S10->S11 reset hidden transmission, other layers retain it; prepare and launch in background. Same E142 settings and automatic original dev500.",
+  "activated_at": "2026-11-17T02:04:18.331763+00:00",
+  "preflight_sha256": "f35ffb61b97262ae544790dac795a59120e678d6047a1880d11a1c0eccf418c9",
+  "activation": "Explicit user invocation of run_queue --start"
+}

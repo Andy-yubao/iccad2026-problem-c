@@ -1,0 +1,29 @@
+{
+  "checkpoint_sha256": "1f69a681713255a7adfca09357d70065ad7dff4d62f1a6294a7c233e30ad1df1",
+  "kept_readouts": [
+    0,
+    1,
+    2,
+    3,
+    6,
+    9,
+    12
+  ],
+  "skipped_blocks": [
+    4,
+    5,
+    7,
+    8,
+    10,
+    11
+  ],
+  "panel": "same dev_monitor500",
+  "semantics": "Keep input/global frontend and shared heads. Execute original blocks 1,2,3,6,9,12 sequentially; recompute state embedding and geometry feedback from the previous retained output. No original hidden/state bypass.",
+  "loss": "Original complete public-priority-v1, per-case equal means; original supervision weights on S3/S6/S9/S12 also reported.",
+  "training": false,
+  "optimizer": false,
+  "postprocessing_calls": 0,
+  "Q_calls": 0,
+  "test_read": false,
+  "source_sha256": "8b713c4f102b262258813670c4f99c0648525c0792cf734b1046becc7ebd16f9"
+}

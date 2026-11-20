@@ -1,0 +1,18 @@
+{
+  "execution_session": 2160,
+  "queue_pid": 34828,
+  "training_pid": 45312,
+  "active": "e157_s1",
+  "order": [
+    "S1 train",
+    "freeze own best S1",
+    "S2 train with frozen S1",
+    "freeze own best S2",
+    "fixed dev500 full-MIB evaluation"
+  ],
+  "per_stage_max_seconds": 14400,
+  "per_stage_max_epochs": 200,
+  "log": "experiments/E157_sequential_s1_s2/background/queue.stdout.log",
+  "verified_loaded": 24098,
+  "verified_step": 0
+}

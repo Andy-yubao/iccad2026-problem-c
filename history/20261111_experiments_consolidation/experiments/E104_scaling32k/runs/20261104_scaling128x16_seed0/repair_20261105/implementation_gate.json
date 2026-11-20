@@ -1,0 +1,58 @@
+{
+  "status": "passed",
+  "syntax_checked": true,
+  "changed_sources": {
+    "experiments/E104_scaling32k/cuda_step.py": {
+      "before": "cd5eddd01dc44b33da1c57c13261b27e1f7ef232b81c425e57080501a25ce7f1",
+      "after": "6d19850ef0d42c50f18d2e2ffd4ea22b37e8cb3bec9ce3d9f4a1a1a9ec960611"
+    },
+    "experiments/E104_scaling32k/evaluate.py": {
+      "before": "cf94b174c7b2f0b40096d9926d9dcb12e73c4d644d2685a429d7adcb71309ef2",
+      "after": "7ac037df8ee3beb32cc5eb35fce7d9eff13f6fa9b44b79a9eadcd357f0768710"
+    },
+    "experiments/E104_scaling32k/model.py": {
+      "before": "f530ecb88ce14df5985f20f8150bc60d74e8f4533e8ec79f2e9a8842e0c9d93b",
+      "after": "c3b015b5a022d2e7f130ae4be0f010b5c3af20e7e09b693e9937a60f98bb4ab7"
+    },
+    "experiments/E104_scaling32k/plan.json": {
+      "before": "20a58e086558c67e6b425dd8a5d1816e467cc37288bc5a021bf671357a0881cd",
+      "after": "f9d71fcc7beea7f1015f77c6580f0bf1373efba0e4a910372051dba54a98fb8a"
+    },
+    "experiments/E104_scaling32k/README.md": {
+      "before": "b78e3235ebaf347c8c775153dee4c002137dd4909abc2fabf447b2261a723ccf",
+      "after": "a7f5ec5806232d99603daad82591ec6d405dd29f7f71059aca2a3e863c6f60c1"
+    },
+    "experiments/E104_scaling32k/train.py": {
+      "before": "5476ba2ed4319d3d4929a3b6ca45694bc19c05b61662ce875f5f5c942acdfdbb",
+      "after": "212d1cfe493fbf7ffbee6c85aeadc24cb0f934fa7cd1e9443ae764278b5d92f1"
+    }
+  },
+  "shortcheck": {
+    "status": "passed",
+    "model_config": {
+      "width": 128,
+      "layers": 16,
+      "rectangle": true,
+      "ffn_dropout": 0.1,
+      "residual_dropout": 0.05,
+      "normalize_local": true
+    },
+    "model_source_sha256": "c3b015b5a022d2e7f130ae4be0f010b5c3af20e7e09b693e9937a60f98bb4ab7",
+    "failure_batch_replayed_without_skipping": true,
+    "diagnostic_exception_to_five_case_limit": "exact saved failing batch32 required to preserve batch-shaped Dropout path; no new cases or panels",
+    "unique_failure_batch_members": 32,
+    "actual_updates": 1,
+    "discarded_diagnostic_update": true,
+    "parameters": 3463747,
+    "loss": 1.1801419258117676,
+    "max_case": 2.902172327041626,
+    "gradient_norm": 11.771533966064453,
+    "output_max": 1.83030366897583,
+    "all_parameters_finite": true,
+    "guard_thresholds_unchanged": true,
+    "test_read": false,
+    "offender_eval_loss_after_diagnostic_update": 0.9477959871292114
+  },
+  "thresholds_unchanged": true,
+  "test_read": false
+}

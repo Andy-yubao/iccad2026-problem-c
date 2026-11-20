@@ -1,0 +1,49 @@
+{
+  "status": "failed",
+  "formal_training_started": false,
+  "unique_training_cases": 5,
+  "dev_payloads": 0,
+  "test_payloads": 0,
+  "postprocessing_calls": 0,
+  "Q_calls": 0,
+  "cache": {
+    "train": {
+      "members": 36000,
+      "chunks": 141,
+      "metadata_only": true
+    },
+    "dev_monitor500": {
+      "members": 500,
+      "chunks": 8,
+      "metadata_only": true
+    }
+  },
+  "strong_order": {
+    "wrong_order_has_restoring_gradient": true,
+    "loss": 2.200000047683716
+  },
+  "members": [
+    [
+      "worker_31/layouts_3136.th",
+      43
+    ],
+    [
+      "worker_60/layouts_9184.th",
+      21
+    ],
+    [
+      "worker_85/layouts_6160.th",
+      10
+    ],
+    [
+      "worker_43/layouts_6496.th",
+      1
+    ],
+    [
+      "worker_24/layouts_9072.th",
+      53
+    ]
+  ],
+  "error": "RuntimeError('CUDA error: operation failed due to a previous error during capture\\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\\n')",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E138_topology_rewrite\\cuda_step.py\", line 29, in __init__\n    self.per_layout,output=objective_forward(model,augmented,phase)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E138_topology_rewrite\\loss.py\", line 129, in objective_forward\n    damaged=model(inputs_only(batch),corrupt=True)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1751, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1762, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E138_topology_rewrite\\e119_model.py\", line 85, in forward\n    pattern=self.corruption_pattern(g) if corrupt else None\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E138_topology_rewrite\\e119_model.py\", line 70, in corruption_pattern\n    rank=torch.empty_like(order).scatter(1,order,index)\nRuntimeError: CUDA error: operation not permitted when stream is capturing\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E138_topology_rewrite\\preflight.py\", line 101, in main\n    cap=CapturedStep(model,optimizer,batch,arm)\n  File \"E:\\project\\ICCAD\\2026\\problemC\\experiments\\E138_topology_rewrite\\cuda_step.py\", line 26, in __init__\n    with torch.cuda.graph(self.graph,stream=stream):\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\site-packages\\torch\\cuda\\graphs.py\", line 186, in __exit__\n    self.cuda_graph.capture_end()\n  File \"E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\lib\\site-packages\\torch\\cuda\\graphs.py\", line 84, in capture_end\n    super().capture_end()\nRuntimeError: CUDA error: operation failed due to a previous error during capture\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n\n"
+}

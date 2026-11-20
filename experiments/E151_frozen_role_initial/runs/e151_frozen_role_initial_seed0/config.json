@@ -1,0 +1,241 @@
+{
+  "identity": {
+    "revision": "E151.frozen_role_initial.v1.seed0",
+    "arm": "e151_frozen_role_initial",
+    "plan": {
+      "experiment": "E151 frozen E149 best52 L0 with freshly trained E148-style backend",
+      "revision": "E151.frozen_role_initial.v1.seed0",
+      "status": "authorized_preparation",
+      "authorization": "2026-11-18 user authorized fixed E149 best52 L0 and training an adapted backend, directly launched after preparation; audit L4 to L8 overlap and stage quality on original dev500.",
+      "architecture": {
+        "e151": "E149 role initial107739 + E148 public encoder101184 + three reusable two-layer units472218, original12 refinements"
+      },
+      "parameters": {
+        "e151": 681141
+      },
+      "trainable_parameters": {
+        "e151": 573402
+      },
+      "seed": 0,
+      "batch_size": 64,
+      "precision": "FP32; deterministic; TF32 disabled",
+      "threads": 4,
+      "train_count": 36000,
+      "train_monitor_count": 500,
+      "dev_monitor_count": 500,
+      "dataset": "random_reference40k.v1; original public areas; test sealed",
+      "data_migration": "Same original 36k, fixed train500/dev500 and cache as E148/E150 for this paired stage study.",
+      "no_mib": true,
+      "predict_all_modules": true,
+      "hard_specification_enforcement": "postprocessing only",
+      "initialization": "L0 loaded from pinned E149 best52; frozen eval. Public encoder and S0/S1/S2 scratch seed0, fresh AdamW for trainable backend only; disposable preflight discarded.",
+      "optimizer": "AdamW weight_decay.0003, global gradient clip1, joint per-module relative update bound.005",
+      "lr_levels": [
+        0.001,
+        0.00025,
+        0.0001,
+        5e-05
+      ],
+      "protection_epochs": 14,
+      "scheduler_baseline_epoch": 15,
+      "patience": 3,
+      "minimum_meaningful_absolute": 1e-05,
+      "minimum_meaningful_relative": 0.001,
+      "best_minimum_absolute_improvement": 1e-05,
+      "minimum_lowest_lr_complete_epochs": 2,
+      "maximum_seconds": 14400,
+      "maximum_epochs": 200,
+      "budget": "One whole joint candidate4h/200epoch, batch64/tail32, original FP32/Adam/guards/schedule",
+      "selection": "Each fixed own-Loss dev500 arithmetic mean for best/LR/earlystop; no Q selection",
+      "resume": "Pause at accepted training update, restore model/Adam/RNG/permutation/cursor/seen/LR/early stop/projection and cumulative budget. If paused in terminal audit, restart audit only.",
+      "numerical_guards": "Nonfinite or case/mean Loss>=1000 or unclipped grad norm>=10000: reject before Adam; no skip/retry",
+      "augmentation": "P=.5 axis swap; flags indexed by seed/epoch/member, independent of dropout",
+      "engine": "E141 deterministic FP32 CUDA graph64 plus eager final32; original AdamW/projection/guards",
+      "stop": "Experiment STOP, per-run STOP, SIGINT; save accepted cursor and exit, no next arm",
+      "preflight_train_indices": [
+        10841,
+        12651,
+        6417,
+        4280,
+        17946
+      ],
+      "preflight": "Frozen checkpoint/hash/parameter/eval invariance, exact E148 objective, 13 real readouts, layout-path gradients, label isolation, CUDA64/tail32, serialized next update equivalence.",
+      "comparison": "Historical paired E148/E150 results are descriptive; initialization and auxiliary weighting differ. Diagnose whether L4 advantage is retained at L8 and measure within-case collision reduction.",
+      "reporting": "Same L4/L8/L12 weighted objective for monitoring and selection. After freeze, original dev500 paired stage audit and complete Loss components.",
+      "terminal_evaluation": "Read-only dev500 audit, compare stage Loss and L4-to-L8 weighted overlap reduction on matching cases against archived E148/E150; report G/B and public F/P errors. No postprocessing/Q/test.",
+      "historical_standards": "E74/E105/A numbers are historical context until matched new task evaluation",
+      "test_read": false,
+      "postprocessing_calls": 0,
+      "automatic_queue": true,
+      "dataset_report_sha256": "3a79fd9eb2636578fa4df876ccac51699eab04cd59179027488aa7d8c334928a",
+      "payload_checksums_sha256": "f8eeb86da003c9901b73541eb13cc8e16cad9cd963dcf74a0edddf4a1a5abe54",
+      "queue": "Train one backend -> freeze own-Loss best -> original dev500 stage Loss and geometry-component audit",
+      "cache_build_workers": 4,
+      "required_cache_key": "a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148",
+      "cache_policy": "Reuse original shared CPU cache and complete E149 public-role sidecars; features/batches/ports/role producer byte-identical",
+      "loss": "Use E148 weights .1/.1/.8 and original base coefficients. L4 omits entire direct overlap group; L8/L12 full. L0 excluded from the objective.",
+      "architecture_parent": "Independent E147 numerical engine / E142 pair and node feedback",
+      "new_candidates": 1,
+      "automatic_retry": false,
+      "overlap_omission": "L4 omits the entire direct overlap group; F/P predictions are never masked or overwritten.",
+      "monitor_batch_size": 64,
+      "batch_tail": "562 batches64 plus one32 per full epoch; no dropped or repeated rows",
+      "training_mode": "E149 L0 eval + no-grad throughout. One joint backend optimizer, end-to-end layout gradients across all backend unit boundaries.",
+      "supervision": {
+        "L4": 0.1,
+        "L8": 0.1,
+        "L12": 0.8
+      },
+      "role_features": 16,
+      "port_features": 4,
+      "pair_features": 6,
+      "automatic_evaluation": true,
+      "Q_calls": 0,
+      "no_overlap_layers": [
+        4
+      ],
+      "full_loss_layers": [
+        8,
+        12
+      ],
+      "unit_order": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2
+      ],
+      "initial_readout_in_returned_states": true,
+      "role_cache_root": "experiments/E149_role_initial/role_cache_v1",
+      "role_cache_policy": "Require complete identity-compatible E149 public-role sidecars, no rebuilding or copying payloads",
+      "parent_initial": {
+        "checkpoint": "experiments/E149_role_initial/runs/e149_role_initial_seed0/checkpoints/best.pt",
+        "checkpoint_sha256": "d121e2a6b89dccf469aeae7127bfa6888ec5fcd79590a3c42096b66daaf35132",
+        "best_epoch": 52,
+        "selection": "initial_no_overlap dev500 arithmetic mean",
+        "own_selection_loss": 0.38238882398605345
+      },
+      "baselines": {
+        "E148": {
+          "path": "experiments/E148_shared_functional_shape/runs/e148_shared_functional_shape_seed0/insert_s0_s1_dev500_v1/per_case.json",
+          "sha256": "2d4c60db4f8848476c9214cefb82e07e8a142a775a3dc9d4fb68f42a0697daaa"
+        },
+        "E150": {
+          "path": "experiments/E150_role_joint/runs/e150_role_joint_seed0/visualization_dev500_layer_loss/per_case_loss.json",
+          "sha256": "ae9bbd114312cbe15132430b41a386953639dce8fbb7076150700bd5065cc249"
+        },
+        "E150_columns": {
+          "path": "experiments/E150_role_joint/runs/e150_role_joint_seed0/visualization_dev500_layer_loss/layer_loss_summary.json",
+          "sha256": "22641e21880bbecfb58bc1b74bed71b20b98753c8e5f5936d0857a902d47b980"
+        },
+        "E149_loss": {
+          "path": "experiments/E149_role_initial/loss_results.json",
+          "sha256": "9ae80f3bed1b75d39fcd245f5ca9e97288f3e63476d1f4b04841b691acc55767"
+        }
+      }
+    },
+    "sources": {
+      "datasets/paths.py": "fa3ff385a8a6fe11b4a6113066634be7665981b6f79c00c475bcd5c227c5217b",
+      "datasets/random_reference.py": "a42742bec678b4b7d0f9642541a11d05849cf4b2bd1db1be3e92a03c898fc214",
+      "datasets/static_tensor_cache.py": "3d8ac42ea997fdeefcd13ad8d932644bf550a2e7de1f6360c534801cb656bef9",
+      "experiments/E151_frozen_role_initial/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "experiments/E151_frozen_role_initial/augmentation.py": "0695aa8d81cc21b06e7cc75bac52c5a8030d93b7d8dd8731011ccc7b8ce73cb6",
+      "experiments/E151_frozen_role_initial/base_data.py": "2651d03992b2a06b609d2c79f37f1133bb7e0e19643ad9244a42431d575a9dab",
+      "experiments/E151_frozen_role_initial/base_loss.py": "eb93adbdcfa0e3c4b84ff5bd26c5116c20982a9cda6d78d465a6763dbfc9e030",
+      "experiments/E151_frozen_role_initial/base_resident.py": "f76073f5756a59187ecfc1b90752f4db063e81555bad51835712a731d529cd27",
+      "experiments/E151_frozen_role_initial/batches.py": "7d8aaccb6b27ee4ea261d7a9c9bebfedfe484181ee00e5d7f6ccb27d0639be54",
+      "experiments/E151_frozen_role_initial/captured_projection.py": "7f19baba25bc52a686e08a1af32236bffa8b47300cac96c52914b3b81d88131a",
+      "experiments/E151_frozen_role_initial/cuda_step.py": "154f58f50369c67be98408896812abf854436cb22a962c8182d2355015a91475",
+      "experiments/E151_frozen_role_initial/data.py": "f99d8d980531989f474e17ee275cd827463f0b5d3a6fa645cce4e23dabe4ee00",
+      "experiments/E151_frozen_role_initial/DESIGN.md": "f43d0eb319de8b13b59aa8de7a7eef0bcee4d83fefbedd5d789de36d38d827e7",
+      "experiments/E151_frozen_role_initial/e119_model.py": "437bb5027389269b5ee08cfc98e7e65e8cab2dd2dbf5c3415618ba122f9dc636",
+      "experiments/E151_frozen_role_initial/features.py": "097a04bd1259a76b9fce23e5e533f7a22beece7a2f7af0435c3f560696c32dd1",
+      "experiments/E151_frozen_role_initial/geometry_feedback.py": "8e66a511ce8c4804dbd4ee67f09b84f1b707a7f278f58e1acd07f344adb74f0c",
+      "experiments/E151_frozen_role_initial/group_tree.py": "f5ceff218b44b16f164f71a95ecabde59c6f531ac8ce385d235bbb5d01254964",
+      "experiments/E151_frozen_role_initial/initial_model.py": "593b9772b59c3a89c65f79a0f3559fe8d6a0f44db2b132fbca6442ef8ae59a18",
+      "experiments/E151_frozen_role_initial/initialization.py": "3b8a1a8b19560cda56483960428d907c69a03dcd14e8896b89ee7625426088a7",
+      "experiments/E151_frozen_role_initial/io.py": "fab19924b105060829f5c744c5c4f47aad2ce5fe4265ee1d221d08d162236c3f",
+      "experiments/E151_frozen_role_initial/joint_checks.py": "3a659d8c5c7dbc371dcfd37b1ebf4284a7104b9b78a48359aeb4fb9af31eeb65",
+      "experiments/E151_frozen_role_initial/loss.py": "3e961e1c970ea149e11f59d220e585619d7e909ea41c59957848989008b3de74",
+      "experiments/E151_frozen_role_initial/loss_config.py": "3a0f7bd514b55045e46f973c2f72fdf5f964aab89f7e60533ac247ba29c2d55c",
+      "experiments/E151_frozen_role_initial/model.py": "4ecbc43c1a1b383d0e5b20faccf9cbf538b3779fe1ca1b6a41cd00b457fe664f",
+      "experiments/E151_frozen_role_initial/original_model.py": "0d5f7a0f897653155d5405e07aab9357b46b52bca4ddedd4b2cb11f05151dc82",
+      "experiments/E151_frozen_role_initial/plan.json": "d9f5feba9752189c7d0ecf784e77c01e5f76d19a01c228b8692108e6e981a150",
+      "experiments/E151_frozen_role_initial/ports.py": "431b54476e7de8a94c12cf935a30a3b49b911e208305fbe6bb7b23d72e37dbef",
+      "experiments/E151_frozen_role_initial/preflight.py": "ab859b9b62a486a5419b25ea3fbf02be231d56e636f2ffeb9d42de41ef0cebfa",
+      "experiments/E151_frozen_role_initial/provenance.json": "e64e61eba920704a60f67672135944fb1bbe33fa9e617e0195254a8806d91512",
+      "experiments/E151_frozen_role_initial/public.py": "0ee849ab96ba05d6d1d3e7e55ee3f6a95cd04330aacd40ce5bc8d355bd55b417",
+      "experiments/E151_frozen_role_initial/README.md": "0af1fe18d0cdd1883c7d2f9565a5b9e789be165b37b85d31eee4fad55110b17c",
+      "experiments/E151_frozen_role_initial/refinement.py": "66e900878cbb16d45756603bc437532d619928bd49512c063db7769089aa986b",
+      "experiments/E151_frozen_role_initial/resident.py": "25edb9d8e5c1aa6dd9dd0afabf6de1d21ae20541979d752601079843a1a834d4",
+      "experiments/E151_frozen_role_initial/role_cache.py": "9891d1d1663706fdc2abb6ba8aebc195f7c8889b94f6712eb6e7db8b54c1a423",
+      "experiments/E151_frozen_role_initial/role_features.py": "b119b84ea02f57b010136941f147d517f6b41b8c122f650b68b4df8e6635e6c4",
+      "experiments/E151_frozen_role_initial/run_queue.py": "5c9e62c4ee8771c07370078a8e11b40b1973efcb536a03a0a08362e401cb5882",
+      "experiments/E151_frozen_role_initial/schedule.py": "8d5dfd1a04a0b02965f91ed3be47c94371a28147705f02fa52e144c9d57c597a",
+      "experiments/E151_frozen_role_initial/shape_feedback.py": "2e362a9beeb43b0d7cc2d67bd333646cb84c1f8d4b8aa98c0b07420ecc08e742",
+      "experiments/E151_frozen_role_initial/simple_loss.py": "fcd0827c829ee2466298eb61c1213b1fb12ae7f54afaef0f8e53a86033478238",
+      "experiments/E151_frozen_role_initial/stage_audit.py": "022ae1fd5dd902ca9e528956a34eae297d38acc83722fe6468e5d1cbeea7cc2b",
+      "experiments/E151_frozen_role_initial/step_control.py": "795ddb45dd257e123f1880eea28b58502711807ee643bfcb51a7e72d484952da",
+      "experiments/E151_frozen_role_initial/train.py": "40059c9f7e398417e4d2974ea581651359bbc60f0670dd32c5d7e3eadd42bd0e",
+      "protocol/model_prediction_boundary_v1.json": "d975980890f717590aafb6bceb34aa8052f0d895e8940e41e6a65e9426c9705a",
+      "protocol/paths.json": "11dc5f19c3da22f9d37db341b0606bcc4b514bfe39264fc7ffed27c13b098270",
+      "protocol/random_reference40k_v1.json": "f899e114b91bc05a0688898dd9b6f251acba2c95e35fb5baca8fd5cf17979540",
+      "protocol/research_no_mib_v1.json": "a62e8eb2fcfc629d21f4e7d58f49be29daae07efa5b5bdf93c82dd1b98ed1043"
+    },
+    "loss": {
+      "version": "E151.backend.4_8_12.v1",
+      "arm": "e151_frozen_role_initial",
+      "layer_weights": {
+        "4": 0.1,
+        "8": 0.1,
+        "12": 0.8
+      },
+      "no_overlap_layers": [
+        4
+      ],
+      "full_loss_layers": [
+        8,
+        12
+      ],
+      "coefficients": {
+        "reference_scale": 1.0,
+        "public_shape_weight": 1.0,
+        "public_preplaced_position_weight": 1.0,
+        "grouping_multiplier": 1.0,
+        "boundary_multiplier": 1.0
+      },
+      "A": 0.08975162861857286,
+      "B": 0.3336832108335229,
+      "selection": "Same weighted per-case aggregate for backward/monitor/best/LR/earlystop",
+      "all_modules_predicted": true,
+      "MIB": false,
+      "specification_overwrite": false,
+      "postprocessing": false,
+      "Q": false,
+      "test_read": false
+    },
+    "registry_sha256": "f899e114b91bc05a0688898dd9b6f251acba2c95e35fb5baca8fd5cf17979540",
+    "paths_sha256": "11dc5f19c3da22f9d37db341b0606bcc4b514bfe39264fc7ffed27c13b098270",
+    "torch": "2.7.1+cu128",
+    "cuda": "12.8",
+    "gpu": "NVIDIA GeForce RTX 5080 Laptop GPU",
+    "numpy": "1.26.4"
+  },
+  "argv": [
+    "E:\\project\\ICCAD\\2026\\problemC\\.conda\\envs\\iccad2026\\python.exe",
+    "E:\\project\\ICCAD\\2026\\problemC\\experiments\\E151_frozen_role_initial\\train.py",
+    "--arm",
+    "e151_frozen_role_initial"
+  ],
+  "git_commit": "aed8f260bd9216b6af5a2960daa72738a42cfb4e",
+  "uncommitted_source_snapshot": true,
+  "test_read": false,
+  "parent_checkpoint": {
+    "checkpoint": "experiments/E149_role_initial/runs/e149_role_initial_seed0/checkpoints/best.pt",
+    "checkpoint_sha256": "d121e2a6b89dccf469aeae7127bfa6888ec5fcd79590a3c42096b66daaf35132",
+    "best_epoch": 52,
+    "selection": "initial_no_overlap dev500 arithmetic mean",
+    "own_selection_loss": 0.38238882398605345
+  }
+}

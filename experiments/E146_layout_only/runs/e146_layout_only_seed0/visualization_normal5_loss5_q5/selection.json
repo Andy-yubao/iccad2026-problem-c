@@ -1,0 +1,112 @@
+{
+  "arm": "e146_layout_only",
+  "seed": 20261117,
+  "ordinary": [
+    457,
+    77,
+    13,
+    125,
+    107
+  ],
+  "worst_loss": [
+    293,
+    263,
+    455,
+    129,
+    197
+  ],
+  "worst_Q": [
+    358,
+    481,
+    475,
+    217,
+    174
+  ],
+  "entries": [
+    {
+      "category": "普通例",
+      "rank": 1,
+      "index": 457
+    },
+    {
+      "category": "普通例",
+      "rank": 2,
+      "index": 77
+    },
+    {
+      "category": "普通例",
+      "rank": 3,
+      "index": 13
+    },
+    {
+      "category": "普通例",
+      "rank": 4,
+      "index": 125
+    },
+    {
+      "category": "普通例",
+      "rank": 5,
+      "index": 107
+    },
+    {
+      "category": "Loss最差",
+      "rank": 1,
+      "index": 293
+    },
+    {
+      "category": "Loss最差",
+      "rank": 2,
+      "index": 263
+    },
+    {
+      "category": "Loss最差",
+      "rank": 3,
+      "index": 455
+    },
+    {
+      "category": "Loss最差",
+      "rank": 4,
+      "index": 129
+    },
+    {
+      "category": "Loss最差",
+      "rank": 5,
+      "index": 197
+    },
+    {
+      "category": "Q最差",
+      "rank": 1,
+      "index": 358
+    },
+    {
+      "category": "Q最差",
+      "rank": 2,
+      "index": 481
+    },
+    {
+      "category": "Q最差",
+      "rank": 3,
+      "index": 475
+    },
+    {
+      "category": "Q最差",
+      "rank": 4,
+      "index": 217
+    },
+    {
+      "category": "Q最差",
+      "rank": 5,
+      "index": 174
+    }
+  ],
+  "duplicates_preserved": true,
+  "normal_rule": "Same five cases for all four models; seed20261117; excludes union of four own worst5 Loss/Q sets",
+  "loss_rule": "Saved per-case own aggregate dev Loss at this frozen own-Loss-best; descending, dev index tie-break",
+  "Q_rule": "Saved final postprocessed per-case Q descending, dev index tie-break",
+  "checkpoint_sha256": "886da064523d452534fd3441106f34a1a5f52238f7a60694639dd17ff06ab10c",
+  "best_epoch": 45,
+  "training": false,
+  "postprocessing_calls": 0,
+  "Q_calls": 0,
+  "test_read": false
+}

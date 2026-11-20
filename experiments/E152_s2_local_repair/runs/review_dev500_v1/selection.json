@@ -1,0 +1,85 @@
+{
+  "seed": 20261118,
+  "models": {
+    "e152_s2_ref": {
+      "ordinary": [
+        476,
+        347,
+        438,
+        109,
+        183,
+        39,
+        23,
+        398,
+        9,
+        120,
+        203,
+        168,
+        261,
+        372,
+        224,
+        371,
+        88,
+        116,
+        358,
+        461
+      ],
+      "worst_loss": [
+        293,
+        263,
+        455,
+        475,
+        129
+      ],
+      "worst_Q": [
+        475,
+        43,
+        24,
+        174,
+        334
+      ]
+    },
+    "e152_s2_no_ref": {
+      "ordinary": [
+        476,
+        347,
+        438,
+        109,
+        183,
+        39,
+        23,
+        398,
+        9,
+        120,
+        203,
+        168,
+        261,
+        372,
+        224,
+        371,
+        88,
+        116,
+        358,
+        461
+      ],
+      "worst_loss": [
+        174,
+        154,
+        264,
+        80,
+        90
+      ],
+      "worst_Q": [
+        475,
+        24,
+        60,
+        174,
+        379
+      ]
+    }
+  },
+  "normal_rule": "Same random20 for both models; exclude union of both own worst5 Loss and worst5 Q sets",
+  "loss_rule": "Frozen own-Loss-best saved dev500 per_case_total descending; index tie-break; A/B Loss definitions differ",
+  "Q_rule": "Existing final postprocessed per-case Q descending; index tie-break",
+  "duplicates_preserved_between_extreme_categories": true
+}

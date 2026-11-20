@@ -1,0 +1,35 @@
+# E147 e147_supervision_hidden_reset 原固定dev500
+
+```json
+{
+  "status": "complete",
+  "arm": "e147_supervision_hidden_reset",
+  "count": 500,
+  "checkpoint_sha256": "db80adec8f772d0575082c7c47cbfe4dee55847ca30af561af4cddea5e155bb8",
+  "best_epoch": 46,
+  "parameters": 895123,
+  "weighted_Q": 1.0164968918651045,
+  "mean_Q": 1.0207585573980884,
+  "mixed_Q": 1.0186277246315965,
+  "hard_legal": 500,
+  "raw_hard_legal": 0,
+  "fallbacks": 0,
+  "mean_complete_seconds": 0.19675335300032748,
+  "p95_complete_seconds": 0.4624821600111315,
+  "max_complete_seconds": 1.127565400005551,
+  "over250ms": 129,
+  "max_Q": 1.510709319471611,
+  "p95_Q": 1.0911658967618627,
+  "raw_repeated_coverage": 0.04785338854833819,
+  "raw_bbox_over_area": 1.0278566816057,
+  "common_final_dev_loss": 0.32600735139846804,
+  "common_final_new_dev_loss": 0.32755503396689895,
+  "own_selection_loss": 0.33367720381915567,
+  "training_seconds": 10919.01743909999,
+  "training_epochs": 49,
+  "scoring_policy": "Original areas/no MIB local research Q; neutral runtime1; not official contest score",
+  "elapsed_seconds": 215.194321100018,
+  "test_read": false,
+  "selection_frozen_before_Q": true
+}
+```

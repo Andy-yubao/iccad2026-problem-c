@@ -1,0 +1,52 @@
+{
+  "status": "complete",
+  "pid": 26080,
+  "started_at": "2026-11-10T00:17:40.797380+00:00",
+  "active": null,
+  "completed": [
+    {
+      "experiment": "E122_global2_scaling16",
+      "phase": "train",
+      "completed_at": "2026-11-09T18:25:21.562897+00:00"
+    },
+    {
+      "experiment": "E122_global2_scaling16",
+      "phase": "evaluation",
+      "completed_at": "2026-11-09T18:29:02.505236+00:00"
+    },
+    {
+      "experiment": "E123_node12_scaling16",
+      "phase": "train",
+      "completed_at": "2026-11-09T20:36:11.839147+00:00"
+    },
+    {
+      "experiment": "E123_node12_scaling16",
+      "phase": "evaluation",
+      "completed_at": "2026-11-09T20:40:33.717163+00:00"
+    },
+    {
+      "experiment": "E124_residual_scaling16",
+      "phase": "train",
+      "completed_at": "2026-11-10T00:58:10.446003+00:00"
+    },
+    {
+      "experiment": "E124_residual_scaling16",
+      "phase": "evaluation",
+      "completed_at": "2026-11-10T01:01:16.199775+00:00"
+    }
+  ],
+  "recovery_number": 1,
+  "automatic_retry": false,
+  "test_read": false,
+  "automatic_evaluation": true,
+  "registration": "output/scaling16_recovery_20261110/recovery_registration.json",
+  "updated_at": "2026-11-10T01:01:16.205943+00:00",
+  "completed_at": "2026-11-10T01:01:16.205943+00:00",
+  "order": [
+    "E122_global2_scaling16",
+    "E123_node12_scaling16",
+    "E124_residual_scaling16"
+  ],
+  "previous_controller_error_preserved": true,
+  "recovery_controller": "output\\scaling16_recovery_20261110"
+}

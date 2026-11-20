@@ -1,0 +1,35 @@
+# E148 e148_shared_functional_shape 原固定dev500
+
+```json
+{
+  "status": "complete",
+  "arm": "e148_shared_functional_shape",
+  "count": 500,
+  "checkpoint_sha256": "20d2e619a985067bd7fb279c350edeef7881b715bed7cb28a1889adcd05d4dfd",
+  "best_epoch": 46,
+  "parameters": 678941,
+  "weighted_Q": 1.0132045532663725,
+  "mean_Q": 1.012011951825358,
+  "mixed_Q": 1.0126082525458653,
+  "hard_legal": 500,
+  "raw_hard_legal": 0,
+  "fallbacks": 0,
+  "mean_complete_seconds": 0.2435535156003898,
+  "p95_complete_seconds": 0.547446219998528,
+  "max_complete_seconds": 1.9015331999980845,
+  "over250ms": 172,
+  "max_Q": 1.3130144139518516,
+  "p95_Q": 1.069513457715629,
+  "raw_repeated_coverage": 0.03502382673767461,
+  "raw_bbox_over_area": 1.0200958891492298,
+  "common_final_dev_loss": 0.2971848521232605,
+  "common_final_new_dev_loss": 0.2986479883342981,
+  "own_selection_loss": 0.30993410532176496,
+  "training_seconds": 11070.616320399975,
+  "training_epochs": 49,
+  "scoring_policy": "Original areas/no MIB local research Q; neutral runtime1; not official contest score",
+  "elapsed_seconds": 278.02206480002496,
+  "test_read": false,
+  "selection_frozen_before_Q": true
+}
+```
