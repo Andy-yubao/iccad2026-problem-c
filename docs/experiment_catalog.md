@@ -1,5 +1,35 @@
 # 实验位置索引
 
+[E166 联合后段的软约束监督](../experiments/E166_soft_count_joint/README.md)复用 E165 L0 best67，完整后段联合训练，前 20 轮冻结 L0。L12 reference 系数为 0.25，L8/L12 加入分组与贴边代理项，以原 no-MIB dev2000 做终末检查。
+
+[E165 三层初稿与后段联合微调](../experiments/E165_joint_l0/README.md)使用完整原 train36k、宽 64 × 3 静态关系 L0 和 E151 后段。L0 best 单独备份，后段先冻结 L0 20 轮，解冻后端到端微调，自动运行原 no-MIB dev2000。
+
+[E164 两层宽 64 静态关系 L0](../experiments/E164_static_relation_l0/README.md)使用原 no-MIB 完整 36k 从头训练，保留原 MST 分组接触及 0.25 倍原重叠项。
+
+[E163 · E151 的 S2 首次调用半步](../experiments/E163_e151_s2_half_step/README.md)。冻结 E151 best45，原 no-MIB dev2000 背景对照，附独立草稿延迟和后段 CUDA Graph 重放测速。
+
+[E162逐阶段半步/全步重复调用](../experiments/E162_repeat_half_residual/README.md)：固定E161 S2 best21，不训练。原dev500 Loss对照已完成，S0/S1/S2降低2.22%/3.87%/3.40%；后台原no-MIB dev2000进程PID20760已创建，[实时状态](../experiments/E162_repeat_half_residual/evaluation/output/state.json)。E161原dev2000已完成，混合Q1.031281153、2000/2000硬合法。以下为历史过程。
+
+E161本地dev2000已按用户2026-11-23指令正式启动，使用回传冻结的S2 best21，不训练、不改原预算、不读取test。实时进度见[状态](../experiments/E161_kaggle_transfer/local_dev2000_v1/output/state.json)，[评价入口](../experiments/E161_kaggle_transfer/local_dev2000_v1/README.md)。以下为历史过程。
+
+2026-11-23台北16:43：已通过Kaggle API核实E161四阶段训练完成并回传全部70个远端文件（97962747字节）。四阶段best均通过冻结SHA256与本地CPU读取检查；S1完成43轮/预算结束、best40，S2完成26轮/正常早停、best21（own-Loss0.247930124）。S1/S2 latest含终末模型/Adam/RNG/游标/调度/投影及累计预算。远端因打包漏带evaluation/budget.json在dev2000入口导入阶段出错，2000例未开始、没有Q结果；原evaluation/plan.json也未入包，两份配置已保留供本地评价。原本地暂停运行未覆盖。远端版本1已ERROR终止，额度接口两次确认GPU time_reserved=0秒，无需取消已终止会话；未删除Notebook/数据集/结果。后续在本地继续，本次未启动本地评价。[回传与检查记录](../experiments/E161_kaggle_transfer/downloaded/20261123T084205Z/RETURN_TO_LOCAL.md)。以下为历史过程。
+
+2026-11-23台北10:14：E161 Kaggle私有GPU任务已成功提交（kernel146771988，version1），最近实际返回QUEUED。私有Dataset version1已READY，两个文件大小均匹配；认证账户andyyubao已核验。本轮尚未确认新的训练更新，不能写为已开始训练。任务将从S1 step7568接续，再训练S2并自动原no-MIB dev2000；保留累计预算，本地E161保持暂停，不重复提交。[任务](https://www.kaggle.com/code/andyyubao/iccad-e161-s1-resume-20261123)；[提交凭据](../experiments/E161_kaggle_transfer/submission.json)。以下为历史过程。
+
+[E161 Kaggle迁移](../experiments/E161_kaggle_transfer/README.md)：准备私有上传包、S1暂停状态的跨GPU身份迁移及S2/原dev2000后续任务；当前宿主网络权限阻断，未提交。原E161保持暂停，不另建模型候选或seed。
+
+[E161](../experiments/E161_final_no_mib/README.md)已按用户要求准备独立新scratch运行，当前`prepared`、由用户亲自启动。[启动脚本](../experiments/E161_final_no_mib/launch_user_scratch.ps1)；[旧运行和预算归档](../history/e161_before_user_scratch_20261122T160405Z/archive_manifest.json)。原架构、数据和终末dev2000不变；以下后台启动描述均为旧运行过程。
+
+[E161 最终无MIB四阶段架构](../experiments/E161_final_no_mib/README.md)已准备、未启动训练/评价（2026-11-22）。E151 best45的[原reference dev2000评价](../experiments/E151_frozen_role_initial/runs/evaluation_reference_dev2000_v1/README.md)已按本轮授权创建后台进程，未执行启动验证。最终数据恢复原random_reference40k，当前面板见[no-MIB dev2000](../protocol/final_evaluation_no_mib_dev2000_v1.json)。
+
+[2026-11-22收尾设计与结果核对](final_architecture_20261122.md)：E160已完成best63、dev Loss0.335786179；E157新MIB dev500混合Q1.014650315、grouping461/500；E151 best45历史no-MIB dev500混合Q1.008437267。新四阶段架构与[完整dev2000成员](../protocol/final_evaluation_dev2000_v1.json)已登记，未启动新训练或评价。以下历史启动描述保留为过程记录，最新完成状态见[当前结果](current_status.md)。
+
+[E160 静态关系消息初稿](../experiments/E160_static_relation_message/README.md) 已按用户授权完成准备并创建后台正式训练进程（2026-11-22）；按AGENTS未执行启动验证，运行状态以实验记录为准。在E159三个attention块中加入秩8的接收者相关静态关系消息，不增加分跳聚合；width128/四头、数据/MIB/Loss、36k/batch64/seed0、4h/200轮预算保持。仅L0，完成后冻结own-best并自动比较E159保存的总Loss与分项。未执行防御性测试、试训或启动验证，无后段/后处理/test；启动记录和日志见实验background目录。
+
+[E159 加宽三层 RoleInitial](../experiments/E159_role_initial128/README.md) 已完成50轮正常早停，best47，固定train500/dev500 Loss0.348669/0.347660，耗时79.9分钟。相对E158 best58的dev总Loss降低8.74%，482/500题改善；线长/紧凑分项略升。[完整比较](../experiments/E159_role_initial128/comparison_e158/report.md)。同题对照10例和E159 Loss最差10例已保存，端口8829/8830。仅L0，无后处理或test。
+
+[E158 三层 RoleInitial 初稿](../experiments/E158_role_initial3/README.md) 已完成61轮正常早停，34343次更新，耗时89.6分钟，冻结best58；固定train500/dev500 Loss为0.381521/0.380959（含reference1.0和原重叠组×0.25）。[分项Loss、曲线与E155共同口径对照](../experiments/E158_role_initial3/runs/review_results_v1/report.md) 已保存；随机dev20已按统一入口展示，端口8828。仅L0，无后段、后处理或test。
+
 [E157 依次训练S1再S2](../experiments/E157_sequential_s1_s2/README.md)：2026-11-20用户明确改为顺序训练并授权后台启动。冻结E156 best79；先训练S1编码器/共享双层S1两次（L6/L8 .2/.8），冻结own-best后，再新建S2编码器/共享双层S2两次（L10/L12 .2/.8）。完整公开Loss，reference及grouping瓶颈监督为0；仅S2 L12加0.2容差移动项，重叠模块减轻移动惩罚。两阶段各279958可训练参数、36k/batch64、各4h/200轮上限；两阶段冻结/恢复/梯度及完整MIB后处理短检通过后启动。最后唯一S2 best运行新dev500完整MIB评价，不读test。队列与日志以实验内记录为准。
 
 [E156 两次共享S0](../experiments/E156_two_s0_stage/README.md) 已用满原4小时预算，完成80轮及第81轮部分更新，best79 dev Loss0.189882已冻结。未启动S1/S2；父权重现供E157顺序训练使用。

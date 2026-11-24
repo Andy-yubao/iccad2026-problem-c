@@ -1,0 +1,38 @@
+# E163 E151 S2 first half e163_s2_first_half 原固定dev2000
+
+```json
+{
+  "status": "complete",
+  "arm": "e163_s2_first_half",
+  "count": 2000,
+  "checkpoint_sha256": "06855b8dd5bd331026cd67d09cf3cc2d50a8741243b17a7b5fcd8678495b989d",
+  "best_epoch": 45,
+  "parameters": 681141,
+  "weighted_Q": 1.0087828964334802,
+  "mean_Q": 1.0105901488243259,
+  "mixed_Q": 1.0096865226289031,
+  "hard_legal": 2000,
+  "raw_hard_legal": 0,
+  "fallbacks": 0,
+  "mean_complete_seconds": 0.4387107950997597,
+  "p95_complete_seconds": 0.7331556550052483,
+  "max_complete_seconds": 1.8009738000109792,
+  "over250ms": 1937,
+  "max_Q": 1.6189351806034449,
+  "p95_Q": 1.0592009306026975,
+  "raw_repeated_coverage": 0.032653995633554284,
+  "raw_bbox_over_area": 1.0203153499242044,
+  "common_final_dev_loss": 0.28411253690719607,
+  "common_final_new_dev_loss": 0.28411253690719607,
+  "own_selection_loss": 0.289749733671546,
+  "training_seconds": 10969.444604900025,
+  "training_epochs": 45,
+  "scoring_policy": "Original areas/no MIB local research Q; neutral runtime1; not official contest score",
+  "elapsed_seconds": 1229.6281999000348,
+  "test_read": false,
+  "selection_frozen_before_Q": true,
+  "grouping_satisfied": 1808,
+  "boundary_satisfied": 1883,
+  "all_soft_satisfied": 1712
+}
+```

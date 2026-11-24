@@ -88,7 +88,7 @@ def render(case,destination,*,layer=None,title='Saved layouts'):
              if layer is not None else 'Model draft / final layer')
     row = dict(title=title,constraints=c['constraints'],axis_limits=c['bounds'],
                variants={key:dict(positions=p) for key,p in [('reference',c.get('reference')),('raw',draft),('final',c.get('final'))]})
-    stages=(('reference',c.get('reference_label','Reference')),('raw',label),('final','Postprocessed'))
+    stages=(('reference',c.get('reference_label','Reference')),('raw',label),('final',c.get('final_label','Postprocessed')))
     if c.get('hide_missing_final') and c.get('final') is None:
         stages=stages[:-1]
     return plot_case(row,destination,stages=stages)

@@ -1,0 +1,154 @@
+{
+  "status": "passed",
+  "formal_training_started": false,
+  "formal_training_updates": 0,
+  "dev_payloads": 0,
+  "test_payloads": 0,
+  "postprocessing_calls": 0,
+  "backend_updates": 0,
+  "launch_disabled_guard": true,
+  "dataset_maximum_padding": {
+    "max_modules": 120,
+    "max_ports": 363,
+    "max_pins": 143
+  },
+  "members": [
+    [
+      "worker_59/layouts_2016.th",
+      21
+    ],
+    [
+      "worker_60/layouts_9744.th",
+      1
+    ],
+    [
+      "worker_53/layouts_9968.th",
+      82
+    ],
+    [
+      "worker_5/layouts_8064.th",
+      11
+    ],
+    [
+      "worker_48/layouts_3472.th",
+      1
+    ]
+  ],
+  "hidden_coordination_path": [
+    [
+      "block0",
+      [
+        5,
+        120,
+        64
+      ]
+    ],
+    [
+      "block1",
+      [
+        5,
+        120,
+        64
+      ]
+    ],
+    [
+      "block2",
+      [
+        5,
+        120,
+        64
+      ]
+    ],
+    [
+      "layout_head",
+      [
+        5,
+        120,
+        3
+      ]
+    ]
+  ],
+  "parameters": 170415,
+  "trainable_parameters": 170415,
+  "public_path_exact": true,
+  "module_port_permutation": true,
+  "MIB_id_invariance": true,
+  "axis_swap": true,
+  "quarter_complete_overlap_exact": true,
+  "weak_overlap_has_gradient": true,
+  "reference_one_exact": true,
+  "unchanged_terms_sum_exact": true,
+  "capture_without_updates": true,
+  "gradient_branches_checked": [
+    "initial_generator.input",
+    "initial_generator.role_input",
+    "initial_generator.port_input",
+    "initial_generator.head",
+    "initial_generator.initial_blocks.0.qkv",
+    "initial_generator.initial_blocks.0.ff.0",
+    "initial_generator.initial_blocks.0.ff.2",
+    "initial_generator.initial_blocks.1.qkv",
+    "initial_generator.initial_blocks.1.ff.0",
+    "initial_generator.initial_blocks.1.ff.2",
+    "initial_generator.initial_blocks.2.qkv",
+    "initial_generator.initial_blocks.2.ff.0",
+    "initial_generator.initial_blocks.2.ff.2"
+  ],
+  "nonfinite_guard_before_adam": true,
+  "serialized_next_update_bitwise": true,
+  "GPU64_tail32": true,
+  "disposable_updates_original": 5,
+  "disposable_updates_resume_replay": 1,
+  "peak_reserved_bytes": 5238685696,
+  "sources": {
+    "datasets/cases.py": "1fd51addaaae38164c22f1946712665beebac700054db4bb07ed4f9d44e0b168",
+    "datasets/random_mib40k_v1/__init__.py": "9b5ff5160923f8140f66cab9acb37e275e68c879154bd3f9707c74d240fb9a7d",
+    "datasets/random_mib40k_v1/batches.py": "09d33f43f73917336b6e4778b319a0bb881332b917c6e3af3c48a56e9ae09e4a",
+    "datasets/random_mib40k_v1/cache/dev/manifest.json": "2e2e169f7e41f67eb542ce2f1cb51f1e0991bc1c314a77d24728863f56a8edab",
+    "datasets/random_mib40k_v1/cache/profile.json": "4cd578d18ab39069659046d5f23ca6f635fcbb4651bd9d9a56a6203eea7ef166",
+    "datasets/random_mib40k_v1/cache/train/manifest.json": "7697e2be02896bf4449a62ad84d386f4c266cb282b9784ab4c449920fadc7876",
+    "datasets/random_mib40k_v1/features.py": "c20aee547af28ad4de478ef362ffa41f6ce60b5551748433adc19299abb3d4b2",
+    "datasets/random_mib40k_v1/manifest.json": "487e5e1693dadc637c8e3c15c3ff55aa5781aa896f09e3b11fb093f25c1c611c",
+    "datasets/random_mib40k_v1/ports.py": "431b54476e7de8a94c12cf935a30a3b49b911e208305fbe6bb7b23d72e37dbef",
+    "datasets/random_mib40k_v1/preflight.py": "8e328535487a9b42078ee6f194680c23053f05f2d8edbfc8de9ad4ba8b2b447c",
+    "datasets/random_mib40k_v1/prepare.py": "964bf640d4a0a0308fa5fa1155d4206135895dc7a823c056cbb52a510a4b4a1f",
+    "datasets/random_mib40k_v1/report.json": "78fde037e71f6a62c7c580f98688fe81c0cf4f1365f30af4f2bd83cf41a00c5b",
+    "datasets/random_mib40k_v1/role_features.py": "b119b84ea02f57b010136941f147d517f6b41b8c122f650b68b4df8e6635e6c4",
+    "datasets/random_mib40k_v1/transform.py": "19710308721a7d646321bff9e522153315b68abc4470f69cd956252184dbdd9d",
+    "experiments/E158_role_initial3/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/E158_role_initial3/augmentation.py": "55fd8caa66fec82b66a110be3e8bde5d2c83d6f7f1e182dd5b6356f5b4a1c98b",
+    "experiments/E158_role_initial3/base_loss.py": "eb93adbdcfa0e3c4b84ff5bd26c5116c20982a9cda6d78d465a6763dbfc9e030",
+    "experiments/E158_role_initial3/base_resident.py": "a70da9f834fd05091ab011459e34fcff214bd41cb753f98ee9c088975c0a3c81",
+    "experiments/E158_role_initial3/batches.py": "09d33f43f73917336b6e4778b319a0bb881332b917c6e3af3c48a56e9ae09e4a",
+    "experiments/E158_role_initial3/captured_projection.py": "7f19baba25bc52a686e08a1af32236bffa8b47300cac96c52914b3b81d88131a",
+    "experiments/E158_role_initial3/cuda_step.py": "154f58f50369c67be98408896812abf854436cb22a962c8182d2355015a91475",
+    "experiments/E158_role_initial3/data.py": "3c8ef963c4d27a29fe67553039fbb39abe745ab4af5ea2fdaedd769df4fc8569",
+    "experiments/E158_role_initial3/DESIGN.md": "4f368214b62880d1d9f0ddb1add366fb8a14ca48aea910fcb7e7ef098085edc9",
+    "experiments/E158_role_initial3/features.py": "c20aee547af28ad4de478ef362ffa41f6ce60b5551748433adc19299abb3d4b2",
+    "experiments/E158_role_initial3/group_tree.py": "f5ceff218b44b16f164f71a95ecabde59c6f531ac8ce385d235bbb5d01254964",
+    "experiments/E158_role_initial3/initial_model.py": "073eb6506f81cea5f0d2120889d71d411a092f68d8819ca3894213ca37d00304",
+    "experiments/E158_role_initial3/io.py": "0d09c42afae47947784c053d8b32d107d87ec2ce0617435bd816266419ddcca1",
+    "experiments/E158_role_initial3/loss.py": "8764b96a700d08d771e6ca46abf066ecfb8c0fce050d9ba459dcfa3a13ed061f",
+    "experiments/E158_role_initial3/loss_config.py": "d94a24e6808889cce4009c406708c01c067b420567dce1899fd186bb81307112",
+    "experiments/E158_role_initial3/model.py": "e202c40074ff95027ccdd6e7a13353e02ac1fc6ade6fe3bb148817afcc6cdbad",
+    "experiments/E158_role_initial3/plan.json": "96a37ef77258e3245c065956dc5ce242587433f6b6eb7d4116b02953adbd44b4",
+    "experiments/E158_role_initial3/ports.py": "431b54476e7de8a94c12cf935a30a3b49b911e208305fbe6bb7b23d72e37dbef",
+    "experiments/E158_role_initial3/preflight.py": "7fce64c5503d193914c66374c2ed0df81ae32f21daded6d2635fff263d70bb00",
+    "experiments/E158_role_initial3/public.py": "f395c7446564684f5bd24df3082c210e47e665c7a5dc5286e3fe3d99e1cfe403",
+    "experiments/E158_role_initial3/public_preprocessing.py": "a0a6ca42e8de0a9c75e1306c1dc967cf71d1699cc2cb576a7246996b901ffb40",
+    "experiments/E158_role_initial3/README.md": "289b5ceda9ac278617ca512f024368b1de85b5afe5fc3a32ec687d2f1fceba23",
+    "experiments/E158_role_initial3/resident.py": "25edb9d8e5c1aa6dd9dd0afabf6de1d21ae20541979d752601079843a1a834d4",
+    "experiments/E158_role_initial3/role_features.py": "2a7a160010d944baf27f76429b116e008edc60b84c752834f81b65c2860d7c08",
+    "experiments/E158_role_initial3/run_queue.py": "1e1275f474585cc45708372afdd0e66af5e1b1680935fd16db1854f5f3d1d515",
+    "experiments/E158_role_initial3/schedule.py": "8d5dfd1a04a0b02965f91ed3be47c94371a28147705f02fa52e144c9d57c597a",
+    "experiments/E158_role_initial3/simple_loss.py": "fcd0827c829ee2466298eb61c1213b1fb12ae7f54afaef0f8e53a86033478238",
+    "experiments/E158_role_initial3/step_control.py": "795ddb45dd257e123f1880eea28b58502711807ee643bfcb51a7e72d484952da",
+    "experiments/E158_role_initial3/train.py": "41111da5940f979d534e20bffd205b1cee14057b16f44c60310fe69a5c5b29ef",
+    "protocol/model_prediction_boundary_v1.json": "d975980890f717590aafb6bceb34aa8052f0d895e8940e41e6a65e9426c9705a",
+    "protocol/paths.json": "11dc5f19c3da22f9d37db341b0606bcc4b514bfe39264fc7ffed27c13b098270",
+    "protocol/random_mib40k_v1.json": "487e5e1693dadc637c8e3c15c3ff55aa5781aa896f09e3b11fb093f25c1c611c",
+    "protocol/research_mib_restored_v1.json": "43506655534b6861bebd844707cab769f613a5ca1a59d16a1f0d3553f21a86c9"
+  },
+  "elapsed_seconds": 46.91499739998835,
+  "formal_weights_reused": false
+}

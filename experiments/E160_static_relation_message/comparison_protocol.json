@@ -1,0 +1,63 @@
+{
+  "baseline_experiment": "experiments/E159_role_initial128",
+  "baseline_frozen": {
+    "arm": "e159_initial",
+    "checkpoint": "experiments/E159_role_initial128/runs/e159_initial_seed0/checkpoints/best.pt",
+    "checkpoint_sha256": "20302d41ea08246179f56b3319e963c6c82a71b32d3552f1cd83424ea28a23de",
+    "best_epoch": 47,
+    "selection_loss": 0.34765994080901147
+  },
+  "baseline_result": {
+    "status": "early_stop",
+    "error": null,
+    "epochs": 50,
+    "steps": 28150,
+    "best_epoch": 47,
+    "best_fixed_loss": 0.34765994080901147,
+    "elapsed_seconds": 4796.5736906999955,
+    "train_monitor_last4": [
+      0.3486689599454403,
+      0.3487072548866272,
+      0.3492190159857273,
+      0.34835927647352216
+    ],
+    "train_plateau_observed": false,
+    "convergence": "operational dev plateau; train plateau separate",
+    "test_read": false,
+    "postprocessing_calls": 0,
+    "next_stage": "Freeze own-Loss best and stop; only L0 is authorized"
+  },
+  "intended_change": {
+    "static_relation_messages": true,
+    "relation_rank": 8,
+    "relation_input_dimensions": 9,
+    "separate_hop_aggregation": false
+  },
+  "same_settings": [
+    "3 attention/FFN blocks",
+    "width128,4 heads,32 dimensions/head,FFN384",
+    "one final L0 output",
+    "original role16 and static attention bias",
+    "MIB dataset,inputs,labels and Loss",
+    "reference1.0,complete overlap0.25,other original Loss",
+    "train36k,fixed train500/dev500",
+    "scratch seed0,batch64/tail32,FP32",
+    "augmentation,AdamW,gradient/update control",
+    "LR and early stopping",
+    "4h/200epoch budget"
+  ],
+  "primary": "own-best dev500 total and weighted components",
+  "secondary": [
+    "fixed train500",
+    "same-case total Loss differences",
+    "best epoch",
+    "epochs",
+    "accepted updates",
+    "elapsed seconds"
+  ],
+  "comparison_entry": "experiments.E160_static_relation_message.compare_loss",
+  "execution": "After own-best freeze; saved monitoring records only; no extra inference or checkpoint reselection",
+  "defensive_tests_executed": false,
+  "computer_use": false,
+  "test_read": false
+}

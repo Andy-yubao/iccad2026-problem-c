@@ -1,0 +1,76 @@
+{
+  "baseline_experiment": "experiments/E158_role_initial3",
+  "baseline_frozen": {
+    "arm": "e158_initial",
+    "checkpoint": "experiments/E158_role_initial3/runs/e158_initial_seed0/checkpoints/best.pt",
+    "checkpoint_sha256": "8bd6ab77f281109f57bd34352bb0cd31b61a724e9656bb4ae0c8e74116487371",
+    "best_epoch": 58,
+    "selection_loss": 0.3809590292274952
+  },
+  "baseline_result": {
+    "status": "early_stop",
+    "error": null,
+    "epochs": 61,
+    "steps": 34343,
+    "best_epoch": 58,
+    "best_fixed_loss": 0.3809590292274952,
+    "elapsed_seconds": 5378.4790545,
+    "train_monitor_last4": [
+      0.3815212236940861,
+      0.38284860971570017,
+      0.3821919154524803,
+      0.3816078455448151
+    ],
+    "train_plateau_observed": false,
+    "convergence": "operational dev plateau; train plateau separate",
+    "test_read": false,
+    "postprocessing_calls": 0,
+    "next_stage": "Freeze own-Loss best and stop; only L0 is authorized"
+  },
+  "intended_change": {
+    "hidden_width": [
+      64,
+      128
+    ],
+    "attention_heads": [
+      4,
+      4
+    ],
+    "head_dimension": [
+      16,
+      32
+    ],
+    "ffn_width": [
+      192,
+      384
+    ]
+  },
+  "same_settings": [
+    "three attention/FFN blocks",
+    "one final L0 output",
+    "reference1.0",
+    "complete overlap0.25",
+    "original other Loss terms",
+    "frozen train36k/train500/dev500",
+    "seed0",
+    "batch64/tail32",
+    "FP32",
+    "AdamW and gradient/update controls",
+    "four LR levels and early stopping",
+    "4h/200epoch budget"
+  ],
+  "primary": "own-best dev500 total and weighted components",
+  "secondary": [
+    "fixed train500",
+    "same-case total Loss differences",
+    "best epoch",
+    "completed epochs",
+    "accepted updates",
+    "elapsed seconds"
+  ],
+  "comparison_entry": "experiments.E159_role_initial128.compare_loss",
+  "execution": "after E159 actual own-best is frozen; saved monitoring only; no extra inference",
+  "defensive_tests_executed": false,
+  "computer_use": false,
+  "test_read": false
+}

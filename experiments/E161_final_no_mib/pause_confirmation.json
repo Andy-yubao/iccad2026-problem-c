@@ -1,0 +1,30 @@
+{
+  "status": "paused_by_user",
+  "confirmed_utc": "2026-11-23T01:20:01.192966+00:00",
+  "run_id": "E161.user_scratch.20261122T160405Z",
+  "arm": "e161_s1",
+  "completed_epochs": 13,
+  "accepted_updates": 7568,
+  "cursor": 15936,
+  "finished": false,
+  "elapsed_seconds": 4621.447398399992,
+  "best_epoch": 13,
+  "best_fixed_loss": 0.2667688412666321,
+  "checkpoint": "experiments/E161_final_no_mib/runs/e161_s1_seed0/checkpoints/latest.pt",
+  "checkpoint_bytes": 9894745,
+  "checkpoint_saved_by": "Trainer store(user_stop) saved model, Adam, RNG, permutation/cursor/seen, scheduler, projection and cumulative budget.",
+  "worker_status": "user_stop",
+  "worker_error": null,
+  "queue_status": "stopped",
+  "completed_stages": [
+    "e161_l0",
+    "e161_s0"
+  ],
+  "subsequent_stages_blocked": true,
+  "pause_flags": [
+    "PAUSE_REQUEST",
+    "QUEUE_STOP"
+  ],
+  "exit_evidence": "Worker heartbeat activity=exited; parent queue observed worker exit and stopped; both queue.lock and training.lock acquired successfully after release.",
+  "test_read": false
+}

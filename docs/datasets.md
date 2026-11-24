@@ -1,12 +1,19 @@
 # 数据与共享缓存
 
+2026-11-23 用户恢复完整 train36k 为新实验默认训练集，沿用固定原 train500/dev500。E165 使用完整 36k，已登记的 16k 实验保留原身份。
+
+2026-11-22用户决定最终回到原数据：当前终末面板为[原面积/no-MIB dev2000](../protocol/final_evaluation_no_mib_dev2000_v1.json)，E161训练使用原random_reference40k train36k和原固定train500/dev500，保留原reference，不做MIB形状/面积修正。原共享CPU缓存及E149公开role sidecar复用。此前新MIB dev2000清单仅保留为旧方案，不用于本轮最终评价；test仍封存。
+
+2026-11-22收尾评价范围：[完整新MIB dev2000](../protocol/final_evaluation_dev2000_v1.json)已按原成员/顺序登记，复用random_mib40k_v1全部dev缓存，不重抽样。原监测500、其余1500及合并2000分别报告，后两者不自动称为未曝光测试。仅成员登记，未运行评价，test继续封存；方案见[收尾设计](final_architecture_20261122.md)。
+
 路径统一由 [protocol/paths.json](../protocol/paths.json) 解析；原始清单见 `datasets/datasets_manifest.json`。不要重复下载、解压或重建已有数据。
 
 | 冻结索引（均在protocol/） | 用途 |
 |---|---|
 | `random_reference40k_v1.json` | 原始面积父集合36k train / 2k dev / 2k test，固定train/dev500 |
 | `random_reference16k_v1.json` | 父train36k内固定随机无放回16k，新train500，沿用原dev/test |
-| `research_training16k_v1.json` | E114监督实验后新研究默认16k；特定36k授权只对登记实验有效 |
+| `research_training36k_v1.json` | 当前新实验默认，使用完整 train36k、固定原 train500/dev500 |
+| `research_training16k_v1.json` | E114 后曾用的 16k 训练策略，随历史实验保留 |
 | `split_v1.json` | 历史原始分片80/10/10，7200/900/900分片 |
 | `workset_v2.json` / `derived_workset_v3.json` | 历史20k任务 / MIB派生任务 |
 | `distillation_workset_v4.json` | 历史教师选优分布 |

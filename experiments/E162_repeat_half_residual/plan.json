@@ -1,0 +1,36 @@
+{
+  "dataset_report_sha256": "3a79fd9eb2636578fa4df876ccac51699eab04cd59179027488aa7d8c334928a",
+  "payload_checksums_sha256": "f8eeb86da003c9901b73541eb13cc8e16cad9cd963dcf74a0edddf4a1a5abe54",
+  "required_cache_key": "a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148",
+  "cache_build_workers": 4,
+  "role_cache_root": "experiments/E149_role_initial/role_cache_v1",
+  "experiment": "E162_repeat_half_residual",
+  "revision": "E162.inference_only.v1",
+  "status": "frozen_for_dev2000",
+  "architecture": "e162_repeat_half",
+  "training_enabled": false,
+  "inference_only": true,
+  "test_read": false,
+  "parameters": 1908096,
+  "trainable_parameters": 0,
+  "checkpoint": "E161 S2 own-Loss-best epoch21",
+  "call_order": [
+    "L0",
+    "S0.1_half",
+    "S0.2_full",
+    "S1.1_half",
+    "S1.2_full",
+    "S2.1_half",
+    "S2.2_full"
+  ],
+  "residual_scales": [
+    0.5,
+    1.0
+  ],
+  "residual_scope": "Terminal center x/y and logratio delta only",
+  "shared_weights": "Two calls reuse each stage weights; each call re-encodes current layout",
+  "loss_audit": "Original fixed dev500; identical own-stage Loss for paired comparisons",
+  "evaluation": "Original frozen dev2000/no-MIB/E98.depth_budget.v1 original caps",
+  "automatic_retry": false,
+  "selection": "Single user-specified profile, unchanged original own-Loss-best; no Q selection"
+}

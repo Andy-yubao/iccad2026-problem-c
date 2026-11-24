@@ -1,0 +1,43 @@
+"""Frozen role-aware initial placement followed by trainable refinement units."""
+import torch
+from torch import nn
+from .initial_model import RoleInitial
+from .refinement import PublicProblemEncoder,FunctionalUnit
+from .public import PUBLIC,BASE
+
+class FrozenRoleModel(nn.Module):
+    unit_order=(0,0,1,1,2,2)
+    def __init__(self,width=64,layers=12,rectangle=True,use_gap=True,ffn_dropout=.1,residual_dropout=.05,initial_layers=2):
+        super().__init__()
+        if (layers,initial_layers,rectangle,use_gap)!=(12,2,True,True):raise ValueError('Unregistered architecture')
+        self.initial_generator=RoleInitial(width=width,layers=2,rectangle=True,ffn_dropout=ffn_dropout,residual_dropout=residual_dropout,initial_layers=2)
+        self.initial_generator.requires_grad_(False).eval()
+        self.problem_encoder=PublicProblemEncoder(width,ffn_dropout,residual_dropout)
+        self.units=nn.ModuleList([FunctionalUnit(width,ffn_dropout,residual_dropout) for _ in range(3)])
+
+    def train(self, mode=True):
+        super().train(mode)
+        self.initial_generator.eval()
+        return self
+
+    def forward(self,g):
+        if set(g)!=set(PUBLIC):raise ValueError('Only registered public inputs accepted')
+        with torch.no_grad():
+            state=self.initial_generator(g)[0]
+        public={key:g[key] for key in BASE}
+        condition=self.problem_encoder(public)
+        states=[state]
+        for call, index in enumerate(self.unit_order):
+            output=self.units[index](public,state,condition)
+            first, last = output.unbind(0)
+            if call == 4:
+                # Keep L9 as the actual first readout. Dampen only the state
+                # handed from the first S2 unit call to the second.
+                last = state + 0.5 * (last - state)
+            states.extend((first, last))
+            state = last
+        return torch.stack(states,0)
+
+def GeometryModel(architecture='e163',**configuration):
+    if architecture!='e163':raise ValueError(architecture)
+    return FrozenRoleModel(**configuration)

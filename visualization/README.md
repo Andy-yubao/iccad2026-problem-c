@@ -81,6 +81,17 @@ E120 best79按相同抽样、排序和采集规则独立生成15例；最坏例�
 
 坐标为 `N×4` 的 XYWH；约束列为 `[F,P,忽略列,G,boundary_bits]`，边界位 L/R/T/B=1/2/4/8。编号从0开始。可用 `layers: [第1层XYWH, …, 第12层XYWH]` 替代 `draft`；只能放实际保存的输出。未保存 reference/final 时留空或省略，页面会明确标注。可选 `metrics` 字段为 `Q/hard_legal/complete_ms`，只显示已存值。
 
+## E165 / E166 最终软违规同题 10 例
+
+从原 no-MIB dev2000 中两模型后处理后均有软违规的 179 题里，选 4 例较重违规，以及 E165、E166 各 3 例违规更重的差异题。两页同序，展示原 reference、真实已存 L0/L4/L8/L12 和原后处理。右栏列出草稿与最终违规数及最终断开的组号。选择记录在 `experiments/E166_soft_count_joint/visualization_soft10_pair_v1/selection.json`。
+
+以下命令依赖本地保存的展示坐标。仓库保留选题记录。
+
+```powershell
+& .\.conda\envs\iccad2026\python.exe -B -m visualization --data experiments/E166_soft_count_joint/visualization_soft10_pair_v1/E165.json --port 8845
+& .\.conda\envs\iccad2026\python.exe -B -m visualization --data experiments/E166_soft_count_joint/visualization_soft10_pair_v1/E166.json --port 8846
+```
+
 Python 调用为 `visualization.layouts.render(case, path, layer=6)`。已有评估脚本的 `plot_case` 调用仍可用；`layer_capture.py` 保留只读 hook；`layer_comparison.py` 只兼容旧脚本的几何统计导入，不包含第二套界面。
 
 ## 文件职责
@@ -111,3 +122,16 @@ Python 调用为 `visualization.layouts.render(case, path, layer=6)`。已有评
 `experiments/E156_two_s0_stage/runs/visualization_train10_latest_v1/data.json` 使用暂停时latest（step26942），每个N区间随机一个已见训练例，保存实际L0/L2/L4。端口8824。Reference为形状修正监督，不保证合法；未推理未训练后层、未后处理，训练继续暂停。同目录png含10张Reference/L0/L2/L4四栏图及zip。
 
 可选字段 `hide_missing_final:true` 让网页与render隐藏未保存的后处理栏；`reference_label` 标记参考含义；`loss_columns:[[key,label],...]`、`loss_label`、`loss_caption` 可明确当前实验的Loss口径，未设置时保持原列和文案。不新增网页入口。
+
+## E158 三层初稿 best58 的验证20例
+
+`experiments/E158_role_initial3/runs/visualization_dev20_best58_v1/data.json` 是seed20261120从固定dev500均匀无放回抽取的20例。端口8828，统一入口 `python -B -m visualization --data <上述data.json> --port 8828`。左栏为MIB形状修正监督参考，右栏为best58实际L0；三个attention/FFN块只在隐藏空间协调，不存在三份中间布局。每例保存完整加权Loss分项，未执行后段、后处理或test。
+
+## E158 与 E159 对照及 E159 最差例
+
+- 同题对照10例：`experiments/E159_role_initial128/runs/visualization_compare10_v1/data.json`，端口8829。三栏为监督参考、E158 best58的L0、E159 best47的L0；右栏也是网络初稿，不是后处理。
+- E159 dev500 Loss最差10例：`experiments/E159_role_initial128/runs/visualization_loss_worst10_v1/data.json`，端口8830；按best47原监测总Loss降序、index升序破同分。
+
+对照10例用seed20261121从排除最差10题后的490题随机抽取，两组互不重复。保留实际单题Loss分项与PNG。只进行授权的冻结权重推理和绘图，没有防御性测试、后处理或computer-use。
+
+统一页面支持可选`final_label`与`final_caption`指定第三栏的真实含义；模型对照可用`model_losses`提供按模型命名的Loss表。未设置时仍为原后处理栏及逐层Loss表，不能把两个模型输出当作同一模型的中间层。

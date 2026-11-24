@@ -20,7 +20,7 @@ main{max-width:1700px;margin:auto;padding:24px}h1{font-size:25px;margin:0 0 6px}
 <div class="panels">
 <section><h2 id="reference-title">Reference</h2><p id="reference-stat" class="stage-stat">参考布局</p><canvas id="reference" width="1200" height="1200" aria-label="参考布局"></canvas></section>
 <section><h2 id="draft-title">模型草稿</h2><p id="draft-loss" class="stage-stat" aria-live="polite"></p><canvas id="draft" width="1200" height="1200" aria-label="真实模型草稿"></canvas></section>
-<section><h2>后处理结果</h2><p id="final-stat" class="stage-stat"></p><canvas id="final" width="1200" height="1200" aria-label="固定后处理布局"></canvas></section>
+<section><h2 id="final-title">后处理结果</h2><p id="final-stat" class="stage-stat"></p><canvas id="final" width="1200" height="1200" aria-label="固定后处理布局"></canvas></section>
 </div>
 <div id="legend" aria-label="模块与约束图例"></div>
 <p id="selection" class="muted">点击模块可在各栏同时定位；再次点击取消。</p>
@@ -76,13 +76,16 @@ main{max-width:1700px;margin:auto;padding:24px}h1{font-size:25px;margin:0 0 6px}
   const omitFinal=Boolean(current.hide_missing_final&&!current.final);
   el('final').closest('section').hidden=omitFinal;el('final').closest('.panels').classList.toggle('two-panels',omitFinal);
   el('reference-title').textContent=current.reference_label||'Reference';
+  el('final-title').textContent=current.final_label||'后处理结果';
+  el('final').setAttribute('aria-label',current.final_label||'固定后处理布局');
   el('slider-hint').textContent=omitFinal?'滑块切换实际模型阶段；参考栏保持不变':'只切换中栏；左右保持不变';
   const layerIds=current.layer_ids||current.layers.map((_,i)=>i+1),actualDepth=layerIds[depth-1];
   const layerLabel=i=>current.layer_labels?.[i]||'S'+layerIds[i];
   el('depth').textContent=`${layerLabel(depth-1)} / ${layerLabel(count-1)}`;
   el('layer').setAttribute('aria-valuetext',layerLabel(depth-1));
   el('draft-title').textContent=count?`模型草稿 · ${layerLabel(depth-1)}`:current.draft_label||'模型草稿 · 末层';
-  const losses=current.layer_losses||[],loss=losses[depth-1];
+  const modelLosses=current.model_losses||[];
+  const losses=modelLosses.length?modelLosses:(current.layer_losses||[]),loss=modelLosses.length?losses[0]:losses[depth-1];
   el('loss-panel').hidden=!losses.length;el('loss-table').replaceChildren();
   el('objective-detail').hidden=true;
   if(loss){
@@ -92,14 +95,14 @@ main{max-width:1700px;margin:auto;padding:24px}h1{font-size:25px;margin:0 0 6px}
    const columns=current.loss_columns||[
     ['total','完整Loss'],['objective_total','监督目标Loss'],['reference_weighted','Reference'],['overlap_weighted','碰撞'],['wire_compact_weighted','线长/紧凑'],['grouping_weighted','分组'],['boundary_weighted','边界'],['grouping_blockage_weighted','分组阻隔'],['boundary_blockage_weighted','边界阻隔'],['public_shape_weighted','固定尺寸'],['public_preplaced_position_weighted','预放置位置'],['grouping_violations','分组断连数'],['supervision_weight','监督权重']];
    const keys=columns.map(c=>c[0]);el('loss-head').replaceChildren();
-   ['层',...columns.map(c=>c[1])].forEach(label=>{const th=document.createElement('th');th.textContent=label;el('loss-head').append(th)});
+   [modelLosses.length?'模型':'层',...columns.map(c=>c[1])].forEach(label=>{const th=document.createElement('th');th.textContent=label;el('loss-head').append(th)});
    el('loss-panel').querySelector('caption').textContent=current.loss_caption||defaultLossCaption;
-   losses.forEach((values,i)=>{const row=document.createElement('tr');if(i===depth-1)row.className='current-layer';const layer=document.createElement('td');layer.textContent=layerLabel(i);row.append(layer);keys.forEach(key=>{const cell=document.createElement('td');const value=key==='objective_total'?(values.directly_supervised?(values.objective_total??values.total):undefined):values[key];cell.textContent=fmt(value,key==='grouping_violations'?0:key==='supervision_weight'?4:6);row.append(cell)});el('loss-table').append(row)});
+   losses.forEach((values,i)=>{const row=document.createElement('tr');if(!modelLosses.length&&i===depth-1)row.className='current-layer';const layer=document.createElement('td');layer.textContent=modelLosses.length?values.label:layerLabel(i);row.append(layer);keys.forEach(key=>{const cell=document.createElement('td');const value=key==='objective_total'?(values.directly_supervised?(values.objective_total??values.total):undefined):values[key];cell.textContent=fmt(value,key==='grouping_violations'?0:key==='supervision_weight'?4:6);row.append(cell)});el('loss-table').append(row)});
   }else el('draft-loss').textContent='本层 Loss 未保存';
   el('meta').textContent=`${current.label||''} · N=${current.n}`+(current.member?` · ${current.member.join(' : ')}`:'');
   const gs=current.grouping_summary;
   el('reference-stat').textContent='参考布局'+(gs?`\n分组断连数：${gs.reference}`:'');
-  el('final-stat').textContent=current.final?'已保存的原预算后处理结果'+(gs?`\n分组断连数：${gs.final}\n仍断开的分组：${gs.final_bad_groups.map(g=>'G'+g.group+'（'+g.components+'片）').join('、')}`:''):'';
+  el('final-stat').textContent=current.final?(current.final_caption||('已保存的原预算后处理结果'+(gs?`\n分组断连数：${gs.final}\n仍断开的分组：${gs.final_bad_groups.map(g=>'G'+g.group+'（'+g.components+'片）').join('、')}`:''))):'';
   if(current.objective_note){el('objective-detail').hidden=false;el('objective-detail').textContent=current.objective_note}
   ids.forEach(draw);
   const flags=current.constraints[selected];el('selection').textContent=selected<0?'点击模块可在各栏同时定位；再次点击取消。':`模块 ${selected} · ${[flags[3]>0?'G'+flags[3]:'',flags[0]?'F':'',flags[1]?'P':'',sides.filter(([b])=>flags[4]&b).map(([,t])=>t).join('/')].filter(Boolean).join(' · ')||'无附加约束'}`;

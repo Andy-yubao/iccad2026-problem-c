@@ -1,0 +1,59 @@
+{
+  "seed": 0,
+  "train_count": 36000,
+  "train_monitor_count": 500,
+  "dev_monitor_count": 500,
+  "batch_size": 64,
+  "steps_per_epoch": 563,
+  "dataset": "random_mib40k_v1; fulltrain36000; own stratified train_monitor500/dev_monitor500",
+  "registry_sha256": "487e5e1693dadc637c8e3c15c3ff55aa5781aa896f09e3b11fb093f25c1c611c",
+  "data_identity": "fc066a67bbe9fa7097742d15f50a3a5b48c56493315053a0ade3d5aa4e8a2fa8",
+  "maximum_epochs": 200,
+  "maximum_seconds": 14400,
+  "lr_levels": [
+    0.001,
+    0.00025,
+    0.0001,
+    5e-05
+  ],
+  "revision": "E159.role_initial128_overlap025.v1.seed0",
+  "status": "prepared_not_started",
+  "parameters": {
+    "e159_initial": 667631
+  },
+  "trainable_parameters": {
+    "e159_initial": 667631
+  },
+  "stages": [
+    "Scratch L0 only; freeze own-Loss-best and stop"
+  ],
+  "initialization": "scratch seed0, no historical weights or Adam",
+  "architecture": {
+    "attention_blocks": 3,
+    "heads": 4,
+    "head_dimension": 32,
+    "width": 128,
+    "ffn_hidden_width": 384,
+    "ffn_after_every_attention": true,
+    "layout_head_calls": 1,
+    "geometry_feedback": false
+  },
+  "loss": {
+    "reference_coefficient": 1.0,
+    "overlap_scale": 0.25,
+    "original_overlap_weight": 0.08975162861857286,
+    "effective_overlap_weight": 0.022437907154643215,
+    "grouping": "original unchanged",
+    "bottleneck_weight": 0.0,
+    "mib_weight": 0.6673664216670459
+  },
+  "selection": "same Loss for training/monitor/best/LR/earlystop; reference included",
+  "training_budget_note": "Same E158 cumulative 4h/200epoch; batch64/tail32, only L0; no preparation trials, backend, postprocessing or test",
+  "test_read": false,
+  "postprocessing_enabled": false,
+  "backend_training_enabled": false,
+  "comparison_arms": 0,
+  "parameter_count_method": "Source formula40*w*w+89*w+879 at w128; not instantiated or runtime-measured during preparation",
+  "defensive_tests_enabled": false,
+  "comparison_baseline": "E158_role_initial3 own-Loss-best58 on identical fixed train500/dev500"
+}

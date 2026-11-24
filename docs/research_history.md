@@ -1,5 +1,11 @@
 # 研究摘要
 
+2026-11-22：用户要求E161从头训练并改由用户亲自启动。旧运行完整归档至[history/e161_before_user_scratch_20261122T160405Z](../history/e161_before_user_scratch_20261122T160405Z/archive_manifest.json)，保留旧step838心跳、权重、预算和源码，不以进程查询缺失认定正常退出。持有原队列/worker OS锁完成归档；新运行`E161.user_scratch.20261122T160405Z`独立从零初始化和计时，当前prepared且未启动；架构/Loss/数据/seed/batch和最终自动dev2000保持。未执行试训或防御性测试。
+
+2026-11-22：用户判断MIB面积/形状修正损害reference质量，决定最终回到原面积/no-MIB与原random_reference40k数据。E151 best45已获原dev2000后台评价授权，新评价不恢复其旧训练；E161四阶段架构完成准备，所有阶段scratch并顺序冻结，删除MIB输入/关系/聚合/Loss/后处理评分，保留最新静态信息与MST阻挡监督。训练未启用，未执行防御性测试；见[E161设计](../experiments/E161_final_no_mib/DESIGN.md)。这是当前研究取舍，不把尚未完成的2000例评价写为新性能结论。
+
+2026-11-20：E158 转向仅研究 RoleInitial。用户假设增加隐空间协调层数有助于拓扑组织；准备了3个 attention/FFN 块、一次末端解码，并按用户补充加入0.25倍完整原重叠监督。grouping Loss设计和后段均搁置；准备短检通过，不是训练结果。见 [E158](../experiments/E158_role_initial3/README.md)。
+
 [E150 新初稿与原后段联合训练](../experiments/E150_role_joint/README.md)：2026-11-18用户授权准备通过后后台启动：E149新角色初稿＋E148原12层后续结构，681141参数全部scratch seed0联合训练。L0/L4/L8辅助各1/15、L12为.8；L0和L4去直接overlap，L8/L12完整。只传布局跨双层单元，初稿也直接监督。原36k/batch64/4h，基础及E149角色缓存复用；只记录Loss，无后处理/Q/test。准备检查已通过，状态以实验内记录为准。
 
 [E149 结构角色初稿独立训练](../experiments/E149_role_initial/README.md)：2026-11-17用户授权准备通过后后台启动，只训练带结构角色编码的初稿生成器。两层width64、完整引用端口token、多跳/锚点角色和静态关系bias，共107739参数；无S0/S1/S2后段。初稿唯一输出直接监督，完整去掉overlap组、其余原Loss系数保持。原36k/batch64、4h/200epoch、原train500/dev500，基础缓存复用，仅新建公开role sidecar；只记录Loss，无后处理/Q/test。准备检查已通过，实时状态以实验内记录为准。

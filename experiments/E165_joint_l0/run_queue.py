@@ -1,0 +1,145 @@
+"""Run L0, back up its best, then run refinement and fixed dev2000."""
+import argparse
+import json
+import os
+import shutil
+import subprocess
+import sys
+import traceback
+from datetime import datetime, timezone
+from .io import HERE, ROOT, exclusive, replace, save, sha, sources
+from .loss_config import ARMS, PROTECTED_EPOCHS
+from research.quality_log import summary as quality_line
+
+
+def read(path):
+    return json.loads(path.read_text(encoding='utf-8'))
+
+
+def freeze(arm, source_identity):
+    import torch
+
+    run = HERE / 'runs' / f'{arm}_seed0'
+    result = read(run / 'results.json')
+    if result['status'] not in ('early_stop', 'budget', 'max_epochs') or result['error']:
+        raise RuntimeError(f'Incomplete training for {arm}')
+    path = run / 'checkpoints' / 'best.pt'
+    best = torch.load(path, map_location='cpu', weights_only=False)
+    if best['identity']['sources'] != source_identity or source_identity != sources():
+        raise ValueError('Frozen source identity changed')
+    progress = best['progress']
+    epoch = progress['best_epoch']
+    row = next(row['dev_monitor'] for row in progress['history'] if row['epoch'] == epoch)
+    if arm == ARMS[1] and (epoch <= PROTECTED_EPOCHS or not progress['unfrozen']):
+        raise ValueError('Final best must come from completed joint training')
+    frozen = dict(arm=arm, checkpoint=path.relative_to(ROOT).as_posix(),
+                  checkpoint_sha256=sha(path), best_epoch=epoch,
+                  parameters=sum(value.numel() for value in best['model'].values()),
+                  own_selection_loss=row['total'], training_seconds=result['elapsed_seconds'],
+                  training_epochs=result['epochs'], selection_frozen_before_Q=True)
+    frozen['common_final_dev_loss'] = row.get('final_base_full_total', row['total'])
+    frozen['own_new_final_dev_loss'] = row.get('final_total', row['total'])
+    if arm == ARMS[0]:
+        backup = HERE / 'backups' / 'l0_pretrained_best.pt'
+        if backup.exists():
+            raise FileExistsError(backup)
+        backup.parent.mkdir(exist_ok=True)
+        pending = backup.with_suffix('.pt.pending')
+        shutil.copyfile(path, pending)
+        if sha(pending) != frozen['checkpoint_sha256']:
+            raise ValueError('L0 backup checksum mismatch')
+        replace(pending, backup)
+        frozen['backup'] = backup.relative_to(ROOT).as_posix()
+        save(backup.with_suffix('.json'), frozen)
+        print(f'[BACKUP] {frozen["backup"]} sha256={frozen["checkpoint_sha256"]}', flush=True)
+    save(HERE / f'frozen_{arm}.json', frozen)
+    print(f'[LOSS] {arm} best_epoch={epoch} dev={row["total"]:.9f}', flush=True)
+    return frozen
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    mode = parser.add_mutually_exclusive_group(required=True)
+    mode.add_argument('--start', action='store_true')
+    mode.add_argument('--resume', action='store_true')
+    args = parser.parse_args()
+    expected = read(HERE / 'preparation.json')['sources']
+    auth = read(HERE / 'authorization.json')
+    if not (auth['training_enabled'] and auth['postprocessing_enabled']) or expected != sources():
+        raise ValueError('Queue authorization or frozen sources mismatch')
+    env = dict(os.environ, CUBLAS_WORKSPACE_CONFIG=':4096:8', PYTHONDONTWRITEBYTECODE='1',
+               PYTHONIOENCODING='utf-8')
+    state_path = HERE / 'queue_state.json'
+    with exclusive(HERE / 'queue.lock'):
+        state = read(state_path)
+        if args.start and (state['status'] != 'prepared' or (HERE / 'runs').exists()):
+            raise RuntimeError('Fresh queue already started')
+        if args.resume and state['status'] != 'paused':
+            raise RuntimeError('Only a safely paused queue can resume')
+
+        def beat(**fields):
+            state.update(fields, updated_utc=datetime.now(timezone.utc).isoformat())
+            save(state_path, state)
+
+        def stopped():
+            return any((HERE / name).exists() for name in ('STOP', 'QUEUE_STOP', 'PAUSE_REQUEST'))
+
+        def run(stage, module, arm, resume=False):
+            if expected != sources():
+                raise ValueError('Prepared source identity changed')
+            log = HERE / 'background' / f'{stage}.log'
+            with log.open('a' if resume else 'x', encoding='utf-8') as sink:
+                command = [sys.executable, '-u', '-B', '-m', f'{__package__}.{module}', '--arm', arm]
+                if resume:
+                    command.append('--resume')
+                    sink.write(f'\n[RESUME] {datetime.now(timezone.utc).isoformat()}\n')
+                    sink.flush()
+                child = subprocess.Popen(command, cwd=ROOT, env=env, stdout=sink,
+                                         stderr=subprocess.STDOUT)
+                beat(active=stage, worker_pid=child.pid, log=log.relative_to(ROOT).as_posix())
+                print(f'[START] {stage} pid={child.pid} log={log.relative_to(ROOT)}', flush=True)
+                if child.wait():
+                    raise RuntimeError(f'{stage} failed; see {log.relative_to(ROOT)}')
+
+        beat(status='running', pid=os.getpid())
+        try:
+            for arm in ARMS:
+                if stopped():
+                    beat(status='paused', active=None, worker_pid=None)
+                    return
+                if arm in state['completed']:
+                    continue
+                run_dir = HERE / 'runs' / f'{arm}_seed0'
+                resume = args.resume and (run_dir / 'checkpoints/latest.pt').exists()
+                if resume and read(run_dir / 'results.json')['status'] != 'user_stop':
+                    raise RuntimeError(f'{arm} lacks a safe pause result')
+                run(arm, 'train', arm, resume=resume)
+                if read(HERE / 'runs' / f'{arm}_seed0' / 'results.json')['status'] == 'user_stop':
+                    beat(status='paused', active=None, worker_pid=None)
+                    return
+                frozen = freeze(arm, expected)
+                state['completed'].append(arm)
+                beat(active=None, worker_pid=None)
+            if stopped():
+                beat(status='paused', active=None, worker_pid=None)
+                return
+            save(HERE / 'evaluation' / 'frozen.json', dict(frozen, sources=expected))
+            run('dev2000', 'evaluation.run', ARMS[1])
+            output = HERE / 'evaluation' / 'output'
+            audit = read(output / 'state.json')
+            if audit['status'] == 'paused':
+                beat(status='paused', active=None, worker_pid=None)
+                return
+            result = read(output / 'results.json')
+            if (audit['status'], result['count'], result['hard_legal']) != ('complete', 2000, 2000):
+                raise RuntimeError('Full dev2000 hard-legality check did not complete')
+            print(quality_line(result, (output / 'results.json').relative_to(ROOT).as_posix()), flush=True)
+            state['completed'].append('dev2000')
+            beat(status='complete', active=None, worker_pid=None)
+        except BaseException as error:
+            beat(status='error', error=repr(error), traceback=traceback.format_exc())
+            raise
+
+
+if __name__ == '__main__':
+    main()

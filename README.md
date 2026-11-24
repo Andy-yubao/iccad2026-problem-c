@@ -1,5 +1,29 @@
 # ICCAD 2026 Problem C
 
+[E166 联合后段的软约束监督](experiments/E166_soft_count_joint/README.md)已完成，原 no-MIB dev2000 混合 Q 为 1.011756，硬合法 2000/2000。复用 E165 L0 best67，降低 L12 reference 并在 L8/L12 加入分组和贴边代理项。草稿贴边改善，最终混合 Q 仍高于 E165。[结果](experiments/E166_soft_count_joint/evaluation/output/results.json)
+
+[E165 三层初稿与后段联合微调](experiments/E165_joint_l0/README.md)已完成，原 no-MIB dev2000 混合 Q 为 1.008717，硬合法 2000/2000。完整原 train36k 为当前默认，L0 best67 已在本地单独备份。[结果](experiments/E165_joint_l0/evaluation/output/results.json) · [当前数据约定](docs/datasets.md)
+
+[E162半步/全步重复各阶段](experiments/E162_repeat_half_residual/README.md)已完成固定dev500 Loss对照，并按用户要求创建后台原no-MIB dev2000进程。保持E161冻结权重、不训练；S0/S1/S2各执行两次，先0.5布局残差、再1.0。[Loss报告](experiments/E162_repeat_half_residual/loss_audit_dev500/report.md)；[实时状态](experiments/E162_repeat_half_residual/evaluation/output/state.json)。E161原dev2000已完成，混合Q1.031281153。以下为历史过程。
+
+E161回传S2 best21的本地原no-MIB dev2000评价已正式启动，模型/后处理源码和原预算不变，结果保存到独立目录。实时进度见[状态](experiments/E161_kaggle_transfer/local_dev2000_v1/output/state.json)，[评价入口](experiments/E161_kaggle_transfer/local_dev2000_v1/README.md)。以下为历史过程。
+
+E161四阶段训练已完成，远端70个文件已完整回传且权重哈希通过；最终为S2 best21。GPU占用已归零，后续回到本地。dev2000因迁移包漏掉评价配置未启动，本次未重训或启动本地评价。[回传记录](experiments/E161_kaggle_transfer/downloaded/20261123T084205Z/RETURN_TO_LOCAL.md)；[当前状态](docs/current_status.md)。以下为历史过程。
+
+[E161 Kaggle任务](https://www.kaggle.com/code/andyyubao/iccad-e161-s1-resume-20261123)已于2026-11-23台北10:14成功提交私有GPU版本1，最近返回QUEUED；数据集已就绪，尚未确认新训练更新。本地训练仍暂停；不重复部署，状态见[当前记录](docs/current_status.md)。以下为历史过程。
+
+[E161四阶段训练](experiments/E161_final_no_mib/README.md)已按用户要求改为全新scratch、由用户亲自启动。旧运行与预算证据归档至[重开记录](history/e161_before_user_scratch_20261122T160405Z/archive_manifest.json)，当前`prepared`、尚未启动；直接运行[PowerShell入口](experiments/E161_final_no_mib/launch_user_scratch.ps1)。架构、原36k/no-MIB数据、各阶段4h/200轮和最终自动dev2000保持。以下旧启动描述保留为历史过程。
+
+最终主线已按2026-11-22用户决定回到原面积/no-MIB和原reference。[E151原dev2000评价](experiments/E151_frozen_role_initial/runs/evaluation_reference_dev2000_v1/README.md)后台进程已创建；[E161四阶段架构](experiments/E161_final_no_mib/README.md)已准备，训练关闭。最终成员为[原no-MIB dev2000](protocol/final_evaluation_no_mib_dev2000_v1.json)，不使用下述旧MIB面板。状态和边界见[当前结果](docs/current_status.md)、[执行约定](docs/protocol.md)。
+
+[收尾架构与最终评价](docs/final_architecture_20261122.md)：L0三层加宽attention，S0/S1/S2各双层、阶段末端单次解码、独立训练冻结；MST夹挡监督与信息迁移方案已记录，[完整dev2000清单](protocol/final_evaluation_dev2000_v1.json)已登记，尚未启动新训练/评价。E160已完成best63（dev Loss0.335786179）；E157完整MIB dev500混合Q1.014650315、grouping92.2%，最新结果见[当前状态](docs/current_status.md)。以下启动描述保留为历史过程记录。
+
+[E160 静态关系消息初稿](experiments/E160_static_relation_message/README.md) 已按用户授权完成准备并创建后台正式训练进程（2026-11-22）；按AGENTS未执行启动验证，运行状态以实验记录为准。在E159三个attention块中加入秩8的接收者相关静态关系消息，不增加分跳聚合；width128/四头、数据/MIB/Loss、36k/batch64/seed0、4h/200轮预算保持。仅L0，完成后冻结own-best并自动比较E159保存的总Loss与分项。未执行防御性测试、试训或启动验证，无后段/后处理/test；启动记录和日志见实验background目录。
+
+[E159 加宽三层 RoleInitial](experiments/E159_role_initial128/README.md) 已完成50轮正常早停，best47，固定train500/dev500 Loss0.348669/0.347660，耗时79.9分钟。相对E158 best58的dev总Loss降低8.74%，482/500题改善；线长/紧凑分项略升。[完整比较](experiments/E159_role_initial128/comparison_e158/report.md)。同题对照10例和E159 Loss最差10例已保存，端口8829/8830。仅L0，无后处理或test。
+
+[E158 三层 RoleInitial 初稿](experiments/E158_role_initial3/README.md) 已完成61轮正常早停，34343次更新，耗时89.6分钟，冻结best58；固定train500/dev500 Loss为0.381521/0.380959（含reference1.0和原重叠组×0.25）。[分项Loss、曲线与E155共同口径对照](experiments/E158_role_initial3/runs/review_results_v1/report.md) 已保存；随机dev20已按统一入口展示，端口8828。仅L0，无后段、后处理或test。
+
 [E157 依次训练S1再S2](experiments/E157_sequential_s1_s2/README.md)：2026-11-20用户明确改为顺序训练并授权后台启动。冻结E156 best79；先训练S1编码器/共享双层S1两次（L6/L8 .2/.8），冻结own-best后，再新建S2编码器/共享双层S2两次（L10/L12 .2/.8）。完整公开Loss，reference及grouping瓶颈监督为0；仅S2 L12加0.2容差移动项，重叠模块减轻移动惩罚。两阶段各279958可训练参数、36k/batch64、各4h/200轮上限；两阶段冻结/恢复/梯度及完整MIB后处理短检通过后启动。最后唯一S2 best运行新dev500完整MIB评价，不读test。队列与日志以实验内记录为准。
 
 [E156 两次共享S0](experiments/E156_two_s0_stage/README.md) 已用满原4小时预算，完成80轮及第81轮部分更新，best79 dev Loss0.189882已冻结。未启动S1/S2；父权重现供E157顺序训练使用。

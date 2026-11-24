@@ -4,10 +4,10 @@
 
 ## 数据与模型边界
 
-- 数据路径由 `protocol/paths.json` 解析。默认新研究使用固定 random40k 父集合的16k训练视图，见 [数据说明](datasets.md)；已登记36k等历史实验忠实保留，不追溯改写。
+- 数据路径由 `protocol/paths.json` 解析。新研究默认使用固定 random40k 的完整 36k 训练集及原 train500/dev500，见 [36k 训练策略](../protocol/research_training36k_v1.json)和[数据说明](datasets.md)。已登记的 16k 及其他历史实验保留原成员。
 - 相同冻结成员与预处理优先复用已有NPZ和兼容的持久化CPU张量缓存，先核对成员顺序、原始清单、字段版本、dtype及任务语义；只构建缺失/失效部分。16k按冻结索引取36k视图，不重新抽样。原始生成、静态预处理、已有缓存加载、模型初始化/图捕获分开记时。
 - 网络输入只含公开面积、连接、端口、约束和允许的草稿。reference自由坐标/形状、教师标签和参考评分分母不作模型或求解器输入；reference只用于登记监督、展示与评价。
-- 2026-11-18起用户决定恢复MIB；新登记按 `protocol/research_mib_restored_v1.json` 和实验计划执行，首个E153使用旧MIB相容32k派生任务。此前no-MIB历史规则保留：不做平均面积/同形变换，不在输入、Loss、后处理或选模中施加MIB；软违规分子与分母都排除MIB。官方原件不改，本地研究Q不冒充正式成绩。机器约定：`protocol/research_no_mib_v1.json`。
+- 2026-11-22用户决定最终研究重新使用原面积/no-MIB：回到 `protocol/random_reference40k_v1.json` 原数据及原reference，E161沿用原36k；不做平均面积/同形或reference形状修正，不在输入、关系、Loss、后处理或选模中施加MIB，软违规分子与分母都排除MIB。当前登记为 `protocol/research_final_no_mib_v1.json`，基础评分规则仍为 `protocol/research_no_mib_v1.json`。2026-11-18恢复MIB的E153–E160及 `research_mib_restored_v1.json` 仅按各自历史身份保留。官方原件不改，本地研究Q不冒充正式成绩。
 - 预测全部模块的位置与形状，包含F/P。公开固定规格可作条件，不mask冻结预测、不覆盖草稿；约束满足交给后处理，最终按原规格独立硬检查。机器约定：`protocol/model_prediction_boundary_v1.json`。历史模型按其原登记复现。
 - train用于训练；dev用于固定监测、Loss-best和终末评价。test默认封存，只有明确的成员与用途授权才能读取；已有测试曝光不能称全新未见测试。本次清理不读取test载荷。
 

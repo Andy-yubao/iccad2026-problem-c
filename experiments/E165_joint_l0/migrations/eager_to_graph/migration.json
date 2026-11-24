@@ -1,0 +1,45 @@
+{
+  "checkpoints": {
+    "latest.pt": {
+      "original_sha256": "d25d133f44632c4c713515a3b3aba8d736388c0e1022864ff84e7adaf46506c3",
+      "migrated_sha256": "02dcf201c9026d052f5249acf4a894b319857d15115a77e129d1a1657c10fe4a",
+      "step": 728,
+      "elapsed_seconds": 494.15036510000937
+    },
+    "best.pt": {
+      "original_sha256": "e6223e6f769e3cf06734cd28f0d53dcc77f754e6bf28b26b60fccc317aab1e1b",
+      "migrated_sha256": "13c649ef668964e42c8e02bf40916cd8c8d379072da4ac8d194687b4b196e199",
+      "step": 563,
+      "elapsed_seconds": 408.2288305000402
+    }
+  },
+  "short_checks": {
+    "gradient_max_abs_error": 3.7834979593753815e-10,
+    "max_ports": 362,
+    "stages": {
+      "l0": {
+        "median_full_ms": 164.7009500011336,
+        "tail_ms": 371.5440999949351,
+        "peak_reserved_gib": 7.16796875
+      },
+      "frozen": {
+        "median_full_ms": 397.8615000087302,
+        "tail_ms": 507.89950002217665,
+        "peak_reserved_gib": 7.833984375
+      },
+      "joint": {
+        "median_full_ms": 518.9986499899533,
+        "tail_ms": 636.2369999988005,
+        "peak_reserved_gib": 11.373046875
+      }
+    },
+    "verified": [
+      "L0 original loss and layout gradient",
+      "32-case graph loss averaging",
+      "backward and optimizer for all three modes",
+      "L0 bitwise frozen",
+      "L0 joint gradients and preserved backend Adam/projection"
+    ]
+  },
+  "scope": "Checkpoint identity updated for shared MST and CUDA graphs; all model, AdamW, RNG, cursor, projection, best and budget retained"
+}

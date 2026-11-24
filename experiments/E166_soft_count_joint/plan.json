@@ -1,0 +1,51 @@
+{
+  "revision": "E166.soft_count_joint.v1.seed0",
+  "seed": 0,
+  "train_count": 36000,
+  "batch_size": 64,
+  "batch_tail": 32,
+  "backend_maximum_seconds": 28800,
+  "maximum_epochs": 200,
+  "protected_backend_epochs": 20,
+  "l0_lr_scale": 0.1,
+  "l0_aux_weight": 0.05,
+  "group_block_scale": 0.25,
+  "optimizer": "AdamW weight_decay=.0003, gradient clip1, per-module relative step cap .005",
+  "lr_levels": [
+    0.001,
+    0.00025,
+    0.0001,
+    5e-05
+  ],
+  "lr_policy": "Baseline epoch 15, 3 stalled epochs per drop; keep applied LR at unfreeze and reset plateau/early-stop counters.",
+  "selection": "Fixed dev500 own-Loss from a completed joint epoch; no Q-based checkpoint selection.",
+  "training_engine": "Deterministic FP32 CUDA Graph for forward/backward and update projection; masked padding for 32-case tail, AdamW outside graphs. Share one selected MST per exit; deterministic matrix sum for selected endpoint gradients.",
+  "training_policy": "protocol/research_training36k_v1.json",
+  "registry": "protocol/random_reference40k_v1.json",
+  "dataset_report_sha256": "3a79fd9eb2636578fa4df876ccac51699eab04cd59179027488aa7d8c334928a",
+  "payload_checksums_sha256": "f8eeb86da003c9901b73541eb13cc8e16cad9cd963dcf74a0edddf4a1a5abe54",
+  "required_cache_key": "a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148",
+  "cache_build_workers": 4,
+  "role_cache_root": "experiments/E149_role_initial/role_cache_v1",
+  "cache_policy": "Read-only reuse of the original compatible full shared CPU static and public-role caches.",
+  "evaluation_registry": "protocol/final_evaluation_no_mib_dev2000_v1.json",
+  "no_mib": true,
+  "test_read": false,
+  "parent_initial": {
+    "checkpoint": "experiments/E165_joint_l0/backups/l0_pretrained_best.pt",
+    "checkpoint_sha256": "454b872665ca620994cbae0c0af0faa95cfdf71b07130f1bb681e6f97cfeb82d",
+    "best_epoch": 67
+  },
+  "reference_scale": {
+    "L0": 1,
+    "L4": 1,
+    "L8": 1,
+    "L12": 0.25
+  },
+  "soft_count_proxy": {
+    "tau": 0.01,
+    "L8_per_term": 0.01,
+    "L12_per_term": 0.02,
+    "aggregation": "Per-case original no-MIB soft-constraint capacity; MST edge contact gap and worst required boundary-side gap per block"
+  }
+}

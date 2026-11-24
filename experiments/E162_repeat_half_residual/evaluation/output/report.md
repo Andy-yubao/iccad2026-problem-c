@@ -1,0 +1,38 @@
+# E162 repeated half/full frozen S2 e162_repeat_half 原固定dev2000
+
+```json
+{
+  "status": "complete",
+  "arm": "e162_repeat_half",
+  "count": 2000,
+  "checkpoint_sha256": "496cab3556d54ed2001ab9ff98617cbd3aa61241474898de6205d0d450ec29b7",
+  "best_epoch": 21,
+  "parameters": 1908096,
+  "weighted_Q": 1.0287905046512316,
+  "mean_Q": 1.0269776806415511,
+  "mixed_Q": 1.0278840926463912,
+  "hard_legal": 2000,
+  "raw_hard_legal": 0,
+  "fallbacks": 0,
+  "mean_complete_seconds": 0.24517324040073435,
+  "p95_complete_seconds": 0.5470331749762408,
+  "max_complete_seconds": 1.9892451000050642,
+  "over250ms": 623,
+  "max_Q": 3.35785531256784,
+  "p95_Q": 1.1043238475711838,
+  "raw_repeated_coverage": 0.07540731099148168,
+  "raw_bbox_over_area": 1.0373066603001406,
+  "common_final_dev_loss": 0.24793012396991254,
+  "common_final_new_dev_loss": 0.24793012396991254,
+  "own_selection_loss": 0.24793012396991254,
+  "training_seconds": 9537.797135243001,
+  "training_epochs": 26,
+  "scoring_policy": "Original areas/no MIB local research Q; neutral runtime1; not official contest score",
+  "elapsed_seconds": 809.858142299985,
+  "test_read": false,
+  "selection_frozen_before_Q": true,
+  "grouping_satisfied": 1682,
+  "boundary_satisfied": 1739,
+  "all_soft_satisfied": 1486
+}
+```

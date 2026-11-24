@@ -1,0 +1,66 @@
+{
+  "seed": 0,
+  "train_count": 36000,
+  "train_monitor_count": 500,
+  "dev_monitor_count": 500,
+  "batch_size": 64,
+  "steps_per_epoch": 563,
+  "dataset": "random_mib40k_v1; fulltrain36000; own stratified train_monitor500/dev_monitor500",
+  "registry_sha256": "487e5e1693dadc637c8e3c15c3ff55aa5781aa896f09e3b11fb093f25c1c611c",
+  "data_identity": "fc066a67bbe9fa7097742d15f50a3a5b48c56493315053a0ade3d5aa4e8a2fa8",
+  "maximum_epochs": 200,
+  "maximum_seconds": 14400,
+  "lr_levels": [
+    0.001,
+    0.00025,
+    0.0001,
+    5e-05
+  ],
+  "revision": "E160.static_relation_message.v1.seed0",
+  "status": "prepared_authorized",
+  "parameters": {
+    "e160_initial": 677087
+  },
+  "trainable_parameters": {
+    "e160_initial": 677087
+  },
+  "stages": [
+    "Scratch L0 only; freeze own-Loss-best and stop"
+  ],
+  "initialization": "scratch seed0, no historical weights or Adam",
+  "architecture": {
+    "attention_blocks": 3,
+    "heads": 4,
+    "head_dimension": 32,
+    "width": 128,
+    "ffn_hidden_width": 384,
+    "ffn_after_every_attention": true,
+    "layout_head_calls": 1,
+    "geometry_feedback": false,
+    "static_relation_messages": true,
+    "relation_rank": 8,
+    "relation_input_dimensions": 9,
+    "relation_conditioning": "current receiver/sender hidden states plus existing static pair7 and sender module/port type2",
+    "separate_hop_aggregation": false,
+    "relation_projection_initial_scale": 0.01,
+    "base_initialization_rng_preserved": true
+  },
+  "loss": {
+    "reference_coefficient": 1.0,
+    "overlap_scale": 0.25,
+    "original_overlap_weight": 0.08975162861857286,
+    "effective_overlap_weight": 0.022437907154643215,
+    "grouping": "original unchanged",
+    "bottleneck_weight": 0.0,
+    "mib_weight": 0.6673664216670459
+  },
+  "selection": "same Loss for training/monitor/best/LR/earlystop; reference included",
+  "training_budget_note": "Same E159 cumulative4h/200epoch,36k,batch64/tail32,seed0; no preflight,trial,backend,postprocessing or test",
+  "test_read": false,
+  "postprocessing_enabled": false,
+  "backend_training_enabled": false,
+  "comparison_arms": 0,
+  "parameter_count_method": "Static source count: E159667631 + three blocks*(2*128*8 +9*8+8 +4*8*32)=677087; no trial instantiation",
+  "defensive_tests_enabled": false,
+  "comparison_baseline": "E159_role_initial128 frozen own-best47, identical panels and Loss"
+}
