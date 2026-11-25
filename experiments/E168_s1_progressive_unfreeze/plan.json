@@ -1,0 +1,65 @@
+{
+  "revision": "E168.s1_progressive_unfreeze.v1.seed0",
+  "seed": 0,
+  "train_count": 36000,
+  "batch_size": 64,
+  "batch_tail": 32,
+  "backend_maximum_seconds": 28800,
+  "maximum_epochs": 200,
+  "group_block_scale": 0.25,
+  "optimizer": "AdamW weight_decay=.0003, gradient clip1, per-module relative step cap .005",
+  "lr_levels": [
+    0.001,
+    0.00025,
+    0.0001,
+    5e-05
+  ],
+  "lr_policy": "E166 baseline epoch 15, 3 stalled epochs per drop. Keep current S1 LR and state at unfreeze, reset plateau counters, prefix LR is 0.1x S1.",
+  "selection": "Fixed dev500 own-Loss from a completed joint epoch after 20 protected epochs.",
+  "training_engine": "Deterministic FP32 CUDA Graph for forward/backward and update projection; masked padding for 32-case tail, AdamW outside graphs. Share one selected MST per exit; deterministic matrix sum for selected endpoint gradients.",
+  "training_policy": "protocol/research_training36k_v1.json",
+  "registry": "protocol/random_reference40k_v1.json",
+  "dataset_report_sha256": "3a79fd9eb2636578fa4df876ccac51699eab04cd59179027488aa7d8c334928a",
+  "payload_checksums_sha256": "f8eeb86da003c9901b73541eb13cc8e16cad9cd963dcf74a0edddf4a1a5abe54",
+  "required_cache_key": "a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148",
+  "cache_build_workers": 4,
+  "role_cache_root": "experiments/E149_role_initial/role_cache_v1",
+  "cache_policy": "Read-only reuse of the original compatible full shared CPU static and public-role caches.",
+  "no_mib": true,
+  "test_read": false,
+  "parent_initial": {
+    "arm": "e167_s0",
+    "checkpoint": "experiments/E167_s0_no_overlap_feedback/runs/e167_s0_seed0/checkpoints/best.pt",
+    "checkpoint_sha256": "ab0d8133f95534f2ce46a50711fa512cbbcb49eba7a9ce69391bdbc82b2f4a71",
+    "best_epoch": 57
+  },
+  "reference_scale": {
+    "L0": 1.0,
+    "L4": 1.0,
+    "L8": 1.0
+  },
+  "soft_count_proxy": {
+    "tau": 0.01,
+    "L8_per_term": 0.01,
+    "aggregation": "Per-case original no-MIB soft-constraint capacity; MST edge contact gap and worst required boundary-side gap per block"
+  },
+  "active_layers": "L0-L4 pretrained prefix; fresh S1 used twice to L8.",
+  "overlap_feedback_disabled_outputs": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "exit_weights": {
+    "L4": 0.1,
+    "L8": 0.1
+  },
+  "overlap_scale": {
+    "L0": 0.25,
+    "L4": 0.0,
+    "L8": 1.0
+  },
+  "protected_backend_epochs": 20,
+  "prefix_lr_scale": 0.1,
+  "l0_aux_weight": 0.05
+}

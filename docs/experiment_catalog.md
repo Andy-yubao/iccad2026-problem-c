@@ -1,5 +1,15 @@
 # 实验位置索引
 
+[E170 五阶段布局细化](../experiments/E170_three_block_stages/README.md)直接复用预训练 L0 为 S0，后续四阶段各三层 attention，逐阶段本地训练设计。
+
+[E169 Ref080](../experiments/E169_s2_progressive_unfreeze/README.md)在 E168 上训练 S2。L12 reference 倍率 0.80，保留分组和贴边代理以及两项计算优化。[dev2000 终末结果](../experiments/E169_s2_progressive_unfreeze/evaluation/output/results.json)。
+
+[E168 S1](../experiments/E168_s1_progressive_unfreeze/README.md)从 E167 best57 初始化，分阶段冻结和解冻。[S1 对照](../experiments/E168_s1_progressive_unfreeze/E168_E165_S1_comparison.json)。
+
+[E167 S0](../experiments/E167_s0_no_overlap_feedback/README.md)从 E165 独立 L0 出发，关闭 S0 的重叠几何反馈和直接重叠项。[S0 对照](../experiments/E167_s0_no_overlap_feedback/comparison.json)。
+
+[软约束后处理及坐标等价加速](../research/postprocess_tail/README.md)记录 E165 dev2000 的质量与耗时对照。
+
 [E166 联合后段的软约束监督](../experiments/E166_soft_count_joint/README.md)复用 E165 L0 best67，完整后段联合训练，前 20 轮冻结 L0。L12 reference 系数为 0.25，L8/L12 加入分组与贴边代理项，以原 no-MIB dev2000 做终末检查。
 
 [E165 三层初稿与后段联合微调](../experiments/E165_joint_l0/README.md)使用完整原 train36k、宽 64 × 3 静态关系 L0 和 E151 后段。L0 best 单独备份，后段先冻结 L0 20 轮，解冻后端到端微调，自动运行原 no-MIB dev2000。

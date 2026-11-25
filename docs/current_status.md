@@ -1,5 +1,9 @@
 # 当前结果
 
+2026-11-25，E169 Ref080 best33 用历史 E98.depth_budget.v1 后处理得到 dev2000 硬合法 2000/2000，混合 Q 1.007875，P95 Q 1.051271，全部软约束满足 1,771 例。E165 与 E166 同口径混合 Q 为 1.008717 和 1.011756。E169 使用 CPU 批量推理，历史结果的运行时间因子同样固定为 1。[验证结果](../experiments/E169_s2_progressive_unfreeze/evaluation/output/results.json)
+
+2026-11-25，软约束后处理在 E165 best53 的配对 dev2000 上将混合 Q 从 1.008655 降到 1.007601，硬合法 2000/2000。加速版与该候选的 2,000 例几何输出逐位一致，平均后处理 CPU 时间下降 12.4%。[后处理报告](../research/postprocess_tail/README.md)
+
 2026-11-24，E165 best53 与 E166 best57 均完成同一原 no-MIB dev2000 和固定后处理预算，硬合法均为 2000/2000。E166 的草稿贴边违规从 32,870 降到 22,476，最终分组违规从 204 增到 224，贴边违规从 114 增到 129，混合 Q 从 1.008717 升到 1.011756。混合 Q 差值最大的三题合计占净退步约 94%，其 E166 主合法化路径均未产出硬合法候选。保留 E165 为后续基线。[E165 结果](../experiments/E165_joint_l0/evaluation/output/results.json) · [E166 结果](../experiments/E166_soft_count_joint/evaluation/output/results.json) · [可视化选题](../experiments/E166_soft_count_joint/visualization_soft10_pair_v1/selection.json)
 
 2026-11-24 台北 08:33，[E166](../experiments/E166_soft_count_joint/README.md)已在独立 Windows 后台启动。沿用 E165 的联合后段与 20 轮 L0 冻结，初始化自 E165 的 L0 best67；L12 reference 系数降到 0.25，L8/L12 加入分组和贴边代理项。终末自动运行原 no-MIB dev2000。[队列状态](../experiments/E166_soft_count_joint/queue_state.json) · [训练日志](../experiments/E166_soft_count_joint/background/e166_backend.log)
