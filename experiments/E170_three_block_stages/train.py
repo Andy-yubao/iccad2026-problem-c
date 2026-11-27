@@ -1,0 +1,422 @@
+"""Train one frozen-prefix E170 stage or the final joint phase."""
+import argparse
+from itertools import chain
+import json
+import os
+import random
+import signal
+import subprocess
+import sys
+import threading
+import time
+import traceback
+import numpy as np
+import torch
+from .io import ROOT, HERE, OWNER, sha, save, checkpoint, sources, snapshot, exclusive
+from .model import GeometryModel
+from .public import inputs_only
+from .data import load_rows, collate, register_resident
+from .data import records, REGISTRY
+from .resident import ResidentRows
+from .cuda_step import CapturedStep
+from .augmentation import flags_for
+from .loss import per_case
+from .loss_config import PLAN, PREFIX_LR_SCALE, TRAINING_ARMS, configuration
+from .schedule import PlateauController, learning_rates
+from .shape_feedback import max_same_group_neighbors
+
+BATCH_SIZE = PLAN['batch_size']
+RUN = ARM = MODEL = None
+
+def seed_all(seed=0):
+    if os.environ.get("CUBLAS_WORKSPACE_CONFIG") != ":4096:8":
+        raise ValueError("Set CUBLAS_WORKSPACE_CONFIG=:4096:8 before CUDA")
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+    torch.set_num_threads(4)
+    if torch.get_num_interop_threads() != 1:
+        torch.set_num_interop_threads(1)
+    torch.use_deterministic_algorithms(True)
+    torch.backends.cuda.matmul.allow_tf32 = False
+    torch.backends.cudnn.allow_tf32 = False
+
+def rng_state():
+    return dict(python=random.getstate(), numpy=np.random.get_state(),
+                torch=torch.get_rng_state(), cuda=torch.cuda.get_rng_state_all())
+
+def restore_rng(rng):
+    random.setstate(rng['python'])
+    np.random.set_state(rng['numpy'])
+    torch.set_rng_state(rng['torch'])
+    torch.cuda.set_rng_state_all(rng['cuda'])
+
+def optimizer_for(model, joint):
+    rate = learning_rates(joint)[0]
+    optimizer = torch.optim.AdamW(model.stages[-1].parameters(), lr=rate, weight_decay=.0003)
+    if joint:
+        model.unfreeze()
+        optimizer.add_param_group(dict(params=[p for module in model.prefix_modules() for p in module.parameters()],
+                                       lr=rate * PREFIX_LR_SCALE, lr_scale=PREFIX_LR_SCALE))
+    return optimizer
+
+def build_capture(model, optimizer, pack, projection=None, batch_size=BATCH_SIZE):
+    model.train()
+    sample = pack.batch([i % len(pack.rows) for i in range(batch_size)])
+    cap = CapturedStep(model, optimizer, sample)
+    if projection:
+        restore_projection(cap.projection, projection)
+    return cap
+
+def restore_projection(projection, saved):
+    previous = dict(zip(saved['group_names'], zip(saved['clipped_steps_per_group'], saved['last_scales'])))
+    current = set(projection.names)
+    if previous.keys() != current:
+        raise ValueError('Unexpected projection trainability')
+    clipped, scales = zip(*(previous[name] for name in projection.names))
+    projection.steps = saved['steps']
+    projection.clipped.copy_(torch.tensor(clipped, device='cuda'))
+    projection.last_scales.copy_(torch.tensor(scales, device='cuda'))
+
+def numerical_check(values, output):
+    ok = torch.isfinite(torch.stack(list(values.values()))).all() & torch.isfinite(output).all()
+    if not bool(ok & (values['total'].amax() < 1000.)):
+        raise RuntimeError('Monitoring nonfinite/per-case explosion')
+
+@torch.no_grad()
+def monitor(model, rows, halted=lambda: False, beat=lambda **kw: None):
+    model.eval()
+    all_values = []
+    members = []
+    for start in range(0, len(rows), BATCH_SIZE):
+        if halted():
+            return None
+        batch, _ = collate(rows[start:start+BATCH_SIZE], 'cuda')
+        out = model(inputs_only(batch))
+        values = per_case(out, batch, model.stage, model.prefix_unfrozen)
+        numerical_check(values, out)
+        keys = list(values)
+        all_values.append(torch.stack([values[k] for k in keys], -1).cpu().double().numpy())
+        members.extend([list(r['member']) for r in rows[start:start+BATCH_SIZE]])
+        beat(activity='monitor', monitor_completed=min(start+BATCH_SIZE, len(rows)), monitor_count=len(rows))
+    array = np.concatenate(all_values)
+    result = {key: float(array[:, j].mean()) for j, key in enumerate(keys)}
+    totals = array[:, keys.index('total')]
+    result.update(count=len(rows), p95=float(np.quantile(totals, .95)),
+                  max=float(totals.max()), worst_member=members[int(totals.argmax())],
+                  per_case_total=totals.tolist())
+    return result
+
+def fresh_progress(size, joint):
+    return dict(epoch=0, cursor=0, step=0, order=None, seen=np.zeros(size, dtype=bool),
+                pending_monitor=True, unfrozen=joint, best=None, best_epoch=None, history=[], batch_history=[])
+
+def main():
+    global RUN, ARM, MODEL
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--arm', choices=TRAINING_ARMS, required=True)
+    parser.add_argument('--resume', action='store_true')
+    args = parser.parse_args()
+    ARM = args.arm
+    MODEL = dict(stage=4 if ARM == 'joint' else int(ARM[1:]), width=64, ffn_dropout=.10, residual_dropout=.05,
+                 overlap_feedback=PLAN['overlap_feedback'])
+    RUN = HERE/'runs'/f'{ARM}_seed0'
+    authorization = json.loads((OWNER/'authorization.json').read_text(encoding='utf-8'))
+    if not authorization.get('training_enabled', False):
+        raise PermissionError('Preparation only: training is disabled by the user. No run was started.')
+    if authorization.get('scope') != PLAN['revision'] or ARM not in authorization.get('allowed_arms', []):
+        raise PermissionError('Missing explicit arm authorization')
+    gate=json.loads((OWNER/"preparation.json").read_text(encoding="utf-8"))
+    if gate["status"]!="prepared" or gate["sources"]!=sources():
+        raise RuntimeError("Prepared source identity mismatch")
+    if (OWNER/'STOP').exists() or (RUN/'STOP').exists():
+        raise RuntimeError('STOP present')
+    with exclusive(OWNER/'training.lock'):
+        run(args)
+
+class PreparationStopped(Exception):
+    pass
+
+def git_revision():
+    result = subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True, capture_output=True)
+    return result.stdout.strip() if result.returncode == 0 else None
+
+def run(args):
+    started = time.perf_counter()
+    plan = json.loads((OWNER/'plan.json').read_text(encoding='utf-8'))
+    seed_all(plan['seed'])
+    if REGISTRY.resolve() != (ROOT/'protocol/random_reference40k_v1.json').resolve():
+        raise ValueError('Unexpected registry environment override')
+    joint = ARM == 'joint'
+    maximum_seconds = plan['joint']['maximum_seconds'] if joint else plan['backend_maximum_seconds']
+    maximum_epochs = plan['joint']['maximum_epochs'] if joint else plan['maximum_epochs']
+    parent_arm = 's4' if joint else f's{MODEL["stage"] - 1}'
+    parent = (plan['parent_initial'] if ARM == 's1' else
+              json.loads((HERE/f'frozen_{parent_arm}.json').read_text(encoding='utf-8')))
+    if sha(ROOT/parent['checkpoint']) != parent['checkpoint_sha256']:
+        raise ValueError('Frozen parent weight identity changed')
+    identity = dict(revision=plan['revision'], arm=ARM, plan=plan, sources=sources(),
+                    initial_checkpoint=parent,
+                    loss=configuration(MODEL["stage"], joint), registry_sha256=sha(REGISTRY),
+                    paths_sha256=sha(ROOT/'protocol/paths.json'), torch=str(torch.__version__),
+                    cuda=torch.version.cuda, gpu=torch.cuda.get_device_name(0), numpy=np.__version__)
+    previous = None
+    prior = float(plan.get('prior_stage_seconds',{}).get(ARM,0.))
+    if args.resume:
+        previous = torch.load(RUN/'checkpoints/latest.pt', map_location='cpu', weights_only=False)
+        if previous['identity'] != identity:
+            raise ValueError('Resume identity changed; migration required')
+        if previous['finished'] or previous['status'] == 'error':
+            raise ValueError('Terminal/error run cannot automatically restart')
+        prior = max(previous['elapsed_seconds'], json.loads((RUN/'budget.json').read_text())['elapsed_seconds'])
+    else:
+        RUN.mkdir(parents=True, exist_ok=False)
+        save(RUN/'config.json', dict(identity=identity, argv=[sys.executable, *sys.argv],
+             git_commit=git_revision(),
+             uncommitted_source_snapshot=True, test_read=False, parent_checkpoint=identity.get('initial_checkpoint')))
+        snapshot(RUN/'source_snapshot.zip', identity)
+    elapsed = lambda: prior+time.perf_counter()-started
+    model = GeometryModel(**MODEL).cuda()
+    if not previous:
+        prior_state = torch.load(ROOT/parent['checkpoint'], map_location='cpu', weights_only=False)
+        if (prior_state['identity']['arm'] != parent['arm']
+                or prior_state['progress']['best_epoch'] != parent['best_epoch']):
+            raise ValueError('Unexpected parent checkpoint arm or epoch')
+        if ARM != 's1' and (parent['arm'] != parent_arm or prior_state['identity']['revision'] != plan['revision']):
+            raise ValueError('Parent checkpoint belongs to a different E170 phase or revision')
+        if joint:
+            model.load_state_dict(prior_state['model'], strict=True)
+        else:
+            model.load_prefix(prior_state['model'])
+        del prior_state
+    optimizer = optimizer_for(model, joint)
+    save(RUN/'parameter_counts.json', dict(total=sum(p.numel() for p in model.parameters()),
+         trainable=sum(p.numel() for p in model.parameters() if p.requires_grad)))
+    scheduler = PlateauController(optimizer, joint)
+    progress = previous['progress'] if previous else fresh_progress(plan['train_count'], joint)
+    if previous:
+        if progress['unfrozen'] != joint:
+            raise ValueError('Resume trainability differs from the registered phase')
+        model.load_state_dict(previous['model'], strict=True)
+        optimizer.load_state_dict(previous['optimizer'])
+        scheduler.load_state_dict(previous['scheduler'])
+        restore_rng(previous['rng'])
+    requested = [False]
+    old_signal = signal.signal(signal.SIGINT, lambda *_: requested.__setitem__(0, True))
+    old_break = signal.signal(signal.SIGBREAK, lambda *_: requested.__setitem__(0, True)) if hasattr(signal, 'SIGBREAK') else None
+    cap = None
+    current_ids = None
+    closed = threading.Event()
+    hb_lock = threading.RLock()
+    hb = dict(status='starting', activity='initializing', pid=os.getpid())
+    def beat(**fields):
+        with hb_lock:
+            hb.update(fields)
+            save(RUN/'budget.json', dict(elapsed_seconds=elapsed(), maximum_seconds=maximum_seconds))
+            save(RUN/'heartbeat.json', dict(**hb, epoch=progress['epoch'], step=progress['step'],
+                 cursor=progress['cursor'], elapsed_seconds=elapsed(), prefix_unfrozen=progress['unfrozen'],
+                 utc=time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
+                 test_read=False, postprocessing_calls=0))
+    def heartbeats():
+        while not closed.wait(5.):
+            beat()
+    worker = threading.Thread(target=heartbeats, daemon=True)
+    worker.start()
+    def stopped():
+        return requested[0] or (OWNER/'STOP').exists() or (RUN/'STOP').exists() or (OWNER/'PAUSE_REQUEST').exists() or (OWNER/'QUEUE_STOP').exists()
+    def exhausted():
+        return elapsed() >= maximum_seconds
+    def halted():
+        return stopped() or exhausted()
+    def store(status, finished=False, best=False):
+        beat(status=status)
+        state = dict(model=model.state_dict(), model_config=MODEL, optimizer=optimizer.state_dict(),
+                     scheduler=scheduler.state_dict(), progress=progress, rng=rng_state(), identity=identity,
+                     elapsed_seconds=elapsed(), status=status, finished=finished,
+                     projection=cap.projection.summary() if cap else (previous['projection'] if previous else None))
+        checkpoint(RUN/'checkpoints/latest.pt', state)
+        if best:
+            checkpoint(RUN/'checkpoints/best.pt', state)
+        save(RUN/'progress.json', dict(status=status, finished=finished, epoch=progress['epoch'],
+             step=progress['step'], cursor=progress['cursor'], seen_count=int(progress['seen'].sum()),
+             best=progress['best'], best_epoch=progress['best_epoch'], lr=optimizer.param_groups[0]['lr'],
+             prefix_unfrozen=progress['unfrozen'], lr_prefix=optimizer.param_groups[-1]['lr'] if progress['unfrozen'] else None,
+             scheduler=scheduler.state_dict(), history=progress['history'], elapsed_seconds=elapsed(),
+             test_read=False, postprocessing_calls=0))
+        save(OWNER/f'state_{ARM}.json', dict(status=status, run=RUN.relative_to(ROOT).as_posix(), pid=os.getpid(),
+             epoch=progress['epoch'], step=progress['step'], best=progress['best'],
+             test_read=False, postprocessing_calls=0))
+    status = 'running'
+    error = None
+    print(f'[PHASE] {ARM} prefix_unfrozen={joint} lr={optimizer.param_groups[0]["lr"]:.6g} parent={parent["checkpoint"]}', flush=True)
+    try:
+        store('data_preparation')
+        beat(activity='loading existing shared CPU tensor cache; no static preprocessing')
+        train = load_rows('train', halted=halted, beat=beat)
+        dev = load_rows('dev_monitor500', halted=halted, beat=beat) if train is not None else None
+        if train is None or dev is None:
+            status = 'user_stop' if stopped() else 'budget'
+            raise PreparationStopped(status)
+        train_records = records('train')
+        dev_records = records('dev_monitor500')
+        if len(train) != plan['train_count'] or len(dev) != 500:
+            raise ValueError('Frozen role counts changed')
+        if [list(r['member']) for r in train] != [r['member'] for r in train_records]:
+            raise ValueError('Raw training members changed')
+        if [list(r['member']) for r in dev] != [r['member'] for r in dev_records]:
+            raise ValueError('Dev members changed')
+        if {r['member'][0] for r in train} & {r['member'][0] for r in dev}:
+            raise ValueError('Train/dev shards overlap')
+        lookup = {tuple(r['member']): i for i, r in enumerate(train)}
+        monitor_ids = [lookup[tuple(r['member'])] for r in records('train_monitor500')]
+        train_monitor = [train[i] for i in monitor_ids]
+        save(RUN/'panels.json', dict(train_members=[list(r['member']) for r in train],
+             train_monitor_members=[list(r['member']) for r in train_monitor],
+             dev_monitor_members=[list(r['member']) for r in dev],
+             registry_sha256=sha(REGISTRY), test_read=False))
+        max_pins = max(1, max(r['graph']['pin_coordinates'].shape[1] for r in [*train, *dev]))
+        model.shape_neighbor_count = max_same_group_neighbors(chain(train, dev))
+        print(f'[DATA] max_same_group_neighbors={model.shape_neighbor_count}', flush=True)
+        pack = ResidentRows(train, 'cuda', max_nodes=120, max_pins=max_pins)
+        dev_pack = ResidentRows(dev, 'cuda', max_nodes=120, max_pins=max_pins)
+        register_resident(pack)
+        register_resident(dev_pack)
+        beat(activity='capturing full-batch forward/backward and projection; no optimizer updates')
+        capture_rng = rng_state()
+        cap = build_capture(model, optimizer, pack, previous['projection'] if previous else None)
+        restore_rng(capture_rng)
+        if cap.projection.steps != progress['step']:
+            raise ValueError('Optimizer/projection cursor mismatch')
+        free, total = torch.cuda.mem_get_info()
+        reserve = sum(p.numel()*p.element_size()*2 for p in model.parameters()) if not optimizer.state else 0
+        if free < reserve+512*2**20:
+            raise RuntimeError('Insufficient dedicated VRAM headroom')
+        save(RUN/'resources.json', dict(max_nodes=120, max_loss_ports_per_block=max_pins,
+             gpu_allocated=torch.cuda.memory_allocated(), gpu_reserved=torch.cuda.memory_reserved(),
+             free=free, total=total, adam_remaining_reserve=reserve,
+             row_bytes=pack.row_bytes, full_dataset_on_gpu=False, threads=4,
+             max_same_group_neighbors=model.shape_neighbor_count))
+        store('running')
+        last_save = elapsed()
+        interval_start = time.perf_counter()
+        interval_step = progress['step']
+        while True:
+            if halted():
+                status = 'user_stop' if stopped() else 'budget'
+                break
+            if progress['pending_monitor']:
+                preserved = rng_state()
+                beat(activity='fixed dev500 monitoring')
+                dv = monitor(model, dev, halted, beat)
+                beat(activity='fixed train500 monitoring')
+                tr = monitor(model, train_monitor, halted, beat) if dv else None
+                restore_rng(preserved)
+                if dv is None or tr is None:
+                    status = 'user_stop' if stopped() else 'budget'
+                    break
+                old_best = progress['best']
+                eligible = joint or progress['epoch'] > 0
+                improved = eligible and (old_best is None or dv['total'] < old_best)
+                if improved:
+                    progress['best'], progress['best_epoch'] = dv['total'], progress['epoch']
+                scheduler.step(dv['total'], progress['epoch'])
+                progress['history'].append(dict(epoch=progress['epoch'], step=progress['step'],
+                     train_monitor=tr, dev_monitor=dv, train_monitor_seen=int(progress['seen'][monitor_ids].sum()),
+                     loss=configuration(model.stage, model.prefix_unfrozen), lr_next=optimizer.param_groups[0]['lr'],
+                     scheduler=scheduler.state_dict(), elapsed_seconds=elapsed()))
+                progress['pending_monitor'] = False
+                store('running', best=improved)
+                last_save = elapsed()
+                print(f'epoch={progress["epoch"]} step={progress["step"]} train={tr["total"]:.6f} '
+                      f'dev={dv["total"]:.6f} current_exit={dv["final_total"]:.6f} '
+                      f'lr={optimizer.param_groups[0]["lr"]:.2g}', flush=True)
+                if eligible and scheduler.should_stop():
+                    status = 'early_stop'
+                    break
+                if progress['epoch'] >= maximum_epochs:
+                    status = 'max_epochs'
+                    break
+                interval_start, interval_step = time.perf_counter(), progress['step']
+            if progress['order'] is None:
+                progress['order'] = np.random.default_rng(plan['seed']+progress['epoch']).permutation(len(train))
+                progress['cursor'] = 0
+            model.train()
+            beat(activity='training')
+            while progress['cursor'] < len(train):
+                if halted():
+                    break
+                current_ids = progress['order'][progress['cursor']:progress['cursor']+BATCH_SIZE]
+                cap.set_case_count(len(current_ids))
+                batch_ids = current_ids
+                if len(batch_ids) < BATCH_SIZE:
+                    # Fill the graph slots without counting them in the loss or cursor.
+                    batch_ids = np.resize(batch_ids, BATCH_SIZE)
+                pack.batch(batch_ids, out=cap.inputs)
+                cap.inputs["axis_swap"].copy_(torch.as_tensor(flags_for(plan["seed"],progress["epoch"],batch_ids,size=len(train)),device="cuda"))
+                values, norm = cap.replay()
+                progress['seen'][current_ids] = True
+                progress['cursor'] += len(current_ids)
+                progress['step'] += 1
+                if progress['step'] == 1:
+                    print(f'[TRAIN] accepted first {ARM.upper()} update; loss={float(values["total"]):.6f}; prefix_unfrozen={joint}', flush=True)
+                if progress['step'] % 100 == 0:
+                    torch.cuda.synchronize()
+                    now = time.perf_counter()
+                    performance = dict(step=progress['step'], epoch=progress['epoch']+1,
+                        seconds_per_step=(now-interval_start)/(progress['step']-interval_step),
+                        samples_per_second=BATCH_SIZE*(progress['step']-interval_step)/(now-interval_start),
+                        total=float(values['total'].detach()), gradient_norm=float(norm), elapsed_seconds=elapsed())
+                    progress['batch_history'].append(performance)
+                    with (RUN/'steps.jsonl').open('a', encoding='utf-8') as f:
+                        f.write(json.dumps(performance)+'\n')
+                    print(f'step={progress["step"]} epoch={progress["epoch"]+1} cursor={progress["cursor"]} loss={performance["total"]:.5f} ms/step={performance["seconds_per_step"]*1000:.1f}', flush=True)
+                    if elapsed()-last_save >= 60.:
+                        store('running')
+                        last_save = elapsed()
+                    interval_start, interval_step = time.perf_counter(), progress['step']
+            if progress['cursor'] < len(train):
+                status = 'user_stop' if stopped() else 'budget'
+                break
+            progress['epoch'] += 1
+            progress['order'] = None
+            progress['cursor'] = 0
+            progress['pending_monitor'] = True
+            store('monitor_pending')
+        store(status, finished=status in ('early_stop', 'budget', 'max_epochs'))
+    except PreparationStopped as exc:
+        status = str(exc)
+        store(status, finished=status == 'budget')
+    except BaseException as exc:
+        status, error = 'error', repr(exc)
+        if cap is not None and current_ids is not None:
+            checkpoint(RUN/'failure.pt', dict(members=[list(train[i]['member']) for i in current_ids],
+                 batch={k: v.cpu() for k, v in cap.inputs.items()}, rng=rng_state(), error=error))
+        try:
+            store('error')
+        except BaseException:
+            traceback.print_exc()
+        traceback.print_exc()
+    finally:
+        closed.set()
+        worker.join(timeout=6.)
+        signal.signal(signal.SIGINT, old_signal)
+        if old_break is not None:signal.signal(signal.SIGBREAK, old_break)
+        history = progress['history']
+        last_train = [h['train_monitor']['total'] for h in history[-4:]]
+        train_plateau = len(last_train) >= 4 and max(last_train)-min(last_train) <= max(1e-5, abs(last_train[0])*.001)
+        result = dict(status=status, error=error, epochs=progress['epoch'], steps=progress['step'],
+             best_epoch=progress['best_epoch'], best_fixed_loss=progress['best'],
+             elapsed_seconds=elapsed(), train_monitor_last4=last_train,
+             train_plateau_observed=train_plateau,
+             convergence='operational dev plateau; train plateau separate' if status == 'early_stop' else 'not established',
+             test_read=False, postprocessing_calls=0, next_stage='Freeze this stage own-Loss best')
+        save(RUN/'results.json', result)
+        beat(status=status, activity='exited')
+        save(OWNER/f'state_{ARM}.json', dict(**result, run=RUN.relative_to(ROOT).as_posix(), pid=os.getpid()))
+        print(json.dumps(result, ensure_ascii=False), flush=True)
+    if error:
+        raise RuntimeError(error)
+
+if __name__ == '__main__':
+    main()

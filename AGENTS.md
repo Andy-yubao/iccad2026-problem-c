@@ -1,13 +1,7 @@
 # ICCAD 2026 Problem C
 
-目标：研究 FloorSet 矩形布局生成与约束后处理，在最终硬合法的前提下改善布局质量和完整耗时。
+项目已收尾。唯一活跃的求解器入口是 [solver/README.md](solver/README.md)。
 
-- 总入口：`README.md`；执行与研究边界：`docs/protocol.md`。
-- 当前结果：`docs/current_status.md`；研究摘要：`docs/research_history.md`。
-- 数据路径与冻结身份：`protocol/`、`docs/datasets.md`；实验位置：`docs/experiment_catalog.md`。
-- 源码和原始结果：`experiments/`；历史实验：`history/`；唯一布局展示入口：`visualization/README.md`。
-
-下面是工程规范：
-1. 禁止computer-use。如果实在需要操作电脑就让用户操作。
-
-
+- 每项历史实验在 [experiments/](experiments/README.md) 下有独立目录。[路径对照](experiments/path-map.json) 登记旧位置和当前入口。保留原评测权重、布局、失败证据与停止标记，恢复按用户授权执行。
+- 实验结果与口径见 [E1–E170 实验综述](deliverables/实验流程记录_E1-E170.md)。
+- 禁止 computer-use。如果需要操作电脑，请用户本人操作。

@@ -1,16 +1,13 @@
-# 实验入口
+# ICCAD 2026 Problem C 实验目录
 
-| 目录 | 角色 |
-|---|---|
-| `E119_global_initial_generator/` | 主要研究基线global2 best55；含独立public_priority_v1变体和已授权test500历史评价 |
-| `E120_node12_collision/` | Node12结构对照，训练/原dev500已完成 |
-| `E131_relation_input/` | 旧64×4关系输入，用户停止，不自动恢复 |
-| `E132_relation_input_96x6/` | full/pure训练已完成，无后处理/Q授权 |
-| `E133_flow_matching/` | FM训练已完成；原自动评价失败现场保留，独立成功评价在evaluation_quality_20261113 |
-| `E134_supervision_interval/` | E119间隔2/3两组已完成训练/原dev500；E120间隔3门禁停止，用户放弃后续E120，间隔2未启动；保留失败现场 |
-| `E135_initial_supervision/` | E119 S0监督 A/B/C及自动原dev500后处理全部完成，均500/500最终硬合法；结果在runs/results_review.md，S0–S12展示在各run/visualization_dev15_loss |
-| `E136_frontend_F_linear/` | D：训练和原dev500已完成，best46/混合Q1.021426；Reference与五组草稿/原后处理的逐题统计在runs/statistics_dev500_v1 |
+[实验综述 E1–E170](../deliverables/实验流程记录_E1-E170.md) 按阶段串联研究结果，并为每个编号提供原始记录。E1–E170 各有一个直接位于本目录下的入口。E4 和 E29 分别保留未运行的提纲和撤销记录。
 
-具体身份看 `plan.json`、`authorization.json`、冻结权重记录；实际状态看 `queue_state.json` 和run内结果。文档和旧true开关不构成新的启动授权。长期结果留所属实验，公用数据/评分/展示不在实验间复制调用。
+- 同一编号的旁支、云端迁移和早期版本在对应实验的 `_snapshots/` 下。E152、E158、E161、E170 的版本可从各自主目录进入。
+- 共用数据、协议、评分、可视化、无训练基线及原迁移记录在 [`_archive/`](_archive/)。
+- [路径对照](path-map.json) 为每个编号列出当前入口，并记录旧目录前缀到新目录前缀。旧路径同时命中多个前缀时，使用最长的一条。
 
-退役实验实际位置见 [完整目录](../docs/experiment_catalog.md)。E101交付及E98、E102–E118、E121–E130位于 `history/20261111_experiments_consolidation/experiments/`。本次整理未恢复旧实验、训练或评价。
+历史实验的源码、日志、冻结清单及原批次目录说明保留当时的路径。复核时先对照迁移表定位数据、权重和源码版本。需要重现旧运行条件时，按原工作目录关系在独立目录组装依赖。恢复旧训练仍需明确授权。
+
+原评测权重、逐题布局、失败证据与停止标记保留。包管理缓存的清理与再生成方式见 [清单](cache-cleanup.json)。最终求解器及其权重位于 [`solver/`](../solver/README.md)，运行入口及公开样例也在该目录。
+
+GitHub 同步归档源码、可公开的研究记录与交付报告。原始数据包、本地检查点和大规模逐题布局仍由研究工作区保存。

@@ -1,0 +1,14 @@
+{
+  "schema": "static-original-no-mib-all-predictions.v1",
+  "parent_registry_sha256": "f899e114b91bc05a0688898dd9b6f251acba2c95e35fb5baca8fd5cf17979540",
+  "dataset_report_sha256": "3a79fd9eb2636578fa4df876ccac51699eab04cd59179027488aa7d8c334928a",
+  "payload_checksums_sha256": "f8eeb86da003c9901b73541eb13cc8e16cad9cd963dcf74a0edddf4a1a5abe54",
+  "producers": {
+    "features.py": "097a04bd1259a76b9fce23e5e533f7a22beece7a2f7af0435c3f560696c32dd1",
+    "batches.py": "7d8aaccb6b27ee4ea261d7a9c9bebfedfe484181ee00e5d7f6ccb27d0639be54",
+    "ports.py": "431b54476e7de8a94c12cf935a30a3b49b911e208305fbe6bb7b23d72e37dbef"
+  },
+  "precision": "CPU float32; integers/bools retained",
+  "torch": "2.7.1+cu128",
+  "policy": "original area; no MIB; predict all; labels outside public input; no augmentation; no model state"
+}

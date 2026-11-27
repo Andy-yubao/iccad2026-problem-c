@@ -1,0 +1,1630 @@
+{
+  "date": "2026-11-27",
+  "rule": "Map a legacy path by its longest matching source prefix. Historical files retain their original contents.",
+  "experiments": {
+    "1": {
+      "directory": "experiments/E1_graph_proposal",
+      "record": "experiments/E1_graph_proposal/README.md",
+      "historical_record": "history/20261018_E10_consolidation/experiments/graph_proposal/README.md"
+    },
+    "2": {
+      "directory": "experiments/E2_topology_geometry",
+      "record": "experiments/E2_topology_geometry/README.md",
+      "historical_record": "history/20261018_E10_consolidation/experiments/topology_geometry/README.md"
+    },
+    "3": {
+      "directory": "experiments/E3_masked_construction",
+      "record": "experiments/E3_masked_construction/README.md",
+      "historical_record": "history/20261018_E10_consolidation/experiments/masked_construction/README.md"
+    },
+    "4": {
+      "directory": "experiments/E4_rules_and_projection",
+      "record": "experiments/E4_rules_and_projection/README.md",
+      "historical_record": "history/20261017_direction_review/short_term_plan_before.md"
+    },
+    "5": {
+      "directory": "experiments/E5_conflict_local_repair",
+      "record": "experiments/E5_conflict_local_repair/README.md",
+      "historical_record": "history/20261018_E10_consolidation/experiments/conflict_local_repair/README.md"
+    },
+    "6": {
+      "directory": "experiments/E6_intent_aware_repair",
+      "record": "experiments/E6_intent_aware_repair/README.md",
+      "historical_record": "history/20261018_E10_consolidation/experiments/intent_aware_repair/README.md"
+    },
+    "7": {
+      "directory": "experiments/E7_repair_friendly_draft",
+      "record": "experiments/E7_repair_friendly_draft/README.md",
+      "historical_record": "history/20261018_E10_consolidation/experiments/repair_friendly_draft/README.md"
+    },
+    "8": {
+      "directory": "experiments/E8_fast_robust_postprocess",
+      "record": "experiments/E8_fast_robust_postprocess/README.md",
+      "historical_record": "history/20261018_E10_consolidation/experiments/E8_fast_robust_postprocess/README.md"
+    },
+    "9": {
+      "directory": "experiments/E9_model_postprocess_alignment",
+      "record": "experiments/E9_model_postprocess_alignment/README.md",
+      "historical_record": "history/20261018_E10_consolidation/experiments/E9_model_postprocess_alignment/README.md"
+    },
+    "10": {
+      "directory": "experiments/E10_integrated_baseline",
+      "record": "experiments/E10_integrated_baseline/README.md",
+      "historical_record": "history/20261020_E25_consolidation/experiments/E10_integrated_baseline/README.md"
+    },
+    "11": {
+      "directory": "experiments/E11_short_budget_diagnosis",
+      "record": "experiments/E11_short_budget_diagnosis/README.md",
+      "historical_record": "history/20261020_E25_consolidation/experiments/E11_short_budget_diagnosis/README.md"
+    },
+    "12": {
+      "directory": "experiments/E12_distillation_readiness",
+      "record": "experiments/E12_distillation_readiness/README.md",
+      "historical_record": "history/20261020_E25_consolidation/experiments/E12_distillation_readiness/README.md"
+    },
+    "13": {
+      "directory": "experiments/E13_solver_distillation",
+      "record": "experiments/E13_solver_distillation/README.md",
+      "historical_record": "history/20261020_E25_consolidation/experiments/E13_solver_distillation/README.md"
+    },
+    "14": {
+      "directory": "experiments/E14_stable_teacher",
+      "record": "experiments/E14_stable_teacher/README.md",
+      "historical_record": "history/20261020_E25_consolidation/experiments/E14_stable_teacher/README.md"
+    },
+    "15": {
+      "directory": "experiments/E15_quality_curriculum",
+      "record": "experiments/E15_quality_curriculum/README.md",
+      "historical_record": "history/20261020_E25_consolidation/experiments/E15_quality_curriculum/README.md"
+    },
+    "16": {
+      "directory": "experiments/E16_reference_curriculum",
+      "record": "experiments/E16_reference_curriculum/README.md",
+      "historical_record": "history/20261020_E25_consolidation/experiments/E16_reference_curriculum/README.md"
+    },
+    "17": {
+      "directory": "experiments/E17_e10_geometry_v5",
+      "record": "experiments/E17_e10_geometry_v5/README.md",
+      "historical_record": "history/20261020_E25_consolidation/experiments/E17_e10_geometry_v5/README.md"
+    },
+    "18": {
+      "directory": "experiments/E18_fast_postprocess",
+      "record": "experiments/E18_fast_postprocess/README.md",
+      "historical_record": "history/20261020_E25_consolidation/experiments/E18_fast_postprocess/README.md"
+    },
+    "19": {
+      "directory": "experiments/E19_mib_consistent_geometry",
+      "record": "experiments/E19_mib_consistent_geometry/README.md",
+      "historical_record": "history/20261020_E25_consolidation/experiments/E19_mib_consistent_geometry/README.md"
+    },
+    "20": {
+      "directory": "experiments/E20_mib_fast_pipeline",
+      "record": "experiments/E20_mib_fast_pipeline/README.md",
+      "historical_record": "history/20261020_E25_consolidation/experiments/E20_mib_fast_pipeline/README.md"
+    },
+    "21": {
+      "directory": "experiments/E21_original_model_fast",
+      "record": "experiments/E21_original_model_fast/README.md",
+      "historical_record": "history/20261020_E25_consolidation/experiments/E21_original_model_fast/README.md"
+    },
+    "22": {
+      "directory": "experiments/E22_native_geometry",
+      "record": "experiments/E22_native_geometry/README.md",
+      "historical_record": "history/20261020_E25_consolidation/experiments/E22_native_geometry/README.md"
+    },
+    "23": {
+      "directory": "experiments/E23_capacity_geometry",
+      "record": "experiments/E23_capacity_geometry/README.md",
+      "historical_record": "history/20261021_E29_consolidation/experiments/E23_capacity_geometry/README.md"
+    },
+    "24": {
+      "directory": "experiments/E24_reference_fast",
+      "record": "experiments/E24_reference_fast/README.md",
+      "historical_record": "history/20261020_E25_consolidation/experiments/E24_reference_fast/README.md"
+    },
+    "25": {
+      "directory": "experiments/E25_integrated_baseline",
+      "record": "experiments/E25_integrated_baseline/README.md",
+      "historical_record": "history/20261026_flash_pro_consolidation/experiments/E25_integrated_baseline/README.md"
+    },
+    "26": {
+      "directory": "experiments/E26_tail_constraints",
+      "record": "experiments/E26_tail_constraints/README.md",
+      "historical_record": "history/20261021_E29_consolidation/experiments/E26_tail_constraints/README.md"
+    },
+    "27": {
+      "directory": "experiments/E27_overlap_weight",
+      "record": "experiments/E27_overlap_weight/README.md",
+      "historical_record": "history/20261021_E29_consolidation/experiments/E27_overlap_weight/README.md"
+    },
+    "28": {
+      "directory": "experiments/E28_iterative_draft",
+      "record": "experiments/E28_iterative_draft/README.md",
+      "historical_record": "history/20261021_E29_consolidation/experiments/E28_iterative_draft/README.md"
+    },
+    "29": {
+      "directory": "experiments/E29_withdrawn",
+      "record": "experiments/E29_withdrawn/README.md",
+      "historical_record": "history/20261021_E29_consolidation/README.md"
+    },
+    "30": {
+      "directory": "experiments/E30_stable_fast_geometry",
+      "record": "experiments/E30_stable_fast_geometry/README.md",
+      "historical_record": "history/20261026_flash_pro_consolidation/experiments/E30_stable_fast_geometry/README.md"
+    },
+    "31": {
+      "directory": "experiments/E31_conic_workspace_reuse",
+      "record": "experiments/E31_conic_workspace_reuse/README.md",
+      "historical_record": "history/20261026_flash_pro_consolidation/experiments/E31_conic_workspace_reuse/README.md"
+    },
+    "32": {
+      "directory": "experiments/E32_learned_relation_feedback",
+      "record": "experiments/E32_learned_relation_feedback/README.md",
+      "historical_record": "history/20261026_flash_pro_consolidation/experiments/E32_learned_relation_feedback/README.md"
+    },
+    "33": {
+      "directory": "experiments/E33_learned_solver_portfolio",
+      "record": "experiments/E33_learned_solver_portfolio/README.md",
+      "historical_record": "history/20261026_flash_pro_consolidation/experiments/E33_learned_solver_portfolio/README.md"
+    },
+    "34": {
+      "directory": "experiments/E34_sparse_contact_feedback",
+      "record": "experiments/E34_sparse_contact_feedback/README.md",
+      "historical_record": "history/20261026_flash_pro_consolidation/experiments/E34_sparse_contact_feedback/README.md"
+    },
+    "35": {
+      "directory": "experiments/E35_optimizer_attribution",
+      "record": "experiments/E35_optimizer_attribution/README.md",
+      "historical_record": "history/20261026_flash_pro_consolidation/experiments/E35_optimizer_attribution/README.md"
+    },
+    "36": {
+      "directory": "experiments/E36_persistent_conflict_repair",
+      "record": "experiments/E36_persistent_conflict_repair/README.md",
+      "historical_record": "history/20261026_flash_pro_consolidation/experiments/E36_persistent_conflict_repair/README.md"
+    },
+    "37": {
+      "directory": "experiments/E37_radial_draft_expansion",
+      "record": "experiments/E37_radial_draft_expansion/README.md",
+      "historical_record": "history/20261026_flash_pro_consolidation/experiments/E37_radial_draft_expansion/README.md"
+    },
+    "38": {
+      "directory": "experiments/E38_model_architecture",
+      "record": "experiments/E38_model_architecture/README.md",
+      "historical_record": "history/20261026_flash_pro_consolidation/experiments/E38_model_architecture/README.md"
+    },
+    "39": {
+      "directory": "experiments/E39_rectangular_attention",
+      "record": "experiments/E39_rectangular_attention/README.md",
+      "historical_record": "history/20261026_flash_pro_consolidation/experiments/E39_rectangular_attention/README.md"
+    },
+    "40": {
+      "directory": "experiments/E40_endpoint_constraint_tokens",
+      "record": "experiments/E40_endpoint_constraint_tokens/README.md",
+      "historical_record": "history/20261026_flash_pro_consolidation/experiments/E40_endpoint_constraint_tokens/README.md"
+    },
+    "41": {
+      "directory": "experiments/E41_rectangular_depth",
+      "record": "experiments/E41_rectangular_depth/README.md",
+      "historical_record": "history/20261026_flash_pro_consolidation/experiments/E41_rectangular_depth/README.md"
+    },
+    "42": {
+      "directory": "experiments/E42_joint_regularization",
+      "record": "experiments/E42_joint_regularization/README.md",
+      "historical_record": "history/20261103_final_delivery_consolidation/experiments/E42_joint_regularization/README.md"
+    },
+    "43": {
+      "directory": "experiments/E43_overlap_area_loss",
+      "record": "experiments/E43_overlap_area_loss/README.md",
+      "historical_record": "history/20261026_flash_pro_consolidation/experiments/E43_overlap_area_loss/README.md"
+    },
+    "44": {
+      "directory": "experiments/E44_near_limit_proposals",
+      "record": "experiments/E44_near_limit_proposals/README.md",
+      "historical_record": "history/20261026_flash_pro_consolidation/experiments/E44_near_limit_proposals/README.md"
+    },
+    "45": {
+      "directory": "experiments/E45_draft_fidelity",
+      "record": "experiments/E45_draft_fidelity/README.md",
+      "historical_record": "history/20261026_flash_pro_consolidation/experiments/E45_draft_fidelity/README.md"
+    },
+    "46": {
+      "directory": "experiments/E46_global_draft_refinement",
+      "record": "experiments/E46_global_draft_refinement/README.md",
+      "historical_record": "history/20261026_flash_pro_consolidation/experiments/E46_global_draft_refinement/README.md"
+    },
+    "47": {
+      "directory": "experiments/E47_draft_topology_confidence",
+      "record": "experiments/E47_draft_topology_confidence/README.md",
+      "historical_record": "history/20261026_flash_pro_consolidation/experiments/E47_draft_topology_confidence/README.md"
+    },
+    "48": {
+      "directory": "experiments/E48_quality_potential",
+      "record": "experiments/E48_quality_potential/README.md",
+      "historical_record": "history/20261026_flash_pro_consolidation/experiments/E48_quality_potential/README.md"
+    },
+    "49": {
+      "directory": "experiments/E49_monotone_quality",
+      "record": "experiments/E49_monotone_quality/README.md",
+      "historical_record": "history/20261026_flash_pro_consolidation/experiments/E49_monotone_quality/README.md"
+    },
+    "50": {
+      "directory": "experiments/E50_anytime_quality",
+      "record": "experiments/E50_anytime_quality/README.md",
+      "historical_record": "history/20261103_final_delivery_consolidation/experiments/E50_anytime_quality/README.md"
+    },
+    "51": {
+      "directory": "experiments/E51_module_overlap",
+      "record": "experiments/E51_module_overlap/README.md",
+      "historical_record": "history/20261026_flash_pro_consolidation/experiments/E51_module_overlap/README.md"
+    },
+    "52": {
+      "directory": "experiments/E52_training_throughput",
+      "record": "experiments/E52_training_throughput/README.md",
+      "historical_record": "history/20261026_flash_pro_consolidation/experiments/E52_training_throughput/README.md"
+    },
+    "53": {
+      "directory": "experiments/E53_loss_geometry",
+      "record": "experiments/E53_loss_geometry/README.md",
+      "historical_record": "history/20261026_flash_pro_consolidation/experiments/E53_loss_geometry/README.md"
+    },
+    "54": {
+      "directory": "experiments/E54_reference_extremes",
+      "record": "experiments/E54_reference_extremes/README.md",
+      "historical_record": "history/20261026_flash_pro_consolidation/experiments/E54_reference_extremes/README.md"
+    },
+    "55": {
+      "directory": "experiments/E55_reference_position_shape",
+      "record": "experiments/E55_reference_position_shape/README.md",
+      "historical_record": "history/20261029_model_research_consolidation/experiments/E55_reference_position_shape/README.md"
+    },
+    "56": {
+      "directory": "experiments/E56_e55_geometry_finetune",
+      "record": "experiments/E56_e55_geometry_finetune/README.md",
+      "historical_record": "history/20261029_model_research_consolidation/experiments/E56_e55_geometry_finetune/README.md"
+    },
+    "57": {
+      "directory": "experiments/E57_capacity_data_diagnosis",
+      "record": "experiments/E57_capacity_data_diagnosis/README.md",
+      "historical_record": "history/20261029_model_research_consolidation/experiments/E57_capacity_data_diagnosis/README.md"
+    },
+    "58": {
+      "directory": "experiments/E58_training_data_v6",
+      "record": "experiments/E58_training_data_v6/README.md",
+      "historical_record": "history/20261029_model_research_consolidation/experiments/E58_training_data_v6/README.md"
+    },
+    "59": {
+      "directory": "experiments/E59_centerline_overlap",
+      "record": "experiments/E59_centerline_overlap/README.md",
+      "historical_record": "history/20261029_model_research_consolidation/experiments/E59_centerline_overlap/README.md"
+    },
+    "60": {
+      "directory": "experiments/E60_scaling_diagnosis",
+      "record": "experiments/E60_scaling_diagnosis/README.md",
+      "historical_record": "history/20261029_model_research_consolidation/experiments/E60_scaling_diagnosis/README.md"
+    },
+    "61": {
+      "directory": "experiments/E61_explosion_replay",
+      "record": "experiments/E61_explosion_replay/README.md",
+      "historical_record": "history/20261029_model_research_consolidation/experiments/E61_explosion_replay/README.md"
+    },
+    "62": {
+      "directory": "experiments/E62_e42_loss_update_audit",
+      "record": "experiments/E62_e42_loss_update_audit/README.md",
+      "historical_record": "history/20261029_model_research_consolidation/experiments/E62_e42_loss_update_audit/README.md"
+    },
+    "63": {
+      "directory": "experiments/E63_e42_center_relaxation",
+      "record": "experiments/E63_e42_center_relaxation/README.md",
+      "historical_record": "history/20261029_model_research_consolidation/experiments/E63_e42_center_relaxation/README.md"
+    },
+    "64": {
+      "directory": "experiments/E64_e42_unified_retrain",
+      "record": "experiments/E64_e42_unified_retrain/README.md",
+      "historical_record": "history/20261029_model_research_consolidation/experiments/E64_e42_unified_retrain/README.md"
+    },
+    "65": {
+      "directory": "experiments/E65_geometry_messages",
+      "record": "experiments/E65_geometry_messages/README.md",
+      "historical_record": "history/20261029_model_research_consolidation/experiments/E65_geometry_messages/README.md"
+    },
+    "66": {
+      "directory": "experiments/E66_shared_refinement",
+      "record": "experiments/E66_shared_refinement/README.md",
+      "historical_record": "history/20261029_model_research_consolidation/experiments/E66_shared_refinement/README.md"
+    },
+    "67": {
+      "directory": "experiments/E67_multiscale_tokens",
+      "record": "experiments/E67_multiscale_tokens/README.md",
+      "historical_record": "history/20261029_model_research_consolidation/experiments/E67_multiscale_tokens/README.md"
+    },
+    "68": {
+      "directory": "experiments/E68_port_tokens",
+      "record": "experiments/E68_port_tokens/README.md",
+      "historical_record": "history/20261029_model_research_consolidation/experiments/E68_port_tokens/README.md"
+    },
+    "69": {
+      "directory": "experiments/E69_case_loss_statistics",
+      "record": "experiments/E69_case_loss_statistics/README.md",
+      "historical_record": "history/20261101_research_consolidation/experiments/E69_case_loss_statistics/README.md"
+    },
+    "70": {
+      "directory": "experiments/E70_reference_task_loss",
+      "record": "experiments/E70_reference_task_loss/README.md",
+      "historical_record": "history/20261029_model_research_consolidation/experiments/E70_reference_task_loss/README.md"
+    },
+    "71": {
+      "directory": "experiments/E71_density_reference_curriculum",
+      "record": "experiments/E71_density_reference_curriculum/README.md",
+      "historical_record": "history/20261101_research_consolidation/experiments/E71_density_reference_curriculum/README.md"
+    },
+    "72": {
+      "directory": "experiments/E72_topology_posttrain",
+      "record": "experiments/E72_topology_posttrain/README.md",
+      "historical_record": "history/20261101_research_consolidation/experiments/E72_topology_posttrain/README.md"
+    },
+    "73": {
+      "directory": "experiments/E73_wide_robust_posttrain",
+      "record": "experiments/E73_wide_robust_posttrain/README.md",
+      "historical_record": "history/20261101_research_consolidation/experiments/E73_wide_robust_posttrain/README.md"
+    },
+    "74": {
+      "directory": "experiments/E74_collision_32k_posttrain",
+      "record": "experiments/E74_collision_32k_posttrain/README.md",
+      "historical_record": "history/20261103_final_delivery_consolidation/experiments/E74_collision_32k_posttrain/README.md"
+    },
+    "75": {
+      "directory": "experiments/E75_collision_box_finetune",
+      "record": "experiments/E75_collision_box_finetune/README.md",
+      "historical_record": "history/20261101_research_consolidation/experiments/E75_collision_box_finetune/README.md"
+    },
+    "76": {
+      "directory": "experiments/E76_bounded_refinement",
+      "record": "experiments/E76_bounded_refinement/README.md",
+      "historical_record": "history/20261101_research_consolidation/experiments/E76_bounded_refinement/README.md"
+    },
+    "77": {
+      "directory": "experiments/E77_compact_refinement",
+      "record": "experiments/E77_compact_refinement/README.md",
+      "historical_record": "history/20261101_research_consolidation/experiments/E77_compact_refinement/README.md"
+    },
+    "78": {
+      "directory": "experiments/E78_connectivity_posttrain",
+      "record": "experiments/E78_connectivity_posttrain/README.md",
+      "historical_record": "history/20261101_research_consolidation/experiments/E78_connectivity_posttrain/README.md"
+    },
+    "79": {
+      "directory": "experiments/E79_center_refinement",
+      "record": "experiments/E79_center_refinement/README.md",
+      "historical_record": "history/20261101_research_consolidation/experiments/E79_center_refinement/README.md"
+    },
+    "80": {
+      "directory": "experiments/E80_modular_transfer",
+      "record": "experiments/E80_modular_transfer/README.md",
+      "historical_record": "history/20261101_research_consolidation/experiments/E80_modular_transfer/README.md"
+    },
+    "81": {
+      "directory": "experiments/E81_multisource_refinement",
+      "record": "experiments/E81_multisource_refinement/README.md",
+      "historical_record": "history/20261103_final_delivery_consolidation/experiments/E81_multisource_refinement/README.md"
+    },
+    "82": {
+      "directory": "experiments/E82_global_pressure_refinement",
+      "record": "experiments/E82_global_pressure_refinement/README.md",
+      "historical_record": "history/20261101_research_consolidation/experiments/E82_global_pressure_refinement/README.md"
+    },
+    "83": {
+      "directory": "experiments/E83_strategy_attribution",
+      "record": "experiments/E83_strategy_attribution/README.md",
+      "historical_record": "history/20261101_research_consolidation/experiments/E83_strategy_attribution/README.md"
+    },
+    "84": {
+      "directory": "experiments/E84_loss_control",
+      "record": "experiments/E84_loss_control/README.md",
+      "historical_record": "history/20261101_research_consolidation/experiments/E84_loss_control/README.md"
+    },
+    "85": {
+      "directory": "experiments/E85_cooperative_space_refinement",
+      "record": "experiments/E85_cooperative_space_refinement/README.md",
+      "historical_record": "history/20261103_final_delivery_consolidation/experiments/E85_cooperative_space_refinement/README.md"
+    },
+    "86": {
+      "directory": "experiments/E86_independent_global_corrector",
+      "record": "experiments/E86_independent_global_corrector/README.md",
+      "historical_record": "history/20261101_research_consolidation/experiments/E86_independent_global_corrector/README.md"
+    },
+    "87": {
+      "directory": "experiments/E87_simple_supervised_placer",
+      "record": "experiments/E87_simple_supervised_placer/README.md",
+      "historical_record": "history/20261101_research_consolidation/experiments/E87_simple_supervised_placer/README.md"
+    },
+    "88": {
+      "directory": "experiments/E88_sparse_training",
+      "record": "experiments/E88_sparse_training/README.md",
+      "historical_record": "history/20261101_research_consolidation/experiments/E88_sparse_training/README.md"
+    },
+    "89": {
+      "directory": "experiments/E89_spatial_neural_refinement",
+      "record": "experiments/E89_spatial_neural_refinement/README.md",
+      "historical_record": "history/20261101_research_consolidation/experiments/E89_spatial_neural_refinement/README.md"
+    },
+    "90": {
+      "directory": "experiments/E90_auxiliary_weight_placer",
+      "record": "experiments/E90_auxiliary_weight_placer/README.md",
+      "historical_record": "history/20261103_final_delivery_consolidation/experiments/E90_auxiliary_weight_placer/README.md"
+    },
+    "91": {
+      "directory": "experiments/E91_e74_32k_scratch",
+      "record": "experiments/E91_e74_32k_scratch/README.md",
+      "historical_record": "history/20261101_research_consolidation/experiments/E91_e74_32k_scratch/README.md"
+    },
+    "92": {
+      "directory": "experiments/E92_two_stage_placer",
+      "record": "experiments/E92_two_stage_placer/README.md",
+      "historical_record": "history/20261101_research_consolidation/experiments/E92_two_stage_placer/README.md"
+    },
+    "93": {
+      "directory": "experiments/E93_matched_posttrain",
+      "record": "experiments/E93_matched_posttrain/README.md",
+      "historical_record": "history/20261101_research_consolidation/experiments/E93_matched_posttrain/README.md"
+    },
+    "94": {
+      "directory": "experiments/E94_posttrain_lr_reset",
+      "record": "experiments/E94_posttrain_lr_reset/README.md",
+      "historical_record": "history/20261101_research_consolidation/experiments/E94_posttrain_lr_reset/README.md"
+    },
+    "95": {
+      "directory": "experiments/E95_single_pass_corrector",
+      "record": "experiments/E95_single_pass_corrector/README.md",
+      "historical_record": "history/20261103_final_delivery_consolidation/experiments/E95_single_pass_corrector/README.md"
+    },
+    "96": {
+      "directory": "experiments/E96_port_compression",
+      "record": "experiments/E96_port_compression/README.md",
+      "historical_record": "history/20261103_final_delivery_consolidation/experiments/E96_port_compression/README.md"
+    },
+    "97": {
+      "directory": "experiments/E97_gpu_hybrid_solver",
+      "record": "experiments/E97_gpu_hybrid_solver/README.md",
+      "historical_record": "history/20261103_final_delivery_consolidation/experiments/E97_gpu_hybrid_solver/README.md"
+    },
+    "98": {
+      "directory": "experiments/E98_loss_weight_learning",
+      "record": "experiments/E98_loss_weight_learning/README.md",
+      "historical_record": "history/20261111_experiments_consolidation/experiments/E98_loss_weight_learning/README.md"
+    },
+    "99": {
+      "directory": "experiments/E99_attraction_repulsion",
+      "record": "experiments/E99_attraction_repulsion/README.md",
+      "historical_record": "history/20261103_final_delivery_consolidation/experiments/E99_attraction_repulsion/README.md"
+    },
+    "100": {
+      "directory": "experiments/E100_relation_guided_placer",
+      "record": "experiments/E100_relation_guided_placer/README.md",
+      "historical_record": "history/20261103_final_delivery_consolidation/experiments/E100_relation_guided_placer/README.md"
+    },
+    "101": {
+      "directory": "experiments/E101_final_c5_solver",
+      "record": "experiments/E101_final_c5_solver/README.md",
+      "historical_record": "history/20261111_experiments_consolidation/experiments/E101_final_c5_solver/README.md"
+    },
+    "102": {
+      "directory": "experiments/E102_reference_image_generation",
+      "record": "experiments/E102_reference_image_generation/README.md",
+      "historical_record": "history/20261111_experiments_consolidation/experiments/E102_reference_image_generation/README.md"
+    },
+    "103": {
+      "directory": "experiments/E103_offline_loss_alignment",
+      "record": "experiments/E103_offline_loss_alignment/README.md",
+      "historical_record": "history/20261111_experiments_consolidation/experiments/E103_offline_loss_alignment/README.md"
+    },
+    "104": {
+      "directory": "experiments/E104_scaling32k",
+      "record": "experiments/E104_scaling32k/README.md",
+      "historical_record": "history/20261111_experiments_consolidation/experiments/E104_scaling32k/README.md"
+    },
+    "105": {
+      "directory": "experiments/E105_gated_prenorm_placer",
+      "record": "experiments/E105_gated_prenorm_placer/README.md",
+      "historical_record": "history/20261111_experiments_consolidation/experiments/E105_gated_prenorm_placer/README.md"
+    },
+    "106": {
+      "directory": "experiments/E106_postprocessor_aware_loss",
+      "record": "experiments/E106_postprocessor_aware_loss/README.md",
+      "historical_record": "history/20261111_experiments_consolidation/experiments/E106_postprocessor_aware_loss/README.md"
+    },
+    "107": {
+      "directory": "experiments/E107_geometry_posttrain",
+      "record": "experiments/E107_geometry_posttrain/README.md",
+      "historical_record": "history/20261111_experiments_consolidation/experiments/E107_geometry_posttrain/README.md"
+    },
+    "108": {
+      "directory": "experiments/E108_random_reference40k",
+      "record": "experiments/E108_random_reference40k/README.md",
+      "historical_record": "history/20261111_experiments_consolidation/experiments/E108_random_reference40k/README.md"
+    },
+    "109": {
+      "directory": "experiments/E109_deep_supervision_shared",
+      "record": "experiments/E109_deep_supervision_shared/README.md",
+      "historical_record": "history/20261111_experiments_consolidation/experiments/E109_deep_supervision_shared/README.md"
+    },
+    "110": {
+      "directory": "experiments/E110_deep_supervision_heads",
+      "record": "experiments/E110_deep_supervision_heads/README.md",
+      "historical_record": "history/20261111_experiments_consolidation/experiments/E110_deep_supervision_heads/README.md"
+    },
+    "111": {
+      "directory": "experiments/E111_progressive_depth",
+      "record": "experiments/E111_progressive_depth/README.md",
+      "historical_record": "history/20261111_experiments_consolidation/experiments/E111_progressive_depth/README.md"
+    },
+    "112": {
+      "directory": "experiments/E112_deep_geometry_budget",
+      "record": "experiments/E112_deep_geometry_budget/README.md",
+      "historical_record": "history/20261111_experiments_consolidation/experiments/E112_deep_geometry_budget/README.md"
+    },
+    "113": {
+      "directory": "experiments/E113_deep_head_budget",
+      "record": "experiments/E113_deep_head_budget/README.md",
+      "historical_record": "history/20261111_experiments_consolidation/experiments/E113_deep_head_budget/README.md"
+    },
+    "114": {
+      "directory": "experiments/E114_supervision_placement",
+      "record": "experiments/E114_supervision_placement/README.md",
+      "historical_record": "history/20261111_experiments_consolidation/experiments/E114_supervision_placement/README.md"
+    },
+    "115": {
+      "directory": "experiments/E115_first_head_supervision",
+      "record": "experiments/E115_first_head_supervision/README.md",
+      "historical_record": "history/20261111_experiments_consolidation/experiments/E115_first_head_supervision/README.md"
+    },
+    "116": {
+      "directory": "experiments/E116_first_draft_comparison",
+      "record": "experiments/E116_first_draft_comparison/README.md",
+      "historical_record": "history/20261111_experiments_consolidation/experiments/E116_first_draft_comparison/README.md"
+    },
+    "117": {
+      "directory": "experiments/E117_node26",
+      "record": "experiments/E117_node26/README.md",
+      "historical_record": "history/20261111_experiments_consolidation/experiments/E117_node26/README.md"
+    },
+    "118": {
+      "directory": "experiments/E118_first12_supervision",
+      "record": "experiments/E118_first12_supervision/README.md",
+      "historical_record": "history/20261111_experiments_consolidation/experiments/E118_first12_supervision/README.md"
+    },
+    "119": {
+      "directory": "experiments/E119_global_initial_generator",
+      "record": "experiments/E119_global_initial_generator/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E119_global_initial_generator/README.md"
+    },
+    "120": {
+      "directory": "experiments/E120_node12_collision",
+      "record": "experiments/E120_node12_collision/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E120_node12_collision/README.md"
+    },
+    "121": {
+      "directory": "experiments/E121_residual_update",
+      "record": "experiments/E121_residual_update/README.md",
+      "historical_record": "history/20261111_experiments_consolidation/experiments/E121_residual_update/README.md"
+    },
+    "122": {
+      "directory": "experiments/E122_global2_scaling16",
+      "record": "experiments/E122_global2_scaling16/README.md",
+      "historical_record": "history/20261111_experiments_consolidation/experiments/E122_global2_scaling16/README.md"
+    },
+    "123": {
+      "directory": "experiments/E123_node12_scaling16",
+      "record": "experiments/E123_node12_scaling16/README.md",
+      "historical_record": "history/20261111_experiments_consolidation/experiments/E123_node12_scaling16/README.md"
+    },
+    "124": {
+      "directory": "experiments/E124_residual_scaling16",
+      "record": "experiments/E124_residual_scaling16/README.md",
+      "historical_record": "history/20261111_experiments_consolidation/experiments/E124_residual_scaling16/README.md"
+    },
+    "125": {
+      "directory": "experiments/E125_global2_ref04",
+      "record": "experiments/E125_global2_ref04/README.md",
+      "historical_record": "history/20261111_experiments_consolidation/experiments/E125_global2_ref04/README.md"
+    },
+    "126": {
+      "directory": "experiments/E126_global2_refsplit",
+      "record": "experiments/E126_global2_refsplit/README.md",
+      "historical_record": "history/20261111_experiments_consolidation/experiments/E126_global2_refsplit/README.md"
+    },
+    "127": {
+      "directory": "experiments/E127_node12_ref04",
+      "record": "experiments/E127_node12_ref04/README.md",
+      "historical_record": "history/20261111_experiments_consolidation/experiments/E127_node12_ref04/README.md"
+    },
+    "128": {
+      "directory": "experiments/E128_node12_refsplit",
+      "record": "experiments/E128_node12_refsplit/README.md",
+      "historical_record": "history/20261111_experiments_consolidation/experiments/E128_node12_refsplit/README.md"
+    },
+    "129": {
+      "directory": "experiments/E129_global2_s0ref",
+      "record": "experiments/E129_global2_s0ref/README.md",
+      "historical_record": "history/20261111_experiments_consolidation/experiments/E129_global2_s0ref/README.md"
+    },
+    "130": {
+      "directory": "experiments/E130_node12_s0ref",
+      "record": "experiments/E130_node12_s0ref/README.md",
+      "historical_record": "history/20261111_experiments_consolidation/experiments/E130_node12_s0ref/README.md"
+    },
+    "131": {
+      "directory": "experiments/E131_relation_input",
+      "record": "experiments/E131_relation_input/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E131_relation_input/README.md"
+    },
+    "132": {
+      "directory": "experiments/E132_relation_input_96x6",
+      "record": "experiments/E132_relation_input_96x6/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E132_relation_input_96x6/README.md"
+    },
+    "133": {
+      "directory": "experiments/E133_flow_matching",
+      "record": "experiments/E133_flow_matching/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E133_flow_matching/README.md"
+    },
+    "134": {
+      "directory": "experiments/E134_supervision_interval",
+      "record": "experiments/E134_supervision_interval/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E134_supervision_interval/README.md"
+    },
+    "135": {
+      "directory": "experiments/E135_initial_supervision",
+      "record": "experiments/E135_initial_supervision/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E135_initial_supervision/README.md"
+    },
+    "136": {
+      "directory": "experiments/E136_frontend_F_linear",
+      "record": "experiments/E136_frontend_F_linear/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E136_frontend_F_linear/README.md"
+    },
+    "137": {
+      "directory": "experiments/E137_standard_transformer256",
+      "record": "experiments/E137_standard_transformer256/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E137_standard_transformer256/README.md"
+    },
+    "138": {
+      "directory": "experiments/E138_topology_rewrite",
+      "record": "experiments/E138_topology_rewrite/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E138_topology_rewrite/README.md"
+    },
+    "139": {
+      "directory": "experiments/E139_delayed_overlap",
+      "record": "experiments/E139_delayed_overlap/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E139_delayed_overlap/README.md"
+    },
+    "140": {
+      "directory": "experiments/E140_frontend_gb4",
+      "record": "experiments/E140_frontend_gb4/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E140_frontend_gb4/README.md"
+    },
+    "141": {
+      "directory": "experiments/E141_path_supervision",
+      "record": "experiments/E141_path_supervision/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E141_path_supervision/README.md"
+    },
+    "142": {
+      "directory": "experiments/E142_dual_geometry",
+      "record": "experiments/E142_dual_geometry/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E142_dual_geometry/README.md"
+    },
+    "143": {
+      "directory": "experiments/E143_directional_travel",
+      "record": "experiments/E143_directional_travel/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E143_directional_travel/README.md"
+    },
+    "144": {
+      "directory": "experiments/E144_local_blank",
+      "record": "experiments/E144_local_blank/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E144_local_blank/README.md"
+    },
+    "145": {
+      "directory": "experiments/E145_no_relation_value",
+      "record": "experiments/E145_no_relation_value/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E145_no_relation_value/README.md"
+    },
+    "146": {
+      "directory": "experiments/E146_layout_only",
+      "record": "experiments/E146_layout_only/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E146_layout_only/README.md"
+    },
+    "147": {
+      "directory": "experiments/E147_supervision_hidden_reset",
+      "record": "experiments/E147_supervision_hidden_reset/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E147_supervision_hidden_reset/README.md"
+    },
+    "148": {
+      "directory": "experiments/E148_shared_functional_shape",
+      "record": "experiments/E148_shared_functional_shape/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E148_shared_functional_shape/README.md"
+    },
+    "149": {
+      "directory": "experiments/E149_role_initial",
+      "record": "experiments/E149_role_initial/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E149_role_initial/README.md"
+    },
+    "150": {
+      "directory": "experiments/E150_role_joint",
+      "record": "experiments/E150_role_joint/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E150_role_joint/README.md"
+    },
+    "151": {
+      "directory": "experiments/E151_frozen_role_initial",
+      "record": "experiments/E151_frozen_role_initial/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E151_frozen_role_initial/README.md"
+    },
+    "152": {
+      "directory": "experiments/E152_s2_local_repair",
+      "record": "experiments/E152_s2_local_repair/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E152_s2_local_repair/README.md"
+    },
+    "153": {
+      "directory": "experiments/E153_mib_role_topology",
+      "record": "experiments/E153_mib_role_topology/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E153_mib_role_topology/README.md"
+    },
+    "154": {
+      "directory": "experiments/E154_l0_no_bottleneck",
+      "record": "experiments/E154_l0_no_bottleneck/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E154_l0_no_bottleneck/README.md"
+    },
+    "155": {
+      "directory": "experiments/E155_fresh_mib_l0",
+      "record": "experiments/E155_fresh_mib_l0/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E155_fresh_mib_l0/README.md"
+    },
+    "156": {
+      "directory": "experiments/E156_two_s0_stage",
+      "record": "experiments/E156_two_s0_stage/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E156_two_s0_stage/README.md"
+    },
+    "157": {
+      "directory": "experiments/E157_sequential_s1_s2",
+      "record": "experiments/E157_sequential_s1_s2/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E157_sequential_s1_s2/README.md"
+    },
+    "158": {
+      "directory": "experiments/E158_role_initial3",
+      "record": "experiments/E158_role_initial3/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E158_role_initial3/README.md"
+    },
+    "159": {
+      "directory": "experiments/E159_role_initial128",
+      "record": "experiments/E159_role_initial128/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E159_role_initial128/README.md"
+    },
+    "160": {
+      "directory": "experiments/E160_static_relation_message",
+      "record": "experiments/E160_static_relation_message/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E160_static_relation_message/README.md"
+    },
+    "161": {
+      "directory": "experiments/E161_final_no_mib",
+      "record": "experiments/E161_final_no_mib/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E161_final_no_mib/README.md"
+    },
+    "162": {
+      "directory": "experiments/E162_repeat_half_residual",
+      "record": "experiments/E162_repeat_half_residual/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E162_repeat_half_residual/README.md"
+    },
+    "163": {
+      "directory": "experiments/E163_e151_s2_half_step",
+      "record": "experiments/E163_e151_s2_half_step/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E163_e151_s2_half_step/README.md"
+    },
+    "164": {
+      "directory": "experiments/E164_static_relation_l0",
+      "record": "experiments/E164_static_relation_l0/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E164_static_relation_l0/README.md"
+    },
+    "165": {
+      "directory": "experiments/E165_joint_l0",
+      "record": "experiments/E165_joint_l0/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E165_joint_l0/README.md"
+    },
+    "166": {
+      "directory": "experiments/E166_soft_count_joint",
+      "record": "experiments/E166_soft_count_joint/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E166_soft_count_joint/README.md"
+    },
+    "167": {
+      "directory": "experiments/E167_s0_no_overlap_feedback",
+      "record": "experiments/E167_s0_no_overlap_feedback/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E167_s0_no_overlap_feedback/README.md"
+    },
+    "168": {
+      "directory": "experiments/E168_s1_progressive_unfreeze",
+      "record": "experiments/E168_s1_progressive_unfreeze/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E168_s1_progressive_unfreeze/README.md"
+    },
+    "169": {
+      "directory": "experiments/E169_s2_progressive_unfreeze",
+      "record": "experiments/E169_s2_progressive_unfreeze/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E169_s2_progressive_unfreeze/README.md"
+    },
+    "170": {
+      "directory": "experiments/E170_three_block_stages",
+      "record": "experiments/E170_three_block_stages/README.md",
+      "historical_record": "history/20261126_research_closeout/experiments/E170_three_block_stages/README.md"
+    }
+  },
+  "moves": [
+    {
+      "source": "history/20261018_E10_consolidation/experiments/graph_proposal",
+      "destination": "experiments/E1_graph_proposal"
+    },
+    {
+      "source": "history/20261018_E10_consolidation/experiments/topology_geometry",
+      "destination": "experiments/E2_topology_geometry"
+    },
+    {
+      "source": "history/20261018_E10_consolidation/experiments/masked_construction",
+      "destination": "experiments/E3_masked_construction"
+    },
+    {
+      "source": "history/20261018_E10_consolidation/experiments/conflict_local_repair",
+      "destination": "experiments/E5_conflict_local_repair"
+    },
+    {
+      "source": "history/20261018_E10_consolidation/experiments/intent_aware_repair",
+      "destination": "experiments/E6_intent_aware_repair"
+    },
+    {
+      "source": "history/20261018_E10_consolidation/experiments/repair_friendly_draft",
+      "destination": "experiments/E7_repair_friendly_draft"
+    },
+    {
+      "source": "history/20261018_E10_consolidation/experiments/E8_fast_robust_postprocess",
+      "destination": "experiments/E8_fast_robust_postprocess"
+    },
+    {
+      "source": "history/20261018_E10_consolidation/experiments/E9_model_postprocess_alignment",
+      "destination": "experiments/E9_model_postprocess_alignment"
+    },
+    {
+      "source": "history/20261020_E25_consolidation/experiments/E10_integrated_baseline",
+      "destination": "experiments/E10_integrated_baseline"
+    },
+    {
+      "source": "history/20261020_E25_consolidation/experiments/E11_short_budget_diagnosis",
+      "destination": "experiments/E11_short_budget_diagnosis"
+    },
+    {
+      "source": "history/20261020_E25_consolidation/experiments/E12_distillation_readiness",
+      "destination": "experiments/E12_distillation_readiness"
+    },
+    {
+      "source": "history/20261020_E25_consolidation/experiments/E13_solver_distillation",
+      "destination": "experiments/E13_solver_distillation"
+    },
+    {
+      "source": "history/20261020_E25_consolidation/experiments/E14_stable_teacher",
+      "destination": "experiments/E14_stable_teacher"
+    },
+    {
+      "source": "history/20261020_E25_consolidation/experiments/E15_quality_curriculum",
+      "destination": "experiments/E15_quality_curriculum"
+    },
+    {
+      "source": "history/20261020_E25_consolidation/experiments/E16_reference_curriculum",
+      "destination": "experiments/E16_reference_curriculum"
+    },
+    {
+      "source": "history/20261020_E25_consolidation/experiments/E17_e10_geometry_v5",
+      "destination": "experiments/E17_e10_geometry_v5"
+    },
+    {
+      "source": "history/20261020_E25_consolidation/experiments/E18_fast_postprocess",
+      "destination": "experiments/E18_fast_postprocess"
+    },
+    {
+      "source": "history/20261020_E25_consolidation/experiments/E19_mib_consistent_geometry",
+      "destination": "experiments/E19_mib_consistent_geometry"
+    },
+    {
+      "source": "history/20261020_E25_consolidation/experiments/E20_mib_fast_pipeline",
+      "destination": "experiments/E20_mib_fast_pipeline"
+    },
+    {
+      "source": "history/20261020_E25_consolidation/experiments/E21_original_model_fast",
+      "destination": "experiments/E21_original_model_fast"
+    },
+    {
+      "source": "history/20261020_E25_consolidation/experiments/E22_native_geometry",
+      "destination": "experiments/E22_native_geometry"
+    },
+    {
+      "source": "history/20261021_E29_consolidation/experiments/E23_capacity_geometry",
+      "destination": "experiments/E23_capacity_geometry"
+    },
+    {
+      "source": "history/20261020_E25_consolidation/experiments/E24_reference_fast",
+      "destination": "experiments/E24_reference_fast"
+    },
+    {
+      "source": "history/20261026_flash_pro_consolidation/experiments/E25_integrated_baseline",
+      "destination": "experiments/E25_integrated_baseline"
+    },
+    {
+      "source": "history/20261021_E29_consolidation/experiments/E26_tail_constraints",
+      "destination": "experiments/E26_tail_constraints"
+    },
+    {
+      "source": "history/20261021_E29_consolidation/experiments/E27_overlap_weight",
+      "destination": "experiments/E27_overlap_weight"
+    },
+    {
+      "source": "history/20261021_E29_consolidation/experiments/E28_iterative_draft",
+      "destination": "experiments/E28_iterative_draft"
+    },
+    {
+      "source": "history/20261026_flash_pro_consolidation/experiments/E30_stable_fast_geometry",
+      "destination": "experiments/E30_stable_fast_geometry"
+    },
+    {
+      "source": "history/20261026_flash_pro_consolidation/experiments/E31_conic_workspace_reuse",
+      "destination": "experiments/E31_conic_workspace_reuse"
+    },
+    {
+      "source": "history/20261026_flash_pro_consolidation/experiments/E32_learned_relation_feedback",
+      "destination": "experiments/E32_learned_relation_feedback"
+    },
+    {
+      "source": "history/20261026_flash_pro_consolidation/experiments/E33_learned_solver_portfolio",
+      "destination": "experiments/E33_learned_solver_portfolio"
+    },
+    {
+      "source": "history/20261026_flash_pro_consolidation/experiments/E34_sparse_contact_feedback",
+      "destination": "experiments/E34_sparse_contact_feedback"
+    },
+    {
+      "source": "history/20261026_flash_pro_consolidation/experiments/E35_optimizer_attribution",
+      "destination": "experiments/E35_optimizer_attribution"
+    },
+    {
+      "source": "history/20261026_flash_pro_consolidation/experiments/E36_persistent_conflict_repair",
+      "destination": "experiments/E36_persistent_conflict_repair"
+    },
+    {
+      "source": "history/20261026_flash_pro_consolidation/experiments/E37_radial_draft_expansion",
+      "destination": "experiments/E37_radial_draft_expansion"
+    },
+    {
+      "source": "history/20261026_flash_pro_consolidation/experiments/E38_model_architecture",
+      "destination": "experiments/E38_model_architecture"
+    },
+    {
+      "source": "history/20261026_flash_pro_consolidation/experiments/E39_rectangular_attention",
+      "destination": "experiments/E39_rectangular_attention"
+    },
+    {
+      "source": "history/20261026_flash_pro_consolidation/experiments/E40_endpoint_constraint_tokens",
+      "destination": "experiments/E40_endpoint_constraint_tokens"
+    },
+    {
+      "source": "history/20261026_flash_pro_consolidation/experiments/E41_rectangular_depth",
+      "destination": "experiments/E41_rectangular_depth"
+    },
+    {
+      "source": "history/20261103_final_delivery_consolidation/experiments/E42_joint_regularization",
+      "destination": "experiments/E42_joint_regularization"
+    },
+    {
+      "source": "history/20261026_flash_pro_consolidation/experiments/E43_overlap_area_loss",
+      "destination": "experiments/E43_overlap_area_loss"
+    },
+    {
+      "source": "history/20261026_flash_pro_consolidation/experiments/E44_near_limit_proposals",
+      "destination": "experiments/E44_near_limit_proposals"
+    },
+    {
+      "source": "history/20261026_flash_pro_consolidation/experiments/E45_draft_fidelity",
+      "destination": "experiments/E45_draft_fidelity"
+    },
+    {
+      "source": "history/20261026_flash_pro_consolidation/experiments/E46_global_draft_refinement",
+      "destination": "experiments/E46_global_draft_refinement"
+    },
+    {
+      "source": "history/20261026_flash_pro_consolidation/experiments/E47_draft_topology_confidence",
+      "destination": "experiments/E47_draft_topology_confidence"
+    },
+    {
+      "source": "history/20261026_flash_pro_consolidation/experiments/E48_quality_potential",
+      "destination": "experiments/E48_quality_potential"
+    },
+    {
+      "source": "history/20261026_flash_pro_consolidation/experiments/E49_monotone_quality",
+      "destination": "experiments/E49_monotone_quality"
+    },
+    {
+      "source": "history/20261103_final_delivery_consolidation/experiments/E50_anytime_quality",
+      "destination": "experiments/E50_anytime_quality"
+    },
+    {
+      "source": "history/20261026_flash_pro_consolidation/experiments/E51_module_overlap",
+      "destination": "experiments/E51_module_overlap"
+    },
+    {
+      "source": "history/20261026_flash_pro_consolidation/experiments/E52_training_throughput",
+      "destination": "experiments/E52_training_throughput"
+    },
+    {
+      "source": "history/20261026_flash_pro_consolidation/experiments/E53_loss_geometry",
+      "destination": "experiments/E53_loss_geometry"
+    },
+    {
+      "source": "history/20261026_flash_pro_consolidation/experiments/E54_reference_extremes",
+      "destination": "experiments/E54_reference_extremes"
+    },
+    {
+      "source": "history/20261029_model_research_consolidation/experiments/E55_reference_position_shape",
+      "destination": "experiments/E55_reference_position_shape"
+    },
+    {
+      "source": "history/20261029_model_research_consolidation/experiments/E56_e55_geometry_finetune",
+      "destination": "experiments/E56_e55_geometry_finetune"
+    },
+    {
+      "source": "history/20261029_model_research_consolidation/experiments/E57_capacity_data_diagnosis",
+      "destination": "experiments/E57_capacity_data_diagnosis"
+    },
+    {
+      "source": "history/20261029_model_research_consolidation/experiments/E58_training_data_v6",
+      "destination": "experiments/E58_training_data_v6"
+    },
+    {
+      "source": "history/20261029_model_research_consolidation/experiments/E59_centerline_overlap",
+      "destination": "experiments/E59_centerline_overlap"
+    },
+    {
+      "source": "history/20261029_model_research_consolidation/experiments/E60_scaling_diagnosis",
+      "destination": "experiments/E60_scaling_diagnosis"
+    },
+    {
+      "source": "history/20261029_model_research_consolidation/experiments/E61_explosion_replay",
+      "destination": "experiments/E61_explosion_replay"
+    },
+    {
+      "source": "history/20261029_model_research_consolidation/experiments/E62_e42_loss_update_audit",
+      "destination": "experiments/E62_e42_loss_update_audit"
+    },
+    {
+      "source": "history/20261029_model_research_consolidation/experiments/E63_e42_center_relaxation",
+      "destination": "experiments/E63_e42_center_relaxation"
+    },
+    {
+      "source": "history/20261029_model_research_consolidation/experiments/E64_e42_unified_retrain",
+      "destination": "experiments/E64_e42_unified_retrain"
+    },
+    {
+      "source": "history/20261029_model_research_consolidation/experiments/E65_geometry_messages",
+      "destination": "experiments/E65_geometry_messages"
+    },
+    {
+      "source": "history/20261029_model_research_consolidation/experiments/E66_shared_refinement",
+      "destination": "experiments/E66_shared_refinement"
+    },
+    {
+      "source": "history/20261029_model_research_consolidation/experiments/E67_multiscale_tokens",
+      "destination": "experiments/E67_multiscale_tokens"
+    },
+    {
+      "source": "history/20261029_model_research_consolidation/experiments/E68_port_tokens",
+      "destination": "experiments/E68_port_tokens"
+    },
+    {
+      "source": "history/20261101_research_consolidation/experiments/E69_case_loss_statistics",
+      "destination": "experiments/E69_case_loss_statistics"
+    },
+    {
+      "source": "history/20261029_model_research_consolidation/experiments/E70_reference_task_loss",
+      "destination": "experiments/E70_reference_task_loss"
+    },
+    {
+      "source": "history/20261101_research_consolidation/experiments/E71_density_reference_curriculum",
+      "destination": "experiments/E71_density_reference_curriculum"
+    },
+    {
+      "source": "history/20261101_research_consolidation/experiments/E72_topology_posttrain",
+      "destination": "experiments/E72_topology_posttrain"
+    },
+    {
+      "source": "history/20261101_research_consolidation/experiments/E73_wide_robust_posttrain",
+      "destination": "experiments/E73_wide_robust_posttrain"
+    },
+    {
+      "source": "history/20261103_final_delivery_consolidation/experiments/E74_collision_32k_posttrain",
+      "destination": "experiments/E74_collision_32k_posttrain"
+    },
+    {
+      "source": "history/20261101_research_consolidation/experiments/E75_collision_box_finetune",
+      "destination": "experiments/E75_collision_box_finetune"
+    },
+    {
+      "source": "history/20261101_research_consolidation/experiments/E76_bounded_refinement",
+      "destination": "experiments/E76_bounded_refinement"
+    },
+    {
+      "source": "history/20261101_research_consolidation/experiments/E77_compact_refinement",
+      "destination": "experiments/E77_compact_refinement"
+    },
+    {
+      "source": "history/20261101_research_consolidation/experiments/E78_connectivity_posttrain",
+      "destination": "experiments/E78_connectivity_posttrain"
+    },
+    {
+      "source": "history/20261101_research_consolidation/experiments/E79_center_refinement",
+      "destination": "experiments/E79_center_refinement"
+    },
+    {
+      "source": "history/20261101_research_consolidation/experiments/E80_modular_transfer",
+      "destination": "experiments/E80_modular_transfer"
+    },
+    {
+      "source": "history/20261103_final_delivery_consolidation/experiments/E81_multisource_refinement",
+      "destination": "experiments/E81_multisource_refinement"
+    },
+    {
+      "source": "history/20261101_research_consolidation/experiments/E82_global_pressure_refinement",
+      "destination": "experiments/E82_global_pressure_refinement"
+    },
+    {
+      "source": "history/20261101_research_consolidation/experiments/E83_strategy_attribution",
+      "destination": "experiments/E83_strategy_attribution"
+    },
+    {
+      "source": "history/20261101_research_consolidation/experiments/E84_loss_control",
+      "destination": "experiments/E84_loss_control"
+    },
+    {
+      "source": "history/20261103_final_delivery_consolidation/experiments/E85_cooperative_space_refinement",
+      "destination": "experiments/E85_cooperative_space_refinement"
+    },
+    {
+      "source": "history/20261101_research_consolidation/experiments/E86_independent_global_corrector",
+      "destination": "experiments/E86_independent_global_corrector"
+    },
+    {
+      "source": "history/20261101_research_consolidation/experiments/E87_simple_supervised_placer",
+      "destination": "experiments/E87_simple_supervised_placer"
+    },
+    {
+      "source": "history/20261101_research_consolidation/experiments/E88_sparse_training",
+      "destination": "experiments/E88_sparse_training"
+    },
+    {
+      "source": "history/20261101_research_consolidation/experiments/E89_spatial_neural_refinement",
+      "destination": "experiments/E89_spatial_neural_refinement"
+    },
+    {
+      "source": "history/20261103_final_delivery_consolidation/experiments/E90_auxiliary_weight_placer",
+      "destination": "experiments/E90_auxiliary_weight_placer"
+    },
+    {
+      "source": "history/20261101_research_consolidation/experiments/E91_e74_32k_scratch",
+      "destination": "experiments/E91_e74_32k_scratch"
+    },
+    {
+      "source": "history/20261101_research_consolidation/experiments/E92_two_stage_placer",
+      "destination": "experiments/E92_two_stage_placer"
+    },
+    {
+      "source": "history/20261101_research_consolidation/experiments/E93_matched_posttrain",
+      "destination": "experiments/E93_matched_posttrain"
+    },
+    {
+      "source": "history/20261101_research_consolidation/experiments/E94_posttrain_lr_reset",
+      "destination": "experiments/E94_posttrain_lr_reset"
+    },
+    {
+      "source": "history/20261103_final_delivery_consolidation/experiments/E95_single_pass_corrector",
+      "destination": "experiments/E95_single_pass_corrector"
+    },
+    {
+      "source": "history/20261103_final_delivery_consolidation/experiments/E96_port_compression",
+      "destination": "experiments/E96_port_compression"
+    },
+    {
+      "source": "history/20261103_final_delivery_consolidation/experiments/E97_gpu_hybrid_solver",
+      "destination": "experiments/E97_gpu_hybrid_solver"
+    },
+    {
+      "source": "history/20261111_experiments_consolidation/experiments/E98_loss_weight_learning",
+      "destination": "experiments/E98_loss_weight_learning"
+    },
+    {
+      "source": "history/20261103_final_delivery_consolidation/experiments/E99_attraction_repulsion",
+      "destination": "experiments/E99_attraction_repulsion"
+    },
+    {
+      "source": "history/20261103_final_delivery_consolidation/experiments/E100_relation_guided_placer",
+      "destination": "experiments/E100_relation_guided_placer"
+    },
+    {
+      "source": "history/20261111_experiments_consolidation/experiments/E101_final_c5_solver",
+      "destination": "experiments/E101_final_c5_solver"
+    },
+    {
+      "source": "history/20261111_experiments_consolidation/experiments/E102_reference_image_generation",
+      "destination": "experiments/E102_reference_image_generation"
+    },
+    {
+      "source": "history/20261111_experiments_consolidation/experiments/E103_offline_loss_alignment",
+      "destination": "experiments/E103_offline_loss_alignment"
+    },
+    {
+      "source": "history/20261111_experiments_consolidation/experiments/E104_scaling32k",
+      "destination": "experiments/E104_scaling32k"
+    },
+    {
+      "source": "history/20261111_experiments_consolidation/experiments/E105_gated_prenorm_placer",
+      "destination": "experiments/E105_gated_prenorm_placer"
+    },
+    {
+      "source": "history/20261111_experiments_consolidation/experiments/E106_postprocessor_aware_loss",
+      "destination": "experiments/E106_postprocessor_aware_loss"
+    },
+    {
+      "source": "history/20261111_experiments_consolidation/experiments/E107_geometry_posttrain",
+      "destination": "experiments/E107_geometry_posttrain"
+    },
+    {
+      "source": "history/20261111_experiments_consolidation/experiments/E108_random_reference40k",
+      "destination": "experiments/E108_random_reference40k"
+    },
+    {
+      "source": "history/20261111_experiments_consolidation/experiments/E109_deep_supervision_shared",
+      "destination": "experiments/E109_deep_supervision_shared"
+    },
+    {
+      "source": "history/20261111_experiments_consolidation/experiments/E110_deep_supervision_heads",
+      "destination": "experiments/E110_deep_supervision_heads"
+    },
+    {
+      "source": "history/20261111_experiments_consolidation/experiments/E111_progressive_depth",
+      "destination": "experiments/E111_progressive_depth"
+    },
+    {
+      "source": "history/20261111_experiments_consolidation/experiments/E112_deep_geometry_budget",
+      "destination": "experiments/E112_deep_geometry_budget"
+    },
+    {
+      "source": "history/20261111_experiments_consolidation/experiments/E113_deep_head_budget",
+      "destination": "experiments/E113_deep_head_budget"
+    },
+    {
+      "source": "history/20261111_experiments_consolidation/experiments/E114_supervision_placement",
+      "destination": "experiments/E114_supervision_placement"
+    },
+    {
+      "source": "history/20261111_experiments_consolidation/experiments/E115_first_head_supervision",
+      "destination": "experiments/E115_first_head_supervision"
+    },
+    {
+      "source": "history/20261111_experiments_consolidation/experiments/E116_first_draft_comparison",
+      "destination": "experiments/E116_first_draft_comparison"
+    },
+    {
+      "source": "history/20261111_experiments_consolidation/experiments/E117_node26",
+      "destination": "experiments/E117_node26"
+    },
+    {
+      "source": "history/20261111_experiments_consolidation/experiments/E118_first12_supervision",
+      "destination": "experiments/E118_first12_supervision"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E119_global_initial_generator",
+      "destination": "experiments/E119_global_initial_generator"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E120_node12_collision",
+      "destination": "experiments/E120_node12_collision"
+    },
+    {
+      "source": "history/20261111_experiments_consolidation/experiments/E121_residual_update",
+      "destination": "experiments/E121_residual_update"
+    },
+    {
+      "source": "history/20261111_experiments_consolidation/experiments/E122_global2_scaling16",
+      "destination": "experiments/E122_global2_scaling16"
+    },
+    {
+      "source": "history/20261111_experiments_consolidation/experiments/E123_node12_scaling16",
+      "destination": "experiments/E123_node12_scaling16"
+    },
+    {
+      "source": "history/20261111_experiments_consolidation/experiments/E124_residual_scaling16",
+      "destination": "experiments/E124_residual_scaling16"
+    },
+    {
+      "source": "history/20261111_experiments_consolidation/experiments/E125_global2_ref04",
+      "destination": "experiments/E125_global2_ref04"
+    },
+    {
+      "source": "history/20261111_experiments_consolidation/experiments/E126_global2_refsplit",
+      "destination": "experiments/E126_global2_refsplit"
+    },
+    {
+      "source": "history/20261111_experiments_consolidation/experiments/E127_node12_ref04",
+      "destination": "experiments/E127_node12_ref04"
+    },
+    {
+      "source": "history/20261111_experiments_consolidation/experiments/E128_node12_refsplit",
+      "destination": "experiments/E128_node12_refsplit"
+    },
+    {
+      "source": "history/20261111_experiments_consolidation/experiments/E129_global2_s0ref",
+      "destination": "experiments/E129_global2_s0ref"
+    },
+    {
+      "source": "history/20261111_experiments_consolidation/experiments/E130_node12_s0ref",
+      "destination": "experiments/E130_node12_s0ref"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E131_relation_input",
+      "destination": "experiments/E131_relation_input"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E132_relation_input_96x6",
+      "destination": "experiments/E132_relation_input_96x6"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E133_flow_matching",
+      "destination": "experiments/E133_flow_matching"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E134_supervision_interval",
+      "destination": "experiments/E134_supervision_interval"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E135_initial_supervision",
+      "destination": "experiments/E135_initial_supervision"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E136_frontend_F_linear",
+      "destination": "experiments/E136_frontend_F_linear"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E137_standard_transformer256",
+      "destination": "experiments/E137_standard_transformer256"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E138_topology_rewrite",
+      "destination": "experiments/E138_topology_rewrite"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E139_delayed_overlap",
+      "destination": "experiments/E139_delayed_overlap"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E140_frontend_gb4",
+      "destination": "experiments/E140_frontend_gb4"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E141_path_supervision",
+      "destination": "experiments/E141_path_supervision"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E142_dual_geometry",
+      "destination": "experiments/E142_dual_geometry"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E143_directional_travel",
+      "destination": "experiments/E143_directional_travel"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E144_local_blank",
+      "destination": "experiments/E144_local_blank"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E145_no_relation_value",
+      "destination": "experiments/E145_no_relation_value"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E146_layout_only",
+      "destination": "experiments/E146_layout_only"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E147_supervision_hidden_reset",
+      "destination": "experiments/E147_supervision_hidden_reset"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E148_shared_functional_shape",
+      "destination": "experiments/E148_shared_functional_shape"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E149_role_initial",
+      "destination": "experiments/E149_role_initial"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E150_role_joint",
+      "destination": "experiments/E150_role_joint"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E151_frozen_role_initial",
+      "destination": "experiments/E151_frozen_role_initial"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E152_s2_local_repair",
+      "destination": "experiments/E152_s2_local_repair"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E153_mib_role_topology",
+      "destination": "experiments/E153_mib_role_topology"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E154_l0_no_bottleneck",
+      "destination": "experiments/E154_l0_no_bottleneck"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E155_fresh_mib_l0",
+      "destination": "experiments/E155_fresh_mib_l0"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E156_two_s0_stage",
+      "destination": "experiments/E156_two_s0_stage"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E157_sequential_s1_s2",
+      "destination": "experiments/E157_sequential_s1_s2"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E158_role_initial3",
+      "destination": "experiments/E158_role_initial3"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E159_role_initial128",
+      "destination": "experiments/E159_role_initial128"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E160_static_relation_message",
+      "destination": "experiments/E160_static_relation_message"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E161_final_no_mib",
+      "destination": "experiments/E161_final_no_mib"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E162_repeat_half_residual",
+      "destination": "experiments/E162_repeat_half_residual"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E163_e151_s2_half_step",
+      "destination": "experiments/E163_e151_s2_half_step"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E164_static_relation_l0",
+      "destination": "experiments/E164_static_relation_l0"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E165_joint_l0",
+      "destination": "experiments/E165_joint_l0"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E166_soft_count_joint",
+      "destination": "experiments/E166_soft_count_joint"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E167_s0_no_overlap_feedback",
+      "destination": "experiments/E167_s0_no_overlap_feedback"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E168_s1_progressive_unfreeze",
+      "destination": "experiments/E168_s1_progressive_unfreeze"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E169_s2_progressive_unfreeze",
+      "destination": "experiments/E169_s2_progressive_unfreeze"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E170_three_block_stages",
+      "destination": "experiments/E170_three_block_stages"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E158_reference_blockage",
+      "destination": "experiments/E158_role_initial3/_snapshots/reference_blockage"
+    },
+    {
+      "source": "history/20261126_research_closeout/experiments/E161_kaggle_transfer",
+      "destination": "experiments/E161_final_no_mib/_snapshots/kaggle_transfer"
+    },
+    {
+      "source": "history/E152_discarded_v1_20261118",
+      "destination": "experiments/E152_s2_local_repair/_snapshots/discarded_v1_20261118"
+    },
+    {
+      "source": "history/e161_before_user_scratch_20261122T160405Z",
+      "destination": "experiments/E161_final_no_mib/_snapshots/before_user_scratch_20261122T160405Z"
+    },
+    {
+      "source": "history/e170_progressive_unfreeze_20261125",
+      "destination": "experiments/E170_three_block_stages/_snapshots/progressive_unfreeze_20261125"
+    },
+    {
+      "source": "history/20261026_flash_pro_consolidation/experiments/baseline",
+      "destination": "experiments/_archive/baseline"
+    },
+    {
+      "source": "history/20261016_baseline_reset.json",
+      "destination": "experiments/_archive/20261016_baseline_reset.json"
+    },
+    {
+      "source": "history/20261016_workspace_migration",
+      "destination": "experiments/_archive/20261016_workspace_migration"
+    },
+    {
+      "source": "history/20261017_alternating_optimization",
+      "destination": "experiments/_archive/20261017_alternating_optimization"
+    },
+    {
+      "source": "history/20261017_direction_review",
+      "destination": "experiments/_archive/20261017_direction_review"
+    },
+    {
+      "source": "history/20261018_E10_consolidation",
+      "destination": "experiments/_archive/20261018_E10_consolidation"
+    },
+    {
+      "source": "history/20261018_E8_mechanism_screening",
+      "destination": "experiments/_archive/20261018_E8_mechanism_screening"
+    },
+    {
+      "source": "history/20261020_E25_consolidation",
+      "destination": "experiments/_archive/20261020_E25_consolidation"
+    },
+    {
+      "source": "history/20261021_E29_consolidation",
+      "destination": "experiments/_archive/20261021_E29_consolidation"
+    },
+    {
+      "source": "history/20261026_flash_pro_consolidation",
+      "destination": "experiments/_archive/20261026_flash_pro_consolidation"
+    },
+    {
+      "source": "history/20261029_model_research_consolidation",
+      "destination": "experiments/_archive/20261029_model_research_consolidation"
+    },
+    {
+      "source": "history/20261031_two_stage_protocol",
+      "destination": "experiments/_archive/20261031_two_stage_protocol"
+    },
+    {
+      "source": "history/20261101_research_consolidation",
+      "destination": "experiments/_archive/20261101_research_consolidation"
+    },
+    {
+      "source": "history/20261103_final_delivery_consolidation",
+      "destination": "experiments/_archive/20261103_final_delivery_consolidation"
+    },
+    {
+      "source": "history/20261105_workspace_handoff",
+      "destination": "experiments/_archive/20261105_workspace_handoff"
+    },
+    {
+      "source": "history/20261111_experiments_consolidation",
+      "destination": "experiments/_archive/20261111_experiments_consolidation"
+    },
+    {
+      "source": "history/20261113_workspace_cleanup",
+      "destination": "experiments/_archive/20261113_workspace_cleanup"
+    },
+    {
+      "source": "history/20261126_research_closeout",
+      "destination": "experiments/_archive/20261126_research_closeout"
+    },
+    {
+      "source": "history/bootstrap_20261015.zip",
+      "destination": "experiments/_archive/bootstrap_20261015.zip"
+    },
+    {
+      "source": "history/README.md",
+      "destination": "experiments/_archive/README.md"
+    }
+  ]
+}

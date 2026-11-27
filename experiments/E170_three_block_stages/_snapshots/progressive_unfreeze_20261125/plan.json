@@ -1,0 +1,76 @@
+{
+  "seed": 0,
+  "train_count": 36000,
+  "batch_size": 64,
+  "batch_tail": 32,
+  "backend_maximum_seconds": 28800,
+  "maximum_epochs": 200,
+  "group_block_scale": 0.25,
+  "optimizer": "AdamW weight_decay=.0003, gradient clip1, per-module relative step cap .005",
+  "lr_levels": [
+    0.001,
+    0.00025,
+    0.0001,
+    5e-05
+  ],
+  "training_policy": "protocol/research_training36k_v1.json",
+  "registry": "protocol/random_reference40k_v1.json",
+  "dataset_report_sha256": "3a79fd9eb2636578fa4df876ccac51699eab04cd59179027488aa7d8c334928a",
+  "payload_checksums_sha256": "f8eeb86da003c9901b73541eb13cc8e16cad9cd963dcf74a0edddf4a1a5abe54",
+  "required_cache_key": "a75651d046293894691aa740a1d7a0a653aaa955cbf3df4f2567aa049f8bb148",
+  "cache_build_workers": 4,
+  "role_cache_root": "experiments/E149_role_initial/role_cache_v1",
+  "cache_policy": "Read-only reuse of the original compatible full shared CPU static and public-role caches.",
+  "no_mib": true,
+  "test_read": false,
+  "protected_backend_epochs": 20,
+  "revision": "E170.three_block_stages.v1.seed0",
+  "stages": [
+    "s1",
+    "s2",
+    "s3",
+    "s4"
+  ],
+  "prefix_lr_scale": 0.2,
+  "nonfinal_min_lr": 0.0001,
+  "reference_scale": [
+    1,
+    1,
+    1,
+    1,
+    0.8
+  ],
+  "overlap_scale": [
+    0.25,
+    0,
+    0.25,
+    0.8,
+    1
+  ],
+  "soft_count_scale": [
+    0,
+    0,
+    0.01,
+    0.01,
+    0.02
+  ],
+  "soft_count_tau": 0.01,
+  "protected_exit_weight": 1.0,
+  "joint_current_exit_weight": 0.8,
+  "joint_prefix_weight": 0.2,
+  "overlap_feedback": true,
+  "selection": "Strict minimum fixed dev500 joint own-Loss after the protected epochs",
+  "training_engine": "Deterministic FP32 CUDA Graph; AdamW and numerical gate; padded tail masked before reduction",
+  "parent_initial": {
+    "arm": "e165_l0",
+    "checkpoint": "experiments/E165_joint_l0/backups/l0_pretrained_best.pt",
+    "best_epoch": 67,
+    "checkpoint_sha256": "454b872665ca620994cbae0c0af0faa95cfdf71b07130f1bb681e6f97cfeb82d"
+  },
+  "terminal_evaluation": {
+    "panel": "protocol/final_evaluation_no_mib_dev2000_v1.json",
+    "postprocessor": "research.postprocess_tail.optimizer.optimize",
+    "benchmark": "E169 accelerated_dev2000_v1",
+    "workers": 8
+  }
+}

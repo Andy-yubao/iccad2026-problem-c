@@ -1,0 +1,38 @@
+{
+  "status": "training_updates_verified",
+  "queue_pid": 42168,
+  "worker_pid": 39288,
+  "epoch_completed": 0,
+  "accepted_steps": 491,
+  "elapsed_seconds": 248.5090538999939,
+  "last_logged_batch": {
+    "step": 500,
+    "epoch": 1,
+    "seconds_per_step": 0.2354055539998808,
+    "samples_per_second": 271.87124055718925,
+    "total": 1.1173231601715088,
+    "gradient_norm": 14.340032577514648,
+    "elapsed_seconds": 250.55285529998946
+  },
+  "source_identity_exact": true,
+  "model_configuration": {
+    "version": "E158.L0.reference1_overlap025.v1",
+    "arm": "e158_initial",
+    "layer_weights": {
+      "0": 1.0
+    },
+    "reference_coefficient": 1.0,
+    "overlap_scale": 0.25,
+    "original_overlap_weight": 0.08975162861857286,
+    "effective_overlap_weight": 0.022437907154643215,
+    "mib_weight": 0.6673664216670459,
+    "grouping_bottleneck_weight": 0.0,
+    "grouping_loss": "unchanged E155/E157 original grouping; no proposed E158 redesign",
+    "predict_all": true,
+    "geometry_feedback": false,
+    "intermediate_layouts": false,
+    "selection": "same total as training, including reference and quarter overlap"
+  },
+  "test_read": false,
+  "postprocessing_calls": 0
+}

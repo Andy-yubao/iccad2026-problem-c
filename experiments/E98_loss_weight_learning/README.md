@@ -8,7 +8,7 @@
 - [增强best71固定深度dev500](runs/20261104_generalization96_seed0/evaluation_depth_dev500/report.md)：加权/平均/混合Q1.043560018/1.050714113/1.047137066，500/500最终合法。
 - 两者后处理口径不同，不能将Q差直接归因于增强。
 - [多轮STOP核验](runs/20261104_dynamic_mixedq_seed0/stop_verification_20261104.json) · [train500搜索STOP核验](runs/20261104_dynamic_train500_v3_seed0/stop_verification_20261104.json)。
-- 后续固定目标研究在独立[E103](../E103_offline_loss_alignment/README.md)；[接手总结](../../docs/research_history.md)说明证据边界。
+- 后续固定目标研究在独立[E103](../E103_offline_loss_alignment/README.md)；[接手总结](../_archive/20261126_research_closeout/docs/research_history.md)说明证据边界。
 
 下文保留原基底设计与历史命令，不是当前启动指令；其中预先恢复验证等旧检查不构成现行必测要求。
 

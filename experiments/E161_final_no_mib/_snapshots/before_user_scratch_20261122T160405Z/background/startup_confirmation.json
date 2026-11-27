@@ -1,0 +1,14 @@
+{
+  "status": "confirmed_actual_training",
+  "queue_pid": 46196,
+  "worker_pid": 45632,
+  "active": "e161_l0",
+  "accepted_updates": 118,
+  "cursor": 7552,
+  "epoch": 0,
+  "heartbeat_utc": "2026-11-22T15:45:00Z",
+  "evidence": "Actual formal trainer heartbeat reports activity=training and step>0; numerical gate precedes every accepted AdamW update. No defensive test or disposable update.",
+  "automatic_terminal_validation": "Original-reference/no-MIB dev2000 after frozen L0/S0/S1/S2 own-Loss-best",
+  "initial_signature_error": "Preserved at history/formal_start_argsort_error_v1; keyword-only call syntax corrected; failed elapsed time carried forward.",
+  "checks_performed": "Read post-launch actual training heartbeat and stdout/stderr; no PID-absence inference."
+}

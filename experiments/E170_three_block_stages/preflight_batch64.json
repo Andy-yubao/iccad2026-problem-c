@@ -1,0 +1,74 @@
+{
+  "status": "passed",
+  "members": [
+    [
+      "worker_31/layouts_3136.th",
+      43
+    ],
+    [
+      "worker_60/layouts_9184.th",
+      21
+    ],
+    [
+      "worker_85/layouts_6160.th",
+      10
+    ],
+    [
+      "worker_43/layouts_6496.th",
+      1
+    ],
+    [
+      "worker_24/layouts_9072.th",
+      53
+    ]
+  ],
+  "parent_sha256": "454b872665ca620994cbae0c0af0faa95cfdf71b07130f1bb681e6f97cfeb82d",
+  "s0_matches": true,
+  "geometry_calls": [
+    1,
+    1,
+    1,
+    1
+  ],
+  "gradient_to_prefix": true,
+  "stage_probes": [
+    {
+      "stage": 1,
+      "joint": false,
+      "batch": 64,
+      "active": 5,
+      "loss": 0.4138566851615906,
+      "gradient_norm": 0.2824349105358124,
+      "peak_reserved_bytes": 1702887424,
+      "free_bytes": 13928235008,
+      "capture_and_update_seconds": 2.474060900043696
+    },
+    {
+      "stage": 4,
+      "joint": false,
+      "batch": 64,
+      "active": 5,
+      "loss": 0.5521643161773682,
+      "gradient_norm": 0.4516984522342682,
+      "peak_reserved_bytes": 2128609280,
+      "free_bytes": 13489930240,
+      "capture_and_update_seconds": 2.0337508000666276
+    },
+    {
+      "stage": 4,
+      "joint": true,
+      "batch": 64,
+      "active": 5,
+      "loss": 0.5498982071876526,
+      "gradient_norm": 6.086636543273926,
+      "peak_reserved_bytes": 8673820672,
+      "free_bytes": 6844055552,
+      "capture_and_update_seconds": 4.53032619995065
+    }
+  ],
+  "max_nodes": 120,
+  "max_loss_ports_per_block": 145,
+  "max_role_ports": 362,
+  "gpu": "NVIDIA GeForce RTX 5080 Laptop GPU",
+  "torch": "2.7.1+cu128"
+}

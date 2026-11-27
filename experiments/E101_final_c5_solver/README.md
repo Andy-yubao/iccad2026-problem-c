@@ -24,8 +24,8 @@
 
 原C5仍未实现固定dev500 Q<1.01和逐例250ms，不能把低均时当尾部达标。完整逐例时间含公开输入构造/遮罩/面积变换、特征/传输、L/F/内部几何、全部后处理/回退、硬检查/同步；加载、预热、磁盘、评分/绘图另列。主线是公开MIB平均面积派生任务、中性时间本地Q，不称正式比赛成绩。
 
-本目录原完整后处理与E98.depth_budget.v1不是同一评价口径，不能和E103–E105数字直接作无条件排名。研究解释见[历史综合](../../docs/research_history.md)。
+本目录原完整后处理与E98.depth_budget.v1不是同一评价口径，不能和E103–E105数字直接作无条件排名。研究解释见[历史综合](../_archive/20261126_research_closeout/docs/research_history.md)。
 
 推理API保留`experiments.E101_final_c5_solver.solver.Service`，按显式checkpoint初始化后solve(public_inputs)。本页不提供自动训练入口；历史命令只用于追溯，恢复/新实验按现行协议及用户授权登记。
 
-首次64k的CUDA图/预算迁移、历史链路评分依赖修复等原件都在各run；详细整理前首页在[快照](../../history/20261105_workspace_handoff/documents_before/experiments/E101_final_c5_solver/README.md)。整理没有改模型、数值源码、冻结计划或任何运行证据。
+首次64k的CUDA图/预算迁移、历史链路评分依赖修复等原件都在各run；详细整理前首页在[快照](../_archive/20261105_workspace_handoff/documents_before/experiments/E101_final_c5_solver/README.md)。整理没有改模型、数值源码、冻结计划或任何运行证据。

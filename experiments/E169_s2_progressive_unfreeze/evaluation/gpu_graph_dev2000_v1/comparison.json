@@ -1,0 +1,83 @@
+{
+  "original_cpu": {
+    "mixed_Q": 1.0066348760448196,
+    "p95_Q": 1.0487998034625803,
+    "max_Q": 1.3921311365041908,
+    "hard_legal": 2000,
+    "grouping_violations": 137,
+    "boundary_violations": 98,
+    "all_soft_satisfied": 1791
+  },
+  "cuda_graph": {
+    "mixed_Q": 1.0065633615565401,
+    "p95_Q": 1.0487998038167308,
+    "max_Q": 1.3922835175612065,
+    "hard_legal": 2000,
+    "grouping_violations": 135,
+    "boundary_violations": 98,
+    "all_soft_satisfied": 1791
+  },
+  "difference": {
+    "mixed_Q": -7.151448827946716e-05,
+    "p95_Q": 3.5415048671438853e-10,
+    "max_Q": 0.0001523810570156492,
+    "hard_legal": 0,
+    "grouping_violations": -2,
+    "boundary_violations": 0,
+    "all_soft_satisfied": 0
+  },
+  "original_timing": {
+    "draft": {
+      "mean_ms": 342.98851770046167,
+      "p95_ms": 398.95565004553646
+    },
+    "repair": {
+      "mean_ms": 195.1417877501808,
+      "p95_ms": 532.7783700253348
+    },
+    "complete": {
+      "mean_ms": 539.730920949427,
+      "p95_ms": 904.7832999960519
+    }
+  },
+  "cuda_graph_timing": {
+    "draft": {
+      "mean_ms": 38.49927625164855,
+      "p95_ms": 56.01363005116581
+    },
+    "graph": {
+      "mean_ms": 15.490047749190126,
+      "p95_ms": 32.322214939631515
+    },
+    "forward": {
+      "mean_ms": 22.868316499108914,
+      "p95_ms": 25.104970001848415
+    },
+    "repair": {
+      "mean_ms": 177.5653866995126,
+      "p95_ms": 501.28426009905525
+    },
+    "complete": {
+      "mean_ms": 217.55938360246364,
+      "p95_ms": 556.321785057662
+    }
+  },
+  "numerical": {
+    "equal_drafts": 0,
+    "equal_final_layouts": 0,
+    "max_abs_draft_error": 0.5151805877685547,
+    "p95_case_max_abs_draft_error": 0.0034388542175292952,
+    "q_improved": 188,
+    "q_unchanged": 1637,
+    "q_regressed": 175,
+    "largest_q_increase": 0.001655368327034834,
+    "largest_q_drop": -0.07887478363985112,
+    "worst_increase_cases": [
+      1812,
+      516,
+      1954,
+      1025,
+      1189
+    ]
+  }
+}
